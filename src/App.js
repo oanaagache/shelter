@@ -5,6 +5,7 @@ import About from "./About";
 import Donate from "./Donate";
 import Foster from "./Foster";
 import Adopt from "./Adopt";
+import Data from "./Data";
 
 import Other from "./Other";
 import Navbar from "./Navbar";
@@ -22,6 +23,7 @@ function App() {
         <Route path="/donate" element={<Donate />} />
         <Route path="/foster" element={<Foster />} />
         <Route path="/adopt" element={<Adopt />} />
+        <Route path="/data" element={<Data />} />
         <Route path="/other" element={<Other />} />
       </Routes>
       <Footer />

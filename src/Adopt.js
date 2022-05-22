@@ -1,28 +1,91 @@
-import React, { useEffect } from "react";
-
-// TODO: take care of regenerating the token when it expires.
-const token =
-  "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiJ5RTM0bUY1eTh1YVRrY0Rwb3BIV2labldHb1lKWDVVZnc1OXZ0RkRwT0pVNzh1VzV1ciIsImp0aSI6ImVmZmIyOGE2YzJhYWVkYjFlY2ExMDlkMzg3ZTU2N2YyYmYxMmM4ZWE1MDhkZTQ5MjYzMjE3NThkYjM2MTk3MWQ1OTk0ZmEwNTAxMjNhOWY3IiwiaWF0IjoxNjUzMjMwMDU0LCJuYmYiOjE2NTMyMzAwNTQsImV4cCI6MTY1MzIzMzY1NCwic3ViIjoiIiwic2NvcGVzIjpbXX0.xqRZcize5IMuYSzlyIP1A_IyYaP5UfEtej7RvArdOIt_Kw169Kmo_0DV0hiw8DoYaCcVXrvy-02WvBVmfqoclEY34OPpPbhr4aKlspmcmu4Ixdkg4Iofz6qOOxVJSDoWxuMQuMY0nCV1L0PMJmzmvC_Q1zy25-f_a4rGph2oNFNYc9mWJ8TwnLSarj1WqokrjnqLHstQ3MtO1m4_nuYu0V-5Cb0An0cB_zoGTjuMem_oVao4bfVCYgRSUsbb9ymk7ZoeNAbcKSpA_CIZHt69jkUqP8aUKc4PRWnvLO3kdva_y-lSlUxQBiswpFALqkVDyGDTUZ3CqUd5BwzzFnqSrQ";
-
-const bearer = "Bearer " + token;
+import React from "react";
+import "./Form.css";
+import Form from "./Form";
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import logo from "./image4.svg";
+import { Link } from "react-router-dom";
+import Data from "./Data";
 
 const Adopt = () => {
-  useEffect(() => {
-    fetch("https://api.petfinder.com/v2/types", {
-      headers: {
-        Authorization: bearer,
-      },
-    })
-      .then((resp) => {
-        console.log(resp);
-        console.log("======success=======");
-      })
-      .catch((err) => {
-        console.log("======failure=======");
-        console.log(err);
-      });
-  }, []);
-  return <div>App</div>;
+  const [type, setType] = useState("Dog");
+  const [breed, setBreed] = useState("Breed");
+  const [selected, setSelected] = useState("Size");
+
+  return (
+    <div className="adopt-container">
+      <div className="adopt-header">
+        <div className="adopt-content">
+          <div className="adopt-inner">
+            <img style={({ height: 1 }, { padding: 10 })} src={logo} />
+            <h2>
+              <Link to="/">Back</Link>
+            </h2>
+          </div>
+
+          <h1 className="adopt-title">
+            These lovely souls are waiting for you
+          </h1>
+        </div>
+      </div>
+
+      <div className="adopt-drop">
+        <h3 className="adopt-drop-title">Refine your search:</h3>
+
+        <div className="drop">
+          <div className="drop1">
+            <h2>Type of pet:</h2>
+            <Form selected={type} setType={setType} />
+          </div>
+
+          <div className="drop2">
+            <h2>Breed:</h2>
+            <Form breed={breed} setBreed={setBreed} />
+          </div>
+
+          <div className="drop3">
+            <h2>Gender:</h2>
+            <Form selected={selected} setSelected={setSelected} />
+          </div>
+
+          <div className="drop4">
+            <h2>Size:</h2>
+            <Form selected={selected} setSelected={setSelected} />
+          </div>
+
+          <div className="drop5">
+            <h2>Age:</h2>
+            <Form selected={selected} setSelected={setSelected} />
+          </div>
+
+          <div className="drop6">
+            <h2>Color:</h2>
+            <Form selected={selected} setSelected={setSelected} />
+          </div>
+
+          <div className="check">
+            <h2>Must be good with:</h2>
+            <h3 className="checklist">
+              <input type="checkbox" />
+              <label>Children</label>
+              <input type="checkbox" />
+              <label>Dogs</label>
+              <input type="checkbox" /> <label>Cats</label>
+            </h3>
+          </div>
+        </div>
+      </div>
+
+      <button className="filter-btn">Apply filters</button>
+
+      <div className="sort">
+        <h3>Sort by:</h3>
+        <div className="drop7">
+          <Form selected={selected} setSelected={setSelected} />
+        </div>
+      </div>
+    </div>
+  );
 };
 
 export default Adopt;
