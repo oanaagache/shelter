@@ -1,0 +1,55 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.header {
+  height: 124px;
+  max-width: 1920px;
+}
+
+.header-content {
+  display: flex;
+  font: Oswald;
+}
+
+.header-inner {
+  padding: 26px 80px 27px 76px;
+  display: flex;
+  align-items: center;
+}
+
+.img {
+  display: flex;
+  padding: 18px 31px 15px 76px;
+}
+.header-title {
+  display: flex;
+  padding: 26px 61px 27px 31px;
+  font-family: "Oswald", sans-serif; /*regular*/
+}
+
+.header-menu {
+  margin-left: auto;
+  display: flex;
+  list-style: none; /* no bullets */
+}
+
+.header-menu li {
+  padding: 80px 50px 14px 50px;
+  position: relative;
+  font-size: 20px;
+  font-family: "Oswald", sans-serif; /*light*/
+}
+
+.adopt-nav {
+  border-width: 10px;
+  border-color: darkgreen;
+  border-style: solid;
+  border-top: 10px;
+  width: 80px;
+  height: 30px;
+  background-color: darkgreen;
+  color: aliceblue;
+}

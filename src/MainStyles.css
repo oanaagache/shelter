@@ -1,0 +1,56 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  max-width: 1920px;
+}
+.main {
+  position: relative;
+  color: aliceblue;
+}
+.main-text {
+  font-size: 25px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: "Oswald", sans-serif; /*regular*/
+}
+.main-image {
+  max-width: 1920px;
+}
+.main-title {
+  padding: 0 80px 20px 100px;
+}
+
+.main-p {
+  padding: 0 80px 5px 0px;
+}
+
+.main-sp {
+  padding: 10px 80px 32px 50px;
+}
+
+.button {
+  display: flex;
+  padding: 10px 80px 5px 20px;
+}
+
+.adopt {
+  color: aliceblue;
+  width: 180px;
+  height: 50px;
+  background-color: darkgreen;
+  margin: 20px;
+  font-size: 24px;
+}
+
+.donate {
+  width: 180px;
+  height: 50px;
+  margin: 20px;
+  font-size: 24px;
+}
