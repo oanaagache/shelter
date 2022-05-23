@@ -4,7 +4,6 @@ import logo from "./image5.svg";
 
 function Form({ selected, setSelected, options }) {
   const [isActive, setIsActive] = useState(false);
-
   //console.log("options :", options);
 
   return (
@@ -32,4 +31,5 @@ function Form({ selected, setSelected, options }) {
     </div>
   );
 }
+
 export default Form;

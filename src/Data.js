@@ -42,7 +42,7 @@ const Data = () => {
     <>
       <div>
         <div>
-          <h2>Types of pet:</h2>
+          <h2>Type of pets:</h2>
           <ul>
             <li>{items.name}</li>
           </ul>
