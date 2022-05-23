@@ -14,9 +14,9 @@ const Main = () => {
         </div>
 
         <div className="main-text">
-          <h3 class="main-title"> Our Mission </h3>
-          <h3 class="main-p"> We aim to find best companions </h3>
-          <h3 class="main-sp">for homeless pets in need</h3>
+          <h3 className="main-title"> Our Mission </h3>
+          <h3 classNames="main-p"> We aim to find best companions </h3>
+          <h3 className="main-sp">for homeless pets in need</h3>
 
           <div className="button">
             <button className="donate">Donate</button>
