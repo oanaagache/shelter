@@ -8,9 +8,13 @@ import { Link } from "react-router-dom";
 import Data from "./Data";
 
 const Adopt = () => {
-  const [type, setType] = useState("Dog");
-  const [breed, setBreed] = useState("Breed");
-  const [selected, setSelected] = useState("Size");
+  const [type, setType] = useState("");
+  const [breed, setBreed] = useState("");
+  const [size, setSize] = useState("");
+
+  const [options, setOptions] = useState(["Dog", "Cat", "Cow"]);
+
+  // insert fetch API code.
 
   return (
     <div className="adopt-container">
@@ -35,32 +39,17 @@ const Adopt = () => {
         <div className="drop">
           <div className="drop1">
             <h2>Type of pet:</h2>
-            <Form selected={type} setType={setType} />
+            <Form selected={type} setSelected={setType} options={options} />
           </div>
 
           <div className="drop2">
             <h2>Breed:</h2>
-            <Form breed={breed} setBreed={setBreed} />
+            <Form selected={breed} setSelected={setBreed} options={options} />
           </div>
 
           <div className="drop3">
-            <h2>Gender:</h2>
-            <Form selected={selected} setSelected={setSelected} />
-          </div>
-
-          <div className="drop4">
             <h2>Size:</h2>
-            <Form selected={selected} setSelected={setSelected} />
-          </div>
-
-          <div className="drop5">
-            <h2>Age:</h2>
-            <Form selected={selected} setSelected={setSelected} />
-          </div>
-
-          <div className="drop6">
-            <h2>Color:</h2>
-            <Form selected={selected} setSelected={setSelected} />
+            <Form selected={size} setSelected={setSize} options={options} />
           </div>
 
           <div className="check">
@@ -77,13 +66,6 @@ const Adopt = () => {
       </div>
 
       <button className="filter-btn">Apply filters</button>
-
-      <div className="sort">
-        <h3>Sort by:</h3>
-        <div className="drop7">
-          <Form selected={selected} setSelected={setSelected} />
-        </div>
-      </div>
     </div>
   );
 };

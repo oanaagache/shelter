@@ -2,9 +2,10 @@ import { useState } from "react";
 import "./Form.css";
 import logo from "./image5.svg";
 
-function Form({ selected, setSelected }) {
+function Form({ selected, setSelected, options }) {
   const [isActive, setIsActive] = useState(false);
-  const options = ["React", "Vue", "angular"];
+
+  //console.log("options :", options);
 
   return (
     <div className="dropdown">

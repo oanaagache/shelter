@@ -6,7 +6,6 @@ import Donate from "./Donate";
 import Foster from "./Foster";
 import Adopt from "./Adopt";
 import Data from "./Data";
-
 import Other from "./Other";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
