@@ -4,11 +4,12 @@ import Form from "./Form";
 import { useNavigate } from "react-router-dom";
 import logo from "./image4.svg";
 import { Link } from "react-router-dom";
+import GetToken from "./GetToken";
 
 const Adopt = () => {
-  // TODO: insert fetch API code and populate the arrays.
-  const token =
-    "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiJ5RTM0bUY1eTh1YVRrY0Rwb3BIV2labldHb1lKWDVVZnc1OXZ0RkRwT0pVNzh1VzV1ciIsImp0aSI6IjAyMDlmN2JiMWNlNDJjNjc1NDJhZDEyOWZjYTMwNTFiYjQ3OWMyOTBhYmY1MTI3N2M0ZTAzOTcyMzRhNTY4NDAyYzUyMjQ5YTZkOTk1NGEyIiwiaWF0IjoxNjUzODM0OTU2LCJuYmYiOjE2NTM4MzQ5NTYsImV4cCI6MTY1MzgzODU1Niwic3ViIjoiIiwic2NvcGVzIjpbXX0.oAqa5eSDhc5XS7kMYIyGEAnc4VsaLRZLQr08wo5rbGuSw6usSfsMSkT1usfgxMIvdsgv3gnivZn5TjllGrJAdZfz4AgLQhNfGHf4KFjijgKnFOtRELbEDic4aDIICyUCJOkN1Ks6Gq22NqIj-7Sp7xMQ8Y0MuSOAFZ0xDf7cGr2EKLLU67y_BzWbYYuSqrZXkT0W8OxfMGiUArEmE3z9oEqGsUPtIcMGPAAlZNj2dNv_KEp3aQZbD053kn1gKN3h8i5mN4iJspT2s7ihmPbkGfMZRDVqPYfN1sbJV801wH5Bkaa0YB5BvR8tOZj4IUGwRX0X_-boSEOtDrzCFaLlwA";
+  const token = GetToken();
+  console.log("Adopt.js: token: " + token);
+
   const bearer = "Bearer " + token;
 
   const url = "https://api.petfinder.com/v2/types";
