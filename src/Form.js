@@ -10,9 +10,9 @@ function Form({ selected, setSelected, options }) {
     <div className="dropdown">
       <div className="dropdown-btn" onClick={(e) => setIsActive(!isActive)}>
         {selected}
-
         <img src={logo} />
       </div>
+
       {isActive && (
         <div className="dropdown-content">
           {options.map((option) => (

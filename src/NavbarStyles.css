@@ -5,8 +5,8 @@
 }
 
 .header {
-  height: 124px;
-  max-width: 1920px;
+  height: 180px;
+  max-width: 100%;
 }
 
 .header-content {
@@ -31,7 +31,6 @@
 }
 
 .header-menu {
-  margin-left: auto;
   display: flex;
   list-style: none; /* no bullets */
 }
@@ -52,4 +51,10 @@
   height: 30px;
   background-color: darkgreen;
   color: aliceblue;
+}
+
+@media screen and (max-width: 800px) {
+  .header {
+    width: 100%;
+  }
 }

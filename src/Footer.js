@@ -10,20 +10,20 @@ const Footer = () => {
           <h4 className="footer-title">
             Copyright © 2022 Paws Animal Shelter. All Rights Reserved
           </h4>
-        </div>
 
-        <div className="footer-menu">
-          <ul>
-            <li>
-              <FaFacebook />
-            </li>
-            <li>
-              <FaTwitter />
-            </li>
-            <li>
-              <FaInstagram />
-            </li>
-          </ul>
+          <div className="footer-menu">
+            <ul>
+              <li>
+                <FaFacebook />
+              </li>
+              <li>
+                <FaTwitter />
+              </li>
+              <li>
+                <FaInstagram />
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>

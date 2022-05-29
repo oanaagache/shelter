@@ -7,34 +7,27 @@ import { Link } from "react-router-dom";
 import Data from "./Data";
 
 const Adopt = () => {
+  const [type, setType] = useState("");
+  const [breed, setBreed] = useState("");
+  const [gender, setGender] = useState("");
+  const [size, setSize] = useState("");
+  const [age, setAge] = useState("");
+  const [color, setColor] = useState("");
+
+  const [types, setTypes] = useState([]);
+  const [breeds, setBreeds] = useState(["A", "B", "C"]);
+  const [genders, setGenders] = useState(["Male", "Female"]);
+  const [sizes, setSizes] = useState(["Small", "Medium", "Large"]);
+  const [ages, setAges] = useState(["1year", "2 years"]);
+  const [colors, setColors] = useState(["white", "black"]);
+
   // TODO: insert fetch API code and populate the arrays.
   const token =
-    "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiJ5RTM0bUY1eTh1YVRrY0Rwb3BIV2labldHb1lKWDVVZnc1OXZ0RkRwT0pVNzh1VzV1ciIsImp0aSI6IjI4MmM5MTQxMzE5ZmZiMmUwYTgzYTA3ZTU1YWM2ZWQ2NjhkNDUyNTI4OTFiMzc4NjU5MWM0MDU1YjUzYjAyYzMwMjk4ZWNjMTAyZGQ1ZjNkIiwiaWF0IjoxNjUzODIxNTExLCJuYmYiOjE2NTM4MjE1MTEsImV4cCI6MTY1MzgyNTExMSwic3ViIjoiIiwic2NvcGVzIjpbXX0.EvnqDaLszE8w-GzSt35ZN9Km9o4icOvpHk_e1gQSi6ITCrVfggZiKn9nf3j73drrW-V9Ef2Pul6c0GFGI0Qz1zrkczftucxStDOWWL6Ow2884xyKwZkz8OI87zjyg0kizn10YFbc92gh4dIMCcU7IVmm2RBvnS8s47Zu_-G86gJ2lksrxe3YhInigb-A3N4hmXLhjLKNSWwq0hT6Ue7UkhOdfBPYDadJeWrTLvh2_REQjD18UzSKBC_72DwnsJxSvS4rjxdtn5_UWPj-aMdZmRH5v2ZmESd6bw7wcPQ41E4yqbFpdsKpGy1GPElt0Yl_nsXdq714G-TxfCPiNp3uIw";
+    "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiJ5RTM0bUY1eTh1YVRrY0Rwb3BIV2labldHb1lKWDVVZnc1OXZ0RkRwT0pVNzh1VzV1ciIsImp0aSI6ImQ3MzM4ODdiOTIyZjhhYjRkMDJhNGFkNDZjNjc3NzMzMGQ2NWEyMWQ4YzcyZDY3ZjRlYThlNDBkN2M4N2FmNWFlZjg5NzE3MDNlYmE2Zjk4IiwiaWF0IjoxNjUzODEzMjcwLCJuYmYiOjE2NTM4MTMyNzAsImV4cCI6MTY1MzgxNjg3MCwic3ViIjoiIiwic2NvcGVzIjpbXX0.ySoWNy6jkKeSQNTAWBPmp_F3B3gLdjmtZArfvxl6Aoz4T6dLYNrUbMf0KkqO81jeIWWfdT6sI7HbxmiZymOOja6MaoIRjK5dGc881GYsIxRkIA0l6K0EG-6ebldlPxVnWM3-ZiKf8vEub04MxM1e6UuwbGFmuQxXRhB46tIvlpZxP1iRnMU92fCKfkMFeJrZPce0fQaamgurtrLrPXHJ0nwvHs8vyebNMjYwaWlLz3eVwtla1BjQqksCGroaaeJE2uhvbtmni3ofOYhPPqSB-iOUyM0qn1bMEVegJ7RfWyxafa_gYpD2iNIvwVUwY20DsP8R1occs0qpJ7UIQjydbA";
+  const url = "https://api.petfinder.com/v2/types";
   const bearer = "Bearer " + token;
 
-  const url = "https://api.petfinder.com/v2/types";
-
-  const [type, setType] = useState("Choose type");
-  const [types, setTypes] = useState([]);
-
-  const [breed, setBreed] = useState("");
-  const [breeds, setBreeds] = useState([]);
-
-  const [gender, setGender] = useState("");
-  const [genders, setGenders] = useState([]);
-
-  const [size, setSize] = useState("");
-  const [sizes, setSizes] = useState([]);
-
-  const [age, setAge] = useState("");
-  const [ages, setAges] = useState([]);
-
-  const [color, setColor] = useState("");
-  const [colors, setColors] = useState([]);
-
   useEffect(() => {
-    console.log("First useEffect()...");
-    // get types:
     fetch(url, {
       headers: {
         Authorization: bearer,
@@ -43,10 +36,12 @@ const Adopt = () => {
       .then((res) => res.json())
       .then((data) => {
         //console.log(data);
+
         //console.log(data.types.length);
         // build a new array that will contain all the names from JSON.
+
         var typesArray = [];
-        var length = data.types.length;
+        var length = data.types.length; // lenght of the types array.
         for (var i = 0; i < length; i++) {
           //console.log(data.types[i].name);
           typesArray.push(data.types[i].name);
@@ -54,18 +49,24 @@ const Adopt = () => {
 
         //console.log("typesArray:" + typesArray);
         //console.log(typesArray.join("\r\n"));
+        //var x = typesArray.join("\r\n");
+
+        const userData = {
+          name: typesArray,
+        };
+        //console.log(typesArray);
+        //console.log(typesArray.join("\r\n"));
+        //setItems(userData);
+
         setTypes(typesArray);
       });
+
+    //copy the fetch
   }, []);
 
+  //adopt si type of pets changes
   useEffect(() => {
-    console.log("Second useEffect()...");
-    // for each type, get its breeds:
-    var breedsUrl = url + "/" + types[0] + "/breeds";
-    console.log("breedsUrl: " + breedsUrl);
-    console.log("types:: " + types);
-
-    fetch(breedsUrl, {
+    fetch(url, {
       headers: {
         Authorization: bearer,
       },
@@ -73,20 +74,33 @@ const Adopt = () => {
       .then((res) => res.json())
       .then((data) => {
         //console.log(data);
-        //console.log(data.breeds.length);
+
+        //console.log(data.types.length);
         // build a new array that will contain all the names from JSON.
-        var breedsArray = [];
-        var length = data.breeds.length;
+
+        var typesArray = [];
+        var length = data.types.length; // lenght of the types array.
         for (var i = 0; i < length; i++) {
-          console.log(data.breeds[i].name);
-          breedsArray.push(data.breeds[i].name);
+          //console.log(data.types[i].name);
+          typesArray.push(data.types[i].name);
         }
 
-        //console.log("breedsArray:" + breedsArray);
-        //console.log(breedsArray.join("\r\n"));
-        setBreeds(breedsArray);
+        //console.log("typesArray:" + typesArray);
+        //console.log(typesArray.join("\r\n"));
+        //var x = typesArray.join("\r\n");
+
+        const userData = {
+          name: typesArray,
+        };
+        //console.log(typesArray);
+        //console.log(typesArray.join("\r\n"));
+        //setItems(userData);
+
+        setTypes(typesArray);
       });
-  }, []);
+
+    //copy the fetch
+  }, [type]);
 
   return (
     <div className="adopt-container">
@@ -110,7 +124,7 @@ const Adopt = () => {
 
         <div className="drop">
           <div className="drop1">
-            <h2>Type:</h2>
+            <h2>Type of pet:</h2>
             <Form selected={type} setSelected={setType} options={types} />
           </div>
 
@@ -146,8 +160,7 @@ const Adopt = () => {
               <label>Children</label>
               <input type="checkbox" />
               <label>Dogs</label>
-              <input type="checkbox" />
-              <label>Cats</label>
+              <input type="checkbox" /> <label>Cats</label>
             </h3>
           </div>
         </div>
