@@ -7,11 +7,14 @@ import { Link } from "react-router-dom";
 import GetToken from "./GetToken";
 
 const Adopt = () => {
-  const token = GetToken();
-  console.log("Adopt.js: token: " + token);
+  var token = GetToken();
+  //console.log("Adopt.js: token: " + token);
+
+  /*token =
+    "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiJ5RTM0bUY1eTh1YVRrY0Rwb3BIV2labldHb1lKWDVVZnc1OXZ0RkRwT0pVNzh1VzV1ciIsImp0aSI6IjViOWVhODczZWY5NjJhOGRmMjFmNDJhYzExYjI3Y2ZiODgwZGVlNDMyNzA0NTJlODg5NGY0MGJmMDBhNmFkMDI4NzcwOTQ1ZWE5OGJkMWFjIiwiaWF0IjoxNjUzODQ3ODc4LCJuYmYiOjE2NTM4NDc4NzgsImV4cCI6MTY1Mzg1MTQ3OCwic3ViIjoiIiwic2NvcGVzIjpbXX0.nZP-IEZDC5UhnfzsfkQZI-EpWsbBF0VEr_jzFK5ZN0KlRgGqngPBMZwXBg5N0F70CLZVpfMvgz0ic6qOQ_KEsmHKGS8RkRjG4p614fVW4wbIJa-28STTLjpqNfyTtNEGzP0YsUWikTg4YLWZ2vO6DZrI36l-aLW9s110vwds7kIaA4P6dX6bJ4AzL6PljqFB5c9hkXucxJ9voLR47lS0aDYMQtIdaW1DxOy4aSyptMw9fhy4nPHtpbI_TvcRgWZgLPuPlZqZ-8THqJff4ZW27-Z2PzLWuNh-VX5T6WoxovZUkGSu8gQkUYtdc5JMHjVCuABxOylOl9fF1lekoYm2jQ";*/
 
   const bearer = "Bearer " + token;
-
+  console.log("bearer: " + bearer);
   const url = "https://api.petfinder.com/v2/types";
 
   const [type, setType] = useState("");
@@ -34,6 +37,9 @@ const Adopt = () => {
         }
         //console.log("typesArray:" + typesArray);
         setTypes(typesArray);
+      })
+      .catch((error) => {
+        console.error("Error:", error);
       });
   }, []);
 
