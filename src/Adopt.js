@@ -4,7 +4,6 @@ import Form from "./Form";
 import { useNavigate } from "react-router-dom";
 import logo from "./image4.svg";
 import { Link } from "react-router-dom";
-import Data from "./Data";
 
 const Adopt = () => {
   // TODO: insert fetch API code and populate the arrays.
