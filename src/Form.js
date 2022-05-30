@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "./Form.css";
+import "./Adopt.css";
 import logo from "./image5.svg";
 
 function Form({ selected, setSelected, options }) {

@@ -14,7 +14,6 @@
   display: flex;
   color: aliceblue;
   align-items: center;
-
   justify-content: center;
   flex-direction: column;
   text-align: center;
@@ -58,7 +57,7 @@
   margin-right: 50px;
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 800px) {
   .footer {
     width: 100%;
   }
