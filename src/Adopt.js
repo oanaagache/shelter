@@ -4,17 +4,15 @@ import Form from "./Form";
 import { useNavigate } from "react-router-dom";
 import logo from "./image4.svg";
 import { Link } from "react-router-dom";
-import GetToken from "./GetToken";
+//import GetToken from "./GetToken";
 
 const Adopt = () => {
-  var token = GetToken();
-  console.log("Adopt.js: token: " + token);
-  /*token =
-    "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiJ5RTM0bUY1eTh1YVRrY0Rwb3BIV2labldHb1lKWDVVZnc1OXZ0RkRwT0pVNzh1VzV1ciIsImp0aSI6IjViOWVhODczZWY5NjJhOGRmMjFmNDJhYzExYjI3Y2ZiODgwZGVlNDMyNzA0NTJlODg5NGY0MGJmMDBhNmFkMDI4NzcwOTQ1ZWE5OGJkMWFjIiwiaWF0IjoxNjUzODQ3ODc4LCJuYmYiOjE2NTM4NDc4NzgsImV4cCI6MTY1Mzg1MTQ3OCwic3ViIjoiIiwic2NvcGVzIjpbXX0.nZP-IEZDC5UhnfzsfkQZI-EpWsbBF0VEr_jzFK5ZN0KlRgGqngPBMZwXBg5N0F70CLZVpfMvgz0ic6qOQ_KEsmHKGS8RkRjG4p614fVW4wbIJa-28STTLjpqNfyTtNEGzP0YsUWikTg4YLWZ2vO6DZrI36l-aLW9s110vwds7kIaA4P6dX6bJ4AzL6PljqFB5c9hkXucxJ9voLR47lS0aDYMQtIdaW1DxOy4aSyptMw9fhy4nPHtpbI_TvcRgWZgLPuPlZqZ-8THqJff4ZW27-Z2PzLWuNh-VX5T6WoxovZUkGSu8gQkUYtdc5JMHjVCuABxOylOl9fF1lekoYm2jQ";*/
-
-  const bearer = "Bearer " + token;
-  console.log("bearer: " + bearer);
+  //var token = GetToken();
+  //console.log("Adopt.js: token: " + token);
+  const token =
+    "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiJ5RTM0bUY1eTh1YVRrY0Rwb3BIV2labldHb1lKWDVVZnc1OXZ0RkRwT0pVNzh1VzV1ciIsImp0aSI6IjBjM2YyODM5MmM5ZDhmZGU2NzBjYzY2YjkwMThjMmY5NmM0OGY1MzQyNGZlNDBmZmI0N2Y3MjQxYTAwMjU4OGRiMDMzODk0Yjg2MTM2ZTcwIiwiaWF0IjoxNjU0MDEzNTg3LCJuYmYiOjE2NTQwMTM1ODcsImV4cCI6MTY1NDAxNzE4Nywic3ViIjoiIiwic2NvcGVzIjpbXX0.CUB_bqAjEjs3iFWKoYSQyFGr9Z3CkeUkN0k1eOErvBLm0VPPozZ2lgIZOMc4pnFlMBpAvlftlSg1t7ibWZPTxaaFlW0bfLKqcLoQ0p7W8IyStMSUDBSEXnSTjWeKSYJIA0hoiys-yHZ8hsAOo1on_E_1-YRQilh3Y4Sgy4tAF7sdvaBTajUS1W6mb_QghiIF0EW7jv4YSgQ_6GLxMbOAa4HE3TVrdh_Ha-L6IKAueNOEIJR11GEtE6Wwc2zqTJKgL27mjE9ll879WJ0NXQ6_QM7tewHPUH9AFxbUZUC_BU8cYik-NRGoug1Cay47yKIyHOOHrWL12jMTw1D-Ty0ClQ";
   const url = "https://api.petfinder.com/v2/types";
+  const bearer = "Bearer " + token;
 
   const [type, setType] = useState("");
   const [types, setTypes] = useState([]);
@@ -117,6 +115,15 @@ const Adopt = () => {
       });
   }, [type]);
 
+  const [casetval, setCasetval] = useState(false);
+
+  const [click, handleClick] = useState(false);
+  /*
+  const handleClick = (event) => {
+    console.log(breed);
+  };
+  */
+
   return (
     <div className="adopt-container">
       <div className="adopt-header">
@@ -171,10 +178,16 @@ const Adopt = () => {
           <div className="check">
             <h2>Must be good with:</h2>
             <h3 className="checklist">
-              <input type="checkbox" />
+              <input
+                type="checkbox"
+                checked={casetval}
+                onChange={() => setCasetval(!casetval)}
+              />
               <label>Children</label>
+
               <input type="checkbox" />
               <label>Dogs</label>
+
               <input type="checkbox" />
               <label>Cats</label>
             </h3>
@@ -182,7 +195,33 @@ const Adopt = () => {
         </div>
       </div>
 
-      <button className="filter-btn">Apply filters</button>
+      <div>
+        <button
+          type="submit"
+          style={{
+            textColor: "aliceblue",
+            width: "200px",
+            height: "50px",
+            backgroundColor: "darkgreen",
+            fontSize: "24px",
+            transform: "translateX(300%)",
+          }}
+          onClick={() => handleClick(true)}
+        >
+          Apply filters
+        </button>
+        <div>
+          {click ? (
+            <div>
+              <h2>Selection results:</h2>
+              <div>Type: {type}</div>
+              <div>Breed: {breed}</div>
+              <div>Gender: {gender}</div>
+              <div>Size: {size}</div>
+            </div>
+          ) : null}
+        </div>
+      </div>
     </div>
   );
 };

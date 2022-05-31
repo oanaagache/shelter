@@ -5,16 +5,19 @@ import About from "./About";
 import Donate from "./Donate";
 import Foster from "./Foster";
 import Adopt from "./Adopt";
-
 import Other from "./Other";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 import Main from "./Main";
+import Card from "./Card";
+
+import Adoption from "./Adoption";
 
 function App() {
   return (
     <Router>
       <Navbar />
+
       <Routes>
         <Route path="/" element={<Main />} />
         <Route path="/search" element={<Search />} />
@@ -23,6 +26,8 @@ function App() {
         <Route path="/foster" element={<Foster />} />
         <Route path="/adopt" element={<Adopt />} />
         <Route path="/other" element={<Other />} />
+        <Route path="/card" element={<Card />} />
+        <Route path="/adoption" element={<Adoption />} />
       </Routes>
       <Footer />
     </Router>
