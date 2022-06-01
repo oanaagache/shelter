@@ -5,12 +5,16 @@ import { useNavigate } from "react-router-dom";
 import logo from "./image4.svg";
 import { Link } from "react-router-dom";
 //import GetToken from "./GetToken";
+import Cards from "./Cards";
+
+const src = "https://via.placeholder.com/280";
+const name = "Alexandre Dumas";
 
 const Adopt = () => {
   //var token = GetToken();
   //console.log("Adopt.js: token: " + token);
   const token =
-    "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiJ5RTM0bUY1eTh1YVRrY0Rwb3BIV2labldHb1lKWDVVZnc1OXZ0RkRwT0pVNzh1VzV1ciIsImp0aSI6IjBjM2YyODM5MmM5ZDhmZGU2NzBjYzY2YjkwMThjMmY5NmM0OGY1MzQyNGZlNDBmZmI0N2Y3MjQxYTAwMjU4OGRiMDMzODk0Yjg2MTM2ZTcwIiwiaWF0IjoxNjU0MDEzNTg3LCJuYmYiOjE2NTQwMTM1ODcsImV4cCI6MTY1NDAxNzE4Nywic3ViIjoiIiwic2NvcGVzIjpbXX0.CUB_bqAjEjs3iFWKoYSQyFGr9Z3CkeUkN0k1eOErvBLm0VPPozZ2lgIZOMc4pnFlMBpAvlftlSg1t7ibWZPTxaaFlW0bfLKqcLoQ0p7W8IyStMSUDBSEXnSTjWeKSYJIA0hoiys-yHZ8hsAOo1on_E_1-YRQilh3Y4Sgy4tAF7sdvaBTajUS1W6mb_QghiIF0EW7jv4YSgQ_6GLxMbOAa4HE3TVrdh_Ha-L6IKAueNOEIJR11GEtE6Wwc2zqTJKgL27mjE9ll879WJ0NXQ6_QM7tewHPUH9AFxbUZUC_BU8cYik-NRGoug1Cay47yKIyHOOHrWL12jMTw1D-Ty0ClQ";
+    "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiJ5RTM0bUY1eTh1YVRrY0Rwb3BIV2labldHb1lKWDVVZnc1OXZ0RkRwT0pVNzh1VzV1ciIsImp0aSI6ImIzYTQzOTNkNzNhY2UwMGViMWU5N2NlYjgzODc2YTQ5MGYzNjI2YmY2NGJlMzFkZDVkOWEwMmE3N2E4MWY0NDliNDM5MGQ4MmU1ZTMyOTY2IiwiaWF0IjoxNjU0MTA4NjQwLCJuYmYiOjE2NTQxMDg2NDAsImV4cCI6MTY1NDExMjI0MCwic3ViIjoiIiwic2NvcGVzIjpbXX0.n9qJkxFm-IG1yIjrkEgmRoVbBR_F6yAFdO8Vd3Un8VMu2mjin5e3PmKoG9vR5EYI3U05zHVwWg8ysneC4dquIU3ArhZaKEm4hhWsj7hTaPnCQcC9blV_5n5AmApr_mK3gpjpQrSELKMjNwEYto8WZCy44xC7_peXvniRL6XBPH-RVBZInXURJWR6G0R5FTsWDe5PqjKuPF59UcwT_HnkmWRRYJ0AyzcR1dNMJ7Rm9a3yF4UbyxtvyIMBFOTu_u-8zcyt5k3eoQQdSC_n-Ex4NR8OfL6JeeRfT-tO9HHnnvhgVIydkSoft6LHBjz2a-4P5cqSkfI9gszWXbx-Umy7bA";
   const url = "https://api.petfinder.com/v2/types";
   const bearer = "Bearer " + token;
 
@@ -45,10 +49,10 @@ const Adopt = () => {
   useEffect(() => {
     console.log("useEffect: Breeds");
     // for each type, get its breeds:
-    console.log("type: " + type);
+    //console.log("type: " + type);
     if (type == "") return;
     var breedsUrl = url + "/" + type + "/breeds";
-    console.log("breedsUrl: " + breedsUrl);
+    //console.log("breedsUrl: " + breedsUrl);
 
     fetch(breedsUrl, {
       headers: {
@@ -97,10 +101,10 @@ const Adopt = () => {
   useEffect(() => {
     console.log("useEffect: Colors");
     // for each type, get its colors:
-    console.log("type: " + type);
+    //console.log("type: " + type);
     if (type == "") return;
     var typeUrl = url + "/" + type;
-    console.log("typeUrl: " + typeUrl);
+    //console.log("typeUrl: " + typeUrl);
 
     fetch(typeUrl, {
       headers: {
@@ -110,7 +114,7 @@ const Adopt = () => {
       .then((res) => res.json())
       .then((data) => {
         var colorsArray = data.type.colors;
-        console.log("colorsArray: " + colorsArray);
+        //console.log("colorsArray: " + colorsArray);
         setColors(colorsArray);
       });
   }, [type]);
@@ -212,13 +216,14 @@ const Adopt = () => {
         </button>
         <div>
           {click ? (
-            <div>
-              <h2>Selection results:</h2>
-              <div>Type: {type}</div>
-              <div>Breed: {breed}</div>
-              <div>Gender: {gender}</div>
-              <div>Size: {size}</div>
-            </div>
+            <Cards
+              type={type}
+              breed={breed}
+              gender={gender}
+              size={size}
+              age={age}
+              color={color}
+            />
           ) : null}
         </div>
       </div>

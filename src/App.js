@@ -10,6 +10,7 @@ import Navbar from "./Navbar";
 import Footer from "./Footer";
 import Main from "./Main";
 import Card from "./Card";
+import Cards from "./Cards";
 
 import Adoption from "./Adoption";
 
@@ -26,7 +27,9 @@ function App() {
         <Route path="/foster" element={<Foster />} />
         <Route path="/adopt" element={<Adopt />} />
         <Route path="/other" element={<Other />} />
+        <Route path="/cards" element={<Cards />} />
         <Route path="/card" element={<Card />} />
+
         <Route path="/adoption" element={<Adoption />} />
       </Routes>
       <Footer />
