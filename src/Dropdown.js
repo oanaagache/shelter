@@ -2,7 +2,7 @@ import { useState } from "react";
 import "./Adopt.css";
 import logo from "./image5.svg";
 
-function Form({ selected, setSelected, options }) {
+function Dropdown({ selected, setSelected, options }) {
   const [isActive, setIsActive] = useState(false);
   //console.log("options :", options);
 
@@ -32,4 +32,4 @@ function Form({ selected, setSelected, options }) {
   );
 }
 
-export default Form;
+export default Dropdown;

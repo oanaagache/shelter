@@ -1,15 +1,15 @@
-.article {
+.card-container {
   max-width: 100%;
   height: 955px;
 }
 
-.card-inner {
+.card-header {
   padding: 0 0 0 120px;
   display: flex;
   align-items: center;
 }
 
-.card-body {
+.card-content {
   border-radius: 4px;
   overflow: hidden;
   background-color: var(--background-el);
@@ -26,6 +26,12 @@
   object-fit: cover;
 }
 
-.card-details {
-  padding: 20px;
+.card-details h1,
+h3 {
+  padding: 5px;
+}
+
+.card-details h2 {
+  margin-top: 20px;
+  padding: 5px;
 }

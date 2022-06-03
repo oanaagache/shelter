@@ -3,18 +3,23 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import "./Card.css";
 import logo from "./image4.svg";
+import Card from "./Card";
 
 const Cards = (props) => {
-  const { type, breed, gender, size, age, color } = props; //  Destructurare props
-
+  const { type, breed, gender, size, age, color } = props;
   const token =
-    "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiJ5RTM0bUY1eTh1YVRrY0Rwb3BIV2labldHb1lKWDVVZnc1OXZ0RkRwT0pVNzh1VzV1ciIsImp0aSI6ImIzYTQzOTNkNzNhY2UwMGViMWU5N2NlYjgzODc2YTQ5MGYzNjI2YmY2NGJlMzFkZDVkOWEwMmE3N2E4MWY0NDliNDM5MGQ4MmU1ZTMyOTY2IiwiaWF0IjoxNjU0MTA4NjQwLCJuYmYiOjE2NTQxMDg2NDAsImV4cCI6MTY1NDExMjI0MCwic3ViIjoiIiwic2NvcGVzIjpbXX0.n9qJkxFm-IG1yIjrkEgmRoVbBR_F6yAFdO8Vd3Un8VMu2mjin5e3PmKoG9vR5EYI3U05zHVwWg8ysneC4dquIU3ArhZaKEm4hhWsj7hTaPnCQcC9blV_5n5AmApr_mK3gpjpQrSELKMjNwEYto8WZCy44xC7_peXvniRL6XBPH-RVBZInXURJWR6G0R5FTsWDe5PqjKuPF59UcwT_HnkmWRRYJ0AyzcR1dNMJ7Rm9a3yF4UbyxtvyIMBFOTu_u-8zcyt5k3eoQQdSC_n-Ex4NR8OfL6JeeRfT-tO9HHnnvhgVIydkSoft6LHBjz2a-4P5cqSkfI9gszWXbx-Umy7bA";
+    "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiJ5RTM0bUY1eTh1YVRrY0Rwb3BIV2labldHb1lKWDVVZnc1OXZ0RkRwT0pVNzh1VzV1ciIsImp0aSI6ImY0YmM2NWMxZDgzNmUzNjY1Njg1YTQ4ZDY2YzhiODAxYzhiMjhkNjEzOWZmN2QyYWRmNmU0MGQxNDVjM2NkNjIzYWYyMWU4N2U2ZjdjNTA0IiwiaWF0IjoxNjU0Mjc5NjU4LCJuYmYiOjE2NTQyNzk2NTgsImV4cCI6MTY1NDI4MzI1OCwic3ViIjoiIiwic2NvcGVzIjpbXX0.s6a0MeVe8R_YzDVuZpkVLRwaCyLq4RxYakI2J2pTRrt_AyKWBlnkbezTBVl_fWJ9EUhUjkv9Q22XRynTCfVgmjrylTEuO5p2xZ43nrrriwtzYepuaoQJDOvLddtbz0EdanUmRMhOmSF31fwwJN_kwJAYxCdqIk-YT9-iKfLE2adGurx8f46JuleQZxgyMheXtogYPVi5Ll1_ML7Nkm6ZZAa3O3xgGoPGkFViSnBdYTKlsO8O59H_vCZgNNs49xwMbXBi6R3csi4QSbAhUk1MPy2smdUN1gxcU3YRczScTby48154OFFnquhoLYrWZj5f15a1Vu8klHRuvsfZhzdhyA";
   const url = `https://api.petfinder.com/v2/animals?type=${type}&breed=${breed}&gender=${gender}&size=${size}&age=${age}&color=${color}`;
-  console.log("url: " + url);
+  //console.log("url: " + url);
 
   const bearer = "Bearer " + token;
+  const [name, setName] = useState([]);
 
-  const [cards, setCards] = useState([]);
+  const namesTest = [
+    { id: 1, name: "John Doe" },
+    { id: 2, name: "Victor Wayne" },
+    { id: 3, name: "Jane Doe" },
+  ];
 
   useEffect(() => {
     console.log("useEffect: Cards");
@@ -25,58 +30,74 @@ const Cards = (props) => {
     })
       .then((res) => res.json())
       .then((data) => {
+        console.log("# BEGIN fetch()...");
         // build a new array that will contain all the names from JSON.
         var animalsArray = [];
         var length = data.animals.length;
         console.log("Number of animals found: " + length);
         for (var i = 0; i < length; i++) {
-          //console.log(data.animals[i].id);;
           var animalName = data.animals[i].name;
-          console.log(animalName);
-          //animalsArray.push(data.types[i].name);
+          //console.log(animalName);
+          animalsArray.push(animalName);
+          setName(animalsArray);
         }
-        //console.log("cardsArray:" + cardsArray);
-        //setCards(cardsArray);
+        console.log("animalsArray: " + animalsArray);
+        console.log("# END fetch()...");
       })
       .catch((error) => {
         console.error("Error:", error);
       });
   }, []);
-  return (
-    <>
-      <div className="article">
-        <div className="card-inner">
-          <img style={({ height: 0.1 }, { padding: 10 })} src={logo} />
-          <h2>
-            <Link to="/">Back</Link>
-          </h2>
-        </div>
 
-        <div className="card-body">
-          <div className="img">
-            <img />
+  /*
+  useEffect(() => {
+    let newState = name.map((e) => e); // map your state here
+    setName(newState); // and then update the state
+    console.log("SECOND useEffect newState: " + newState);
+  }, []);
+  */
+
+  return (
+    <div className="card-container">
+      <div className="card-header">
+        <img style={({ height: 0.1 }, { padding: 10 })} src={logo} />
+        <h2>
+          <Link to="/">Back</Link>
+        </h2>
+      </div>
+
+      <div className="card-content">
+        <img />
+
+        <div className="card-inner">
+          <div className="card-details">
+            {namesTest.map((nameTest) => (
+              <h1>Name: {nameTest}</h1>
+            ))}
           </div>
 
           <div className="card-details">
-            <h1>Name </h1>
+            <h3> Breed: </h3>
+          </div>
 
-            <h3>
-              Age: <span></span>
-            </h3>
-            <h3>
-              Breed: <span></span>
-            </h3>
-            <h3>
-              Color: <span></span>
-            </h3>
+          <div className="card-details">
+            <h3> Gender: </h3>
+          </div>
 
-            <h3>
-              Size: <span></span>
-            </h3>
+          <div className="card-details">
+            <h3> Size: </h3>
+          </div>
+
+          <div className="card-details">
+            <h3>Age:</h3>
+          </div>
+
+          <div className="card-details">
+            <h3> Color: </h3>
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 export default Cards;

@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from "react";
 import "./Adopt.css";
-import Form from "./Form";
+import Dropdown from "./Dropdown";
 import { useNavigate } from "react-router-dom";
 import logo from "./image4.svg";
 import { Link } from "react-router-dom";
 //import GetToken from "./GetToken";
 import Cards from "./Cards";
+//import { Dropdown } from "bootstrap";
 
 const src = "https://via.placeholder.com/280";
 const name = "Alexandre Dumas";
@@ -14,7 +15,7 @@ const Adopt = () => {
   //var token = GetToken();
   //console.log("Adopt.js: token: " + token);
   const token =
-    "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiJ5RTM0bUY1eTh1YVRrY0Rwb3BIV2labldHb1lKWDVVZnc1OXZ0RkRwT0pVNzh1VzV1ciIsImp0aSI6ImIzYTQzOTNkNzNhY2UwMGViMWU5N2NlYjgzODc2YTQ5MGYzNjI2YmY2NGJlMzFkZDVkOWEwMmE3N2E4MWY0NDliNDM5MGQ4MmU1ZTMyOTY2IiwiaWF0IjoxNjU0MTA4NjQwLCJuYmYiOjE2NTQxMDg2NDAsImV4cCI6MTY1NDExMjI0MCwic3ViIjoiIiwic2NvcGVzIjpbXX0.n9qJkxFm-IG1yIjrkEgmRoVbBR_F6yAFdO8Vd3Un8VMu2mjin5e3PmKoG9vR5EYI3U05zHVwWg8ysneC4dquIU3ArhZaKEm4hhWsj7hTaPnCQcC9blV_5n5AmApr_mK3gpjpQrSELKMjNwEYto8WZCy44xC7_peXvniRL6XBPH-RVBZInXURJWR6G0R5FTsWDe5PqjKuPF59UcwT_HnkmWRRYJ0AyzcR1dNMJ7Rm9a3yF4UbyxtvyIMBFOTu_u-8zcyt5k3eoQQdSC_n-Ex4NR8OfL6JeeRfT-tO9HHnnvhgVIydkSoft6LHBjz2a-4P5cqSkfI9gszWXbx-Umy7bA";
+    "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiJ5RTM0bUY1eTh1YVRrY0Rwb3BIV2labldHb1lKWDVVZnc1OXZ0RkRwT0pVNzh1VzV1ciIsImp0aSI6ImY0YmM2NWMxZDgzNmUzNjY1Njg1YTQ4ZDY2YzhiODAxYzhiMjhkNjEzOWZmN2QyYWRmNmU0MGQxNDVjM2NkNjIzYWYyMWU4N2U2ZjdjNTA0IiwiaWF0IjoxNjU0Mjc5NjU4LCJuYmYiOjE2NTQyNzk2NTgsImV4cCI6MTY1NDI4MzI1OCwic3ViIjoiIiwic2NvcGVzIjpbXX0.s6a0MeVe8R_YzDVuZpkVLRwaCyLq4RxYakI2J2pTRrt_AyKWBlnkbezTBVl_fWJ9EUhUjkv9Q22XRynTCfVgmjrylTEuO5p2xZ43nrrriwtzYepuaoQJDOvLddtbz0EdanUmRMhOmSF31fwwJN_kwJAYxCdqIk-YT9-iKfLE2adGurx8f46JuleQZxgyMheXtogYPVi5Ll1_ML7Nkm6ZZAa3O3xgGoPGkFViSnBdYTKlsO8O59H_vCZgNNs49xwMbXBi6R3csi4QSbAhUk1MPy2smdUN1gxcU3YRczScTby48154OFFnquhoLYrWZj5f15a1Vu8klHRuvsfZhzdhyA";
   const url = "https://api.petfinder.com/v2/types";
   const bearer = "Bearer " + token;
 
@@ -151,32 +152,44 @@ const Adopt = () => {
         <div className="drop">
           <div className="drop1">
             <h2>Type:</h2>
-            <Form selected={type} setSelected={setType} options={types} />
+            <Dropdown selected={type} setSelected={setType} options={types} />
           </div>
 
           <div className="drop2">
             <h2>Breed:</h2>
-            <Form selected={breed} setSelected={setBreed} options={breeds} />
+            <Dropdown
+              selected={breed}
+              setSelected={setBreed}
+              options={breeds}
+            />
           </div>
 
           <div className="drop3">
             <h2>Gender:</h2>
-            <Form selected={gender} setSelected={setGender} options={genders} />
+            <Dropdown
+              selected={gender}
+              setSelected={setGender}
+              options={genders}
+            />
           </div>
 
           <div className="drop4">
             <h2>Size:</h2>
-            <Form selected={size} setSelected={setSize} options={sizes} />
+            <Dropdown selected={size} setSelected={setSize} options={sizes} />
           </div>
 
           <div className="drop5">
             <h2>Age:</h2>
-            <Form selected={age} setSelected={setAge} options={ages} />
+            <Dropdown selected={age} setSelected={setAge} options={ages} />
           </div>
 
           <div className="drop6">
             <h2>Color:</h2>
-            <Form selected={color} setSelected={setColor} options={colors} />
+            <Dropdown
+              selected={color}
+              setSelected={setColor}
+              options={colors}
+            />
           </div>
 
           <div className="check">
