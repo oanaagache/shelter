@@ -15,12 +15,6 @@ const Cards = (props) => {
   const bearer = "Bearer " + token;
   const [name, setName] = useState([]);
 
-  const namesTest = [
-    { id: 1, name: "John Doe" },
-    { id: 2, name: "Victor Wayne" },
-    { id: 3, name: "Jane Doe" },
-  ];
-
   useEffect(() => {
     console.log("useEffect: Cards");
     fetch(url, {
@@ -71,9 +65,7 @@ const Cards = (props) => {
 
         <div className="card-inner">
           <div className="card-details">
-            {namesTest.map((nameTest) => (
-              <h1>Name: {nameTest}</h1>
-            ))}
+            <h1>Name: {nameTest}</h1>
           </div>
 
           <div className="card-details">
