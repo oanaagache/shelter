@@ -65,7 +65,7 @@ const Cards = (props) => {
 
         <div className="card-inner">
           <div className="card-details">
-            <h1>Name: {nameTest}</h1>
+            <h1>Name: {name}</h1>
           </div>
 
           <div className="card-details">
