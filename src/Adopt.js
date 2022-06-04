@@ -6,16 +6,12 @@ import logo from "./image4.svg";
 import { Link } from "react-router-dom";
 //import GetToken from "./GetToken";
 import Cards from "./Cards";
-//import { Dropdown } from "bootstrap";
-
-const src = "https://via.placeholder.com/280";
-const name = "Alexandre Dumas";
 
 const Adopt = () => {
   //var token = GetToken();
   //console.log("Adopt.js: token: " + token);
   const token =
-    "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiJ5RTM0bUY1eTh1YVRrY0Rwb3BIV2labldHb1lKWDVVZnc1OXZ0RkRwT0pVNzh1VzV1ciIsImp0aSI6ImY0YmM2NWMxZDgzNmUzNjY1Njg1YTQ4ZDY2YzhiODAxYzhiMjhkNjEzOWZmN2QyYWRmNmU0MGQxNDVjM2NkNjIzYWYyMWU4N2U2ZjdjNTA0IiwiaWF0IjoxNjU0Mjc5NjU4LCJuYmYiOjE2NTQyNzk2NTgsImV4cCI6MTY1NDI4MzI1OCwic3ViIjoiIiwic2NvcGVzIjpbXX0.s6a0MeVe8R_YzDVuZpkVLRwaCyLq4RxYakI2J2pTRrt_AyKWBlnkbezTBVl_fWJ9EUhUjkv9Q22XRynTCfVgmjrylTEuO5p2xZ43nrrriwtzYepuaoQJDOvLddtbz0EdanUmRMhOmSF31fwwJN_kwJAYxCdqIk-YT9-iKfLE2adGurx8f46JuleQZxgyMheXtogYPVi5Ll1_ML7Nkm6ZZAa3O3xgGoPGkFViSnBdYTKlsO8O59H_vCZgNNs49xwMbXBi6R3csi4QSbAhUk1MPy2smdUN1gxcU3YRczScTby48154OFFnquhoLYrWZj5f15a1Vu8klHRuvsfZhzdhyA";
+    "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiJ5RTM0bUY1eTh1YVRrY0Rwb3BIV2labldHb1lKWDVVZnc1OXZ0RkRwT0pVNzh1VzV1ciIsImp0aSI6IjQxNzVhNTQ4MjVlZGI4YzA5NDI3ZjlkYjhkNGZlZjNlNmRhYmQwY2M2NDAxOGM3NjFhMWY0NWEzNDFkNDUzMzkxMDMyYTRhNzc3ZDlhNTg4IiwiaWF0IjoxNjU0MzQzODEzLCJuYmYiOjE2NTQzNDM4MTMsImV4cCI6MTY1NDM0NzQxMywic3ViIjoiIiwic2NvcGVzIjpbXX0.ptVmJcJ3CEuRGXi46yeDbJhNWp8nhp0rTOCCpHv-jlY79IBJUGQ4xao63VuBVWtXydo7F1LYMEsi-d0hu7HCQ-V_aFMPRD1ASTYMwpxJ84N-iAu9Cd77-cTwglo1ua0H4_npd_oSMvdZOmcAfSUYUYxIcuf4ya0X2D9S1MkWMwIqzQM5cbtf19r7Qvk3EhK1kD5BnOTlEP69sW8F0waYfozQUt4yacOLO6XiIBBJ8CaEvlzEQx-doFkAXiX4hXdNVeyJ2FwHrOdt78tYGgnprtoQqtpuZXrV1HhtWxxIytmebI_VD0HpnHE4yW6cO_xYOTIUFO2CfC6FyxjH7DPLCg";
   const url = "https://api.petfinder.com/v2/types";
   const bearer = "Bearer " + token;
 
