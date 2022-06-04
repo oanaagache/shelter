@@ -54,14 +54,6 @@ const Cards = (props) => {
       });
   }, []);
 
-  /*
-  useEffect(() => {
-    let newState = name.map((e) => e); // map your state here
-    setName(newState); // and then update the state
-    console.log("SECOND useEffect newState: " + newState);
-  }, []);
-  */
-
   useEffect(() => {
     console.log("name:" + name);
     const sirAjutator = name.map((item) => {
