@@ -11,8 +11,8 @@ import Footer from "./Footer";
 import Main from "./Main";
 import Card from "./Card";
 import Cards from "./Cards";
-
 import Adoption from "./Adoption";
+import Response from "./Response";
 
 function App() {
   return (
@@ -28,9 +28,9 @@ function App() {
         <Route path="/adopt" element={<Adopt />} />
         <Route path="/other" element={<Other />} />
         <Route path="/cards" element={<Cards />} />
-        <Route path="/card/:id" element={<Card />} />
-
+        <Route path="/cards/:id" element={<Card />} />
         <Route path="/adoption" element={<Adoption />} />
+        <Route path="/response" element={<Response />} />
       </Routes>
       <Footer />
     </Router>

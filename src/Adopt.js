@@ -4,16 +4,16 @@ import Dropdown from "./Dropdown";
 import { useNavigate } from "react-router-dom";
 import logo from "./image4.svg";
 import { Link } from "react-router-dom";
-//import GetToken from "./GetToken";
 import Cards from "./Cards";
 
 const Adopt = () => {
   //var token = GetToken();
   //console.log("Adopt.js: token: " + token);
   const token =
-    "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiJ5RTM0bUY1eTh1YVRrY0Rwb3BIV2labldHb1lKWDVVZnc1OXZ0RkRwT0pVNzh1VzV1ciIsImp0aSI6IjQxNzVhNTQ4MjVlZGI4YzA5NDI3ZjlkYjhkNGZlZjNlNmRhYmQwY2M2NDAxOGM3NjFhMWY0NWEzNDFkNDUzMzkxMDMyYTRhNzc3ZDlhNTg4IiwiaWF0IjoxNjU0MzQzODEzLCJuYmYiOjE2NTQzNDM4MTMsImV4cCI6MTY1NDM0NzQxMywic3ViIjoiIiwic2NvcGVzIjpbXX0.ptVmJcJ3CEuRGXi46yeDbJhNWp8nhp0rTOCCpHv-jlY79IBJUGQ4xao63VuBVWtXydo7F1LYMEsi-d0hu7HCQ-V_aFMPRD1ASTYMwpxJ84N-iAu9Cd77-cTwglo1ua0H4_npd_oSMvdZOmcAfSUYUYxIcuf4ya0X2D9S1MkWMwIqzQM5cbtf19r7Qvk3EhK1kD5BnOTlEP69sW8F0waYfozQUt4yacOLO6XiIBBJ8CaEvlzEQx-doFkAXiX4hXdNVeyJ2FwHrOdt78tYGgnprtoQqtpuZXrV1HhtWxxIytmebI_VD0HpnHE4yW6cO_xYOTIUFO2CfC6FyxjH7DPLCg";
-  const url = "https://api.petfinder.com/v2/types";
+    "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiJ5RTM0bUY1eTh1YVRrY0Rwb3BIV2labldHb1lKWDVVZnc1OXZ0RkRwT0pVNzh1VzV1ciIsImp0aSI6IjVjZmI0MTY2YTNhYjg5MjgzY2U5YjBjNDQyZTkxMGJlYmZmZTc0YWUyYjJiYTBlN2Q0MWRkZDRlMDI5ZGYxZDY3ZDVkNWE0ZGE3YjE1ZDM1IiwiaWF0IjoxNjU0NTM4Mjg2LCJuYmYiOjE2NTQ1MzgyODYsImV4cCI6MTY1NDU0MTg4Niwic3ViIjoiIiwic2NvcGVzIjpbXX0.Hj-V8yWBfJP7fO2DsEmUHgM9RYsrAB41KxA4wsbtAm-pig_dFQrygSOwrL-yLZwjnDNihB7bymB9bXwCB2Woww4ZjdgBOamuuEnHtX1AYRZF1J45VDQDpbILWt1fZACwaZNF_O-rPd_mu2moXWMS0JNZdFIoyekx2F1ZUlxNZj-RRwuPuMPuU5_3no13389s20oYjpYkNI2__fXnNg0oC_oQLwi5D1twopRPy4WyjUtzADt5ChLlnvo_h7OGxj1cyJpHJ4LaQjlltfcASRwTxMOM_uWtfvlmDR-E51g80CG1Wb1S0zRgSU7jX52VS2F8uT8wGGSTKqLQGx-asGZ-vw";
   const bearer = "Bearer " + token;
+
+  const url = "https://api.petfinder.com/v2/types";
 
   const [type, setType] = useState("");
   const [types, setTypes] = useState([]);
@@ -119,11 +119,6 @@ const Adopt = () => {
   const [casetval, setCasetval] = useState(false);
 
   const [click, handleClick] = useState(false);
-  /*
-  const handleClick = (event) => {
-    console.log(breed);
-  };
-  */
 
   return (
     <div className="adopt-container">
@@ -205,36 +200,30 @@ const Adopt = () => {
               <label>Cats</label>
             </h3>
           </div>
+
+          <div className="drop7">
+            <h2></h2>
+          </div>
         </div>
       </div>
 
-      <div>
-        <button
-          type="submit"
-          style={{
-            textColor: "aliceblue",
-            width: "200px",
-            height: "50px",
-            backgroundColor: "darkgreen",
-            fontSize: "24px",
-            transform: "translateX(300%)",
-          }}
-          onClick={() => handleClick(true)}
-        >
+      <div className="button">
+        <button className="filter-btn" onClick={() => handleClick(true)}>
           Apply filters
         </button>
-        <div>
-          {click ? (
-            <Cards
-              type={type}
-              breed={breed}
-              gender={gender}
-              size={size}
-              age={age}
-              color={color}
-            />
-          ) : null}
-        </div>
+      </div>
+
+      <div className="cards">
+        {click ? (
+          <Cards
+            type={type}
+            breed={breed}
+            gender={gender}
+            size={size}
+            age={age}
+            color={color}
+          />
+        ) : null}
       </div>
     </div>
   );

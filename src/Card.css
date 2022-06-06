@@ -18,8 +18,7 @@
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.12);
   width: 300px;
   cursor: pointer;
-  margin-top: 50px;
-  margin-left: 120px;
+  margin: 45px;
 }
 
 .img {
@@ -28,12 +27,10 @@
   object-fit: cover;
 }
 
-.card-details h1,
-h3 {
-  padding: 5px;
+.card-inner {
+  padding: 15px;
 }
 
-.card-details h2 {
-  margin-top: 20px;
+.card-details {
   padding: 5px;
 }

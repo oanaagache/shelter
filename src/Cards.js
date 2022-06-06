@@ -1,25 +1,24 @@
 import React from "react";
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
 import "./Card.css";
-import logo from "./image4.svg";
 import Card from "./Card";
-
+import Response from "./Response";
+import { Container } from "react-bootstrap";
 const Cards = (props) => {
   const { type, breed, gender, size, age, color } = props;
   const token =
-    "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiJ5RTM0bUY1eTh1YVRrY0Rwb3BIV2labldHb1lKWDVVZnc1OXZ0RkRwT0pVNzh1VzV1ciIsImp0aSI6IjQxNzVhNTQ4MjVlZGI4YzA5NDI3ZjlkYjhkNGZlZjNlNmRhYmQwY2M2NDAxOGM3NjFhMWY0NWEzNDFkNDUzMzkxMDMyYTRhNzc3ZDlhNTg4IiwiaWF0IjoxNjU0MzQzODEzLCJuYmYiOjE2NTQzNDM4MTMsImV4cCI6MTY1NDM0NzQxMywic3ViIjoiIiwic2NvcGVzIjpbXX0.ptVmJcJ3CEuRGXi46yeDbJhNWp8nhp0rTOCCpHv-jlY79IBJUGQ4xao63VuBVWtXydo7F1LYMEsi-d0hu7HCQ-V_aFMPRD1ASTYMwpxJ84N-iAu9Cd77-cTwglo1ua0H4_npd_oSMvdZOmcAfSUYUYxIcuf4ya0X2D9S1MkWMwIqzQM5cbtf19r7Qvk3EhK1kD5BnOTlEP69sW8F0waYfozQUt4yacOLO6XiIBBJ8CaEvlzEQx-doFkAXiX4hXdNVeyJ2FwHrOdt78tYGgnprtoQqtpuZXrV1HhtWxxIytmebI_VD0HpnHE4yW6cO_xYOTIUFO2CfC6FyxjH7DPLCg";
+    "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiJ5RTM0bUY1eTh1YVRrY0Rwb3BIV2labldHb1lKWDVVZnc1OXZ0RkRwT0pVNzh1VzV1ciIsImp0aSI6IjVjZmI0MTY2YTNhYjg5MjgzY2U5YjBjNDQyZTkxMGJlYmZmZTc0YWUyYjJiYTBlN2Q0MWRkZDRlMDI5ZGYxZDY3ZDVkNWE0ZGE3YjE1ZDM1IiwiaWF0IjoxNjU0NTM4Mjg2LCJuYmYiOjE2NTQ1MzgyODYsImV4cCI6MTY1NDU0MTg4Niwic3ViIjoiIiwic2NvcGVzIjpbXX0.Hj-V8yWBfJP7fO2DsEmUHgM9RYsrAB41KxA4wsbtAm-pig_dFQrygSOwrL-yLZwjnDNihB7bymB9bXwCB2Woww4ZjdgBOamuuEnHtX1AYRZF1J45VDQDpbILWt1fZACwaZNF_O-rPd_mu2moXWMS0JNZdFIoyekx2F1ZUlxNZj-RRwuPuMPuU5_3no13389s20oYjpYkNI2__fXnNg0oC_oQLwi5D1twopRPy4WyjUtzADt5ChLlnvo_h7OGxj1cyJpHJ4LaQjlltfcASRwTxMOM_uWtfvlmDR-E51g80CG1Wb1S0zRgSU7jX52VS2F8uT8wGGSTKqLQGx-asGZ-vw";
   const url = `https://api.petfinder.com/v2/animals?type=${type}&breed=${breed}&gender=${gender}&size=${size}&age=${age}&color=${color}`;
   console.log("url: " + url);
 
   const bearer = "Bearer " + token;
-  const [name, setName] = useState([]);
 
-  const [carduri, setCarduri] = useState("");
-  const [catelAles, setCatel] = useState({});
+  const [name, setName] = useState([]);
+  const [cards, setCards] = useState("");
+  const [animalSelected, setAnimalSelected] = useState({});
 
   useEffect(() => {
-    console.log("useEffect: Cards");
+    console.log("First useEffect:");
     fetch(url, {
       headers: {
         Authorization: bearer,
@@ -27,6 +26,7 @@ const Cards = (props) => {
     })
       .then((res) => res.json())
       .then((data) => {
+        console.log("data:");
         console.log(data);
         // build a new array that will contain all the names from JSON.
         var animalsArray = [];
@@ -41,13 +41,15 @@ const Cards = (props) => {
             size: data.animals[i].size,
             age: data.animals[i].age,
             colors: data.animals[i].colors,
+            id: data.animals[i].id,
           };
+          console.log("animal:");
           console.log(animal);
           animalsArray.push(animal);
         }
         setName(animalsArray);
+        console.log("animalsArray:");
         console.log(animalsArray);
-        console.log("# END fetch()...");
       })
       .catch((error) => {
         console.error("Error:", error);
@@ -55,21 +57,22 @@ const Cards = (props) => {
   }, []);
 
   useEffect(() => {
-    console.log("name:" + name);
-    const sirAjutator = name.map((item) => {
-      return <Card item={item} setCatel={setCatel} />;
+    console.log("Second useEffect:");
+    console.log("name");
+    console.log(name);
+    const petsArray = name.map((item) => {
+      return (
+        <>
+          <Card item={item} setAnimalSelected={setAnimalSelected} />
+        </>
+      );
     });
-    setCarduri(sirAjutator);
+    setCards(petsArray); //toate cardurile le pun in cards
+    console.log("petsArray");
+    console.log(petsArray);
   }, [name]);
 
-  return (
-    <div className="card-container">
-      {carduri}
-      {/* {Object.keys(catelAles).length != 0 && (
-        <div className="modal">{catelAles.name} </div>
-      )} */}
-    </div>
-  );
+  return <div className="card-container">{cards}</div>;
 };
 
 export default Cards;

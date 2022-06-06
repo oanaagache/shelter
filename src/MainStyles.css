@@ -17,7 +17,7 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(70%, -50%);
+  transform: translate(-35%, -50%);
   font-family: "Oswald", sans-serif; /*regular*/
 }
 
