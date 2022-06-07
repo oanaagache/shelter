@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./Adopt.css";
 import Dropdown from "./Dropdown";
-import { useNavigate } from "react-router-dom";
+
 import logo from "./images/image4.svg";
 import { Link } from "react-router-dom";
 import Cards from "./Cards";
@@ -10,7 +10,7 @@ const Adopt = () => {
   //var token = GetToken();
   //console.log("Adopt.js: token: " + token);
   const token =
-    "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiJ5RTM0bUY1eTh1YVRrY0Rwb3BIV2labldHb1lKWDVVZnc1OXZ0RkRwT0pVNzh1VzV1ciIsImp0aSI6Ijk5ZGE2MTUzNjg2Yzk0OGViYzg0Y2FmMDMzYjU0M2RjYzFmZDliNGVlMTRlZGY0NmMxOWExNDNmYjMyNTFlYjgwNmIyN2YyOWZhYTk0MjJkIiwiaWF0IjoxNjU0NTkzNzAyLCJuYmYiOjE2NTQ1OTM3MDIsImV4cCI6MTY1NDU5NzMwMiwic3ViIjoiIiwic2NvcGVzIjpbXX0.k0A8IBqUbBDjQQeR7kvzYgpZeFqeGkcP9-qunuYIiJZWKn3zhaRUjL9hfBe3P1yJlV_m2n7vTVkHmO4Y_EGmNvwCOnULVtdvn2Rc818_-EnPrqQahd9HKdCO1ZLZYn9VF35vsSkq_ubOf0ko69r7viwmxC62Manx1_OMgbsltCTwf1NWJIpCII21F-y4fN0nWbAweqKuLUxkAKXyT2JSfFP6zYffD-NHVcmi86NeQugjpEmkTBj7PY_tN0UwhHe5mBY29wPHFnGCtgrGFnFXl0wfSqNPZBSoSK7dMU166EvzsTYF2iy226-hh7osU1HJx_vs5tn9XSUDv1yKHgrgLQ";
+    "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiJ5RTM0bUY1eTh1YVRrY0Rwb3BIV2labldHb1lKWDVVZnc1OXZ0RkRwT0pVNzh1VzV1ciIsImp0aSI6IjgwNDE4NDkyNGQyYzA4Y2I3ZmE0Zjg3ZmVmYThjZDEyZjI1ZmYyZWI5NzNhYWVmNmM1NzVkNzgzNzA3ZjZmOWQ3OGQ1ZTY0YjBiMGFhOGEwIiwiaWF0IjoxNjU0NTk3NjEwLCJuYmYiOjE2NTQ1OTc2MTAsImV4cCI6MTY1NDYwMTIxMCwic3ViIjoiIiwic2NvcGVzIjpbXX0.F7mvA3nuEx40AwkZI4mOvmvLK2kY8gRFQr0y2-IgnZHS58Xkg0mrnmeSAadzyVmOQxJeAcpk7vUufBhr6didEpJ5EDL650RoN5XY2UNMslKk5VM0ocM3sU7LAlodDEQb88jZjgOwA9tac638irmB_PuhkdvweqiWuUpDFXJNraOALhuu8LaiIFaHf1xfpN0gy4sAskDgNqpMF7LadJ5DWcDLVlFW6S7YhGvV8vxorHPSYU_riGO7KqswLzA0nyfvbdrtg4X7op8CzPVw4BZVCwsTUp7DmwOuHEOP4W-pV9V3eSz8z_xGliOnPaMK8otxK_jmHMDDzLBpGFf-qpmHeQ";
   const bearer = "Bearer " + token;
 
   const url = "https://api.petfinder.com/v2/types";
@@ -208,8 +208,8 @@ const Adopt = () => {
       </div>
 
       <div className="button">
-        <button className="filter-btn" onClick={() => handleClick(true)}>
-          Apply filters
+        <button className="filter-btn" onClick={() => handleClick(!click)}>
+          {click == true ? "Reset Filters" : "Apply filters"}
         </button>
       </div>
 
