@@ -1,7 +1,7 @@
 import React from "react";
-import logo3 from "./image3.png";
+import logo3 from "./images/image3.png";
 import "./MainStyles.css";
-import { Button } from "reactstrap";
+
 import { useNavigate } from "react-router-dom";
 
 const Main = () => {

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./Adopt.css";
 import Dropdown from "./Dropdown";
 import { useNavigate } from "react-router-dom";
-import logo from "./image4.svg";
+import logo from "./images/image4.svg";
 import { Link } from "react-router-dom";
 import Cards from "./Cards";
 
@@ -10,7 +10,7 @@ const Adopt = () => {
   //var token = GetToken();
   //console.log("Adopt.js: token: " + token);
   const token =
-    "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiJ5RTM0bUY1eTh1YVRrY0Rwb3BIV2labldHb1lKWDVVZnc1OXZ0RkRwT0pVNzh1VzV1ciIsImp0aSI6IjVjZmI0MTY2YTNhYjg5MjgzY2U5YjBjNDQyZTkxMGJlYmZmZTc0YWUyYjJiYTBlN2Q0MWRkZDRlMDI5ZGYxZDY3ZDVkNWE0ZGE3YjE1ZDM1IiwiaWF0IjoxNjU0NTM4Mjg2LCJuYmYiOjE2NTQ1MzgyODYsImV4cCI6MTY1NDU0MTg4Niwic3ViIjoiIiwic2NvcGVzIjpbXX0.Hj-V8yWBfJP7fO2DsEmUHgM9RYsrAB41KxA4wsbtAm-pig_dFQrygSOwrL-yLZwjnDNihB7bymB9bXwCB2Woww4ZjdgBOamuuEnHtX1AYRZF1J45VDQDpbILWt1fZACwaZNF_O-rPd_mu2moXWMS0JNZdFIoyekx2F1ZUlxNZj-RRwuPuMPuU5_3no13389s20oYjpYkNI2__fXnNg0oC_oQLwi5D1twopRPy4WyjUtzADt5ChLlnvo_h7OGxj1cyJpHJ4LaQjlltfcASRwTxMOM_uWtfvlmDR-E51g80CG1Wb1S0zRgSU7jX52VS2F8uT8wGGSTKqLQGx-asGZ-vw";
+    "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiJ5RTM0bUY1eTh1YVRrY0Rwb3BIV2labldHb1lKWDVVZnc1OXZ0RkRwT0pVNzh1VzV1ciIsImp0aSI6Ijk5ZGE2MTUzNjg2Yzk0OGViYzg0Y2FmMDMzYjU0M2RjYzFmZDliNGVlMTRlZGY0NmMxOWExNDNmYjMyNTFlYjgwNmIyN2YyOWZhYTk0MjJkIiwiaWF0IjoxNjU0NTkzNzAyLCJuYmYiOjE2NTQ1OTM3MDIsImV4cCI6MTY1NDU5NzMwMiwic3ViIjoiIiwic2NvcGVzIjpbXX0.k0A8IBqUbBDjQQeR7kvzYgpZeFqeGkcP9-qunuYIiJZWKn3zhaRUjL9hfBe3P1yJlV_m2n7vTVkHmO4Y_EGmNvwCOnULVtdvn2Rc818_-EnPrqQahd9HKdCO1ZLZYn9VF35vsSkq_ubOf0ko69r7viwmxC62Manx1_OMgbsltCTwf1NWJIpCII21F-y4fN0nWbAweqKuLUxkAKXyT2JSfFP6zYffD-NHVcmi86NeQugjpEmkTBj7PY_tN0UwhHe5mBY29wPHFnGCtgrGFnFXl0wfSqNPZBSoSK7dMU166EvzsTYF2iy226-hh7osU1HJx_vs5tn9XSUDv1yKHgrgLQ";
   const bearer = "Bearer " + token;
 
   const url = "https://api.petfinder.com/v2/types";

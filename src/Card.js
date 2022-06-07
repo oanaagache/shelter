@@ -1,8 +1,8 @@
 import React from "react";
 import "./Card.css";
-import logo from "./image5.svg";
-import { Link, useParams } from "react-router-dom";
-import logo2 from "./image.png";
+import logo from "./images/image5.svg";
+import { Link } from "react-router-dom";
+import logo2 from "./images/image.png";
 //import { useParams } from "react-router-dom";
 
 function Card({ item, setAnimalSelected }) {

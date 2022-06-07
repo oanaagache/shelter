@@ -1,14 +1,52 @@
-import React from "react";
-import { Form, Container, Button } from "react-bootstrap";
+import React, { useState } from "react";
+import { Form } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./Adoption.css";
 import { Link } from "react-router-dom";
-import logo from "./image5.svg";
+import logo from "./images/image5.svg";
 import { useNavigate } from "react-router-dom";
 
-const Adoption = () => {
+const Adoption = (props) => {
+  const [name, setName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [address1, setAddress1] = useState("");
+  const [address2, setAddress2] = useState("");
+  const [city, setCity] = useState("");
+  const [state, setState] = useState("");
+  const [code, setCode] = useState("");
+  const [phoneNo, setPhoneNo] = useState("");
+  const [email, setEmail] = useState("");
+
   let navigate = useNavigate();
+
+  const Submit = (evt) => {
+    evt.preventDefault();
+
+    const form = {
+      name: name,
+      lastName: lastName,
+      address1: address1,
+      address2: address2,
+      city: city,
+      state: state,
+      code: code,
+      phoneNo: phoneNo,
+      email: email,
+    };
+    props.transmit(form); //  Transmit form to Response.js
+
+    setName("");
+    setLastName("");
+    setAddress1("");
+    setAddress2("");
+    setCity("");
+    setState("");
+    setCode("");
+    setPhoneNo("");
+    setEmail("");
+  };
+
   return (
     <>
       <div className="adoption-container">
@@ -25,54 +63,63 @@ const Adoption = () => {
           </div>
         </div>
 
-        <Form>
+        <Form onSubmit={Submit}>
           <div className="adoption-form">
             <div class="form-row">
               <div class="form-group1 col-md-6">
-                <label for="inputFirstName">First Name:</label>
+                <label>First Name:</label>
                 <input
                   type="text"
                   class="form-control"
-                  id="inputFirstName"
                   placeholder="First Name"
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
                 />
               </div>
 
               <div class="form-group col-md-6">
-                <label for="inputLastName">Last Name:</label>
+                <label>Last Name:</label>
                 <input
                   type="text"
                   class="form-control"
-                  id="inputLastName"
                   placeholder="Last Name"
+                  value={lastName}
+                  onChange={(e) => setLastName(e.target.value)}
                 />
               </div>
             </div>
 
             <div class="form-group">
-              <label for="inputAddress1">Address Line 1:</label>
+              <label>Address Line 1:</label>
               <input
                 type="text"
                 class="form-control"
-                id="inputAddress1"
                 placeholder="Street name and number"
+                value={address1}
+                onChange={(e) => setAddress1(e.target.value)}
               />
             </div>
 
             <div class="form-group">
-              <label for="inputAddress2">Address Line 2:</label>
+              <label>Address Line 2:</label>
               <input
                 type="text"
                 class="form-control"
-                id="inputAddress2"
                 placeholder="Suite, apartment"
+                value={address2}
+                onChange={(e) => setAddress2(e.target.value)}
               />
             </div>
 
             <div class="form-row">
               <div class="form-group col-md-4">
-                <label for="inputCity">City</label>
-                <input type="text" class="form-control" id="inputCity" />
+                <label>City</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  value={address2}
+                  onChange={(e) => setAddress2(e.target.value)}
+                />
               </div>
               <div class="form-group col-md-4">
                 <label for="inputState">State</label>
@@ -89,22 +136,24 @@ const Adoption = () => {
 
             <div class="form-row">
               <div class="form-group1 col-md-6">
-                <label for="inputFirstName">Phone number:</label>
+                <label>Phone number:</label>
                 <input
                   type="text"
                   class="form-control"
-                  id="inputPhoneNumber"
                   placeholder="Phone number"
+                  value={phoneNo}
+                  onChange={(e) => setPhoneNo(e.target.value)}
                 />
               </div>
 
               <div class="form-group col-md-6">
-                <label for="inputEmailAddress">Email address:</label>
+                <label>Email address:</label>
                 <input
                   type="text"
                   class="form-control"
-                  id="inputEmailAddress"
                   placeholder="Email address"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
                 />
               </div>
             </div>
@@ -196,7 +245,7 @@ const Adoption = () => {
               <button
                 className="submit"
                 onClick={() => {
-                  navigate("/adopt");
+                  navigate("/responses");
                 }}
               >
                 Submit

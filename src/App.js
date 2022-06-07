@@ -1,18 +1,21 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Search from "./Search";
-import About from "./About";
-import Donate from "./Donate";
-import Foster from "./Foster";
+import About from "./others/About";
+import Donate from "./others/Donate";
+import Foster from "./others/Foster";
 import Adopt from "./Adopt";
-import Other from "./Other";
+import Other from "./others/Other";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 import Main from "./Main";
 import Card from "./Card";
 import Cards from "./Cards";
 import Adoption from "./Adoption";
-import Response from "./Response";
+import Success from "./Success";
+import Responses from "./Responses";
+import Intro from "./Intro";
+import List from "./List";
 
 function App() {
   return (
@@ -30,7 +33,10 @@ function App() {
         <Route path="/cards" element={<Cards />} />
         <Route path="/cards/:id" element={<Card />} />
         <Route path="/adoption" element={<Adoption />} />
-        <Route path="/response" element={<Response />} />
+        <Route path="/success" element={<Success />} />
+        <Route path="/responses" element={<Responses />} />
+        <Route path="/intro" element={<Intro />} />
+        <Route path="/list" element={<List />} />
       </Routes>
       <Footer />
     </Router>
