@@ -16,6 +16,7 @@ import Success from "./Success";
 import Responses from "./Responses";
 import Intro from "./Intro";
 import List from "./List";
+import Response from "./Response";
 
 function App() {
   return (
@@ -37,6 +38,7 @@ function App() {
         <Route path="/responses" element={<Responses />} />
         <Route path="/intro" element={<Intro />} />
         <Route path="/list" element={<List />} />
+        <Route path="/response" element={<Response />} />
       </Routes>
       <Footer />
     </Router>

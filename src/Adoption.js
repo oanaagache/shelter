@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import { Form } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
-import "bootstrap/dist/css/bootstrap.min.css";
 import "./Adoption.css";
 import { Link } from "react-router-dom";
 import logo from "./images/image5.svg";
 import { useNavigate } from "react-router-dom";
+import Response from "./Response";
 
 const Adoption = (props) => {
   const [name, setName] = useState("");
@@ -46,6 +46,8 @@ const Adoption = (props) => {
     setPhoneNo("");
     setEmail("");
   };
+
+  const [click, handleClick] = useState(false);
 
   return (
     <>
@@ -251,11 +253,26 @@ const Adoption = (props) => {
               <button
                 className="submit"
                 onClick={() => {
-                  navigate("/responses");
+                  handleClick(true);
+                  // navigate("/responses");
+                  // navigate("/success");
                 }}
               >
                 Submit
               </button>
+
+              {click ? (
+                <Response
+                  name={name}
+                  lastName={lastName}
+                  address1={address1}
+                  address2={address2}
+                  state={state}
+                  code={code}
+                  phoneNo={phoneNo}
+                  email={email}
+                />
+              ) : null}
             </div>
           </div>
         </Form>

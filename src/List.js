@@ -16,7 +16,6 @@ const List = (props) => {
       key={item.id}
     />
   ));
-
   return list;
 };
 

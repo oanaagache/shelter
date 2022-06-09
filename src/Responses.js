@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Container from "react-bootstrap/Container";
 import Adoption from "./Adoption";
-import Intro from "./Intro";
+import List from "./List";
 
 function Responses() {
   const [list, setList] = useState([]);
@@ -13,13 +13,13 @@ function Responses() {
   };
   console.log(list);
   return (
-    <div>
+    <>
       <Container>
         <h1 style={{ textAlign: "center" }}>List of responses</h1>
-        <Intro list={list} />
-        <Adoption transmit={addToList} />
       </Container>
-    </div>
+      <Adoption transmit={addToList} />
+      <List list={list} />
+    </>
   );
 }
 
