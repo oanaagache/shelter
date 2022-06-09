@@ -72,10 +72,13 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 ### Create new app.
 
 `npx create-react-app shelter`
+
 `cd shelter`
 
 ### Install dependencies.
 
 `npm install react-bootstrap@2.0.3 bootstrap@5.1.3`
+
 `code .`
+
 `npm start`
