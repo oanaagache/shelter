@@ -69,13 +69,13 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
 
-### Create new app.
+### Create new app
 
 `npx create-react-app shelter`
 
 `cd shelter`
 
-### Install dependencies.
+### Install dependencies
 
 `npm install react-bootstrap@2.0.3 bootstrap@5.1.3`
 
