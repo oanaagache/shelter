@@ -11,7 +11,7 @@ function Responses() {
     form.id = nr; //  Add id
     setList([...list, form]);
   };
-
+  console.log(list);
   return (
     <div>
       <Container>

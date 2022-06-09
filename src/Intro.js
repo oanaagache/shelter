@@ -26,6 +26,7 @@ const Intro = (props) => {
     email,
   } = props;
 
+  console.log(props);
   return (
     <Alert style={stilAlert}>
       <p>{name}</p>

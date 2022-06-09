@@ -23,7 +23,7 @@ const Navbar = () => {
           <li>Foster</li>
           <li>
             <Link to="/adopt">
-              <p className="adopt-nav">Adopt</p>
+              <span className="adopt-nav">Adopt</span>
             </Link>
           </li>
           <li>Other</li>
