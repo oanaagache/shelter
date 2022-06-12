@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import { Form } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
-import "./Adoption.css";
+import "./AdoptionForm.css";
 import { Link } from "react-router-dom";
 import logo from "./images/image5.svg";
 import { useNavigate } from "react-router-dom";
 import Response from "./Response";
 
-const Adoption = (props) => {
+const AdoptionForm = (props) => {
   const [name, setName] = useState("");
   const [lastName, setLastName] = useState("");
   const [address1, setAddress1] = useState("");
@@ -67,9 +67,9 @@ const Adoption = (props) => {
 
         <Form onSubmit={Submit}>
           <div className="adoption-form">
-            <div class="form-row">
-              <div class="form-group1 col-md-6">
-                <label for="inputFirstName">First Name:</label>
+            <div className="form-row">
+              <div className="form-group1 col-md-6">
+                <label htmlFor="inputFirstName">First Name:</label>
                 <input
                   type="text"
                   class="form-control"
@@ -80,8 +80,8 @@ const Adoption = (props) => {
                 />
               </div>
 
-              <div class="form-group col-md-6">
-                <label for="inputLastName">Last Name:</label>
+              <div className="form-group col-md-6">
+                <label htmlFor="inputLastName">Last Name:</label>
                 <input
                   type="text"
                   class="form-control"
@@ -93,8 +93,8 @@ const Adoption = (props) => {
               </div>
             </div>
 
-            <div class="form-group">
-              <label for="inputAddress1">Address Line 1:</label>
+            <div className="form-group">
+              <label htmlFor="inputAddress1">Address Line 1:</label>
               <input
                 type="text"
                 class="form-control"
@@ -105,8 +105,8 @@ const Adoption = (props) => {
               />
             </div>
 
-            <div class="form-group">
-              <label for="inputAddress2">Address Line 2:</label>
+            <div className="form-group">
+              <label htmlFor="inputAddress2">Address Line 2:</label>
               <input
                 type="text"
                 class="form-control"
@@ -117,8 +117,8 @@ const Adoption = (props) => {
               />
             </div>
 
-            <div class="form-row">
-              <div class="form-group col-md-4">
+            <div className="form-row">
+              <div className="form-group col-md-4">
                 <label>City</label>
                 <input
                   type="text"
@@ -127,22 +127,22 @@ const Adoption = (props) => {
                   onChange={(e) => setAddress2(e.target.value)}
                 />
               </div>
-              <div class="form-group col-md-4">
-                <label for="inputState">State</label>
-                <select id="inputState" class="form-control">
-                  <option selected>Choose...</option>
+              <div className="form-group col-md-4">
+                <label htmlFor="inputState">State</label>
+                <select id="inputState" className="form-control">
+                  <option value>Choose...</option>
                   <option>...</option>
                 </select>
               </div>
-              <div class="form-group col-md-4">
-                <label for="inputZip">Zip code:</label>
+              <div className="form-group col-md-4">
+                <label htmlFor="inputZip">Zip code:</label>
                 <input type="text" class="form-control" id="inputZip" />
               </div>
             </div>
 
-            <div class="form-row">
-              <div class="form-group1 col-md-6">
-                <label for="inputPhoneNumber">Phone number:</label>
+            <div className="form-row">
+              <div className="form-group1 col-md-6">
+                <label htmlFor="inputPhoneNumber">Phone number:</label>
                 <input
                   type="text"
                   class="form-control"
@@ -153,8 +153,8 @@ const Adoption = (props) => {
                 />
               </div>
 
-              <div class="form-group col-md-6">
-                <label for="inputEmailAddress">Email address:</label>
+              <div className="form-group col-md-6">
+                <label htmlFor="inputEmailAddress">Email address:</label>
                 <input
                   type="text"
                   class="form-control"
@@ -170,7 +170,7 @@ const Adoption = (props) => {
               <h3 className="title">Family status and daily routine</h3>
               <h4 className="title">Do you have children?</h4>
 
-              <div class="form-check form-check-inline">
+              <div className="form-check form-check-inline">
                 <input
                   class="form-check-input"
                   type="radio"
@@ -178,12 +178,12 @@ const Adoption = (props) => {
                   id="inlineRadio1"
                   value="option1"
                 />
-                <label class="form-check-label" for="inlineRadio1">
+                <label className="form-check-label" htmlFor="inlineRadio1">
                   Yes
                 </label>
               </div>
 
-              <div class="form-check form-check-inline">
+              <div className="form-check form-check-inline">
                 <input
                   class="form-check-input"
                   type="radio"
@@ -191,23 +191,27 @@ const Adoption = (props) => {
                   id="inlineRadio2"
                   value="option2"
                 />
-                <label class="form-check-label" for="inlineRadio2">
+                <label className="form-check-label" htmlFor="inlineRadio2">
                   No
                 </label>
               </div>
 
-              <div class="form-group">
-                <label for="text">
+              <div className="form-group">
+                <label htmlFor="text">
                   If you answered "Yes", please tell us a little bit about their
                   experience and confort level around animals.
                 </label>
-                <textarea class="form-control" id="text" rows="5"></textarea>
+                <textarea
+                  className="form-control"
+                  id="text"
+                  rows="5"
+                ></textarea>
               </div>
             </div>
 
             <h4 className="title">Do you have pets at home?</h4>
 
-            <div class="form-check form-check-inline">
+            <div className="form-check form-check-inline">
               <input
                 class="form-check-input"
                 type="radio"
@@ -215,12 +219,12 @@ const Adoption = (props) => {
                 id="inlineRadio1"
                 value="option1"
               />
-              <label class="form-check-label" for="inlineRadio1">
+              <label className="form-check-label" htmlFor="inlineRadio1">
                 Yes
               </label>
             </div>
 
-            <div class="form-check form-check-inline">
+            <div className="form-check form-check-inline">
               <input
                 class="form-check-input"
                 type="radio"
@@ -228,17 +232,17 @@ const Adoption = (props) => {
                 id="inlineRadio2"
                 value="option2"
               />
-              <label class="form-check-label" for="inlineRadio2">
+              <label className="form-check-label" htmlFor="inlineRadio2">
                 No
               </label>
             </div>
 
-            <div class="form-group">
-              <label for="text">
+            <div className="form-group">
+              <label htmlFor="text">
                 If you answered "Yes", please tell us a little bit about their
                 experience and confort level around other animals.
               </label>
-              <textarea class="form-control" id="text" rows="5"></textarea>
+              <textarea className="form-control" id="text" rows="5"></textarea>
             </div>
 
             <div className="button">
@@ -254,15 +258,15 @@ const Adoption = (props) => {
                 className="submit"
                 onClick={() => {
                   handleClick(true);
-                  // navigate("/responses");
+                  //navigate("/responses");
                   // navigate("/success");
                 }}
               >
                 Submit
               </button>
 
-              {click ? (
-                <Response
+              {/* {click ? (
+                <div>nu me in
                   name={name}
                   lastName={lastName}
                   address1={address1}
@@ -271,8 +275,8 @@ const Adoption = (props) => {
                   code={code}
                   phoneNo={phoneNo}
                   email={email}
-                />
-              ) : null}
+                </div>
+              ) : null} */}
             </div>
           </div>
         </Form>
@@ -281,4 +285,4 @@ const Adoption = (props) => {
   );
 };
 
-export default Adoption;
+export default AdoptionForm;

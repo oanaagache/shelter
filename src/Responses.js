@@ -1,24 +1,24 @@
 import React, { useState } from "react";
 import Container from "react-bootstrap/Container";
-import Adoption from "./Adoption";
+import AdoptionForm from "./AdoptionForm";
 import List from "./List";
 
 function Responses() {
-  const [list, setList] = useState([]);
+  const [lista, setList] = useState([]);
 
   const addToList = (form) => {
-    const nr = list.length + 1;
+    const nr = lista.length + 1;
     form.id = nr; //  Add id
-    setList([...list, form]);
+    setList([...lista, form]);
   };
-  console.log(list);
+  console.log(lista);
   return (
     <>
       <Container>
         <h1 style={{ textAlign: "center" }}>List of responses</h1>
       </Container>
-      <Adoption transmit={addToList} />
-      <List list={list} />
+      <AdoptionForm transmit={addToList} />
+      <List list={lista} />
     </>
   );
 }

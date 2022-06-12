@@ -11,7 +11,7 @@ import Footer from "./Footer";
 import Main from "./Main";
 import Card from "./Card";
 import Cards from "./Cards";
-import Adoption from "./Adoption";
+import AdoptionForm from "./AdoptionForm";
 import Success from "./Success";
 import Responses from "./Responses";
 import Intro from "./Intro";
@@ -22,7 +22,6 @@ function App() {
   return (
     <Router>
       <Navbar />
-
       <Routes>
         <Route path="/" element={<Main />} />
         <Route path="/search" element={<Search />} />
@@ -33,7 +32,7 @@ function App() {
         <Route path="/other" element={<Other />} />
         <Route path="/cards" element={<Cards />} />
         <Route path="/card/:id" element={<Card />} />
-        <Route path="/adoption" element={<Adoption />} />
+        <Route path="/adoptionform" element={<AdoptionForm />} />
         <Route path="/success" element={<Success />} />
         <Route path="/responses" element={<Responses />} />
         <Route path="/intro" element={<Intro />} />

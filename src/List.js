@@ -2,7 +2,8 @@ import React from "react";
 import Intro from "./Intro";
 
 const List = (props) => {
-  const list = props.list.map((item) => (
+  const { list } = props;
+  const lista = list.map((item) => (
     <Intro
       name={item.name}
       lastName={item.lastName}
@@ -16,7 +17,11 @@ const List = (props) => {
       key={item.id}
     />
   ));
-  return list;
+  return (
+    <>
+      <div>{lista}</div>
+    </>
+  );
 };
 
 export default List;
