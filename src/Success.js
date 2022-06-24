@@ -2,14 +2,16 @@ import React from "react";
 import "./Success.css";
 import logo2 from "./images/image.png";
 import { useNavigate } from "react-router-dom";
+import { useParams } from "react-router-dom";
 
-function Success() {
+const Success = () => {
+  const { name } = useParams();
   let navigate = useNavigate();
 
   return (
     <div className="response">
       <h2 className="title">Thank you!</h2>
-      <h2 className="title">You're on your way to meet</h2>
+      <h2 className="title">You're on your way to meet {name} </h2>
       <img
         style={{
           height: 300,
@@ -31,11 +33,21 @@ function Success() {
             navigate("/adopt");
           }}
         >
-          Back to Home page
+          Back to Adopt page
+        </button>
+      </div>
+      <div className="button">
+        <button
+          className="backHome"
+          onClick={() => {
+            navigate("/responses");
+          }}
+        >
+          See List
         </button>
       </div>
     </div>
   );
-}
+};
 
 export default Success;

@@ -2,11 +2,13 @@ import React from "react";
 import { useEffect, useState } from "react";
 import "./Card.css";
 import Card from "./Card";
+import Success from "./Success";
 
 const Cards = (props) => {
-  const { type, breed, gender, size, age, color } = props;
+  const { type, breed, gender, size, age, color, casetval, visible } = props;
+
   const token =
-    "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiJ5RTM0bUY1eTh1YVRrY0Rwb3BIV2labldHb1lKWDVVZnc1OXZ0RkRwT0pVNzh1VzV1ciIsImp0aSI6ImY4MzA5YjM3ZjMxNTBmYjY4YWE1NDNiMWUzZDIyZWFjYzEyYzYxYTViZGRlNjExN2JmYzM0Y2E1N2M4MzI2NGM5YTQyMWJjOTY1N2Y0YjMyIiwiaWF0IjoxNjU1MDk3OTk2LCJuYmYiOjE2NTUwOTc5OTYsImV4cCI6MTY1NTEwMTU5Niwic3ViIjoiIiwic2NvcGVzIjpbXX0.Szxox9CQKri2exP6iDWinZKs-wRXDCM8IkQON8Kdv6b8_Q5m7iKwIfXrOZroUY9uO1AWOkokTUxWLGGt49csEGhjTbc4NFAaCFJSWsmpNr1uRMdCRnZnQ0Krux6YAHTjAUmxJUhjvvMN94ki8Z-3Vw81SxGy6azHaeDwHuwyNtlIMj71xiBCUpNuVXhvusfaXM8zbDSdc7xELzk9iKbKgNwVqaIsIcJyQqmB6PUghs8cCBl7cXMV3sO9euIc3Jjm9qbPapHIF3CLskG3rAMjuxKPdWyMyevB2QkQszvgl8hJizvitCv-xUEZ5grEp-ebxYdmX-jdRpkSjWQaV7TQ9A";
+    "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiJ5RTM0bUY1eTh1YVRrY0Rwb3BIV2labldHb1lKWDVVZnc1OXZ0RkRwT0pVNzh1VzV1ciIsImp0aSI6IjZiYTNhN2NjZTYwYmQzMTFjMjdjMzNjZDdiOWY3OGY4OWEwODZhMjkyMjBlODNiZjkyNjBlNjk0NDRiMDYzZGU1OWMzY2FjOTY1ZTJjNDYxIiwiaWF0IjoxNjU2MDA5MzUyLCJuYmYiOjE2NTYwMDkzNTIsImV4cCI6MTY1NjAxMjk1Miwic3ViIjoiIiwic2NvcGVzIjpbXX0.R9ymqsuwb-nUjHLjTI_CfbLxOekMybk3qMiJR-9ofPA9wvnTzzMYlI_QFEa5_DQJZlDALDyL8I-Uy_nsMAPRwOS-qMxNthW__l-pseiwxVfjNuxwwqiSfPDx-K3OyvhyofKa7IzztZ1ZSefwW514z78fIY4diYyy-AP1DYo6o76HauGA7yp5j8ygUrn0z4V8SOP4WkAZc0pg-PoxiRs-jPEZnDvlZ8TNwJlrrclOU8otDQIIsvLHRyCQnoJ0uR6ND6U8qt-jUPMsgLBFZHh-PCUH9vg9_CI4jGr1nlAWBxIT_ONltQV06S6kTrWSZWKj-nSKxkmq2WFcSN_XmuaLQQ";
 
   const url = `https://api.petfinder.com/v2/animals?type=${type}&breed=${breed}&gender=${gender}&size=${size}&age=${age}&color=${color}`;
   console.log("url: " + url);
@@ -31,6 +33,7 @@ const Cards = (props) => {
         var length = data.animals.length;
         //console.log("Number of animals found in Cards: " + length);
         for (var i = 0; i < length; i++) {
+          //console.log(data.animals[i].environment);
           var animal = {
             img: data.animals[i].photos[0],
             name: data.animals[i].name,
@@ -40,9 +43,10 @@ const Cards = (props) => {
             age: data.animals[i].age,
             colors: data.animals[i].colors,
             id: data.animals[i].id,
+            environment: data.animals[i].environment,
           };
           //console.log("animal:");
-          //console.log(animal);
+
           animalsArray.push(animal);
         }
         setName(animalsArray);
@@ -55,15 +59,16 @@ const Cards = (props) => {
   }, []);
 
   return (
-    <div className="card-container">
-      {name.map((item) => {
+    <>
+      {name.slice(0, visible).map((item, index) => {
         return (
           <>
-            <Card item={item} />
+            <Card item={item} key={index} />
+            {/* <Success item={item.name} /> */}
           </>
         );
       })}
-    </div>
+    </>
   );
 };
 

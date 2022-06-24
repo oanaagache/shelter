@@ -1,6 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Search from "./Search";
+import Search from "./others/Search";
 import About from "./others/About";
 import Donate from "./others/Donate";
 import Foster from "./others/Foster";
@@ -14,11 +14,12 @@ import Cards from "./Cards";
 import AdoptionForm from "./AdoptionForm";
 import Success from "./Success";
 import Responses from "./Responses";
-import Intro from "./Intro";
+import Details from "./Details";
 import List from "./List";
-import Response from "./Response";
 
 function App() {
+  const [listResponses, setListResponses] = useState([]);
+
   return (
     <Router>
       <Navbar />
@@ -32,12 +33,22 @@ function App() {
         <Route path="/other" element={<Other />} />
         <Route path="/cards" element={<Cards />} />
         <Route path="/card/:id" element={<Card />} />
-        <Route path="/adoptionform" element={<AdoptionForm />} />
-        <Route path="/success" element={<Success />} />
-        <Route path="/responses" element={<Responses />} />
-        <Route path="/intro" element={<Intro />} />
+        <Route
+          path="/adoptionform/:name"
+          element={
+            <AdoptionForm
+              listResponses={listResponses}
+              setListResponses={setListResponses}
+            />
+          }
+        />
+        <Route path="/success/:name" element={<Success />} />
+        <Route
+          path="/responses"
+          element={<Responses listResponses={listResponses} />}
+        />
+        <Route path="/details" element={<Details />} />
         <Route path="/list" element={<List />} />
-        <Route path="/response" element={<Response />} />
       </Routes>
       <Footer />
     </Router>

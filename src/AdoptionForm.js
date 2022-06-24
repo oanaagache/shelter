@@ -5,10 +5,11 @@ import "./AdoptionForm.css";
 import { Link } from "react-router-dom";
 import logo from "./images/image5.svg";
 import { useNavigate } from "react-router-dom";
-import Response from "./Response";
+import { useParams } from "react-router-dom";
 
 const AdoptionForm = (props) => {
-  const [name, setName] = useState("");
+  const { name } = useParams();
+  const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [address1, setAddress1] = useState("");
   const [address2, setAddress2] = useState("");
@@ -24,7 +25,7 @@ const AdoptionForm = (props) => {
     evt.preventDefault();
 
     const form = {
-      name: name,
+      firstName: firstName,
       lastName: lastName,
       address1: address1,
       address2: address2,
@@ -34,9 +35,9 @@ const AdoptionForm = (props) => {
       phoneNo: phoneNo,
       email: email,
     };
-    props.transmit(form); //  Transmit form to Response.js
-
-    setName("");
+    props.setListResponses([...props.listResponses, form]); //  Transmit obiectul form to Responses.js
+    console.log([...props.listResponses, form]);
+    setFirstName("");
     setLastName("");
     setAddress1("");
     setAddress2("");
@@ -45,6 +46,7 @@ const AdoptionForm = (props) => {
     setCode("");
     setPhoneNo("");
     setEmail("");
+    navigate(`/success/${name}`);
   };
 
   const [click, handleClick] = useState(false);
@@ -75,8 +77,8 @@ const AdoptionForm = (props) => {
                   class="form-control"
                   id="inputFirstName"
                   placeholder="First Name"
-                  value={name}
-                  onChange={(e) => setName(e.target.value)}
+                  value={firstName}
+                  onChange={(e) => setFirstName(e.target.value)}
                 />
               </div>
 
@@ -254,29 +256,10 @@ const AdoptionForm = (props) => {
               >
                 Back
               </button>
-              <button
-                className="submit"
-                onClick={() => {
-                  handleClick(true);
-                  //navigate("/responses");
-                  // navigate("/success");
-                }}
-              >
+
+              <button type="submit" className="submit">
                 Submit
               </button>
-
-              {/* {click ? (
-                <div>nu me in
-                  name={name}
-                  lastName={lastName}
-                  address1={address1}
-                  address2={address2}
-                  state={state}
-                  code={code}
-                  phoneNo={phoneNo}
-                  email={email}
-                </div>
-              ) : null} */}
             </div>
           </div>
         </Form>

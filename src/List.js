@@ -1,10 +1,13 @@
 import React from "react";
-import Intro from "./Intro";
+import Details from "./Details";
+import { Container } from "react-bootstrap";
+import TotalList from "./TotalList";
 
 const List = (props) => {
-  const { list } = props;
-  const lista = list.map((item) => (
-    <Intro
+  const { listResponses } = props;
+  const list = listResponses.map((item, index) => (
+    <Details
+      key={index}
       name={item.name}
       lastName={item.lastName}
       address1={item.address1}
@@ -14,12 +17,12 @@ const List = (props) => {
       code={item.code}
       phoneNo={item.phoneNo}
       email={item.email}
-      key={item.id}
     />
   ));
+
   return (
     <>
-      <div>{lista}</div>
+      <TotalList lista={list} />
     </>
   );
 };

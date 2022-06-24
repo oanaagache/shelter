@@ -3,6 +3,7 @@ import "./Card.css";
 import { useNavigate } from "react-router-dom";
 import logo2 from "./images/image.png";
 import { useParams } from "react-router-dom";
+//import Success from "./Success";
 
 const Card = (props) => {
   const { id } = useParams();
@@ -12,10 +13,11 @@ const Card = (props) => {
   const [item, setItem] = useState({});
 
   const token =
-    "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiJ5RTM0bUY1eTh1YVRrY0Rwb3BIV2labldHb1lKWDVVZnc1OXZ0RkRwT0pVNzh1VzV1ciIsImp0aSI6ImY4MzA5YjM3ZjMxNTBmYjY4YWE1NDNiMWUzZDIyZWFjYzEyYzYxYTViZGRlNjExN2JmYzM0Y2E1N2M4MzI2NGM5YTQyMWJjOTY1N2Y0YjMyIiwiaWF0IjoxNjU1MDk3OTk2LCJuYmYiOjE2NTUwOTc5OTYsImV4cCI6MTY1NTEwMTU5Niwic3ViIjoiIiwic2NvcGVzIjpbXX0.Szxox9CQKri2exP6iDWinZKs-wRXDCM8IkQON8Kdv6b8_Q5m7iKwIfXrOZroUY9uO1AWOkokTUxWLGGt49csEGhjTbc4NFAaCFJSWsmpNr1uRMdCRnZnQ0Krux6YAHTjAUmxJUhjvvMN94ki8Z-3Vw81SxGy6azHaeDwHuwyNtlIMj71xiBCUpNuVXhvusfaXM8zbDSdc7xELzk9iKbKgNwVqaIsIcJyQqmB6PUghs8cCBl7cXMV3sO9euIc3Jjm9qbPapHIF3CLskG3rAMjuxKPdWyMyevB2QkQszvgl8hJizvitCv-xUEZ5grEp-ebxYdmX-jdRpkSjWQaV7TQ9A";
+    "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiJ5RTM0bUY1eTh1YVRrY0Rwb3BIV2labldHb1lKWDVVZnc1OXZ0RkRwT0pVNzh1VzV1ciIsImp0aSI6IjZiYTNhN2NjZTYwYmQzMTFjMjdjMzNjZDdiOWY3OGY4OWEwODZhMjkyMjBlODNiZjkyNjBlNjk0NDRiMDYzZGU1OWMzY2FjOTY1ZTJjNDYxIiwiaWF0IjoxNjU2MDA5MzUyLCJuYmYiOjE2NTYwMDkzNTIsImV4cCI6MTY1NjAxMjk1Miwic3ViIjoiIiwic2NvcGVzIjpbXX0.R9ymqsuwb-nUjHLjTI_CfbLxOekMybk3qMiJR-9ofPA9wvnTzzMYlI_QFEa5_DQJZlDALDyL8I-Uy_nsMAPRwOS-qMxNthW__l-pseiwxVfjNuxwwqiSfPDx-K3OyvhyofKa7IzztZ1ZSefwW514z78fIY4diYyy-AP1DYo6o76HauGA7yp5j8ygUrn0z4V8SOP4WkAZc0pg-PoxiRs-jPEZnDvlZ8TNwJlrrclOU8otDQIIsvLHRyCQnoJ0uR6ND6U8qt-jUPMsgLBFZHh-PCUH9vg9_CI4jGr1nlAWBxIT_ONltQV06S6kTrWSZWKj-nSKxkmq2WFcSN_XmuaLQQ";
   const bearer = "Bearer " + token;
 
   const url = "https://api.petfinder.com/v2/animals";
+
   var animalUrl = url + "/" + id;
 
   useEffect(() => {
@@ -27,6 +29,7 @@ const Card = (props) => {
           },
         });
         const data = await response.json();
+
         var animal = {
           img: data.animal.photos[0],
           name: data.animal.name,
@@ -36,9 +39,10 @@ const Card = (props) => {
           age: data.animal.age,
           colors: data.animal.colors,
           id: data.animal.id,
+          environment: data.animal.environment,
         };
         //console.log("animal in Card:");
-        //console.log(animal);
+        //console.log(animal.environment);
 
         setAnimalId(true);
         setItem(animal);
@@ -47,6 +51,7 @@ const Card = (props) => {
       fetchCardData();
     } else {
       setAnimalId(true);
+      console.log(props.item.environment);
       setItem(props.item);
     }
   }, []);
@@ -86,6 +91,34 @@ const Card = (props) => {
                 <h4>Age:{item.age}</h4>
               </div>
 
+              <div className="card-details">
+                <h4>Good with:</h4>
+                <h5>
+                  Children:
+                  {item.environment.children == true
+                    ? "yes"
+                    : item.environment.children == false
+                    ? "no"
+                    : "unknown"}
+                </h5>
+                <h5>
+                  Dogs:{" "}
+                  {item.environment.dogs == true
+                    ? "yes"
+                    : item.environment.dogs == false
+                    ? "no"
+                    : "unknown"}
+                </h5>
+                <h5>
+                  Cats:{" "}
+                  {item.environment.cats == true
+                    ? "yes"
+                    : item.environment.cats == false
+                    ? "no"
+                    : "unknown"}
+                </h5>
+              </div>
+
               {/* <div className="card-details">
                 <h4>
                   Color:
@@ -103,18 +136,18 @@ const Card = (props) => {
               </div>
             </div>
           </div>
-
-          <div className="button">
-            <button
-              className="adopt"
-              onClick={() => {
-                navigate("/responses");
-              }}
-            >
-              {" "}
-              Adopt
-            </button>
-          </div>
+          {id && (
+            <div className="button-adopt">
+              <button
+                className="adopt"
+                onClick={() => {
+                  navigate(`/adoptionform/${item.name}`);
+                }}
+              >
+                Adopt
+              </button>
+            </div>
+          )}
         </div>
       )}
     </>

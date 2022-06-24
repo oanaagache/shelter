@@ -6,8 +6,13 @@ import { Link } from "react-router-dom";
 import Cards from "./Cards";
 
 const Adopt = () => {
+  const [visible, setVisible] = useState(4);
+  const showMoreCards = () => {
+    setVisible((prevValue) => prevValue + 4);
+  };
+
   const token =
-    "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiJ5RTM0bUY1eTh1YVRrY0Rwb3BIV2labldHb1lKWDVVZnc1OXZ0RkRwT0pVNzh1VzV1ciIsImp0aSI6ImY4MzA5YjM3ZjMxNTBmYjY4YWE1NDNiMWUzZDIyZWFjYzEyYzYxYTViZGRlNjExN2JmYzM0Y2E1N2M4MzI2NGM5YTQyMWJjOTY1N2Y0YjMyIiwiaWF0IjoxNjU1MDk3OTk2LCJuYmYiOjE2NTUwOTc5OTYsImV4cCI6MTY1NTEwMTU5Niwic3ViIjoiIiwic2NvcGVzIjpbXX0.Szxox9CQKri2exP6iDWinZKs-wRXDCM8IkQON8Kdv6b8_Q5m7iKwIfXrOZroUY9uO1AWOkokTUxWLGGt49csEGhjTbc4NFAaCFJSWsmpNr1uRMdCRnZnQ0Krux6YAHTjAUmxJUhjvvMN94ki8Z-3Vw81SxGy6azHaeDwHuwyNtlIMj71xiBCUpNuVXhvusfaXM8zbDSdc7xELzk9iKbKgNwVqaIsIcJyQqmB6PUghs8cCBl7cXMV3sO9euIc3Jjm9qbPapHIF3CLskG3rAMjuxKPdWyMyevB2QkQszvgl8hJizvitCv-xUEZ5grEp-ebxYdmX-jdRpkSjWQaV7TQ9A";
+    "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiJ5RTM0bUY1eTh1YVRrY0Rwb3BIV2labldHb1lKWDVVZnc1OXZ0RkRwT0pVNzh1VzV1ciIsImp0aSI6IjZiYTNhN2NjZTYwYmQzMTFjMjdjMzNjZDdiOWY3OGY4OWEwODZhMjkyMjBlODNiZjkyNjBlNjk0NDRiMDYzZGU1OWMzY2FjOTY1ZTJjNDYxIiwiaWF0IjoxNjU2MDA5MzUyLCJuYmYiOjE2NTYwMDkzNTIsImV4cCI6MTY1NjAxMjk1Miwic3ViIjoiIiwic2NvcGVzIjpbXX0.R9ymqsuwb-nUjHLjTI_CfbLxOekMybk3qMiJR-9ofPA9wvnTzzMYlI_QFEa5_DQJZlDALDyL8I-Uy_nsMAPRwOS-qMxNthW__l-pseiwxVfjNuxwwqiSfPDx-K3OyvhyofKa7IzztZ1ZSefwW514z78fIY4diYyy-AP1DYo6o76HauGA7yp5j8ygUrn0z4V8SOP4WkAZc0pg-PoxiRs-jPEZnDvlZ8TNwJlrrclOU8otDQIIsvLHRyCQnoJ0uR6ND6U8qt-jUPMsgLBFZHh-PCUH9vg9_CI4jGr1nlAWBxIT_ONltQV06S6kTrWSZWKj-nSKxkmq2WFcSN_XmuaLQQ";
   const bearer = "Bearer " + token;
 
   const url = "https://api.petfinder.com/v2/types";
@@ -26,6 +31,7 @@ const Adopt = () => {
         // build a new array that will contain all the names from JSON.
         var typesArray = [];
         var length = data.types.length;
+        console.log(cats, children, dogs);
         for (var i = 0; i < length; i++) {
           //console.log(data.types[i].name);
           typesArray.push(data.types[i].name);
@@ -113,7 +119,9 @@ const Adopt = () => {
       });
   }, [type]);
 
-  const [casetval, setCasetval] = useState(false);
+  const [children, setChildren] = useState(false);
+  const [dogs, setDogs] = useState(false);
+  const [cats, setCats] = useState(false);
 
   const [click, handleClick] = useState(false);
 
@@ -185,15 +193,23 @@ const Adopt = () => {
             <h3 className="checklist">
               <input
                 type="checkbox"
-                checked={casetval}
-                onChange={() => setCasetval(!casetval)}
+                checked={children}
+                onChange={(e) => setChildren(e.target.value)}
               />
               <label>Children</label>
 
-              <input type="checkbox" />
+              <input
+                type="checkbox"
+                checked={dogs}
+                onChange={(e) => setDogs(e.target.value)}
+              />
               <label>Dogs</label>
 
-              <input type="checkbox" />
+              <input
+                type="checkbox"
+                checked={cats}
+                onChange={(e) => setCats(e.target.value)}
+              />
               <label>Cats</label>
             </h3>
           </div>
@@ -219,8 +235,18 @@ const Adopt = () => {
             size={size}
             age={age}
             color={color}
+            visible={visible}
           />
         ) : null}
+      </div>
+
+      <div className="results">
+        {/* <div className="text">View results:</div> */}
+        <div className="button">
+          <button className="showMore-btn" onClick={showMoreCards}>
+            Load more
+          </button>
+        </div>
       </div>
     </div>
   );

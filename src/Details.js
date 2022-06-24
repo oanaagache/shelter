@@ -1,6 +1,6 @@
 import React from "react";
 
-const Intro = (props) => {
+const Details = (props) => {
   const {
     name,
     lastName,
@@ -58,4 +58,4 @@ const Intro = (props) => {
   );
 };
 
-export default Intro;
+export default Details;
