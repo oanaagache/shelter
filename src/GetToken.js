@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-const GetToken = () => {
+export default function GetToken() {
   //console.log("Getting the auth token...");
 
   // API key = clientID + clientSecret.
@@ -43,6 +43,6 @@ const GetToken = () => {
 
   //console.log("GetToken.js: token: " + token);
   return token;
-};
+}
 
-export default GetToken;
+//export default GetToken;
