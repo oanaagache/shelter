@@ -4,23 +4,33 @@ import Dropdown from "./Dropdown";
 import logo from "./images/image4.svg";
 import { Link } from "react-router-dom";
 import Cards from "./Cards";
+import GetToken from "./GetToken";
 
 const Adopt = () => {
   const [visible, setVisible] = useState(4);
+  const accessToken = GetToken();
   const showMoreCards = () => {
     setVisible((prevValue) => prevValue + 4);
   };
 
-  const token =
-    "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiJ5RTM0bUY1eTh1YVRrY0Rwb3BIV2labldHb1lKWDVVZnc1OXZ0RkRwT0pVNzh1VzV1ciIsImp0aSI6IjZiYTNhN2NjZTYwYmQzMTFjMjdjMzNjZDdiOWY3OGY4OWEwODZhMjkyMjBlODNiZjkyNjBlNjk0NDRiMDYzZGU1OWMzY2FjOTY1ZTJjNDYxIiwiaWF0IjoxNjU2MDA5MzUyLCJuYmYiOjE2NTYwMDkzNTIsImV4cCI6MTY1NjAxMjk1Miwic3ViIjoiIiwic2NvcGVzIjpbXX0.R9ymqsuwb-nUjHLjTI_CfbLxOekMybk3qMiJR-9ofPA9wvnTzzMYlI_QFEa5_DQJZlDALDyL8I-Uy_nsMAPRwOS-qMxNthW__l-pseiwxVfjNuxwwqiSfPDx-K3OyvhyofKa7IzztZ1ZSefwW514z78fIY4diYyy-AP1DYo6o76HauGA7yp5j8ygUrn0z4V8SOP4WkAZc0pg-PoxiRs-jPEZnDvlZ8TNwJlrrclOU8otDQIIsvLHRyCQnoJ0uR6ND6U8qt-jUPMsgLBFZHh-PCUH9vg9_CI4jGr1nlAWBxIT_ONltQV06S6kTrWSZWKj-nSKxkmq2WFcSN_XmuaLQQ";
-  const bearer = "Bearer " + token;
+  // const [token1, setToken1] = useState("");
+  // useEffect(() => {
+  //   const token3 = GetToken();
+  //   setToken1(token3);
+  // }, []);
+
+  // const token2 =
+  //   "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiJ5RTM0bUY1eTh1YVRrY0Rwb3BIV2labldHb1lKWDVVZnc1OXZ0RkRwT0pVNzh1VzV1ciIsImp0aSI6IjBlNDU4ZTM1YzllNzcwNWViNjY0OWY1M2NhNjU1MDg4ZGI5ZjYxN2ZlNjUwZDQwYTFlMTE2MzAxZjkwOTViNTg5N2Q2NTM4M2YxNGFlOWYxIiwiaWF0IjoxNjU2MDk2NjA5LCJuYmYiOjE2NTYwOTY2MDksImV4cCI6MTY1NjEwMDIwOSwic3ViIjoiIiwic2NvcGVzIjpbXX0.C-BBOwZ1pDalFE_XswzwNAwxvqYk4lycqWmg046eeUDI29VuJZBstcw4lbzkvQsMie7QqQLzXyhWbH6Xg8I24QQ9qKN1agtyZgKakLk2Gd-cLCv1EtII8d63IlRb1B3Mces01ngXIE-Fx8szEbkur9fFzhWrjFzkD7LFqWiEj1nEZwiQZnHms8fh8mB80ULvvbhGehuhYtmbCdjvESNdX6-1XBlvVUoNYehRhPEZklZK1ls6cXYEQO-DF9x8PI7ZhYZdihHc-31YsgJ7skWo64d-h8luKCkh9UbtLBTInrhOKt-6CAzHA7gwbg9YpFT5khZn30Q2er37kZNSDpcgpA";
+  const bearer = "Bearer " + accessToken;
 
   const url = "https://api.petfinder.com/v2/types";
 
   const [type, setType] = useState("");
   const [types, setTypes] = useState([]);
   useEffect(() => {
+    //const url = "https://api.petfinder.com/v2/types";
     console.log("useEffect: Types");
+
     fetch(url, {
       headers: {
         Authorization: bearer,

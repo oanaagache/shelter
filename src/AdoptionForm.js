@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Form } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./AdoptionForm.css";
@@ -8,6 +8,17 @@ import { useNavigate } from "react-router-dom";
 import { useParams } from "react-router-dom";
 
 const AdoptionForm = (props) => {
+  const [listResponses, setListResponses] = useState([]);
+  // Se preia din localStorage continutul asociat cheii "shelter".
+  useEffect(() => {
+    setListResponses(JSON.parse(localStorage.getItem("shelter")));
+  }, []);
+
+  // useEffect se declanseaza sistematic cand lista se modifica
+  useEffect(() => {
+    localStorage.setItem("shelter", JSON.stringify(listResponses));
+  }, [listResponses]);
+
   const { name } = useParams();
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
@@ -35,7 +46,7 @@ const AdoptionForm = (props) => {
       phoneNo: phoneNo,
       email: email,
     };
-    props.setListResponses([...props.listResponses, form]); //  Transmit obiectul form to Responses.js
+    props.setListResponses([...props.listResponses, form]); //  Transmit obiectul form prin props to Responses.js prin setListResponses
     console.log([...props.listResponses, form]);
     setFirstName("");
     setLastName("");

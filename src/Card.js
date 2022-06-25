@@ -3,7 +3,7 @@ import "./Card.css";
 import { useNavigate } from "react-router-dom";
 import logo2 from "./images/image.png";
 import { useParams } from "react-router-dom";
-//import Success from "./Success";
+import GetToken from "./GetToken";
 
 const Card = (props) => {
   const { id } = useParams();
@@ -12,9 +12,11 @@ const Card = (props) => {
   let navigate = useNavigate();
   const [item, setItem] = useState({});
 
-  const token =
-    "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiJ5RTM0bUY1eTh1YVRrY0Rwb3BIV2labldHb1lKWDVVZnc1OXZ0RkRwT0pVNzh1VzV1ciIsImp0aSI6IjZiYTNhN2NjZTYwYmQzMTFjMjdjMzNjZDdiOWY3OGY4OWEwODZhMjkyMjBlODNiZjkyNjBlNjk0NDRiMDYzZGU1OWMzY2FjOTY1ZTJjNDYxIiwiaWF0IjoxNjU2MDA5MzUyLCJuYmYiOjE2NTYwMDkzNTIsImV4cCI6MTY1NjAxMjk1Miwic3ViIjoiIiwic2NvcGVzIjpbXX0.R9ymqsuwb-nUjHLjTI_CfbLxOekMybk3qMiJR-9ofPA9wvnTzzMYlI_QFEa5_DQJZlDALDyL8I-Uy_nsMAPRwOS-qMxNthW__l-pseiwxVfjNuxwwqiSfPDx-K3OyvhyofKa7IzztZ1ZSefwW514z78fIY4diYyy-AP1DYo6o76HauGA7yp5j8ygUrn0z4V8SOP4WkAZc0pg-PoxiRs-jPEZnDvlZ8TNwJlrrclOU8otDQIIsvLHRyCQnoJ0uR6ND6U8qt-jUPMsgLBFZHh-PCUH9vg9_CI4jGr1nlAWBxIT_ONltQV06S6kTrWSZWKj-nSKxkmq2WFcSN_XmuaLQQ";
-  const bearer = "Bearer " + token;
+  const accessToken = GetToken();
+
+  // const token =
+  //   "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiJ5RTM0bUY1eTh1YVRrY0Rwb3BIV2labldHb1lKWDVVZnc1OXZ0RkRwT0pVNzh1VzV1ciIsImp0aSI6ImMxZjdmODc3MTFmMjA3MzM4YjQ0OWU2NThkOWIwOWI3YjI4YzI4NWU4Mzk0YTUyMWQ4NmFlMTJiMWExZDZmNjZiZGI0MWYwNzc4ZTJiMGIwIiwiaWF0IjoxNjU2MDg4MzcyLCJuYmYiOjE2NTYwODgzNzIsImV4cCI6MTY1NjA5MTk3Miwic3ViIjoiIiwic2NvcGVzIjpbXX0.diErw-pS9IKUdIjIJ6MfV6qYE8CT5vmaHo-FWzbhAsY9YpSsFGhkBylM9pHuAz4ae6oyP4Y7ydDxl3iWjp98SNDFh8OZo2s_CeKowKzV51u-Hjye2y9s-blct7E-D9cgkYJdvO0tSI4MxPHurV0l7nE4JdLd_kghAYI809Gevp5EeYmH_UgDkHfxKvaBwVsFBra1DFrmbruE7SMtNv9I4Ntvtr1v6WjF2OiXAZiPmdAmgVsQn-kekLJ_R8wtyhAabJT34WDey9KCYhuq7FhOxIA_ym4W5X3phIk2KFX_No-HQmRtzlqLsXUgU0x04A5aCiA5iEAsNXNqGEWv59hSYA";
+  const bearer = "Bearer " + accessToken;
 
   const url = "https://api.petfinder.com/v2/animals";
 
