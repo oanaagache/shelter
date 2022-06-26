@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Search from "./others/Search";
 import About from "./others/About";
@@ -16,9 +16,28 @@ import Success from "./Success";
 import Responses from "./Responses";
 import Details from "./Details";
 import List from "./List";
+import CountrySelector from "./CountrySelector";
 
 function App() {
   const [listResponses, setListResponses] = useState([]);
+  console.log("App.js listResponses");
+  console.log(listResponses);
+
+  // const add = (form) => {
+  //   form.id = form.length + 1;
+  //   setListResponses([...listResponses, form]);
+  // };
+
+  //Se preia din localStorage continutul asociat cheii "shelter".
+  useEffect(() => {
+    setListResponses(JSON.parse(localStorage.getItem("shelter")));
+  }, []);
+  // console.log("App.js localstorage listResponses");
+  // console.log(listResponses);
+  useEffect(() => {
+    //   //memoreaza listResponses codificata in json
+    localStorage.setItem("shelter", JSON.stringify(listResponses));
+  }, [listResponses]); // useEffect se declanseaza sistematic cand lista se modifica
 
   return (
     <Router>
@@ -48,7 +67,8 @@ function App() {
           element={<Responses listResponses={listResponses} />}
         />
         <Route path="/details" element={<Details />} />
-        <Route path="/list" element={<List />} />
+        <Route path="/list" element={<List listResponses={listResponses} />} />
+        <Route path="/countryselector" element={<CountrySelector />} />
       </Routes>
       <Footer />
     </Router>

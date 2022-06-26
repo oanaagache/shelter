@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { Form } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./AdoptionForm.css";
@@ -6,30 +6,28 @@ import { Link } from "react-router-dom";
 import logo from "./images/image5.svg";
 import { useNavigate } from "react-router-dom";
 import { useParams } from "react-router-dom";
+import CountrySelector from "./CountrySelector";
 
 const AdoptionForm = (props) => {
-  const [listResponses, setListResponses] = useState([]);
-  // Se preia din localStorage continutul asociat cheii "shelter".
-  useEffect(() => {
-    setListResponses(JSON.parse(localStorage.getItem("shelter")));
-  }, []);
+  const [listResponses, setListResponses] = useState();
+  //primesc prin props de la App.js functia setListResponses care realizeaza inserarea unui nou animal in lista
 
-  // useEffect se declanseaza sistematic cand lista se modifica
-  useEffect(() => {
-    localStorage.setItem("shelter", JSON.stringify(listResponses));
-  }, [listResponses]);
+  console.log("listResponses");
+  console.log(listResponses);
 
   const { name } = useParams();
+
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [address1, setAddress1] = useState("");
   const [address2, setAddress2] = useState("");
   const [city, setCity] = useState("");
-  const [state, setState] = useState("");
+  const [country, setCountry] = useState("");
   const [code, setCode] = useState("");
   const [phoneNo, setPhoneNo] = useState("");
   const [email, setEmail] = useState("");
-
+  const [status, setStatus] = useState("");
+  const [routine, setRoutine] = useState("");
   let navigate = useNavigate();
 
   const Submit = (evt) => {
@@ -41,26 +39,32 @@ const AdoptionForm = (props) => {
       address1: address1,
       address2: address2,
       city: city,
-      state: state,
+      country: country,
       code: code,
       phoneNo: phoneNo,
       email: email,
+      status: status,
+      routine: routine,
     };
-    props.setListResponses([...props.listResponses, form]); //  Transmit obiectul form prin props to Responses.js prin setListResponses
-    console.log([...props.listResponses, form]);
+
+    props.setListResponses([...props.listResponses, form]); //  transmit obiectul form to App.js prin apelul functiei setListResponses,primit prin props de la App.js
+
+    console.log([...props.listResponses]);
+    console.log("props.listResponses");
+
     setFirstName("");
     setLastName("");
     setAddress1("");
     setAddress2("");
     setCity("");
-    setState("");
+    setCountry("");
     setCode("");
     setPhoneNo("");
     setEmail("");
+    setStatus("");
+    setRoutine("");
     navigate(`/success/${name}`);
   };
-
-  const [click, handleClick] = useState(false);
 
   return (
     <>
@@ -132,24 +136,32 @@ const AdoptionForm = (props) => {
 
             <div className="form-row">
               <div className="form-group col-md-4">
-                <label>City</label>
+                <label htmlFor="inputCity">City</label>
                 <input
                   type="text"
                   class="form-control"
-                  value={address2}
-                  onChange={(e) => setAddress2(e.target.value)}
+                  id="inputCity"
+                  placeholder="City"
+                  value={city}
+                  onChange={(e) => setCity(e.target.value)}
                 />
               </div>
               <div className="form-group col-md-4">
-                <label htmlFor="inputState">State</label>
-                <select id="inputState" className="form-control">
-                  <option value>Choose...</option>
-                  <option>...</option>
-                </select>
+                <label htmlFor="inputCountry">Country</label>
+                {/* <select id="inputCountry" className="form-control"> 
+                  <option value>Choose</option>
+                  
+                 </select>  */}
+                <CountrySelector setCountry={setCountry} />
               </div>
               <div className="form-group col-md-4">
                 <label htmlFor="inputZip">Zip code:</label>
-                <input type="text" class="form-control" id="inputZip" />
+                <input
+                  type="text"
+                  class="form-control"
+                  id="inputZip"
+                  placeholder="Zip code"
+                />
               </div>
             </div>
 
@@ -183,7 +195,7 @@ const AdoptionForm = (props) => {
               <h3 className="title">Family status and daily routine</h3>
               <h4 className="title">Do you have children?</h4>
 
-              <div className="form-check form-check-inline">
+              {/* <div className="form-check form-check-inline">
                 <input
                   class="form-check-input"
                   type="radio"
@@ -207,24 +219,26 @@ const AdoptionForm = (props) => {
                 <label className="form-check-label" htmlFor="inlineRadio2">
                   No
                 </label>
-              </div>
+              </div> */}
 
               <div className="form-group">
                 <label htmlFor="text">
-                  If you answered "Yes", please tell us a little bit about their
-                  experience and confort level around animals.
+                  If your answer is "Yes", please tell us a little bit about
+                  their experience and confort level around animals.
                 </label>
                 <textarea
                   className="form-control"
                   id="text"
                   rows="5"
+                  value={status}
+                  onChange={(e) => setStatus(e.target.value)}
                 ></textarea>
               </div>
             </div>
 
             <h4 className="title">Do you have pets at home?</h4>
 
-            <div className="form-check form-check-inline">
+            {/* <div className="form-check form-check-inline">
               <input
                 class="form-check-input"
                 type="radio"
@@ -248,14 +262,20 @@ const AdoptionForm = (props) => {
               <label className="form-check-label" htmlFor="inlineRadio2">
                 No
               </label>
-            </div>
+            </div> */}
 
             <div className="form-group">
               <label htmlFor="text">
-                If you answered "Yes", please tell us a little bit about their
+                If your answer is "Yes", please tell us a little bit about their
                 experience and confort level around other animals.
               </label>
-              <textarea className="form-control" id="text" rows="5"></textarea>
+              <textarea
+                className="form-control"
+                id="text"
+                rows="5"
+                value={routine}
+                onChange={(e) => setRoutine(e.target.value)}
+              ></textarea>
             </div>
 
             <div className="button">

@@ -1,30 +1,26 @@
 import React from "react";
 import Details from "./Details";
-import { Container } from "react-bootstrap";
-import TotalList from "./TotalList";
 
 const List = (props) => {
   const { listResponses } = props;
   const list = listResponses.map((item, index) => (
     <Details
       key={index}
-      name={item.name}
+      firstName={item.firstName}
       lastName={item.lastName}
       address1={item.address1}
       address2={item.address2}
       city={item.city}
-      state={item.state}
+      country={item.country}
       code={item.code}
       phoneNo={item.phoneNo}
       email={item.email}
+      status={item.status}
+      routine={item.routine}
     />
   ));
 
-  return (
-    <>
-      <TotalList lista={list} />
-    </>
-  );
+  return <>{list}</>;
 };
 
 export default List;

@@ -4,25 +4,20 @@ import Dropdown from "./Dropdown";
 import logo from "./images/image4.svg";
 import { Link } from "react-router-dom";
 import Cards from "./Cards";
-import GetToken from "./GetToken";
+//import GetToken from "./GetToken";
 
 const Adopt = () => {
   const [visible, setVisible] = useState(4);
-  const accessToken = GetToken();
+  //const accessToken = GetToken();
   const showMoreCards = () => {
     setVisible((prevValue) => prevValue + 4);
   };
 
-  // const [token1, setToken1] = useState("");
-  // useEffect(() => {
-  //   const token3 = GetToken();
-  //   setToken1(token3);
-  // }, []);
+  const token =
+    "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiJ5RTM0bUY1eTh1YVRrY0Rwb3BIV2labldHb1lKWDVVZnc1OXZ0RkRwT0pVNzh1VzV1ciIsImp0aSI6IjZmZGNiYWFiNmE4NjEwNTAwYzlhYmM2ZmEyMDcyMmY3MmE3NjdlYzFiNGM4NTlkMDczY2VjM2UxYjhiODRlYzhmMzY1NjdiNjVkZDQyZDQzIiwiaWF0IjoxNjU2MjczMzM3LCJuYmYiOjE2NTYyNzMzMzcsImV4cCI6MTY1NjI3NjkzNywic3ViIjoiIiwic2NvcGVzIjpbXX0.JEenSov-w1uTjiTh0OHYXVzms6dx3Tz6J96HhNiG3QZX1uW7fJJYdsR43tWauihjXbOn5zvNJWU2Ai-QsKsaNGblrM3qjd68SrKznS4HIbM0q3T2XgtUZYTvc7Pmx3WXb7-vZQ6TEOQXLhF8b46blawNq6PfrOL6RpSBMxi-sc36pPVSyDPrTLflhOA7qOLiCIEaMVnH3GHtmZ6VO5oXG7L2CmhdvbtHAcUVRs0eyr8TPjbb3nKN3gutE38xwr7O_K7MmTGdSZK37shcbLnjPom0CiV7Uai1BA9ckjbqr_GblA-WpsSsgXoisOxIHX-BqpqmCmCJ5woG7Z1e-EzSiw";
 
-  // const token =
-  //   "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiJ5RTM0bUY1eTh1YVRrY0Rwb3BIV2labldHb1lKWDVVZnc1OXZ0RkRwT0pVNzh1VzV1ciIsImp0aSI6IjBlNDU4ZTM1YzllNzcwNWViNjY0OWY1M2NhNjU1MDg4ZGI5ZjYxN2ZlNjUwZDQwYTFlMTE2MzAxZjkwOTViNTg5N2Q2NTM4M2YxNGFlOWYxIiwiaWF0IjoxNjU2MDk2NjA5LCJuYmYiOjE2NTYwOTY2MDksImV4cCI6MTY1NjEwMDIwOSwic3ViIjoiIiwic2NvcGVzIjpbXX0.C-BBOwZ1pDalFE_XswzwNAwxvqYk4lycqWmg046eeUDI29VuJZBstcw4lbzkvQsMie7QqQLzXyhWbH6Xg8I24QQ9qKN1agtyZgKakLk2Gd-cLCv1EtII8d63IlRb1B3Mces01ngXIE-Fx8szEbkur9fFzhWrjFzkD7LFqWiEj1nEZwiQZnHms8fh8mB80ULvvbhGehuhYtmbCdjvESNdX6-1XBlvVUoNYehRhPEZklZK1ls6cXYEQO-DF9x8PI7ZhYZdihHc-31YsgJ7skWo64d-h8luKCkh9UbtLBTInrhOKt-6CAzHA7gwbg9YpFT5khZn30Q2er37kZNSDpcgpA";
-
-  const bearer = "Bearer " + accessToken.token;
+  //const bearer = "Bearer " + accessToken.token;
+  const bearer = "Bearer " + token;
 
   const url = "https://api.petfinder.com/v2/types";
 
@@ -30,7 +25,7 @@ const Adopt = () => {
   const [types, setTypes] = useState([]);
   useEffect(() => {
     //const url = "https://api.petfinder.com/v2/types";
-    console.log("useEffect: Types");
+    //console.log("useEffect: Types");
 
     fetch(url, {
       headers: {
@@ -42,7 +37,7 @@ const Adopt = () => {
         // build a new array that will contain all the names from JSON.
         var typesArray = [];
         var length = data.types.length;
-        console.log(cats, children, dogs);
+        //console.log(cats, children, dogs);
         for (var i = 0; i < length; i++) {
           //console.log(data.types[i].name);
           typesArray.push(data.types[i].name);
@@ -51,14 +46,14 @@ const Adopt = () => {
         setTypes(typesArray);
       })
       .catch((error) => {
-        console.error("Error:", error);
+        //console.error("Error:", error);
       });
   }, []);
 
   const [breed, setBreed] = useState("");
   const [breeds, setBreeds] = useState([]);
   useEffect(() => {
-    console.log("useEffect: Breeds");
+    //console.log("useEffect: Breeds");
     // for each type, get its breeds:
     //console.log("type: " + type);
     if (type == "") return;
@@ -86,7 +81,7 @@ const Adopt = () => {
   const [gender, setGender] = useState("");
   const [genders, setGenders] = useState([]);
   useEffect(() => {
-    console.log("useEffect: Genders");
+    //console.log("useEffect: Genders");
     var gendersArray = ["Female", "Male", "Unknown"];
     setGenders(gendersArray);
   }, []);
@@ -94,7 +89,7 @@ const Adopt = () => {
   const [size, setSize] = useState("");
   const [sizes, setSizes] = useState([]);
   useEffect(() => {
-    console.log("useEffect: Sizes");
+    //console.log("useEffect: Sizes");
     var sizesArray = ["Small", "Medium", "Large", "XLarge"];
     setSizes(sizesArray);
   }, []);
@@ -102,7 +97,7 @@ const Adopt = () => {
   const [age, setAge] = useState("");
   const [ages, setAges] = useState([]);
   useEffect(() => {
-    console.log("useEffect: Ages");
+    //console.log("useEffect: Ages");
     var agesArray = ["Baby", "Young", "Adult", "Senior"];
     setAges(agesArray);
   }, []);
@@ -110,7 +105,7 @@ const Adopt = () => {
   const [color, setColor] = useState("");
   const [colors, setColors] = useState([]);
   useEffect(() => {
-    console.log("useEffect: Colors");
+    //console.log("useEffect: Colors");
     // for each type, get its colors:
     //console.log("type: " + type);
     if (type == "") return;
@@ -252,7 +247,6 @@ const Adopt = () => {
       </div>
 
       <div className="results">
-        {/* <div className="text">View results:</div> */}
         <div className="button">
           <button className="showMore-btn" onClick={showMoreCards}>
             Load more

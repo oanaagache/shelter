@@ -3,7 +3,7 @@ import "./Card.css";
 import { useNavigate } from "react-router-dom";
 import logo2 from "./images/image.png";
 import { useParams } from "react-router-dom";
-import GetToken from "./GetToken";
+//import GetToken from "./GetToken";
 
 const Card = (props) => {
   const { id } = useParams();
@@ -12,11 +12,12 @@ const Card = (props) => {
   let navigate = useNavigate();
   const [item, setItem] = useState({});
 
-  const accessToken = GetToken();
+  //const accessToken = GetToken();
 
-  // const token =
-  //   "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiJ5RTM0bUY1eTh1YVRrY0Rwb3BIV2labldHb1lKWDVVZnc1OXZ0RkRwT0pVNzh1VzV1ciIsImp0aSI6ImMxZjdmODc3MTFmMjA3MzM4YjQ0OWU2NThkOWIwOWI3YjI4YzI4NWU4Mzk0YTUyMWQ4NmFlMTJiMWExZDZmNjZiZGI0MWYwNzc4ZTJiMGIwIiwiaWF0IjoxNjU2MDg4MzcyLCJuYmYiOjE2NTYwODgzNzIsImV4cCI6MTY1NjA5MTk3Miwic3ViIjoiIiwic2NvcGVzIjpbXX0.diErw-pS9IKUdIjIJ6MfV6qYE8CT5vmaHo-FWzbhAsY9YpSsFGhkBylM9pHuAz4ae6oyP4Y7ydDxl3iWjp98SNDFh8OZo2s_CeKowKzV51u-Hjye2y9s-blct7E-D9cgkYJdvO0tSI4MxPHurV0l7nE4JdLd_kghAYI809Gevp5EeYmH_UgDkHfxKvaBwVsFBra1DFrmbruE7SMtNv9I4Ntvtr1v6WjF2OiXAZiPmdAmgVsQn-kekLJ_R8wtyhAabJT34WDey9KCYhuq7FhOxIA_ym4W5X3phIk2KFX_No-HQmRtzlqLsXUgU0x04A5aCiA5iEAsNXNqGEWv59hSYA";
-  const bearer = "Bearer " + accessToken.token;
+  const token =
+    "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiJ5RTM0bUY1eTh1YVRrY0Rwb3BIV2labldHb1lKWDVVZnc1OXZ0RkRwT0pVNzh1VzV1ciIsImp0aSI6IjZmZGNiYWFiNmE4NjEwNTAwYzlhYmM2ZmEyMDcyMmY3MmE3NjdlYzFiNGM4NTlkMDczY2VjM2UxYjhiODRlYzhmMzY1NjdiNjVkZDQyZDQzIiwiaWF0IjoxNjU2MjczMzM3LCJuYmYiOjE2NTYyNzMzMzcsImV4cCI6MTY1NjI3NjkzNywic3ViIjoiIiwic2NvcGVzIjpbXX0.JEenSov-w1uTjiTh0OHYXVzms6dx3Tz6J96HhNiG3QZX1uW7fJJYdsR43tWauihjXbOn5zvNJWU2Ai-QsKsaNGblrM3qjd68SrKznS4HIbM0q3T2XgtUZYTvc7Pmx3WXb7-vZQ6TEOQXLhF8b46blawNq6PfrOL6RpSBMxi-sc36pPVSyDPrTLflhOA7qOLiCIEaMVnH3GHtmZ6VO5oXG7L2CmhdvbtHAcUVRs0eyr8TPjbb3nKN3gutE38xwr7O_K7MmTGdSZK37shcbLnjPom0CiV7Uai1BA9ckjbqr_GblA-WpsSsgXoisOxIHX-BqpqmCmCJ5woG7Z1e-EzSiw";
+  //const bearer = "Bearer " + accessToken.token;
+  const bearer = "Bearer " + token;
 
   const url = "https://api.petfinder.com/v2/animals";
 
@@ -53,7 +54,7 @@ const Card = (props) => {
       fetchCardData();
     } else {
       setAnimalId(true);
-      console.log(props.item.environment);
+      //console.log(props.item.environment);
       setItem(props.item);
     }
   }, []);
@@ -74,51 +75,52 @@ const Card = (props) => {
 
             <div className="card-inner">
               <div className="card-details">
-                <h2>{item.name}</h2>
+                <h1>{item.name}</h1>
               </div>
 
               <div className="card-details">
-                <h4> Breed: {item.breed}</h4>
+                <h5> Breed:{item.breed} </h5>
               </div>
 
               <div className="card-details">
-                <h4> Gender: {item.gender}</h4>
+                <h5> Gender: {item.gender}</h5>
               </div>
 
               <div className="card-details">
-                <h4> Size:{item.size} </h4>
+                <h5> Size:{item.size} </h5>
               </div>
 
               <div className="card-details">
-                <h4>Age:{item.age}</h4>
+                <h5>Age:{item.age}</h5>
               </div>
 
               <div className="card-details">
-                <h4>Good with:</h4>
-                <h5>
+                <h5>Good with:</h5>
+
+                <h6>
                   Children:
                   {item.environment.children == true
                     ? "yes"
                     : item.environment.children == false
                     ? "no"
                     : "unknown"}
-                </h5>
-                <h5>
+                </h6>
+                <h6>
                   Dogs:{" "}
                   {item.environment.dogs == true
                     ? "yes"
                     : item.environment.dogs == false
                     ? "no"
                     : "unknown"}
-                </h5>
-                <h5>
+                </h6>
+                <h6>
                   Cats:{" "}
                   {item.environment.cats == true
                     ? "yes"
                     : item.environment.cats == false
                     ? "no"
                     : "unknown"}
-                </h5>
+                </h6>
               </div>
 
               {/* <div className="card-details">
@@ -129,12 +131,12 @@ const Card = (props) => {
               </div> */}
 
               <div className="card-details">
-                <h4>
-                  Color:
+                <h5>Color:</h5>
+                <h6>
                   {item.colors.primary && item.colors.primary
                     ? item.colors.primary
                     : "No color found"}
-                </h4>
+                </h6>
               </div>
             </div>
           </div>
