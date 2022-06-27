@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./Adopt.css";
 import Dropdown from "./Dropdown";
-import logo from "./images/image4.svg";
+import logo from "./others/images/image4.svg";
 import { Link } from "react-router-dom";
 import Cards from "./Cards";
 //import GetToken from "./GetToken";
@@ -14,7 +14,7 @@ const Adopt = () => {
   };
 
   const token =
-    "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiJ5RTM0bUY1eTh1YVRrY0Rwb3BIV2labldHb1lKWDVVZnc1OXZ0RkRwT0pVNzh1VzV1ciIsImp0aSI6IjZmZGNiYWFiNmE4NjEwNTAwYzlhYmM2ZmEyMDcyMmY3MmE3NjdlYzFiNGM4NTlkMDczY2VjM2UxYjhiODRlYzhmMzY1NjdiNjVkZDQyZDQzIiwiaWF0IjoxNjU2MjczMzM3LCJuYmYiOjE2NTYyNzMzMzcsImV4cCI6MTY1NjI3NjkzNywic3ViIjoiIiwic2NvcGVzIjpbXX0.JEenSov-w1uTjiTh0OHYXVzms6dx3Tz6J96HhNiG3QZX1uW7fJJYdsR43tWauihjXbOn5zvNJWU2Ai-QsKsaNGblrM3qjd68SrKznS4HIbM0q3T2XgtUZYTvc7Pmx3WXb7-vZQ6TEOQXLhF8b46blawNq6PfrOL6RpSBMxi-sc36pPVSyDPrTLflhOA7qOLiCIEaMVnH3GHtmZ6VO5oXG7L2CmhdvbtHAcUVRs0eyr8TPjbb3nKN3gutE38xwr7O_K7MmTGdSZK37shcbLnjPom0CiV7Uai1BA9ckjbqr_GblA-WpsSsgXoisOxIHX-BqpqmCmCJ5woG7Z1e-EzSiw";
+    "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiJ5RTM0bUY1eTh1YVRrY0Rwb3BIV2labldHb1lKWDVVZnc1OXZ0RkRwT0pVNzh1VzV1ciIsImp0aSI6IjBhNzZmZGYyNDhjNGY0N2IxOTViZTA5YjdiMzRkZWY0YjZiZTQ5NzUzZjg1YTYyYzk4NjA0MGJlM2RjM2EzY2MyN2I1ZWM4OTQ0NmFhZWUzIiwiaWF0IjoxNjU2MzM0ODkzLCJuYmYiOjE2NTYzMzQ4OTMsImV4cCI6MTY1NjMzODQ5Mywic3ViIjoiIiwic2NvcGVzIjpbXX0.G91nrPC75MGkwT7IMN_bbRovrXRhHyo2ZkK408ZILCyQO08Hx2pOlXsNdJew4y3YvazanIJ7NENEctntztGsOQjdI8tK2-HhZ5JNDISFvRo2RxWwnk-8zs0LbdZFXA31M4KHf77Hf8MRMah99Ub_N43NOaKhOGWQr5N4ZcPZsShWZklbg_3zlv6dxopjmEVlZ2yKgQIw6hlXqpiT8bEq4xgVwL_M2XuICWMN6YloBkF_HwgdZoB7j4EbIOz8VwM7yRKUPE3BNvtUDofY3jXQdDnfGcqYrPEbimyL_TSGYkMjkqWPDhcdKKLM0v9x49KonzXKBjlBpsMIVIuAgnITbg";
 
   //const bearer = "Bearer " + accessToken.token;
   const bearer = "Bearer " + token;

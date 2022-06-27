@@ -20,24 +20,24 @@ import CountrySelector from "./CountrySelector";
 
 function App() {
   const [listResponses, setListResponses] = useState([]);
-  console.log("App.js listResponses");
-  console.log(listResponses);
-
-  // const add = (form) => {
-  //   form.id = form.length + 1;
-  //   setListResponses([...listResponses, form]);
-  // };
 
   //Se preia din localStorage continutul asociat cheii "shelter".
   useEffect(() => {
     setListResponses(JSON.parse(localStorage.getItem("shelter")));
   }, []);
-  // console.log("App.js localstorage listResponses");
-  // console.log(listResponses);
+
   useEffect(() => {
-    //   //memoreaza listResponses codificata in json
+    //memoreaza listResponses codificata in json
     localStorage.setItem("shelter", JSON.stringify(listResponses));
-  }, [listResponses]); // useEffect se declanseaza sistematic cand lista se modifica
+  }, [listResponses]);
+
+  var newArray = listResponses.filter((listResponses) => {
+    return listResponses.lastName !== "Benchea";
+  });
+
+  useEffect(() => {
+    localStorage.setItem("shelter", JSON.stringify(newArray));
+  }, [newArray]);
 
   return (
     <Router>

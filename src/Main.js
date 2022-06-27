@@ -19,7 +19,14 @@ const Main = () => {
           <h3 className="main-sp">for homeless pets in need</h3>
 
           <div className="button">
-            <button className="donate">Donate</button>
+            <button
+              className="donate"
+              onClick={() => {
+                navigate("/donate");
+              }}
+            >
+              Donate
+            </button>
             <button
               className="adopt"
               onClick={() => {

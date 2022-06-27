@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Form } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./AdoptionForm.css";
@@ -12,8 +12,8 @@ const AdoptionForm = (props) => {
   const [listResponses, setListResponses] = useState();
   //primesc prin props de la App.js functia setListResponses care realizeaza inserarea unui nou animal in lista
 
-  console.log("listResponses");
-  console.log(listResponses);
+  // console.log("listResponses");
+  // console.log(listResponses);
 
   const { name } = useParams();
 
@@ -49,8 +49,8 @@ const AdoptionForm = (props) => {
 
     props.setListResponses([...props.listResponses, form]); //  transmit obiectul form to App.js prin apelul functiei setListResponses,primit prin props de la App.js
 
-    console.log([...props.listResponses]);
-    console.log("props.listResponses");
+    // console.log([...props.listResponses]);
+    // console.log("props.listResponses");
 
     setFirstName("");
     setLastName("");
@@ -63,6 +63,7 @@ const AdoptionForm = (props) => {
     setEmail("");
     setStatus("");
     setRoutine("");
+
     navigate(`/success/${name}`);
   };
 
@@ -148,10 +149,7 @@ const AdoptionForm = (props) => {
               </div>
               <div className="form-group col-md-4">
                 <label htmlFor="inputCountry">Country</label>
-                {/* <select id="inputCountry" className="form-control"> 
-                  <option value>Choose</option>
-                  
-                 </select>  */}
+
                 <CountrySelector setCountry={setCountry} />
               </div>
               <div className="form-group col-md-4">
@@ -195,32 +193,6 @@ const AdoptionForm = (props) => {
               <h3 className="title">Family status and daily routine</h3>
               <h4 className="title">Do you have children?</h4>
 
-              {/* <div className="form-check form-check-inline">
-                <input
-                  class="form-check-input"
-                  type="radio"
-                  name="inlineRadioOptions"
-                  id="inlineRadio1"
-                  value="option1"
-                />
-                <label className="form-check-label" htmlFor="inlineRadio1">
-                  Yes
-                </label>
-              </div>
-
-              <div className="form-check form-check-inline">
-                <input
-                  class="form-check-input"
-                  type="radio"
-                  name="inlineRadioOptions"
-                  id="inlineRadio2"
-                  value="option2"
-                />
-                <label className="form-check-label" htmlFor="inlineRadio2">
-                  No
-                </label>
-              </div> */}
-
               <div className="form-group">
                 <label htmlFor="text">
                   If your answer is "Yes", please tell us a little bit about
@@ -237,32 +209,6 @@ const AdoptionForm = (props) => {
             </div>
 
             <h4 className="title">Do you have pets at home?</h4>
-
-            {/* <div className="form-check form-check-inline">
-              <input
-                class="form-check-input"
-                type="radio"
-                name="inlineRadioOptions"
-                id="inlineRadio1"
-                value="option1"
-              />
-              <label className="form-check-label" htmlFor="inlineRadio1">
-                Yes
-              </label>
-            </div>
-
-            <div className="form-check form-check-inline">
-              <input
-                class="form-check-input"
-                type="radio"
-                name="inlineRadioOptions"
-                id="inlineRadio2"
-                value="option2"
-              />
-              <label className="form-check-label" htmlFor="inlineRadio2">
-                No
-              </label>
-            </div> */}
 
             <div className="form-group">
               <label htmlFor="text">

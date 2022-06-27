@@ -15,12 +15,14 @@ const Details = (props) => {
     status,
     routine,
   } = props;
-  console.log(props);
+
+  //console.log(props);
+
   const stilAlert = {
     color: "#2B2B2B",
     textAlign: "left",
     margin: "10px",
-    height: "300px",
+    height: "450px",
     border: "2px solid #F4F4F4",
     padding: "12px",
     borderRadius: "5px",
