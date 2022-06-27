@@ -3,7 +3,7 @@ import "./Card.css";
 import { useNavigate } from "react-router-dom";
 import logo2 from "./others/images/image.png";
 import { useParams } from "react-router-dom";
-//import GetToken from "./GetToken";
+import GetToken from "./GetToken";
 
 const Card = (props) => {
   const { id } = useParams();
@@ -12,12 +12,12 @@ const Card = (props) => {
   let navigate = useNavigate();
   const [item, setItem] = useState({});
 
-  //const accessToken = GetToken();
+  const accessToken = GetToken();
 
   const token =
-    "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiJ5RTM0bUY1eTh1YVRrY0Rwb3BIV2labldHb1lKWDVVZnc1OXZ0RkRwT0pVNzh1VzV1ciIsImp0aSI6IjgzZjNjYzVmMDk3ZWZjZDYwODViMTEwMWY3YTY1M2E1ZDViZWJlMjIzMWM5ZDhhZmE3ZWZiOThjZmZkMTY3NGMyNzg3MDNlOTE0Y2E4OTEwIiwiaWF0IjoxNjU2MzQzMjQzLCJuYmYiOjE2NTYzNDMyNDMsImV4cCI6MTY1NjM0Njg0Mywic3ViIjoiIiwic2NvcGVzIjpbXX0.A_5us2ik4YwXMN2FrTAvQ5NtkEiaDnmdMaB-8dHPhiaLkZLRzrCTCMXZxSBGnSOyZq60mFaPewUb9DuZoHItrXvWhE67AR8jpsGVaOgnaAAFuv6Kj3XBRV_u_aKR3xR6aJ7G8ProKncj1nJtisaDDqNQqRTTR0kuY6ciQFKrmjdsG6BqBigKZSNiuwBjQjpu7l3P61ClY0cWrAZ0R_WHZJfURYExbjTmW2YC_6ENq8Q0kpVFZpzwkp2Hauterwutmy_ZslKfuO9LPsxDyiKPjB1iiAU99gu3BDc41P7VhnhGqF7W-Nu46Yq_ySVZ8VUWcZJJvn-4FmkSuSoBNDHsZA";
-  //const bearer = "Bearer " + accessToken.token;
-  const bearer = "Bearer " + token;
+    "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiJ5RTM0bUY1eTh1YVRrY0Rwb3BIV2labldHb1lKWDVVZnc1OXZ0RkRwT0pVNzh1VzV1ciIsImp0aSI6IjI0OGQyNDhlZjYwMWFhOTk0YmQwMjViZDMzMzVkMjkzMjRiMmFhNWU1MTUzZWQ3MDNlNWI4NzdjNmQxMmQzMWJkZDI0YWNkYTczZDYwYWZiIiwiaWF0IjoxNjU2MzU1NjM0LCJuYmYiOjE2NTYzNTU2MzQsImV4cCI6MTY1NjM1OTIzNCwic3ViIjoiIiwic2NvcGVzIjpbXX0.ETWTw_p4p21XXDw07FVzdRefi6_U0vza1WNyydEcO17Zq6q43IQtg8mHnY7o1-1-RxRfLfCQqqQh4a9ezq8uSkf1jKobE4JcUZ-_m1mYHrxgF-jw_zp-6TT_YcJEmzLy2PzpR5xDtjE236uZ4KgkkXRx1QpyVzFYAuxvkwh0uBYaABqheCY-GWeDSz2U7XkTb6-gaNda4sr-hmVnYlDkvCv0qkfmvr7Za_unKY04Sike_7pdOgmFlh5NTEX3a-e8h2ncsWiJmvbU1yglbwCJ7lPAKPzP-fj9j3Ox_u8qdw4iYURw8F9oZ8JYOD2a15Hai9GwWs6QDrdUj3gkLlKniQ";
+  const bearer = "Bearer " + accessToken.token;
+  //const bearer = "Bearer " + token;
 
   const url = "https://api.petfinder.com/v2/animals";
 

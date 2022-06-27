@@ -11,7 +11,7 @@ export default function GetToken() {
 
   const oauthUrl = "https://api.petfinder.com/v2/oauth2/token";
 
-  const [token, setToken] = useState();
+  const [token, setToken] = useState("");
 
   useEffect(() => {
     //console.log(token);
@@ -42,7 +42,7 @@ export default function GetToken() {
   }, []);
 
   //console.log("GetToken.js: token: " + token);
-  return token;
+  return { token };
 }
 
 //export default GetToken;
