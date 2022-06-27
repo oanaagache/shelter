@@ -17,6 +17,8 @@ import Responses from "./Responses";
 import Details from "./Details";
 import List from "./List";
 import CountrySelector from "./CountrySelector";
+import ArticlesDog from "./others/ArticlesDog";
+import ArticlesCat from "./others/ArticlesCat";
 
 function App() {
   const [listResponses, setListResponses] = useState([]);
@@ -69,6 +71,8 @@ function App() {
         <Route path="/details" element={<Details />} />
         <Route path="/list" element={<List listResponses={listResponses} />} />
         <Route path="/countryselector" element={<CountrySelector />} />
+        <Route path="/articlesdog" element={<ArticlesDog />} />
+        <Route path="/articlescat" element={<ArticlesCat />} />
       </Routes>
       <Footer />
     </Router>

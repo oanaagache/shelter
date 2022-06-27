@@ -3,7 +3,7 @@ import { Form } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./AdoptionForm.css";
 import { Link } from "react-router-dom";
-import logo from "./images/image5.svg";
+import logo from "./others/images/image5.svg";
 import { useNavigate } from "react-router-dom";
 import { useParams } from "react-router-dom";
 import CountrySelector from "./CountrySelector";

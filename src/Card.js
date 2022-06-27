@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./Card.css";
 import { useNavigate } from "react-router-dom";
-import logo2 from "./images/image.png";
+import logo2 from "./others/images/image.png";
 import { useParams } from "react-router-dom";
 //import GetToken from "./GetToken";
 
@@ -15,7 +15,7 @@ const Card = (props) => {
   //const accessToken = GetToken();
 
   const token =
-    "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiJ5RTM0bUY1eTh1YVRrY0Rwb3BIV2labldHb1lKWDVVZnc1OXZ0RkRwT0pVNzh1VzV1ciIsImp0aSI6IjBhNzZmZGYyNDhjNGY0N2IxOTViZTA5YjdiMzRkZWY0YjZiZTQ5NzUzZjg1YTYyYzk4NjA0MGJlM2RjM2EzY2MyN2I1ZWM4OTQ0NmFhZWUzIiwiaWF0IjoxNjU2MzM0ODkzLCJuYmYiOjE2NTYzMzQ4OTMsImV4cCI6MTY1NjMzODQ5Mywic3ViIjoiIiwic2NvcGVzIjpbXX0.G91nrPC75MGkwT7IMN_bbRovrXRhHyo2ZkK408ZILCyQO08Hx2pOlXsNdJew4y3YvazanIJ7NENEctntztGsOQjdI8tK2-HhZ5JNDISFvRo2RxWwnk-8zs0LbdZFXA31M4KHf77Hf8MRMah99Ub_N43NOaKhOGWQr5N4ZcPZsShWZklbg_3zlv6dxopjmEVlZ2yKgQIw6hlXqpiT8bEq4xgVwL_M2XuICWMN6YloBkF_HwgdZoB7j4EbIOz8VwM7yRKUPE3BNvtUDofY3jXQdDnfGcqYrPEbimyL_TSGYkMjkqWPDhcdKKLM0v9x49KonzXKBjlBpsMIVIuAgnITbg";
+    "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiJ5RTM0bUY1eTh1YVRrY0Rwb3BIV2labldHb1lKWDVVZnc1OXZ0RkRwT0pVNzh1VzV1ciIsImp0aSI6IjgzZjNjYzVmMDk3ZWZjZDYwODViMTEwMWY3YTY1M2E1ZDViZWJlMjIzMWM5ZDhhZmE3ZWZiOThjZmZkMTY3NGMyNzg3MDNlOTE0Y2E4OTEwIiwiaWF0IjoxNjU2MzQzMjQzLCJuYmYiOjE2NTYzNDMyNDMsImV4cCI6MTY1NjM0Njg0Mywic3ViIjoiIiwic2NvcGVzIjpbXX0.A_5us2ik4YwXMN2FrTAvQ5NtkEiaDnmdMaB-8dHPhiaLkZLRzrCTCMXZxSBGnSOyZq60mFaPewUb9DuZoHItrXvWhE67AR8jpsGVaOgnaAAFuv6Kj3XBRV_u_aKR3xR6aJ7G8ProKncj1nJtisaDDqNQqRTTR0kuY6ciQFKrmjdsG6BqBigKZSNiuwBjQjpu7l3P61ClY0cWrAZ0R_WHZJfURYExbjTmW2YC_6ENq8Q0kpVFZpzwkp2Hauterwutmy_ZslKfuO9LPsxDyiKPjB1iiAU99gu3BDc41P7VhnhGqF7W-Nu46Yq_ySVZ8VUWcZJJvn-4FmkSuSoBNDHsZA";
   //const bearer = "Bearer " + accessToken.token;
   const bearer = "Bearer " + token;
 

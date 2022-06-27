@@ -36,11 +36,11 @@ const Other = () => {
               <h2>Dog Adoption Articles</h2>
               <h5>Learn more about caring for your new dog.</h5>
 
-              <div className="button-adopt">
+              <div className="button-adopt" style={{ paddingLeft: 60 }}>
                 <button
                   className="adopt"
                   onClick={() => {
-                    navigate("/adopt");
+                    navigate("/articlesdog");
                   }}
                 >
                   Read more
@@ -62,11 +62,11 @@ const Other = () => {
             <div className="card-details">
               <h2>Cat Adoption Articles</h2>
               <h5>Helpful insights on what to expect.</h5>
-              <div className="button-adopt">
+              <div className="button-adopt" style={{ paddingLeft: 60 }}>
                 <button
                   className="adopt"
                   onClick={() => {
-                    navigate("/adopt");
+                    navigate("/articlescat");
                   }}
                 >
                   Read more
