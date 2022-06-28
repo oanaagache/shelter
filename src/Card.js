@@ -12,12 +12,12 @@ const Card = (props) => {
   let navigate = useNavigate();
   const [item, setItem] = useState({});
 
-  const accessToken = GetToken();
+  //const accessToken = GetToken();
 
   const token =
-    "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiJ5RTM0bUY1eTh1YVRrY0Rwb3BIV2labldHb1lKWDVVZnc1OXZ0RkRwT0pVNzh1VzV1ciIsImp0aSI6IjI0OGQyNDhlZjYwMWFhOTk0YmQwMjViZDMzMzVkMjkzMjRiMmFhNWU1MTUzZWQ3MDNlNWI4NzdjNmQxMmQzMWJkZDI0YWNkYTczZDYwYWZiIiwiaWF0IjoxNjU2MzU1NjM0LCJuYmYiOjE2NTYzNTU2MzQsImV4cCI6MTY1NjM1OTIzNCwic3ViIjoiIiwic2NvcGVzIjpbXX0.ETWTw_p4p21XXDw07FVzdRefi6_U0vza1WNyydEcO17Zq6q43IQtg8mHnY7o1-1-RxRfLfCQqqQh4a9ezq8uSkf1jKobE4JcUZ-_m1mYHrxgF-jw_zp-6TT_YcJEmzLy2PzpR5xDtjE236uZ4KgkkXRx1QpyVzFYAuxvkwh0uBYaABqheCY-GWeDSz2U7XkTb6-gaNda4sr-hmVnYlDkvCv0qkfmvr7Za_unKY04Sike_7pdOgmFlh5NTEX3a-e8h2ncsWiJmvbU1yglbwCJ7lPAKPzP-fj9j3Ox_u8qdw4iYURw8F9oZ8JYOD2a15Hai9GwWs6QDrdUj3gkLlKniQ";
-  const bearer = "Bearer " + accessToken.token;
-  //const bearer = "Bearer " + token;
+    "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiJ5RTM0bUY1eTh1YVRrY0Rwb3BIV2labldHb1lKWDVVZnc1OXZ0RkRwT0pVNzh1VzV1ciIsImp0aSI6Ijg4NGE2ZjQwOTRmNzhjNTAyZDAwOWRjOGE3MTA3ZGQ3MTIyNjUyNDMwMjY3ZGFlZTA4YTE5N2IwMTFlN2EzMGNlZmJhMDg0ZWQ4ZmQ2YmM2IiwiaWF0IjoxNjU2Mzk2MTM5LCJuYmYiOjE2NTYzOTYxMzksImV4cCI6MTY1NjM5OTczOSwic3ViIjoiIiwic2NvcGVzIjpbXX0.heDfdwsDep8uLVtbbt-RY-ki3MAgeIMilljoXzfil3nswVx7s1j6DUMWE6rsO10LPyl15p05jaVJCAfZIz-vv-PiKW5Vfhvz7038ubs07uAAPVtQvXEu_455Gi3XUqtO5Zj95kmhNPFZivgU6_IlBHH9T4Vo5ngmZ58eTtrFKIteX5vmEFGcTZ7vcLkRwIlppPX4UjGyjx24KH06iM9_ZyCODA-e_2JV0v6fNEoqeUyYTqQa8-ykhZIyOgjDJgqei79m6a3MDnhAnAujWNAkgmiJACDFP0Z6dnNchduZMWfIT0Whks4EQ8jGkpOS0Z0-HEcWk8vb3tdHss30clHFBQ";
+  //const bearer = "Bearer " + accessToken.token;
+  const bearer = "Bearer " + token;
 
   const url = "https://api.petfinder.com/v2/animals";
 

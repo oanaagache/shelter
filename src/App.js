@@ -34,12 +34,12 @@ function App() {
   }, [listResponses]);
 
   var newArray = listResponses.filter((listResponses) => {
-    return listResponses.lastName !== "Benchea";
+    return listResponses.lastName !== "Pop";
   });
 
-  useEffect(() => {
-    localStorage.setItem("shelter", JSON.stringify(newArray));
-  }, [newArray]);
+  // useEffect(() => {
+  //   localStorage.setItem("shelter", JSON.stringify(newArray));
+  // }, [newArray]);
 
   return (
     <Router>

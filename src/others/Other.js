@@ -7,6 +7,7 @@ import pic2 from "./images/cat.png";
 
 const Other = () => {
   let navigate = useNavigate();
+
   return (
     <div className="adopt-container">
       <div className="adopt-header">
