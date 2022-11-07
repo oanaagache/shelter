@@ -7,12 +7,18 @@ import pic3 from "./images/image8.jpg";
 import pic4 from "./images/image9.jpg";
 import pic5 from "./images/image14.jpg";
 import pic6 from "./images/image15.jpg";
+import pic7 from "./images/image16.jpg";
+import pic8 from "./images/image17.png";
 import { Link } from "react-router-dom";
 import Modal from "react-modal";
-
+import Table from "react-bootstrap/Table";
 Modal.setAppElement("#root");
+
 const ArticlesDog = () => {
-  const [modalOpen, setModalOpen] = useState(false);
+  const [modalOpen1, setModalOpen1] = useState(false);
+  const [modalOpen2, setModalOpen2] = useState(false);
+  const [modalOpen3, setModalOpen3] = useState(false);
+  const [modalOpen4, setModalOpen4] = useState(false);
   let navigate = useNavigate();
 
   return (
@@ -58,8 +64,8 @@ const ArticlesDog = () => {
                     Read more
                   </button>
                 </div> */}
-                <button onClick={() => setModalOpen(true)}>Read more</button>
-                <Modal isOpen={modalOpen}>
+                <button onClick={() => setModalOpen1(true)}>Read more</button>
+                <Modal isOpen={modalOpen1}>
                   <h2>Why Are Dogs Given Up?</h2>
                   <img
                     style={{
@@ -249,7 +255,7 @@ const ArticlesDog = () => {
                     through direct referrals, after screening, or after a
                     placement and assessment in a foster home.
                   </p>
-                  <button onClick={() => setModalOpen(false)}>Close</button>
+                  <button onClick={() => setModalOpen1(false)}>Close</button>
                 </Modal>
               </div>
             </div>
@@ -283,8 +289,8 @@ const ArticlesDog = () => {
                     Read more
                   </button>
                 </div> */}
-                <button onClick={() => setModalOpen(true)}>Read more</button>
-                <Modal isOpen={modalOpen}>
+                <button onClick={() => setModalOpen2(true)}>Read more</button>
+                <Modal isOpen={modalOpen2}>
                   <h2>Dog Adoption Tips – Bringing Home a New Rescue Dog</h2>
                   <img
                     style={{
@@ -609,7 +615,7 @@ const ArticlesDog = () => {
                     into a happy, healthy dog — and provide you with love and
                     companionship for years to come.
                   </p>
-                  <button onClick={() => setModalOpen(false)}>Close</button>
+                  <button onClick={() => setModalOpen2(false)}>Close</button>
                 </Modal>
               </div>
             </div>
@@ -637,7 +643,7 @@ const ArticlesDog = () => {
                   responsible future pet parent, you still have some questions
                   before you take the plunge and choose your new
                 </h5>
-                <div className="button-adopt">
+                {/* <div className="button-adopt">
                   <button
                     className="adopt"
                     onClick={() => {
@@ -646,7 +652,187 @@ const ArticlesDog = () => {
                   >
                     Read more
                   </button>
-                </div>
+                </div> */}
+                <button onClick={() => setModalOpen3(true)}>Read more</button>
+                <Modal isOpen={modalOpen3}>
+                  <h2>What Questions Should You Ask A Dog Breeder?</h2>
+                  <img
+                    style={{
+                      width: 700,
+                      height: 300,
+                    }}
+                    src={pic7}
+                  />
+                  <p>
+                    You have decided that it’s time to add a pet to your family.
+                    After some consideration, you’ve fallen in love with a
+                    particular dog breed. Many people then look for a dog
+                    breeder to make their purebred-pup dream come true. Like any
+                    responsible future pet parent, you still have some questions
+                    before you take the plunge and choose your new dog, which
+                    may be why you’re here!
+                  </p>
+                  <p>
+                    Did you know that there are LOTS of purebred dogs waiting
+                    for the perfect forever home at shelters and rescue groups?
+                    Not only that, but there are also special breed-rescue
+                    groups who dedicate their efforts to finding homes for just
+                    one breed of dog.
+                  </p>
+                  <p>
+                    Dogs of every type and breed can end up in shelters. Before
+                    you start checking for a breeder to find your next family
+                    pet, let’s take a step back and look at some things to
+                    consider when starting the search for a special pup.
+                  </p>
+                  <h3>Think about the kind of dog who will suit you best</h3>
+                  <p>Think about the kind of dog who will suit you best</p>
+                  <ul>
+                    <li>
+                      Do you have kids? If so, how old are they and how
+                      dog-savvy are they?
+                    </li>
+                    <li>How many hours a day are you out of the house?</li>
+                    <li>
+                      Do you have assistance if you are gone for long workdays?
+                    </li>
+                    <li>
+                      What kind of energy level are you looking for in a dog?
+                    </li>
+                    <li>
+                      Is how much a dog sheds something that’s important to you?
+                    </li>
+                  </ul>
+                  <p>
+                    Once you’ve answered these basic questions, you’ll have a
+                    better picture of what characteristics you’re looking for in
+                    a dog. This will help to narrow your search as you research
+                    breeds based on your answers.
+                  </p>
+                  <p>
+                    You can learn more about each unique dog breed by searching
+                    our Petfinder breed guide by name, collection (largest,
+                    smartest, and even hairless!), or just browse them all right
+                    here. It’s fascinating to discover the history behind each
+                    of the countless dog breeds. From small to large, each has a
+                    unique story.
+                  </p>
+                  <p>
+                    Even if you have your heart set on a particular breed,
+                    there’s an additional factor to keep in mind: Every dog—even
+                    a purebred–is distinct and individual.
+                  </p>
+                  <p>
+                    Despite what is considered typical of a breed, you’ll need
+                    to remember that every dog in the world has their own unique
+                    personality (that’s why we love dogs!) and some may have
+                    characteristics that aren’t commonly found within their
+                    breed. Luckily, when dogs arrive with an adoption group, the
+                    shelter or rescue will often do a behavioral assessment that
+                    can give you more insight about an individual dog before you
+                    make a decision about adopting. This pre-adoption info can
+                    help you find the very best fit for your family and
+                    lifestyle.
+                  </p>
+                  <h3>How to find a dog breed near you:</h3>
+                  <p>
+                    You’ve researched which breeds you’re interested in, and now
+                    it’s time to get searching!
+                  </p>
+                  <p>
+                    Begin your search for a dog (or search for a cat) by adding
+                    your location, how far you’d be willing to travel, and which
+                    breed you’re looking for. If you want to narrow it down
+                    after your initial search, you will see options to filter it
+                    by gender, age, size, and some personality traits (good with
+                    other dogs, kids, etc.).
+                  </p>
+                  <p>
+                    Once you’ve plugged in your search requirements, your
+                    results will automatically sort themselves to show the dogs
+                    that are closest to you first. You can click on each
+                    individual dog for more information and to see which rescue
+                    group or shelter is caring for that pet.
+                  </p>
+                  <p>
+                    Don’t fret about any perceived lack of options. 25-30% of
+                    dogs in search of forever homes in shelters are purebred
+                    dogs, so you are bound to find a new best friend.
+                  </p>
+                  <p>
+                    Being flexible in your search can ultimately lead you to
+                    your most perfect fit. While you may have a particular breed
+                    in mind, if you’re open to looking at other dogs whose
+                    personality and traits match your family, you could end up
+                    pleasantly surprised. There are lots of different types of
+                    dogs who would love an active lifestyle and would enjoy
+                    being your hiking partner, just as there are plenty who’d
+                    prefer to be a lap dog and snuggle up next to you on the
+                    couch. Fit is key in everyone’s happiness, so keep an open
+                    mind and enjoy the adventure of choosing a new pet.
+                  </p>
+                  <h3>How to find a puppy near you:</h3>
+                  <p>
+                    If you’re specifically looking for a puppy, you want to
+                    start by searching for a dog, and then narrow your search by
+                    age.
+                  </p>
+                  <p>
+                    When deciding on which age range would be best, think about
+                    these things:
+                  </p>
+                  <ul>
+                    <li>
+                      Puppies are a lot of fun but are also lots of work. Do you
+                      have the time to train a puppy from scratch, including
+                      housebreaking?
+                    </li>
+                    <li>
+                      Does the energy level of a puppy suit your current
+                      lifestyle?
+                    </li>
+                    <li>
+                      Do you have the time to socialize your puppy? Pups need
+                      lots of structured exposure to new things in their first
+                      months of life.
+                    </li>
+                    <li>
+                      Is size important to you? A puppy’s full-grown size is
+                      sometimes hard to estimate.
+                    </li>
+                    <li>
+                      Are you prepared for any quirky personality traits or
+                      behavior challenges that may arise as your puppy grows up?
+                    </li>
+                  </ul>
+                  <h3>How to find a young or adult dog to suit your home:</h3>
+                  <p>
+                    When adopting an adult dog, you can specifically look for
+                    one whose story matches your needs, such as being friendly
+                    with other dogs, being good with children, and other past
+                    history that the rescue or shelter may already have. Having
+                    more history on a dog will mean fewer surprises for you as
+                    an adopter.
+                  </p>
+                  <p>
+                    Do you want a little help finding a dog who will be a
+                    perfect fit for your family? If you are flexible about the
+                    breed, or just want to have some fun, try taking our dog
+                    selector quiz.
+                  </p>
+                  <p>Your perfect match is just a few clicks away!</p>
+                  <h3>Your perfect match is just a few clicks away!</h3>
+                  <p>
+                    You are in search of a new family member and best friend.
+                    The dogs on Petfinder are in search of a forever home and
+                    endless love. What could be more perfect? The number of dogs
+                    in need of exactly what you have to offer is
+                    astounding–purebreds included. The only thing left to do is
+                    get to searching!
+                  </p>
+
+                  <button onClick={() => setModalOpen3(false)}>Close</button>
+                </Modal>
               </div>
             </div>
           </div>
@@ -673,7 +859,7 @@ const ArticlesDog = () => {
                   dog, comparatively there are also solutions. Dog Rehoming
                   Issue and Solution Board I got a new job and there’s no …
                 </h5>
-                <div className="button-adopt">
+                {/* <div className="button-adopt">
                   <button
                     className="adopt"
                     onClick={() => {
@@ -682,7 +868,442 @@ const ArticlesDog = () => {
                   >
                     Read more
                   </button>
-                </div>
+                </div> */}
+                <button onClick={() => setModalOpen4(true)}>Read more</button>
+                <Modal isOpen={modalOpen4}>
+                  <h2>Dog Rehoming – How to Rehome Your Pet</h2>
+
+                  <p>
+                    Rehoming a dog, in the first place, is not abandonment; as a
+                    matter of fact, it’s humane, mature, and responsible.
+                    Secondly, while there are various problems that can
+                    potentially cause pet parents to consider giving away their
+                    dog, comparatively there are also solutions.
+                  </p>
+                  <h3>Dog Rehoming Issue and Solution Board</h3>
+                  <Table striped bordered hover size="sm">
+                    <tbody>
+                      <tr>
+                        <td>I got a new job and there’s no time for my dog!</td>
+                        <td>
+                          + Have you specifically considered a doggy day-care or
+                          a dog walker?
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          I can’t afford my dog because of extenuating
+                          circumstances! I.e., job loss.!
+                        </td>
+                        <td>
+                          + Have you asked someone you already know if they can
+                          take care of the dog until you resituate yourself?
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <td>My new apartment doesn’t allow dogs!</td>
+                        <td>
+                          + In contrast, have you investigated apartments that
+                          do allow dogs?
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <td>
+                          We had a baby, and moreover, we no longer have time
+                          for our dog!
+                        </td>
+                        <td>
+                          + In spite of, have you considered how having a dog
+                          teaches kids about responsibility and compassion?
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <td>
+                          We had a baby, and moreover, we no longer have time
+                          for our dog!
+                        </td>
+                        <td>
+                          + In spite of, have you considered how having a dog
+                          teaches kids about responsibility and compassion?
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <td>
+                          A sickness/injury is significantly preventing me from
+                          taking care of my dog!
+                        </td>
+                        <td>
+                          + First thing to remember, if your situation is
+                          temporary, consider asking family or friends to help
+                          and take care of your dog while you’re able to
+                          recover.
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <td>My dog is showing signs of aggression!</td>
+                        <td>
+                          + To clarify, fear and aggression in dogs can be
+                          complex. Nevertheless, in short, consult with an
+                          animal behaviorist.
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <td>My dog does not get along with other dogs!</td>
+                        <td>My dog does not get along with other dogs!</td>
+                      </tr>
+
+                      <tr>
+                        <td>
+                          My dog has separation anxiety, or his energy is a
+                          mismatch for us! Plus, he has destruction issues!
+                        </td>
+                        <td>
+                          + If possible, research online resources on how to
+                          help an energetic dog. To be noted, a bored dog can
+                          also become a destructive dog, when left alone. Make
+                          sure your dog is getting plenty of mental and physical
+                          stimulation. If that doesn’t help, try consulting a
+                          reputable dog trainer.
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <td>
+                          My dog has health issues that I can’t afford to
+                          manage.
+                        </td>
+                        <td>
+                          + On the positive side, talk to your veterinarian
+                          about payment options. Also, for instance, consider
+                          programs like Care Credit.
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <td>
+                          My dog is making our allergies surprisingly
+                          uncomfortable!
+                        </td>
+                        <td>
+                          +Under those circumstances, opt to frequently clean in
+                          an effort to help decrease allergies. As a result,
+                          consider allergen air purifiers and allergy pills.
+                        </td>
+                      </tr>
+                    </tbody>
+                  </Table>
+
+                  <h3>How do I Rehome a Dog FAQ’s</h3>
+                  <ol>
+                    <li>Is it wrong to be selective when rehoming a dog?</li>
+                    <p>
+                      No, and Dr. Nicholas Dodman, a Veterinary Behavior
+                      Specialist from Cummings School of Veterinary Medicine at
+                      Tufts University says, “Choosing a canine companion based
+                      on individual behavior and lifestyle compatibility is
+                      crucial to the success of the relationships between people
+                      and their dogs.”
+                    </p>
+                    <li>
+                      I’ve exhausted all my options trying to keep my dog, what
+                      do I do?
+                      <ul>
+                        <li>
+                          Contact breed rescue groups: Discover numerous rescue
+                          groups that, by and large, specifically help your
+                          dog’s breed.
+                        </li>
+                        <li>
+                          Rehome the dog yourself: Speak with friends and family
+                          and in brief, advertise your intentions.
+                        </li>
+                        <li>
+                          Post Dog Rehoming Ads: Hang posters on local bulletin
+                          boards and on balance, post on social media.
+                        </li>
+                        <li>
+                          Make an internet profile: Ultimately, highlight your
+                          dog’s best features and behavioral qualities
+                          accordingly online.
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      How do I work with my local animal shelter or rescue
+                      group?
+                    </li>
+                    <p>
+                      Generally speaking, surrender your dog to an animal
+                      shelter or a rescue organization.
+                    </p>
+                    <li>
+                      How do I work with my local animal shelter or rescue
+                      group?
+                    </li>
+                    <p>
+                      Generally speaking, surrender your dog to an animal
+                      shelter or a rescue organization.
+                    </p>
+                    <li>
+                      What would it take to get your dog to put his best foot
+                      forward towards a forever home?
+                    </li>
+                    <p>
+                      Generally speaking, surrender your dog to an animal
+                      shelter or a rescue organization.
+                    </p>
+                    <li>Are you able to be patient through the process? </li>
+                    <p>
+                      Straightaway, pet rehoming takes patience. Although, you
+                      may be in a rush in rehoming your dog. On the whole,
+                      finding a good fit for your dog does take time, love, and
+                      patience.
+                    </p>
+                  </ol>
+                  <h3>Rehoming Dog Tips</h3>
+                  <img
+                    style={{
+                      width: 200,
+                      height: 200,
+                    }}
+                    src={pic8}
+                  />
+                  <p>
+                    Avoid Stress: In a word, advise the new family to avoid
+                    anything stressful as long as the dog settles.
+                  </p>
+                  <p>
+                    The Dog May Not Eat: Tell them not to worry if the dog won’t
+                    eat on the first day. Nonetheless, he’ll eat when he’s
+                    ready.
+                  </p>
+                  <p>
+                    The Dog May Not Eat: Tell them not to worry if the dog won’t
+                    eat on the first day. Nonetheless, he’ll eat when he’s
+                    ready.
+                  </p>
+                  <p>
+                    Keep in touch: Tell the new owners to call you from time to
+                    time with any questions or problems.
+                  </p>
+                  <h3>
+                    Straightaway, pet rehoming takes patience. Although, you may
+                    be in a rush in rehoming your dog. On the whole, finding a
+                    good fit for your dog does take time, love, and patience.
+                  </h3>
+                  <ul>
+                    <li>Have you ever had another pet? What happened to it?</li>
+                    <p>
+                      The best answer is “Yes; It died at age 17.” What you
+                      really don’t want to hear is that their last pet was hit
+                      by a car, died of preventable disease, ran away, or worse…
+                      was turned into a shelter.
+                    </p>
+                    <li>Do you have a pet now?</li>
+                    <ul>
+                      <li>
+                        Already having a pet is good. It demonstrates that they
+                        already know what is involved in pet ownership.
+                        <ul>
+                          <li>
+                            If yes, then how long have you had it? In general…
+                            the longer, the better.
+                          </li>
+                          <li>
+                            If yes, then how long have you had it? In general…
+                            the longer, the better.
+                          </li>
+                          <li>
+                            If a cat, has your cat been tested for FIV (feline
+                            AIDS) or FILV (feline Leukemia)? If either cat is
+                            positive for one of these diseases placing them
+                            together is disastrous. If a rescued cat is FIV or
+                            FILV positive, place it with another known cat with
+                            the same disease.
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                    <li>
+                      If you have another dog/cat, is it altered? Will you be
+                      altering (spaying/neutering) the cat/dog when it reaches
+                      sexual maturity?
+                    </li>
+                    <ul>
+                      <li>
+                        The good answer is yes: spay/neuter prevents unwanted
+                        pet births, decreasing the euthanasia happening in
+                        shelters because of too many companion animals and not
+                        enough companion homes. Also, spay/neuter prevents
+                        cancer and decreases the likelihood that a pet will run
+                        away from home or get into fights.
+                      </li>
+                    </ul>
+                    <li>
+                      Do you own your home or rent? Do you have a fenced yard?
+                    </li>
+                    <ul>
+                      <li>
+                        Ask to see a copy of their lease allowing pets if they
+                        rent. Or ask to use their landlord as a reference.
+                        Fenced yards are best, but aren’t always possible. In
+                        some parts of the country, they aren’t always necessary
+                        (very rural farmland). Make sure the potential adopter
+                        is interested in exercising their new pet. Some dogs
+                        should get up to three or four miles of exercise a day.
+                        “My apartment doesn’t allow pets” is one of the top
+                        three reasons that pets are taken to shelters.
+                      </li>
+                    </ul>
+                    <li>Will you provide references?</li>
+                    <ul>
+                      <li>
+                        Many organizations require three, one being a
+                        veterinarian. Sometimes they find the person had no
+                        record at the vet, a family member remarks about how
+                        much the potential adopter loves to travel abroad each
+                        month, or perhaps what really happened to their last
+                        pet. Although these situations are not the norm–with the
+                        time, money, and energy you are investing in this pet–be
+                        sure! You aren’t interested in an adopter who will not
+                        provide veterinary care for this pet.
+                      </li>
+                    </ul>
+                    <li>
+                      Will the pet be a member of your family or a gift for
+                      someone else?
+                    </li>
+                    <ul>
+                      <li>
+                        It is important that everyone who will be living with
+                        the pet meet it first. This minimizes the chances of the
+                        pet being returned to you, winding up at a shelter, or
+                        being abused or neglected.
+                      </li>
+                    </ul>
+                    <li>Are you willing to allow a home check?</li>
+                    <ul>
+                      <li>
+                        Some rescue groups always do a home check. This verifies
+                        the individual has given you a real address. You might
+                        consider taking your pet, to see his/her reaction to the
+                        home and the people. If one of the family members never
+                        gets off the couch or turns the TV down to meet you and
+                        your pet, it is probably not going to be the best home.
+                        Some organizations also go back to the home one week
+                        after adoption. This gives them an opportunity to see
+                        that the pet is happy. It also gives the adopter a
+                        chance to return the pet if there is a problem. NEVER DO
+                        A HOME CHECK ALONE! REMEMBER THE BUDDY SYSTEM!
+                      </li>
+                    </ul>
+                    <li>
+                      Do you plan on crating the dog? For how long each day?
+                    </li>
+                    <ul>
+                      <li>
+                        Think twice before you adopt a young puppy or kitten to
+                        a home where they will be alone for more than four hours
+                        a day. New owners should be willing to adopt on a
+                        weekend or on vacation time to allow the youngster to
+                        adjust to new conditions. Older dogs and cats can
+                        withstand being alone for a normal working day. Eight to
+                        10 hours is possible but should be followed by good
+                        exercise/playtime, which is difficult for people that
+                        have themselves worked a 10 hour day.
+                      </li>
+                    </ul>
+                    <li>
+                      If the pet has an accident in the house, what type of
+                      correction do you plan to use?
+                    </li>
+                    <ul>
+                      <li>
+                        Think twice before you adopt a young puppy or kitten to
+                        a home where they will be alone for more than four hours
+                        a day. New owners should be willing to adopt on a
+                        weekend or on vacation time to allow the youngster to
+                        adjust to new conditions. Older dogs and cats can
+                        withstand being alone for a normal working day. Eight to
+                        10 hours is possible but should be followed by good
+                        exercise/playtime, which is difficult for people that
+                        have themselves worked a 10 hour day.
+                      </li>
+                    </ul>
+                    <li>How many hours per day will the pet be alone?</li>
+                    <ul>
+                      <li>
+                        Think twice before you adopt a young puppy or kitten to
+                        a home where they will be alone for more than four hours
+                        a day. New owners should be willing to adopt on a
+                        weekend or on vacation time to allow the youngster to
+                        adjust to new conditions. Older dogs and cats can
+                        withstand being alone for a normal working day. Eight to
+                        10 hours is possible but should be followed by good
+                        exercise/playtime, which is difficult for people that
+                        have themselves worked a 10 hour day.
+                      </li>
+                    </ul>
+                    <li>
+                      Do you have children? How old are they? Have they ever
+                      been around pets?
+                    </li>
+                    <ul>
+                      <li>
+                        Children should not be expected to be responsible for
+                        the pet. If that is suggested, think red alert! Very
+                        young kids may be hurt by or may hurt the new pet. This
+                        is a personal issue, based mostly on the type of family
+                        you are talking to. Tread carefully, here. Some
+                        organizations have a strict policy regarding adoptions
+                        to families with children under five. Others judge on a
+                        one-on-one basis. This is where your people skills come
+                        in. Make sure you meet the kids!
+                      </li>
+                    </ul>
+                    <li>Will the pet be going outside at all?</li>
+                    <ul>
+                      <li>
+                        Cats that go outside have a significantly reduced
+                        expected life-span, get hit by cars, poisoned
+                        intentionally, poisoned unintentionally, get feline aids
+                        for which there is no vaccine, get feline leukemia for
+                        which the vaccine is only 70% effective, get into
+                        fights, get fleas, get lost, etc. You want to hear that
+                        this will be an indoor cat (unless you are placing a
+                        vaccinated wild cat on a farm or in a rural area).
+                        Outdoor/indoor is okay for dogs, but remember, dogs are
+                        pack animals and want to be where you are. Leaving a dog
+                        outside when the rest of his family is inside may be a
+                        lonely experience for the dog.
+                      </li>
+                    </ul>
+                    <li>Will you be declawing the cat?</li>
+                    <ul>
+                      <li>
+                        Declawed cats are more likely to become biters and/or
+                        forget litter box training. Many people are very opposed
+                        to declawing (or see it as a last resort) because of the
+                        gruesome nature of the surgery. At best, it should be
+                        done at the same time as altering.
+                      </li>
+                    </ul>
+                    <li>
+                      Do you realize that cats can live for more than 20 years?
+                      Do you realize that dogs can live for more than 15 years?
+                    </li>
+                    <ul>
+                      <li>This is a lifetime commitment.</li>
+                    </ul>
+                  </ul>
+                  <button onClick={() => setModalOpen4(false)}>Close</button>
+                </Modal>
               </div>
             </div>
           </div>

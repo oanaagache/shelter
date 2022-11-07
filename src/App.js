@@ -34,19 +34,19 @@ function App() {
   }, [listResponses]);
 
   var newArray = listResponses.filter((listResponses) => {
-    return listResponses.lastName !== "Pop";
+    return listResponses.lastName !== "Neacsu";
   });
 
-  // useEffect(() => {
-  //   localStorage.setItem("shelter", JSON.stringify(newArray));
-  // }, [newArray]);
+  useEffect(() => {
+    localStorage.setItem("shelter", JSON.stringify(newArray));
+  }, [newArray]);
 
   return (
     <Router>
       <Navbar />
       <Routes>
         <Route path="/" element={<Main />} />
-        <Route path="/search" element={<Search />} />
+        {/* <Route path="/search" element={<Search />} /> */}
         <Route path="/about" element={<About />} />
         <Route path="/donate" element={<Donate />} />
         <Route path="/foster" element={<Foster />} />

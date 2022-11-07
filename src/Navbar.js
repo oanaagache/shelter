@@ -14,10 +14,10 @@ const Navbar = () => {
         </div>
 
         <ul className="header-menu">
-          <li>
+          {/* <li>
             Search
             <img style={{ height: 15 }} src={logo2} />
-          </li>
+          </li> */}
           <li>
             <Link to="/about">
               <span className="about-nav">About us</span>
