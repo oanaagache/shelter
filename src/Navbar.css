@@ -51,7 +51,6 @@
 
 .adopt-nav {
   border-width: 10px;
-
   border-color: darkgreen;
   border-style: solid;
   border-top: 10px;
@@ -61,6 +60,9 @@
   color: aliceblue;
 }
 
+.about-nav {
+  text-decoration: none;
+}
 @media screen and (max-width: 800px) {
   .header {
     width: 100%;

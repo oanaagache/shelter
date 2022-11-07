@@ -4,7 +4,6 @@ import Dropdown from "./Dropdown";
 import logo from "./others/images/image4.svg";
 import { Link } from "react-router-dom";
 import Cards from "./Cards";
-import GetToken from "./GetToken";
 
 const Adopt = () => {
   const [visible, setVisible] = useState(4);
@@ -14,7 +13,7 @@ const Adopt = () => {
   };
 
   const token =
-    "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiJ5RTM0bUY1eTh1YVRrY0Rwb3BIV2labldHb1lKWDVVZnc1OXZ0RkRwT0pVNzh1VzV1ciIsImp0aSI6IjQ4ODM0MTM5ZmUyYmM4ODdiNTMyZGRlY2M5MzY1NzI5M2ZkOGY3NmU3YzNhMDA3OGY0OTIxOGZjOTE5NmVhZGExN2M5NjhmNTU4YzJkMzVmIiwiaWF0IjoxNjY3ODIyODI0LCJuYmYiOjE2Njc4MjI4MjQsImV4cCI6MTY2NzgyNjQyNCwic3ViIjoiIiwic2NvcGVzIjpbXX0.QylFIdsazmz3m7vm_sG9iCpmAtlD4bLYfseT5hhfT_cOD70FYyn0KNUieIa9oEIDM1AMGVLEH7QeHq52UpsYvJZ6oQ8e0O7HMY86JwqrtFf5GFAfgRXgQHgBfx2l6h1jGroy5jrdg3s-55OKPQuxNMuepRrrBsILJyZnrUEj7WfgQ8KTL-LjW606KL1BpKBX4Ciw_Pr3ezlfKv58q6vcqGscGWDLanVWNtffEH61AYITZPf2tZyOY1HLNFJG6G9aaMmDV0e9NBIDjF3RFskWKd8QwcnhgjK_3USf0pCRJ5sQ6CWH--kYKani4_OY48mmbza8b2lL0lopnQ-_6Mux5Q";
+    "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiJ5RTM0bUY1eTh1YVRrY0Rwb3BIV2labldHb1lKWDVVZnc1OXZ0RkRwT0pVNzh1VzV1ciIsImp0aSI6ImQzNzE4ZDk2NDQ2OWU1N2M1MmZjZGRjM2JlNjgwNmRmNWJjNjkxN2NlMDYxYmVkZDc4MTc1NzY1MzRhOTAwZGEzMjJjN2JjZjRmZmQyMWU5IiwiaWF0IjoxNjY3ODMwNjQzLCJuYmYiOjE2Njc4MzA2NDMsImV4cCI6MTY2NzgzNDI0Mywic3ViIjoiIiwic2NvcGVzIjpbXX0.arpm2TCpXGzGJWk9MIM5we17yIHiFBHGDr4_-D4IkZq9Ntz6KhsnwgEdUwI9zcxJuMkKhXZDJTDrs0WKKXnLozb4a10wPijzfk0aMTSNlzhEO6kdp6iGhIgLHC7NFj2Qgfd_I1mz0E_k9Dg93i8WY0P9XyrKoHKTn_zkZU357DqoeEI2AFEzArHuSl0iD8QoLIi__n-JWkpL0RIOL4K7Ly5fFmJJUpUQfZkdY3Orue0mWOWv_LrIMOMQTQ0KorFTkgSJGQULX-JRBzie2x-IW87cJllBOWTLqRAXfw3zAJRTzLhEkuxLCWXfVmoFezw96HATqh-8CmsN2_Tfg8lLDQ";
 
   //const bearer = "Bearer " + accessToken.token;
   const bearer = "Bearer " + token;
@@ -125,11 +124,18 @@ const Adopt = () => {
       });
   }, [type]);
 
-  const [children, setChildren] = useState(false);
-  const [dogs, setDogs] = useState(false);
-  const [cats, setCats] = useState(false);
-
   const [click, handleClick] = useState(false);
+
+  const [isChecked, setIsChecked] = useState(false);
+
+  const handleChange = (event) => {
+    if (event.target.checked) {
+      console.log(" Checkbox is checked");
+    } else {
+      console.log("Checkbox is NOT checked");
+    }
+    setIsChecked((current) => !current);
+  };
 
   return (
     <div className="adopt-container">
@@ -138,7 +144,9 @@ const Adopt = () => {
           <div className="adopt-inner">
             <img style={({ height: 1 }, { padding: 10 })} src={logo} />
             <h2>
-              <Link to="/">Back</Link>
+              <Link to="/" style={{ textDecoration: "none" }}>
+                Back
+              </Link>
             </h2>
           </div>
 
@@ -199,22 +207,28 @@ const Adopt = () => {
             <h3 className="checklist">
               <input
                 type="checkbox"
-                checked={children}
-                onChange={(e) => setChildren(e.target.value)}
+                // checked={children}
+                // onChange={(e) => setChildren(e.target.value)}
+                value={isChecked}
+                onChange={handleChange}
               />
               <label>Children</label>
 
               <input
                 type="checkbox"
-                checked={dogs}
-                onChange={(e) => setDogs(e.target.value)}
+                // checked={isChecked}
+                // onChange={(e) => setDogs(e.target.value)}
+                value={isChecked}
+                onChange={handleChange}
               />
               <label>Dogs</label>
 
               <input
                 type="checkbox"
-                checked={cats}
-                onChange={(e) => setCats(e.target.value)}
+                // checked={cats}
+                // onChange={(e) => setCats(e.target.value)}
+                value={isChecked}
+                onChange={handleChange}
               />
               <label>Cats</label>
             </h3>

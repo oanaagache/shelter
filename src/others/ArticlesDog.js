@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
 import logo from "./images/image4.svg";
 import pic1 from "./images/image6.jpg";
 import pic2 from "./images/image7.jpg";
@@ -19,7 +18,6 @@ const ArticlesDog = () => {
   const [modalOpen2, setModalOpen2] = useState(false);
   const [modalOpen3, setModalOpen3] = useState(false);
   const [modalOpen4, setModalOpen4] = useState(false);
-  let navigate = useNavigate();
 
   return (
     <div className="adopt-container">
@@ -28,7 +26,9 @@ const ArticlesDog = () => {
           <div className="adopt-inner">
             <img style={({ height: 1 }, { padding: 10 })} src={logo} />
             <h2>
-              <Link to="/">Back</Link>
+              <Link to="/other" style={{ textDecoration: "none" }}>
+                Back
+              </Link>
             </h2>
           </div>
 

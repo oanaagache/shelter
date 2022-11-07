@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Search from "./others/Search";
 import About from "./others/About";
 import Donate from "./others/Donate";
 import Foster from "./others/Foster";
@@ -46,7 +45,6 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Main />} />
-        {/* <Route path="/search" element={<Search />} /> */}
         <Route path="/about" element={<About />} />
         <Route path="/donate" element={<Donate />} />
         <Route path="/foster" element={<Foster />} />

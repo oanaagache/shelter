@@ -1,8 +1,7 @@
 import React from "react";
 import "./Navbar.css";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import logo from "./others/images/image.png";
-import logo2 from "./others/images/image2.png";
 
 const Navbar = () => {
   return (
@@ -14,36 +13,66 @@ const Navbar = () => {
         </div>
 
         <ul className="header-menu">
-          {/* <li>
-            Search
-            <img style={{ height: 15 }} src={logo2} />
-          </li> */}
           <li>
-            <Link to="/about">
-              <span className="about-nav">About us</span>
-            </Link>
+            <NavLink
+              to="/about"
+              style={({ isActive }) => ({
+                color: isActive ? " purple" : "black",
+              })}
+              end
+              className="about-nav"
+            >
+              About us
+            </NavLink>
           </li>
           <li>
-            <Link to="/donate">
-              <span className="donate-nav">Donate</span>
-            </Link>
+            <NavLink
+              to="/donate"
+              style={({ isActive }) => ({
+                color: isActive ? " purple" : "black",
+              })}
+              end
+              className="about-nav"
+            >
+              Donate
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to="/foster"
+              style={({ isActive }) => ({
+                color: isActive ? " purple" : "black",
+              })}
+              end
+              className="about-nav"
+            >
+              Foster
+            </NavLink>
           </li>
 
           <li>
-            <Link to="/foster">
-              <span className="foster-nav">Foster</span>
-            </Link>
+            <NavLink
+              to="/adopt"
+              style={({ isActive }) => ({
+                color: isActive ? " purple" : "black",
+              })}
+              end
+              className="about-nav"
+            >
+              Adopt
+            </NavLink>
           </li>
-
           <li>
-            <Link to="/adopt">
-              <span className="adopt-nav">Adopt</span>
-            </Link>
-          </li>
-          <li>
-            <Link to="/other">
-              <span className="other-nav">Other</span>
-            </Link>
+            <NavLink
+              to="/other"
+              style={({ isActive }) => ({
+                color: isActive ? " purple" : "black",
+              })}
+              end
+              className="about-nav"
+            >
+              Other
+            </NavLink>
           </li>
         </ul>
       </div>

@@ -15,7 +15,9 @@ const Other = () => {
           <div className="adopt-inner">
             <img style={({ height: 1 }, { padding: 10 })} src={logo} />
             <h2>
-              <Link to="/">Back</Link>
+              <Link to="/other" style={{ textDecoration: "none" }}>
+                Back
+              </Link>
             </h2>
           </div>
 

@@ -12,7 +12,14 @@ const About = () => {
           <div className="adopt-inner">
             <img style={({ height: 1 }, { padding: 10 })} src={logo} />
             <h2>
-              <Link to="/">Back</Link>
+              <Link
+                to="/"
+                style={
+                  ({ textDecoration: "none" }, { color: " rgb(184, 106, 187)" })
+                }
+              >
+                Back{" "}
+              </Link>
             </h2>
           </div>
 

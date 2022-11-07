@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import logo from "./images/image4.svg";
 
 const Foster = () => {
   return (
@@ -7,9 +8,11 @@ const Foster = () => {
       <div className="adopt-header">
         <div className="adopt-content">
           <div className="adopt-inner">
-            {/* <img style={({ height: 1 }, { padding: 10 })} src={logo} /> */}
+            <img style={({ height: 1 }, { padding: 10 })} src={logo} />
             <h2>
-              <Link to="/">Back</Link>
+              <Link to="/" style={{ textDecoration: "none" }}>
+                Back
+              </Link>
             </h2>
           </div>
 
