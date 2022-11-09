@@ -12,4 +12,12 @@ import App from "./App";
 // );
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
+<<<<<<< HEAD
 root.render(<App />);
+=======
+root.render(
+  // <React.StrictMode>
+  <App />
+  // </React.StrictMode>
+);
+>>>>>>> 910c91ff65b361d4d451bfa8d854a1adf0b66821
