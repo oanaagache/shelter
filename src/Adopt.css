@@ -112,13 +112,42 @@ body {
   color: aliceblue;
   width: 200px;
   height: 50px;
-  background-color: darkgreen;
+  background-color: rgb(126, 63, 102);
   margin-top: 20px;
   font-size: 24px;
 }
 
+.text {
+  color: black;
+  font-size: 24px;
+}
+.showMore-btn {
+  color: black;
+  width: 200px;
+  height: 50px;
+  background-color: aliceblue;
+  margin-top: 20px;
+  font-size: 24px;
+}
+
+.results {
+  padding: 20px;
+  margin: 20px;
+  align-items: center;
+}
+
+.text {
+  color: black;
+  padding: 30px;
+  margin-top: 20px;
+  font-size: 24px;
+  justify-content: center;
+}
+
 .cards {
-  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 .sort {
   position: relative;

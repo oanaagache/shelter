@@ -1,6 +1,6 @@
 import React from "react";
-import logo3 from "./images/image3.png";
-import "./MainStyles.css";
+import logo3 from "./others/images/image3.png";
+import "./Main.css";
 
 import { useNavigate } from "react-router-dom";
 
@@ -19,7 +19,14 @@ const Main = () => {
           <h3 className="main-sp">for homeless pets in need</h3>
 
           <div className="button">
-            <button className="donate">Donate</button>
+            <button
+              className="donate"
+              onClick={() => {
+                navigate("/donate");
+              }}
+            >
+              Donate
+            </button>
             <button
               className="adopt"
               onClick={() => {

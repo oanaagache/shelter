@@ -1,22 +1,26 @@
 import React from "react";
-import Intro from "./Intro";
+import Details from "./Details";
 
 const List = (props) => {
-  const list = props.list.map((item) => (
-    <Intro
-      name={item.name}
+  const { listResponses } = props;
+  const list = listResponses.map((item, index) => (
+    <Details
+      key={index}
+      firstName={item.firstName}
       lastName={item.lastName}
       address1={item.address1}
       address2={item.address2}
       city={item.city}
-      state={item.state}
+      country={item.country}
       code={item.code}
       phoneNo={item.phoneNo}
       email={item.email}
-      key={item.id}
+      status={item.status}
+      routine={item.routine}
     />
   ));
-  return list;
+
+  return <>{list}</>;
 };
 
 export default List;

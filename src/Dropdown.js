@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "./Adopt.css";
-import logo from "./images/image5.svg";
+import logo from "./others/images/image5.svg";
 
 function Dropdown({ selected, setSelected, options }) {
   const [isActive, setIsActive] = useState(false);
@@ -15,8 +15,9 @@ function Dropdown({ selected, setSelected, options }) {
 
       {isActive && (
         <div className="dropdown-content">
-          {options.map((option) => (
+          {options.map((option, index) => (
             <div
+              key={index}
               onClick={(e) => {
                 setSelected(option);
                 setIsActive(false);

@@ -1,15 +1,21 @@
 import React, { useState, useEffect } from "react";
 import "./Adopt.css";
 import Dropdown from "./Dropdown";
-import logo from "./images/image4.svg";
+import logo from "./others/images/image4.svg";
 import { Link } from "react-router-dom";
 import Cards from "./Cards";
 
 const Adopt = () => {
-  //var token = GetToken();
-  //console.log("Adopt.js: token: " + token);
+  const [visible, setVisible] = useState(3);
+  //const accessToken = GetToken();
+  const showMoreCards = () => {
+    setVisible((prevValue) => prevValue + 3);
+  };
+
   const token =
-    "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiJ5RTM0bUY1eTh1YVRrY0Rwb3BIV2labldHb1lKWDVVZnc1OXZ0RkRwT0pVNzh1VzV1ciIsImp0aSI6IjBjMmZlZGEyMzIzNDgwMjcxM2M3MmQ0ZTI4YWNjMWJiMmU3NzFiN2QzMzk4NzI5NGQwOGExNGQxZjA3MmJhNjMyN2IzMDYxYjE0ZDY0MzVhIiwiaWF0IjoxNjU0Nzc0ODM5LCJuYmYiOjE2NTQ3NzQ4MzksImV4cCI6MTY1NDc3ODQzOSwic3ViIjoiIiwic2NvcGVzIjpbXX0.fih1QSHVS3Uae-9YGec9WoAI8w_ZXn_7XlkQ2HG-ouZeG7UmSgYU7FRKT5wuufx1ezFJLPMkXuTo6UTS35sqGznqXGrd_yeYyVgr6A417htvwBQLUqVSavXsX8zhXwm-VZPIupMi_vL4hdq53k0l6ppszc0jL44N9mUw3mp8uOTL7HJ340IKI7vOW7N0IVcbSvK4qMlilbKxyoX5fXHovmbrgf7pUQ6pbHk1gnuAK7t_2FOzqUsMvFce1jx3tpzrcrk4NhtSZyA7TovzkVl_skRpMGloCH1aq3U4pQR63BPAK0Uz5gs-Kwm6C7pWPVVWbGGmR6uxozWClRbJHyKmXw";
+    "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiJ5RTM0bUY1eTh1YVRrY0Rwb3BIV2labldHb1lKWDVVZnc1OXZ0RkRwT0pVNzh1VzV1ciIsImp0aSI6IjQ0ZDAyYTQwZWViNzNjNzUxYWQwNjA3OGU0NzBjY2IxZDEyYmVkZGM5NmVkNmUwYjcyNGU5MTQwNzNjMDU2Y2YzMzBmMGM2NjZkZjZlY2VjIiwiaWF0IjoxNjY3OTk5OTE4LCJuYmYiOjE2Njc5OTk5MTgsImV4cCI6MTY2ODAwMzUxOCwic3ViIjoiIiwic2NvcGVzIjpbXX0.l0quPGyeCigpz11z3IG3yUNpaTBcB3wBSsBeU8x9WLbP0OmjhgxfGPSDcI_LrNxaIS15ZpXJSE1piUuLG8nzneKRTAjjFXYGPtlDbcVsrRqnVnXy_N05FQMhyv62JRWqqQsHfaYc3N9QVoTLl0_mnfKAD-9q10yvpz3KbuA89e9nREm6wuKnMfMQS4l6ySikhRoZ1QnRPIC-ikAOkRQ6FJjALPfAG9SrXXPDTPVgb6o82V84pyV7e9-VSPgwfr2dhxbLH9CM9psSixxx2W3LWXzE2ItEtW0jO4WTp7T7b2wdy8uCAyhVFm_jqvC7g9jQE5PAHo7uDDXxrKZSryrkhg";
+
+  //const bearer = "Bearer " + accessToken.token;
   const bearer = "Bearer " + token;
 
   const url = "https://api.petfinder.com/v2/types";
@@ -17,7 +23,9 @@ const Adopt = () => {
   const [type, setType] = useState("");
   const [types, setTypes] = useState([]);
   useEffect(() => {
-    console.log("useEffect: Types");
+    //const url = "https://api.petfinder.com/v2/types";
+    //console.log("useEffect: Types");
+
     fetch(url, {
       headers: {
         Authorization: bearer,
@@ -28,6 +36,7 @@ const Adopt = () => {
         // build a new array that will contain all the names from JSON.
         var typesArray = [];
         var length = data.types.length;
+        //console.log(cats, children, dogs);
         for (var i = 0; i < length; i++) {
           //console.log(data.types[i].name);
           typesArray.push(data.types[i].name);
@@ -36,19 +45,21 @@ const Adopt = () => {
         setTypes(typesArray);
       })
       .catch((error) => {
-        console.error("Error:", error);
+        //console.error("Error:", error);
       });
   }, []);
 
   const [breed, setBreed] = useState("");
   const [breeds, setBreeds] = useState([]);
   useEffect(() => {
-    console.log("useEffect: Breeds");
+    //console.log("useEffect: Breeds");
     // for each type, get its breeds:
-    //console.log("type: " + type);
+    //console.log("type: ");
+    //console.log(type);
     if (type == "") return;
     var breedsUrl = url + "/" + type + "/breeds";
-    //console.log("breedsUrl: " + breedsUrl);
+    //console.log("breedsUrl: " );
+    //console.log(breedsUrl);
 
     fetch(breedsUrl, {
       headers: {
@@ -63,7 +74,8 @@ const Adopt = () => {
           //console.log(data.breeds[i].name);
           breedsArray.push(data.breeds[i].name);
         }
-        //console.log("breedsArray:" + breedsArray);
+        //console.log("breedsArray:" );
+        //console.log(breedsArray);
         setBreeds(breedsArray);
       });
   }, [type]);
@@ -71,7 +83,7 @@ const Adopt = () => {
   const [gender, setGender] = useState("");
   const [genders, setGenders] = useState([]);
   useEffect(() => {
-    console.log("useEffect: Genders");
+    //console.log("useEffect: Genders");
     var gendersArray = ["Female", "Male", "Unknown"];
     setGenders(gendersArray);
   }, []);
@@ -79,7 +91,7 @@ const Adopt = () => {
   const [size, setSize] = useState("");
   const [sizes, setSizes] = useState([]);
   useEffect(() => {
-    console.log("useEffect: Sizes");
+    //console.log("useEffect: Sizes");
     var sizesArray = ["Small", "Medium", "Large", "XLarge"];
     setSizes(sizesArray);
   }, []);
@@ -87,7 +99,7 @@ const Adopt = () => {
   const [age, setAge] = useState("");
   const [ages, setAges] = useState([]);
   useEffect(() => {
-    console.log("useEffect: Ages");
+    //console.log("useEffect: Ages");
     var agesArray = ["Baby", "Young", "Adult", "Senior"];
     setAges(agesArray);
   }, []);
@@ -95,12 +107,14 @@ const Adopt = () => {
   const [color, setColor] = useState("");
   const [colors, setColors] = useState([]);
   useEffect(() => {
-    console.log("useEffect: Colors");
+    //console.log("useEffect: Colors");
     // for each type, get its colors:
-    //console.log("type: " + type);
+    //console.log("type: ");
+    //console.log(type);
     if (type == "") return;
     var typeUrl = url + "/" + type;
-    //console.log("typeUrl: " + typeUrl);
+    //console.log("typeUrl: ");
+    //console.log(typeUrl);
 
     fetch(typeUrl, {
       headers: {
@@ -110,14 +124,21 @@ const Adopt = () => {
       .then((res) => res.json())
       .then((data) => {
         var colorsArray = data.type.colors;
-        //console.log("colorsArray: " + colorsArray);
+        //console.log("colorsArray: " );
+        //console.log(colorsArray);
         setColors(colorsArray);
       });
   }, [type]);
 
-  const [casetval, setCasetval] = useState(false);
+  //environment: data.animal.environment,
 
   const [click, handleClick] = useState(false);
+
+  const [isChecked, setIsChecked] = useState(false);
+
+  const handleChange = () => {
+    setIsChecked(!isChecked);
+  };
 
   return (
     <div className="adopt-container">
@@ -126,7 +147,9 @@ const Adopt = () => {
           <div className="adopt-inner">
             <img style={({ height: 1 }, { padding: 10 })} src={logo} />
             <h2>
-              <Link to="/">Back</Link>
+              <Link to="/" style={{ textDecoration: "none" }}>
+                Back
+              </Link>
             </h2>
           </div>
 
@@ -187,15 +210,30 @@ const Adopt = () => {
             <h3 className="checklist">
               <input
                 type="checkbox"
-                checked={casetval}
-                onChange={() => setCasetval(!casetval)}
+                checked={isChecked}
+                onChange={handleChange}
+
+                // onChange={(e) => setChildren(e.target.value)}
+                // value={isChecked}
               />
               <label>Children</label>
 
-              <input type="checkbox" />
+              <input
+                type="checkbox"
+                // checked={isChecked}
+                // onChange={(e) => setDogs(e.target.value)}
+                value={isChecked}
+                onChange={handleChange}
+              />
               <label>Dogs</label>
 
-              <input type="checkbox" />
+              <input
+                type="checkbox"
+                // checked={cats}
+                // onChange={(e) => setCats(e.target.value)}
+                value={isChecked}
+                onChange={handleChange}
+              />
               <label>Cats</label>
             </h3>
           </div>
@@ -221,8 +259,17 @@ const Adopt = () => {
             size={size}
             age={age}
             color={color}
+            visible={visible}
           />
         ) : null}
+      </div>
+
+      <div className="results">
+        <div className="button">
+          <button className="showMore-btn" onClick={showMoreCards}>
+            Load more
+          </button>
+        </div>
       </div>
     </div>
   );

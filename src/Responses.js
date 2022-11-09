@@ -1,26 +1,34 @@
-import React, { useState } from "react";
-import Container from "react-bootstrap/Container";
-import Adoption from "./Adoption";
+import React from "react";
 import List from "./List";
+import { useNavigate } from "react-router-dom";
 
-function Responses() {
-  const [list, setList] = useState([]);
-
-  const addToList = (form) => {
-    const nr = list.length + 1;
-    form.id = nr; //  Add id
-    setList([...list, form]);
+const Responses = (props) => {
+  const stil = {
+    h2: { textAlign: "center" },
   };
-  console.log(list);
+  let navigate = useNavigate();
+
   return (
     <>
-      <Container>
-        <h1 style={{ textAlign: "center" }}>List of responses</h1>
-      </Container>
-      <Adoption transmit={addToList} />
-      <List list={list} />
+      <h2 className="mt-4" style={stil.h2}>
+        List of Responses
+      </h2>
+      <hr />
+      <List listResponses={props.listResponses} />
+      <hr />
+
+      <div className="button">
+        <button
+          className="backHome"
+          onClick={() => {
+            navigate("/adopt");
+          }}
+        >
+          Back to Adopt page
+        </button>
+      </div>
     </>
   );
-}
+};
 
 export default Responses;
