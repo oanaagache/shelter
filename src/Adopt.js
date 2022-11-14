@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./Adopt.css";
 import Dropdown from "./Dropdown";
-import logo from "./images/image4.svg";
+//import logo from "./images/image4.svg";
 import { Link } from "react-router-dom";
 import Cards from "./Cards";
 
@@ -130,7 +130,7 @@ const Adopt = () => {
       <div className="adopt-header">
         <div className="adopt-content">
           <div className="adopt-inner">
-            <img style={({ height: 1 }, { padding: 10 })} src={logo} />
+            {/* <img style={({ height: 1 }, { padding: 10 })} src={logo} /> */}
             <h2>
               <Link to="/">Back</Link>
             </h2>
