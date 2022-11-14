@@ -4,20 +4,27 @@ import Dropdown from "./Dropdown";
 //import logo from "./images/image4.svg";
 import { Link } from "react-router-dom";
 import Cards from "./Cards";
+import GetToken from "./GetToken";
 
 const Adopt = () => {
-  //var token = GetToken();
-  //console.log("Adopt.js: token: " + token);
-  const token =
-    "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiJ5RTM0bUY1eTh1YVRrY0Rwb3BIV2labldHb1lKWDVVZnc1OXZ0RkRwT0pVNzh1VzV1ciIsImp0aSI6ImVmYmJmOWVkYTczN2ZmZGE2N2E3NmMwZWQ0YzhkYWRiN2Q5OGI5MTgwOWQyNmJiZjkzYmNkM2IzYzg0OWFhYjRlNTgyYWJkMDBhMjFhM2JlIiwiaWF0IjoxNjY4MDAyNDM0LCJuYmYiOjE2NjgwMDI0MzQsImV4cCI6MTY2ODAwNjAzNCwic3ViIjoiIiwic2NvcGVzIjpbXX0.viY0fEUerf010vrIoVUijm2CF8Yo0-NVAwQ9MPnUdqDvC1GYB5f6-q_F1rTuRUHrsMn5r4pAuQSzk6mgl9xFuqYIcgALLhpG1bIkywnPt6GzuW6rTa4Y9GW7YOg3dSB9WB33E8S6aDXwxh1lVjpSG1LkryQ_1lQpTyB1vT40_Ts046THEIvRTlmqcIt-UZOyg78QGm0OMLbtS6svWyAs8tE0A2qKC0cwIq1LFGguq9m491vRFlgVTMUN54X-L9KU-1iCQEPTAA8aWrH2Mbzdee6XhdJS_pBT0EsvLUdPdm6TFGPj2gJOx1q8IK_oEvub3H13WdbQp8SmjPKQPVeglQ";
+  console.log("Adopt.js/ Get token:");
+  var token = GetToken();
+  console.log("Adopt.js/ token:");
+  console.log(token);
+  // const token =
+  //   "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiJ5RTM0bUY1eTh1YVRrY0Rwb3BIV2labldHb1lKWDVVZnc1OXZ0RkRwT0pVNzh1VzV1ciIsImp0aSI6ImVmYmJmOWVkYTczN2ZmZGE2N2E3NmMwZWQ0YzhkYWRiN2Q5OGI5MTgwOWQyNmJiZjkzYmNkM2IzYzg0OWFhYjRlNTgyYWJkMDBhMjFhM2JlIiwiaWF0IjoxNjY4MDAyNDM0LCJuYmYiOjE2NjgwMDI0MzQsImV4cCI6MTY2ODAwNjAzNCwic3ViIjoiIiwic2NvcGVzIjpbXX0.viY0fEUerf010vrIoVUijm2CF8Yo0-NVAwQ9MPnUdqDvC1GYB5f6-q_F1rTuRUHrsMn5r4pAuQSzk6mgl9xFuqYIcgALLhpG1bIkywnPt6GzuW6rTa4Y9GW7YOg3dSB9WB33E8S6aDXwxh1lVjpSG1LkryQ_1lQpTyB1vT40_Ts046THEIvRTlmqcIt-UZOyg78QGm0OMLbtS6svWyAs8tE0A2qKC0cwIq1LFGguq9m491vRFlgVTMUN54X-L9KU-1iCQEPTAA8aWrH2Mbzdee6XhdJS_pBT0EsvLUdPdm6TFGPj2gJOx1q8IK_oEvub3H13WdbQp8SmjPKQPVeglQ";
   const bearer = "Bearer " + token;
+  console.log("bearer=");
+  console.log(bearer);
+  console.log("token:");
+  console.log(token);
 
   const url = "https://api.petfinder.com/v2/types";
 
   const [type, setType] = useState("");
   const [types, setTypes] = useState([]);
   useEffect(() => {
-    console.log("useEffect: Types");
+    //console.log("useEffect: Types");
     fetch(url, {
       headers: {
         Authorization: bearer,
@@ -43,7 +50,7 @@ const Adopt = () => {
   const [breed, setBreed] = useState("");
   const [breeds, setBreeds] = useState([]);
   useEffect(() => {
-    console.log("useEffect: Breeds");
+    //console.log("useEffect: Breeds");
     // for each type, get its breeds:
     //console.log("type: ");
     //console.log(type);
@@ -74,7 +81,7 @@ const Adopt = () => {
   const [gender, setGender] = useState("");
   const [genders, setGenders] = useState([]);
   useEffect(() => {
-    console.log("useEffect: Genders");
+    //console.log("useEffect: Genders");
     var gendersArray = ["Female", "Male", "Unknown"];
     setGenders(gendersArray);
   }, []);
@@ -82,7 +89,7 @@ const Adopt = () => {
   const [size, setSize] = useState("");
   const [sizes, setSizes] = useState([]);
   useEffect(() => {
-    console.log("useEffect: Sizes");
+    //console.log("useEffect: Sizes");
     var sizesArray = ["Small", "Medium", "Large", "XLarge"];
     setSizes(sizesArray);
   }, []);
@@ -90,7 +97,7 @@ const Adopt = () => {
   const [age, setAge] = useState("");
   const [ages, setAges] = useState([]);
   useEffect(() => {
-    console.log("useEffect: Ages");
+    //console.log("useEffect: Ages");
     var agesArray = ["Baby", "Young", "Adult", "Senior"];
     setAges(agesArray);
   }, []);
@@ -98,7 +105,7 @@ const Adopt = () => {
   const [color, setColor] = useState("");
   const [colors, setColors] = useState([]);
   useEffect(() => {
-    console.log("useEffect: Colors");
+    //console.log("useEffect: Colors");
     // for each type, get its colors:
     //console.log("type: ");
     //console.log(type);
