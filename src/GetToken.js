@@ -39,7 +39,7 @@ export default function GetToken() {
       });
   }, []);
 
-  console.log("GetToken.js/ return token: ");
+  console.log("GetToken.js/ Return token: ");
   console.log(token);
   return { token };
 }
