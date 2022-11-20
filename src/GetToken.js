@@ -15,7 +15,6 @@ export default function GetToken() {
   const [token, setToken] = useState("");
 
   useEffect(() => {
-    console.log("GetToken.js/ useEffect one time:");
     fetch(oauthUrl, {
       method: "POST",
       headers: {
@@ -34,8 +33,8 @@ export default function GetToken() {
         return response.json();
       })
       .then((data) => {
-        console.log("GetToken.js/ Success:");
-        console.log(data);
+        //console.log("GetToken.js/ Success:");
+        //console.log(data);
         var token = data.access_token;
         console.log("GetToken.js/ Token: ");
         console.log(token);

@@ -32,6 +32,7 @@ function App() {
     localStorage.setItem("shelter", JSON.stringify(listResponses));
   }, [listResponses]);
 
+  //console.log(listResponses);
   var newArray = listResponses.filter((listResponses) => {
     return listResponses.lastName !== "Neacsu";
   });

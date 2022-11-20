@@ -7,17 +7,15 @@ import Cards from "./Cards";
 import GetToken from "./GetToken";
 
 const Adopt = () => {
-  console.log("Adopt.js/ Get token:");
+  console.log("1.Adopt.js/ Get token:");
   var token = GetToken();
-  console.log("Adopt.js/ token:");
+
+  console.log("2.Adopt.js/ token:");
   console.log(token);
+
   // const token =
   //   "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiJ5RTM0bUY1eTh1YVRrY0Rwb3BIV2labldHb1lKWDVVZnc1OXZ0RkRwT0pVNzh1VzV1ciIsImp0aSI6ImVmYmJmOWVkYTczN2ZmZGE2N2E3NmMwZWQ0YzhkYWRiN2Q5OGI5MTgwOWQyNmJiZjkzYmNkM2IzYzg0OWFhYjRlNTgyYWJkMDBhMjFhM2JlIiwiaWF0IjoxNjY4MDAyNDM0LCJuYmYiOjE2NjgwMDI0MzQsImV4cCI6MTY2ODAwNjAzNCwic3ViIjoiIiwic2NvcGVzIjpbXX0.viY0fEUerf010vrIoVUijm2CF8Yo0-NVAwQ9MPnUdqDvC1GYB5f6-q_F1rTuRUHrsMn5r4pAuQSzk6mgl9xFuqYIcgALLhpG1bIkywnPt6GzuW6rTa4Y9GW7YOg3dSB9WB33E8S6aDXwxh1lVjpSG1LkryQ_1lQpTyB1vT40_Ts046THEIvRTlmqcIt-UZOyg78QGm0OMLbtS6svWyAs8tE0A2qKC0cwIq1LFGguq9m491vRFlgVTMUN54X-L9KU-1iCQEPTAA8aWrH2Mbzdee6XhdJS_pBT0EsvLUdPdm6TFGPj2gJOx1q8IK_oEvub3H13WdbQp8SmjPKQPVeglQ";
   const bearer = "Bearer " + token;
-  console.log("bearer=");
-  console.log(bearer);
-  console.log("token:");
-  console.log(token);
 
   const url = "https://api.petfinder.com/v2/types";
 
@@ -25,6 +23,7 @@ const Adopt = () => {
   const [types, setTypes] = useState([]);
   useEffect(() => {
     //console.log("useEffect: Types");
+
     fetch(url, {
       headers: {
         Authorization: bearer,
