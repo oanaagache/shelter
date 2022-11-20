@@ -9,7 +9,7 @@ import GetToken from "./GetToken";
 const Adopt = () => {
   console.log("Adopt.js/ Get token:");
 
-  var token = GetToken();
+  const token = GetToken();
   //console.log(token);
 
   // const token =

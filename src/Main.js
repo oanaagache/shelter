@@ -7,7 +7,7 @@ const Main = () => {
   let navigate = useNavigate();
 
   return (
-    <container>
+    <>
       <div className="main">
         <div className="main-image">
           <img src={logo3} />
@@ -38,7 +38,7 @@ const Main = () => {
           </div>
         </div>
       </div>
-    </container>
+    </>
   );
 };
 
