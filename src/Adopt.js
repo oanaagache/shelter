@@ -7,14 +7,14 @@ import Cards from "./Cards";
 import GetToken from "./GetToken";
 
 const Adopt = () => {
-  console.log("1.Adopt.js/ Get token:");
-  var token = GetToken();
+  console.log("Adopt.js/ Get token:");
 
-  console.log("2.Adopt.js/ token:");
-  console.log(token);
+  var token = GetToken();
+  //console.log(token);
 
   // const token =
-  //   "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiJ5RTM0bUY1eTh1YVRrY0Rwb3BIV2labldHb1lKWDVVZnc1OXZ0RkRwT0pVNzh1VzV1ciIsImp0aSI6ImVmYmJmOWVkYTczN2ZmZGE2N2E3NmMwZWQ0YzhkYWRiN2Q5OGI5MTgwOWQyNmJiZjkzYmNkM2IzYzg0OWFhYjRlNTgyYWJkMDBhMjFhM2JlIiwiaWF0IjoxNjY4MDAyNDM0LCJuYmYiOjE2NjgwMDI0MzQsImV4cCI6MTY2ODAwNjAzNCwic3ViIjoiIiwic2NvcGVzIjpbXX0.viY0fEUerf010vrIoVUijm2CF8Yo0-NVAwQ9MPnUdqDvC1GYB5f6-q_F1rTuRUHrsMn5r4pAuQSzk6mgl9xFuqYIcgALLhpG1bIkywnPt6GzuW6rTa4Y9GW7YOg3dSB9WB33E8S6aDXwxh1lVjpSG1LkryQ_1lQpTyB1vT40_Ts046THEIvRTlmqcIt-UZOyg78QGm0OMLbtS6svWyAs8tE0A2qKC0cwIq1LFGguq9m491vRFlgVTMUN54X-L9KU-1iCQEPTAA8aWrH2Mbzdee6XhdJS_pBT0EsvLUdPdm6TFGPj2gJOx1q8IK_oEvub3H13WdbQp8SmjPKQPVeglQ";
+  //   "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiJ5RTM0bUY1eTh1YVRrY0Rwb3BIV2labldHb1lKWDVVZnc1OXZ0RkRwT0pVNzh1VzV1ciIsImp0aSI6IjE1M2UwYjA3OWFiZTA3MmM1MTgxZjFiMzQ0ZTg3MWFmNDI4NzU2MzExMTIyNzc0NmZmYjhjNzk5ZDA1YWM0ZmQ4NWY4YzhhOTkzNWM5ZWEzIiwiaWF0IjoxNjY4OTUwMTA2LCJuYmYiOjE2Njg5NTAxMDYsImV4cCI6MTY2ODk1MzcwNiwic3ViIjoiIiwic2NvcGVzIjpbXX0.CQPVCwOA0fpnI7itglQBekgMyBdB_qpE-uoU1bKvZGHlKckmtBG5biUKTzd0NwdoTZHIby37MfMf01pt46eohfxJnvU-bq930APxket4UiUVRKCfQcVEkLmDRilFX7fxy6o2_W8uckEezgFmhNMqJr4bVgwgXUXA_0U-KE1THFxsj5fYE-3Q3QrrNe5fL7PI-DDP8Jy9zVsc7L-1Rm3dj-iBPD1YyP9P4zzgKiyh79jtYIsbGUQEUhMvw227jx6ryvfw2uH5bGBB-UnTnq9C4ypq428eBQBTExYPMA0GNBdErsp2BE08FT5cvanh6mkeFrPoLh9dXRSHNd0cI7eW2Q";
+
   const bearer = "Bearer " + token;
 
   const url = "https://api.petfinder.com/v2/types";

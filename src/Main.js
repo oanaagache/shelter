@@ -1,11 +1,11 @@
 import React from "react";
 import logo3 from "./others/images/image3.png";
 import "./Main.css";
-
 import { useNavigate } from "react-router-dom";
 
 const Main = () => {
   let navigate = useNavigate();
+
   return (
     <container>
       <div className="main">
