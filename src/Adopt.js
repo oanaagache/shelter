@@ -3,135 +3,178 @@ import "./Adopt.css";
 import Dropdown from "./Dropdown";
 //import logo from "./images/image4.svg";
 import { Link } from "react-router-dom";
-import Cards from "./Cards";
-import GetToken from "./GetToken";
+import { Client } from "@petfinder/petfinder-js";
+import Card from "./Card";
 
 const Adopt = () => {
-  console.log("Adopt.js/ Get token:");
-
-  var token = GetToken();
-  //console.log(token);
-
-  // const token =
-  //   "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiJ5RTM0bUY1eTh1YVRrY0Rwb3BIV2labldHb1lKWDVVZnc1OXZ0RkRwT0pVNzh1VzV1ciIsImp0aSI6IjE1M2UwYjA3OWFiZTA3MmM1MTgxZjFiMzQ0ZTg3MWFmNDI4NzU2MzExMTIyNzc0NmZmYjhjNzk5ZDA1YWM0ZmQ4NWY4YzhhOTkzNWM5ZWEzIiwiaWF0IjoxNjY4OTUwMTA2LCJuYmYiOjE2Njg5NTAxMDYsImV4cCI6MTY2ODk1MzcwNiwic3ViIjoiIiwic2NvcGVzIjpbXX0.CQPVCwOA0fpnI7itglQBekgMyBdB_qpE-uoU1bKvZGHlKckmtBG5biUKTzd0NwdoTZHIby37MfMf01pt46eohfxJnvU-bq930APxket4UiUVRKCfQcVEkLmDRilFX7fxy6o2_W8uckEezgFmhNMqJr4bVgwgXUXA_0U-KE1THFxsj5fYE-3Q3QrrNe5fL7PI-DDP8Jy9zVsc7L-1Rm3dj-iBPD1YyP9P4zzgKiyh79jtYIsbGUQEUhMvw227jx6ryvfw2uH5bGBB-UnTnq9C4ypq428eBQBTExYPMA0GNBdErsp2BE08FT5cvanh6mkeFrPoLh9dXRSHNd0cI7eW2Q";
-
-  const bearer = "Bearer " + token;
-  console.log("bearer:");
-  console.log(bearer);
-
-  const url = "https://api.petfinder.com/v2/types";
+  const client = new Client({
+    apiKey: "yE34mF5y8uaTkcDpopHWiZnWGoYJX5Ufw59vtFDpOJU78uW5ur",
+    secret: "HMpwZ6VMhZwUWXYpb9nVmliqdElYYT96mezpupJk",
+  });
 
   const [type, setType] = useState("");
   const [types, setTypes] = useState([]);
-  useEffect(() => {
-    console.log("useEffect: Types");
-
-    fetch(url, {
-      headers: {
-        Authorization: bearer,
-      },
-    })
-      .then((res) => res.json())
-      .then((data) => {
-        // build a new array that will contain all the names from JSON.
-        var typesArray = [];
-        var length = data.types.length;
-        for (var i = 0; i < length; i++) {
-          //console.log(data.types[i].name);
-          typesArray.push(data.types[i].name);
-        }
-        //console.log("typesArray:" + typesArray);
-        setTypes(typesArray);
-      })
-      .catch((error) => {
-        console.error("Error:", error);
-      });
-  }, []);
 
   const [breed, setBreed] = useState("");
   const [breeds, setBreeds] = useState([]);
-  useEffect(() => {
-    //console.log("useEffect: Breeds");
-    // for each type, get its breeds:
-    //console.log("type: ");
-    //console.log(type);
-    if (type == "") return;
-    var breedsUrl = url + "/" + type + "/breeds";
-    //console.log("breedsUrl: " );
-    //console.log(breedsUrl);
-
-    fetch(breedsUrl, {
-      headers: {
-        Authorization: bearer,
-      },
-    })
-      .then((res) => res.json())
-      .then((data) => {
-        var breedsArray = [];
-        var length = data.breeds.length;
-        for (var i = 0; i < length; i++) {
-          //console.log(data.breeds[i].name);
-          breedsArray.push(data.breeds[i].name);
-        }
-        //console.log("breedsArray:" );
-        //console.log(breedsArray);
-        setBreeds(breedsArray);
-      });
-  }, [type]);
 
   const [gender, setGender] = useState("");
   const [genders, setGenders] = useState([]);
-  useEffect(() => {
-    //console.log("useEffect: Genders");
-    var gendersArray = ["Female", "Male", "Unknown"];
-    setGenders(gendersArray);
-  }, []);
 
   const [size, setSize] = useState("");
   const [sizes, setSizes] = useState([]);
+
+  const [age, setAge] = useState("");
+  const [ages, setAges] = useState([]);
+
+  const [color, setColor] = useState("");
+  const [colors, setColors] = useState([]);
+
+  const [check, setCheck] = useState("");
+  const [checks, setChecks] = useState([]);
+
+  //useEffect for type
   useEffect(() => {
-    //console.log("useEffect: Sizes");
+    var typesArray = [
+      "Dog",
+      "Cat",
+      "Rabbits",
+      "Small and Furry",
+      "Scales, Fins and Other",
+      "Birds",
+      "Horses",
+      "Barnyard",
+    ];
+    setTypes(typesArray);
+  }, []);
+
+  // useEffect(() => {
+  //   client.animalData.types().then((response) => {
+  //     var typesArray = [];
+  //     var length = response.data.types.length;
+  //     for (var i = 0; i < length; i++) {
+  //       //console.log(response.data.types[i].name);
+  //       typesArray.push(response.data.types[i].name);
+  //     }
+  //     //console.log("typesArray:");
+  //     //console.log(typesArray);
+  //     setTypes(typesArray);
+  //   });
+  // }, []);
+
+  //useEffect for breed dog
+  useEffect(() => {
+    client.animalData.breeds("Dog").then((response) => {
+      //console.log(response.data.breeds);
+      var breedsArray = [];
+      var length = response.data.breeds.length;
+      for (var i = 0; i < length; i++) {
+        //console.log(response.data.breeds[i].name);
+        breedsArray.push(response.data.breeds[i].name);
+      }
+      //console.log("Dog breedsArray:");
+      //console.log(breedsArray);
+      setBreeds(breedsArray);
+    });
+  }, []);
+
+  //useEffect for breed cat
+  useEffect(() => {
+    client.animalData.breeds("Cat").then((response) => {
+      //console.log(response.data.breeds);
+      var breedsArray = [];
+      var length = response.data.breeds.length;
+      for (var i = 0; i < length; i++) {
+        //console.log(response.data.breeds[i].name);
+        breedsArray.push(response.data.breeds[i].name);
+      }
+      //console.log(" Cat breedsArray:");
+      //console.log(breedsArray);
+      setBreeds(breedsArray);
+    });
+  }, []);
+
+  //useEffect for gender
+  useEffect(() => {
+    var gendersArray = ["Female", "Male"];
+    setGenders(gendersArray);
+  }, []);
+
+  //useEffect for size
+  useEffect(() => {
     var sizesArray = ["Small", "Medium", "Large", "XLarge"];
     setSizes(sizesArray);
   }, []);
 
-  const [age, setAge] = useState("");
-  const [ages, setAges] = useState([]);
+  //useEffect for age
   useEffect(() => {
-    //console.log("useEffect: Ages");
     var agesArray = ["Baby", "Young", "Adult", "Senior"];
     setAges(agesArray);
   }, []);
 
-  const [color, setColor] = useState("");
-  const [colors, setColors] = useState([]);
+  //useEffect for color
   useEffect(() => {
-    //console.log("useEffect: Colors");
-    // for each type, get its colors:
-    //console.log("type: ");
-    //console.log(type);
-    if (type == "") return;
-    var typeUrl = url + "/" + type;
-    //console.log("typeUrl: ");
-    //console.log(typeUrl);
+    client.animalData.types().then((response) => {
+      //console.log(response.data.breeds);
+      var colorsArray = [];
+      var length = response.data.types.length;
+      for (var i = 0; i < length; i++) {
+        //console.log(response.data.breeds[i].name);
+        colorsArray.push(response.data.types[i].colors[i]);
+      }
+      //console.log("colorsArray:");
+      //console.log(colorsArray);
+      setColors(colorsArray);
+    });
+  }, []);
 
-    fetch(typeUrl, {
-      headers: {
-        Authorization: bearer,
-      },
-    })
-      .then((res) => res.json())
-      .then((data) => {
-        var colorsArray = data.type.colors;
-        //console.log("colorsArray: " );
-        //console.log(colorsArray);
-        setColors(colorsArray);
-      });
-  }, [type]);
+  //useEffect for check
+  useEffect(() => {
+    var checksArray = ["Children", "Dogs", "Cats"];
+    setChecks(checksArray);
+  }, []);
 
-  const [casetval, setCasetval] = useState(false);
-
+  //button apply filters
   const [click, handleClick] = useState(false);
+
+  const [name, setName] = useState([]);
+
+  useEffect(() => {
+    client.animal.search().then((response) => {
+      var animalsArray = [];
+      console.log("animalsArray: ");
+      console.log(animalsArray);
+
+      console.log("response.data.animals: ");
+      console.log(response.data.animals);
+
+      var length = response.data.animals.length;
+      // console.log("Number of animals found in Cards: ");
+      // console.log(length);
+
+      for (var i = 0; i < length; i++) {
+        var animal = {
+          // img: response.data.animals[i].photos[0],
+          id: response.data.animals[i].id,
+          name: response.data.animals[i].name,
+          breed: response.data.animals[i].breeds["primary"],
+          gender: response.data.animals[i].gender,
+          size: response.data.animals[i].size,
+          age: response.data.animals[i].age,
+          colors: response.data.animals[i].colors,
+          id: response.data.animals[i].id,
+          environment: response.data.animals[i].environment,
+          attributes: response.data.animals[i].attributes,
+        };
+        console.log("animal:");
+        console.log(animal);
+        animalsArray.push(animal);
+      }
+      setName(animalsArray);
+      console.log("animalsArray in Cards:");
+      console.log(animalsArray);
+    });
+  }, []);
 
   return (
     <div className="adopt-container">
@@ -196,26 +239,13 @@ const Adopt = () => {
             />
           </div>
 
-          <div className="check">
-            <h2>Must be good with:</h2>
-            <h3 className="checklist">
-              <input
-                type="checkbox"
-                checked={casetval}
-                onChange={() => setCasetval(!casetval)}
-              />
-              <label>Children</label>
-
-              <input type="checkbox" />
-              <label>Dogs</label>
-
-              <input type="checkbox" />
-              <label>Cats</label>
-            </h3>
-          </div>
-
           <div className="drop7">
-            <h2></h2>
+            <h2>Must be good with:</h2>
+            <Dropdown
+              selected={check}
+              setSelected={setCheck}
+              options={checks}
+            />
           </div>
         </div>
       </div>
@@ -227,16 +257,15 @@ const Adopt = () => {
       </div>
 
       <div className="cards">
-        {click ? (
-          <Cards
-            type={type}
-            breed={breed}
-            gender={gender}
-            size={size}
-            age={age}
-            color={color}
-          />
-        ) : null}
+        {click
+          ? name.map((item, id) => {
+              return (
+                <>
+                  <Card key={id} item={item} />
+                </>
+              );
+            })
+          : null}
       </div>
     </div>
   );
