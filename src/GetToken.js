@@ -21,7 +21,7 @@ export default function GetToken() {
       .then((response) => {
         if (response.ok) {
           // console.log("GetToken.js/ Status code: ");
-          // console.log(response.status);
+          console.log(response.status);
         } else {
           console.log("GetToken.js/ Status code: ");
           console.log(response.status);

@@ -10,19 +10,21 @@ const Adopt = () => {
   console.log("Adopt.js/ Get token:");
 
   var token = GetToken();
-  //console.log(token);
+  console.log(token);
 
   // const token =
   //   "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiJ5RTM0bUY1eTh1YVRrY0Rwb3BIV2labldHb1lKWDVVZnc1OXZ0RkRwT0pVNzh1VzV1ciIsImp0aSI6IjE1M2UwYjA3OWFiZTA3MmM1MTgxZjFiMzQ0ZTg3MWFmNDI4NzU2MzExMTIyNzc0NmZmYjhjNzk5ZDA1YWM0ZmQ4NWY4YzhhOTkzNWM5ZWEzIiwiaWF0IjoxNjY4OTUwMTA2LCJuYmYiOjE2Njg5NTAxMDYsImV4cCI6MTY2ODk1MzcwNiwic3ViIjoiIiwic2NvcGVzIjpbXX0.CQPVCwOA0fpnI7itglQBekgMyBdB_qpE-uoU1bKvZGHlKckmtBG5biUKTzd0NwdoTZHIby37MfMf01pt46eohfxJnvU-bq930APxket4UiUVRKCfQcVEkLmDRilFX7fxy6o2_W8uckEezgFmhNMqJr4bVgwgXUXA_0U-KE1THFxsj5fYE-3Q3QrrNe5fL7PI-DDP8Jy9zVsc7L-1Rm3dj-iBPD1YyP9P4zzgKiyh79jtYIsbGUQEUhMvw227jx6ryvfw2uH5bGBB-UnTnq9C4ypq428eBQBTExYPMA0GNBdErsp2BE08FT5cvanh6mkeFrPoLh9dXRSHNd0cI7eW2Q";
 
   const bearer = "Bearer " + token;
+  console.log("bearer:");
+  console.log(bearer);
 
   const url = "https://api.petfinder.com/v2/types";
 
   const [type, setType] = useState("");
   const [types, setTypes] = useState([]);
   useEffect(() => {
-    //console.log("useEffect: Types");
+    console.log("useEffect: Types");
 
     fetch(url, {
       headers: {
