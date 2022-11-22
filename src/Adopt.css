@@ -41,7 +41,6 @@ body {
 
 .drop {
   display: flex;
-  flex-wrap: wrap;
 }
 
 .drop1,
@@ -53,8 +52,8 @@ body {
 .check,
 .drop7 {
   height: 50%;
-  flex: 25%;
-  padding: 20px 40px 10px 0;
+  flex: 14%;
+  padding: 20px 10px 10px 0;
 }
 
 .checklist {
@@ -66,7 +65,7 @@ body {
 }
 
 .dropdown {
-  width: 100%;
+  width: 60%;
   margin-top: 10px;
   position: relative;
 }

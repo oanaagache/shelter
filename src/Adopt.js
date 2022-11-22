@@ -34,33 +34,33 @@ const Adopt = () => {
   const [checks, setChecks] = useState([]);
 
   //useEffect for type
-  useEffect(() => {
-    var typesArray = [
-      "Dog",
-      "Cat",
-      "Rabbits",
-      "Small and Furry",
-      "Scales, Fins and Other",
-      "Birds",
-      "Horses",
-      "Barnyard",
-    ];
-    setTypes(typesArray);
-  }, []);
-
-  // useEffect(() => {
-  //   client.animalData.types().then((response) => {
-  //     var typesArray = [];
-  //     var length = response.data.types.length;
-  //     for (var i = 0; i < length; i++) {
-  //       //console.log(response.data.types[i].name);
-  //       typesArray.push(response.data.types[i].name);
-  //     }
-  //     //console.log("typesArray:");
-  //     //console.log(typesArray);
+  //  useEffect(() => {
+  //     var typesArray = [
+  //       "Dog",
+  //       "Cat",
+  //       "Rabbits",
+  //       "Small and Furry",
+  //       "Scales, Fins and Other",
+  //       "Birds",
+  //       "Horses",
+  //       "Barnyard",
+  //     ];
   //     setTypes(typesArray);
-  //   });
-  // }, []);
+  //   }, []);
+
+  useEffect(() => {
+    client.animalData.types().then((response) => {
+      var typesArray = [];
+      var length = response.data.types.length;
+      for (var i = 0; i < length; i++) {
+        //console.log(response.data.types[i].name);
+        typesArray.push(response.data.types[i].name);
+      }
+      //console.log("typesArray:");
+      //console.log(typesArray);
+      setTypes(typesArray);
+    });
+  }, []);
 
   //useEffect for breed dog
   useEffect(() => {
@@ -76,7 +76,7 @@ const Adopt = () => {
       //console.log(breedsArray);
       setBreeds(breedsArray);
     });
-  }, []);
+  }, [type]);
 
   //useEffect for breed cat
   useEffect(() => {
@@ -100,11 +100,37 @@ const Adopt = () => {
     setGenders(gendersArray);
   }, []);
 
+  // useEffect(() => {
+  //   client.animal.search().then((response) => {
+  //     var gendersArray = [];
+  //     var length = response.data.animals.gender.length;
+  //     for (var i = 0; i < length; i++) {
+  //       gendersArray.push(response.data.animals[i].gender);
+  //     }
+  //     console.log("gendersArray:");
+  //     console.log(gendersArray);
+  //     setGenders(gendersArray);
+  //   });
+  // }, []);
+
   //useEffect for size
   useEffect(() => {
     var sizesArray = ["Small", "Medium", "Large", "XLarge"];
     setSizes(sizesArray);
   }, []);
+
+  // useEffect(() => {
+  //   client.animal.search().then((response) => {
+  //     var sizesArray = [];
+  //     var length = response.data.animals.size;
+  //     for (var i = 0; i < length; i++) {
+  //       sizesArray.push(response.data.animals[i].size);
+  //     }
+  //     console.log("sizesArray:");
+  //     console.log(sizesArray);
+  //     setSizes(sizesArray);
+  //   });
+  // }, []);
 
   //useEffect for age
   useEffect(() => {
@@ -126,7 +152,7 @@ const Adopt = () => {
       //console.log(colorsArray);
       setColors(colorsArray);
     });
-  }, []);
+  }, [type]);
 
   //useEffect for check
   useEffect(() => {
@@ -142,11 +168,11 @@ const Adopt = () => {
   useEffect(() => {
     client.animal.search().then((response) => {
       var animalsArray = [];
-      console.log("animalsArray: ");
-      console.log(animalsArray);
+      //console.log("animalsArray: ");
+      //console.log(animalsArray);
 
-      console.log("response.data.animals: ");
-      console.log(response.data.animals);
+      //console.log("response.data.animals: ");
+      //console.log(response.data.animals);
 
       var length = response.data.animals.length;
       // console.log("Number of animals found in Cards: ");
@@ -154,7 +180,7 @@ const Adopt = () => {
 
       for (var i = 0; i < length; i++) {
         var animal = {
-          // img: response.data.animals[i].photos[0],
+          img: response.data.animals[i].photos[0],
           id: response.data.animals[i].id,
           name: response.data.animals[i].name,
           breed: response.data.animals[i].breeds["primary"],
@@ -165,14 +191,15 @@ const Adopt = () => {
           id: response.data.animals[i].id,
           environment: response.data.animals[i].environment,
           attributes: response.data.animals[i].attributes,
+          description: response.data.animals[i].description,
         };
-        console.log("animal:");
-        console.log(animal);
+        //console.log("animal:");
+        //console.log(animal);
         animalsArray.push(animal);
       }
       setName(animalsArray);
-      console.log("animalsArray in Cards:");
-      console.log(animalsArray);
+      //console.log("animalsArray in Cards:");
+      //console.log(animalsArray);
     });
   }, []);
 
@@ -240,7 +267,7 @@ const Adopt = () => {
           </div>
 
           <div className="drop7">
-            <h2>Must be good with:</h2>
+            <h2>Good with:</h2>
             <Dropdown
               selected={check}
               setSelected={setCheck}
@@ -252,16 +279,16 @@ const Adopt = () => {
 
       <div className="button">
         <button className="filter-btn" onClick={() => handleClick(!click)}>
-          {click == true ? "Reset Filters" : "Apply filters"}
+          {click === true ? "Reset Filters" : "Apply filters"}
         </button>
       </div>
 
       <div className="cards">
         {click
-          ? name.map((item, id) => {
+          ? name.map((item, index) => {
               return (
                 <>
-                  <Card key={id} item={item} />
+                  <Card key={index} item={item} />
                 </>
               );
             })
