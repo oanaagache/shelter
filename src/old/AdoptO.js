@@ -4,9 +4,9 @@ import Dropdown from "./Dropdown";
 //import logo from "./images/image4.svg";
 import { Link } from "react-router-dom";
 import { Client } from "@petfinder/petfinder-js";
-import Card from "./Card";
+import Cards from "./Cards";
 
-const Adopt = () => {
+const AdoptO = () => {
   const client = new Client({
     apiKey: "yE34mF5y8uaTkcDpopHWiZnWGoYJX5Ufw59vtFDpOJU78uW5ur",
     secret: "HMpwZ6VMhZwUWXYpb9nVmliqdElYYT96mezpupJk",
@@ -163,46 +163,6 @@ const Adopt = () => {
   //button apply filters
   const [click, handleClick] = useState(false);
 
-  const [name, setName] = useState([]);
-
-  useEffect(() => {
-    client.animal.search().then((response) => {
-      var animalsArray = [];
-      //console.log("animalsArray: ");
-      //console.log(animalsArray);
-
-      //console.log("response.data.animals: ");
-      //console.log(response.data.animals);
-
-      var length = response.data.animals.length;
-      // console.log("Number of animals found in Cards: ");
-      // console.log(length);
-
-      for (var i = 0; i < length; i++) {
-        var animal = {
-          img: response.data.animals[i].photos[0],
-          id: response.data.animals[i].id,
-          name: response.data.animals[i].name,
-          breed: response.data.animals[i].breeds["primary"],
-          gender: response.data.animals[i].gender,
-          size: response.data.animals[i].size,
-          age: response.data.animals[i].age,
-          colors: response.data.animals[i].colors,
-          id: response.data.animals[i].id,
-          environment: response.data.animals[i].environment,
-          attributes: response.data.animals[i].attributes,
-          description: response.data.animals[i].description,
-        };
-        //console.log("animal:");
-        //console.log(animal);
-        animalsArray.push(animal);
-      }
-      setName(animalsArray);
-      //console.log("animalsArray in Cards:");
-      //console.log(animalsArray);
-    });
-  }, []);
-
   return (
     <div className="adopt-container">
       <div className="adopt-header">
@@ -284,18 +244,19 @@ const Adopt = () => {
       </div>
 
       <div className="cards">
-        {click
-          ? name.map((item, index) => {
-              return (
-                <>
-                  <Card key={index} item={item} />
-                </>
-              );
-            })
-          : null}
+        {click ? (
+          <Cards
+            type={type}
+            breed={breed}
+            gender={gender}
+            size={size}
+            age={age}
+            color={color}
+          />
+        ) : null}
       </div>
     </div>
   );
 };
 
-export default Adopt;
+export default AdoptO;

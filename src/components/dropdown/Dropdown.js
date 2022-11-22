@@ -1,10 +1,9 @@
 import { useState } from "react";
-import "./Adopt.css";
-import logo from "./others/images/image5.svg";
+import "../adopt/Adopt.css";
+import logo from "../../images/image5.svg";
 
 function Dropdown({ selected, setSelected, options }) {
   const [isActive, setIsActive] = useState(false);
-  //console.log("options :", options);
 
   return (
     <div className="dropdown">

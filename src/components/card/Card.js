@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./Card.css";
 import { useNavigate } from "react-router-dom";
-import logo2 from "./others/images/image.png";
+import logo2 from "../../images/image.png";
 import { useParams } from "react-router-dom";
 import { BsCheck } from "react-icons/bs";
 

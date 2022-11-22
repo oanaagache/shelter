@@ -1,19 +1,19 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import About from "./others/About";
-import Donate from "./others/Donate";
-import Foster from "./others/Foster";
-import Adopt from "./Adopt";
-import Other from "./others/Other";
-import Navbar from "./Navbar";
-import Footer from "./Footer";
-import Main from "./Main";
-import Card from "./Card";
-import Success from "./Success";
-import Details from "./Details";
-import CountrySelector from "./CountrySelector";
-import ArticlesDog from "./others/ArticlesDog";
-import ArticlesCat from "./others/ArticlesCat";
+import About from "./pages/about/About";
+import Donate from "./pages/donate/Donate";
+import Foster from "./pages/foster/Foster";
+import Adopt from "./components/adopt/Adopt";
+import Other from "./pages/other/Other";
+import Navbar from "./components/nav/Navbar";
+import Footer from "./components/footer/Footer";
+import Main from "./components/main/Main";
+import Card from "./components/card/Card";
+import Success from "./components/success/Success";
+import Details from "./components/details/Details";
+import CountrySelector from "./components/countryselector/CountrySelector";
+import ArticlesDog from "./pages/other/ArticlesDog";
+import ArticlesCat from "./pages/other/ArticlesCat";
 
 function App() {
   return (

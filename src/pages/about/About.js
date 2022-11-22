@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
-import logo from "./images/image4.svg";
+import logo from "../../images/image4.svg";
 
 const About = () => {
   let navigate = useNavigate();

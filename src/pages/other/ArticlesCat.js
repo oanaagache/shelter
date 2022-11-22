@@ -1,10 +1,10 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import logo from "./images/image4.svg";
-import pic1 from "./images/image10.jpg";
-import pic2 from "./images/image11.jpg";
-import pic3 from "./images/image12.jpg";
-import pic4 from "./images/image13.jpg";
+import logo from "../../images/image4.svg";
+import pic1 from "../../images/image10.jpg";
+import pic2 from "../../images/image11.jpg";
+import pic3 from "../../images/image12.jpg";
+import pic4 from "../../images/image13.jpg";
 import { Link } from "react-router-dom";
 
 const ArticlesCat = () => {

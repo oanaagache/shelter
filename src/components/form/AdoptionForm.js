@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 import logo from "./others/images/image5.svg";
 import { useNavigate } from "react-router-dom";
 import { useParams } from "react-router-dom";
-import CountrySelector from "./CountrySelector";
+import CountrySelector from "../CountrySelector";
 
 const AdoptionForm = (props) => {
   const [listResponses, setListResponses] = useState();
