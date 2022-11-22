@@ -26,6 +26,7 @@ function App() {
         <Route path="/foster" element={<Foster />} />
         <Route path="/adopt" element={<Adopt />} />
         <Route path="/other" element={<Other />} />
+        <Route path="/card" element={<Card />} />
         <Route path="/card/:id" element={<Card />} />
         <Route path="/success/:name" element={<Success />} />
         <Route path="/details" element={<Details />} />

@@ -12,13 +12,8 @@ const About = () => {
           <div className="adopt-inner">
             <img style={({ height: 1 }, { padding: 10 })} src={logo} />
             <h2>
-              <Link
-                to="/"
-                style={
-                  ({ textDecoration: "none" }, { color: " rgb(184, 106, 187)" })
-                }
-              >
-                Back{" "}
+              <Link to="/" style={{ textDecoration: "none" }}>
+                Back
               </Link>
             </h2>
           </div>
@@ -28,29 +23,29 @@ const About = () => {
       </div>
 
       <div className="adopt-drop">
-        <h6>
+        <h2>
           SHELTER is dedicated to helping pets find homes, and we know you are
           too. Our site provides ready access to data for hundreds of thousands
           of adoptable pets and the organizations that care for them.
-        </h6>
-
-        <h6>
+        </h2>
+        <br />
+        <h2>
           Dogs, cats, rabbits, and other domesticated animals rely on the care
           of devoted human guardians to keep them safe, happy, and healthy. Some
           of these animals are lucky enough to be adopted into responsible,
           permanent homes. Sadly, there are far more animals in need of a caring
           family than there are people willing or able to provide them with a
           lifetime of love and support.
-        </h6>
-
-        <div className="button">
+        </h2>
+        <br />
+        <div className="button" style={{ paddingBottom: 180 }}>
           <button
-            className="backHome"
+            className="adopt"
             onClick={() => {
               navigate("/adopt");
             }}
           >
-            Go to Adopt page
+            Adopt
           </button>
         </div>
       </div>

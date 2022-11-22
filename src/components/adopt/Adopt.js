@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./Adopt.css";
 import Dropdown from "../dropdown/Dropdown";
-//import logo from "./images/image4.svg";
+import logo from "../../images/image4.svg";
 import { Link } from "react-router-dom";
 import { Client } from "@petfinder/petfinder-js";
 import Card from "../card/Card";
@@ -38,11 +38,10 @@ const Adopt = () => {
   //     var typesArray = [
   //       "Dog",
   //       "Cat",
-  //       "Rabbits",
-  //       "Small and Furry",
-  //       "Scales, Fins and Other",
-  //       "Birds",
-  //       "Horses",
+  //       "Rabbit",
+  //       "Small & Furry",
+  //"Horse","Bird",
+  //       "Scales, Fins & Other",
   //       "Barnyard",
   //     ];
   //     setTypes(typesArray);
@@ -72,8 +71,8 @@ const Adopt = () => {
         //console.log(response.data.breeds[i].name);
         breedsArray.push(response.data.breeds[i].name);
       }
-      console.log("Dog breedsArray:");
-      console.log(breedsArray);
+      //console.log("Dog breedsArray:");
+      //console.log(breedsArray);
       setBreeds(breedsArray);
     });
   }, []);
@@ -89,6 +88,22 @@ const Adopt = () => {
         breedsArray.push(response.data.breeds[i].name);
       }
       //console.log(" Cat breedsArray:");
+      //console.log(breedsArray);
+      setBreeds(breedsArray);
+    });
+  }, []);
+
+  //useEffect for breed Rabbit
+  useEffect(() => {
+    client.animalData.breeds("Rabbit").then((response) => {
+      //console.log(response.data.breeds);
+      var breedsArray = [];
+      var length = response.data.breeds.length;
+      for (var i = 0; i < length; i++) {
+        //console.log(response.data.breeds[i].name);
+        breedsArray.push(response.data.breeds[i].name);
+      }
+      //console.log(" Rabbit breedsArray:");
       //console.log(breedsArray);
       setBreeds(breedsArray);
     });
@@ -155,7 +170,7 @@ const Adopt = () => {
       for (var i = 0; i < length; i++) {
         var animal = {
           img: response.data.animals[i].photos[0],
-          id: response.data.animals[i].id,
+          //id: response.data.animals[i].id,
           name: response.data.animals[i].name,
           breed: response.data.animals[i].breeds["primary"],
           gender: response.data.animals[i].gender,
@@ -182,15 +197,17 @@ const Adopt = () => {
       <div className="adopt-header">
         <div className="adopt-content">
           <div className="adopt-inner">
-            {/* <img style={({ height: 1 }, { padding: 10 })} src={logo} /> */}
+            <img style={({ height: 1 }, { padding: 10 })} src={logo} />
             <h2>
-              <Link to="/">Back</Link>
+              <Link to="/" style={{ textDecoration: "none" }}>
+                Back
+              </Link>
             </h2>
           </div>
 
-          <h1 className="adopt-title">
+          <h4 className="adopt-title">
             These lovely souls are waiting for you
-          </h1>
+          </h4>
         </div>
       </div>
 

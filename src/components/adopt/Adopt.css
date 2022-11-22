@@ -12,8 +12,18 @@ body {
   background-color: aliceblue;
 }
 
+.adopt {
+  color: aliceblue;
+  width: 180px;
+  height: 50px;
+  background-color: rgb(126, 63, 102);
+  margin: 20px;
+  font-size: 24px;
+}
+
 .adopt-content {
   display: flex;
+  margin: 20px 0 50px 0;
 }
 
 .adopt-header {
@@ -24,6 +34,10 @@ body {
 .adopt-inner {
   display: flex;
   align-items: center;
+}
+
+.adopt-drop {
+  margin: 50px 0 50px 0;
 }
 
 .adopt-title {
@@ -37,6 +51,7 @@ body {
   display: flex;
   align-items: center;
   font-size: 36px;
+  margin: 40px 0 20px 0;
 }
 
 .drop {
@@ -112,7 +127,7 @@ body {
   width: 200px;
   height: 50px;
   background-color: rgb(126, 63, 102);
-  margin-top: 20px;
+  margin: 30px 10px 50px 0;
   font-size: 24px;
 }
 
@@ -120,6 +135,7 @@ body {
   color: black;
   font-size: 24px;
 }
+
 .showMore-btn {
   color: black;
   width: 200px;
@@ -147,10 +163,17 @@ body {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  margin: 50px 0 50px 0;
 }
+
 .sort {
   position: relative;
   left: 1400px;
+}
+
+.foster-li {
+  padding: 20px;
+  font-size: 16px;
 }
 
 @media (max-width: 800px) {

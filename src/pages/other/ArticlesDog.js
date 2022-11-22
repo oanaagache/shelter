@@ -32,7 +32,7 @@ const ArticlesDog = () => {
             </h2>
           </div>
 
-          <h4 className="adopt-title">Dog Adoption</h4>
+          <h4 className="adopt-title">More About Dog Adoption</h4>
         </div>
       </div>
 
@@ -41,8 +41,8 @@ const ArticlesDog = () => {
           <div className="card-content">
             <img
               style={{
-                width: 300,
-                height: 300,
+                width: 350,
+                height: 350,
               }}
               src={pic1}
             />
@@ -50,31 +50,25 @@ const ArticlesDog = () => {
             <div className="card-inner">
               <div className="card-details">
                 <h2>Why Are Dogs Given Up?</h2>
+
                 <h5>
                   Find out the most common reasons for pet relinquishment. The
                   truth may surprise you!
                 </h5>
-                {/* <div className="button-adopt">
-                  <button
-                    className="adopt"
-                    onClick={() => {
-                      navigate("/articlesdog");
-                    }}
-                  >
-                    Read more
-                  </button>
-                </div> */}
+
                 <button onClick={() => setModalOpen1(true)}>Read more</button>
                 <Modal isOpen={modalOpen1}>
                   <h2>Why Are Dogs Given Up?</h2>
+                  <br />
                   <img
                     style={{
-                      width: 300,
-                      height: 300,
+                      width: 350,
+                      height: 350,
                     }}
                     src={pic1}
                   />
-                  <h6>
+                  <br />
+                  <h4>
                     In a recent study conducted by the National Council on Pet
                     Population Study and Policy (NCPPSP) and published in the
                     July issue of the Journal of Applied Animal Welfare Science
@@ -89,10 +83,11 @@ const ArticlesDog = () => {
                     impressions of what’s happening, but now we have objective
                     data that will help us develop specific programs to address
                     the issues that have been identified.”
-                  </h6>
-                  <h6>Top 10 Reasons for Relinquishment:</h6>
-                  <h6>Dogs:</h6>
-                  <ol>
+                  </h4>
+                  <h4>Top 10 Reasons for Relinquishment:</h4>
+                  <br />
+                  <h4>Dogs:</h4>
+                  <ol className="foster-li">
                     <li>Moving (7%) </li>
                     <li>Landlord not allowing pet (6%)</li>
                     <li>Too many animals in household (4%)</li>
@@ -106,8 +101,9 @@ const ArticlesDog = () => {
                     <li>Pet illness(es) (4%) </li>
                     <li>Biting (3%)</li>
                   </ol>
-                  <h6>Cats:</h6>
-                  <ol>
+                  <br />
+                  <h4>Cats:</h4>
+                  <ol className="foster-li">
                     <li>Moving (8%) </li>
                     <li>Landlord not allowing pet (6%)</li>
                     <li>Too many animals in household (11%)</li>
@@ -119,20 +115,20 @@ const ArticlesDog = () => {
                     <li>House soiling (5%) </li>
                     <li>Incompatibility with other pets (2%)</li>
                   </ol>
-                  <h6>
+                  <h4>
                     Specially trained researchers completed confidential
                     individual interviews with pet owners who were relinquishing
                     their dogs or cats to animal shelters. Pet owners were
                     allowed to give up to five reasons for relinquishment.
                     Interviewers did not, however, prioritize the responses.
                     They simply recorded them in the order stated.
-                  </h6>
-                  <h6>
+                  </h4>
+                  <h4>
                     Characteristics of Pets Being Relinquished In addition to
                     the reasons for relinquishment, the study collected data on
                     the pets being relinquished. According to the study:
-                  </h6>
-                  <ul>
+                  </h4>
+                  <ul className="foster-li">
                     <li>
                       The majority of the surrendered dogs (47.7%) and cats
                       (40.3%) were between 5 months and 3 years of age.
@@ -167,65 +163,78 @@ const ArticlesDog = () => {
                       Most dogs (96%) had not received any obedience training.
                     </li>
                   </ul>
-                  <h6>Characteristics of Pet Owners Surrendering Pets </h6>
-                  During the confidential interviews, researchers also gathered
-                  data on the people surrendering the pets. “Owners represented
-                  a broad range of age, ethnicity, education, and income level,
-                  indicating continued efforts will need to reach wide and far
-                  into communities across the country,” say Dr. Mo Salman, the
-                  article’s senior author.
-                  <h6></h6>
-                  The NCPPSP Regional Shelter Survey was designed, implemented,
-                  and analyzed by six members of the NCPPSP Scientific Advisory
-                  Committee. Regional investigators were encouraged to select
-                  shelters that were likely to be representative of those in
-                  their locations. The selection was also based on a shelter’s
-                  ability to dedicate time and resources to the project.
-                  <h6></h6>
-                  The publication of this article represents the first such
-                  scientific and public release of relinquishment data from the
-                  NCPPSP’s ongoing research into pet population issues. “The
-                  council has undertaken several important studies to better
-                  understand the issue of unwanted companion animals. This
-                  problem cannot be solved unless we truly understand it,” says
-                  Burney. “Without this new data, individuals and organizations
-                  can have a clear idea of how to approach these issues most
-                  effectively.”
-                  <h6></h6>
-                  As with all research, there are limitations. According to the
-                  authors, “the study was designed to describe the animals
-                  submitted to shelters. Thus, this set of data has no
-                  comparison data from the general pet-owning population. Many
-                  factors undoubtedly influence relinquishment, and some
-                  critical factors may have been omitted. This study represents
-                  a beginning of systematic data collection to examine this
-                  complex problem. The study is not designed to deal with
-                  animals other than those entering shelters, and influences
-                  cannot be drawn beyond this population.”
-                  <h6></h6>
+                  <h4>Characteristics of Pet Owners Surrendering Pets </h4>
+                  <br />
+                  <p>
+                    During the confidential interviews, researchers also
+                    gathered data on the people surrendering the pets. “Owners
+                    represented a broad range of age, ethnicity, education, and
+                    income level, indicating continued efforts will need to
+                    reach wide and far into communities across the country,” say
+                    Dr. Mo Salman, the article’s senior author.
+                  </p>
+                  <br />
+                  <p>
+                    The NCPPSP Regional Shelter Survey was designed,
+                    implemented, and analyzed by six members of the NCPPSP
+                    Scientific Advisory Committee. Regional investigators were
+                    encouraged to select shelters that were likely to be
+                    representative of those in their locations. The selection
+                    was also based on a shelter’s ability to dedicate time and
+                    resources to the project.
+                  </p>
+                  <br />
+                  <p>
+                    The publication of this article represents the first such
+                    scientific and public release of relinquishment data from
+                    the NCPPSP’s ongoing research into pet population issues.
+                    “The council has undertaken several important studies to
+                    better understand the issue of unwanted companion animals.
+                    This problem cannot be solved unless we truly understand
+                    it,” says Burney. “Without this new data, individuals and
+                    organizations can have a clear idea of how to approach these
+                    issues most effectively.”
+                  </p>
+                  <br />
+                  <p>
+                    As with all research, there are limitations. According to
+                    the authors, “the study was designed to describe the animals
+                    submitted to shelters. Thus, this set of data has no
+                    comparison data from the general pet-owning population. Many
+                    factors undoubtedly influence relinquishment, and some
+                    critical factors may have been omitted. This study
+                    represents a beginning of systematic data collection to
+                    examine this complex problem. The study is not designed to
+                    deal with animals other than those entering shelters, and
+                    influences cannot be drawn beyond this population.”
+                  </p>
+                  <br />
                   The NCPPSP is a coalition of:
-                  <h6></h6>
-                  <p>
-                    American Animal Hospital Association American Humane
-                    Association
-                  </p>
-                  <p>American Kennel Club </p>
-                  <p>
-                    American Society for the Prevention of Cruelty to Animals
-                  </p>
-                  <p>American Veterinary Medical</p>
-                  <p>
-                    Association Association of Teachers of Veterinary Public
-                  </p>
-                  <p>Health and Preventative Medicine</p>
-                  <p>Cat Fanciers Association</p>
-                  <p>The Humane Society of the United States </p>
-                  <p>
-                    Massachusetts Society for the Prevention of Cruelty to
-                    Animals{" "}
-                  </p>
-                  <p>National Animal Control Association </p>
-                  <p>Society of Animal Welfare Administrators </p>
+                  <ul className="foster-li">
+                    <li>
+                      {" "}
+                      American Animal Hospital Association American Humane
+                      Association{" "}
+                    </li>
+                    <li>American Kennel Club</li>
+                    <li>
+                      American Society for the Prevention of Cruelty to Animals
+                    </li>
+                    <li>American Veterinary Medical </li>
+                    <li>
+                      {" "}
+                      Association Association of Teachers of Veterinary Public
+                    </li>
+                    <li>Health and Preventative Medicine</li>
+                    <li>Cat Fanciers Association</li>
+                    <li>The Humane Society of the United States</li>
+                    <li>
+                      Massachusetts Society for the Prevention of Cruelty to
+                      Animals{" "}
+                    </li>
+                    <li>National Animal Control Association </li>
+                    <li>Society of Animal Welfare Administrators</li>
+                  </ul>
                   <p>
                     * NOTE: The percentages following the dog and cat
                     information in this section were not a part of the original
@@ -239,6 +248,7 @@ const ArticlesDog = () => {
                     only the top ten reasons given by owners for relinquishment
                     of animals to shelters.{" "}
                   </p>
+                  <br />
                   <p>
                     A copy of the press release and article can be obtained by
                     contacting:
@@ -255,6 +265,7 @@ const ArticlesDog = () => {
                     through direct referrals, after screening, or after a
                     placement and assessment in a foster home.
                   </p>
+                  <br />
                   <button onClick={() => setModalOpen1(false)}>Close</button>
                 </Modal>
               </div>
@@ -266,8 +277,8 @@ const ArticlesDog = () => {
           <div className="card-content">
             <img
               style={{
-                width: 300,
-                height: 300,
+                width: 350,
+                height: 350,
               }}
               src={pic2}
             />
@@ -292,18 +303,22 @@ const ArticlesDog = () => {
                 <button onClick={() => setModalOpen2(true)}>Read more</button>
                 <Modal isOpen={modalOpen2}>
                   <h2>Dog Adoption Tips – Bringing Home a New Rescue Dog</h2>
+                  <br />
                   <img
                     style={{
-                      width: 300,
-                      height: 300,
+                      width: 350,
+                      height: 350,
                     }}
                     src={pic2}
-                  />
+                  />{" "}
+                  <br />
                   <p>
+                    {" "}
                     Bringing home a shelter dog that you adopt may be a rescued
                     stray or a dog that someone has voluntarily surrendered for
                     adoption.{" "}
                   </p>
+                  <br />
                   <p>
                     Whether he was born in the bushes behind the laundromat or
                     an adolescent abandoned on the streets by his
@@ -313,6 +328,7 @@ const ArticlesDog = () => {
                     animal that needs time and space, patience, and
                     understanding.{" "}
                   </p>
+                  <br />
                   <p>
                     The first few days in your home are special and critical for
                     a pet. Your new dog will be confused about where he is and
@@ -320,6 +336,7 @@ const ArticlesDog = () => {
                     with your family for your dog will be paramount in making as
                     smooth a transition as possible.
                   </p>
+                  <br />
                   <p>
                     Bringing a puppy home, they need more than just a bed and a
                     food bowl to thrive. They also need constant care and
@@ -331,9 +348,9 @@ const ArticlesDog = () => {
                     grow into a happy and healthy dog. Here are some tips for
                     puppy care to help first-time dog owners get started:
                   </p>
-
-                  <h6>Before You Bring Your Dog Home:</h6>
-                  <ul>
+                  <br />
+                  <h4>Before You Bring Your Dog Home:</h4>
+                  <ul className="foster-li">
                     <li>
                       Determine where your dog will be spending most of his
                       time. Because he will be under a lot of stress with the
@@ -368,8 +385,8 @@ const ArticlesDog = () => {
                       shelter did not already do so.
                     </li>
                   </ul>
-                  <h6>First Day:</h6>
-                  <ul>
+                  <h4>First Day:</h4>
+                  <ul className="foster-li">
                     <li>
                       We know moving is stressful — and your new dog feels the
                       same way! Give him time to acclimate to your home and
@@ -451,8 +468,8 @@ const ArticlesDog = () => {
                       baskets up high, where your puppy cannot reach them.
                     </li>
                   </ul>
-                  <h6>Following Weeks:</h6>
-                  <ul>
+                  <h4>Following Weeks:</h4>
+                  <ul className="foster-li">
                     <li>
                       People often say they don’t see their dog’s true
                       personality until several weeks after adoption. Your dog
@@ -500,21 +517,24 @@ const ArticlesDog = () => {
                       months.
                     </li>
                   </ul>
+                  <br />
                   <img
                     style={{
-                      width: 300,
-                      height: 300,
+                      width: 350,
+                      height: 350,
                     }}
                     src={pic5}
                   />
-                  <h6>
+                  <br />
+                  <h4>
                     Responsibilities for the Parents of the Newly Adopted Dog:
-                  </h6>
+                  </h4>
+                  <br />
                   <p>
                     Courtesy of Rondout Valley Kennels, Inc. (Sue Sternberg
                     suesternberg.com)
                   </p>
-                  <ol>
+                  <ol className="foster-li">
                     <li>
                       Never, ever leave a child alone with your new dog. Not
                       even for a second to turn your head and answer the phone.
@@ -565,13 +585,14 @@ const ArticlesDog = () => {
                   </ol>
                   <img
                     style={{
-                      width: 300,
-                      height: 300,
+                      width: 350,
+                      height: 350,
                     }}
                     src={pic6}
                   />
-                  <h6>When to Phone the Shelter for Advice:</h6>
-                  <ul>
+                  <br />
+                  <h4>When to Phone the Shelter for Advice:</h4>
+                  <ul className="foster-li">
                     <li>
                       Any signs of physical rough play from the dog towards the
                       child
@@ -615,6 +636,7 @@ const ArticlesDog = () => {
                     into a happy, healthy dog — and provide you with love and
                     companionship for years to come.
                   </p>
+                  <br />
                   <button onClick={() => setModalOpen2(false)}>Close</button>
                 </Modal>
               </div>
@@ -626,8 +648,8 @@ const ArticlesDog = () => {
           <div className="card-content">
             <img
               style={{
-                width: 300,
-                height: 300,
+                width: 350,
+                height: 350,
               }}
               src={pic3}
             />
@@ -687,7 +709,7 @@ const ArticlesDog = () => {
                   </p>
                   <h3>Think about the kind of dog who will suit you best</h3>
                   <p>Think about the kind of dog who will suit you best</p>
-                  <ul>
+                  <ul className="foster-li">
                     <li>
                       Do you have kids? If so, how old are they and how
                       dog-savvy are they?
@@ -781,7 +803,7 @@ const ArticlesDog = () => {
                     When deciding on which age range would be best, think about
                     these things:
                   </p>
-                  <ul>
+                  <ul className="foster-li">
                     <li>
                       Puppies are a lot of fun but are also lots of work. Do you
                       have the time to train a puppy from scratch, including
@@ -842,8 +864,8 @@ const ArticlesDog = () => {
           <div className="card-content">
             <img
               style={{
-                width: 300,
-                height: 300,
+                width: 350,
+                height: 350,
               }}
               src={pic4}
             />
@@ -1000,7 +1022,7 @@ const ArticlesDog = () => {
                   </Table>
 
                   <h3>How do I Rehome a Dog FAQ’s</h3>
-                  <ol>
+                  <ol className="foster-li">
                     <li>Is it wrong to be selective when rehoming a dog?</li>
                     <p>
                       No, and Dr. Nicholas Dodman, a Veterinary Behavior
@@ -1013,7 +1035,7 @@ const ArticlesDog = () => {
                     <li>
                       I’ve exhausted all my options trying to keep my dog, what
                       do I do?
-                      <ul>
+                      <ul className="foster-li">
                         <li>
                           Contact breed rescue groups: Discover numerous rescue
                           groups that, by and large, specifically help your
@@ -1097,7 +1119,7 @@ const ArticlesDog = () => {
                     be in a rush in rehoming your dog. On the whole, finding a
                     good fit for your dog does take time, love, and patience.
                   </h3>
-                  <ul>
+                  <ul className="foster-li">
                     <li>Have you ever had another pet? What happened to it?</li>
                     <p>
                       The best answer is “Yes; It died at age 17.” What you
@@ -1110,7 +1132,7 @@ const ArticlesDog = () => {
                       <li>
                         Already having a pet is good. It demonstrates that they
                         already know what is involved in pet ownership.
-                        <ul>
+                        <ul className="foster-li">
                           <li>
                             If yes, then how long have you had it? In general…
                             the longer, the better.
@@ -1135,7 +1157,7 @@ const ArticlesDog = () => {
                       altering (spaying/neutering) the cat/dog when it reaches
                       sexual maturity?
                     </li>
-                    <ul>
+                    <ul className="foster-li">
                       <li>
                         The good answer is yes: spay/neuter prevents unwanted
                         pet births, decreasing the euthanasia happening in
@@ -1148,7 +1170,7 @@ const ArticlesDog = () => {
                     <li>
                       Do you own your home or rent? Do you have a fenced yard?
                     </li>
-                    <ul>
+                    <ul className="foster-li">
                       <li>
                         Ask to see a copy of their lease allowing pets if they
                         rent. Or ask to use their landlord as a reference.
@@ -1162,7 +1184,7 @@ const ArticlesDog = () => {
                       </li>
                     </ul>
                     <li>Will you provide references?</li>
-                    <ul>
+                    <ul className="foster-li">
                       <li>
                         Many organizations require three, one being a
                         veterinarian. Sometimes they find the person had no
@@ -1188,7 +1210,7 @@ const ArticlesDog = () => {
                       </li>
                     </ul>
                     <li>Are you willing to allow a home check?</li>
-                    <ul>
+                    <ul className="foster-li">
                       <li>
                         Some rescue groups always do a home check. This verifies
                         the individual has given you a real address. You might
@@ -1206,7 +1228,7 @@ const ArticlesDog = () => {
                     <li>
                       Do you plan on crating the dog? For how long each day?
                     </li>
-                    <ul>
+                    <ul className="foster-li">
                       <li>
                         Think twice before you adopt a young puppy or kitten to
                         a home where they will be alone for more than four hours
@@ -1223,7 +1245,7 @@ const ArticlesDog = () => {
                       If the pet has an accident in the house, what type of
                       correction do you plan to use?
                     </li>
-                    <ul>
+                    <ul className="foster-li">
                       <li>
                         Think twice before you adopt a young puppy or kitten to
                         a home where they will be alone for more than four hours
@@ -1237,7 +1259,7 @@ const ArticlesDog = () => {
                       </li>
                     </ul>
                     <li>How many hours per day will the pet be alone?</li>
-                    <ul>
+                    <ul className="foster-li">
                       <li>
                         Think twice before you adopt a young puppy or kitten to
                         a home where they will be alone for more than four hours
@@ -1254,7 +1276,7 @@ const ArticlesDog = () => {
                       Do you have children? How old are they? Have they ever
                       been around pets?
                     </li>
-                    <ul>
+                    <ul className="foster-li">
                       <li>
                         Children should not be expected to be responsible for
                         the pet. If that is suggested, think red alert! Very
@@ -1268,7 +1290,7 @@ const ArticlesDog = () => {
                       </li>
                     </ul>
                     <li>Will the pet be going outside at all?</li>
-                    <ul>
+                    <ul className="foster-li">
                       <li>
                         Cats that go outside have a significantly reduced
                         expected life-span, get hit by cars, poisoned
@@ -1285,7 +1307,7 @@ const ArticlesDog = () => {
                       </li>
                     </ul>
                     <li>Will you be declawing the cat?</li>
-                    <ul>
+                    <ul className="foster-li">
                       <li>
                         Declawed cats are more likely to become biters and/or
                         forget litter box training. Many people are very opposed
@@ -1298,7 +1320,7 @@ const ArticlesDog = () => {
                       Do you realize that cats can live for more than 20 years?
                       Do you realize that dogs can live for more than 15 years?
                     </li>
-                    <ul>
+                    <ul className="foster-li">
                       <li>This is a lifetime commitment.</li>
                     </ul>
                   </ul>

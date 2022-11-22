@@ -2,14 +2,18 @@ import React from "react";
 import "./Navbar.css";
 import { NavLink } from "react-router-dom";
 import logo from "../../images/image.png";
+import { useNavigate } from "react-router-dom";
 
 const Navbar = () => {
+  let navigate = useNavigate();
   return (
     <div className="header">
       <div className="header-content">
         <div className="header-inner">
-          <img src={logo} />
-          <h1 className="header-title">Paws Animal Shelter</h1>
+          <img src={logo} onClick={() => navigate("/")} />
+          <h1 className="header-title" onClick={() => navigate("/")}>
+            Paws Animal Shelter
+          </h1>
         </div>
 
         <ul className="header-menu">

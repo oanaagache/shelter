@@ -22,8 +22,8 @@ const Donate = () => {
         </div>
 
         <div className="adopt-drop">
-          <h5 className="adopt-drop-title">What Is An Animal Shelter?</h5>
-          <h6>
+          <h1 className="adopt-drop-title">What Is An Animal Shelter?</h1>
+          <h4>
             An animal shelter is a staffed facility where homeless animals—and
             animals seized by authorities in cruelty cases—find safety and
             comfort, are cared for, and are made available for adoption.
@@ -31,58 +31,64 @@ const Donate = () => {
             on the streets, where they struggle to find clean food and water,
             can be hit by cars, can be attacked by other animals or cruel
             humans, or face other potential dangers.
-          </h6>
-          <h5 className="adopt-drop-title">What Do Animal Shelters Do? </h5>
+          </h4>
 
-          <h6>
+          <h1 className="adopt-drop-title">What Do Animal Shelters Do? </h1>
+
+          <h4>
             Approximately 7.6 million companion pets are surrendered to a
             shelter every year; 4.2 million are dogs and 1.4 million dogs are
             euthanized. Animals have no voice of their own, no social safety net
             and very few rights under the law. They are vulnerable and,
             unfortunately, mistreated more often than most of us would like to
             think.
-          </h6>
+          </h4>
 
-          <h4 className="adopt-title">Why You Should Donate</h4>
+          <h1 className="adopt-drop-title">Why You Should Donate?</h1>
 
-          <h6>
+          <h4>
             Shelters and rescue operations for pets need donations from the
             community to operate. Many animal shelters do not have the resources
             they need to care for sick or injured animals. Approximately 80
             percent of animals that are euthanized are healthy or treatable and
             could have been adopted into new homes. Senior dogs and bully breeds
             are also high on the list of dogs that are at-risk for euthanasia.
-          </h6>
-          <h4>How You Can Help</h4>
-          <ol>
+          </h4>
+
+          <h1 className="adopt-drop-title">How You Can Help:</h1>
+          <ol className="foster-li">
             <li>Make a donation</li>
-            <h6>
+            <br />
+            <h4>
               Financial donations make a HUGE difference for animal charities.
               Donating money is fast, easy and allows facilities to use the
               money where it is needed most. If the nonprofit group you’re
               donating to is recognized by the IRS as a 501(c)(3) organization,
               you can deduct the value of your contribution from any taxes you
               owe.
-            </h6>
-            <h6>
+            </h4>
+            <br />
+            <h4>
               Animal shelters need food, bedding and other supplies. Many need
               veterinarian care, medical assistance and spaying/neutering. Your
               donations will help provide the care abandoned animals need until
               a suitable home is found for them.
-            </h6>
-            <h6>
+            </h4>
+            <br />
+            <h4>
               However, if you can’t donate money, don’t despair – there are
               other ways you can help!
-            </h6>
-
+            </h4>
+            <br />
             <li>Volunteer your time </li>
-            <h6>
+            <br />
+            <h4>
               Volunteering your time at a local shelter or a rescue group is one
               of the most valuable ways to help. Most animal shelters depend on
               volunteers to provide the needed care required for the animals.
               Our shelter have many of the following:
-            </h6>
-            <ul>
+            </h4>
+            <ul className="foster-li">
               <li>
                 A compassionate trained staff (plus volunteers) to care for
                 animals
@@ -124,12 +130,13 @@ const Donate = () => {
               </li>
             </ul>
             <li>Donate supplies</li>
-            <h6>
+            <br />
+            <h4>
               Donations don’t have to be monetary. Check with your local shelter
               to find out what types of supplies they need. Common requests for
               donations include:
-            </h6>
-            <ul>
+            </h4>
+            <ul className="foster-li">
               <li>Toys</li>
               <li>Bedding</li>
               <li>Crates</li>
@@ -138,21 +145,23 @@ const Donate = () => {
               <li>Cleaning supplies</li>
             </ul>
             <li>Adopt from a shelter</li>
-            <h6>
+            <br />
+            <h4>
               If you’ve been considering adopting a new dog, think twice before
               buying one from a pet store. Your local shelter or rescue
               operation may have the perfect dog for you! Look for
               breed-specific rescue programs if you have your heart set on a
               certain breed.
-            </h6>
-            <h6>
+            </h4>
+            <br />
+            <h4>
               Adopting a dog from a shelter may save his or her life, and will
               make room for another animal in need. Share your experience with
               your family and friends, and hopefully they will consider adopting
               a shelter pet the next time they are ready for a new four-legged
               family member.
-            </h6>
-
+            </h4>
+            <br />
             <Link to="/adopt" style={{ textDecoration: "none" }}>
               Click here to adopt a pet
             </Link>

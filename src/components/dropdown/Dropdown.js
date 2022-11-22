@@ -7,7 +7,7 @@ function Dropdown({ selected, setSelected, options }) {
 
   return (
     <div className="dropdown">
-      <div className="dropdown-btn" onClick={(e) => setIsActive(!isActive)}>
+      <div className="dropdown-btn" onClick={() => setIsActive(!isActive)}>
         {selected}
         <img src={logo} />
       </div>
@@ -17,7 +17,7 @@ function Dropdown({ selected, setSelected, options }) {
           {options.map((option, index) => (
             <div
               key={index}
-              onClick={(e) => {
+              onClick={() => {
                 setSelected(option);
                 setIsActive(false);
               }}

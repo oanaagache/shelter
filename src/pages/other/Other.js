@@ -29,17 +29,17 @@ const Other = () => {
         <div className="card-container">
           <img
             style={{
-              width: 700,
-              height: 700,
+              width: 400,
+              height: 400,
             }}
             src={pic1}
           />
           <div className="card-inner">
             <div className="card-details">
               <h2>Dog Adoption Articles</h2>
-              <h5>Learn more about caring for your new dog.</h5>
+              <h3>Learn more about caring for your new dog.</h3>
 
-              <div className="button-adopt" style={{ paddingLeft: 60 }}>
+              <div className="button-adopt" style={{ paddingLeft: 20 }}>
                 <button
                   className="adopt"
                   onClick={() => {
@@ -56,16 +56,16 @@ const Other = () => {
         <div className="card-container">
           <img
             style={{
-              width: 700,
-              height: 700,
+              width: 400,
+              height: 400,
             }}
             src={pic2}
           />
           <div className="card-inner">
             <div className="card-details">
               <h2>Cat Adoption Articles</h2>
-              <h5>Helpful insights on what to expect.</h5>
-              <div className="button-adopt" style={{ paddingLeft: 60 }}>
+              <h3>Helpful insights on what to expect.</h3>
+              <div className="button-adopt" style={{ paddingLeft: 20 }}>
                 <button
                   className="adopt"
                   onClick={() => {

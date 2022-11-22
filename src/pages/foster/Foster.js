@@ -21,25 +21,28 @@ const Foster = () => {
       </div>
 
       <div className="adopt-drop">
-        <h5 className="adopt-drop-title">
+        <h1 className="adopt-drop-title">
           What does fostering a dog/cat involve?
-        </h5>
-        <h6>
+        </h1>
+        <h3>
           When you foster, you agree to take a homeless dog/cat into your home
           and give him or her love, care and attention, either for a
           predetermined period of time or until the dog/cat is adopted.
-        </h6>
-        <h5>Why do adoption groups need foster homes?</h5>
-        <h6>
+        </h3>
+        <br />
+        <h3>Why do adoption groups need foster homes?</h3>
+        <h3>
           There are many reasons a dog/cat might need foster care. Some of the
           most common include:
-        </h6>
-        <ul>
+        </h3>
+
+        <ul className="foster-li">
           <li>
             A rescue group doesn’t have a physical shelter and depends on foster
             homes to care for dogs/cats until suitable homes are found.
           </li>
           <li>
+            {" "}
             A puppy is too young to be adopted and needs a safe place to stay
             until he or she is old enough to go to a forever home.
           </li>
@@ -60,13 +63,14 @@ const Foster = () => {
             with people and needs to be socialized.
           </li>
         </ul>
-        <h5>Why should I foster a dog or cat?</h5>
-        <h6>
+        <h3>Why should I foster a dog or cat?</h3>
+        <h3>
           Fostering a dog/cat is one of the most rewarding experiences you can
           have (other than adopting, of course). By taking an animal in need
           temporarily into your home you’re:
-        </h6>
-        <ul>
+        </h3>
+
+        <ul className="foster-li">
           <li>
             freeing up a spot so the shelter or rescue can take in another
             dog/cat.
@@ -84,13 +88,15 @@ const Foster = () => {
             him used to being around other pets and different types of people.
           </li>
         </ul>
-        <h5>How do I sign up to foster a dog or cat?</h5>
-        <h6>
+        <br />
+        <h3>How do I sign up to foster a dog or cat?</h3>
+        <br />
+        <h4>
           Find a <Link to="/">rescue group or shelter near you </Link> and
           contact them. They’ll likely have you fill out a foster application
           and, if you are approved, they will work with you to figure out the
           right foster dog/cat for your household.
-        </h6>
+        </h4>
       </div>
     </div>
   );
