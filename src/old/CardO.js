@@ -10,6 +10,7 @@ const CardO = (props) => {
     apiKey: "yE34mF5y8uaTkcDpopHWiZnWGoYJX5Ufw59vtFDpOJU78uW5ur",
     secret: "HMpwZ6VMhZwUWXYpb9nVmliqdElYYT96mezpupJk",
   });
+
   const { id } = useParams();
   let navigate = useNavigate();
   const [animalId, setAnimalId] = useState(false);
@@ -19,19 +20,17 @@ const CardO = (props) => {
     if (id != null) {
       client.animal.search().then((response) => {
         response.data.animals.forEach((animal) => {
-          console.log("animal.name:");
+          console.log("animal.name");
           console.log(animal.name);
           setAnimalId(true);
           setItem(animal);
-          console.log("Card: animal");
-          console.log(animal);
-          console.log("name");
-          console.log(animal.name);
         });
       });
     } else {
       setAnimalId(true);
       setItem(props.item);
+      console.log("props.item");
+      console.log(props.item);
     }
   }, []);
 
@@ -165,6 +164,10 @@ const CardO = (props) => {
                     ? item.description
                     : "Not found"}
                 </h5>
+              </div>
+              <div className="card-details">
+                <h3>Details:</h3>
+                <h5>{item.tags}</h5>
               </div>
             </div>
           </div>

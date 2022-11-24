@@ -5,7 +5,7 @@ import CardO from "./CardO";
 import { Client } from "@petfinder/petfinder-js";
 
 const Cards = (props) => {
-  const { type, breed, gender, size, age, color, visible } = props;
+  // const { type, breed, gender, size, age, color, visible } = props;
   const client = new Client({
     apiKey: "yE34mF5y8uaTkcDpopHWiZnWGoYJX5Ufw59vtFDpOJU78uW5ur",
     secret: "HMpwZ6VMhZwUWXYpb9nVmliqdElYYT96mezpupJk",
@@ -17,7 +17,7 @@ const Cards = (props) => {
   const [name, setName] = useState([]);
 
   useEffect(() => {
-    client.animal.search().then((response) => {
+    client.animal.search({ page: 1, limit: 50 }).then((response) => {
       var animalsArray = [];
       //console.log("animalsArray: ");
       //console.log(animalsArray);
@@ -25,8 +25,6 @@ const Cards = (props) => {
       // console.log(response.data.animals);
 
       var length = response.data.animals.length;
-      //console.log("Number of animals found in Cards: ");
-      //console.log(length);
 
       for (var i = 0; i < length; i++) {
         var animal = {
@@ -41,9 +39,9 @@ const Cards = (props) => {
           environment: response.data.animals[i].environment,
           attributes: response.data.animals[i].attributes,
           description: response.data.animals[i].description,
-          //tags: response.data.animals[i].tags,
+          tags: response.data.animals[i].tags[i],
         };
-        //console.log("animal:");
+        //console.log("Cards animal:");
         //console.log(animal);
         animalsArray.push(animal);
       }
@@ -55,7 +53,7 @@ const Cards = (props) => {
 
   return (
     <>
-      {name.slice(0, visible).map((item, id) => {
+      {name.map((item, id) => {
         return (
           <>
             <CardO key={id} item={item} />
