@@ -243,18 +243,7 @@ const AdoptO = () => {
         </button>
       </div>
 
-      <div className="cards">
-        {click ? (
-          <Cards
-            type={type}
-            breed={breed}
-            gender={gender}
-            size={size}
-            age={age}
-            color={color}
-          />
-        ) : null}
-      </div>
+      <div className="cards">{click ? <Cards /> : null}</div>
     </div>
   );
 };

@@ -20,7 +20,7 @@ const CardO = (props) => {
     if (id != null) {
       client.animal.search().then((response) => {
         response.data.animals.forEach((animal) => {
-          console.log("animal.name");
+          console.log("animal.name:");
           console.log(animal.name);
           setAnimalId(true);
           setItem(animal);
@@ -29,7 +29,7 @@ const CardO = (props) => {
     } else {
       setAnimalId(true);
       setItem(props.item);
-      console.log("props.item");
+      console.log("props.item:");
       console.log(props.item);
     }
   }, []);

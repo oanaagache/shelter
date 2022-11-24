@@ -4,15 +4,11 @@ import "../components/card/Card.css";
 import CardO from "./CardO";
 import { Client } from "@petfinder/petfinder-js";
 
-const Cards = (props) => {
-  // const { type, breed, gender, size, age, color, visible } = props;
+const Cards = () => {
   const client = new Client({
     apiKey: "yE34mF5y8uaTkcDpopHWiZnWGoYJX5Ufw59vtFDpOJU78uW5ur",
     secret: "HMpwZ6VMhZwUWXYpb9nVmliqdElYYT96mezpupJk",
   });
-
-  //console.log("Cards : type");
-  //console.log(type);
 
   const [name, setName] = useState([]);
 
@@ -53,10 +49,10 @@ const Cards = (props) => {
 
   return (
     <>
-      {name.map((item, id) => {
+      {name.map((item, index) => {
         return (
           <>
-            <CardO key={id} item={item} />
+            <CardO key={index} item={item} />
           </>
         );
       })}
