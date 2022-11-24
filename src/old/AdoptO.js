@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import "./Adopt.css";
-import Dropdown from "./Dropdown";
+import "../components/adopt/Adopt.css";
+import Dropdown from "../components/dropdown/Dropdown";
 //import logo from "./images/image4.svg";
 import { Link } from "react-router-dom";
 import { Client } from "@petfinder/petfinder-js";
@@ -76,7 +76,7 @@ const AdoptO = () => {
       //console.log(breedsArray);
       setBreeds(breedsArray);
     });
-  }, [type]);
+  }, []);
 
   //useEffect for breed cat
   useEffect(() => {

@@ -3,11 +3,17 @@ import "./Card.css";
 import { useNavigate } from "react-router-dom";
 import logo2 from "../../images/image.png";
 import { useParams } from "react-router-dom";
-import { BsCheck } from "react-icons/bs";
+import { Client } from "@petfinder/petfinder-js";
 
-const Card = ({ item }) => {
+const Card = ({ props }) => {
+  const client = new Client({
+    apiKey: "yE34mF5y8uaTkcDpopHWiZnWGoYJX5Ufw59vtFDpOJU78uW5ur",
+    secret: "HMpwZ6VMhZwUWXYpb9nVmliqdElYYT96mezpupJk",
+  });
   const { id } = useParams();
   let navigate = useNavigate();
+  const [animalId, setAnimalId] = useState(false);
+  const [item, setItem] = useState({});
 
   return (
     <>

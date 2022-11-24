@@ -1,12 +1,11 @@
 import React, { useState, useEffect } from "react";
-import "./Card.css";
+import "../old/CardO";
 import { useNavigate } from "react-router-dom";
-import logo2 from "./others/images/image.png";
+import logo2 from "../images/image.png";
 import { useParams } from "react-router-dom";
-import { BsCheck } from "react-icons/bs";
 import { Client } from "@petfinder/petfinder-js";
 
-const Card = (props) => {
+const CardO = (props) => {
   const client = new Client({
     apiKey: "yE34mF5y8uaTkcDpopHWiZnWGoYJX5Ufw59vtFDpOJU78uW5ur",
     secret: "HMpwZ6VMhZwUWXYpb9nVmliqdElYYT96mezpupJk",
@@ -19,22 +18,16 @@ const Card = (props) => {
   useEffect(() => {
     if (id != null) {
       client.animal.search().then((response) => {
-        var animal = {
-          img: response.data.animals.photos,
-          id: response.data.animals.id,
-          name: response.data.animals.name,
-          breed: response.data.animals.breed,
-          gender: response.data.animals.gender,
-          size: response.data.animals.size,
-          age: response.data.animals.age,
-          colors: response.data.animals.colors,
-          id: response.data.animals.id,
-          environment: response.data.animals.environment,
-          attributes: response.data.animals.attributes,
-          description: response.data.animals.description,
-        };
-        setAnimalId(true);
-        setItem(animal);
+        response.data.animals.forEach((animal) => {
+          console.log("animal.name:");
+          console.log(animal.name);
+          setAnimalId(true);
+          setItem(animal);
+          console.log("Card: animal");
+          console.log(animal);
+          console.log("name");
+          console.log(animal.name);
+        });
       });
     } else {
       setAnimalId(true);
@@ -53,7 +46,7 @@ const Card = (props) => {
                 height: 300,
                 margin: "25px",
               }}
-              onClick={() => navigate(`/card/${item.id}`)}
+              onClick={() => navigate(`/cardo/${item.id}`)}
               src={item.img ? item.img["full"] : logo2}
             />
 
@@ -193,4 +186,4 @@ const Card = (props) => {
   );
 };
 
-export default Card;
+export default CardO;

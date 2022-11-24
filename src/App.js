@@ -14,6 +14,8 @@ import Details from "./components/details/Details";
 import CountrySelector from "./components/countryselector/CountrySelector";
 import ArticlesDog from "./pages/other/ArticlesDog";
 import ArticlesCat from "./pages/other/ArticlesCat";
+import CardO from "./old/CardO";
+import AdoptO from "./old/AdoptO";
 
 function App() {
   return (
@@ -25,9 +27,13 @@ function App() {
         <Route path="/donate" element={<Donate />} />
         <Route path="/foster" element={<Foster />} />
         <Route path="/adopt" element={<Adopt />} />
+
         <Route path="/other" element={<Other />} />
         <Route path="/card" element={<Card />} />
         <Route path="/card/:id" element={<Card />} />
+        <Route path="/adopto" element={<AdoptO />} />
+        <Route path="/cardo" element={<CardO />} />
+        <Route path="/cardo/:id" element={<CardO />} />
         <Route path="/success/:name" element={<Success />} />
         <Route path="/details" element={<Details />} />
         <Route path="/countryselector" element={<CountrySelector />} />

@@ -170,7 +170,7 @@ const Adopt = () => {
       for (var i = 0; i < length; i++) {
         var animal = {
           img: response.data.animals[i].photos[0],
-          //id: response.data.animals[i].id,
+          id: response.data.animals[i].id,
           name: response.data.animals[i].name,
           breed: response.data.animals[i].breeds["primary"],
           gender: response.data.animals[i].gender,
@@ -276,10 +276,10 @@ const Adopt = () => {
 
       <div className="cards">
         {click
-          ? name.map((item, id) => {
+          ? name.map((item, index) => {
               return (
                 <>
-                  <Card key={id} item={item} />
+                  <Card key={index} item={item} />
                 </>
               );
             })
