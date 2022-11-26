@@ -45,6 +45,31 @@ const Adopt = () => {
     setTypes(typesArray);
   }, []);
 
+  //useEffect(() => {
+  //   client.animalData.types().then((response) => {
+  //     var typesArray = [];
+  //     var length = response.data.types.length;
+  //     for (var i = 0; i < length; i++) {
+  //       //console.log(response.data.types[i].name);
+  //       typesArray.push(response.data.types[i].name);
+  //     }
+  //     //console.log("typesArray:");
+  //     //console.log(typesArray);
+  //     setTypes(typesArray);
+  //   });
+  //   var typesArray = [
+  //     "Dog",
+  //     "Cat",
+  //     "Rabbit",
+  //     "Small & Furry",
+  //     "Horse",
+  //     "Bird",
+  //     "Scales, Fins & Other",
+  //     "Barnyard",
+  //   ];
+  //   setTypes(typesArray);
+  // }, []);
+
   //useEffect for breed dog
   useEffect(() => {
     client.animalData.breeds("Dog").then((response) => {
@@ -146,6 +171,7 @@ const Adopt = () => {
             environment: response.data.animals[i].environment,
             attributes: response.data.animals[i].attributes,
             description: response.data.animals[i].description,
+            tags: response.data.animals[i].tags,
           };
           animalsArray.push(animal);
         }

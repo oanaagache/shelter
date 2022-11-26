@@ -17,11 +17,11 @@ const Card = (props) => {
   useEffect(() => {
     if (id) {
       client.animal.search({ id: id }).then((response) => {
-        console.log("response animal");
-        console.log(response.data.animals.find((element) => element.id == id));
+        // console.log("response animal");
+        // console.log(response.data.animals.find((element) => element.id == id));
         const obj = response.data.animals.find((element) => element.id == id);
-        console.log("animal");
-        console.log(animal);
+        // console.log("animal");
+        // console.log(animal);
         var animal = {
           img: obj.photos[0],
           id: obj.id,
@@ -34,6 +34,7 @@ const Card = (props) => {
           environment: obj.environment,
           attributes: obj.attributes,
           description: obj.description,
+          tags: obj.tags,
         };
         setItem(animal);
       });
@@ -53,7 +54,13 @@ const Card = (props) => {
                 margin: "25px",
               }}
               onClick={() => navigate(`/card/${item.id}`)}
-              src={item.img ? item.img["full"] : logo2}
+              src={
+                item.img
+                  ? item.img["full"]
+                  : [logo2]
+                  ? item.img["large"]
+                  : item.img["medium"]
+              }
             />
 
             <div className="card-inner">
@@ -109,61 +116,65 @@ const Card = (props) => {
                 </div>
               </div>
 
-              <div className="card-details">
-                <h3>
-                  Color:{" "}
-                  {item.colors.primary && item.colors.primary
-                    ? item.colors.primary
-                    : "Not found"}
-                </h3>
-              </div>
-              <div className="card-details">
-                <h3>Attributes:</h3>
-                <h5>
-                  Spayed Neutered:{" "}
-                  {item.attributes.spayed_neutered === true
-                    ? "yes"
-                    : item.attributes.spayed_neutered === false
-                    ? "no"
-                    : "unknown"}
-                  ;{" "}
-                </h5>
-                <h5>
-                  House Trained:{" "}
-                  {item.attributes.house_trained === true
-                    ? "yes"
-                    : item.attributes.house_trained === false
-                    ? "no"
-                    : "unknown"}
-                  ;{" "}
-                </h5>
-                <h5>
-                  Declawed:{" "}
-                  {item.attributes.declawed === true
-                    ? "yes"
-                    : item.attributes.declawed === false
-                    ? "no"
-                    : "unknown"}
-                  ;{" "}
-                </h5>
-                <h5>
-                  Special Needs:{" "}
-                  {item.attributes.special_needs === true
-                    ? "yes"
-                    : item.attributes.special_needs === false
-                    ? "no"
-                    : "unknown"}
-                  ;{" "}
-                </h5>
-                <h5>
-                  Shots Current:{" "}
-                  {item.attributes.shots_current === true
-                    ? "yes"
-                    : item.attributes.shots_current === false
-                    ? "no"
-                    : "unknown"}
-                </h5>
-              </div>
+              {id && (
+                <div className="card-details">
+                  <h3>
+                    Color:{" "}
+                    {item.colors.primary && item.colors.primary
+                      ? item.colors.primary
+                      : "Not found"}
+                  </h3>
+                </div>
+              )}
+              {id && (
+                <div className="card-details">
+                  <h3>Attributes:</h3>
+                  <h5>
+                    Spayed Neutered:{" "}
+                    {item.attributes.spayed_neutered === true
+                      ? "yes"
+                      : item.attributes.spayed_neutered === false
+                      ? "no"
+                      : "unknown"}
+                    ;{" "}
+                  </h5>
+                  <h5>
+                    House Trained:{" "}
+                    {item.attributes.house_trained === true
+                      ? "yes"
+                      : item.attributes.house_trained === false
+                      ? "no"
+                      : "unknown"}
+                    ;{" "}
+                  </h5>
+                  <h5>
+                    Declawed:{" "}
+                    {item.attributes.declawed === true
+                      ? "yes"
+                      : item.attributes.declawed === false
+                      ? "no"
+                      : "unknown"}
+                    ;{" "}
+                  </h5>
+                  <h5>
+                    Special Needs:{" "}
+                    {item.attributes.special_needs === true
+                      ? "yes"
+                      : item.attributes.special_needs === false
+                      ? "no"
+                      : "unknown"}
+                    ;{" "}
+                  </h5>
+                  <h5>
+                    Shots Current:{" "}
+                    {item.attributes.shots_current === true
+                      ? "yes"
+                      : item.attributes.shots_current === false
+                      ? "no"
+                      : "unknown"}
+                  </h5>
+                </div>
+              )}
               {id && (
                 <div className="card-details">
                   <h3>Description:</h3>
@@ -171,6 +182,19 @@ const Card = (props) => {
                     {item.description && item.description
                       ? item.description
                       : "Not found"}
+                  </h5>
+                </div>
+              )}
+              {id && (
+                <div className="card-details">
+                  <h3>Tags:</h3>
+                  <h5>
+                    {item.tags[0] ? item.tags[0] : "Not found"}{" "}
+                    {item.tags[1] ? item.tags[1] : "Not found"};
+                    {item.tags[2] ? item.tags[2] : "Not found"};
+                    {item.tags[3] ? item.tags[3] : "Not found"};
+                    {item.tags[4] ? item.tags[4] : "Not found"};
+                    {item.tags[5] ? item.tags[5] : "Not found"};
                   </h5>
                 </div>
               )}
