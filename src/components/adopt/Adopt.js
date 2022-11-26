@@ -27,38 +27,22 @@ const Adopt = () => {
   const [age, setAge] = useState("");
   const [ages, setAges] = useState([]);
 
-  const [color, setColor] = useState("");
-  const [colors, setColors] = useState([]);
-
   const [check, setCheck] = useState("");
   const [checks, setChecks] = useState([]);
 
   //useEffect for type
-  //  useEffect(() => {
-  //     var typesArray = [
-  //       "Dog",
-  //       "Cat",
-  //       "Rabbit",
-  //       "Small & Furry",
-  //"Horse","Bird",
-  //       "Scales, Fins & Other",
-  //       "Barnyard",
-  //     ];
-  //     setTypes(typesArray);
-  //   }, []);
-
   useEffect(() => {
-    client.animalData.types().then((response) => {
-      var typesArray = [];
-      var length = response.data.types.length;
-      for (var i = 0; i < length; i++) {
-        //console.log(response.data.types[i].name);
-        typesArray.push(response.data.types[i].name);
-      }
-      //console.log("typesArray:");
-      //console.log(typesArray);
-      setTypes(typesArray);
-    });
+    var typesArray = [
+      "Dog",
+      "Cat",
+      "Rabbit",
+      "Small & Furry",
+      "Horse",
+      "Bird",
+      "Scales, Fins & Other",
+      "Barnyard",
+    ];
+    setTypes(typesArray);
   }, []);
 
   //useEffect for breed dog
@@ -127,22 +111,6 @@ const Adopt = () => {
     setAges(agesArray);
   }, []);
 
-  //useEffect for color
-  useEffect(() => {
-    client.animalData.types().then((response) => {
-      //console.log(response.data.breeds);
-      var colorsArray = [];
-      var length = response.data.types.length;
-      for (var i = 0; i < length; i++) {
-        //console.log(response.data.breeds[i].name);
-        colorsArray.push(response.data.types[i].colors[i]);
-      }
-      //console.log("colorsArray:");
-      //console.log(colorsArray);
-      setColors(colorsArray);
-    });
-  }, []);
-
   //useEffect for check
   useEffect(() => {
     var checksArray = ["Children", "Dogs", "Cats"];
@@ -150,47 +118,54 @@ const Adopt = () => {
   }, []);
 
   //button apply filters
-  const [click, handleClick] = useState(false);
+  const [click, setClick] = useState(false);
+  const handleClick = () => {
+    if (click == false) {
+      //validare type==selected
+      let params = {};
+      if (type != "") params.type = type;
+      if (breed != "") params.breed = breed;
+      if (gender != "") params.gender = gender;
+      if (size != "") params.size = size;
+      if (age != "") params.age = age;
+
+      client.animal.search(params).then((response) => {
+        var animalsArray = [];
+
+        var length = response.data.animals.length;
+        for (var i = 0; i < length; i++) {
+          var animal = {
+            img: response.data.animals[i].photos[0],
+            id: response.data.animals[i].id,
+            name: response.data.animals[i].name,
+            breed: response.data.animals[i].breeds["primary"],
+            gender: response.data.animals[i].gender,
+            size: response.data.animals[i].size,
+            age: response.data.animals[i].age,
+            colors: response.data.animals[i].colors,
+            environment: response.data.animals[i].environment,
+            attributes: response.data.animals[i].attributes,
+            description: response.data.animals[i].description,
+          };
+          animalsArray.push(animal);
+        }
+        setName(animalsArray);
+      });
+    } else {
+      //reset filtres
+      setType("");
+      setType("");
+      setBreed("");
+      setGender("");
+      setSize("");
+      setAge("");
+      setCheck("");
+      setName([]);
+    }
+    setClick(!click);
+  };
 
   const [name, setName] = useState([]);
-
-  useEffect(() => {
-    client.animal.search().then((response) => {
-      var animalsArray = [];
-      //console.log("animalsArray: ");
-      //console.log(animalsArray);
-
-      //console.log("response.data.animals: ");
-      //console.log(response.data.animals);
-
-      var length = response.data.animals.length;
-      // console.log("Number of animals found in Cards: ");
-      // console.log(length);
-
-      for (var i = 0; i < length; i++) {
-        var animal = {
-          img: response.data.animals[i].photos[0],
-          id: response.data.animals[i].id,
-          name: response.data.animals[i].name,
-          breed: response.data.animals[i].breeds["primary"],
-          gender: response.data.animals[i].gender,
-          size: response.data.animals[i].size,
-          age: response.data.animals[i].age,
-          colors: response.data.animals[i].colors,
-          id: response.data.animals[i].id,
-          environment: response.data.animals[i].environment,
-          attributes: response.data.animals[i].attributes,
-          description: response.data.animals[i].description,
-        };
-        //console.log("animal:");
-        //console.log(animal);
-        animalsArray.push(animal);
-      }
-      setName(animalsArray);
-      //console.log("animalsArray in Cards:");
-      //console.log(animalsArray);
-    });
-  }, []);
 
   return (
     <div className="adopt-container">
@@ -248,15 +223,6 @@ const Adopt = () => {
             <Dropdown selected={age} setSelected={setAge} options={ages} />
           </div>
 
-          <div className="drop6">
-            <h2>Color:</h2>
-            <Dropdown
-              selected={color}
-              setSelected={setColor}
-              options={colors}
-            />
-          </div>
-
           <div className="drop7">
             <h2>Good with:</h2>
             <Dropdown
@@ -269,19 +235,15 @@ const Adopt = () => {
       </div>
 
       <div className="button">
-        <button className="filter-btn" onClick={() => handleClick(!click)}>
+        <button className="filter-btn" onClick={() => handleClick()}>
           {click === true ? "Reset Filters" : "Apply filters"}
         </button>
       </div>
 
       <div className="cards">
         {click
-          ? name.map((item, index) => {
-              return (
-                <>
-                  <Card key={index} item={item} />
-                </>
-              );
+          ? name.map((item) => {
+              return <Card key={item.id} item={item} />;
             })
           : null}
       </div>

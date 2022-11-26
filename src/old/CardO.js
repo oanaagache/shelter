@@ -51,7 +51,9 @@ const CardO = (props) => {
 
             <div className="card-inner">
               <div className="card-details">
-                <h1>{item.name}</h1>
+                <h1>
+                  {item.name} {item.id}
+                </h1>
               </div>
 
               <div className="card-details">
