@@ -1,15 +1,14 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { Form } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./AdoptionForm.css";
 import { Link } from "react-router-dom";
-import logo from "./others/images/image5.svg";
+import logo from "../../images/image5.svg";
 import { useNavigate } from "react-router-dom";
 import { useParams } from "react-router-dom";
-import CountrySelector from "../CountrySelector";
+import CountrySelector from "../countryselector/CountrySelector";
 
 const AdoptionForm = (props) => {
-  const [listResponses, setListResponses] = useState();
   //primesc prin props de la App.js functia setListResponses care realizeaza inserarea unui nou animal in lista
 
   // console.log("listResponses");

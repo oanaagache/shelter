@@ -39,6 +39,12 @@
 }
 
 .adoption-form {
+  margin: auto;
+  justify-content: center;
+  display: flex;
+}
+
+.adoption-form {
   padding: 0 120px 0 120px;
 }
 

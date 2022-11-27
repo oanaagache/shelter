@@ -156,7 +156,6 @@ const Adopt = () => {
 
       client.animal.search(params).then((response) => {
         var animalsArray = [];
-
         var length = response.data.animals.length;
         for (var i = 0; i < length; i++) {
           var animal = {

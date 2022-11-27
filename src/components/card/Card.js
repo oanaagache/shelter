@@ -54,13 +54,7 @@ const Card = (props) => {
                 margin: "25px",
               }}
               onClick={() => navigate(`/card/${item.id}`)}
-              src={
-                item.img
-                  ? item.img["full"]
-                  : [logo2]
-                  ? item.img["large"]
-                  : item.img["medium"]
-              }
+              src={item.img ? item.img["full"] : [logo2]}
             />
 
             <div className="card-inner">
@@ -189,12 +183,12 @@ const Card = (props) => {
                 <div className="card-details">
                   <h3>Tags:</h3>
                   <h5>
-                    {item.tags[0] ? item.tags[0] : "Not found"}{" "}
-                    {item.tags[1] ? item.tags[1] : "Not found"};
-                    {item.tags[2] ? item.tags[2] : "Not found"};
-                    {item.tags[3] ? item.tags[3] : "Not found"};
-                    {item.tags[4] ? item.tags[4] : "Not found"};
-                    {item.tags[5] ? item.tags[5] : "Not found"};
+                    {item.tags[0] ? item.tags[0] : ""}{" "}
+                    {item.tags[1] ? item.tags[1] : ""}{" "}
+                    {item.tags[2] ? item.tags[2] : ""}{" "}
+                    {item.tags[3] ? item.tags[3] : ""}{" "}
+                    {item.tags[4] ? item.tags[4] : ""}{" "}
+                    {item.tags[5] ? item.tags[5] : ""}{" "}
                   </h5>
                 </div>
               )}
