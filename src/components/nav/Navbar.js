@@ -4,24 +4,28 @@ import { NavLink } from "react-router-dom";
 import logo from "../../images/image.png";
 import { useNavigate } from "react-router-dom";
 import { useParams } from "react-router-dom";
+import Login from "../login/Login";
 
 const Navbar = () => {
-  const { loggedUser } = useParams();
+  const { isLoggedIn, handleLogin } = useParams();
   let navigate = useNavigate();
-  const userName = JSON.parse(localStorage.getItem("user"));
+
+  const [click, setClick] = useState(false);
+  const handleClick = () => {
+    if (!click) {
+      localStorage.removeItem("loggedIn");
+      setClick(!click);
+      navigate("/login");
+    }
+  };
+
   const handleLogOut = () => {
     localStorage.removeItem("loggedIn");
     navigate("/login");
   };
-  const [click, setClick] = useState(false);
-  const handleClick = () => {
-    if (click == true) {
-      localStorage.removeItem("loggedIn");
-      navigate("/login");
 
-      setClick(!click);
-    }
-  };
+  const userName = JSON.parse(localStorage.getItem("user"));
+
   return (
     <div className="header">
       <div className="header-content">
@@ -43,6 +47,18 @@ const Navbar = () => {
               className="about-nav"
             >
               About us
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to="/adopt"
+              style={({ isActive }) => ({
+                color: isActive ? " purple" : "black",
+              })}
+              end
+              className="about-nav"
+            >
+              Adopt
             </NavLink>
           </li>
           <li>
@@ -69,18 +85,7 @@ const Navbar = () => {
               Foster
             </NavLink>
           </li>
-          <li>
-            <NavLink
-              to="/adopt"
-              style={({ isActive }) => ({
-                color: isActive ? " purple" : "black",
-              })}
-              end
-              className="about-nav"
-            >
-              Adopt
-            </NavLink>
-          </li>
+
           <li>
             <NavLink
               to="/other"
@@ -93,30 +98,16 @@ const Navbar = () => {
               Other
             </NavLink>
           </li>
-          {/* <li>Welcome {userName.name}!</li> */}
-          {/* <li>
-            <NavLink
-              to="/register"
-              style={({ isActive }) => ({
-                color: isActive ? " purple" : "black",
-              })}
-              end
-              className="about-nav"
-            >
-              LogIn
-            </NavLink>
-          </li> */}
-          {/* <li>
-            {loggedUser ? (
-              loggedUser
-            ) : (
-              <div className="loggedIn">{userName.name} </div>
-            )}
-          </li> */}
-          {/* <button onClick={handleLogOut}>LogOut</button> */}
-          <button onClick={() => handleClick()}>
-            {click === true ? "LogIn" : "LogOut"}
-          </button>
+
+          {!isLoggedIn ? (
+            <>
+              <button onClick={() => handleClick()}>
+                {!click ? "LogOut" : "LoggedOut"}
+              </button>
+            </>
+          ) : (
+            "LogIn"
+          )}
         </ul>
       </div>
     </div>

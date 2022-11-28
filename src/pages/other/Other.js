@@ -39,7 +39,7 @@ const Other = () => {
               <h2>Dog Adoption Articles</h2>
               <h3>Learn more about caring for your new dog.</h3>
 
-              <div className="button-adopt" style={{ paddingLeft: 20 }}>
+              <div className="button-adopt" style={{ paddingLeft: 100 }}>
                 <button
                   className="adopt"
                   onClick={() => {
@@ -65,7 +65,7 @@ const Other = () => {
             <div className="card-details">
               <h2>Cat Adoption Articles</h2>
               <h3>Helpful insights on what to expect.</h3>
-              <div className="button-adopt" style={{ paddingLeft: 20 }}>
+              <div className="button-adopt" style={{ paddingLeft: 100 }}>
                 <button
                   className="adopt"
                   onClick={() => {

@@ -59,29 +59,29 @@ const Card = (props) => {
 
             <div className="card-inner">
               <div className="card-details">
-                <h1>{item.name}</h1>
+                <h2>{item.name}</h2>
               </div>
 
               <div className="card-details">
-                <h3> Breed:{item.breed} </h3>
+                <h6> Breed:{item.breed} </h6>
               </div>
 
               <div className="card-details">
-                <h3> Gender: {item.gender}</h3>
+                <h6> Gender: {item.gender}</h6>
               </div>
 
               <div className="card-details">
-                <h3> Size:{item.size} </h3>
+                <h6> Size:{item.size} </h6>
               </div>
 
               <div className="card-details">
-                <h3>Age:{item.age}</h3>
+                <h6>Age:{item.age}</h6>
               </div>
 
               <div className="card-details">
-                <h3>Good with:</h3>
+                <h6>Good with:</h6>
                 <div className="card-check">
-                  <h5>
+                  <h6>
                     Children:
                     {item.environment.children === true
                       ? "yes"
@@ -89,8 +89,8 @@ const Card = (props) => {
                       ? "no"
                       : "unknown"}
                     ;{" "}
-                  </h5>
-                  <h5>
+                  </h6>
+                  <h6>
                     Dogs:{" "}
                     {item.environment.dogs === true
                       ? "yes"
@@ -98,98 +98,97 @@ const Card = (props) => {
                       ? "no"
                       : "unknown"}
                     ;{" "}
-                  </h5>
-                  <h5>
+                  </h6>
+                  <h6>
                     Cats:{" "}
                     {item.environment.cats === true
                       ? "yes"
                       : item.environment.cats === false
                       ? "no"
                       : "unknown"}
-                  </h5>
+                  </h6>
                 </div>
               </div>
 
               {id && (
                 <div className="card-details">
-                  <h3>
+                  <h6>
                     Color:{" "}
                     {item.colors.primary && item.colors.primary
                       ? item.colors.primary
                       : "Not found"}
-                  </h3>
+                  </h6>
                 </div>
               )}
               {id && (
                 <div className="card-details">
-                  <h3>Attributes:</h3>
-                  <h5>
-                    Spayed Neutered:{" "}
-                    {item.attributes.spayed_neutered === true
-                      ? "yes"
-                      : item.attributes.spayed_neutered === false
-                      ? "no"
-                      : "unknown"}
-                    ;{" "}
-                  </h5>
-                  <h5>
-                    House Trained:{" "}
-                    {item.attributes.house_trained === true
-                      ? "yes"
-                      : item.attributes.house_trained === false
-                      ? "no"
-                      : "unknown"}
-                    ;{" "}
-                  </h5>
-                  <h5>
-                    Declawed:{" "}
-                    {item.attributes.declawed === true
-                      ? "yes"
-                      : item.attributes.declawed === false
-                      ? "no"
-                      : "unknown"}
-                    ;{" "}
-                  </h5>
-                  <h5>
-                    Special Needs:{" "}
-                    {item.attributes.special_needs === true
-                      ? "yes"
-                      : item.attributes.special_needs === false
-                      ? "no"
-                      : "unknown"}
-                    ;{" "}
-                  </h5>
-                  <h5>
-                    Shots Current:{" "}
-                    {item.attributes.shots_current === true
-                      ? "yes"
-                      : item.attributes.shots_current === false
-                      ? "no"
-                      : "unknown"}
-                  </h5>
+                  <h6>Attributes:</h6>
+                  <div className="card-check">
+                    <h6>
+                      Spayed Neutered:{" "}
+                      {item.attributes.spayed_neutered === true
+                        ? "yes"
+                        : item.attributes.spayed_neutered === false
+                        ? "no"
+                        : "unknown"}
+                      ;{" "}
+                    </h6>
+                    <h6>
+                      House Trained:{" "}
+                      {item.attributes.house_trained === true
+                        ? "yes"
+                        : item.attributes.house_trained === false
+                        ? "no"
+                        : "unknown"}
+                      ;{" "}
+                    </h6>
+                    <h6>
+                      Declawed:{" "}
+                      {item.attributes.declawed === true
+                        ? "yes"
+                        : item.attributes.declawed === false
+                        ? "no"
+                        : "unknown"}
+                      ;{" "}
+                    </h6>
+                    <h6>
+                      Special Needs:{" "}
+                      {item.attributes.special_needs === true
+                        ? "yes"
+                        : item.attributes.special_needs === false
+                        ? "no"
+                        : "unknown"}
+                      ;{" "}
+                    </h6>
+                    <h6>
+                      Shots Current:{" "}
+                      {item.attributes.shots_current === true
+                        ? "yes"
+                        : item.attributes.shots_current === false
+                        ? "no"
+                        : "unknown"}
+                    </h6>
+                  </div>
                 </div>
               )}
               {id && (
                 <div className="card-details">
-                  <h3>Description:</h3>
-                  <h5>
+                  <h6>Description:</h6>
+                  <h6>
                     {item.description && item.description
                       ? item.description
                       : "Not found"}
-                  </h5>
+                  </h6>
                 </div>
               )}
               {id && (
                 <div className="card-details">
-                  <h3>Tags:</h3>
-                  <h5>
-                    {item.tags[0] ? item.tags[0] : ""}{" "}
+                  <h6>
+                    Tags: {item.tags[0] ? item.tags[0] : ""}{" "}
                     {item.tags[1] ? item.tags[1] : ""}{" "}
                     {item.tags[2] ? item.tags[2] : ""}{" "}
                     {item.tags[3] ? item.tags[3] : ""}{" "}
-                    {item.tags[4] ? item.tags[4] : ""}{" "}
-                    {item.tags[5] ? item.tags[5] : ""}{" "}
-                  </h5>
+                  </h6>
                 </div>
               )}
             </div>

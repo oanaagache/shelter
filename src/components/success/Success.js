@@ -36,7 +36,7 @@ const Success = () => {
           Back to Adopt page
         </button>
       </div>
-      <div className="button">
+      {/* <div className="button">
         <button
           className="backHome"
           onClick={() => {
@@ -45,7 +45,7 @@ const Success = () => {
         >
           See List
         </button>
-      </div>
+      </div> */}
     </div>
   );
 };

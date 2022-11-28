@@ -63,6 +63,7 @@ function App() {
             />
           }
         />
+        <Route path="/adoptionform/:user" element={<AdoptionForm />} />
         <Route path="/success/:name" element={<Success />} />
         <Route
           path="/responses"
@@ -76,6 +77,8 @@ function App() {
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} />
         <Route path="/Navbar:loggedUser" element={<Navbar />} />
+        <Route path="/Navbar:isLoggedIn" element={<Navbar />} />
+        <Route path="/Navbar: handleLogin" element={<Navbar />} />
       </Routes>
       <Footer />
     </Router>

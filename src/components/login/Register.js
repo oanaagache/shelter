@@ -10,6 +10,7 @@ const Register = () => {
 
   const [user, setUser] = useState({
     name: "",
+    surname: "",
     email: "",
     password: "",
   });
@@ -43,15 +44,14 @@ const Register = () => {
           className="adoption-form"
           style={
             ({ justifyContent: "center" },
-            { display: "flex" },
-            { alignItems: "center" },
-            { margin: "auto" })
+            { margin: "auto" },
+            { paddingLeft: 800 })
           }
         >
-          <Form onSubmit={handleSubmit}>
+          <Form onSubmit={handleSubmit} style={{ paddingTop: 40 }}>
             <div style={{ paddingTop: 40 }}>
-              <div className="form-group1 ">
-                <label htmlFor="inputFirstName">Name:</label>
+              <div className="form-group col-md-4 ">
+                <label htmlFor="inputName">Name:</label>
                 <input
                   name="name"
                   className="form-control"
@@ -66,8 +66,24 @@ const Register = () => {
                   }
                 />
               </div>
+              <div className="form-group col-md-4">
+                <label htmlFor="inputSurname">Surname:</label>
+                <input
+                  name="surname"
+                  className="form-control"
+                  id="inputSurname"
+                  placeholder="Surname"
+                  value={user.surname}
+                  onChange={(e) =>
+                    setUser({
+                      ...user,
+                      [e.target.name]: e.target.value,
+                    })
+                  }
+                />
+              </div>
 
-              <div className="form-group ">
+              <div className="form-group col-md-4">
                 <label htmlFor="inputLastName">Email:</label>
                 <input
                   name="email"
@@ -84,7 +100,7 @@ const Register = () => {
                 />
               </div>
 
-              <div className="form-group ">
+              <div className="form-group col-md-4">
                 <label htmlFor="inputAddress1">Password:</label>
                 <input
                   name="password"
@@ -109,7 +125,7 @@ const Register = () => {
                   </h6>
                 </span>
               </div>
-              <div className="button">
+              <div className="button" style={{ paddingRight: 700 }}>
                 {" "}
                 <button type="submit" className="filter-btn">
                   Register

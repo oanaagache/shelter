@@ -13,6 +13,8 @@ const Login = () => {
     password: "",
   });
 
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+
   //store values in localStorage
   const handleLogin = (evt) => {
     evt.preventDefault();
@@ -25,9 +27,15 @@ const Login = () => {
     ) {
       localStorage.setItem("loggedIn", true);
       navigate("/");
+      setIsLoggedIn(true);
     } else {
       alert("Wrong Email or Password");
     }
+  };
+
+  const handleLogOut = () => {
+    localStorage.removeItem("loggedIn");
+    navigate("/login");
   };
 
   return (
@@ -44,21 +52,20 @@ const Login = () => {
               </h2>
             </div>
           </div>
-          <h1 className="adoption-title">Create Acount</h1>
+          <h1 className="adoption-title">Login</h1>
         </div>
 
         <div
           className="adoption-form"
           style={
             ({ justifyContent: "center" },
-            { display: "flex" },
-            { alignItems: "center" },
-            { margin: "auto" })
+            { margin: "auto" },
+            { paddingLeft: 800 })
           }
         >
-          <Form onSubmit={handleLogin}>
-            <div style={{ paddingTop: 40 }}>
-              <div className="form-group ">
+          <Form onSubmit={handleLogin} style={{ paddingTop: 40 }}>
+            <div>
+              <div className="form-group col-md-4">
                 <label htmlFor="inputLastName">Email:</label>
                 <input
                   name="email"
@@ -75,7 +82,7 @@ const Login = () => {
                 />
               </div>
 
-              <div className="form-group ">
+              <div className="form-group col-md-4">
                 <label htmlFor="inputAddress1">Password:</label>
                 <input
                   name="password"
@@ -89,7 +96,6 @@ const Login = () => {
                       [e.target.name]: e.target.value,
                     })
                   }
-                  //onChange={(e) => setUser(e.target.value)}
                 />
               </div>
               <div style={{ paddingTop: 15 }}>
@@ -100,7 +106,7 @@ const Login = () => {
                   </h6>
                 </span>
               </div>
-              <div className="button">
+              <div className="button" style={{ paddingRight: 700 }}>
                 {" "}
                 <button type="submit" className="filter-btn">
                   Login

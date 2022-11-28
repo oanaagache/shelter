@@ -21,7 +21,7 @@
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.06), 0 2px 3px rgba(0, 0, 0, 0.12);
   width: 350px;
   cursor: pointer;
-  margin: 45px;
+  margin: 25px;
 }
 
 .img {
@@ -31,11 +31,11 @@
 }
 
 .card-inner {
-  padding: 25px;
+  padding: 0 25px 15px 25px;
 }
 
 .card-details {
-  padding: 5px;
+  padding: 2px;
 }
 
 .card-check {
