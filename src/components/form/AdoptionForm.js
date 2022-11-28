@@ -12,17 +12,15 @@ import userEvent from "@testing-library/user-event";
 const AdoptionForm = (props) => {
   const [listResponses, setListResponses] = useState();
   //primesc prin props de la App.js functia setListResponses care realizeaza inserarea unui nou animal in lista
-  const { name, user } = useParams();
+  const { name, isLoggedIn } = useParams();
 
   const [firstName, setFirstName] = useState("");
   const [surname, setSurname] = useState("");
   const [address1, setAddress1] = useState("");
-  const [address2, setAddress2] = useState("");
+  const [email, setEmail] = useState("");
   const [city, setCity] = useState("");
   const [country, setCountry] = useState("");
   const [code, setCode] = useState("");
-  const [phoneNo, setPhoneNo] = useState("");
-  const [email, setEmail] = useState("");
   const [status, setStatus] = useState("");
   const [routine, setRoutine] = useState("");
   let navigate = useNavigate();
@@ -33,13 +31,11 @@ const AdoptionForm = (props) => {
     const form = {
       firstName: firstName,
       surname: surname,
+      email: email,
       address1: address1,
-      address2: address2,
       city: city,
       country: country,
       code: code,
-      phoneNo: phoneNo,
-      email: email,
       status: status,
       routine: routine,
     };
@@ -51,16 +47,13 @@ const AdoptionForm = (props) => {
 
     setFirstName("");
     setSurname("");
+    setEmail("");
     setAddress1("");
-    setAddress2("");
     setCity("");
     setCountry("");
     setCode("");
-    setPhoneNo("");
-    setEmail("");
     setStatus("");
     setRoutine("");
-
     navigate(`/success/${name}`);
   };
 
@@ -87,22 +80,6 @@ const AdoptionForm = (props) => {
         <Form onSubmit={Submit} style={{ paddingLeft: 300 }}>
           <div className="adoption-form">
             <div className="form-row">
-              {/* {!user ? (
-                { user }
-              ) : (
-                <div className="form-group col-md-3">
-                  <label htmlFor="inputName">Name:</label>
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="inputName"
-                    placeholder="Name"
-                    value={firstName}
-                    onChange={(e) => setFirstName(e.target.value)}
-                  />
-                </div>
-              )} */}
-
               <div className="form-group col-md-3">
                 <label htmlFor="inputSurname">Surname:</label>
                 <input

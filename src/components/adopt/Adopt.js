@@ -102,65 +102,65 @@ const Adopt = () => {
     });
   }, []);
 
-  //useEffect for breed Rabbit
-  useEffect(() => {
-    client.animalData.breeds("Rabbit").then((response) => {
-      var breedsArray3 = [];
-      var length = response.data.breeds.length;
-      for (var i = 0; i < length; i++) {
-        breedsArray3.push(response.data.breeds[i].name);
-      }
-      setBreeds(breedsArray3);
-    });
-  }, []);
+  // //useEffect for breed Rabbit
+  // useEffect(() => {
+  //   client.animalData.breeds("Rabbit").then((response) => {
+  //     var breedsArray3 = [];
+  //     var length = response.data.breeds.length;
+  //     for (var i = 0; i < length; i++) {
+  //       breedsArray3.push(response.data.breeds[i].name);
+  //     }
+  //     setBreeds(breedsArray3);
+  //   });
+  // }, []);
 
-  //useEffect for breed Small & Furry
-  useEffect(() => {
-    client.animalData.breeds("Small & Furry").then((response) => {
-      var breedsArray4 = [];
-      var length = response.data.breeds.length;
-      for (var i = 0; i < length; i++) {
-        breedsArray4.push(response.data.breeds[i].name);
-      }
-      setBreeds(breedsArray4);
-    });
-  }, []);
+  // //useEffect for breed Small & Furry
+  // useEffect(() => {
+  //   client.animalData.breeds("Small & Furry").then((response) => {
+  //     var breedsArray4 = [];
+  //     var length = response.data.breeds.length;
+  //     for (var i = 0; i < length; i++) {
+  //       breedsArray4.push(response.data.breeds[i].name);
+  //     }
+  //     setBreeds(breedsArray4);
+  //   });
+  // }, []);
 
-  //useEffect for breed "Horse"
-  useEffect(() => {
-    client.animalData.breeds("Horse").then((response) => {
-      var breedsArray5 = [];
-      var length = response.data.breeds.length;
-      for (var i = 0; i < length; i++) {
-        breedsArray5.push(response.data.breeds[i].name);
-      }
-      setBreeds(breedsArray5);
-    });
-  }, []);
+  // //useEffect for breed "Horse"
+  // useEffect(() => {
+  //   client.animalData.breeds("Horse").then((response) => {
+  //     var breedsArray5 = [];
+  //     var length = response.data.breeds.length;
+  //     for (var i = 0; i < length; i++) {
+  //       breedsArray5.push(response.data.breeds[i].name);
+  //     }
+  //     setBreeds(breedsArray5);
+  //   });
+  // }, []);
 
-  //useEffect for breed Scales, Fins & Other
-  useEffect(() => {
-    client.animalData.breeds("Scales, Fins & Other").then((response) => {
-      var breedsArray6 = [];
-      var length = response.data.breeds.length;
-      for (var i = 0; i < length; i++) {
-        breedsArray6.push(response.data.breeds[i].name);
-      }
-      setBreeds(breedsArray6);
-    });
-  }, []);
+  // //useEffect for breed Scales, Fins & Other
+  // useEffect(() => {
+  //   client.animalData.breeds("Scales, Fins & Other").then((response) => {
+  //     var breedsArray6 = [];
+  //     var length = response.data.breeds.length;
+  //     for (var i = 0; i < length; i++) {
+  //       breedsArray6.push(response.data.breeds[i].name);
+  //     }
+  //     setBreeds(breedsArray6);
+  //   });
+  // }, []);
 
-  //useEffect for breed Barnyard
-  useEffect(() => {
-    client.animalData.breeds("Barnyard").then((response) => {
-      var breedsArray7 = [];
-      var length = response.data.breeds.length;
-      for (var i = 0; i < length; i++) {
-        breedsArray7.push(response.data.breeds[i].name);
-      }
-      setBreeds(breedsArray7);
-    });
-  }, []);
+  // //useEffect for breed Barnyard
+  // useEffect(() => {
+  //   client.animalData.breeds("Barnyard").then((response) => {
+  //     var breedsArray7 = [];
+  //     var length = response.data.breeds.length;
+  //     for (var i = 0; i < length; i++) {
+  //       breedsArray7.push(response.data.breeds[i].name);
+  //     }
+  //     setBreeds(breedsArray7);
+  //   });
+  // }, []);
 
   //useEffect for gender
   useEffect(() => {
@@ -189,14 +189,14 @@ const Adopt = () => {
   //button apply filters
   const [click, setClick] = useState(false);
   const handleClick = () => {
-    if (click == false) {
+    if (click === false) {
       //validare type==selected
       let params = {};
-      if (type != "") params.type = type;
-      if (breed != "") params.breed = breed;
-      if (gender != "") params.gender = gender;
-      if (size != "") params.size = size;
-      if (age != "") params.age = age;
+      if (type !== "") params.type = type;
+      if (breed !== "") params.breed = breed;
+      if (gender !== "") params.gender = gender;
+      if (size !== "") params.size = size;
+      if (age !== "") params.age = age;
 
       client.animal.search(params).then((response) => {
         var animalsArray = [];
@@ -241,7 +241,11 @@ const Adopt = () => {
       <div className="adopt-header">
         <div className="adopt-content">
           <div className="adopt-inner">
-            <img style={({ height: 1 }, { padding: 10 })} src={logo} />
+            <img
+              style={({ height: 1 }, { padding: 10 })}
+              src={logo}
+              alt="Not found"
+            />
             <h2>
               <Link to="/" style={{ textDecoration: "none" }}>
                 Back

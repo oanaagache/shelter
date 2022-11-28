@@ -6,18 +6,20 @@ import { useParams } from "react-router-dom";
 import { Client } from "@petfinder/petfinder-js";
 
 const Card = (props) => {
-  const { id } = useParams();
+  const { id, isLoggedIn } = useParams();
   let navigate = useNavigate();
   const client = new Client({
     apiKey: "yE34mF5y8uaTkcDpopHWiZnWGoYJX5Ufw59vtFDpOJU78uW5ur",
     secret: "HMpwZ6VMhZwUWXYpb9nVmliqdElYYT96mezpupJk",
   });
   const [item, setItem] = useState(false);
+  console.log("isLoggedIn");
+  console.log(props.isLoggedIn);
 
   useEffect(() => {
     if (id) {
       client.animal.search({ id: id }).then((response) => {
-        // console.log("response animal");
+        // console.log("response.data.animals:");
         // console.log(response.data.animals.find((element) => element.id == id));
         const obj = response.data.animals.find((element) => element.id == id);
         // console.log("animal");
@@ -42,6 +44,7 @@ const Card = (props) => {
       setItem(props.item);
     }
   }, []);
+
   return (
     <>
       {item && (
@@ -184,7 +187,8 @@ const Card = (props) => {
               {id && (
                 <div className="card-details">
                   <h6>
-                    Tags: {item.tags[0] ? item.tags[0] : ""}{" "}
+                    Tags:
+                    {item.tags[0] ? item.tags[0] : ""}{" "}
                     {item.tags[1] ? item.tags[1] : ""}{" "}
                     {item.tags[2] ? item.tags[2] : ""}{" "}
                     {item.tags[3] ? item.tags[3] : ""}{" "}
@@ -198,7 +202,9 @@ const Card = (props) => {
               <button
                 className="adopt"
                 onClick={() => {
-                  navigate(`/adoptionform/${item.name}`);
+                  !isLoggedIn
+                    ? navigate(`/adoptionform/${item.name}`)
+                    : navigate("/login");
                 }}
               >
                 Adopt

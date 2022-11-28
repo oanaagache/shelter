@@ -114,7 +114,6 @@ const Register = () => {
                       [e.target.name]: e.target.value,
                     })
                   }
-                  //onChange={(e) => setUser(e.target.value)}
                 />
               </div>
               <div style={{ paddingTop: 15 }}>

@@ -5,9 +5,9 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { Link } from "react-router-dom";
 import logo from "../../images/image4.svg";
 
-const Login = () => {
+const Login = (props) => {
+  //const { handleLogin, setUser, user } = props;
   let navigate = useNavigate();
-
   const [user, setUser] = useState({
     email: "",
     password: "",
@@ -25,9 +25,13 @@ const Login = () => {
       user.email === loggedUser.email &&
       user.password === loggedUser.password
     ) {
-      localStorage.setItem("loggedIn", true);
+      // localStorage.setItem("loggedIn", true);
       navigate("/");
       setIsLoggedIn(true);
+      console.log("loggedUser");
+      console.log(loggedUser);
+      console.log("user");
+      console.log(user);
     } else {
       alert("Wrong Email or Password");
     }

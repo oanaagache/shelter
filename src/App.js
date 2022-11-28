@@ -21,25 +21,55 @@ import Register from "./components/login/Register";
 import Login from "./components/login/Login";
 
 function App() {
+  // const [user, setUser] = useState({
+  //   email: "",
+  //   password: "",
+  // });
+
+  // const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+  // //store values in localStorage
+  // const handleLogin = (evt) => {
+  //   evt.preventDefault();
+
+  //   //memoreaza user codificata in json
+  //   const loggedUser = JSON.parse(localStorage.getItem("user"));
+  //   if (
+  //     user.email === loggedUser.email &&
+  //     user.password === loggedUser.password
+  //   ) {
+  //     // localStorage.setItem("loggedIn", true);
+  //     //navigate("/");
+  //     setIsLoggedIn(true);
+  //     console.log("loggedUser");
+  //     console.log(loggedUser);
+  //     console.log("user");
+  //     console.log(user);
+  //   } else {
+  //     alert("Wrong Email or Password");
+  //   }
+  // };
+
   const [listResponses, setListResponses] = useState([]);
 
-  //Se preia din localStorage continutul asociat cheii "shelter".
+  //Se preia din localStorage continutul asociat cheii "user".
   useEffect(() => {
-    setListResponses(JSON.parse(localStorage.getItem("shelter")));
+    setListResponses(JSON.parse(localStorage.getItem("user")));
   }, []);
 
   useEffect(() => {
     //memoreaza listResponses codificata in json
-    localStorage.setItem("shelter", JSON.stringify(listResponses));
+    localStorage.setItem("user", JSON.stringify(listResponses));
   }, [listResponses]);
 
-  //console.log(listResponses);
+  console.log("listResponses:");
+  console.log(listResponses);
   var newArray = listResponses.filter((listResponses) => {
-    return listResponses.lastName !== "Neacsu";
+    return listResponses.email !== "Neacsu";
   });
 
   useEffect(() => {
-    localStorage.setItem("shelter", JSON.stringify(newArray));
+    localStorage.setItem("user", JSON.stringify(newArray));
   }, [newArray]);
 
   return (
@@ -54,6 +84,10 @@ function App() {
         <Route path="/other" element={<Other />} />
         <Route path="/card" element={<Card />} />
         <Route path="/card/:id" element={<Card />} />
+        <Route path="/card/:user" element={<Card />} />
+        <Route path="/card/:loggedUser" element={<Card />} />
+        <Route path="/card/: isLoggedIn" element={<Card />} />
+
         <Route
           path="/adoptionform/:name"
           element={
@@ -64,14 +98,11 @@ function App() {
           }
         />
         <Route path="/adoptionform/:user" element={<AdoptionForm />} />
+        <Route path="/adoptionform/:isLoggedIn" element={<AdoptionForm />} />
         <Route path="/success/:name" element={<Success />} />
-        <Route
-          path="/responses"
-          element={<Responses listResponses={listResponses} />}
-        />
+
         <Route path="/details" element={<Details />} />
         <Route path="/countryselector" element={<CountrySelector />} />
-        <Route path="/list" element={<List listResponses={listResponses} />} />
         <Route path="/articlesdog" element={<ArticlesDog />} />
         <Route path="/articlescat" element={<ArticlesCat />} />
         <Route path="/register" element={<Register />} />
@@ -79,6 +110,11 @@ function App() {
         <Route path="/Navbar:loggedUser" element={<Navbar />} />
         <Route path="/Navbar:isLoggedIn" element={<Navbar />} />
         <Route path="/Navbar: handleLogin" element={<Navbar />} />
+        {/* <Route
+          path="/responses"
+          element={<Responses listResponses={listResponses} />}
+        /> */}
+        {/* <Route path="/list" element={<List listResponses={listResponses} />} /> */}
       </Routes>
       <Footer />
     </Router>
