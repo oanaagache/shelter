@@ -21,56 +21,27 @@ import Register from "./components/login/Register";
 import Login from "./components/login/Login";
 
 function App() {
-  // const [user, setUser] = useState({
-  //   email: "",
-  //   password: "",
+  // const [listResponses, setListResponses] = useState([]);
+
+  // //Se preia din localStorage continutul asociat cheii "user".
+  // useEffect(() => {
+  //   setListResponses(JSON.parse(localStorage.getItem("user")));
+  // }, []);
+
+  // useEffect(() => {
+  //   //memoreaza listResponses codificata in json
+  //   localStorage.setItem("user", JSON.stringify(listResponses));
+  // }, [listResponses]);
+
+  // // console.log("listResponses:");
+  // // console.log(listResponses);
+  // var newArray = listResponses.filter((listResponses) => {
+  //   return listResponses.email !== "Neacsu";
   // });
 
-  // const [isLoggedIn, setIsLoggedIn] = useState(false);
-
-  // //store values in localStorage
-  // const handleLogin = (evt) => {
-  //   evt.preventDefault();
-
-  //   //memoreaza user codificata in json
-  //   const loggedUser = JSON.parse(localStorage.getItem("user"));
-  //   if (
-  //     user.email === loggedUser.email &&
-  //     user.password === loggedUser.password
-  //   ) {
-  //     // localStorage.setItem("loggedIn", true);
-  //     //navigate("/");
-  //     setIsLoggedIn(true);
-  //     console.log("loggedUser");
-  //     console.log(loggedUser);
-  //     console.log("user");
-  //     console.log(user);
-  //   } else {
-  //     alert("Wrong Email or Password");
-  //   }
-  // };
-
-  const [listResponses, setListResponses] = useState([]);
-
-  //Se preia din localStorage continutul asociat cheii "user".
-  useEffect(() => {
-    setListResponses(JSON.parse(localStorage.getItem("user")));
-  }, []);
-
-  useEffect(() => {
-    //memoreaza listResponses codificata in json
-    localStorage.setItem("user", JSON.stringify(listResponses));
-  }, [listResponses]);
-
-  console.log("listResponses:");
-  console.log(listResponses);
-  var newArray = listResponses.filter((listResponses) => {
-    return listResponses.email !== "Neacsu";
-  });
-
-  useEffect(() => {
-    localStorage.setItem("user", JSON.stringify(newArray));
-  }, [newArray]);
+  // useEffect(() => {
+  //   localStorage.setItem("user", JSON.stringify(newArray));
+  // }, [newArray]);
 
   return (
     <Router>
@@ -86,14 +57,17 @@ function App() {
         <Route path="/card/:id" element={<Card />} />
         <Route path="/card/:user" element={<Card />} />
         <Route path="/card/:loggedUser" element={<Card />} />
-        <Route path="/card/: isLoggedIn" element={<Card />} />
+        <Route path="/card/: user" element={<Card />} />
+        <Route path="/card/: user" element={<Card />} />
+        <Route path="/card/: loginUser" element={<Card />} />
+        <Route path="/card/: loggedUser " element={<Card />} />
 
         <Route
           path="/adoptionform/:name"
           element={
             <AdoptionForm
-              listResponses={listResponses}
-              setListResponses={setListResponses}
+            // listResponses={listResponses}
+            // setListResponses={setListResponses}
             />
           }
         />

@@ -8,7 +8,7 @@ import logo from "../../images/image4.svg";
 const Register = () => {
   let navigate = useNavigate();
 
-  const [user, setUser] = useState({
+  const [registeredUser, setRegisteredUser] = useState({
     name: "",
     surname: "",
     email: "",
@@ -18,8 +18,8 @@ const Register = () => {
   //store values in localStorage
   const handleSubmit = (evt) => {
     evt.preventDefault();
-    //memoreaza user codificata in json
-    localStorage.setItem("user", JSON.stringify(user));
+    //store user in json format in "user"
+    localStorage.setItem("user", JSON.stringify(registeredUser));
     navigate("/login");
   };
 
@@ -57,10 +57,10 @@ const Register = () => {
                   className="form-control"
                   id="inputName"
                   placeholder="Name"
-                  value={user.name}
+                  value={registeredUser.name}
                   onChange={(e) =>
-                    setUser({
-                      ...user,
+                    setRegisteredUser({
+                      ...registeredUser,
                       [e.target.name]: e.target.value,
                     })
                   }
@@ -73,10 +73,10 @@ const Register = () => {
                   className="form-control"
                   id="inputSurname"
                   placeholder="Surname"
-                  value={user.surname}
+                  value={registeredUser.surname}
                   onChange={(e) =>
-                    setUser({
-                      ...user,
+                    setRegisteredUser({
+                      ...registeredUser,
                       [e.target.name]: e.target.value,
                     })
                   }
@@ -90,10 +90,10 @@ const Register = () => {
                   className="form-control"
                   id="inputEmail"
                   placeholder="Email"
-                  value={user.email}
+                  value={registeredUser.email}
                   onChange={(e) =>
-                    setUser({
-                      ...user,
+                    setRegisteredUser({
+                      ...registeredUser,
                       [e.target.name]: e.target.value,
                     })
                   }
@@ -107,10 +107,10 @@ const Register = () => {
                   className="form-control"
                   id="inputPassword"
                   placeholder="Password"
-                  value={user.password}
+                  value={registeredUser.password}
                   onChange={(e) =>
-                    setUser({
-                      ...user,
+                    setRegisteredUser({
+                      ...registeredUser,
                       [e.target.name]: e.target.value,
                     })
                   }

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { Form } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -8,7 +8,7 @@ import logo from "../../images/image4.svg";
 const Login = (props) => {
   //const { handleLogin, setUser, user } = props;
   let navigate = useNavigate();
-  const [user, setUser] = useState({
+  const [loginUser, setLoginUser] = useState({
     email: "",
     password: "",
   });
@@ -18,30 +18,58 @@ const Login = (props) => {
   //store values in localStorage
   const handleLogin = (evt) => {
     evt.preventDefault();
-
-    //memoreaza user codificata in json
     const loggedUser = JSON.parse(localStorage.getItem("user"));
     if (
-      user.email === loggedUser.email &&
-      user.password === loggedUser.password
+      loginUser.email === loggedUser.email &&
+      loginUser.password === loggedUser.password
     ) {
-      // localStorage.setItem("loggedIn", true);
+      //localStorage.setItem("loggedIn", true);
       navigate("/");
-      setIsLoggedIn(true);
-      console.log("loggedUser");
-      console.log(loggedUser);
-      console.log("user");
-      console.log(user);
+      //setIsLoggedIn(true);
+      //console.log(isLoggedIn);
+      // console.log("loggedUser");
+      // console.log(loggedUser);
+      // console.log("loginUser");
+      // console.log(loginUser);
     } else {
       alert("Wrong Email or Password");
     }
   };
 
-  const handleLogOut = () => {
-    localStorage.removeItem("loggedIn");
-    navigate("/login");
-  };
+  useEffect(() => {
+    const loggedInUser = localStorage.getItem("user");
+    if (loggedInUser) {
+      const foundUser = JSON.parse(loggedInUser);
+      setUser(foundUser);
+    }
+  }, []);
 
+  // const [user, setUser] = useState();
+  // useEffect(() => {
+  //   const loggedInUser = localStorage.getItem("user");
+  //   if (loggedInUser) {
+  //     const foundUser = JSON.parse(loggedInUser);
+  //     setUser(foundUser);
+  //     setIsLoggedIn(true);
+  //     console.log("foundUser");
+  //     console.log(foundUser);
+  //     // console.log("user");
+  //     // console.log(user);
+  //   }
+  // }, []);
+
+  //if there's a user show the message below
+  // if (user) {
+  //   return <div>{user.name} is loggged in</div>;
+  // }
+
+  // const handleLogOut = () => {
+  //   localStorage.removeItem("loggedIn");Mec
+  //   navigate("/login");
+  //   localStorage.clear();
+  // };
+
+  // if there's no user, show the login form
   return (
     <>
       <div className="adoption-container">
@@ -76,10 +104,10 @@ const Login = (props) => {
                   className="form-control"
                   id="inputEmail"
                   placeholder="Email"
-                  value={user.email}
+                  value={loginUser.email}
                   onChange={(e) =>
-                    setUser({
-                      ...user,
+                    setLoginUser({
+                      ...loginUser,
                       [e.target.name]: e.target.value,
                     })
                   }
@@ -93,10 +121,10 @@ const Login = (props) => {
                   className="form-control"
                   id="inputPassword"
                   placeholder="Password"
-                  value={user.password}
+                  value={loginUser.password}
                   onChange={(e) =>
-                    setUser({
-                      ...user,
+                    setLoginUser({
+                      ...loginUser,
                       [e.target.name]: e.target.value,
                     })
                   }
