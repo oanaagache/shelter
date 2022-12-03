@@ -6,7 +6,7 @@ import { useParams } from "react-router-dom";
 import { Client } from "@petfinder/petfinder-js";
 
 const Card = (props) => {
-  const { id, loginUser, loggedUser } = useParams();
+  const { id, isLoggedIn } = useParams();
   let navigate = useNavigate();
   const client = new Client({
     apiKey: "yE34mF5y8uaTkcDpopHWiZnWGoYJX5Ufw59vtFDpOJU78uW5ur",
@@ -195,22 +195,19 @@ const Card = (props) => {
               )}
             </div>
           </div>
-          {id && (
-            <div className="button-adopt">
-              <button
-                className="adopt"
-                onClick={() => {
-                  navigate(`/adoptionform/${item.name}`);
-                  loginUser.email === loggedUser.email &&
-                  loginUser.password === loggedUser.password
-                    ? navigate(`/adoptionform/${item.name}`)
-                    : navigate("/login");
-                }}
-              >
-                Adopt
-              </button>
-            </div>
-          )}
+
+          <div className="button-adopt">
+            <button
+              className="adopt"
+              onClick={() => {
+                isLoggedIn
+                  ? navigate(`/adoptionform/${item.name}`)
+                  : navigate("/login");
+              }}
+            >
+              Adopt
+            </button>
+          </div>
         </div>
       )}
     </>

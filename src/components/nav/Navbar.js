@@ -4,10 +4,9 @@ import { NavLink } from "react-router-dom";
 import logo from "../../images/image.png";
 import { useNavigate } from "react-router-dom";
 import { useParams } from "react-router-dom";
-import Login from "../login/Login";
 
 const Navbar = () => {
-  const { isLoggedIn, handleLogin } = useParams();
+  const { isLoggedIn } = useParams();
   let navigate = useNavigate();
 
   const [click, setClick] = useState(false);
@@ -19,12 +18,10 @@ const Navbar = () => {
     }
   };
 
-  const handleLogOut = () => {
-    localStorage.removeItem("loggedIn");
-    navigate("/login");
-  };
-
-  const userName = JSON.parse(localStorage.getItem("user"));
+  // const handleLogOut = () => {
+  //   localStorage.removeItem("loggedIn");
+  //   navigate("/login");
+  // };
 
   return (
     <div className="header">

@@ -5,8 +5,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { Link } from "react-router-dom";
 import logo from "../../images/image4.svg";
 
-const Login = (props) => {
-  //const { handleLogin, setUser, user } = props;
+const Login = () => {
   let navigate = useNavigate();
   const [loginUser, setLoginUser] = useState({
     email: "",
@@ -23,45 +22,20 @@ const Login = (props) => {
       loginUser.email === loggedUser.email &&
       loginUser.password === loggedUser.password
     ) {
-      //localStorage.setItem("loggedIn", true);
+      localStorage.setItem("loggedIn", true);
       navigate("/");
-      //setIsLoggedIn(true);
-      //console.log(isLoggedIn);
-      // console.log("loggedUser");
-      // console.log(loggedUser);
-      // console.log("loginUser");
-      // console.log(loginUser);
+      setIsLoggedIn(true);
     } else {
       alert("Wrong Email or Password");
     }
   };
 
+  //Se preia din localStorage continutul asociat cheii "loggedIn".
   useEffect(() => {
-    const loggedInUser = localStorage.getItem("user");
-    if (loggedInUser) {
-      const foundUser = JSON.parse(loggedInUser);
-      setUser(foundUser);
-    }
-  }, []);
-
-  // const [user, setUser] = useState();
-  // useEffect(() => {
-  //   const loggedInUser = localStorage.getItem("user");
-  //   if (loggedInUser) {
-  //     const foundUser = JSON.parse(loggedInUser);
-  //     setUser(foundUser);
-  //     setIsLoggedIn(true);
-  //     console.log("foundUser");
-  //     console.log(foundUser);
-  //     // console.log("user");
-  //     // console.log(user);
-  //   }
-  // }, []);
-
-  //if there's a user show the message below
-  // if (user) {
-  //   return <div>{user.name} is loggged in</div>;
-  // }
+    setIsLoggedIn(JSON.parse(localStorage.getItem("loggedIn")));
+  }, [isLoggedIn]);
+  // console.log("isLoggedIn");
+  // console.log(isLoggedIn);
 
   // const handleLogOut = () => {
   //   localStorage.removeItem("loggedIn");Mec

@@ -7,12 +7,11 @@ import logo from "../../images/image4.svg";
 import { useNavigate } from "react-router-dom";
 import { useParams } from "react-router-dom";
 import CountrySelector from "../countryselector/CountrySelector";
-import userEvent from "@testing-library/user-event";
 
 const AdoptionForm = (props) => {
-  const [listResponses, setListResponses] = useState();
-  //primesc prin props de la App.js functia setListResponses care realizeaza inserarea unui nou animal in lista
   const { name, isLoggedIn } = useParams();
+
+  const [user, setUser] = useState({});
 
   const [firstName, setFirstName] = useState("");
   const [surname, setSurname] = useState("");
@@ -27,24 +26,6 @@ const AdoptionForm = (props) => {
 
   const Submit = (evt) => {
     evt.preventDefault();
-
-    const form = {
-      firstName: firstName,
-      surname: surname,
-      email: email,
-      address1: address1,
-      city: city,
-      country: country,
-      code: code,
-      status: status,
-      routine: routine,
-    };
-
-    props.setListResponses([...props.listResponses, form]); //  transmit obiectul form to App.js prin apelul functiei setListResponses,primit prin props de la App.js
-
-    // console.log([...props.listResponses]);
-    // console.log("props.listResponses");
-
     setFirstName("");
     setSurname("");
     setEmail("");
@@ -56,6 +37,18 @@ const AdoptionForm = (props) => {
     setRoutine("");
     navigate(`/success/${name}`);
   };
+
+  //Se preia din localStorage continutul asociat cheii "user".
+  useEffect(() => {
+    setUser(JSON.parse(localStorage.getItem("user")));
+  }, []);
+
+  // console.log("user");
+  // console.log(user);
+
+  // const handleChangeFirstName = (e) => {
+  //   setFirstName(e.target.value);
+  // };
 
   return (
     <>
@@ -80,35 +73,87 @@ const AdoptionForm = (props) => {
         <Form onSubmit={Submit} style={{ paddingLeft: 300 }}>
           <div className="adoption-form">
             <div className="form-row">
-              <div className="form-group col-md-3">
-                <label htmlFor="inputSurname">Surname:</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  id="inpuSurname"
-                  placeholder="Surname"
-                  value={surname}
-                  onChange={(e) => setSurname(e.target.value)}
-                />
-              </div>
-              <div className="form-group col-md-3">
-                <label htmlFor="inputEmailAddress">Email address:</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  id="inputEmailAddress"
-                  placeholder="Email address"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                />
-              </div>
+              {isLoggedIn ? (
+                <div className="form-group col-md-3">
+                  <label htmlFor="inputfirstName">First Name:</label>
+                  <input
+                    type="text"
+                    className="form-control"
+                    id="inputFirstName"
+                    value={user.name || ""}
+                    onChange={(e) => setFirstName(e.target.value)}
+                  />
+                </div>
+              ) : (
+                <div className="form-group col-md-3">
+                  <label htmlFor="inputfirstName">First Name:</label>
+                  <input
+                    type="text"
+                    className="form-control"
+                    id="inputFirstName"
+                    placeholder="Name"
+                    value={firstName}
+                    onChange={(e) => setFirstName(e.target.value)}
+                  />
+                </div>
+              )}
+              {isLoggedIn ? (
+                <div className="form-group col-md-3">
+                  <label htmlFor="inputSurname">Surname:</label>
+                  <input
+                    type="text"
+                    className="form-control"
+                    id="inputSurname"
+                    value={user.surname || ""}
+                    onChange={(e) => setSurname(e.target.value)}
+                  />
+                </div>
+              ) : (
+                <div className="form-group col-md-3">
+                  <label htmlFor="inputSurname">Surname:</label>
+                  <input
+                    type="text"
+                    className="form-control"
+                    id="inputSurname"
+                    placeholder="Surname"
+                    value={surname}
+                    onChange={(e) => setSurname(e.target.value)}
+                  />
+                </div>
+              )}
+
+              {isLoggedIn ? (
+                <div className="form-group col-md-3">
+                  <label htmlFor="inputEmailAddress">Email address:</label>
+                  <input
+                    type="text"
+                    className="form-control"
+                    id="inputEmailAddress"
+                    value={user.email || ""}
+                    onChange={(e) => setEmail(e.target.value)}
+                  />
+                </div>
+              ) : (
+                <div className="form-group col-md-3">
+                  <label htmlFor="inputEmailAddress">Email address:</label>
+                  <input
+                    type="text"
+                    className="form-control"
+                    id="inputEmailAddress"
+                    placeholder="Email address"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                  />
+                </div>
+              )}
             </div>
+
             <div className="form-row">
               <div className="form-group col-md-4">
                 <label htmlFor="inputAddress1">Address Line:</label>
                 <input
                   type="text"
-                  class="form-control"
+                  className="form-control"
                   id="inputAddress1"
                   placeholder="Street name and number"
                   value={address1}
@@ -119,7 +164,7 @@ const AdoptionForm = (props) => {
                 <label htmlFor="inputCity">City</label>
                 <input
                   type="text"
-                  class="form-control"
+                  className="form-control"
                   id="inputCity"
                   placeholder="City"
                   value={city}
@@ -136,7 +181,7 @@ const AdoptionForm = (props) => {
                 <label htmlFor="inputZip">Zip code:</label>
                 <input
                   type="text"
-                  class="form-control"
+                  className="form-control"
                   id="inputZip"
                   placeholder="Zip code"
                 />

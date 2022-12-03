@@ -36,16 +36,6 @@ const Success = () => {
           Back to Adopt page
         </button>
       </div>
-      {/* <div className="button">
-        <button
-          className="backHome"
-          onClick={() => {
-            navigate("/responses");
-          }}
-        >
-          See List
-        </button>
-      </div> */}
     </div>
   );
 };
