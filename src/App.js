@@ -29,7 +29,7 @@ const App = () => {
 
   return (
     <Router>
-      <Navbar />
+      <Navbar isLoggedIn={isLoggedIn} />
       <Routes>
         <Route path="/" element={<Main />} />
         <Route path="/about" element={<About />} />
@@ -40,9 +40,9 @@ const App = () => {
         />
         <Route path="/articlesdog" element={<ArticlesDog />} />
         <Route path="/articlescat" element={<ArticlesCat />} />
-        <Route path="/card/" element={<Card isLoggedIn={isLoggedIn} />} />
-        <Route path="/card/:isLoggedIn" element={<Card />} />
-        <Route path="/card/:id" element={<Card />} />
+        <Route path="/card/" element={<Card />} />
+        <Route path="/card/:id" element={<Card isLoggedIn={isLoggedIn} />} />
+        <Route path="/card/:name" element={<Card />} />
         <Route path="/countryselector" element={<CountrySelector />} />
         <Route path="/details" element={<Details />} />
         <Route path="/donate" element={<Donate />} />

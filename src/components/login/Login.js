@@ -4,11 +4,9 @@ import { Form } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Link } from "react-router-dom";
 import logo from "../../images/image4.svg";
-import { useParams } from "react-router-dom";
 
 const Login = (props) => {
   const { isLoggedIn, setIsLoggedIn } = props;
-  //const { setIsLoggedIn } = useParams();
 
   let navigate = useNavigate();
 
@@ -16,9 +14,6 @@ const Login = (props) => {
     email: "",
     password: "",
   });
-
-  // const [isLoggedIn, setIsLoggedIn] = useState(false);
-  // console.log("isLoggedIn1: " + isLoggedIn);
 
   //store values in localStorage
   const handleLogin = (evt) => {

@@ -6,17 +6,16 @@ import { useParams } from "react-router-dom";
 import { Client } from "@petfinder/petfinder-js";
 
 const Card = (props) => {
-  //const { isLoggedIn } = props;
   const client = new Client({
     apiKey: "yE34mF5y8uaTkcDpopHWiZnWGoYJX5Ufw59vtFDpOJU78uW5ur",
     secret: "HMpwZ6VMhZwUWXYpb9nVmliqdElYYT96mezpupJk",
   });
 
-  const { id, isLoggedIn } = useParams();
+  const { isLoggedIn } = props;
+  const { id } = useParams();
   let navigate = useNavigate();
 
   const [item, setItem] = useState(false);
-  console.log("isLoggedIn Card: " + isLoggedIn);
 
   useEffect(() => {
     if (id) {
@@ -204,10 +203,9 @@ const Card = (props) => {
               <button
                 className="adopt"
                 onClick={() => {
-                  navigate(`/adoptionform/${item.name}`);
-                  // isLoggedIn
-                  //   ? navigate(`/adoptionform/${item.name}`)
-                  //   : navigate("/login");
+                  isLoggedIn
+                    ? navigate(`/adoptionform/${item.name}`)
+                    : navigate("/login");
                 }}
               >
                 Adopt

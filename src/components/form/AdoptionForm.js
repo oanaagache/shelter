@@ -10,7 +10,8 @@ import CountrySelector from "../countryselector/CountrySelector";
 
 const AdoptionForm = (props) => {
   const { isLoggedIn } = props;
-  const { name} = useParams();
+  const { name } = useParams();
+  let navigate = useNavigate();
 
   const [user, setUser] = useState({});
 
@@ -23,7 +24,6 @@ const AdoptionForm = (props) => {
   const [code, setCode] = useState("");
   const [status, setStatus] = useState("");
   const [routine, setRoutine] = useState("");
-  let navigate = useNavigate();
 
   const Submit = (evt) => {
     evt.preventDefault();

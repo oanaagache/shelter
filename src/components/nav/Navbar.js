@@ -3,27 +3,24 @@ import "./Navbar.css";
 import { NavLink } from "react-router-dom";
 import logo from "../../images/image.png";
 import { useNavigate } from "react-router-dom";
-import { useParams } from "react-router-dom";
+//import { useParams } from "react-router-dom";
 
-const Navbar = () => {
-  const { isLoggedIn } = useParams();
+const Navbar = (props) => {
+  //const { isLoggedIn } = useParams();
   let navigate = useNavigate();
+  const { isLoggedIn } = props;
+  console.log("isLoggedIn Navbar: " + isLoggedIn);
 
   const [click, setClick] = useState(false);
+
   const handleClick = () => {
     if (!click) {
-      //localStorage.clear();
-      //window.location.reload();
       localStorage.removeItem("loggedIn");
       setClick(!click);
       navigate("/login");
     }
   };
 
-  //   const handleClick=()=>{
-  //     localStorage.clear();
-  //     window.location.reload();
-  // }
   return (
     <div className="header">
       <div className="header-content">
@@ -97,18 +94,22 @@ const Navbar = () => {
             </NavLink>
           </li>
 
-          {!isLoggedIn ? (
-            <>
-              <button
-                onClick={() => {
-                  handleClick();
-                }}
-              >
-                {!click ? "LogOut" : "LogIn"}
-              </button>
-            </>
+          {isLoggedIn ? (
+            <button
+              onClick={() => {
+                handleClick();
+              }}
+            >
+              {!click ? "LogOut" : "LogIn"}
+            </button>
           ) : (
-            "Log"
+            <button
+              onClick={() => {
+                navigate("/login");
+              }}
+            >
+              Login
+            </button>
           )}
         </ul>
       </div>
