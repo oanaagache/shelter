@@ -9,8 +9,8 @@ import { useParams } from "react-router-dom";
 import CountrySelector from "../countryselector/CountrySelector";
 
 const AdoptionForm = (props) => {
-  //const { isLoggedIn } = props;
-  const { name, isLoggedIn } = useParams();
+  const { isLoggedIn } = props;
+  const { name} = useParams();
 
   const [user, setUser] = useState({});
 
@@ -68,7 +68,7 @@ const AdoptionForm = (props) => {
         <Form onSubmit={Submit} style={{ paddingLeft: 300 }}>
           <div className="adoption-form">
             <div className="form-row">
-              {true ? (
+              {isLoggedIn ? (
                 <div className="form-group col-md-3">
                   <label htmlFor="inputfirstName">First Name:</label>
                   <input
