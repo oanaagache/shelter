@@ -2,7 +2,7 @@ import { useState } from "react";
 import "../adopt/Adopt.css";
 import logo from "../../images/image5.svg";
 
-function Dropdown({ selected, setSelected, options }) {
+const Dropdown = ({ selected, setSelected, options }) => {
   const [isActive, setIsActive] = useState(false);
 
   return (
@@ -30,6 +30,6 @@ function Dropdown({ selected, setSelected, options }) {
       )}
     </div>
   );
-}
+};
 
 export default Dropdown;

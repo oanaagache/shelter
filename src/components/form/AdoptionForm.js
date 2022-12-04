@@ -9,6 +9,7 @@ import { useParams } from "react-router-dom";
 import CountrySelector from "../countryselector/CountrySelector";
 
 const AdoptionForm = (props) => {
+  //const { isLoggedIn } = props;
   const { name, isLoggedIn } = useParams();
 
   const [user, setUser] = useState({});
@@ -38,17 +39,11 @@ const AdoptionForm = (props) => {
     navigate(`/success/${name}`);
   };
 
-  //Se preia din localStorage continutul asociat cheii "user".
   useEffect(() => {
     setUser(JSON.parse(localStorage.getItem("user")));
   }, []);
 
-  // console.log("user");
-  // console.log(user);
-
-  // const handleChangeFirstName = (e) => {
-  //   setFirstName(e.target.value);
-  // };
+  console.log("isLoggedIn Form: " + isLoggedIn);
 
   return (
     <>
@@ -73,7 +68,7 @@ const AdoptionForm = (props) => {
         <Form onSubmit={Submit} style={{ paddingLeft: 300 }}>
           <div className="adoption-form">
             <div className="form-row">
-              {isLoggedIn ? (
+              {true ? (
                 <div className="form-group col-md-3">
                   <label htmlFor="inputfirstName">First Name:</label>
                   <input

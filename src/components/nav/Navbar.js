@@ -12,17 +12,18 @@ const Navbar = () => {
   const [click, setClick] = useState(false);
   const handleClick = () => {
     if (!click) {
+      //localStorage.clear();
+      //window.location.reload();
       localStorage.removeItem("loggedIn");
       setClick(!click);
       navigate("/login");
     }
   };
 
-  // const handleLogOut = () => {
-  //   localStorage.removeItem("loggedIn");
-  //   navigate("/login");
-  // };
-
+  //   const handleClick=()=>{
+  //     localStorage.clear();
+  //     window.location.reload();
+  // }
   return (
     <div className="header">
       <div className="header-content">
@@ -98,12 +99,16 @@ const Navbar = () => {
 
           {!isLoggedIn ? (
             <>
-              <button onClick={() => handleClick()}>
-                {!click ? "LogOut" : "LoggedOut"}
+              <button
+                onClick={() => {
+                  handleClick();
+                }}
+              >
+                {!click ? "LogOut" : "LogIn"}
               </button>
             </>
           ) : (
-            "LogIn"
+            "Log"
           )}
         </ul>
       </div>
