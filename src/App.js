@@ -17,15 +17,26 @@ import ArticlesCat from "./pages/other/ArticlesCat";
 import AdoptionForm from "./components/form/AdoptionForm";
 import Register from "./components/login/Register";
 import Login from "./components/login/Login";
+import Admin from "./components/admin/Admin";
+import AdminRegister from "./components/admin/AdminRegister";
+import AdminLogin from "./components/admin/AdminLogin";
 
 const App = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [isLoggedInA, setIsLoggedInA] = useState(false);
+
   console.log("isLoggedIn App: " + isLoggedIn);
+  console.log("isLoggedInA App: " + isLoggedInA);
 
   useEffect(() => {
     setIsLoggedIn(JSON.parse(localStorage.getItem("loggedIn")));
   }, []);
   console.log("isLoggedIn uE App: " + isLoggedIn);
+
+  useEffect(() => {
+    setIsLoggedInA(JSON.parse(localStorage.getItem("loggedInA")));
+  }, []);
+  console.log("isLoggedInA uE App: " + isLoggedInA);
 
   return (
     <Router>
@@ -33,7 +44,19 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Main />} />
         <Route path="/about" element={<About />} />
+        <Route path="/admin" element={<Admin />} />
+        <Route
+          path="/adminlogin"
+          element={
+            <AdminLogin
+              isLoggedInA={isLoggedInA}
+              setIsLoggedInA={setIsLoggedInA}
+            />
+          }
+        />
+        <Route path="/adminregister" element={<AdminRegister />} />
         <Route path="/adopt" element={<Adopt />} />
+
         <Route
           path="/adoptionform/:name"
           element={<AdoptionForm isLoggedIn={isLoggedIn} />}

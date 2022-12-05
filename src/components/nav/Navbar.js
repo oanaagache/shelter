@@ -3,11 +3,10 @@ import "./Navbar.css";
 import { NavLink } from "react-router-dom";
 import logo from "../../images/image.png";
 import { useNavigate } from "react-router-dom";
-//import { useParams } from "react-router-dom";
 
 const Navbar = (props) => {
-  //const { isLoggedIn } = useParams();
   let navigate = useNavigate();
+
   const { isLoggedIn } = props;
   console.log("isLoggedIn Navbar: " + isLoggedIn);
 
@@ -80,7 +79,6 @@ const Navbar = (props) => {
               Foster
             </NavLink>
           </li>
-
           <li>
             <NavLink
               to="/other"
@@ -93,7 +91,6 @@ const Navbar = (props) => {
               Other
             </NavLink>
           </li>
-
           {isLoggedIn ? (
             <button
               onClick={() => {
@@ -111,6 +108,14 @@ const Navbar = (props) => {
               Login
             </button>
           )}
+
+          <button
+            onClick={() => {
+              navigate("/adminlogin");
+            }}
+          >
+            Admin
+          </button>
         </ul>
       </div>
     </div>
