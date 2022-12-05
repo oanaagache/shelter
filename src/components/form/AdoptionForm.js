@@ -27,6 +27,19 @@ const AdoptionForm = (props) => {
 
   const Submit = (evt) => {
     evt.preventDefault();
+
+    const form = {
+      firstName: firstName,
+      surname: surname,
+      email: email,
+      address1: address1,
+      city: city,
+      country: country,
+      code: code,
+      status: status,
+      routine: routine,
+    };
+
     setFirstName("");
     setSurname("");
     setEmail("");
