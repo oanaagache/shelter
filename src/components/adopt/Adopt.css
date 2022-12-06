@@ -1,0 +1,191 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.adopt-container {
+  max-width: 100%;
+  padding: 0 200px 0 120px;
+}
+
+body {
+  background-color: aliceblue;
+}
+
+.adopt {
+  color: aliceblue;
+  width: 150px;
+  height: 50px;
+  background-color: rgb(126, 63, 102);
+  margin: 20px;
+  font-size: 24px;
+}
+
+.adopt-content {
+  display: flex;
+  margin: 20px 0 50px 0;
+}
+
+.adopt-header {
+  height: 80px;
+  width: 100%;
+}
+
+.adopt-inner {
+  display: flex;
+  align-items: center;
+}
+
+.adopt-drop {
+  margin: 50px 0 50px 0;
+}
+
+.adopt-title {
+  margin: auto;
+  justify-content: center;
+  display: flex;
+  font-size: 45px;
+}
+
+.adopt-drop-title {
+  display: flex;
+  align-items: center;
+  font-size: 36px;
+  margin: 40px 0 20px 0;
+}
+
+.drop {
+  display: flex;
+}
+
+.drop1,
+.drop2,
+.drop3,
+.drop4,
+.drop5,
+.drop6,
+.check,
+.drop7 {
+  height: 50%;
+  flex: 14%;
+  padding: 20px 10px 10px 0;
+}
+
+.checklist {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px 20px 10px 0;
+  margin: 0 20px 0 0;
+}
+
+.dropdown {
+  width: 60%;
+  margin-top: 10px;
+  position: relative;
+}
+
+.dropdown .dropdown-btn {
+  background-color: aliceblue;
+  box-shadow: 3px 3px 10px 6px rgba(0, 0, 0, 0.06);
+  font-weight: bold;
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.dropdown .dropdown-content {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  padding: 10px;
+  background-color: aliceblue;
+  box-shadow: 3px 3px 10px 6px rgba(0, 0, 0, 0.06);
+  font-weight: bold;
+  color: black;
+  width: 100%;
+  z-index: 1;
+}
+
+.dropdown .dropdown-btn .dropdown-item {
+  padding: 10px;
+  cursor: pointer;
+  transition: all 2s;
+}
+
+.dropdown .dropdown-btn .dropdown-item:hover {
+  background: #f4f4f4;
+}
+
+.button {
+  justify-content: flex-end;
+}
+
+.filter-btn {
+  color: aliceblue;
+  width: 150px;
+  height: 50px;
+  background-color: rgb(126, 63, 102);
+  margin: 30px 10px 50px 0;
+  font-size: 24px;
+}
+
+.text {
+  color: black;
+  font-size: 24px;
+}
+
+.showMore-btn {
+  color: black;
+  width: 200px;
+  height: 50px;
+  background-color: aliceblue;
+  margin-top: 20px;
+  font-size: 24px;
+}
+
+.results {
+  padding: 20px;
+  margin: 20px;
+  align-items: center;
+}
+
+.text {
+  color: black;
+  padding: 30px;
+  margin-top: 20px;
+  font-size: 24px;
+  justify-content: center;
+}
+
+.cards {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 50px 0 50px 0;
+}
+
+.sort {
+  position: relative;
+  left: 1400px;
+}
+
+.foster-li {
+  padding: 20px;
+  font-size: 16px;
+}
+
+@media (max-width: 800px) {
+  .drop {
+    flex: 50%;
+  }
+
+  .adopt-title {
+    font-size: 35px;
+  }
+
+  .adopt-drop-title {
+    font-size: 26px;
+  }
+}
