@@ -7,6 +7,7 @@ import logo from "../../images/image4.svg";
 import { useNavigate } from "react-router-dom";
 import { useParams } from "react-router-dom";
 import CountrySelector from "../countryselector/CountrySelector";
+import axios from "axios";
 
 const AdoptionForm = (props) => {
   const { isLoggedIn } = props;
@@ -25,21 +26,8 @@ const AdoptionForm = (props) => {
   const [status, setStatus] = useState("");
   const [routine, setRoutine] = useState("");
 
-  const Submit = (evt) => {
+  const handleSubmit = (evt) => {
     evt.preventDefault();
-
-    const form = {
-      firstName: firstName,
-      surname: surname,
-      email: email,
-      address1: address1,
-      city: city,
-      country: country,
-      code: code,
-      status: status,
-      routine: routine,
-    };
-
     setFirstName("");
     setSurname("");
     setEmail("");
@@ -50,6 +38,21 @@ const AdoptionForm = (props) => {
     setStatus("");
     setRoutine("");
     navigate(`/success/${name}`);
+
+    const newUser = {
+      firstName: user.name,
+      surname: user.surname,
+      email: user.email,
+      address1: address1,
+      city: city,
+      country: country,
+      code: code,
+      status: status,
+      routine: routine,
+    };
+    axios.post("https://localhost:3001/adoptionform", newUser);
+
+    console.log(newUser);
   };
 
   useEffect(() => {
@@ -57,6 +60,23 @@ const AdoptionForm = (props) => {
   }, []);
 
   console.log("isLoggedIn Form: " + isLoggedIn);
+
+  // function handleClick(evt) {
+  //   evt.preventDefault();
+  //   const newUser = {
+  //     firstName: user.name,
+  //     surname: user.surname,
+  //     email: user.email,
+  //     address1: address1,
+  //     city: city,
+  //     country: country,
+  //     code: code,
+  //     status: status,
+  //     routine: routine,
+  //   };
+  //   //axios.post("https://localhost:3001/adoptionform", newUser);
+  //   console.log(newUser);
+  // }
 
   return (
     <>
@@ -78,7 +98,7 @@ const AdoptionForm = (props) => {
           </div>
         </div>
 
-        <Form onSubmit={Submit} style={{ paddingLeft: 300 }}>
+        <Form onSubmit={handleSubmit} style={{ paddingLeft: 300 }}>
           <div className="adoption-form">
             <div className="form-row">
               {isLoggedIn ? (

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import "./Navbar.css";
 import { NavLink } from "react-router-dom";
 import logo from "../../images/image.png";
@@ -10,14 +10,9 @@ const Navbar = (props) => {
   const { isLoggedIn } = props;
   console.log("isLoggedIn Navbar: " + isLoggedIn);
 
-  const [click, setClick] = useState(false);
-
   const handleClick = () => {
-    if (!click) {
-      localStorage.removeItem("loggedIn");
-      setClick(!click);
-      navigate("/login");
-    }
+    localStorage.removeItem("loggedIn");
+    navigate("/login");
   };
 
   return (
@@ -97,7 +92,7 @@ const Navbar = (props) => {
                 handleClick();
               }}
             >
-              {!click ? "LogOut" : "LogIn"}
+              LogOut
             </button>
           ) : (
             <button
@@ -108,14 +103,6 @@ const Navbar = (props) => {
               Login
             </button>
           )}
-
-          <button
-            onClick={() => {
-              navigate("/adminlogin");
-            }}
-          >
-            Admin
-          </button>
         </ul>
       </div>
     </div>

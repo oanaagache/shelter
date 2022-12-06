@@ -10,7 +10,7 @@ const client = new MongoClient(uri);
 // The database to use
 const dbName = "shelter";
 
-async function run() {
+async function Add() {
   try {
     await client.connect();
     console.log("CONNECTED to server");
@@ -38,4 +38,4 @@ async function run() {
     await client.close();
   }
 }
-run().catch(console.dir);
+Add().catch(console.dir);
