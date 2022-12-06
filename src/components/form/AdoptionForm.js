@@ -61,23 +61,6 @@ const AdoptionForm = (props) => {
 
   console.log("isLoggedIn Form: " + isLoggedIn);
 
-  // function handleClick(evt) {
-  //   evt.preventDefault();
-  //   const newUser = {
-  //     firstName: user.name,
-  //     surname: user.surname,
-  //     email: user.email,
-  //     address1: address1,
-  //     city: city,
-  //     country: country,
-  //     code: code,
-  //     status: status,
-  //     routine: routine,
-  //   };
-  //   //axios.post("https://localhost:3001/adoptionform", newUser);
-  //   console.log(newUser);
-  // }
-
   return (
     <>
       <div className="adoption-container">
