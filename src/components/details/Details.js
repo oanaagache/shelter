@@ -17,8 +17,6 @@ const Details = (props) => {
     routine,
   } = props;
 
-  //console.log(props);
-
   const stilAlert = {
     color: "#2B2B2B",
     textAlign: "left",

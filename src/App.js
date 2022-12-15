@@ -17,7 +17,6 @@ import ArticlesCat from "./pages/articles/cat/ArticlesCat";
 import AdoptionForm from "./components/form/AdoptionForm";
 import Register from "./components/login/Register";
 import Login from "./components/login/Login";
-import Test from "./Test";
 
 const App = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -33,7 +32,6 @@ const App = () => {
       <Navbar isLoggedIn={isLoggedIn} />
       <Routes>
         <Route path="/" element={<Main />} />
-        <Route path="/test" element={<Test />} />
         <Route path="/about" element={<About />} />
         <Route path="/adopt" element={<Adopt />} />
         <Route path="/adoptionform" element={<AdoptionForm />} />

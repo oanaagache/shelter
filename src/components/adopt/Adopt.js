@@ -190,7 +190,7 @@ const Adopt = () => {
   const [click, setClick] = useState(false);
   const handleClick = () => {
     if (click === false) {
-      //validare type==selected
+      //validation type==selected
       let params = {};
       if (type !== "") params.type = type;
       if (breed !== "") params.breed = breed;

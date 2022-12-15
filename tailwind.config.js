@@ -38,5 +38,3 @@ module.exports = {
 //   padding: 0;
 //   margin: 0;
 // }
-
-// className="border-8 border-gray border-solid no-underline w-20 h-10 bg-gray text-white"

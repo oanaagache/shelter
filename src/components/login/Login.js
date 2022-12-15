@@ -5,6 +5,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { Link } from "react-router-dom";
 import logo from "../../images/image4.svg";
 import "../../../src/index.css";
+
 const Login = (props) => {
   const { isLoggedIn, setIsLoggedIn } = props;
 
@@ -26,7 +27,7 @@ const Login = (props) => {
       localStorage.setItem("loggedIn", true);
       setIsLoggedIn(true);
       navigate("/");
-      console.log("isLoggedIn Login: " + isLoggedIn);
+      //console.log("isLoggedIn Login: " + isLoggedIn);
     } else {
       alert("Wrong Email or Password");
     }
@@ -35,7 +36,7 @@ const Login = (props) => {
   useEffect(() => {
     setIsLoggedIn(JSON.parse(localStorage.getItem("loggedIn")));
   }, []);
-  console.log("isLoggedIn2 uE Login: " + isLoggedIn);
+  //console.log("isLoggedIn2 uE Login: " + isLoggedIn);
 
   return (
     <div className="max-w-full">

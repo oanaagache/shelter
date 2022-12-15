@@ -59,7 +59,7 @@ const AdoptionForm = (props) => {
     setUser(JSON.parse(localStorage.getItem("user")));
   }, []);
 
-  console.log("isLoggedIn Form: " + isLoggedIn);
+  //console.log("isLoggedIn Form: " + isLoggedIn);
 
   return (
     <div className="max-w-full">
