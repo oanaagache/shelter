@@ -1,81 +1,66 @@
 import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import About from "./others/About";
-import Donate from "./others/Donate";
-import Foster from "./others/Foster";
-import Adopt from "./Adopt";
-import Other from "./others/Other";
-import Navbar from "./Navbar";
-import Footer from "./Footer";
-import Main from "./Main";
-import Card from "./Card";
-import Cards from "./Cards";
-import AdoptionForm from "./AdoptionForm";
-import Success from "./Success";
-import Responses from "./Responses";
-import Details from "./Details";
-import List from "./List";
-import CountrySelector from "./CountrySelector";
-import ArticlesDog from "./others/ArticlesDog";
-import ArticlesCat from "./others/ArticlesCat";
+import About from "./pages/about/About";
+import Donate from "./pages/donate/Donate";
+import Foster from "./pages/foster/Foster";
+import Adopt from "./components/adopt/Adopt";
+import Articles from "./pages/articles/Articles";
+import Navbar from "./components/nav/Navbar";
+import Footer from "./components/footer/Footer";
+import Main from "./components/main/Main";
+import Card from "./components/card/Card";
+import Success from "./components/success/Success";
+import Details from "./components/details/Details";
+import CountrySelector from "./components/countryselector/CountrySelector";
+import ArticlesDog from "./pages/articles/dog/ArticlesDog";
+import ArticlesCat from "./pages/articles/cat/ArticlesCat";
+import AdoptionForm from "./components/form/AdoptionForm";
+import Register from "./components/login/Register";
+import Login from "./components/login/Login";
 
-function App() {
-  const [listResponses, setListResponses] = useState([]);
+const App = () => {
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  //console.log("isLoggedIn App: " + isLoggedIn);
 
-  //Se preia din localStorage continutul asociat cheii "shelter".
   useEffect(() => {
-    setListResponses(JSON.parse(localStorage.getItem("shelter")));
+    setIsLoggedIn(JSON.parse(localStorage.getItem("loggedIn")));
   }, []);
-
-  useEffect(() => {
-    //memoreaza listResponses codificata in json
-    localStorage.setItem("shelter", JSON.stringify(listResponses));
-  }, [listResponses]);
-
-  //console.log(listResponses);
-  var newArray = listResponses.filter((listResponses) => {
-    return listResponses.lastName !== "Neacsu";
-  });
-
-  useEffect(() => {
-    localStorage.setItem("shelter", JSON.stringify(newArray));
-  }, [newArray]);
+  //console.log("isLoggedIn uE App: " + isLoggedIn);
 
   return (
     <Router>
-      <Navbar />
+      <Navbar isLoggedIn={isLoggedIn} />
       <Routes>
         <Route path="/" element={<Main />} />
         <Route path="/about" element={<About />} />
-        <Route path="/donate" element={<Donate />} />
-        <Route path="/foster" element={<Foster />} />
         <Route path="/adopt" element={<Adopt />} />
-        <Route path="/other" element={<Other />} />
-        <Route path="/cards" element={<Cards />} />
-        <Route path="/card/:id" element={<Card />} />
+        <Route path="/adoptionform" element={<AdoptionForm />} />
         <Route
           path="/adoptionform/:name"
-          element={
-            <AdoptionForm
-              listResponses={listResponses}
-              setListResponses={setListResponses}
-            />
-          }
+          element={<AdoptionForm isLoggedIn={isLoggedIn} />}
         />
-        <Route path="/success/:name" element={<Success />} />
-        <Route
-          path="/responses"
-          element={<Responses listResponses={listResponses} />}
-        />
-        <Route path="/details" element={<Details />} />
-        <Route path="/list" element={<List listResponses={listResponses} />} />
-        <Route path="/countryselector" element={<CountrySelector />} />
         <Route path="/articlesdog" element={<ArticlesDog />} />
         <Route path="/articlescat" element={<ArticlesCat />} />
+        <Route path="/card/" element={<Card />} />
+        <Route path="/card/:id" element={<Card isLoggedIn={isLoggedIn} />} />
+        <Route path="/card/:name" element={<Card />} />
+        <Route path="/countryselector" element={<CountrySelector />} />
+        <Route path="/details" element={<Details />} />
+        <Route path="/donate" element={<Donate />} />
+        <Route path="/foster" element={<Foster />} />
+        <Route
+          path="/login"
+          element={
+            <Login isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />
+          }
+        />
+        <Route path="/articles" element={<Articles />} />
+        <Route path="/Navbar:isLoggedIn" element={<Navbar />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/success/:name" element={<Success />} />
       </Routes>
       <Footer />
     </Router>
   );
-}
-
+};
 export default App;
