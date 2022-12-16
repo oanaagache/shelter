@@ -31,9 +31,9 @@ async function Add() {
 
     // Insert the first document in the collection
     const first = await collection.insertOne(user1);
-    console.log(first);
+    //console.log(first);
   } catch (err) {
-    console.log(err.stack);
+    //console.log(err.stack);
   } finally {
     await client.close();
   }

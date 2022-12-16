@@ -1,6 +1,6 @@
 const express = require("express");
-
 const router = express.Router();
+
 const User = require("./userModel");
 
 router.route("/adoptionform").post((req, res) => {
@@ -13,6 +13,7 @@ router.route("/adoptionform").post((req, res) => {
   const code = req.body.code;
   const status = req.body.status;
   const routine = req.body.routine;
+  console.log("req.body.firstName");
   console.log(req.body.firstName);
   const newUser = new User({
     firstName,

@@ -51,7 +51,7 @@ const AdoptionForm = (props) => {
       routine: routine,
     };
     axios.post("https://localhost:3001/adoptionform", newUser);
-
+    console.log("newUser:");
     console.log(newUser);
   };
 
