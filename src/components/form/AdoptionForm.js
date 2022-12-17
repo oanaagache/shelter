@@ -6,7 +6,6 @@ import logo from "../../images/image4.svg";
 import { useNavigate } from "react-router-dom";
 import { useParams } from "react-router-dom";
 import CountrySelector from "../countryselector/CountrySelector";
-import axios from "axios";
 import "../../../src/index.css";
 
 const AdoptionForm = (props) => {
@@ -50,7 +49,32 @@ const AdoptionForm = (props) => {
       status: status,
       routine: routine,
     };
-    axios.post("https://localhost:3001/adoptionform", newUser);
+
+    // mNilWNmxsQkyhpwf0tlyYEII5S4rzWAkYZfd6KFsQ7ckLjxnB4psXFnBdww1ZAkl
+
+    //https://data.mongodb-api.com/app/data-fbstp/endpoint/data/v1
+
+    fetch(
+      "https://cors-anywhere.herokuapp.com/https://data.mongodb-api.com/app/data-fbstp/endpoint/data/v1/action/insertOne",
+      {
+        method: "post",
+        headers: {
+          "Content-Type": "application/json",
+          "Access-Control-Request-Headers": "*",
+          "api-key":
+            "mNilWNmxsQkyhpwf0tlyYEII5S4rzWAkYZfd6KFsQ7ckLjxnB4psXFnBdww1ZAkl",
+        },
+        body: JSON.stringify({
+          collection: "shelter",
+          database: "users",
+          dataSource: "Shelter",
+          document: newUser,
+        }),
+      }
+    )
+      .then((resp) => resp.json())
+      .then((data) => console.log(data))
+      .catch((err) => console.log(err));
     console.log("newUser:");
     console.log(newUser);
   };
