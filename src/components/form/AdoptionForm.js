@@ -50,37 +50,46 @@ const AdoptionForm = (props) => {
       routine: routine,
     };
 
-    fetch(
-      "https://cors-anywhere.herokuapp.com/https://data.mongodb-api.com/app/data-cnyps/endpoint/data/v1/action/insertOne",
-      {
-        method: "post",
-        headers: {
-          "Content-Type": "application/json",
-          "Access-Control-Request-Headers": "*",
-          "api-key":
-            "W22VS15FEbvqlgB6wiW3ZH6NAbqwcK3fqylKVpU3VGdT3V3cMKpzN7z2n2AmyMob",
-        },
-        body: JSON.stringify({
-          collection: "users",
-          database: "shelter",
-          dataSource: "Shelter",
-          document: newUser,
-        }),
-      }
-    )
-      .then((resp) => resp.json())
-      .then((data) => console.log(data))
-      .catch((err) => console.log(err));
+    fetch("http://localhost:3001/", {
+      method: "post",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(newUser),
+    }).catch((error) => {
+      window.alert(error);
+      return;
+    });
 
-    console.log("newUser:");
-    console.log(newUser);
+    // fetch(
+    //   "https://cors-anywhere.herokuapp.com/https://data.mongodb-api.com/app/data-cnyps/endpoint/data/v1/action/insertOne",
+    //   {
+    //     method: "post",
+    //     headers: {
+    //       "Content-Type": "application/json",
+    //       "Access-Control-Request-Headers": "*",
+    //       "api-key":
+    //         "W22VS15FEbvqlgB6wiW3ZH6NAbqwcK3fqylKVpU3VGdT3V3cMKpzN7z2n2AmyMob",
+    //     },
+    //     body: JSON.stringify({
+    //       collection: "users",
+    //       database: "shelter",
+    //       dataSource: "Shelter",
+    //       document: newUser,
+    //     }),
+    //   }
+    // )
+    //   .then((resp) => resp.json())
+    //   .then((data) => console.log(data))
+    //   .catch((err) => console.log(err));
+
+    // console.log("userMongoDB:");
+    // console.log(newUser);
   };
 
   useEffect(() => {
     setUser(JSON.parse(localStorage.getItem("user")));
   }, []);
-
-  //console.log("isLoggedIn Form: " + isLoggedIn);
 
   return (
     <div className="max-w-full">

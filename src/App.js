@@ -17,16 +17,15 @@ import ArticlesCat from "./pages/articles/cat/ArticlesCat";
 import AdoptionForm from "./components/form/AdoptionForm";
 import Register from "./components/login/Register";
 import Login from "./components/login/Login";
-import Users from "./users/Users";
+//import Users from "./users/Users";
+import Users2 from "./users/Users2";
 
 const App = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
-  //console.log("isLoggedIn App: " + isLoggedIn);
 
   useEffect(() => {
     setIsLoggedIn(JSON.parse(localStorage.getItem("loggedIn")));
   }, []);
-  //console.log("isLoggedIn uE App: " + isLoggedIn);
 
   return (
     <Router>
@@ -59,7 +58,9 @@ const App = () => {
         <Route path="/Navbar:isLoggedIn" element={<Navbar />} />
         <Route path="/register" element={<Register />} />
         <Route path="/success/:name" element={<Success />} />
-        <Route path="/users" element={<Users />} />
+        //
+        {/* <Route path="/users" element={<Users />} /> */}
+        <Route path="/users2" element={<Users2 />} />
       </Routes>
       <Footer />
     </Router>

@@ -22,9 +22,10 @@ function Users() {
   )
     .then((resp) => resp.text())
     .then((data) => setUserFromDB(data))
+    .then((data) => console.log(userFromDB(data)))
     .catch((err) => console.log(err));
 
-  return <div>{userFromDB}</div>;
+  return <div className="m-20">{userFromDB}</div>;
 }
 
 export default Users;
