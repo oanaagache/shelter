@@ -17,6 +17,7 @@ import ArticlesCat from "./pages/articles/cat/ArticlesCat";
 import AdoptionForm from "./components/form/AdoptionForm";
 import Register from "./components/login/Register";
 import Login from "./components/login/Login";
+import Users from "./users/Users";
 
 const App = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -58,6 +59,7 @@ const App = () => {
         <Route path="/Navbar:isLoggedIn" element={<Navbar />} />
         <Route path="/register" element={<Register />} />
         <Route path="/success/:name" element={<Success />} />
+        <Route path="/users" element={<Users />} />
       </Routes>
       <Footer />
     </Router>

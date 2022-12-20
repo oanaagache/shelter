@@ -50,23 +50,19 @@ const AdoptionForm = (props) => {
       routine: routine,
     };
 
-    // mNilWNmxsQkyhpwf0tlyYEII5S4rzWAkYZfd6KFsQ7ckLjxnB4psXFnBdww1ZAkl
-
-    //https://data.mongodb-api.com/app/data-fbstp/endpoint/data/v1
-
     fetch(
-      "https://cors-anywhere.herokuapp.com/https://data.mongodb-api.com/app/data-fbstp/endpoint/data/v1/action/insertOne",
+      "https://cors-anywhere.herokuapp.com/https://data.mongodb-api.com/app/data-cnyps/endpoint/data/v1/action/insertOne",
       {
         method: "post",
         headers: {
           "Content-Type": "application/json",
           "Access-Control-Request-Headers": "*",
           "api-key":
-            "mNilWNmxsQkyhpwf0tlyYEII5S4rzWAkYZfd6KFsQ7ckLjxnB4psXFnBdww1ZAkl",
+            "W22VS15FEbvqlgB6wiW3ZH6NAbqwcK3fqylKVpU3VGdT3V3cMKpzN7z2n2AmyMob",
         },
         body: JSON.stringify({
-          collection: "shelter",
-          database: "users",
+          collection: "users",
+          database: "shelter",
           dataSource: "Shelter",
           document: newUser,
         }),
@@ -75,6 +71,7 @@ const AdoptionForm = (props) => {
       .then((resp) => resp.json())
       .then((data) => console.log(data))
       .catch((err) => console.log(err));
+
     console.log("newUser:");
     console.log(newUser);
   };
