@@ -26,7 +26,7 @@ const Login = (props) => {
       localStorage.setItem("loggedIn", true);
       setIsLoggedIn(true);
       navigate("/");
-      console.log("isLoggedIn Login: " + isLoggedIn);
+      //console.log("isLoggedIn Login: " + isLoggedIn);
     } else {
       alert("Wrong Email or Password");
     }

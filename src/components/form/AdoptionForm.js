@@ -1,13 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { Form } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
-import "./AdoptionForm.css";
+import "./AdoptionForm.scss";
 import { Link } from "react-router-dom";
 import logo from "../../images/image4.svg";
 import { useNavigate } from "react-router-dom";
 import { useParams } from "react-router-dom";
 import CountrySelector from "../countryselector/CountrySelector";
-import axios from "axios";
 
 const AdoptionForm = (props) => {
   const { isLoggedIn } = props;
@@ -50,9 +49,17 @@ const AdoptionForm = (props) => {
       status: status,
       routine: routine,
     };
-    axios.post("https://localhost:3001/adoptionform", newUser);
 
-    console.log(newUser);
+    fetch("http://localhost:3001/", {
+      method: "post",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(newUser),
+    }).catch((error) => {
+      window.alert(error);
+      return;
+    });
   };
 
   useEffect(() => {

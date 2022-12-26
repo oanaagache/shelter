@@ -1,6 +1,6 @@
 import React from "react";
 import logo3 from "../../images/image3.png";
-import "./Main.css";
+import "./Main.scss";
 import { useNavigate } from "react-router-dom";
 
 const Main = () => {

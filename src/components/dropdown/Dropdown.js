@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "../adopt/Adopt.css";
+import "../adopt/Adopt.scss";
 import logo from "../../images/image5.svg";
 
 const Dropdown = ({ selected, setSelected, options }) => {
