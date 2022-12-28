@@ -1,5 +1,5 @@
 import React from "react";
-import "./Navbar.scss";
+import "./Navbar.css";
 import { NavLink } from "react-router-dom";
 import logo from "../../images/image.png";
 import { useNavigate } from "react-router-dom";
@@ -8,7 +8,7 @@ const Navbar = (props) => {
   let navigate = useNavigate();
 
   const { isLoggedIn } = props;
-  console.log("isLoggedIn Navbar: " + isLoggedIn);
+  //console.log("isLoggedIn Navbar: " + isLoggedIn);
 
   const handleClick = () => {
     localStorage.removeItem("loggedIn");
@@ -83,7 +83,7 @@ const Navbar = (props) => {
               end
               className="about-nav"
             >
-              Other
+              Articles
             </NavLink>
           </li>
           {isLoggedIn ? (

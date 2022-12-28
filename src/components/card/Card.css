@@ -1,0 +1,56 @@
+.card-container {
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  align-items: center;
+}
+
+.card-content {
+  border-radius: 4px;
+  overflow: hidden;
+  background-color: var(--background-el);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.06), 0 2px 3px rgba(0, 0, 0, 0.12);
+  width: 350px;
+  cursor: pointer;
+  margin: 20px;
+}
+
+.img {
+  height: 350px;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.card-inner {
+  padding: 16px;
+}
+
+.card-details {
+  padding: 4px;
+}
+
+.card-check {
+  padding-left: 4px;
+}
+
+.button-adopt {
+  align-items: flex-end;
+  padding-bottom: 40px;
+}
+
+.adopt {
+  color: aliceblue;
+  background-color: rgb(126, 63, 102);
+  width: 80px;
+  height: 40px;
+  margin: 10px;
+  font-size: 12px;
+  line-height: 16px;
+  padding: 8px;
+}/*# sourceMappingURL=Card.css.map */

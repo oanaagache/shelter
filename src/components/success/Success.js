@@ -1,5 +1,5 @@
 import React from "react";
-import "./Success.scss";
+import "./Success.css";
 import logo2 from "../../images/image.png";
 import { useNavigate } from "react-router-dom";
 import { useParams } from "react-router-dom";

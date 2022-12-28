@@ -1,0 +1,118 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.footer {
+  height: 160px;
+  width: 100%;
+  background-color: #000;
+}
+
+.footer-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  color: aliceblue;
+}
+
+.footer-inner {
+  padding: 25px 10px 10px 50px;
+  display: flex;
+  align-items: center;
+}
+
+.footer-title {
+  font-family: "Segoe UI", sans-serif;
+  display: flex;
+  font-size: 14px;
+  line-height: 20px;
+  margin-top: 20px;
+}
+
+.footer-menu {
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  margin-right: 80px;
+}
+
+.footer-menu li {
+  display: inline-flex;
+  flex-direction: row-reverse;
+  font-size: 20px;
+  list-style: none;
+  padding: 10px;
+  margin-top: 30px;
+  position: relative;
+}
+
+@media (min-width: 640px) {
+  .footer-menu {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    margin-right: 80px;
+    flex: row;
+  }
+}
+@media (min-width: 768px) {
+  .footer-menu {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    margin-right: 80px;
+    flex: row;
+  }
+}
+@media (min-width: 1024px) {
+  .footer-title {
+    font-family: "Segoe UI", sans-serif;
+    display: flex;
+    font-size: 18px;
+    line-height: 28px;
+    margin-top: 20px;
+  }
+  .footer-menu {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    margin-right: 80px;
+    flex: row;
+  }
+}
+@media (min-width: 1280px) {
+  .footer-title {
+    font-family: "Segoe UI", sans-serif;
+    display: flex;
+    font-size: 20px;
+    line-height: 28px;
+    margin-top: 20px;
+  }
+  .footer-menu {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    margin-right: 80px;
+    flex: row;
+  }
+}
+@media (min-width: 1536px) {
+  .footer-title {
+    font-family: "Segoe UI", sans-serif;
+    display: flex;
+    font-size: 20px;
+    line-height: 28px;
+    margin-top: 20px;
+  }
+  .footer-menu {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    margin-right: 80px;
+    flex: row;
+  }
+}/*# sourceMappingURL=Footer.css.map */

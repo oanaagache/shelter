@@ -1,7 +1,3 @@
-$color: aliceblue;
-$background-color: rgb(126, 63, 102);
-$font: "Oswald", sans-serif;
-
 * {
   box-sizing: border-box;
   padding: 0;
@@ -10,13 +6,14 @@ $font: "Oswald", sans-serif;
 
 .main {
   position: relative;
-  color: $color;
+  color: aliceblue;
 }
 
 .main-image {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .main-text {
@@ -24,8 +21,7 @@ $font: "Oswald", sans-serif;
   top: 50%;
   left: 50%;
   transform: translate(-35%, -50%);
-
-  font-family: $font;
+  font-family: "Oswald", sans-serif;
 }
 
 .main-title {
@@ -34,28 +30,6 @@ $font: "Oswald", sans-serif;
   line-height: 28px;
 }
 
-// .button {
-//   display: flex;
-//   padding: 10px 80px 5px 20px;
-// }
-
-// .donate {
-//   width: 180px;
-//   height: 50px;
-//   margin: 20px;
-//   font-size: 24px;
-// }
-
-// .adopt {
-//   color: $color;
-//   width: 180px;
-//   height: 50px;
-//   background-color: $background-color;
-//   margin: 20px;
-//   font-size: 24px;
-// }
-
-//sm
 @media (min-width: 640px) {
   .main-title {
     padding: 0 80px 5px 0px;
@@ -63,8 +37,6 @@ $font: "Oswald", sans-serif;
     line-height: 28px;
   }
 }
-//--
-//md
 @media (min-width: 768px) {
   .main-title {
     padding: 0 80px 5px 0px;
@@ -72,8 +44,6 @@ $font: "Oswald", sans-serif;
     line-height: 32px;
   }
 }
-
-//lg
 @media (min-width: 1024px) {
   .main-title {
     padding: 0 80px 5px 0px;
@@ -81,8 +51,6 @@ $font: "Oswald", sans-serif;
     line-height: 36px;
   }
 }
-
-//xl
 @media (min-width: 1280px) {
   .main-title {
     padding: 0 80px 5px 0px;
@@ -90,9 +58,6 @@ $font: "Oswald", sans-serif;
     line-height: 1;
   }
 }
-
-//--
-//2xl
 @media (min-width: 1536px) {
   .main-title {
     padding: 0 80px 5px 0px;

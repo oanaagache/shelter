@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Form } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
-import "./AdoptionForm.scss";
+import "./AdoptionForm.css";
 import { Link } from "react-router-dom";
 import logo from "../../images/image4.svg";
 import { useNavigate } from "react-router-dom";
@@ -64,9 +64,8 @@ const AdoptionForm = (props) => {
 
   useEffect(() => {
     setUser(JSON.parse(localStorage.getItem("user")));
+    console.log("isLoggedIn Form: " + isLoggedIn);
   }, []);
-
-  console.log("isLoggedIn Form: " + isLoggedIn);
 
   return (
     <>

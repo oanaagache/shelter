@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import "./Adopt.scss";
+import "./Adopt.css";
 import Dropdown from "../dropdown/Dropdown";
 import logo from "../../images/image4.svg";
 import { Link } from "react-router-dom";
