@@ -184,16 +184,19 @@ body {
   font-size: 16px;
 }
 
-@media (max-width: 800px) {
-  .drop {
-    flex: 50%;
-  }
+//sm
+@media (min-width: 640px) { 
+  .img {
+  flex: 50%;
+} }
 
-  .adopt-title {
-    font-size: 35px;
-  }
+//md
+@media (min-width: 768px) { ... }
 
-  .adopt-drop-title {
-    font-size: 26px;
-  }
-}
+//lg
+@media (min-width: 1024px) { ... }
+
+//xl
+@media (min-width: 1280px) { ... 
+//2xl
+@media (min-width: 1536px) { ... }
