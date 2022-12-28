@@ -10,7 +10,7 @@ function Users2() {
     .then((data) => console.log(usersFromDB));
   console.log("usersServer:");
 
-  return <div className="m-20">{usersFromDB}</div>;
+  return <div className="m-20">{usersFromDB.email}</div>;
 }
 
 export default Users2;

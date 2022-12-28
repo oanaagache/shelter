@@ -5,7 +5,7 @@ function Users() {
   fetch(
     "https://cors-anywhere.herokuapp.com/https://data.mongodb-api.com/app/data-cnyps/endpoint/data/v1/action/find",
     {
-      method: "post",
+      method: "get",
       headers: {
         "Content-Type": "application/json",
         "Access-Control-Request-Headers": "*",
