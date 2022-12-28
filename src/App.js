@@ -18,7 +18,6 @@ import AdoptionForm from "./components/form/AdoptionForm";
 import Register from "./components/login/Register";
 import Login from "./components/login/Login";
 import Users from "./users/Users";
-import Users2 from "./users/Users2";
 
 const App = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -60,7 +59,6 @@ const App = () => {
         <Route path="/success/:name" element={<Success />} />
         //
         <Route path="/users" element={<Users />} />
-        <Route path="/users2" element={<Users2 />} />
       </Routes>
       <Footer />
     </Router>
