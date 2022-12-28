@@ -4,7 +4,6 @@ import About from "./pages/about/About";
 import Donate from "./pages/donate/Donate";
 import Foster from "./pages/foster/Foster";
 import Adopt from "./components/adopt/Adopt";
-import Articles from "./pages/articles/Articles";
 import Navbar from "./components/nav/Navbar";
 import Footer from "./components/footer/Footer";
 import Main from "./components/main/Main";
@@ -54,7 +53,6 @@ const App = () => {
             <Login isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />
           }
         />
-        <Route path="/articles" element={<Articles />} />
         <Route path="/Navbar:isLoggedIn" element={<Navbar />} />
         <Route path="/register" element={<Register />} />
         <Route path="/success/:name" element={<Success />} />

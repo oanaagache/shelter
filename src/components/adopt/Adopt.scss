@@ -1,4 +1,6 @@
 $color: aliceblue;
+$background-color: rgb(126, 63, 102);
+$black: #000;
 
 * {
   margin: 0;
@@ -18,7 +20,7 @@ body {
   color: $color;
   width: 150px;
   height: 50px;
-  background-color: rgb(126, 63, 102);
+  background-color: $background-color;
   margin: 20px;
   font-size: 24px;
 }
@@ -87,37 +89,41 @@ body {
   position: relative;
 }
 
-.dropdown .dropdown-btn {
+.dropdown-btn {
   background-color: $color;
-  box-shadow: 3px 3px 10px 6px rgba(0, 0, 0, 0.06);
+  box-shadow: 3px 3px 10px 6px rgba($black, 0.06);
   font-weight: bold;
-  color: black;
+  color: $black;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.dropdown .dropdown-content {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  padding: 10px;
-  background-color: $color;
-  box-shadow: 3px 3px 10px 6px rgba(0, 0, 0, 0.06);
-  font-weight: bold;
-  color: black;
-  width: 100%;
-  z-index: 1;
-}
+.dropdown {
+  .dropdown-content {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    padding: 10px;
+    background-color: $color;
+    box-shadow: 3px 3px 10px 6px rgba($black, 0.06);
+    font-weight: bold;
+    color: $black;
+    width: 100%;
+    z-index: 1;
+  }
 
-.dropdown .dropdown-btn .dropdown-item {
-  padding: 10px;
-  cursor: pointer;
-  transition: all 2s;
-}
+  .dropdown-btn {
+    .dropdown-item {
+      padding: 10px;
+      cursor: pointer;
+      transition: all 2s;
+    }
 
-.dropdown .dropdown-btn .dropdown-item:hover {
-  background: #f4f4f4;
+    .dropdown-item:hover {
+      background: #f4f4f4;
+    }
+  }
 }
 
 .button {
@@ -128,18 +134,18 @@ body {
   color: $color;
   width: 150px;
   height: 50px;
-  background-color: rgb(126, 63, 102);
+  background-color: $background-color;
   margin: 30px 10px 50px 0;
   font-size: 24px;
 }
 
 .text {
-  color: black;
+  color: $black;
   font-size: 24px;
 }
 
 .showMore-btn {
-  color: black;
+  color: $black;
   width: 200px;
   height: 50px;
   background-color: $color;
@@ -154,7 +160,7 @@ body {
 }
 
 .text {
-  color: black;
+  color: $black;
   padding: 30px;
   margin-top: 20px;
   font-size: 24px;

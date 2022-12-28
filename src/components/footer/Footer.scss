@@ -1,50 +1,63 @@
-* 
-	box-sizing: border-box 
-	padding: 0 
-	margin: 0 
+$color: aliceblue;
+$black: #000;
+$font-menu: "Oswald", sans-serif;
+$font-title: "Segoe UI", sans-serif;
 
-.footer 
-	height: 160px 
-	width: 100% 
-	background-color: black 
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
 
-.footer-content 
-	display: flex 
-	color: aliceblue 
-	align-items: center 
-	justify-content: center 
-	flex-direction: column 
-	text-align: center 
+.footer {
+  height: 160px;
+  width: 100%;
+  background-color: $black;
+}
 
-.footer-inner 
-	padding: 10px 10px 10px 50px 
-	display: flex 
-	align-items: center 
+.footer-content {
+  display: flex;
+  color: $color;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
 
-.footer-menu 
-	display: flex 
-	list-style: none 
-	justify-content: center 
+.footer-inner {
+  padding: 10px 10px 10px 50px;
+  display: flex;
+  align-items: center;
+}
 
-	li 
-		display: inline-flex 
-		flex-direction: row-reverse 
-		font-size: 20px 
-		list-style: none 
-		padding: 0 10px 0 10px 
-		margin-top: 50px 
-		position: relative 
+.footer-menu {
+  display: flex;
+  list-style: none;
+  justify-content: center;
+}
+.footer-menu {
+  li {
+    display: inline-flex;
+    flex-direction: row-reverse;
+    font-size: 20px;
+    list-style: none;
+    padding: 0 10px 0 10px;
+    margin-top: 50px;
+    position: relative;
+  }
+  .lis {
+    padding: 10px 10px 10px 10px;
+    position: relative;
+    font-size: 20px;
+    font-family: $font-menu;
+    list-style: none;
+  }
+}
 
-	lis 
-		padding: 10px 10px 10px 10px 
-		position: relative 
-		font-size: 20px 
-		font-family: "Oswald", sans-serif 
-		list-style: none 
-		
-.footer-title 
-	font-family: "Segoe UI", sans-serif 
-	display: flex 
-	font-size: 20px 
-	margin-top: 50px 
-	margin-right: 50px 
+.footer-title {
+  font-family: $font-title;
+  display: flex;
+  font-size: 20px;
+  margin-top: 50px;
+  margin-right: 50px;
+}

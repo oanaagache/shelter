@@ -1,57 +1,69 @@
-* 
-	box-sizing: border-box 
-	padding: 0 
-	margin: 0 
-	
-$color:aliceblue
+$color: aliceblue;
+$border-color: darkgreen;
+$font: "Oswald", sans-serif;
 
-.header 
-	max-width: 100% 
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
 
-.header-content 
-	display: flex 
-	font-family: "Oswald", sans-serif 
-	flex-direction: row 
-	padding: 0 50px 
-	min-height: 160px 
+.header {
+  max-width: 100%;
+}
 
-.header-inner 
-	display: flex 
-	align-items: center 
+.header-content {
+  display: flex;
+  font-family: $font;
+  flex-direction: row;
+  padding: 0 50px;
+  min-height: 160px;
+}
 
-.img 
-	display: flex 
-	padding: 18px 31px 15px 76px 
+.header-inner {
+  display: flex;
+  align-items: center;
+}
 
-.header-title 
-	display: flex 
-	padding: 26px 61px 27px 31px 
-	font-family: "Oswald", sans-serif 
+.img {
+  display: flex;
+  padding: 18px 31px 15px 76px;
+}
 
-.header-menu 
-	display: flex 
-	list-style: none 
-	margin: 0 
-	flex: 1 
-	flex-direction: row 
-	justify-content: space-between 
-	align-items: center 
-	li 
-		position: relative 
-		font-size: 20px 
-		font-family: "Oswald", sans-serif 
-		cursor: pointer 
+.header-title {
+  display: flex;
+  padding: 26px 61px 27px 31px;
+  font-family: $font;
+}
 
-.adopt-nav 
-	border-width: 10px 
-	border-color: darkgreen 
-	border-style: solid 
-	border-top: 10px 
-	width: 80px 
-	height: 30px 
-	background-color: darkgreen 
-	color: $color
-	
-.about-nav 
-	text-decoration: none 
+.header-menu {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  flex: 1;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
 
+.li {
+  position: relative;
+  font-size: 20px;
+  font-family: $font;
+  cursor: pointer;
+}
+
+.adopt-nav {
+  border-width: 10px;
+  border-color: $border-color;
+  border-style: solid;
+  border-top: 10px;
+  width: 80px;
+  height: 30px;
+  background-color: $border-color;
+  color: $color;
+}
+
+.about-nav {
+  text-decoration: none;
+}
