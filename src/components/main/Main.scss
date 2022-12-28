@@ -8,22 +8,9 @@ $font: "Oswald", sans-serif;
   margin: 0;
 }
 
-.container {
-  max-width: 100%;
-}
-
 .main {
   position: relative;
   color: $color;
-}
-
-.main-text {
-  font-size: 25px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-35%, -50%);
-  font-family: $font;
 }
 
 .main-image {
@@ -32,35 +19,83 @@ $font: "Oswald", sans-serif;
   object-fit: cover;
 }
 
+.main-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-35%, -50%);
+
+  font-family: $font;
+}
+
 .main-title {
-  padding: 0 80px 20px 100px;
-}
-
-.main-p {
   padding: 0 80px 5px 0px;
+  font-size: 18px;
+  line-height: 28px;
 }
 
-.main-sp {
-  padding: 10px 80px 32px 50px;
+// .button {
+//   display: flex;
+//   padding: 10px 80px 5px 20px;
+// }
+
+// .donate {
+//   width: 180px;
+//   height: 50px;
+//   margin: 20px;
+//   font-size: 24px;
+// }
+
+// .adopt {
+//   color: $color;
+//   width: 180px;
+//   height: 50px;
+//   background-color: $background-color;
+//   margin: 20px;
+//   font-size: 24px;
+// }
+
+//sm
+@media (min-width: 640px) {
+  .main-title {
+    padding: 0 80px 5px 0px;
+    font-size: 20px;
+    line-height: 28px;
+  }
 }
 
-.button {
-  display: flex;
-  padding: 10px 80px 5px 20px;
+//md
+@media (min-width: 768px) {
+  .main-title {
+    padding: 0 80px 5px 0px;
+    font-size: 24px;
+    line-height: 32px;
+  }
 }
 
-.adopt {
-  color: $color;
-  width: 180px;
-  height: 50px;
-  background-color: $background-color;
-  margin: 20px;
-  font-size: 24px;
+//lg
+@media (min-width: 1024px) {
+  .main-title {
+    padding: 0 80px 5px 0px;
+    font-size: 30px;
+    line-height: 36px;
+  }
 }
 
-.donate {
-  width: 180px;
-  height: 50px;
-  margin: 20px;
-  font-size: 24px;
+//xl
+@media (min-width: 1280px) {
+  .main-title {
+    padding: 0 80px 5px 0px;
+    font-size: 48px;
+    line-height: 1;
+  }
+}
+
+//2xl
+@media (min-width: 1536px) {
+  .main-title {
+    padding: 0 80px 5px 0px;
+    font-size: 48px;
+    line-height: 1;
+  }
 }

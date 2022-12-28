@@ -88,7 +88,7 @@ const AdoptionForm = (props) => {
           </div>
         </div>
 
-        <Form onSubmit={handleSubmit} style={{ paddingLeft: 300 }}>
+        <Form onSubmit={handleSubmit} style={{ paddingLeft: 100 }}>
           <div className="adoption-form">
             <div className="form-row">
               {isLoggedIn ? (
@@ -206,44 +206,47 @@ const AdoptionForm = (props) => {
               </div>
             </div>
 
-            <div className="form-row"></div>
+            <div className="form-row">
+              <div className="status-form">
+                <h3 className="title">Family status and daily routine</h3>
+                <h4 className="title">Do you have children?</h4>
 
-            <div className="status-form">
-              <h3 className="title">Family status and daily routine</h3>
-              <h4 className="title">Do you have children?</h4>
-
-              <div className="form-group" style={{ paddingRight: 400 }}>
-                <label htmlFor="text">
-                  If your answer is "Yes", please tell us a little bit about
-                  their experience and confort level around animals.
-                </label>
-                <textarea
-                  className="form-control"
-                  id="text"
-                  rows="5"
-                  value={status}
-                  onChange={(e) => setStatus(e.target.value)}
-                ></textarea>
+                <div className="form-group" style={{ paddingRight: 400 }}>
+                  <label htmlFor="text">
+                    If your answer is "Yes", please tell us a little bit about
+                    their experience and confort level around animals.
+                  </label>
+                  <textarea
+                    className="form-control"
+                    id="text"
+                    rows="5"
+                    value={status}
+                    onChange={(e) => setStatus(e.target.value)}
+                  ></textarea>
+                </div>
               </div>
             </div>
 
-            <h4 className="title">Do you have pets at home?</h4>
-
-            <div className="form-group" style={{ paddingRight: 400 }}>
-              <label htmlFor="text">
-                If your answer is "Yes", please tell us a little bit about their
-                experience and confort level around other animals.
-              </label>
-              <textarea
-                className="form-control"
-                id="text"
-                rows="5"
-                value={routine}
-                onChange={(e) => setRoutine(e.target.value)}
-              ></textarea>
+            <div className="form-row">
+              <div className="status-form">
+                <h4 className="title">Do you have pets at home?</h4>
+                <div className="form-group" style={{ paddingRight: 400 }}>
+                  <label htmlFor="text">
+                    If your answer is "Yes", please tell us a little bit about
+                    their experience and confort level around other animals.
+                  </label>
+                  <textarea
+                    className="form-control"
+                    id="text"
+                    rows="5"
+                    value={routine}
+                    onChange={(e) => setRoutine(e.target.value)}
+                  ></textarea>
+                </div>{" "}
+              </div>{" "}
             </div>
 
-            <div className="button" style={{ paddingRight: 500 }}>
+            <div className="button">
               <button
                 className="back"
                 onClick={() => {

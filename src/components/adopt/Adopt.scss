@@ -40,39 +40,66 @@ body {
   align-items: center;
 }
 
+.h2 {
+  display: flex;
+  height: 16px;
+  margin-right: 20px;
+}
+
 .adopt-drop {
-  margin: 50px 0 50px 0;
+  margin: 16px;
 }
 
 .adopt-title {
   margin: auto;
-  justify-content: center;
   display: flex;
-  font-size: 45px;
+  justify-content: center;
+  height: 16px;
+  margin-right: 20px;
+  font-size: 24px;
+  line-height: 32px;
 }
 
 .adopt-drop-title {
+  margin: auto;
+  justify-content: left;
   display: flex;
-  align-items: center;
-  font-size: 36px;
-  margin: 40px 0 20px 0;
+  font-size: 20px;
+  line-height: 28px;
+  margin: 16px 0 16px 0;
 }
 
 .drop {
   display: flex;
 }
 
-.drop1,
-.drop2,
+.drop1 {
+  flex-basis: 50%;
+  padding: 8px 0 8px 0;
+  font-size: 18px;
+  line-height: 28px;
+}
+
+.drop2 {
+  flex-basis: 90%;
+  padding: 8px 0 8px 0;
+  font-size: 18px;
+  line-height: 28px;
+}
+
 .drop3,
 .drop4,
 .drop5,
-.drop6,
-.check,
-.drop7 {
-  height: 50%;
-  flex: 14%;
-  padding: 20px 10px 10px 0;
+.drop6 {
+  flex-basis: 30%;
+  padding: 8px 0 8px 0;
+  font-size: 18px;
+  line-height: 28px;
+}
+
+.drop-h2 {
+  font-size: 18px;
+  line-height: 28px;
 }
 
 .checklist {
@@ -83,120 +110,171 @@ body {
   margin: 0 20px 0 0;
 }
 
-.dropdown {
-  width: 60%;
-  margin-top: 10px;
-  position: relative;
-}
-
-.dropdown-btn {
-  background-color: $color;
-  box-shadow: 3px 3px 10px 6px rgba($black, 0.06);
-  font-weight: bold;
-  color: $black;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.dropdown {
-  .dropdown-content {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    padding: 10px;
-    background-color: $color;
-    box-shadow: 3px 3px 10px 6px rgba($black, 0.06);
-    font-weight: bold;
-    color: $black;
-    width: 100%;
-    z-index: 1;
-  }
-
-  .dropdown-btn {
-    .dropdown-item {
-      padding: 10px;
-      cursor: pointer;
-      transition: all 2s;
-    }
-
-    .dropdown-item:hover {
-      background: #f4f4f4;
-    }
-  }
-}
-
 .button {
-  justify-content: flex-end;
+  justify-content: left;
 }
 
 .filter-btn {
   color: $color;
-  width: 150px;
-  height: 50px;
   background-color: $background-color;
-  margin: 30px 10px 50px 0;
-  font-size: 24px;
+  width: 100px;
+  height: 40px;
+  margin: 10px;
+  font-size: 12px;
+  line-height: 16px;
+  padding: 8px;
 }
 
-.text {
-  color: $black;
-  font-size: 24px;
-}
+// .text {
+//   color: $black;
+//   font-size: 24px;
+// }
 
-.showMore-btn {
-  color: $black;
-  width: 200px;
-  height: 50px;
-  background-color: $color;
-  margin-top: 20px;
-  font-size: 24px;
-}
+// .showMore-btn {
+//   color: $black;
+//   width: 200px;
+//   height: 50px;
+//   background-color: $color;
+//   margin-top: 20px;
+//   font-size: 24px;
+// }
 
-.results {
-  padding: 20px;
-  margin: 20px;
-  align-items: center;
-}
+// .results {
+//   padding: 20px;
+//   margin: 20px;
+//   align-items: center;
+// }
 
-.text {
-  color: $black;
-  padding: 30px;
-  margin-top: 20px;
-  font-size: 24px;
-  justify-content: center;
-}
+// .text {
+//   color: $black;
+//   padding: 30px;
+//   margin-top: 20px;
+//   font-size: 24px;
+//   justify-content: center;
+// }
 
 .cards {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  margin: 50px 0 50px 0;
+  margin-top: 16px;
 }
 
-.sort {
-  position: relative;
-  left: 1400px;
-}
+// .sort {
+//   position: relative;
+//   left: 1400px;
+// }
 
-.foster-li {
-  padding: 20px;
-  font-size: 16px;
-}
+// .foster-li {
+//   padding: 20px;
+//   font-size: 16px;
+// }
 
 //sm
-@media (min-width: 640px) { 
-  .img {
-  flex: 50%;
-} }
+@media (min-width: 640px) {
+  .h2 {
+    display: flex;
+    height: 16px;
+    margin-right: 8px;
+  }
+  .adopt-title {
+    margin: auto;
+    display: flex;
+    height: 16px;
+    margin-right: 20px;
+    font-size: 24px;
+    line-height: 32px;
+  }
+  .adopt-drop-title {
+    margin: auto;
+    justify-content: left;
+    display: flex;
+    font-size: 20px;
+    line-height: 28px;
+    margin: 20px 0 20px 0;
+  }
+}
 
 //md
-@media (min-width: 768px) { ... }
+@media (min-width: 768px) {
+  .h2 {
+    display: flex;
+    height: 16px;
+    margin-right: 8px;
+  }
+  .adopt-drop-title {
+    margin: auto;
+    justify-content: left;
+    display: flex;
+    font-size: 20px;
+    line-height: 28px;
+    margin: 20px 0 20px 0;
+  }
+}
 
 //lg
-@media (min-width: 1024px) { ... }
+@media (min-width: 1024px) {
+  .h2 {
+    display: flex;
+    height: 16px;
+    margin-right: 8px;
+  }
+  .adopt-drop-title {
+    margin: auto;
+    justify-content: left;
+    display: flex;
+    font-size: 20px;
+    line-height: 28px;
+    margin: 20px 0 20px 0;
+  }
+}
 
 //xl
-@media (min-width: 1280px) { ... 
+@media (min-width: 1280px) {
+  .h2 {
+    display: flex;
+    height: 16px;
+    margin-right: 8px;
+  }
+  .adopt-title {
+    margin: auto;
+    display: flex;
+    height: 16px;
+    margin-right: 20px;
+    font-size: 24px;
+    line-height: 32px;
+  }
+  .adopt-drop-title {
+    margin: auto;
+    justify-content: left;
+    display: flex;
+    font-size: 24px;
+    line-height: 32px;
+    margin: 20px 0 20px 0;
+  }
+}
+
 //2xl
-@media (min-width: 1536px) { ... }
+@media (min-width: 1536px) {
+  .h2 {
+    display: flex;
+    height: 16px;
+    margin-right: 8px;
+  }
+  .adopt-title {
+    margin: auto;
+    display: flex;
+    height: 16px;
+    margin-right: 20px;
+    font-size: 24px;
+    line-height: 32px;
+  }
+  .adopt-drop-title {
+    margin: auto;
+    justify-content: left;
+    display: flex;
+    font-size: 24px;
+    line-height: 32px;
+    margin: 20px 0 20px 0;
+  }
+}

@@ -17,47 +17,118 @@ $font-title: "Segoe UI", sans-serif;
 
 .footer-content {
   display: flex;
-  color: $color;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   text-align: center;
+  color: $color;
 }
 
 .footer-inner {
-  padding: 10px 10px 10px 50px;
+  padding: 25px 10px 10px 50px;
   display: flex;
   align-items: center;
+}
+
+.footer-title {
+  font-family: $font-title;
+  display: flex;
+  font-size: 14px;
+  line-height: 20px;
+  margin-top: 20px;
 }
 
 .footer-menu {
   display: flex;
   list-style: none;
   justify-content: center;
+  margin-right: 80px;
 }
+
 .footer-menu {
   li {
     display: inline-flex;
     flex-direction: row-reverse;
     font-size: 20px;
     list-style: none;
-    padding: 0 10px 0 10px;
-    margin-top: 50px;
+    padding: 10px;
+    margin-top: 30px;
     position: relative;
-  }
-  .lis {
-    padding: 10px 10px 10px 10px;
-    position: relative;
-    font-size: 20px;
-    font-family: $font-menu;
-    list-style: none;
   }
 }
 
-.footer-title {
-  font-family: $font-title;
-  display: flex;
-  font-size: 20px;
-  margin-top: 50px;
-  margin-right: 50px;
+//sm
+@media (min-width: 640px) {
+  .footer-menu {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    margin-right: 80px;
+    flex: row;
+  }
+}
+
+//md
+@media (min-width: 768px) {
+  .footer-menu {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    margin-right: 80px;
+    flex: row;
+  }
+}
+
+//lg
+@media (min-width: 1024px) {
+  .footer-title {
+    font-family: $font-title;
+    display: flex;
+    font-size: 18px;
+    line-height: 28px;
+    margin-top: 20px;
+  }
+  .footer-menu {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    margin-right: 80px;
+    flex: row;
+  }
+}
+
+//xl
+@media (min-width: 1280px) {
+  .footer-title {
+    font-family: $font-title;
+    display: flex;
+    font-size: 20px;
+    line-height: 28px;
+    margin-top: 20px;
+  }
+  .footer-menu {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    margin-right: 80px;
+    flex: row;
+  }
+}
+
+//2xl
+@media (min-width: 1536px) {
+  .footer-title {
+    font-family: $font-title;
+    display: flex;
+    font-size: 20px;
+    line-height: 28px;
+    margin-top: 20px;
+  }
+  .footer-menu {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    margin-right: 80px;
+    flex: row;
+  }
 }

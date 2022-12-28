@@ -16,8 +16,7 @@ $font: "Oswald", sans-serif;
   display: flex;
   font-family: $font;
   flex-direction: row;
-  padding: 0 50px;
-  min-height: 160px;
+  height: 144px;
 }
 
 .header-inner {
@@ -25,15 +24,12 @@ $font: "Oswald", sans-serif;
   align-items: center;
 }
 
-.img {
-  display: flex;
-  padding: 18px 31px 15px 76px;
-}
-
 .header-title {
   display: flex;
-  padding: 26px 61px 27px 31px;
+  cursor: pointer;
   font-family: $font;
+  font-size: 20px;
+  line-height: 28px;
 }
 
 .header-menu {
@@ -48,22 +44,85 @@ $font: "Oswald", sans-serif;
 
 .li {
   position: relative;
-  font-size: 20px;
   font-family: $font;
   cursor: pointer;
 }
 
-.adopt-nav {
-  border-width: 10px;
-  border-color: $border-color;
-  border-style: solid;
-  border-top: 10px;
-  width: 80px;
-  height: 30px;
-  background-color: $border-color;
-  color: $color;
-}
-
 .about-nav {
   text-decoration: none;
+  margin: 0 4px 0 4px;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+//sm
+@media (min-width: 640px) {
+}
+
+//md
+@media (min-width: 768px) {
+  .header-title {
+    display: flex;
+    cursor: pointer;
+    font-family: $font;
+    font-size: 24px;
+    line-height: 32px;
+  }
+  .about-nav {
+    text-decoration: none;
+    margin: 0 4px 0 4px;
+    font-size: 20px;
+    line-height: 28px;
+  }
+}
+
+//lg
+@media (min-width: 1024px) {
+  .header-title {
+    display: flex;
+    cursor: pointer;
+    font-family: $font;
+    font-size: 36px;
+    line-height: 40px;
+  }
+  .about-nav {
+    text-decoration: none;
+    margin: 0 4px 0 4px;
+    font-size: 24px;
+    line-height: 32px;
+  }
+}
+
+//xl
+@media (min-width: 1280px) {
+  .header-title {
+    display: flex;
+    cursor: pointer;
+    font-family: $font;
+    font-size: 60px;
+    line-height: 1;
+  }
+  .about-nav {
+    text-decoration: none;
+    margin: 0 4px 0 4px;
+    font-size: 24px;
+    line-height: 32px;
+  }
+}
+
+//2xl
+@media (min-width: 1536px) {
+  .header-title {
+    display: flex;
+    cursor: pointer;
+    font-family: $font;
+    font-size: 60px;
+    line-height: 1;
+  }
+  .about-nav {
+    text-decoration: none;
+    margin: 0 4px 0 4px;
+    font-size: 36px;
+    line-height: 40px;
+  }
 }

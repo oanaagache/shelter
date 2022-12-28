@@ -14,11 +14,12 @@ const Main = () => {
         </div>
 
         <div className="main-text">
-          <h3 className="main-title"> Our Mission </h3>
-          <h3 className="main-p"> We aim to find best companions </h3>
-          <h3 className="main-sp">for homeless pets in need</h3>
+          <h3 className="main-title">
+            {" "}
+            We aim to find best companions for homeless pets in need
+          </h3>
 
-          <div className="button">
+          {/* <div className="button">
             <button
               className="donate"
               onClick={() => {
@@ -35,7 +36,7 @@ const Main = () => {
             >
               Adopt
             </button>
-          </div>
+          </div> */}
         </div>
       </div>
     </>
