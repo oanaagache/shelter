@@ -69,16 +69,6 @@ $black: #000;
   line-height: 16px;
 }
 
-// .btn-adoption {
-//   color: $color;
-//   width: 200px;
-//   height: 50px;
-//   background-color: $background-color;
-//   font-size: 24px;
-//   align-items: flex-end;
-//   display: inline;
-// }
-
 .submit {
   color: $color;
   width: 80px;
@@ -90,88 +80,22 @@ $black: #000;
   line-height: 16px;
 }
 
-//sm
-@media (min-width: 640px) {
-  .form-row {
-    display: flex;
-    flex-direction: row;
-    padding-left: 20px;
-    margin: auto;
-  }
+//sm: { min: "640px", max: "767px" },
+@media screen and (min-width: 640px) {
 }
 
-//md
-@media (min-width: 768px) {
-  .adoption-title {
-    margin: auto;
-    justify-content: center;
-    display: flex;
-    font-size: 30px;
-    line-height: 36px;
-    height: 16px;
-    margin-bottom: 20px;
-  }
-  .form-row {
-    display: flex;
-    flex-direction: row;
-    padding-left: 20px;
-    margin: auto;
-  }
+// md: { min: "768px", max: "1023px" },
+@media screen and (min-width: 768px) {
 }
 
-//lg
-@media (min-width: 1024px) {
-  .adoption-title {
-    margin: auto;
-    justify-content: center;
-    display: flex;
-    font-size: 36px;
-    line-height: 40px;
-    height: 16px;
-    margin-bottom: 20px;
-  }
-  .form-row {
-    display: flex;
-    flex-direction: row;
-    padding-left: 20px;
-    margin: auto;
-  }
+//lg: { min: "1024px", max: "1279px" },
+@media screen and (min-width: 1024px) {
 }
 
-//xl
-@media (min-width: 1280px) {
-  .adoption-title {
-    margin: auto;
-    justify-content: center;
-    display: flex;
-    font-size: 48px;
-    line-height: 1;
-    height: 16px;
-    margin-bottom: 20px;
-  }
-  .form-row {
-    display: flex;
-    flex-direction: row;
-    padding-left: 20px;
-    margin: auto;
-  }
+// xl: { min: "1280px", max: "1535px" },
+@media screen and (min-width: 1280px) {
 }
 
-//2xl
-@media (min-width: 1536px) {
-  .adoption-title {
-    margin: auto;
-    justify-content: center;
-    display: flex;
-    font-size: 48px;
-    line-height: 1;
-    height: 16px;
-    margin-bottom: 20px;
-  }
-  .form-row {
-    display: flex;
-    flex-direction: row;
-    padding-left: 20px;
-    margin: auto;
-  }
+// xxl: { min: "1536px" },
+@media screen and (min-width: 1536px) {
 }

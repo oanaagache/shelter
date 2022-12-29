@@ -57,78 +57,22 @@ $font-title: "Segoe UI", sans-serif;
   }
 }
 
-//sm
-@media (min-width: 640px) {
-  .footer-menu {
-    display: flex;
-    list-style: none;
-    justify-content: center;
-    margin-right: 80px;
-    flex: row;
-  }
+//sm: { min: "640px", max: "767px" },
+@media screen and (min-width: 640px) {
 }
 
-//md
-@media (min-width: 768px) {
-  .footer-menu {
-    display: flex;
-    list-style: none;
-    justify-content: center;
-    margin-right: 80px;
-    flex: row;
-  }
+// md: { min: "768px", max: "1023px" },
+@media screen and (min-width: 768px) {
 }
 
-//lg
-@media (min-width: 1024px) {
-  .footer-title {
-    font-family: $font-title;
-    display: flex;
-    font-size: 18px;
-    line-height: 28px;
-    margin-top: 20px;
-  }
-  .footer-menu {
-    display: flex;
-    list-style: none;
-    justify-content: center;
-    margin-right: 80px;
-    flex: row;
-  }
+//lg: { min: "1024px", max: "1279px" },
+@media screen and (min-width: 1024px) {
 }
 
-//xl
-@media (min-width: 1280px) {
-  .footer-title {
-    font-family: $font-title;
-    display: flex;
-    font-size: 20px;
-    line-height: 28px;
-    margin-top: 20px;
-  }
-  .footer-menu {
-    display: flex;
-    list-style: none;
-    justify-content: center;
-    margin-right: 80px;
-    flex: row;
-  }
+// xl: { min: "1280px", max: "1535px" },
+@media screen and (min-width: 1280px) {
 }
 
-//2xl
-@media (min-width: 1536px) {
-  .footer-title {
-    font-family: $font-title;
-    display: flex;
-    font-size: 20px;
-    line-height: 28px;
-    margin-top: 20px;
-  }
-  .footer-menu {
-    display: flex;
-    list-style: none;
-    justify-content: center;
-    margin-right: 80px;
-    flex: row;
-  }
+// xxl: { min: "1536px" },
+@media screen and (min-width: 1536px) {
 }

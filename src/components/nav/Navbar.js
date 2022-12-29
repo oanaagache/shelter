@@ -19,7 +19,11 @@ const Navbar = (props) => {
     <div className="header">
       <div className="header-content">
         <div className="header-inner">
-          <img src={logo} onClick={() => navigate("/")} />
+          <img
+            style={{ padding: 5 }}
+            src={logo}
+            onClick={() => navigate("/")}
+          />
           <h1 className="header-title" onClick={() => navigate("/")}>
             Paws Animal Shelter
           </h1>
@@ -35,7 +39,7 @@ const Navbar = (props) => {
               end
               className="about-nav"
             >
-              About us
+              About
             </NavLink>
           </li>
           <li>

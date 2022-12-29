@@ -7,9 +7,9 @@ $black: #000;
   padding: 0;
 }
 
-.adopt-container {
+.adopt-cont {
   max-width: 100%;
-  padding: 0 200px 0 120px;
+  padding-left: 20px;
 }
 
 body {
@@ -31,7 +31,7 @@ body {
 }
 
 .adopt-header {
-  height: 80px;
+  height: 60px;
   width: 100%;
 }
 
@@ -46,10 +46,6 @@ body {
   margin-right: 20px;
 }
 
-.adopt-drop {
-  margin: 16px;
-}
-
 .adopt-title {
   margin: auto;
   display: flex;
@@ -58,6 +54,10 @@ body {
   margin-right: 20px;
   font-size: 24px;
   line-height: 32px;
+}
+
+.adopt-drop {
+  margin: 16px;
 }
 
 .adopt-drop-title {
@@ -74,14 +74,14 @@ body {
 }
 
 .drop1 {
-  flex-basis: 50%;
+  flex-basis: 10%;
   padding: 8px 0 8px 0;
   font-size: 18px;
   line-height: 28px;
 }
 
 .drop2 {
-  flex-basis: 90%;
+  flex-basis: 10%;
   padding: 8px 0 8px 0;
   font-size: 18px;
   line-height: 28px;
@@ -91,7 +91,7 @@ body {
 .drop4,
 .drop5,
 .drop6 {
-  flex-basis: 30%;
+  flex-basis: 10%;
   padding: 8px 0 8px 0;
   font-size: 18px;
   line-height: 28px;
@@ -125,34 +125,6 @@ body {
   padding: 8px;
 }
 
-// .text {
-//   color: $black;
-//   font-size: 24px;
-// }
-
-// .showMore-btn {
-//   color: $black;
-//   width: 200px;
-//   height: 50px;
-//   background-color: $color;
-//   margin-top: 20px;
-//   font-size: 24px;
-// }
-
-// .results {
-//   padding: 20px;
-//   margin: 20px;
-//   align-items: center;
-// }
-
-// .text {
-//   color: $black;
-//   padding: 30px;
-//   margin-top: 20px;
-//   font-size: 24px;
-//   justify-content: center;
-// }
-
 .cards {
   display: flex;
   flex-direction: row;
@@ -160,121 +132,22 @@ body {
   margin-top: 16px;
 }
 
-// .sort {
-//   position: relative;
-//   left: 1400px;
-// }
-
-// .foster-li {
-//   padding: 20px;
-//   font-size: 16px;
-// }
-
-//sm
-@media (min-width: 640px) {
-  .h2 {
-    display: flex;
-    height: 16px;
-    margin-right: 8px;
-  }
-  .adopt-title {
-    margin: auto;
-    display: flex;
-    height: 16px;
-    margin-right: 20px;
-    font-size: 24px;
-    line-height: 32px;
-  }
-  .adopt-drop-title {
-    margin: auto;
-    justify-content: left;
-    display: flex;
-    font-size: 20px;
-    line-height: 28px;
-    margin: 20px 0 20px 0;
-  }
+//sm: { min: "640px", max: "767px" },
+@media screen and (min-width: 640px) {
 }
 
-//md
-@media (min-width: 768px) {
-  .h2 {
-    display: flex;
-    height: 16px;
-    margin-right: 8px;
-  }
-  .adopt-drop-title {
-    margin: auto;
-    justify-content: left;
-    display: flex;
-    font-size: 20px;
-    line-height: 28px;
-    margin: 20px 0 20px 0;
-  }
+// md: { min: "768px", max: "1023px" },
+@media screen and (min-width: 768px) {
 }
 
-//lg
-@media (min-width: 1024px) {
-  .h2 {
-    display: flex;
-    height: 16px;
-    margin-right: 8px;
-  }
-  .adopt-drop-title {
-    margin: auto;
-    justify-content: left;
-    display: flex;
-    font-size: 20px;
-    line-height: 28px;
-    margin: 20px 0 20px 0;
-  }
+//lg: { min: "1024px", max: "1279px" },
+@media screen and (min-width: 1024px) {
 }
 
-//xl
-@media (min-width: 1280px) {
-  .h2 {
-    display: flex;
-    height: 16px;
-    margin-right: 8px;
-  }
-  .adopt-title {
-    margin: auto;
-    display: flex;
-    height: 16px;
-    margin-right: 20px;
-    font-size: 24px;
-    line-height: 32px;
-  }
-  .adopt-drop-title {
-    margin: auto;
-    justify-content: left;
-    display: flex;
-    font-size: 24px;
-    line-height: 32px;
-    margin: 20px 0 20px 0;
-  }
+// xl: { min: "1280px", max: "1535px" },
+@media screen and (min-width: 1280px) {
 }
 
-//2xl
-@media (min-width: 1536px) {
-  .h2 {
-    display: flex;
-    height: 16px;
-    margin-right: 8px;
-  }
-  .adopt-title {
-    margin: auto;
-    display: flex;
-    height: 16px;
-    margin-right: 20px;
-    font-size: 24px;
-    line-height: 32px;
-  }
-  .adopt-drop-title {
-    margin: auto;
-    justify-content: left;
-    display: flex;
-    font-size: 24px;
-    line-height: 32px;
-    margin: 20px 0 20px 0;
-  }
+// xxl: { min: "1536px" },
+@media screen and (min-width: 1536px) {
 }

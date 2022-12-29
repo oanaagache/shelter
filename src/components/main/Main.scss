@@ -34,69 +34,22 @@ $font: "Oswald", sans-serif;
   line-height: 28px;
 }
 
-// .button {
-//   display: flex;
-//   padding: 10px 80px 5px 20px;
-// }
-
-// .donate {
-//   width: 180px;
-//   height: 50px;
-//   margin: 20px;
-//   font-size: 24px;
-// }
-
-// .adopt {
-//   color: $color;
-//   width: 180px;
-//   height: 50px;
-//   background-color: $background-color;
-//   margin: 20px;
-//   font-size: 24px;
-// }
-
-//sm
-@media (min-width: 640px) {
-  .main-title {
-    padding: 0 80px 5px 0px;
-    font-size: 20px;
-    line-height: 28px;
-  }
-}
-//--
-//md
-@media (min-width: 768px) {
-  .main-title {
-    padding: 0 80px 5px 0px;
-    font-size: 24px;
-    line-height: 32px;
-  }
+//sm: { min: "640px", max: "767px" },
+@media screen and (min-width: 640px) {
 }
 
-//lg
-@media (min-width: 1024px) {
-  .main-title {
-    padding: 0 80px 5px 0px;
-    font-size: 30px;
-    line-height: 36px;
-  }
+// md: { min: "768px", max: "1023px" },
+@media screen and (min-width: 768px) {
 }
 
-//xl
-@media (min-width: 1280px) {
-  .main-title {
-    padding: 0 80px 5px 0px;
-    font-size: 48px;
-    line-height: 1;
-  }
+//lg: { min: "1024px", max: "1279px" },
+@media screen and (min-width: 1024px) {
 }
 
-//--
-//2xl
-@media (min-width: 1536px) {
-  .main-title {
-    padding: 0 80px 5px 0px;
-    font-size: 48px;
-    line-height: 1;
-  }
+// xl: { min: "1280px", max: "1535px" },
+@media screen and (min-width: 1280px) {
+}
+
+// xxl: { min: "1536px" },
+@media screen and (min-width: 1536px) {
 }

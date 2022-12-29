@@ -81,7 +81,7 @@ const Adopt = () => {
         breedsArray1.push(response.data.breeds[i].name);
       }
       //console.log("Dog breedsArray:");
-      //console.log(breedsArray);
+      //console.log(breedsArray1);
       setBreeds(breedsArray1);
     });
   }, []);
@@ -237,7 +237,7 @@ const Adopt = () => {
   const [name, setName] = useState([]);
 
   return (
-    <div className="adopt-container">
+    <div className="adopt-cont">
       <div className="adopt-header">
         <div className="adopt-content">
           <div className="adopt-inner">

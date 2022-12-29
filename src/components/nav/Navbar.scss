@@ -55,74 +55,22 @@ $font: "Oswald", sans-serif;
   line-height: 24px;
 }
 
-//sm
-@media (min-width: 640px) {
+//sm: { min: "640px", max: "767px" },
+@media screen and (min-width: 640px) {
 }
 
-//md
-@media (min-width: 768px) {
-  .header-title {
-    display: flex;
-    cursor: pointer;
-    font-family: $font;
-    font-size: 24px;
-    line-height: 32px;
-  }
-  .about-nav {
-    text-decoration: none;
-    margin: 0 4px 0 4px;
-    font-size: 20px;
-    line-height: 28px;
-  }
+// md: { min: "768px", max: "1023px" },
+@media screen and (min-width: 768px) {
 }
 
-//lg
-@media (min-width: 1024px) {
-  .header-title {
-    display: flex;
-    cursor: pointer;
-    font-family: $font;
-    font-size: 36px;
-    line-height: 40px;
-  }
-  .about-nav {
-    text-decoration: none;
-    margin: 0 4px 0 4px;
-    font-size: 24px;
-    line-height: 32px;
-  }
+//lg: { min: "1024px", max: "1279px" },
+@media screen and (min-width: 1024px) {
 }
 
-//xl
-@media (min-width: 1280px) {
-  .header-title {
-    display: flex;
-    cursor: pointer;
-    font-family: $font;
-    font-size: 60px;
-    line-height: 1;
-  }
-  .about-nav {
-    text-decoration: none;
-    margin: 0 4px 0 4px;
-    font-size: 24px;
-    line-height: 32px;
-  }
+// xl: { min: "1280px", max: "1535px" },
+@media screen and (min-width: 1280px) {
 }
 
-//2xl
-@media (min-width: 1536px) {
-  .header-title {
-    display: flex;
-    cursor: pointer;
-    font-family: $font;
-    font-size: 60px;
-    line-height: 1;
-  }
-  .about-nav {
-    text-decoration: none;
-    margin: 0 4px 0 4px;
-    font-size: 36px;
-    line-height: 40px;
-  }
+// xxl: { min: "1536px" },
+@media screen and (min-width: 1536px) {
 }
