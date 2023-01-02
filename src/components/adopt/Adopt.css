@@ -44,17 +44,25 @@
   gap: 30px;
 }
 
-.drop1,
+.drop1 {
+  flex: 4 1 auto;
+  padding: 8px 0 8px 0;
+  font-size: 15px;
+  justify-content: space-between;
+}
+
 .drop2 {
+  flex: 4 1 auto;
   padding: 8px 0 8px 0;
   font-size: 15px;
   justify-content: space-between;
 }
 
 .drop3,
-.drop5,
 .drop4,
+.drop5,
 .drop6 {
+  flex: 1 1 auto;
   padding: 8px 0 8px 0;
   font-size: 15px;
   justify-content: space-between;
@@ -121,35 +129,25 @@
   .drop {
     display: flex;
     flex-wrap: wrap;
-    gap: 40px;
+    gap: 10px;
   }
   .drop1 {
-    flex-grow: 3;
+    flex: 4 1 auto;
     padding: 8px 0 8px 0;
     font-size: 15px;
     justify-content: space-between;
   }
   .drop2 {
-    flex-grow: 4;
-    padding: 8px 0 8px 0;
-    font-size: 15px;
-    justify-content: space-between;
-  }
-  .drop4 {
-    flex-grow: 1;
-    padding: 8px 0 8px 0;
-    font-size: 15px;
-    justify-content: space-between;
-  }
-  .drop5 {
-    flex-grow: 2;
+    flex: 4 1 auto;
     padding: 8px 0 8px 0;
     font-size: 15px;
     justify-content: space-between;
   }
   .drop3,
+.drop4,
+.drop5,
 .drop6 {
-    flex-grow: 0.5;
+    flex: 1 1 auto;
     padding: 8px 0 8px 0;
     font-size: 15px;
     justify-content: space-between;
@@ -194,7 +192,7 @@
     color: blue;
   }
   .adopt-drop {
-    margin: 10px;
+    margin: 20px;
   }
   .adopt-drop-title {
     margin: auto;
@@ -207,11 +205,16 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    gap: 40px;
+    gap: 20px;
   }
-  .drop1,
-.drop2 {
-    flex-grow: 1.5;
+  .drop1 {
+    flex: 4 1 auto;
+    padding: 8px 0 8px 0;
+    font-size: 15px;
+    justify-content: space-between;
+  }
+  .drop2 {
+    flex: 4 1 auto;
     padding: 8px 0 8px 0;
     font-size: 15px;
     justify-content: space-between;
@@ -220,7 +223,7 @@
 .drop4,
 .drop5,
 .drop6 {
-    flex-grow: 0.5;
+    flex: 1 1 auto;
     padding: 8px 0 8px 0;
     font-size: 15px;
     justify-content: space-between;
@@ -265,7 +268,7 @@
     color: green;
   }
   .adopt-drop {
-    margin: 10px;
+    margin: 40px;
   }
   .adopt-drop-title {
     margin: auto;
@@ -280,9 +283,14 @@
     justify-content: space-evenly;
     gap: 40px;
   }
-  .drop1,
-.drop2 {
-    flex-grow: 0.5;
+  .drop1 {
+    flex: 4 1 auto;
+    padding: 8px 0 8px 0;
+    font-size: 15px;
+    justify-content: space-between;
+  }
+  .drop2 {
+    flex: 4 1 auto;
     padding: 8px 0 8px 0;
     font-size: 15px;
     justify-content: space-between;
@@ -291,7 +299,7 @@
 .drop4,
 .drop5,
 .drop6 {
-    flex-grow: 0.1;
+    flex: 1 1 auto;
     padding: 8px 0 8px 0;
     font-size: 15px;
     justify-content: space-between;
@@ -336,7 +344,7 @@
     color: pink;
   }
   .adopt-drop {
-    margin: 10px;
+    margin: 80px;
   }
   .adopt-drop-title {
     margin: auto;
@@ -349,11 +357,16 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    gap: 40px;
+    gap: 80px;
   }
-  .drop1,
-.drop2 {
-    flex-grow: 1.5;
+  .drop1 {
+    flex: 4 1 auto;
+    padding: 8px 0 8px 0;
+    font-size: 15px;
+    justify-content: space-between;
+  }
+  .drop2 {
+    flex: 4 1 auto;
     padding: 8px 0 8px 0;
     font-size: 15px;
     justify-content: space-between;
@@ -362,7 +375,7 @@
 .drop4,
 .drop5,
 .drop6 {
-    flex-grow: 0.5;
+    flex: 1 1 auto;
     padding: 8px 0 8px 0;
     font-size: 15px;
     justify-content: space-between;
@@ -407,7 +420,7 @@
     color: purple;
   }
   .adopt-drop {
-    margin: 10px;
+    margin: 100px;
   }
   .adopt-drop-title {
     margin: auto;
@@ -420,18 +433,25 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    gap: 40px;
+    gap: 100px;
   }
-  .drop1,
-.drop2 {
+  .drop1 {
+    flex: 4 1 auto;
+    padding: 8px 0 8px 0;
+    font-size: 15px;
+    justify-content: space-between;
+  }
+  .drop2 {
+    flex: 4 1 auto;
     padding: 8px 0 8px 0;
     font-size: 15px;
     justify-content: space-between;
   }
   .drop3,
-.drop5,
 .drop4,
+.drop5,
 .drop6 {
+    flex: 1 1 auto;
     padding: 8px 0 8px 0;
     font-size: 15px;
     justify-content: space-between;
