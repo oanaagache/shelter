@@ -238,26 +238,18 @@ const Adopt = () => {
 
   return (
     <div className="adopt-cont">
-      <div className="adopt-header">
-        <div className="adopt-content">
-          <div className="adopt-inner">
-            <img
-              style={({ height: 1 }, { padding: 10 })}
-              src={logo}
-              alt="Not found"
-            />
-            <h2 className="h2">
-              <Link to="/" style={{ textDecoration: "none" }}>
-                Back
-              </Link>
-            </h2>
-          </div>
-
-          <h4 className="adopt-title">
-            These lovely souls are waiting for you
-          </h4>
-        </div>
+      <div className="adopt-inner">
+        <img
+          style={({ height: "10px" }, { width: "10px" })}
+          src={logo}
+          alt="Not found"
+        />
+        <Link className="arrow" to="/">
+          Back{" "}
+        </Link>
       </div>
+
+      <div className="adopt-title">These lovely souls are waiting for you</div>
 
       <div className="adopt-drop">
         <h3 className="adopt-drop-title">Refine your search:</h3>

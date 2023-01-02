@@ -92,6 +92,7 @@ const Navbar = (props) => {
           </li>
           {isLoggedIn ? (
             <button
+              className="btn-log"
               onClick={() => {
                 handleClick();
               }}
@@ -100,6 +101,7 @@ const Navbar = (props) => {
             </button>
           ) : (
             <button
+              className="btn-log"
               onClick={() => {
                 navigate("/login");
               }}

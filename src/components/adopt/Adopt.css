@@ -3,32 +3,8 @@
   padding: 0;
 }
 
-.adopt-container {
+.adopt-cont {
   max-width: 100%;
-  padding: 0 200px 0 120px;
-}
-
-body {
-  background-color: aliceblue;
-}
-
-.adopt {
-  color: aliceblue;
-  width: 150px;
-  height: 50px;
-  background-color: rgb(126, 63, 102);
-  margin: 20px;
-  font-size: 24px;
-}
-
-.adopt-content {
-  display: flex;
-  margin: 20px 0 50px 0;
-}
-
-.adopt-header {
-  height: 80px;
-  width: 100%;
 }
 
 .adopt-inner {
@@ -36,24 +12,22 @@ body {
   align-items: center;
 }
 
-.h2 {
+.arrow {
   display: flex;
-  height: 16px;
-  margin-right: 20px;
-}
-
-.adopt-drop {
-  margin: 16px;
+  text-decoration: none;
 }
 
 .adopt-title {
-  margin: auto;
   display: flex;
   justify-content: center;
-  height: 16px;
-  margin-right: 20px;
+  align-items: center;
+  height: 60px;
   font-size: 24px;
-  line-height: 32px;
+  color: black;
+}
+
+.adopt-drop {
+  margin: 10px;
 }
 
 .adopt-drop-title {
@@ -61,49 +35,33 @@ body {
   justify-content: left;
   display: flex;
   font-size: 20px;
-  line-height: 28px;
-  margin: 16px 0 16px 0;
+  margin: 40px 0 30px 0;
 }
 
 .drop {
   display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
 }
 
-.drop1 {
-  flex-basis: 50%;
-  padding: 8px 0 8px 0;
-  font-size: 18px;
-  line-height: 28px;
-}
-
+.drop1,
 .drop2 {
-  flex-basis: 90%;
   padding: 8px 0 8px 0;
-  font-size: 18px;
-  line-height: 28px;
+  font-size: 15px;
+  justify-content: space-between;
 }
 
 .drop3,
-.drop4,
 .drop5,
+.drop4,
 .drop6 {
-  flex-basis: 30%;
   padding: 8px 0 8px 0;
-  font-size: 18px;
-  line-height: 28px;
+  font-size: 15px;
+  justify-content: space-between;
 }
 
 .drop-h2 {
-  font-size: 18px;
-  line-height: 28px;
-}
-
-.checklist {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  padding: 10px 20px 10px 0;
-  margin: 0 20px 0 0;
+  font-size: 13px;
 }
 
 .button {
@@ -115,10 +73,9 @@ body {
   background-color: rgb(126, 63, 102);
   width: 100px;
   height: 40px;
-  margin: 10px;
   font-size: 12px;
-  line-height: 16px;
-  padding: 8px;
+  margin-bottom: 50px;
+  margin-top: 50px;
 }
 
 .cards {
@@ -128,102 +85,370 @@ body {
   margin-top: 16px;
 }
 
-@media (min-width: 640px) {
-  .h2 {
+@media screen and (min-width: 640px) {
+  .adopt-cont {
+    max-width: 100%;
+  }
+  .adopt-inner {
     display: flex;
-    height: 16px;
-    margin-right: 8px;
+    align-items: center;
+    margin: 10px;
+  }
+  .arrow {
+    display: flex;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 5px;
   }
   .adopt-title {
-    margin: auto;
     display: flex;
-    height: 16px;
-    margin-right: 20px;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
     font-size: 24px;
-    line-height: 32px;
+    color: red;
+  }
+  .adopt-drop {
+    margin: 10px;
   }
   .adopt-drop-title {
     margin: auto;
     justify-content: left;
     display: flex;
     font-size: 20px;
-    line-height: 28px;
-    margin: 20px 0 20px 0;
+    margin: 40px 0 30px 0;
+  }
+  .drop {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+  }
+  .drop1 {
+    flex-grow: 3;
+    padding: 8px 0 8px 0;
+    font-size: 15px;
+    justify-content: space-between;
+  }
+  .drop2 {
+    flex-grow: 4;
+    padding: 8px 0 8px 0;
+    font-size: 15px;
+    justify-content: space-between;
+  }
+  .drop4 {
+    flex-grow: 1;
+    padding: 8px 0 8px 0;
+    font-size: 15px;
+    justify-content: space-between;
+  }
+  .drop5 {
+    flex-grow: 2;
+    padding: 8px 0 8px 0;
+    font-size: 15px;
+    justify-content: space-between;
+  }
+  .drop3,
+.drop6 {
+    flex-grow: 0.5;
+    padding: 8px 0 8px 0;
+    font-size: 15px;
+    justify-content: space-between;
+  }
+  .drop-h2 {
+    font-size: 13px;
+  }
+  .button {
+    justify-content: left;
+  }
+  .filter-btn {
+    color: aliceblue;
+    background-color: rgb(126, 63, 102);
+    width: 100px;
+    height: 40px;
+    font-size: 12px;
+    margin-bottom: 50px;
+    margin-top: 50px;
   }
 }
-@media (min-width: 768px) {
-  .h2 {
+@media screen and (min-width: 768px) {
+  .adopt-cont {
+    max-width: 100%;
+  }
+  .adopt-inner {
     display: flex;
-    height: 16px;
-    margin-right: 8px;
+    align-items: center;
+    margin: 10px;
+  }
+  .arrow {
+    display: flex;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 5px;
+  }
+  .adopt-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    font-size: 24px;
+    color: blue;
+  }
+  .adopt-drop {
+    margin: 10px;
   }
   .adopt-drop-title {
     margin: auto;
     justify-content: left;
     display: flex;
     font-size: 20px;
-    line-height: 28px;
-    margin: 20px 0 20px 0;
+    margin: 40px 0 30px 0;
+  }
+  .drop {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 40px;
+  }
+  .drop1,
+.drop2 {
+    flex-grow: 1.5;
+    padding: 8px 0 8px 0;
+    font-size: 15px;
+    justify-content: space-between;
+  }
+  .drop3,
+.drop4,
+.drop5,
+.drop6 {
+    flex-grow: 0.5;
+    padding: 8px 0 8px 0;
+    font-size: 15px;
+    justify-content: space-between;
+  }
+  .drop-h2 {
+    font-size: 13px;
+  }
+  .button {
+    justify-content: left;
+  }
+  .filter-btn {
+    color: aliceblue;
+    background-color: rgb(126, 63, 102);
+    width: 100px;
+    height: 40px;
+    font-size: 12px;
+    margin-bottom: 50px;
+    margin-top: 50px;
   }
 }
-@media (min-width: 1024px) {
-  .h2 {
+@media screen and (min-width: 1024px) {
+  .adopt-cont {
+    max-width: 100%;
+  }
+  .adopt-inner {
     display: flex;
-    height: 16px;
-    margin-right: 8px;
+    align-items: center;
+    margin: 10px;
+  }
+  .arrow {
+    display: flex;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 5px;
+  }
+  .adopt-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    font-size: 24px;
+    color: green;
+  }
+  .adopt-drop {
+    margin: 10px;
   }
   .adopt-drop-title {
     margin: auto;
     justify-content: left;
     display: flex;
     font-size: 20px;
-    line-height: 28px;
-    margin: 20px 0 20px 0;
+    margin: 40px 0 30px 0;
+  }
+  .drop {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 40px;
+  }
+  .drop1,
+.drop2 {
+    flex-grow: 0.5;
+    padding: 8px 0 8px 0;
+    font-size: 15px;
+    justify-content: space-between;
+  }
+  .drop3,
+.drop4,
+.drop5,
+.drop6 {
+    flex-grow: 0.1;
+    padding: 8px 0 8px 0;
+    font-size: 15px;
+    justify-content: space-between;
+  }
+  .drop-h2 {
+    font-size: 13px;
+  }
+  .button {
+    justify-content: left;
+  }
+  .filter-btn {
+    color: aliceblue;
+    background-color: rgb(126, 63, 102);
+    width: 100px;
+    height: 40px;
+    font-size: 12px;
+    margin-bottom: 50px;
+    margin-top: 50px;
   }
 }
-@media (min-width: 1280px) {
-  .h2 {
+@media screen and (min-width: 1280px) {
+  .adopt-cont {
+    max-width: 100%;
+  }
+  .adopt-inner {
     display: flex;
-    height: 16px;
-    margin-right: 8px;
+    align-items: center;
+    margin: 10px;
+  }
+  .arrow {
+    display: flex;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 5px;
   }
   .adopt-title {
-    margin: auto;
     display: flex;
-    height: 16px;
-    margin-right: 20px;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
     font-size: 24px;
-    line-height: 32px;
+    color: pink;
+  }
+  .adopt-drop {
+    margin: 10px;
   }
   .adopt-drop-title {
     margin: auto;
     justify-content: left;
     display: flex;
-    font-size: 24px;
-    line-height: 32px;
-    margin: 20px 0 20px 0;
+    font-size: 20px;
+    margin: 40px 0 30px 0;
+  }
+  .drop {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 40px;
+  }
+  .drop1,
+.drop2 {
+    flex-grow: 1.5;
+    padding: 8px 0 8px 0;
+    font-size: 15px;
+    justify-content: space-between;
+  }
+  .drop3,
+.drop4,
+.drop5,
+.drop6 {
+    flex-grow: 0.5;
+    padding: 8px 0 8px 0;
+    font-size: 15px;
+    justify-content: space-between;
+  }
+  .drop-h2 {
+    font-size: 13px;
+  }
+  .button {
+    justify-content: left;
+  }
+  .filter-btn {
+    color: aliceblue;
+    background-color: rgb(126, 63, 102);
+    width: 100px;
+    height: 40px;
+    font-size: 12px;
+    margin-bottom: 50px;
+    margin-top: 50px;
   }
 }
-@media (min-width: 1536px) {
-  .h2 {
+@media screen and (min-width: 1536px) {
+  .adopt-cont {
+    max-width: 100%;
+  }
+  .adopt-inner {
     display: flex;
-    height: 16px;
-    margin-right: 8px;
+    align-items: center;
+    margin: 10px;
+  }
+  .arrow {
+    display: flex;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 5px;
   }
   .adopt-title {
-    margin: auto;
     display: flex;
-    height: 16px;
-    margin-right: 20px;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
     font-size: 24px;
-    line-height: 32px;
+    color: purple;
+  }
+  .adopt-drop {
+    margin: 10px;
   }
   .adopt-drop-title {
     margin: auto;
     justify-content: left;
     display: flex;
-    font-size: 24px;
-    line-height: 32px;
-    margin: 20px 0 20px 0;
+    font-size: 20px;
+    margin: 40px 0 30px 0;
+  }
+  .drop {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 40px;
+  }
+  .drop1,
+.drop2 {
+    padding: 8px 0 8px 0;
+    font-size: 15px;
+    justify-content: space-between;
+  }
+  .drop3,
+.drop5,
+.drop4,
+.drop6 {
+    padding: 8px 0 8px 0;
+    font-size: 15px;
+    justify-content: space-between;
+  }
+  .drop-h2 {
+    font-size: 13px;
+  }
+  .button {
+    justify-content: left;
+  }
+  .filter-btn {
+    color: aliceblue;
+    background-color: rgb(126, 63, 102);
+    width: 100px;
+    height: 40px;
+    font-size: 12px;
+    margin-bottom: 50px;
+    margin-top: 50px;
   }
 }/*# sourceMappingURL=Adopt.css.map */

@@ -9,30 +9,6 @@ $black: #000;
 
 .adopt-cont {
   max-width: 100%;
-  padding-left: 20px;
-}
-
-body {
-  background-color: $color;
-}
-
-.adopt {
-  color: $color;
-  width: 150px;
-  height: 50px;
-  background-color: $background-color;
-  margin: 20px;
-  font-size: 24px;
-}
-
-.adopt-content {
-  display: flex;
-  margin: 20px 0 50px 0;
-}
-
-.adopt-header {
-  height: 60px;
-  width: 100%;
 }
 
 .adopt-inner {
@@ -40,24 +16,22 @@ body {
   align-items: center;
 }
 
-.h2 {
+.arrow {
   display: flex;
-  height: 16px;
-  margin-right: 20px;
+  text-decoration: none;
 }
 
 .adopt-title {
-  margin: auto;
   display: flex;
   justify-content: center;
-  height: 16px;
-  margin-right: 20px;
+  align-items: center;
+  height: 60px;
   font-size: 24px;
-  line-height: 32px;
+  color: black;
 }
 
 .adopt-drop {
-  margin: 16px;
+  margin: 10px;
 }
 
 .adopt-drop-title {
@@ -65,49 +39,33 @@ body {
   justify-content: left;
   display: flex;
   font-size: 20px;
-  line-height: 28px;
-  margin: 16px 0 16px 0;
+  margin: 40px 0 30px 0;
 }
 
 .drop {
   display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
 }
 
-.drop1 {
-  flex-basis: 10%;
-  padding: 8px 0 8px 0;
-  font-size: 18px;
-  line-height: 28px;
-}
-
+.drop1,
 .drop2 {
-  flex-basis: 10%;
   padding: 8px 0 8px 0;
-  font-size: 18px;
-  line-height: 28px;
+  font-size: 15px;
+  justify-content: space-between;
 }
 
 .drop3,
-.drop4,
 .drop5,
+.drop4,
 .drop6 {
-  flex-basis: 10%;
   padding: 8px 0 8px 0;
-  font-size: 18px;
-  line-height: 28px;
+  font-size: 15px;
+  justify-content: space-between;
 }
 
 .drop-h2 {
-  font-size: 18px;
-  line-height: 28px;
-}
-
-.checklist {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  padding: 10px 20px 10px 0;
-  margin: 0 20px 0 0;
+  font-size: 13px;
 }
 
 .button {
@@ -119,10 +77,9 @@ body {
   background-color: $background-color;
   width: 100px;
   height: 40px;
-  margin: 10px;
   font-size: 12px;
-  line-height: 16px;
-  padding: 8px;
+  margin-bottom: 50px;
+  margin-top: 50px;
 }
 
 .cards {
@@ -134,20 +91,435 @@ body {
 
 //sm: { min: "640px", max: "767px" },
 @media screen and (min-width: 640px) {
+  .adopt-cont {
+    max-width: 100%;
+  }
+
+  .adopt-inner {
+    display: flex;
+    align-items: center;
+    margin: 10px;
+  }
+
+  .arrow {
+    display: flex;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 5px;
+  }
+
+  .adopt-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    font-size: 24px;
+    color: red;
+  }
+
+  .adopt-drop {
+    margin: 10px;
+  }
+
+  .adopt-drop-title {
+    margin: auto;
+    justify-content: left;
+    display: flex;
+    font-size: 20px;
+    margin: 40px 0 30px 0;
+  }
+
+  .drop {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+  }
+
+  .drop1 {
+    flex-grow: 3;
+    padding: 8px 0 8px 0;
+    font-size: 15px;
+    justify-content: space-between;
+  }
+
+  .drop2 {
+    flex-grow: 4;
+    padding: 8px 0 8px 0;
+    font-size: 15px;
+    justify-content: space-between;
+  }
+
+  .drop4 {
+    flex-grow: 1;
+    padding: 8px 0 8px 0;
+    font-size: 15px;
+    justify-content: space-between;
+  }
+
+  .drop5 {
+    flex-grow: 2;
+    padding: 8px 0 8px 0;
+    font-size: 15px;
+    justify-content: space-between;
+  }
+
+  .drop3,
+  .drop6 {
+    flex-grow: 0.5;
+    padding: 8px 0 8px 0;
+    font-size: 15px;
+    justify-content: space-between;
+  }
+
+  .drop-h2 {
+    font-size: 13px;
+  }
+
+  .button {
+    justify-content: left;
+  }
+
+  .filter-btn {
+    color: $color;
+    background-color: $background-color;
+    width: 100px;
+    height: 40px;
+    font-size: 12px;
+    margin-bottom: 50px;
+    margin-top: 50px;
+  }
 }
 
 // md: { min: "768px", max: "1023px" },
 @media screen and (min-width: 768px) {
+  .adopt-cont {
+    max-width: 100%;
+  }
+
+  .adopt-inner {
+    display: flex;
+    align-items: center;
+    margin: 10px;
+  }
+
+  .arrow {
+    display: flex;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 5px;
+  }
+
+  .adopt-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    font-size: 24px;
+    color: blue;
+  }
+
+  .adopt-drop {
+    margin: 10px;
+  }
+
+  .adopt-drop-title {
+    margin: auto;
+    justify-content: left;
+    display: flex;
+    font-size: 20px;
+    margin: 40px 0 30px 0;
+  }
+
+  .drop {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 40px;
+  }
+
+  .drop1,
+  .drop2 {
+    flex-grow: 1.5;
+    padding: 8px 0 8px 0;
+    font-size: 15px;
+    justify-content: space-between;
+  }
+
+  .drop3,
+  .drop4,
+  .drop5,
+  .drop6 {
+    flex-grow: 0.5;
+    padding: 8px 0 8px 0;
+    font-size: 15px;
+    justify-content: space-between;
+  }
+
+  .drop-h2 {
+    font-size: 13px;
+  }
+
+  .button {
+    justify-content: left;
+  }
+
+  .filter-btn {
+    color: $color;
+    background-color: $background-color;
+    width: 100px;
+    height: 40px;
+    font-size: 12px;
+    margin-bottom: 50px;
+    margin-top: 50px;
+  }
 }
 
 //lg: { min: "1024px", max: "1279px" },
 @media screen and (min-width: 1024px) {
+  .adopt-cont {
+    max-width: 100%;
+  }
+
+  .adopt-inner {
+    display: flex;
+    align-items: center;
+    margin: 10px;
+  }
+
+  .arrow {
+    display: flex;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 5px;
+  }
+
+  .adopt-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    font-size: 24px;
+    color: green;
+  }
+
+  .adopt-drop {
+    margin: 10px;
+  }
+
+  .adopt-drop-title {
+    margin: auto;
+    justify-content: left;
+    display: flex;
+    font-size: 20px;
+    margin: 40px 0 30px 0;
+  }
+
+  .drop {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 40px;
+  }
+
+  .drop1,
+  .drop2 {
+    flex-grow: 0.5;
+    padding: 8px 0 8px 0;
+    font-size: 15px;
+    justify-content: space-between;
+  }
+
+  .drop3,
+  .drop4,
+  .drop5,
+  .drop6 {
+    flex-grow: 0.1;
+    padding: 8px 0 8px 0;
+    font-size: 15px;
+    justify-content: space-between;
+  }
+
+  .drop-h2 {
+    font-size: 13px;
+  }
+
+  .button {
+    justify-content: left;
+  }
+
+  .filter-btn {
+    color: $color;
+    background-color: $background-color;
+    width: 100px;
+    height: 40px;
+    font-size: 12px;
+    margin-bottom: 50px;
+    margin-top: 50px;
+  }
 }
 
 // xl: { min: "1280px", max: "1535px" },
 @media screen and (min-width: 1280px) {
+  .adopt-cont {
+    max-width: 100%;
+  }
+
+  .adopt-inner {
+    display: flex;
+    align-items: center;
+    margin: 10px;
+  }
+
+  .arrow {
+    display: flex;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 5px;
+  }
+
+  .adopt-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    font-size: 24px;
+    color: pink;
+  }
+
+  .adopt-drop {
+    margin: 10px;
+  }
+
+  .adopt-drop-title {
+    margin: auto;
+    justify-content: left;
+    display: flex;
+    font-size: 20px;
+    margin: 40px 0 30px 0;
+  }
+
+  .drop {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 40px;
+  }
+
+  .drop1,
+  .drop2 {
+    flex-grow: 1.5;
+    padding: 8px 0 8px 0;
+    font-size: 15px;
+    justify-content: space-between;
+  }
+
+  .drop3,
+  .drop4,
+  .drop5,
+  .drop6 {
+    flex-grow: 0.5;
+    padding: 8px 0 8px 0;
+    font-size: 15px;
+    justify-content: space-between;
+  }
+
+  .drop-h2 {
+    font-size: 13px;
+  }
+
+  .button {
+    justify-content: left;
+  }
+
+  .filter-btn {
+    color: $color;
+    background-color: $background-color;
+    width: 100px;
+    height: 40px;
+    font-size: 12px;
+    margin-bottom: 50px;
+    margin-top: 50px;
+  }
 }
 
 // xxl: { min: "1536px" },
 @media screen and (min-width: 1536px) {
+  .adopt-cont {
+    max-width: 100%;
+  }
+
+  .adopt-inner {
+    display: flex;
+    align-items: center;
+    margin: 10px;
+  }
+
+  .arrow {
+    display: flex;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 5px;
+  }
+
+  .adopt-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    font-size: 24px;
+    color: purple;
+  }
+
+  .adopt-drop {
+    margin: 10px;
+  }
+
+  .adopt-drop-title {
+    margin: auto;
+    justify-content: left;
+    display: flex;
+    font-size: 20px;
+    margin: 40px 0 30px 0;
+  }
+
+  .drop {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 40px;
+  }
+
+  .drop1,
+  .drop2 {
+    padding: 8px 0 8px 0;
+    font-size: 15px;
+    justify-content: space-between;
+  }
+
+  .drop3,
+  .drop5,
+  .drop4,
+  .drop6 {
+    padding: 8px 0 8px 0;
+    font-size: 15px;
+    justify-content: space-between;
+  }
+
+  .drop-h2 {
+    font-size: 13px;
+  }
+
+  .button {
+    justify-content: left;
+  }
+
+  .filter-btn {
+    color: $color;
+    background-color: $background-color;
+    width: 100px;
+    height: 40px;
+    font-size: 12px;
+    margin-bottom: 50px;
+    margin-top: 50px;
+  }
 }

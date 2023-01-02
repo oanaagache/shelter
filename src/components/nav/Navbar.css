@@ -4,6 +4,10 @@
   margin: 0;
 }
 
+img {
+  height: 30px;
+}
+
 .header {
   max-width: 100%;
 }
@@ -51,63 +55,6 @@
   line-height: 24px;
 }
 
-@media (min-width: 768px) {
-  .header-title {
-    display: flex;
-    cursor: pointer;
-    font-family: "Oswald", sans-serif;
-    font-size: 24px;
-    line-height: 32px;
-  }
-  .about-nav {
-    text-decoration: none;
-    margin: 0 4px 0 4px;
-    font-size: 20px;
-    line-height: 28px;
-  }
-}
-@media (min-width: 1024px) {
-  .header-title {
-    display: flex;
-    cursor: pointer;
-    font-family: "Oswald", sans-serif;
-    font-size: 36px;
-    line-height: 40px;
-  }
-  .about-nav {
-    text-decoration: none;
-    margin: 0 4px 0 4px;
-    font-size: 24px;
-    line-height: 32px;
-  }
-}
-@media (min-width: 1280px) {
-  .header-title {
-    display: flex;
-    cursor: pointer;
-    font-family: "Oswald", sans-serif;
-    font-size: 60px;
-    line-height: 1;
-  }
-  .about-nav {
-    text-decoration: none;
-    margin: 0 4px 0 4px;
-    font-size: 24px;
-    line-height: 32px;
-  }
-}
-@media (min-width: 1536px) {
-  .header-title {
-    display: flex;
-    cursor: pointer;
-    font-family: "Oswald", sans-serif;
-    font-size: 60px;
-    line-height: 1;
-  }
-  .about-nav {
-    text-decoration: none;
-    margin: 0 4px 0 4px;
-    font-size: 36px;
-    line-height: 40px;
-  }
+.btn-log {
+  margin-right: 10px;
 }/*# sourceMappingURL=Navbar.css.map */

@@ -10,7 +10,7 @@ $font-title: "Segoe UI", sans-serif;
 }
 
 .footer {
-  height: 160px;
+  height: 120px;
   width: 100%;
   background-color: $black;
 }
@@ -34,7 +34,6 @@ $font-title: "Segoe UI", sans-serif;
   font-family: $font-title;
   display: flex;
   font-size: 14px;
-  line-height: 20px;
   margin-top: 20px;
 }
 
@@ -59,6 +58,52 @@ $font-title: "Segoe UI", sans-serif;
 
 //sm: { min: "640px", max: "767px" },
 @media screen and (min-width: 640px) {
+  .footer {
+    height: 120px;
+    width: 100%;
+    background-color: $black;
+  }
+
+  .footer-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    color: $color;
+  }
+
+  .footer-inner {
+    padding: 25px 10px 10px 50px;
+    display: flex;
+    align-items: center;
+  }
+
+  .footer-title {
+    font-family: $font-title;
+    display: flex;
+    font-size: 20px;
+    margin-top: 20px;
+  }
+
+  .footer-menu {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    margin-right: 20px;
+  }
+
+  .footer-menu {
+    li {
+      display: inline-flex;
+      flex-direction: row-reverse;
+      font-size: 14px;
+      list-style: none;
+      padding: 10px;
+      margin-top: 30px;
+      position: relative;
+    }
+  }
 }
 
 // md: { min: "768px", max: "1023px" },

@@ -8,6 +8,9 @@ $font: "Oswald", sans-serif;
   margin: 0;
 }
 
+img {
+  height: 30px;
+}
 .header {
   max-width: 100%;
 }
@@ -53,6 +56,10 @@ $font: "Oswald", sans-serif;
   margin: 0 4px 0 4px;
   font-size: 16px;
   line-height: 24px;
+}
+
+.btn-log {
+  margin-right: 10px;
 }
 
 //sm: { min: "640px", max: "767px" },

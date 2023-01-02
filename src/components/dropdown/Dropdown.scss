@@ -3,7 +3,7 @@ $background-color: rgb(126, 63, 102);
 $black: #000;
 
 .dropdown {
-  width: 50%;
+  width: 100%;
   margin-top: 4px;
   position: relative;
 }
@@ -13,7 +13,7 @@ $black: #000;
   align-items: center;
   justify-content: space-between;
   background-color: $color;
-  box-shadow: 3px 3px 10px 6px rgba($black, 0.06);
+  box-shadow: 3px 3px 6px 6px rgba($black, 0.06);
   font-weight: bold;
   color: $black;
 }
@@ -22,9 +22,8 @@ $black: #000;
   position: absolute;
   top: 100%;
   left: 0;
-  padding: 10px;
   background-color: $color;
-  box-shadow: 3px 3px 10px 6px rgba($black, 0.06);
+  box-shadow: 3px 3px 6px 6px rgba($black, 0.06);
   font-weight: bold;
   color: $black;
   width: 100%;
@@ -32,7 +31,6 @@ $black: #000;
 }
 
 .dropdown-item {
-  padding: 10px;
   cursor: pointer;
   transition: all 2s;
 }
@@ -43,6 +41,44 @@ $black: #000;
 
 //sm: { min: "640px", max: "767px" },
 @media screen and (min-width: 640px) {
+  .dropdown {
+    width: 100%;
+    margin-top: 4px;
+    position: relative;
+  }
+
+  .dropdown-btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: $color;
+    box-shadow: 3px 3px 6px 6px rgba($black, 0.06);
+    font-weight: bold;
+    color: $black;
+    font-size: 15px;
+  }
+
+  .dropdown-content {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: $color;
+    box-shadow: 3px 3px 6px 6px rgba($black, 0.06);
+    font-weight: bold;
+    color: $black;
+    width: 100%;
+    z-index: 1;
+  }
+
+  .dropdown-item {
+    cursor: pointer;
+    transition: all 2s;
+    font-size: 15px;
+  }
+
+  .dropdown-item:hover {
+    background: #f4f4f4;
+  }
 }
 
 // md: { min: "768px", max: "1023px" },

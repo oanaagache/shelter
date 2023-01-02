@@ -28,40 +28,4 @@
   padding: 0 80px 5px 0px;
   font-size: 18px;
   line-height: 28px;
-}
-
-@media (min-width: 640px) {
-  .main-title {
-    padding: 0 80px 5px 0px;
-    font-size: 20px;
-    line-height: 28px;
-  }
-}
-@media (min-width: 768px) {
-  .main-title {
-    padding: 0 80px 5px 0px;
-    font-size: 24px;
-    line-height: 32px;
-  }
-}
-@media (min-width: 1024px) {
-  .main-title {
-    padding: 0 80px 5px 0px;
-    font-size: 30px;
-    line-height: 36px;
-  }
-}
-@media (min-width: 1280px) {
-  .main-title {
-    padding: 0 80px 5px 0px;
-    font-size: 48px;
-    line-height: 1;
-  }
-}
-@media (min-width: 1536px) {
-  .main-title {
-    padding: 0 80px 5px 0px;
-    font-size: 48px;
-    line-height: 1;
-  }
-}
+}/*# sourceMappingURL=Main.css.map */

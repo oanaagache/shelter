@@ -7,13 +7,21 @@ const Dropdown = ({ selected, setSelected, options }) => {
 
   return (
     <div className="dropdown">
-      <div className="dropdown-btn" onClick={() => setIsActive(!isActive)}>
+      <div
+        className="dropdown-btn"
+        style={
+          ({ alignItems: "center" },
+          { fontSize: "12px" },
+          { paddingLeft: "7px" })
+        }
+        onClick={() => setIsActive(!isActive)}
+      >
         {selected}
-        <img src={logo} />
+        <img style={({ height: "20px" }, { width: "20px" })} src={logo} />
       </div>
 
       {isActive && (
-        <div className="dropdown-content">
+        <div className="dropdown-content" style={{ marginLeft: "0" }}>
           {options.map((option, index) => (
             <div
               key={index}
@@ -22,6 +30,7 @@ const Dropdown = ({ selected, setSelected, options }) => {
                 setIsActive(false);
               }}
               className="dropdown-item"
+              style={({ fontSize: "13px" }, { paddingLeft: "7px" })}
             >
               {option}
             </div>
