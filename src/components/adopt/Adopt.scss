@@ -14,11 +14,14 @@ $black: #000;
 .adopt-inner {
   display: flex;
   align-items: center;
+  margin: 10px;
 }
 
 .arrow {
   display: flex;
   text-decoration: none;
+  font-size: 18px;
+  padding: 5px;
 }
 
 .adopt-title {
@@ -26,12 +29,11 @@ $black: #000;
   justify-content: center;
   align-items: center;
   height: 60px;
-  font-size: 24px;
-  color: black;
+  font-size: 30px;
 }
 
 .adopt-drop {
-  margin: 10px;
+  margin: 80px 10px 80px 10px;
 }
 
 .adopt-drop-title {
@@ -45,7 +47,7 @@ $black: #000;
 .drop {
   display: flex;
   flex-wrap: wrap;
-  gap: 30px;
+  gap: 10px;
 }
 
 .drop1 {
@@ -72,7 +74,7 @@ $black: #000;
   justify-content: space-between;
 }
 
-.drop-h2 {
+.drop-title {
   font-size: 13px;
 }
 
@@ -86,8 +88,6 @@ $black: #000;
   width: 100px;
   height: 40px;
   font-size: 12px;
-  margin-bottom: 50px;
-  margin-top: 50px;
 }
 
 .cards {
@@ -95,6 +95,92 @@ $black: #000;
   flex-direction: row;
   flex-wrap: wrap;
   margin-top: 16px;
+}
+
+//xs: {min: "360px", max: "639px" }
+@media screen and (min-width: 360px) {
+  .adopt-cont {
+    max-width: 100%;
+  }
+
+  .adopt-inner {
+    display: flex;
+    align-items: center;
+    margin: 10px;
+  }
+
+  .arrow {
+    display: flex;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 5px;
+  }
+
+  .adopt-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    font-size: 20px;
+  }
+
+  .adopt-drop {
+    margin: 40px 10px 40px 10px;
+  }
+
+  .adopt-drop-title {
+    margin: auto;
+    justify-content: left;
+    display: flex;
+    font-size: 18px;
+    margin: 40px 0 30px 0;
+  }
+
+  .drop {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .drop1 {
+    flex: 30%;
+    padding: 8px 0 8px 0;
+    font-size: 15px;
+    justify-content: space-between;
+  }
+
+  .drop2 {
+    flex: 65%;
+    padding: 8px 0 8px 0;
+    font-size: 15px;
+    justify-content: space-between;
+  }
+
+  .drop3,
+  .drop4,
+  .drop5,
+  .drop6 {
+    flex: 10%;
+    padding: 8px 0 8px 0;
+    font-size: 15px;
+    justify-content: space-between;
+  }
+
+  .drop-title {
+    font-size: 13px;
+  }
+
+  .button {
+    justify-content: left;
+  }
+
+  .filter-btn {
+    color: $color;
+    background-color: $background-color;
+    width: 100px;
+    height: 40px;
+    font-size: 12px;
+  }
 }
 
 //sm: { min: "640px", max: "767px" },
@@ -121,12 +207,12 @@ $black: #000;
     justify-content: center;
     align-items: center;
     height: 60px;
-    font-size: 24px;
+    font-size: 30px;
     color: red;
   }
 
   .adopt-drop {
-    margin: 10px;
+    margin: 80px 10px 80px 10px;
   }
 
   .adopt-drop-title {
@@ -165,13 +251,12 @@ $black: #000;
   .drop5,
   .drop6 {
     flex: 1 1 auto;
-
     padding: 8px 0 8px 0;
     font-size: 15px;
     justify-content: space-between;
   }
 
-  .drop-h2 {
+  .drop-title {
     font-size: 13px;
   }
 
@@ -185,8 +270,6 @@ $black: #000;
     width: 100px;
     height: 40px;
     font-size: 12px;
-    margin-bottom: 50px;
-    margin-top: 50px;
   }
 }
 
@@ -199,7 +282,7 @@ $black: #000;
   .adopt-inner {
     display: flex;
     align-items: center;
-    margin: 10px;
+    margin: 10px 20px 10px 20px;
   }
 
   .arrow {
@@ -214,12 +297,12 @@ $black: #000;
     justify-content: center;
     align-items: center;
     height: 60px;
-    font-size: 24px;
+    font-size: 32px;
     color: blue;
   }
 
   .adopt-drop {
-    margin: 20px;
+    margin: 68px 20px 80px 20px;
   }
 
   .adopt-drop-title {
@@ -261,7 +344,7 @@ $black: #000;
     justify-content: space-between;
   }
 
-  .drop-h2 {
+  .drop-title {
     font-size: 13px;
   }
 
@@ -273,10 +356,8 @@ $black: #000;
     color: $color;
     background-color: $background-color;
     width: 100px;
-    height: 40px;
+    height: 36px;
     font-size: 12px;
-    margin-bottom: 50px;
-    margin-top: 50px;
   }
 }
 
@@ -289,7 +370,7 @@ $black: #000;
   .adopt-inner {
     display: flex;
     align-items: center;
-    margin: 10px;
+    margin: 10px 40px 10px 40px;
   }
 
   .arrow {
@@ -304,12 +385,12 @@ $black: #000;
     justify-content: center;
     align-items: center;
     height: 60px;
-    font-size: 24px;
+    font-size: 36px;
     color: green;
   }
 
   .adopt-drop {
-    margin: 40px;
+    margin: 80px 40px 80px 40px;
   }
 
   .adopt-drop-title {
@@ -351,8 +432,8 @@ $black: #000;
     justify-content: space-between;
   }
 
-  .drop-h2 {
-    font-size: 13px;
+  .drop-title {
+    font-size: 18px;
   }
 
   .button {
@@ -365,8 +446,6 @@ $black: #000;
     width: 100px;
     height: 40px;
     font-size: 12px;
-    margin-bottom: 50px;
-    margin-top: 50px;
   }
 }
 
@@ -379,7 +458,7 @@ $black: #000;
   .adopt-inner {
     display: flex;
     align-items: center;
-    margin: 10px;
+    margin: 10px 80px 10px 80px;
   }
 
   .arrow {
@@ -394,8 +473,8 @@ $black: #000;
     justify-content: center;
     align-items: center;
     height: 60px;
-    font-size: 24px;
-    color: pink;
+    font-size: 36px;
+    color: rosybrown;
   }
 
   .adopt-drop {
@@ -441,12 +520,13 @@ $black: #000;
     justify-content: space-between;
   }
 
-  .drop-h2 {
-    font-size: 13px;
+  .drop-title {
+    font-size: 18px;
   }
 
   .button {
     justify-content: left;
+    margin: 40px;
   }
 
   .filter-btn {
@@ -455,8 +535,6 @@ $black: #000;
     width: 100px;
     height: 40px;
     font-size: 12px;
-    margin-bottom: 50px;
-    margin-top: 50px;
   }
 }
 
@@ -469,7 +547,7 @@ $black: #000;
   .adopt-inner {
     display: flex;
     align-items: center;
-    margin: 10px;
+    margin: 10px 80px 10px 80px;
   }
 
   .arrow {
@@ -484,12 +562,12 @@ $black: #000;
     justify-content: center;
     align-items: center;
     height: 60px;
-    font-size: 24px;
+    font-size: 48px;
     color: purple;
   }
 
   .adopt-drop {
-    margin: 100px;
+    margin: 80px;
   }
 
   .adopt-drop-title {
@@ -531,21 +609,20 @@ $black: #000;
     justify-content: space-between;
   }
 
-  .drop-h2 {
-    font-size: 13px;
+  .drop-title {
+    font-size: 18px;
   }
 
   .button {
     justify-content: left;
+    margin: 60px;
   }
 
   .filter-btn {
     color: $color;
     background-color: $background-color;
     width: 100px;
-    height: 40px;
+    height: 38px;
     font-size: 12px;
-    margin-bottom: 50px;
-    margin-top: 50px;
   }
 }

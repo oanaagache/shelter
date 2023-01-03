@@ -256,12 +256,12 @@ const Adopt = () => {
 
         <div className="drop">
           <div className="drop1">
-            <h2 className="drop-h2">Type:</h2>
+            <h2 className="drop-title">Type:</h2>
             <Dropdown selected={type} setSelected={setType} options={types} />
           </div>
 
           <div className="drop2">
-            <h2 className="drop-h2">Breed:</h2>
+            <h2 className="drop-title">Breed:</h2>
             <Dropdown
               selected={breed}
               setSelected={setBreed}
@@ -270,7 +270,7 @@ const Adopt = () => {
           </div>
 
           <div className="drop3">
-            <h2 className="drop-h2"> Gender:</h2>
+            <h2 className="drop-title"> Gender:</h2>
             <Dropdown
               selected={gender}
               setSelected={setGender}
@@ -279,17 +279,17 @@ const Adopt = () => {
           </div>
 
           <div className="drop4">
-            <h2 className="drop-h2">Size:</h2>
+            <h2 className="drop-title">Size:</h2>
             <Dropdown selected={size} setSelected={setSize} options={sizes} />
           </div>
 
           <div className="drop5">
-            <h2 className="drop-h2">Age:</h2>
+            <h2 className="drop-title">Age:</h2>
             <Dropdown selected={age} setSelected={setAge} options={ages} />
           </div>
 
           <div className="drop6">
-            <h2 className="drop-h2">Good with:</h2>
+            <h2 className="drop-title">Good with:</h2>
             <Dropdown
               selected={check}
               setSelected={setCheck}
