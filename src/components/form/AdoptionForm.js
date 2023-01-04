@@ -69,29 +69,27 @@ const AdoptionForm = (props) => {
 
   return (
     <>
-      <div className="adoption-container">
-        <div className="adoption-header">
-          <div className="adoption-content">
-            <div className="adoption-inner">
-              <img style={({ height: 1 }, { padding: 10 })} src={logo} />
-              <h2>
-                <Link to="/adopt" style={{ textDecoration: "none" }}>
-                  Back
-                </Link>
-              </h2>
-            </div>
-
-            <h1 className="adoption-title" style={{ paddingRight: 100 }}>
-              Adoption Form
-            </h1>
-          </div>
+      <div className="adoption-cont">
+        <div className="adoption-inner">
+          <img style={({ height: "10px" }, { width: "10px" })} src={logo} />
+          <h2>
+            <Link
+              className="arrow"
+              to="/adopt"
+              style={{ textDecoration: "none" }}
+            >
+              Back
+            </Link>
+          </h2>
         </div>
 
-        <Form onSubmit={handleSubmit} style={{ paddingLeft: 100 }}>
+        <div className="adoption-title">Adoption Form</div>
+
+        <Form onSubmit={handleSubmit}>
           <div className="adoption-form">
             <div className="form-row">
               {isLoggedIn ? (
-                <div className="form-group col-md-3">
+                <div className="form-group col-md-2">
                   <label htmlFor="inputfirstName">First Name:</label>
                   <input
                     type="text"
@@ -102,7 +100,7 @@ const AdoptionForm = (props) => {
                   />
                 </div>
               ) : (
-                <div className="form-group col-md-3">
+                <div className="form-group col-md-2">
                   <label htmlFor="inputfirstName">First Name:</label>
                   <input
                     type="text"
@@ -114,8 +112,9 @@ const AdoptionForm = (props) => {
                   />
                 </div>
               )}
+
               {isLoggedIn ? (
-                <div className="form-group col-md-3">
+                <div className="form-group col-md-2">
                   <label htmlFor="inputSurname">Surname:</label>
                   <input
                     type="text"
@@ -126,7 +125,7 @@ const AdoptionForm = (props) => {
                   />
                 </div>
               ) : (
-                <div className="form-group col-md-3">
+                <div className="form-group col-md-2">
                   <label htmlFor="inputSurname">Surname:</label>
                   <input
                     type="text"
@@ -140,7 +139,7 @@ const AdoptionForm = (props) => {
               )}
 
               {isLoggedIn ? (
-                <div className="form-group col-md-3">
+                <div className="form-group col-md-6">
                   <label htmlFor="inputEmailAddress">Email address:</label>
                   <input
                     type="text"
@@ -151,7 +150,7 @@ const AdoptionForm = (props) => {
                   />
                 </div>
               ) : (
-                <div className="form-group col-md-3">
+                <div className="form-group col-md-6">
                   <label htmlFor="inputEmailAddress">Email address:</label>
                   <input
                     type="text"
@@ -164,7 +163,6 @@ const AdoptionForm = (props) => {
                 </div>
               )}
             </div>
-
             <div className="form-row">
               <div className="form-group col-md-4">
                 <label htmlFor="inputAddress1">Address Line:</label>
@@ -191,10 +189,10 @@ const AdoptionForm = (props) => {
 
               <div className="form-group col-md-2">
                 <label htmlFor="inputCountry">Country</label>
-
                 <CountrySelector setCountry={setCountry} />
               </div>
-              <div className="form-group col-md-1">
+
+              <div className="form-group col-md-2">
                 <label htmlFor="inputZip">Zip code:</label>
                 <input
                   type="text"
@@ -204,47 +202,40 @@ const AdoptionForm = (props) => {
                 />
               </div>
             </div>
+            <div className="status-form">
+              <h3 className="title">Family status and daily routine</h3>
+              <h4 className="title">Do you have children?</h4>
 
-            <div className="form-row">
-              <div className="status-form">
-                <h3 className="title">Family status and daily routine</h3>
-                <h4 className="title">Do you have children?</h4>
-
-                <div className="form-group" style={{ paddingRight: 400 }}>
-                  <label htmlFor="text">
-                    If your answer is "Yes", please tell us a little bit about
-                    their experience and confort level around animals.
-                  </label>
-                  <textarea
-                    className="form-control"
-                    id="text"
-                    rows="5"
-                    value={status}
-                    onChange={(e) => setStatus(e.target.value)}
-                  ></textarea>
-                </div>
+              <div className="form-group">
+                <label htmlFor="text">
+                  If your answer is "Yes", please tell us a little bit about
+                  their experience and confort level around animals.
+                </label>
+                <textarea
+                  className="form-control"
+                  id="text"
+                  rows="5"
+                  value={status}
+                  onChange={(e) => setStatus(e.target.value)}
+                ></textarea>
               </div>
             </div>
-
-            <div className="form-row">
-              <div className="status-form">
-                <h4 className="title">Do you have pets at home?</h4>
-                <div className="form-group" style={{ paddingRight: 400 }}>
-                  <label htmlFor="text">
-                    If your answer is "Yes", please tell us a little bit about
-                    their experience and confort level around other animals.
-                  </label>
-                  <textarea
-                    className="form-control"
-                    id="text"
-                    rows="5"
-                    value={routine}
-                    onChange={(e) => setRoutine(e.target.value)}
-                  ></textarea>
-                </div>{" "}
+            <div className="status-form">
+              <h4 className="title">Do you have pets at home?</h4>
+              <div className="form-group">
+                <label htmlFor="text">
+                  If your answer is "Yes", please tell us a little bit about
+                  their experience and confort level around other animals.
+                </label>
+                <textarea
+                  className="form-control"
+                  id="text"
+                  rows="5"
+                  value={routine}
+                  onChange={(e) => setRoutine(e.target.value)}
+                ></textarea>
               </div>{" "}
-            </div>
-
+            </div>{" "}
             <div className="button">
               <button
                 className="back"

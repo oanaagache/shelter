@@ -28,7 +28,7 @@ img {
   display: flex;
   cursor: pointer;
   font-family: "Oswald", sans-serif;
-  font-size: 18px;
+  font-size: 13px;
   padding-top: 10px;
 }
 
@@ -51,12 +51,12 @@ img {
 .about-nav {
   text-decoration: none;
   margin: 0 4px 0 4px;
-  font-size: 18px;
+  font-size: 13px;
 }
 
 .btn-log {
-  margin-right: 10px;
-  font-size: 15px;
+  margin-right: 20px;
+  font-size: 13px;
 }
 
 @media screen and (min-width: 640px) {
@@ -80,7 +80,7 @@ img {
     display: flex;
     cursor: pointer;
     font-family: "Oswald", sans-serif;
-    font-size: 18px;
+    font-size: 13px;
     padding-top: 10px;
   }
   .header-menu {
@@ -100,11 +100,11 @@ img {
   .about-nav {
     text-decoration: none;
     margin: 0 4px 0 4px;
-    font-size: 18px;
+    font-size: 13px;
   }
   .btn-log {
-    margin-right: 10px;
-    font-size: 15px;
+    margin-right: 20px;
+    font-size: 13px;
   }
 }
 @media screen and (min-width: 768px) {

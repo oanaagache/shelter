@@ -4,6 +4,7 @@ import { Form } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Link } from "react-router-dom";
 import logo from "../../images/image4.svg";
+import "../form/AdoptionForm.scss";
 
 const Login = (props) => {
   const { isLoggedIn, setIsLoggedIn } = props;
@@ -42,17 +43,17 @@ const Login = (props) => {
       <div className="adoption-container">
         <div className="adoption-header">
           <div className="adoption-content">
-            <div className="adoption-inner">
-              <img style={({ height: 1 }, { padding: 10 })} src={logo} />
-              <h2>
-                <Link to="/adopt" style={{ textDecoration: "none" }}>
-                  Back
-                </Link>
-              </h2>
-            </div>
+            <img
+              style={({ height: "10px" }, { width: "10px" })}
+              src={logo}
+              alt="Not found"
+            />
+            <Link className="arrow" to="/adopt">
+              Back{" "}
+            </Link>
           </div>
-          <h1 className="adoption-title">Login</h1>
         </div>
+        <h1 className="adoption-title">Login</h1>
 
         <div
           className="adoption-form"

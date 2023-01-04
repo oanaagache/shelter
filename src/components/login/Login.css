@@ -190,7 +190,7 @@
     color: blue;
   }
   .adopt-drop {
-    margin: 80px 20px 80px 20px;
+    margin: 68px 20px 80px 20px;
   }
   .adopt-drop-title {
     margin: auto;
@@ -409,7 +409,7 @@
     justify-content: center;
     align-items: center;
     height: 60px;
-    font-size: 40px;
+    font-size: 48px;
     color: purple;
   }
   .adopt-drop {
@@ -463,4 +463,4 @@
     height: 38px;
     font-size: 12px;
   }
-}/*# sourceMappingURL=Adopt.css.map */
+}/*# sourceMappingURL=Login.css.map */

@@ -32,7 +32,7 @@ img {
   display: flex;
   cursor: pointer;
   font-family: $font;
-  font-size: 18px;
+  font-size: 13px;
   padding-top: 10px;
 }
 
@@ -55,12 +55,12 @@ img {
 .about-nav {
   text-decoration: none;
   margin: 0 4px 0 4px;
-  font-size: 18px;
+  font-size: 13px;
 }
 
 .btn-log {
-  margin-right: 10px;
-  font-size: 15px;
+  margin-right: 20px;
+  font-size: 13px;
 }
 
 // //xs: {min: "360px", max: "639px" }
@@ -146,7 +146,7 @@ img {
     display: flex;
     cursor: pointer;
     font-family: $font;
-    font-size: 18px;
+    font-size: 13px;
     padding-top: 10px;
   }
 
@@ -169,12 +169,12 @@ img {
   .about-nav {
     text-decoration: none;
     margin: 0 4px 0 4px;
-    font-size: 18px;
+    font-size: 13px;
   }
 
   .btn-log {
-    margin-right: 10px;
-    font-size: 15px;
+    margin-right: 20px;
+    font-size: 13px;
   }
 }
 

@@ -2,60 +2,61 @@ $color: aliceblue;
 $background-color: rgb(126, 63, 102);
 $black: #000;
 
-.adoption-container {
-  max-width: 100%;
+* {
   margin: 0;
+  padding: 0;
 }
 
-.adoption-header {
-  width: 100%;
-}
-
-.adoption-content {
-  display: flex;
-  margin: 16px;
+.adoption-cont {
+  max-width: 100%;
 }
 
 .adoption-inner {
-  padding: 0 0 0 120px;
   display: flex;
   align-items: center;
+  margin: 10px;
+}
+
+.arrow {
+  display: flex;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 5px;
 }
 
 .adoption-title {
-  margin: auto;
-  justify-content: center;
   display: flex;
-  font-size: 24px;
-  line-height: 32px;
-  height: 16px;
-  margin-bottom: 20px;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  font-size: 30px;
+  color: red;
 }
 
 .adoption-form {
-  margin: 0 16px 0 16px;
+  margin: 80px 10px 80px 10px;
 }
 
 .form-row {
   display: flex;
-  flex-direction: column;
-  margin: auto;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
 .form-group {
-  padding: 8px;
+  padding: 10px 0 10px 0;
 }
 
 .status-form {
-  padding: 40px 0 0 0;
+  padding: 30px 0 0 0;
 }
 
 .title {
-  padding: 15px 0 0 0;
+  padding: 10px;
 }
 
 .button {
-  padding-left: 32px;
+  margin: 10px;
 }
 
 .back {
@@ -82,20 +83,369 @@ $black: #000;
 
 //sm: { min: "640px", max: "767px" },
 @media screen and (min-width: 640px) {
+  .adoption-cont {
+    max-width: 100%;
+  }
+
+  .adoption-inner {
+    display: flex;
+    align-items: center;
+    margin: 10px;
+  }
+
+  .arrow {
+    display: flex;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 5px;
+  }
+
+  .adoption-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    font-size: 32px;
+    color: red;
+  }
+
+  .adoption-form {
+    margin: 80px 10px 80px 10px;
+  }
+
+  .form-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .form-group {
+    padding: 10px 0 10px 0;
+  }
+
+  .status-form {
+    padding: 30px 0 0 0;
+  }
+
+  .title {
+    padding: 10px;
+  }
+
+  .button {
+    margin: 10px;
+  }
+
+  .back {
+    color: $black;
+    width: 80px;
+    height: 40px;
+    padding: 8px;
+    margin: 80px 0 80px 0;
+    background-color: $color;
+    font-size: 12px;
+    line-height: 16px;
+  }
+
+  .submit {
+    color: $color;
+    width: 80px;
+    height: 40px;
+    padding: 8px;
+    margin: 80px 16px 80px 16px;
+    background-color: $background-color;
+    font-size: 12px;
+    line-height: 16px;
+  }
 }
 
 // md: { min: "768px", max: "1023px" },
 @media screen and (min-width: 768px) {
+  .adoption-cont {
+    max-width: 100%;
+  }
+
+  .adoption-inner {
+    display: flex;
+    align-items: center;
+    margin: 10px 20px 10px 20px;
+  }
+
+  .arrow {
+    display: flex;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 5px;
+  }
+
+  .adoption-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    font-size: 32px;
+    color: blue;
+  }
+
+  .adoption-form {
+    margin: 80px 20px 80px 20px;
+  }
+
+  .form-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .form-group {
+    padding: 10px 0 10px 0;
+  }
+
+  .status-form {
+    padding: 40px 0 0 0;
+  }
+
+  .title {
+    padding: 15px 0 0 0;
+  }
+
+  .back {
+    color: $black;
+    width: 80px;
+    height: 40px;
+    padding: 8px;
+    margin: 80px 0 80px 0;
+    background-color: $color;
+    font-size: 12px;
+    line-height: 16px;
+  }
+
+  .submit {
+    color: $color;
+    width: 80px;
+    height: 40px;
+    padding: 8px;
+    margin: 80px 16px 80px 16px;
+    background-color: $background-color;
+    font-size: 12px;
+    line-height: 16px;
+  }
 }
 
 //lg: { min: "1024px", max: "1279px" },
 @media screen and (min-width: 1024px) {
+  .adoption-cont {
+    max-width: 100%;
+  }
+
+  .adoption-inner {
+    display: flex;
+    align-items: center;
+    margin: 10px 40px 10px 40px;
+  }
+
+  .arrow {
+    display: flex;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 5px;
+  }
+
+  .adoption-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    font-size: 36px;
+    color: green;
+  }
+
+  .adoption-form {
+    margin: 80px 40px 80px 40px;
+  }
+
+  .form-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .form-group {
+    padding: 10px 0 10px 0;
+  }
+
+  .status-form {
+    padding: 40px 0 0 0;
+  }
+
+  .title {
+    padding: 15px 0 0 0;
+  }
+
+  .back {
+    color: $black;
+    width: 80px;
+    height: 40px;
+    padding: 8px;
+    margin: 80px 0 80px 0;
+    background-color: $color;
+    font-size: 12px;
+    line-height: 16px;
+  }
+
+  .submit {
+    color: $color;
+    width: 80px;
+    height: 40px;
+    padding: 8px;
+    margin: 80px 16px 80px 16px;
+    background-color: $background-color;
+    font-size: 12px;
+    line-height: 16px;
+  }
 }
 
 // xl: { min: "1280px", max: "1535px" },
 @media screen and (min-width: 1280px) {
+  .adoption-cont {
+    max-width: 100%;
+  }
+
+  .adoption-inner {
+    display: flex;
+    align-items: center;
+    margin: 10px 80px 10px 80px;
+  }
+
+  .arrow {
+    display: flex;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 5px;
+  }
+
+  .adoption-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    font-size: 36px;
+    color: pink;
+  }
+
+  .adoption-form {
+    margin: 80px;
+  }
+
+  .form-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .form-group {
+    padding: 10px 0 10px 0;
+  }
+
+  .status-form {
+    padding: 40px 0 0 0;
+  }
+
+  .title {
+    padding: 15px 0 0 0;
+  }
+
+  .back {
+    color: $black;
+    width: 80px;
+    height: 40px;
+    padding: 8px;
+    margin: 80px 0 80px 0;
+    background-color: $color;
+    font-size: 12px;
+    line-height: 16px;
+  }
+
+  .submit {
+    color: $color;
+    width: 80px;
+    height: 40px;
+    padding: 8px;
+    margin: 80px 16px 80px 16px;
+    background-color: $background-color;
+    font-size: 12px;
+    line-height: 16px;
+  }
 }
 
 // xxl: { min: "1536px" },
 @media screen and (min-width: 1536px) {
+  .adoption-cont {
+    max-width: 100%;
+  }
+
+  .adoption-inner {
+    display: flex;
+    align-items: center;
+    margin: 10px 80px 10px 80px;
+  }
+
+  .arrow {
+    display: flex;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 5px;
+  }
+
+  .adoption-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    font-size: 40px;
+    color: purple;
+  }
+
+  .adoption-form {
+    margin: 80px;
+  }
+
+  .form-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .form-group {
+    padding: 10px 0 10px 0;
+  }
+
+  .status-form {
+    padding: 40px 0 0 0;
+  }
+
+  .title {
+    padding: 15px 0 0 0;
+  }
+
+  .back {
+    color: $black;
+    width: 80px;
+    height: 40px;
+    padding: 8px;
+    margin: 80px 0 80px 0;
+    background-color: $color;
+    font-size: 12px;
+    line-height: 16px;
+  }
+
+  .submit {
+    color: $color;
+    width: 80px;
+    height: 40px;
+    padding: 8px;
+    margin: 80px 16px 80px 16px;
+    background-color: $background-color;
+    font-size: 12px;
+    line-height: 16px;
+  }
 }
