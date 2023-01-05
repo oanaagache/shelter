@@ -1,6 +1,7 @@
 * {
-  margin: 0;
+  box-sizing: border-box;
   padding: 0;
+  margin: 0;
 }
 
 .adoption-cont {
@@ -26,7 +27,6 @@
   align-items: center;
   height: 60px;
   font-size: 30px;
-  color: red;
 }
 
 .adoption-form {
@@ -101,7 +101,7 @@
     color: red;
   }
   .adoption-form {
-    margin: 80px 10px 80px 10px;
+    margin: 80px;
   }
   .form-row {
     display: flex;

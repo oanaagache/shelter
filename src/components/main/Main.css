@@ -14,6 +14,7 @@
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  position: absolute;
 }
 
 .main-text {
@@ -27,5 +28,4 @@
 .main-title {
   padding: 0 80px 5px 0px;
   font-size: 18px;
-  line-height: 28px;
 }/*# sourceMappingURL=Main.css.map */

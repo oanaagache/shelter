@@ -2,11 +2,6 @@ $color: aliceblue;
 $background-color: rgb(126, 63, 102);
 $black: #000;
 
-* {
-  margin: 0;
-  padding: 0;
-}
-
 .adopt-cont {
   max-width: 100%;
 }
@@ -14,6 +9,7 @@ $black: #000;
 .adopt-inner {
   display: flex;
   align-items: center;
+
   margin: 10px;
 }
 

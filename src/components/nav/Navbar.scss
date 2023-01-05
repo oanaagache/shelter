@@ -8,10 +8,6 @@ $font: "Oswald", sans-serif;
   margin: 0;
 }
 
-img {
-  height: 30px;
-}
-
 .header {
   max-width: 100%;
 }
@@ -65,9 +61,7 @@ img {
 
 // //xs: {min: "360px", max: "639px" }
 // @media screen and (min-width: 360px) {
-//   img {
-//     height: 30px;
-//   }
+//
 
 //   .header {
 //     max-width: 100%;
@@ -122,10 +116,6 @@ img {
 
 //sm: { min: "640px", max: "767px" },
 @media screen and (min-width: 640px) {
-  img {
-    height: 30px;
-  }
-
   .header {
     max-width: 100%;
   }
@@ -180,10 +170,6 @@ img {
 
 // md: { min: "768px", max: "1023px" },
 @media screen and (min-width: 768px) {
-  img {
-    height: 30px;
-  }
-
   .header {
     max-width: 100%;
   }
@@ -238,10 +224,6 @@ img {
 
 //lg: { min: "1024px", max: "1279px" },
 @media screen and (min-width: 1024px) {
-  img {
-    height: 30px;
-  }
-
   .header {
     max-width: 100%;
   }
@@ -296,10 +278,6 @@ img {
 
 // xl: { min: "1280px", max: "1535px" },
 @media screen and (min-width: 1280px) {
-  img {
-    height: 30px;
-  }
-
   .header {
     max-width: 100%;
   }
@@ -354,10 +332,6 @@ img {
 
 // xxl: { min: "1536px" },
 @media screen and (min-width: 1536px) {
-  img {
-    height: 30px;
-  }
-
   .header {
     max-width: 100%;
   }

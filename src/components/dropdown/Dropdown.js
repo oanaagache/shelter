@@ -17,7 +17,11 @@ const Dropdown = ({ selected, setSelected, options }) => {
         onClick={() => setIsActive(!isActive)}
       >
         {selected}
-        <img style={({ height: "20px" }, { width: "20px" })} src={logo} />
+        <img
+          style={({ height: "20px" }, { width: "20px" })}
+          src={logo}
+          alt="alt"
+        />
       </div>
 
       {isActive && (

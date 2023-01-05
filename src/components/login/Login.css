@@ -1,13 +1,8 @@
-* {
-  margin: 0;
-  padding: 0;
-}
-
-.adopt-cont {
+.login-cont {
   max-width: 100%;
 }
 
-.adopt-inner {
+.login-inner {
   display: flex;
   align-items: center;
   margin: 10px;
@@ -20,7 +15,7 @@
   padding: 5px;
 }
 
-.adopt-title {
+.login-title {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -28,76 +23,35 @@
   font-size: 30px;
 }
 
-.adopt-drop {
-  margin: 80px 10px 80px 10px;
+.login-form {
+  position: relative;
+  margin-bottom: 400px;
+  margin-top: 200px;
 }
 
-.adopt-drop-title {
-  margin: auto;
-  justify-content: left;
-  display: flex;
-  font-size: 20px;
-  margin: 40px 0 30px 0;
+.login-form form {
+  margin: 0 auto;
+  background: yellow;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
 }
 
-.drop {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
+.login-form-group {
+  padding: 10px 0 10px 0;
 }
 
-.drop1 {
-  flex: 4 1 auto;
-  padding: 8px 0 8px 0;
-  font-size: 15px;
-  justify-content: space-between;
-}
-
-.drop2 {
-  flex: 4 1 auto;
-  padding: 8px 0 8px 0;
-  font-size: 15px;
-  justify-content: space-between;
-}
-
-.drop3,
-.drop4,
-.drop5,
-.drop6 {
-  flex: 1 1 auto;
-  padding: 8px 0 8px 0;
-  font-size: 15px;
-  justify-content: space-between;
-}
-
-.drop-title {
-  font-size: 13px;
-}
-
-.button {
-  justify-content: left;
-}
-
-.filter-btn {
-  color: aliceblue;
-  background-color: rgb(126, 63, 102);
-  width: 100px;
-  height: 40px;
-  font-size: 12px;
-}
-
-.cards {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  margin-top: 16px;
+.login-button {
+  margin-top: 20px;
 }
 
 @media screen and (min-width: 640px) {
-  .adopt-cont {
+  .login-cont {
     max-width: 100%;
   }
-  .adopt-inner {
+  .login-inner {
     display: flex;
     align-items: center;
     margin: 10px;
@@ -108,69 +62,40 @@
     font-size: 18px;
     padding: 5px;
   }
-  .adopt-title {
+  .login-title {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 60px;
     font-size: 30px;
     color: red;
+    margin-bottom: 50px;
   }
-  .adopt-drop {
-    margin: 80px 10px 80px 10px;
+  .login-form {
+    margin-bottom: 400px;
+    margin-top: 200px;
   }
-  .adopt-drop-title {
-    margin: auto;
-    justify-content: left;
-    display: flex;
-    font-size: 20px;
-    margin: 40px 0 30px 0;
+  .login-form form {
+    margin: 0 auto;
+    background: yellow;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    right: 50px;
+    transform: translate(-50%, -50%);
   }
-  .drop {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
+  .login-form-group {
+    padding: 10px 0 10px 0;
   }
-  .drop1 {
-    flex: 4 1 auto;
-    padding: 8px 0 8px 0;
-    font-size: 15px;
-    justify-content: space-between;
-  }
-  .drop2 {
-    flex: 4 1 auto;
-    padding: 8px 0 8px 0;
-    font-size: 15px;
-    justify-content: space-between;
-  }
-  .drop3,
-.drop4,
-.drop5,
-.drop6 {
-    flex: 1 1 auto;
-    padding: 8px 0 8px 0;
-    font-size: 15px;
-    justify-content: space-between;
-  }
-  .drop-title {
-    font-size: 13px;
-  }
-  .button {
-    justify-content: left;
-  }
-  .filter-btn {
-    color: aliceblue;
-    background-color: rgb(126, 63, 102);
-    width: 100px;
-    height: 40px;
-    font-size: 12px;
+  .login-button {
+    margin-top: 20px;
   }
 }
 @media screen and (min-width: 768px) {
-  .adopt-cont {
+  .login-cont {
     max-width: 100%;
   }
-  .adopt-inner {
+  .login-inner {
     display: flex;
     align-items: center;
     margin: 10px 20px 10px 20px;
@@ -181,7 +106,7 @@
     font-size: 18px;
     padding: 5px;
   }
-  .adopt-title {
+  .login-title {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -189,62 +114,31 @@
     font-size: 32px;
     color: blue;
   }
-  .adopt-drop {
-    margin: 68px 20px 80px 20px;
+  .login-form {
+    margin-bottom: 400px;
+    margin-top: 200px;
   }
-  .adopt-drop-title {
-    margin: auto;
-    justify-content: left;
-    display: flex;
-    font-size: 20px;
-    margin: 40px 0 30px 0;
+  .login-form form {
+    margin: 0 auto;
+    background: yellow;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    right: 50px;
+    transform: translate(-50%, -50%);
   }
-  .drop {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    gap: 20px;
+  .login-form-group {
+    padding: 10px 0 10px 0;
   }
-  .drop1 {
-    flex: 4 1 auto;
-    padding: 8px 0 8px 0;
-    font-size: 15px;
-    justify-content: space-between;
-  }
-  .drop2 {
-    flex: 4 1 auto;
-    padding: 8px 0 8px 0;
-    font-size: 15px;
-    justify-content: space-between;
-  }
-  .drop3,
-.drop4,
-.drop5,
-.drop6 {
-    flex: 1 1 auto;
-    padding: 8px 0 8px 0;
-    font-size: 15px;
-    justify-content: space-between;
-  }
-  .drop-title {
-    font-size: 13px;
-  }
-  .button {
-    justify-content: left;
-  }
-  .filter-btn {
-    color: aliceblue;
-    background-color: rgb(126, 63, 102);
-    width: 100px;
-    height: 36px;
-    font-size: 12px;
+  .login-button {
+    margin-top: 20px;
   }
 }
 @media screen and (min-width: 1024px) {
-  .adopt-cont {
+  .login-cont {
     max-width: 100%;
   }
-  .adopt-inner {
+  .login-inner {
     display: flex;
     align-items: center;
     margin: 10px 40px 10px 40px;
@@ -255,7 +149,7 @@
     font-size: 18px;
     padding: 5px;
   }
-  .adopt-title {
+  .login-title {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -263,62 +157,31 @@
     font-size: 36px;
     color: green;
   }
-  .adopt-drop {
-    margin: 80px 40px 80px 40px;
+  .login-form {
+    margin-bottom: 400px;
+    margin-top: 200px;
   }
-  .adopt-drop-title {
-    margin: auto;
-    justify-content: left;
-    display: flex;
-    font-size: 20px;
-    margin: 40px 0 30px 0;
+  .login-form form {
+    margin: 0 auto;
+    background: yellow;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    right: 50px;
+    transform: translate(-50%, -50%);
   }
-  .drop {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    gap: 40px;
+  .login-form-group {
+    padding: 10px 0 10px 0;
   }
-  .drop1 {
-    flex: 4 1 auto;
-    padding: 8px 0 8px 0;
-    font-size: 15px;
-    justify-content: space-between;
-  }
-  .drop2 {
-    flex: 4 1 auto;
-    padding: 8px 0 8px 0;
-    font-size: 15px;
-    justify-content: space-between;
-  }
-  .drop3,
-.drop4,
-.drop5,
-.drop6 {
-    flex: 1 1 auto;
-    padding: 8px 0 8px 0;
-    font-size: 15px;
-    justify-content: space-between;
-  }
-  .drop-title {
-    font-size: 18px;
-  }
-  .button {
-    justify-content: left;
-  }
-  .filter-btn {
-    color: aliceblue;
-    background-color: rgb(126, 63, 102);
-    width: 100px;
-    height: 40px;
-    font-size: 12px;
+  .login-button {
+    margin-top: 20px;
   }
 }
 @media screen and (min-width: 1280px) {
-  .adopt-cont {
+  .login-cont {
     max-width: 100%;
   }
-  .adopt-inner {
+  .login-inner {
     display: flex;
     align-items: center;
     margin: 10px 80px 10px 80px;
@@ -329,71 +192,39 @@
     font-size: 18px;
     padding: 5px;
   }
-  .adopt-title {
+  .login-title {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 60px;
     font-size: 36px;
-    color: rosybrown;
+    color: pink;
   }
-  .adopt-drop {
-    margin: 80px;
+  .login-form {
+    margin-bottom: 400px;
+    margin-top: 200px;
   }
-  .adopt-drop-title {
-    margin: auto;
-    justify-content: left;
-    display: flex;
-    font-size: 20px;
-    margin: 40px 0 30px 0;
+  .login-form form {
+    margin: 0 auto;
+    background: yellow;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    right: 50px;
+    transform: translate(-50%, -50%);
   }
-  .drop {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    gap: 80px;
+  .login-form-group {
+    padding: 10px 0 10px 0;
   }
-  .drop1 {
-    flex: 4 1 auto;
-    padding: 8px 0 8px 0;
-    font-size: 15px;
-    justify-content: space-between;
-  }
-  .drop2 {
-    flex: 4 1 auto;
-    padding: 8px 0 8px 0;
-    font-size: 15px;
-    justify-content: space-between;
-  }
-  .drop3,
-.drop4,
-.drop5,
-.drop6 {
-    flex: 1 1 auto;
-    padding: 8px 0 8px 0;
-    font-size: 15px;
-    justify-content: space-between;
-  }
-  .drop-title {
-    font-size: 18px;
-  }
-  .button {
-    justify-content: left;
-    margin: 40px;
-  }
-  .filter-btn {
-    color: aliceblue;
-    background-color: rgb(126, 63, 102);
-    width: 100px;
-    height: 40px;
-    font-size: 12px;
+  .login-button {
+    margin-top: 20px;
   }
 }
 @media screen and (min-width: 1536px) {
-  .adopt-cont {
+  .login-cont {
     max-width: 100%;
   }
-  .adopt-inner {
+  .login-inner {
     display: flex;
     align-items: center;
     margin: 10px 80px 10px 80px;
@@ -404,63 +235,31 @@
     font-size: 18px;
     padding: 5px;
   }
-  .adopt-title {
+  .login-title {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 60px;
-    font-size: 48px;
+    font-size: 40px;
     color: purple;
   }
-  .adopt-drop {
-    margin: 80px;
+  .login-form {
+    margin-bottom: 400px;
+    margin-top: 200px;
   }
-  .adopt-drop-title {
-    margin: auto;
-    justify-content: left;
-    display: flex;
-    font-size: 20px;
-    margin: 40px 0 30px 0;
+  .login-form form {
+    margin: 0 auto;
+    background: yellow;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    right: 50px;
+    transform: translate(-50%, -50%);
   }
-  .drop {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    gap: 100px;
+  .login-form-group {
+    padding: 10px 0 10px 0;
   }
-  .drop1 {
-    flex: 4 1 auto;
-    padding: 8px 0 8px 0;
-    font-size: 15px;
-    justify-content: space-between;
-  }
-  .drop2 {
-    flex: 4 1 auto;
-    padding: 8px 0 8px 0;
-    font-size: 15px;
-    justify-content: space-between;
-  }
-  .drop3,
-.drop4,
-.drop5,
-.drop6 {
-    flex: 1 1 auto;
-    padding: 8px 0 8px 0;
-    font-size: 15px;
-    justify-content: space-between;
-  }
-  .drop-title {
-    font-size: 18px;
-  }
-  .button {
-    justify-content: left;
-    margin: 60px;
-  }
-  .filter-btn {
-    color: aliceblue;
-    background-color: rgb(126, 63, 102);
-    width: 100px;
-    height: 38px;
-    font-size: 12px;
+  .login-button {
+    margin-top: 20px;
   }
 }/*# sourceMappingURL=Login.css.map */

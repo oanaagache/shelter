@@ -8,11 +8,11 @@ $black: #000;
 //   margin: 0;
 // }
 
-.login-cont {
+.register-cont {
   max-width: 100%;
 }
 
-.login-inner {
+.register-inner {
   display: flex;
   align-items: center;
   margin: 10px;
@@ -25,7 +25,7 @@ $black: #000;
   padding: 5px;
 }
 
-.login-title {
+.register-title {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -33,14 +33,14 @@ $black: #000;
   font-size: 30px;
 }
 
-.login-form {
+.register-form {
   position: relative;
-  margin-bottom: 400px;
-  margin-top: 200px;
+  margin-bottom: 600px;
+  margin-top: 300px;
 }
 
-.login-form form {
-  margin: 0 auto;
+.register-form form {
+  //margin: 0 auto;
   background: yellow;
   position: absolute;
   top: 50%;
@@ -49,21 +49,21 @@ $black: #000;
   width: 300px;
 }
 
-.login-form-group {
+.register-form-group {
   padding: 10px 0 10px 0;
 }
 
-.login-button {
+.register-button {
   margin-top: 20px;
 }
 
 //sm: { min: "640px", max: "767px" },
 @media screen and (min-width: 640px) {
-  .login-cont {
+  .register-cont {
     max-width: 100%;
   }
 
-  .login-inner {
+  .register-inner {
     display: flex;
     align-items: center;
     margin: 10px;
@@ -76,7 +76,7 @@ $black: #000;
     padding: 5px;
   }
 
-  .login-title {
+  .register-title {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -86,13 +86,14 @@ $black: #000;
     margin-bottom: 50px;
   }
 
-  .login-form {
-    margin-bottom: 400px;
-    margin-top: 200px;
+  .register-form {
+    position: relative;
+    margin-bottom: 600px;
+    margin-top: 300px;
   }
 
-  .login-form form {
-    margin: 0 auto;
+  .register-form form {
+    //margin: 0 auto;
     background: yellow;
     position: absolute;
     top: 50%;
@@ -101,22 +102,22 @@ $black: #000;
     transform: translate(-50%, -50%);
   }
 
-  .login-form-group {
+  .register-form-group {
     padding: 10px 0 10px 0;
   }
 
-  .login-button {
+  .register-button {
     margin-top: 20px;
   }
 }
 
 // md: { min: "768px", max: "1023px" },
 @media screen and (min-width: 768px) {
-  .login-cont {
+  .register-cont {
     max-width: 100%;
   }
 
-  .login-inner {
+  .register-inner {
     display: flex;
     align-items: center;
     margin: 10px 20px 10px 20px;
@@ -129,7 +130,7 @@ $black: #000;
     padding: 5px;
   }
 
-  .login-title {
+  .register-title {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -138,13 +139,14 @@ $black: #000;
     color: blue;
   }
 
-  .login-form {
-    margin-bottom: 400px;
-    margin-top: 200px;
+  .register-form {
+    position: relative;
+    margin-bottom: 600px;
+    margin-top: 300px;
   }
 
-  .login-form form {
-    margin: 0 auto;
+  .register-form form {
+    //margin: 0 auto;
     background: yellow;
     position: absolute;
     top: 50%;
@@ -153,22 +155,22 @@ $black: #000;
     transform: translate(-50%, -50%);
   }
 
-  .login-form-group {
+  .register-form-group {
     padding: 10px 0 10px 0;
   }
 
-  .login-button {
+  .register-button {
     margin-top: 20px;
   }
 }
 
 //lg: { min: "1024px", max: "1279px" },
 @media screen and (min-width: 1024px) {
-  .login-cont {
+  .register-cont {
     max-width: 100%;
   }
 
-  .login-inner {
+  .register-inner {
     display: flex;
     align-items: center;
     margin: 10px 40px 10px 40px;
@@ -181,7 +183,7 @@ $black: #000;
     padding: 5px;
   }
 
-  .login-title {
+  .register-title {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -190,13 +192,14 @@ $black: #000;
     color: green;
   }
 
-  .login-form {
-    margin-bottom: 400px;
-    margin-top: 200px;
+  .register-form {
+    position: relative;
+    margin-bottom: 600px;
+    margin-top: 300px;
   }
 
-  .login-form form {
-    margin: 0 auto;
+  .register-form form {
+    //margin: 0 auto;
     background: yellow;
     position: absolute;
     top: 50%;
@@ -205,22 +208,22 @@ $black: #000;
     transform: translate(-50%, -50%);
   }
 
-  .login-form-group {
+  .register-form-group {
     padding: 10px 0 10px 0;
   }
 
-  .login-button {
+  .register-button {
     margin-top: 20px;
   }
 }
 
 // xl: { min: "1280px", max: "1535px" },
 @media screen and (min-width: 1280px) {
-  .login-cont {
+  .register-cont {
     max-width: 100%;
   }
 
-  .login-inner {
+  .register-inner {
     display: flex;
     align-items: center;
     margin: 10px 80px 10px 80px;
@@ -233,7 +236,7 @@ $black: #000;
     padding: 5px;
   }
 
-  .login-title {
+  .register-title {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -242,13 +245,14 @@ $black: #000;
     color: pink;
   }
 
-  .login-form {
-    margin-bottom: 400px;
-    margin-top: 200px;
+  .register-form {
+    position: relative;
+    margin-bottom: 600px;
+    margin-top: 300px;
   }
 
-  .login-form form {
-    margin: 0 auto;
+  .register-form form {
+    //margin: 0 auto;
     background: yellow;
     position: absolute;
     top: 50%;
@@ -257,22 +261,22 @@ $black: #000;
     transform: translate(-50%, -50%);
   }
 
-  .login-form-group {
+  .register-form-group {
     padding: 10px 0 10px 0;
   }
 
-  .login-button {
+  .register-button {
     margin-top: 20px;
   }
 }
 
 // xxl: { min: "1536px" },
 @media screen and (min-width: 1536px) {
-  .login-cont {
+  .register-cont {
     max-width: 100%;
   }
 
-  .login-inner {
+  .register-inner {
     display: flex;
     align-items: center;
     margin: 10px 80px 10px 80px;
@@ -285,7 +289,7 @@ $black: #000;
     padding: 5px;
   }
 
-  .login-title {
+  .register-title {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -294,13 +298,14 @@ $black: #000;
     color: purple;
   }
 
-  .login-form {
-    margin-bottom: 400px;
-    margin-top: 200px;
+  .register-form {
+    position: relative;
+    margin-bottom: 600px;
+    margin-top: 300px;
   }
 
-  .login-form form {
-    margin: 0 auto;
+  .register-form form {
+    //margin: 0 auto;
     background: yellow;
     position: absolute;
     top: 50%;
@@ -309,11 +314,11 @@ $black: #000;
     transform: translate(-50%, -50%);
   }
 
-  .login-form-group {
+  .register-form-group {
     padding: 10px 0 10px 0;
   }
 
-  .login-button {
+  .register-register-button {
     margin-top: 20px;
   }
 }
