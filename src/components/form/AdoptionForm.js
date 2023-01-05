@@ -139,7 +139,7 @@ const AdoptionForm = (props) => {
               )}
 
               {isLoggedIn ? (
-                <div className="form-group col-md-6">
+                <div className="form-group col-md-3">
                   <label htmlFor="inputEmailAddress">Email address:</label>
                   <input
                     type="text"
@@ -150,7 +150,7 @@ const AdoptionForm = (props) => {
                   />
                 </div>
               ) : (
-                <div className="form-group col-md-6">
+                <div className="form-group col-md-3">
                   <label htmlFor="inputEmailAddress">Email address:</label>
                   <input
                     type="text"
@@ -164,7 +164,7 @@ const AdoptionForm = (props) => {
               )}
             </div>
             <div className="form-row">
-              <div className="form-group col-md-4">
+              <div className="form-group col-md-2">
                 <label htmlFor="inputAddress1">Address Line:</label>
                 <input
                   type="text"
@@ -192,7 +192,7 @@ const AdoptionForm = (props) => {
                 <CountrySelector setCountry={setCountry} />
               </div>
 
-              <div className="form-group col-md-2">
+              <div className="form-group col-md-1">
                 <label htmlFor="inputZip">Zip code:</label>
                 <input
                   type="text"
