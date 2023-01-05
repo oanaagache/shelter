@@ -55,7 +55,7 @@ const App = () => {
         <Route path="/Navbar:isLoggedIn" element={<Navbar />} />
         <Route path="/register" element={<Register />} />
         <Route path="/success/:name" element={<Success />} />
-        <Route path="/users" element={<Users />} />
+        <Route path="/users" element={<Users isLoggedIn={isLoggedIn} />} />
       </Routes>
       <Footer />
     </Router>

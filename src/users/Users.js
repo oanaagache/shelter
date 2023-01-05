@@ -1,20 +1,13 @@
 import React, { useState, useEffect } from "react";
 import "../users/Users.css";
 
-function Users() {
+const Users = (props) => {
+  const { isLoggedIn } = props;
   const [usersFromDB, setUsersFromDB] = useState("false");
 
   // //only admin
-  // useEffect(() => {
-  //   //fetch to server
-  //   fetch("http://localhost:3001/")
-  //     .then((resp) => resp.text())
-  //     .then((resp) => JSON.parse(resp))
-  //     .then((data) => setUsersFromDB(data.map((user) => user.surname)))
-  //     .then((data) => console.log(usersFromDB));
-  // }, []);
-  // return
-  // <div className="m-20">{usersFromDB}</div>;
+  console.log("users:");
+  console.log(isLoggedIn);
 
   useEffect(() => {
     //fetch to server
@@ -57,35 +50,9 @@ function Users() {
         )
       );
   }, []);
-  return <div className="m-20">{usersFromDB}</div>;
-}
-//   return (
-//     <>
-//       <div className="users">
-//         <table>
-//           <tr>
-//             <th>Name</th>
-//             <th>Surname</th>//
-//           </tr>
 
-//           <tr>
-//             <td>{usersFromDB}</td>
-//             <td>{usersFromDB}</td>
-//             <td>{usersFromDB}</td>
-//           </tr>
-//           {/* {data.map((val, key) => {
-//             return (
-//               <tr key={key}>
-//                 <td>{usersFromDB.firstName}</td>
-//                 <td>{usersFromDB.surname}</td>
-//                 <td>{usersFromDB.email}</td>
-//               </tr>
-//             );
-//           })} */}
-//         </table>
-//       </div>
-//     </>
-//   );
-// }
+  return <div> {usersFromDB}</div>;
+  // return <div>{isLoggedIn ? { usersFromDB } : "not"}</div>;
+};
 
 export default Users;
