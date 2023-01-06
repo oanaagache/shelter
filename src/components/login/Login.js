@@ -70,7 +70,7 @@ const Login = (props) => {
               />
             </div>
 
-            <div className="login-form-group col-md-1">
+            <div className="login-form-group col-md-12">
               <label htmlFor="inputAddress1">Password:</label>
               <input
                 name="password"

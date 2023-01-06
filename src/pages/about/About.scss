@@ -2,11 +2,11 @@ $color: aliceblue;
 $background-color: rgb(126, 63, 102);
 $black: #000;
 
-.login-cont {
+.about-cont {
   max-width: 100%;
 }
 
-.login-inner {
+.about-inner {
   display: flex;
   align-items: center;
   margin: 10px;
@@ -19,7 +19,7 @@ $black: #000;
   padding: 5px;
 }
 
-.login-title {
+.about-title {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -27,36 +27,21 @@ $black: #000;
   font-size: 30px;
 }
 
-.login-form {
-  position: relative;
-  margin-bottom: 400px;
-  margin-top: 200px;
+.about-drop {
+  margin: 80px 10px 80px 10px;
 }
 
-.login-form form {
-  //margin: 0 auto;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 300px;
-}
-
-.login-form-group {
-  padding: 10px 0 10px 0;
-}
-
-.login-button {
-  margin-top: 20px;
+.button {
+  justify-content: left;
 }
 
 //sm: { min: "640px", max: "767px" },
 @media screen and (min-width: 640px) {
-  .login-cont {
+  .about-cont {
     max-width: 100%;
   }
 
-  .login-inner {
+  .about-inner {
     display: flex;
     align-items: center;
     margin: 10px;
@@ -69,46 +54,31 @@ $black: #000;
     padding: 5px;
   }
 
-  .login-title {
+  .about-title {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 60px;
     font-size: 30px;
     color: red;
-    margin-bottom: 50px;
   }
 
-  .login-form {
-    margin-bottom: 400px;
-    margin-top: 200px;
+  .about-drop {
+    margin: 80px 10px 80px 10px;
   }
 
-  .login-form form {
-    //margin: 0 auto;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    right: 50px;
-    transform: translate(-50%, -50%);
-  }
-
-  .login-form-group {
-    padding: 10px 0 10px 0;
-  }
-
-  .login-button {
-    margin-top: 20px;
+  .button {
+    justify-content: left;
   }
 }
 
 // md: { min: "768px", max: "1023px" },
 @media screen and (min-width: 768px) {
-  .login-cont {
+  .about-cont {
     max-width: 100%;
   }
 
-  .login-inner {
+  .about-inner {
     display: flex;
     align-items: center;
     margin: 10px 20px 10px 20px;
@@ -121,7 +91,7 @@ $black: #000;
     padding: 5px;
   }
 
-  .login-title {
+  .about-title {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -130,36 +100,22 @@ $black: #000;
     color: blue;
   }
 
-  .login-form {
-    margin-bottom: 400px;
-    margin-top: 200px;
+  .about-drop {
+    margin: 80px 20px 80px 20px;
   }
 
-  .login-form form {
-    margin: 0 auto;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    right: 50px;
-    transform: translate(-50%, -50%);
-  }
-
-  .login-form-group {
-    padding: 10px 0 10px 0;
-  }
-
-  .login-button {
-    margin-top: 20px;
+  .button {
+    justify-content: left;
   }
 }
 
 //lg: { min: "1024px", max: "1279px" },
 @media screen and (min-width: 1024px) {
-  .login-cont {
+  .about-cont {
     max-width: 100%;
   }
 
-  .login-inner {
+  .about-inner {
     display: flex;
     align-items: center;
     margin: 10px 40px 10px 40px;
@@ -172,7 +128,7 @@ $black: #000;
     padding: 5px;
   }
 
-  .login-title {
+  .about-title {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -181,36 +137,22 @@ $black: #000;
     color: green;
   }
 
-  .login-form {
-    margin-bottom: 400px;
-    margin-top: 200px;
+  .about-drop {
+    margin: 80px 40px 80px 40px;
   }
 
-  .login-form form {
-    //margin: 0 auto;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    right: 50px;
-    transform: translate(-50%, -50%);
-  }
-
-  .login-form-group {
-    padding: 10px 0 10px 0;
-  }
-
-  .login-button {
-    margin-top: 20px;
+  .button {
+    justify-content: left;
   }
 }
 
 // xl: { min: "1280px", max: "1535px" },
 @media screen and (min-width: 1280px) {
-  .login-cont {
+  .about-cont {
     max-width: 100%;
   }
 
-  .login-inner {
+  .about-inner {
     display: flex;
     align-items: center;
     margin: 10px 80px 10px 80px;
@@ -223,45 +165,32 @@ $black: #000;
     padding: 5px;
   }
 
-  .login-title {
+  .about-title {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 60px;
     font-size: 36px;
-    color: pink;
+    color: rosybrown;
   }
 
-  .login-form {
-    margin-bottom: 400px;
-    margin-top: 200px;
+  .about-drop {
+    margin: 80px;
   }
 
-  .login-form form {
-    //margin: 0 auto;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    right: 50px;
-    transform: translate(-50%, -50%);
-  }
-
-  .login-form-group {
-    padding: 10px 0 10px 0;
-  }
-
-  .login-button {
-    margin-top: 20px;
+  .button {
+    justify-content: left;
+    margin: 40px;
   }
 }
 
 // xxl: { min: "1536px" },
 @media screen and (min-width: 1536px) {
-  .login-cont {
+  .about-cont {
     max-width: 100%;
   }
 
-  .login-inner {
+  .about-inner {
     display: flex;
     align-items: center;
     margin: 10px 80px 10px 80px;
@@ -274,7 +203,7 @@ $black: #000;
     padding: 5px;
   }
 
-  .login-title {
+  .about-title {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -283,25 +212,12 @@ $black: #000;
     color: purple;
   }
 
-  .login-form {
-    margin-bottom: 400px;
-    margin-top: 200px;
+  .about-drop {
+    margin: 80px;
   }
 
-  .login-form form {
-    //margin: 0 auto;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    right: 50px;
-    transform: translate(-50%, -50%);
-  }
-
-  .login-form-group {
-    padding: 10px 0 10px 0;
-  }
-
-  .login-button {
-    margin-top: 20px;
+  .button {
+    justify-content: left;
+    margin: 60px;
   }
 }

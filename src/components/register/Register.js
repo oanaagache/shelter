@@ -4,7 +4,7 @@ import { Form } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Link } from "react-router-dom";
 import logo from "../../images/image4.svg";
-import "../login/Register.css";
+import "./Register.css";
 
 const Register = () => {
   let navigate = useNavigate();

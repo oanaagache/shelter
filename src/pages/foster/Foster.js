@@ -1,40 +1,41 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import logo from "../../images/image4.svg";
+import "./Foster.css";
 
 const Foster = () => {
   return (
-    <div className="adopt-container">
-      <div className="adopt-header">
-        <div className="adopt-content">
-          <div className="adopt-inner">
-            <img style={({ height: 1 }, { padding: 10 })} src={logo} />
-            <h2>
-              <Link to="/" style={{ textDecoration: "none" }}>
-                Back
-              </Link>
-            </h2>
-          </div>
-
-          <h4 className="adopt-title">Why Foster A Dog or Cat?</h4>
-        </div>
+    <div className="foster-cont">
+      <div className="foster-inner">
+        <img
+          style={({ height: "10px" }, { width: "10px" })}
+          src={logo}
+          alt="Not found"
+        />
+        <Link className="arrow" to="/">
+          Back{" "}
+        </Link>
       </div>
 
-      <div className="adopt-drop">
-        <h1 className="adopt-drop-title">
+      <div className="foster-title">Why Foster A Dog or Cat?</div>
+
+      <div className="foster">
+        <div className="foster-subtitle">
           What does fostering a dog/cat involve?
-        </h1>
-        <h3>
+        </div>
+        <div className="foster-subtitle1">
           When you foster, you agree to take a homeless dog/cat into your home
           and give him or her love, care and attention, either for a
           predetermined period of time or until the dog/cat is adopted.
-        </h3>
-        <br />
-        <h3>Why do adoption groups need foster homes?</h3>
-        <h3>
+        </div>
+
+        <div className="foster-subtitle">
+          Why do adoption groups need foster homes?
+        </div>
+        <div className="foster-subtitle1">
           There are many reasons a dog/cat might need foster care. Some of the
           most common include:
-        </h3>
+        </div>
 
         <ul className="foster-li">
           <li>
@@ -63,12 +64,12 @@ const Foster = () => {
             with people and needs to be socialized.
           </li>
         </ul>
-        <h3>Why should I foster a dog or cat?</h3>
-        <h3>
+        <div className="foster-subtitle">Why should I foster a dog or cat?</div>
+        <div className="foster-subtitle1">
           Fostering a dog/cat is one of the most rewarding experiences you can
           have (other than adopting, of course). By taking an animal in need
           temporarily into your home you’re:
-        </h3>
+        </div>
 
         <ul className="foster-li">
           <li>
@@ -88,15 +89,17 @@ const Foster = () => {
             him used to being around other pets and different types of people.
           </li>
         </ul>
-        <br />
-        <h3>How do I sign up to foster a dog or cat?</h3>
-        <br />
-        <h4>
-          Find a <Link to="/">rescue group or shelter near you </Link> and
-          contact them. They’ll likely have you fill out a foster application
-          and, if you are approved, they will work with you to figure out the
-          right foster dog/cat for your household.
-        </h4>
+
+        <div className="foster-subtitle">
+          How do I sign up to foster a dog or cat?
+        </div>
+
+        <div className="foster-subtitle1">
+          Find a rescue group or shelter near you and contact them. They’ll
+          likely have you fill out a foster application and, if you are
+          approved, they will work with you to figure out the right foster
+          dog/cat for your household.
+        </div>
       </div>
     </div>
   );

@@ -14,7 +14,7 @@ import CountrySelector from "./components/countryselector/CountrySelector";
 import ArticlesDog from "./pages/articles/dog/ArticlesDog";
 import ArticlesCat from "./pages/articles/cat/ArticlesCat";
 import AdoptionForm from "./components/form/AdoptionForm";
-import Register from "./components/login/Register";
+import Register from "./components/register/Register";
 import Login from "./components/login/Login";
 import Users from "./users/Users";
 
