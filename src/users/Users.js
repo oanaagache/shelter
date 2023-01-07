@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from "react";
 import "../users/Users.css";
+import { useNavigate } from "react-router-dom";
 
 const Users = (props) => {
   const { isLoggedIn } = props;
   const [usersFromDB, setUsersFromDB] = useState("false");
+  let navigate = useNavigate();
 
   // //only admin
   console.log("users:");
@@ -11,7 +13,7 @@ const Users = (props) => {
 
   useEffect(() => {
     //fetch to server
-    fetch("http://localhost:3001/")
+    fetch("http://localhost:3001/users")
       .then((resp) => resp.text())
       .then((resp) => JSON.parse(resp))
       .then((data) =>
@@ -42,6 +44,22 @@ const Users = (props) => {
                       <td>{user.status}</td>
                       <td>{user.routine}</td>
                     </tr>
+                    <button
+                      className="button"
+                      onClick={() => {
+                        navigate("/edit");
+                      }}
+                    >
+                      Edit
+                    </button>
+                    <button
+                      className="button"
+                      onClick={() => {
+                        navigate("/delete");
+                      }}
+                    >
+                      Delete
+                    </button>
                   </tbody>
                 );
               })}

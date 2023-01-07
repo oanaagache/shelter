@@ -10,7 +10,7 @@ const Register = () => {
   let navigate = useNavigate();
 
   const [registeredUser, setRegisteredUser] = useState({
-    name: "",
+    firstName: "",
     surname: "",
     email: "",
     password: "",
@@ -43,13 +43,13 @@ const Register = () => {
         <div className="register-form">
           <Form onSubmit={handleSubmit}>
             <div className="register-form-group col-md-12">
-              <label htmlFor="inputName">Name:</label>
+              <label htmlFor="inputFirstName">First Name:</label>
               <input
-                name="name"
+                name="firstName"
                 className="form-control"
-                id="inputName"
-                placeholder="Name"
-                value={registeredUser.name}
+                id="inputFirstName"
+                placeholder="First Name"
+                value={registeredUser.firstName}
                 onChange={(e) =>
                   setRegisteredUser({
                     ...registeredUser,
@@ -76,7 +76,7 @@ const Register = () => {
             </div>
 
             <div className="register-form-group col-md-12">
-              <label htmlFor="inputLastName">Email:</label>
+              <label htmlFor="inputEmail">Email:</label>
               <input
                 name="email"
                 className="form-control"
@@ -93,7 +93,7 @@ const Register = () => {
             </div>
 
             <div className="register-form-group col-md-12">
-              <label htmlFor="inputAddress1">Password:</label>
+              <label htmlFor="inputPassword">Password:</label>
               <input
                 name="password"
                 className="form-control"

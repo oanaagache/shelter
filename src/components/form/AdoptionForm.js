@@ -14,10 +14,11 @@ const AdoptionForm = (props) => {
   let navigate = useNavigate();
 
   const [user, setUser] = useState({});
+  console.log(user);
 
   const [firstName, setFirstName] = useState("");
   const [surname, setSurname] = useState("");
-  const [address1, setAddress1] = useState("");
+  const [address, setAddress] = useState("");
   const [email, setEmail] = useState("");
   const [city, setCity] = useState("");
   const [country, setCountry] = useState("");
@@ -25,12 +26,13 @@ const AdoptionForm = (props) => {
   const [status, setStatus] = useState("");
   const [routine, setRoutine] = useState("");
 
+  //send newUser to DB
   const handleSubmit = (evt) => {
     evt.preventDefault();
     setFirstName("");
     setSurname("");
     setEmail("");
-    setAddress1("");
+    setAddress("");
     setCity("");
     setCountry("");
     setCode("");
@@ -39,10 +41,10 @@ const AdoptionForm = (props) => {
     navigate(`/success/${name}`);
 
     const newUser = {
-      firstName: user.name,
+      firstName: user.firstName,
       surname: user.surname,
       email: user.email,
-      address1: address1,
+      address: address,
       city: city,
       country: country,
       code: code,
@@ -50,7 +52,7 @@ const AdoptionForm = (props) => {
       routine: routine,
     };
 
-    fetch("http://localhost:3001/", {
+    fetch("http://localhost:3001/users/add", {
       method: "post",
       headers: {
         "Content-Type": "application/json",
@@ -64,7 +66,8 @@ const AdoptionForm = (props) => {
 
   useEffect(() => {
     setUser(JSON.parse(localStorage.getItem("user")));
-    console.log("isLoggedIn Form: " + isLoggedIn);
+    //console.log(JSON.parse(localStorage.getItem("user")));
+    //console.log("isLoggedIn Form: " + isLoggedIn);
   }, []);
 
   return (
@@ -90,18 +93,18 @@ const AdoptionForm = (props) => {
             <div className="form-row">
               {isLoggedIn ? (
                 <div className="form-group col-md-2">
-                  <label htmlFor="inputfirstName">First Name:</label>
+                  <label htmlFor="inputFirstName">First Name:</label>
                   <input
                     type="text"
                     className="form-control"
                     id="inputFirstName"
-                    value={user.name || ""}
+                    value={user.firstName || ""}
                     onChange={(e) => setFirstName(e.target.value)}
                   />
                 </div>
               ) : (
                 <div className="form-group col-md-2">
-                  <label htmlFor="inputfirstName">First Name:</label>
+                  <label htmlFor="inputFirstName">First Name:</label>
                   <input
                     type="text"
                     className="form-control"
@@ -165,14 +168,14 @@ const AdoptionForm = (props) => {
             </div>
             <div className="form-row">
               <div className="form-group col-md-2">
-                <label htmlFor="inputAddress1">Address Line:</label>
+                <label htmlFor="inputAddress">Address Line:</label>
                 <input
                   type="text"
                   className="form-control"
-                  id="inputAddress1"
+                  id="inputAddress"
                   placeholder="Street name and number"
-                  value={address1}
-                  onChange={(e) => setAddress1(e.target.value)}
+                  value={address}
+                  onChange={(e) => setAddress(e.target.value)}
                 />
               </div>
               <div className="form-group col-md-2">
