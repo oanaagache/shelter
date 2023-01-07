@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "../users/Users.css";
 import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Users = (props) => {
   const { isLoggedIn } = props;
@@ -13,7 +14,7 @@ const Users = (props) => {
 
   useEffect(() => {
     //fetch to server
-    fetch("http://localhost:3001/users")
+    fetch("http://localhost:3001/record")
       .then((resp) => resp.text())
       .then((resp) => JSON.parse(resp))
       .then((data) =>
@@ -29,6 +30,7 @@ const Users = (props) => {
                   <th>Country</th>
                   <th>Have Children</th>
                   <th>Have Pets</th>
+                  <th>Action</th>
                 </tr>
               </thead>
 
@@ -43,23 +45,44 @@ const Users = (props) => {
                       <td>{user.country}</td>
                       <td>{user.status}</td>
                       <td>{user.routine}</td>
+                      <td>
+                        <button
+                          className="button"
+                          onClick={() => {
+                            navigate("/edit");
+                          }}
+                        >
+                          Edit
+                        </button>
+                        <button
+                          className="button"
+                          onClick={() => {
+                            navigate("/delete");
+                          }}
+                        >
+                          Delete
+                        </button>
+                      </td>
+
+                      {/* <td>
+                        {" "}
+                        <Link
+                          className="btn btn-link"
+                          to={`/edit/${props.record._id}`}
+                        >
+                          Edit
+                        </Link>{" "}
+                        |
+                        <button
+                          className="btn btn-link"
+                          onClick={() => {
+                            props.deleteRecord(props.record._id);
+                          }}
+                        >
+                          Delete
+                        </button>
+                      </td> */}
                     </tr>
-                    <button
-                      className="button"
-                      onClick={() => {
-                        navigate("/edit");
-                      }}
-                    >
-                      Edit
-                    </button>
-                    <button
-                      className="button"
-                      onClick={() => {
-                        navigate("/delete");
-                      }}
-                    >
-                      Delete
-                    </button>
                   </tbody>
                 );
               })}

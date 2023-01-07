@@ -16,7 +16,7 @@ const Edit = () => {
     firstName: "",
     surname: "",
     email: "",
-    address1: "",
+    address: "",
     city: "",
     country: "",
     code: "",
@@ -28,7 +28,7 @@ const Edit = () => {
   useEffect(() => {
     async function fetchData() {
       const id = params.id;
-      const response = await fetch(`http://localhost:3001/users/${params.id}`);
+      const response = await fetch(`http://localhost:3001/record/${params.id}`);
 
       if (!response.ok) {
         const message = `An error has occurred: ${response.statusText}`;
@@ -36,14 +36,14 @@ const Edit = () => {
         return;
       }
 
-      const user = await response.json();
-      if (!user) {
+      const userFromDB = await response.json();
+      if (!userFromDB) {
         window.alert(`Record with id ${id} not found`);
         navigate("/");
         return;
       }
-      setForm(user);
-      console.log(user);
+      setForm(userFromDB);
+      console.log(userFromDB);
     }
     fetchData();
     return;
@@ -61,7 +61,7 @@ const Edit = () => {
       firstName: form.firstName,
       surname: form.surname,
       email: form.email,
-      address1: form.address1,
+      address: form.address,
       city: form.city,
       country: form.country,
       code: form.code,
@@ -136,13 +136,13 @@ const Edit = () => {
             </div>
             <div className="form-row">
               <div className="form-group col-md-2">
-                <label htmlFor="inputAddress1">Address Line:</label>
+                <label htmlFor="inputAddress">Address Line:</label>
                 <input
                   type="text"
                   className="form-control"
-                  id="inputAddress1"
+                  id="inputAddress"
                   placeholder="Street name and number"
-                  value={form.address1}
+                  value={form.address}
                   onChange={(e) => updateForm({ address1: e.target.value })}
                 />
               </div>

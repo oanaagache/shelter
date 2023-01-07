@@ -52,7 +52,7 @@ const AdoptionForm = (props) => {
       routine: routine,
     };
 
-    fetch("http://localhost:3001/users/add", {
+    fetch("http://localhost:3001/record/add", {
       method: "post",
       headers: {
         "Content-Type": "application/json",
