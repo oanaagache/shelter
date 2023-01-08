@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "../users/Users.css";
 import { useNavigate } from "react-router-dom";
-import { Link } from "react-router-dom";
+
 
 const Users = (props) => {
   const { isLoggedIn } = props;
@@ -21,18 +21,14 @@ const Users = (props) => {
         setUsersFromDB(
           <div className="users">
             <table>
-              <thead>
-                <tr>
-                  <th>Firstname</th>
-                  <th>Last Name</th>
-                  <th>Email</th>
-                  <th>City</th>
-                  <th>Country</th>
-                  <th>Have Children</th>
-                  <th>Have Pets</th>
-                  <th>Action</th>
-                </tr>
-              </thead>
+              <th>Firstname</th>
+              <th>Last Name</th>
+              <th>Email</th>
+              <th>City</th>
+              <th>Country</th>
+              <th>Have Children</th>
+              <th>Have Pets</th>
+              <th>Action</th>
 
               {data.map((user, key) => {
                 return (
@@ -63,25 +59,6 @@ const Users = (props) => {
                           Delete
                         </button>
                       </td>
-
-                      {/* <td>
-                        {" "}
-                        <Link
-                          className="btn btn-link"
-                          to={`/edit/${props.record._id}`}
-                        >
-                          Edit
-                        </Link>{" "}
-                        |
-                        <button
-                          className="btn btn-link"
-                          onClick={() => {
-                            props.deleteRecord(props.record._id);
-                          }}
-                        >
-                          Delete
-                        </button>
-                      </td> */}
                     </tr>
                   </tbody>
                 );

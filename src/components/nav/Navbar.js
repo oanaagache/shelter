@@ -89,6 +89,7 @@ const Navbar = (props) => {
               Articles
             </NavLink>
           </li>
+
           {isLoggedIn ? (
             <button
               className="btn-log"

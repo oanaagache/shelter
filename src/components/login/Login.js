@@ -7,7 +7,7 @@ import logo from "../../images/image4.svg";
 import "../login/Login.css";
 
 const Login = (props) => {
-  const { isLoggedIn, setIsLoggedIn } = props;
+  const { setIsLoggedIn } = props;
 
   let navigate = useNavigate();
   const [loginUser, setLoginUser] = useState({
@@ -27,7 +27,18 @@ const Login = (props) => {
       setIsLoggedIn(true);
       navigate("/");
     } else {
-      alert("Wrong Email or Password");
+      alert("Please register");
+    }
+
+    if (
+      loginUser.email === "oana.luciana.agache@gmail.com" &&
+      loginUser.password === "123456"
+    ) {
+      localStorage.setItem("loggedIn", true);
+      setIsLoggedIn(true);
+      navigate("/list");
+    } else {
+      navigate("/");
     }
   };
 

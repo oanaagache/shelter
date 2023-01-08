@@ -2,7 +2,7 @@ $background-color: rgb(126, 63, 102);
 
 .users {
   width: 100%;
-  height: 100vh;
+  //height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -11,8 +11,8 @@ $background-color: rgb(126, 63, 102);
 
 table {
   border: 2px solid $background-color;
-  width: 100vh;
-  height: 100vh;
+  //width: 100vh;
+  //height: 100vh;
   padding: 5px;
 }
 
@@ -22,7 +22,9 @@ td {
   border-left: solid 1px #eeeeef;
   border-bottom: 1px solid #eeeeef;
   padding: 5px;
-  text-align: center;
+  //text-align: center;
+  width: 50%;
+  height: 30px;
 }
 
 th:last-child,
