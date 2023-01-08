@@ -8,7 +8,7 @@ const Main = () => {
       <div className="main-image ">
         <img
           src={logo3}
-          alt="alt"
+          alt="Not found"
           // style={
           //   ({ height: "100%" }, { maxWidth: "100%" }, { objectFit: "cover" })
           // }

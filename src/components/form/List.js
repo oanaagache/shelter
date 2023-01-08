@@ -82,7 +82,11 @@ export default function List() {
     <>
       <div className="list-cont">
         <div className="list-inner">
-          <img style={({ height: "10px" }, { width: "10px" })} src={logo} />
+          <img
+            style={({ height: "10px" }, { width: "10px" })}
+            src={logo}
+            alt="Not found"
+          />
           <h2>
             <Link
               className="arrow"

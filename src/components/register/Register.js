@@ -33,7 +33,7 @@ const Register = () => {
             src={logo}
             alt="Not found"
           />
-          <Link className="arrow" to="/adopt">
+          <Link className="register-arrow" to="/adopt">
             Back{" "}
           </Link>
         </div>

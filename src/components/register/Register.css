@@ -8,7 +8,7 @@
   margin: 10px;
 }
 
-.arrow {
+.register-arrow {
   display: flex;
   text-decoration: none;
   font-size: 18px;
@@ -54,7 +54,7 @@
     align-items: center;
     margin: 10px;
   }
-  .arrow {
+  .register-arrow {
     display: flex;
     text-decoration: none;
     font-size: 18px;
@@ -97,7 +97,7 @@
     align-items: center;
     margin: 10px 20px 10px 20px;
   }
-  .arrow {
+  .register-arrow {
     display: flex;
     text-decoration: none;
     font-size: 18px;
@@ -139,7 +139,7 @@
     align-items: center;
     margin: 10px 40px 10px 40px;
   }
-  .arrow {
+  .register-arrow {
     display: flex;
     text-decoration: none;
     font-size: 18px;
@@ -181,7 +181,7 @@
     align-items: center;
     margin: 10px 80px 10px 80px;
   }
-  .arrow {
+  .register-arrow {
     display: flex;
     text-decoration: none;
     font-size: 18px;
@@ -223,7 +223,7 @@
     align-items: center;
     margin: 10px 80px 10px 80px;
   }
-  .arrow {
+  .register-arrow {
     display: flex;
     text-decoration: none;
     font-size: 18px;

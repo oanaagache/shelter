@@ -74,16 +74,19 @@ const AdoptionForm = (props) => {
     <>
       <div className="adoption-cont">
         <div className="adoption-inner">
-          <img style={({ height: "10px" }, { width: "10px" })} src={logo} />
-          <h2>
-            <Link
-              className="arrow"
-              to="/adopt"
-              style={{ textDecoration: "none" }}
-            >
-              Back
-            </Link>
-          </h2>
+          <img
+            style={({ height: "10px" }, { width: "10px" })}
+            src={logo}
+            alt="Not found"
+          />
+
+          <Link
+            className="adoption-arrow"
+            to="/adopt"
+            style={{ textDecoration: "none" }}
+          >
+            Back
+          </Link>
         </div>
 
         <div className="adoption-title">Adoption Form</div>
@@ -92,7 +95,7 @@ const AdoptionForm = (props) => {
           <div className="adoption-form">
             <div className="form-row">
               {isLoggedIn ? (
-                <div className="form-group col-md-2">
+                <div className="form-group col-md-3">
                   <label htmlFor="inputFirstName">First Name:</label>
                   <input
                     type="text"
@@ -103,7 +106,7 @@ const AdoptionForm = (props) => {
                   />
                 </div>
               ) : (
-                <div className="form-group col-md-2">
+                <div className="form-group col-md-3">
                   <label htmlFor="inputFirstName">First Name:</label>
                   <input
                     type="text"
@@ -117,7 +120,7 @@ const AdoptionForm = (props) => {
               )}
 
               {isLoggedIn ? (
-                <div className="form-group col-md-2">
+                <div className="form-group col-md-3">
                   <label htmlFor="inputSurname">Surname:</label>
                   <input
                     type="text"
@@ -128,7 +131,7 @@ const AdoptionForm = (props) => {
                   />
                 </div>
               ) : (
-                <div className="form-group col-md-2">
+                <div className="form-group col-md-3">
                   <label htmlFor="inputSurname">Surname:</label>
                   <input
                     type="text"
@@ -167,7 +170,7 @@ const AdoptionForm = (props) => {
               )}
             </div>
             <div className="form-row">
-              <div className="form-group col-md-2">
+              <div className="form-group col-md-3">
                 <label htmlFor="inputAddress">Address Line:</label>
                 <input
                   type="text"
@@ -178,7 +181,7 @@ const AdoptionForm = (props) => {
                   onChange={(e) => setAddress(e.target.value)}
                 />
               </div>
-              <div className="form-group col-md-2">
+              <div className="form-group col-md-3">
                 <label htmlFor="inputCity">City</label>
                 <input
                   type="text"
@@ -239,7 +242,7 @@ const AdoptionForm = (props) => {
                 ></textarea>
               </div>{" "}
             </div>{" "}
-            <div className="button">
+            <div className="adoption-button">
               <button
                 className="back"
                 onClick={() => {

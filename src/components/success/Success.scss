@@ -1,5 +1,5 @@
 $color: aliceblue;
-$black: #000;
+$background-color: rgb(126, 63, 102);
 
 .response {
   display: flex;
@@ -8,22 +8,23 @@ $black: #000;
   align-items: center;
 }
 
-.title {
+.response-title {
   margin: 20px 0 20px 0;
 }
 
-.button {
+.success-button {
   display: flex;
 }
 
 .backHome {
-  color: $black;
-  width: 300px;
+  color: $color;
+  width: 250px;
   height: 50px;
-  background-color: $color;
+  background-color: $background-color;
   margin: 20px 20px 80px 20px;
   font-size: 24px;
 }
+
 //sm: { min: "640px", max: "767px" },
 @media screen and (min-width: 640px) {
 }

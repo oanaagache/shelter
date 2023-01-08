@@ -35,6 +35,7 @@ function DogCard1() {
                 height: 350,
               }}
               src={item.img1}
+              alt="Not found"
             />
             <br />
             <p>{item.subtitle2}</p>

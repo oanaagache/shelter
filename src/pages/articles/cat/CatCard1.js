@@ -15,6 +15,7 @@ function CatCard1({ item }) {
               height: 350,
             }}
             src={item.img1}
+            alt="Not found"
           />
 
           <div className="card-inner">

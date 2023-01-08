@@ -9,14 +9,12 @@ import Footer from "./components/footer/Footer";
 import Main from "./components/main/Main";
 import Card from "./components/card/Card";
 import Success from "./components/success/Success";
-import Details from "./components/details/Details";
 import CountrySelector from "./components/countryselector/CountrySelector";
 import ArticlesDog from "./pages/articles/dog/ArticlesDog";
 import ArticlesCat from "./pages/articles/cat/ArticlesCat";
 import AdoptionForm from "./components/form/AdoptionForm";
 import Register from "./components/register/Register";
 import Login from "./components/login/Login";
-import Users from "./users/Users";
 import Edit from "./components/form/Edit";
 import List from "./components/form/List";
 
@@ -45,7 +43,6 @@ const App = () => {
         <Route path="/card/:id" element={<Card isLoggedIn={isLoggedIn} />} />
         <Route path="/card/:name" element={<Card />} />
         <Route path="/countryselector" element={<CountrySelector />} />
-        <Route path="/details" element={<Details />} />
         <Route path="/donate" element={<Donate />} />
         <Route path="/foster" element={<Foster />} />
         <Route
@@ -57,7 +54,6 @@ const App = () => {
         <Route path="/Navbar:isLoggedIn" element={<Navbar />} />
         <Route path="/register" element={<Register />} />
         <Route path="/success/:name" element={<Success />} />
-        <Route path="/users" element={<Users isLoggedIn={isLoggedIn} />} />
         <Route path="/edit/:id" element={<Edit />} />
         <Route path="/list" element={<List />} />
       </Routes>

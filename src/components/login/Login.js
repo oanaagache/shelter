@@ -30,10 +30,7 @@ const Login = (props) => {
       alert("Please register");
     }
 
-    if (
-      loginUser.email === "oana.luciana.agache@gmail.com" &&
-      loginUser.password === "123456"
-    ) {
+    if (loginUser.email === "oana.luciana.agache@gmail.com") {
       localStorage.setItem("loggedIn", true);
       setIsLoggedIn(true);
       navigate("/list");
@@ -55,7 +52,7 @@ const Login = (props) => {
             src={logo}
             alt="Not found"
           />
-          <Link className="arrow" to="/adopt">
+          <Link className="login-arrow" to="/adopt">
             Back{" "}
           </Link>
         </div>

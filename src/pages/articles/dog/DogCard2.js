@@ -16,6 +16,7 @@ function DogCard2() {
               height: 350,
             }}
             src={item.img2}
+            alt="Not found"
           />
 
           <div className="card-inner">

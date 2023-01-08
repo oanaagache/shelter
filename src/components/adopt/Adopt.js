@@ -221,7 +221,7 @@ const Adopt = () => {
         setName(animalsArray);
       });
     } else {
-      //reset filtres
+      //reset filters
       setType("");
       setType("");
       setBreed("");
@@ -244,7 +244,7 @@ const Adopt = () => {
           src={logo}
           alt="Not found"
         />
-        <Link className="arrow" to="/">
+        <Link className="adopt-arrow" to="/">
           Back{" "}
         </Link>
       </div>
@@ -299,7 +299,7 @@ const Adopt = () => {
         </div>
       </div>
 
-      <div className="button">
+      <div className="adopt-button">
         <button className="filter-btn" onClick={() => handleClick()}>
           {click === true ? "Reset Filters" : "Apply filters"}
         </button>

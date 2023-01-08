@@ -84,7 +84,11 @@ const Edit = () => {
     <>
       <div className="adoption-cont">
         <div className="adoption-inner">
-          <img style={({ height: "10px" }, { width: "10px" })} src={logo} />
+          <img
+            style={({ height: "10px" }, { width: "10px" })}
+            src={logo}
+            alt="Not found"
+          />
           <h2>
             <Link
               className="arrow"

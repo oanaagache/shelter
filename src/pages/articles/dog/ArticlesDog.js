@@ -13,7 +13,11 @@ const ArticlesDog = () => {
       <div className="adopt-header">
         <div className="adopt-content">
           <div className="adopt-inner">
-            <img style={({ height: 1 }, { padding: 10 })} src={logo} />
+            <img
+              style={({ height: 1 }, { padding: 10 })}
+              src={logo}
+              alt="Not found"
+            />
             <h2>
               <Link to="/other" style={{ textDecoration: "none" }}>
                 Back

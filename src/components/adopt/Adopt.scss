@@ -9,11 +9,10 @@ $black: #000;
 .adopt-inner {
   display: flex;
   align-items: center;
-
   margin: 10px;
 }
 
-.arrow {
+.adopt-arrow {
   display: flex;
   text-decoration: none;
   font-size: 18px;
@@ -74,8 +73,9 @@ $black: #000;
   font-size: 13px;
 }
 
-.button {
+.adopt-button {
   justify-content: left;
+  margin: 10px;
 }
 
 .filter-btn {
@@ -105,7 +105,7 @@ $black: #000;
     margin: 10px;
   }
 
-  .arrow {
+  .adopt-arrow {
     display: flex;
     text-decoration: none;
     font-size: 18px;
@@ -170,8 +170,9 @@ $black: #000;
     font-size: 13px;
   }
 
-  .button {
+  .adopt-button {
     justify-content: left;
+    margin: 10px;
   }
 
   .filter-btn {
@@ -195,7 +196,7 @@ $black: #000;
     margin: 10px 20px 10px 20px;
   }
 
-  .arrow {
+  .adopt-arrow {
     display: flex;
     text-decoration: none;
     font-size: 18px;
@@ -258,8 +259,9 @@ $black: #000;
     font-size: 13px;
   }
 
-  .button {
+  .adopt-button {
     justify-content: left;
+    margin: 20px;
   }
 
   .filter-btn {
@@ -283,7 +285,7 @@ $black: #000;
     margin: 10px 40px 10px 40px;
   }
 
-  .arrow {
+  .adopt-arrow {
     display: flex;
     text-decoration: none;
     font-size: 18px;
@@ -346,8 +348,9 @@ $black: #000;
     font-size: 18px;
   }
 
-  .button {
+  .adopt-button {
     justify-content: left;
+    margin: 40px;
   }
 
   .filter-btn {
@@ -371,7 +374,7 @@ $black: #000;
     margin: 10px 80px 10px 80px;
   }
 
-  .arrow {
+  .adopt-arrow {
     display: flex;
     text-decoration: none;
     font-size: 18px;
@@ -434,9 +437,9 @@ $black: #000;
     font-size: 18px;
   }
 
-  .button {
+  .adopt-button {
     justify-content: left;
-    margin: 40px;
+    margin: 80px;
   }
 
   .filter-btn {
@@ -460,7 +463,7 @@ $black: #000;
     margin: 10px 80px 10px 80px;
   }
 
-  .arrow {
+  .adopt-arrow {
     display: flex;
     text-decoration: none;
     font-size: 18px;
@@ -523,9 +526,9 @@ $black: #000;
     font-size: 18px;
   }
 
-  .button {
+  .adopt-button {
     justify-content: left;
-    margin: 60px;
+    margin: 80px;
   }
 
   .filter-btn {

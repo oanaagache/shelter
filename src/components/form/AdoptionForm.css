@@ -8,7 +8,7 @@
   margin: 10px;
 }
 
-.arrow {
+.adoption-arrow {
   display: flex;
   text-decoration: none;
   font-size: 18px;
@@ -24,13 +24,13 @@
 }
 
 .adoption-form {
-  margin: 80px 10px 80px 10px;
+  margin: 80px 20px 80px 20px;
 }
 
 .form-row {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 20px;
 }
 
 .form-group {
@@ -45,8 +45,8 @@
   padding: 10px;
 }
 
-.button {
-  margin: 10px;
+.adoption-button {
+  margin: 20px;
 }
 
 .back {
@@ -80,7 +80,7 @@
     align-items: center;
     margin: 10px;
   }
-  .arrow {
+  .adoption-arrow {
     display: flex;
     text-decoration: none;
     font-size: 18px;
@@ -95,12 +95,12 @@
     color: red;
   }
   .adoption-form {
-    margin: 80px;
+    margin: 80px 20px 80px 20px;
   }
   .form-row {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 20px;
   }
   .form-group {
     padding: 10px 0 10px 0;
@@ -111,8 +111,8 @@
   .title {
     padding: 10px;
   }
-  .button {
-    margin: 10px;
+  .adoption-button {
+    margin: 20px;
   }
   .back {
     color: #000;
@@ -144,7 +144,7 @@
     align-items: center;
     margin: 10px 20px 10px 20px;
   }
-  .arrow {
+  .adoption-arrow {
     display: flex;
     text-decoration: none;
     font-size: 18px;
@@ -164,7 +164,7 @@
   .form-row {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 30px;
   }
   .form-group {
     padding: 10px 0 10px 0;
@@ -174,6 +174,9 @@
   }
   .title {
     padding: 15px 0 0 0;
+  }
+  .adoption-button {
+    margin: 10px;
   }
   .back {
     color: #000;
@@ -205,7 +208,7 @@
     align-items: center;
     margin: 10px 40px 10px 40px;
   }
-  .arrow {
+  .adoption-arrow {
     display: flex;
     text-decoration: none;
     font-size: 18px;
@@ -225,7 +228,7 @@
   .form-row {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 40px;
   }
   .form-group {
     padding: 10px 0 10px 0;
@@ -235,6 +238,9 @@
   }
   .title {
     padding: 15px 0 0 0;
+  }
+  .adoption-button {
+    margin: 10px;
   }
   .back {
     color: #000;
@@ -266,7 +272,7 @@
     align-items: center;
     margin: 10px 80px 10px 80px;
   }
-  .arrow {
+  .adoption-arrow {
     display: flex;
     text-decoration: none;
     font-size: 18px;
@@ -286,7 +292,7 @@
   .form-row {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 50px;
   }
   .form-group {
     padding: 10px 0 10px 0;
@@ -296,6 +302,9 @@
   }
   .title {
     padding: 15px 0 0 0;
+  }
+  .adoption-button {
+    margin: 10px;
   }
   .back {
     color: #000;
@@ -327,7 +336,7 @@
     align-items: center;
     margin: 10px 80px 10px 80px;
   }
-  .arrow {
+  .adoption-arrow {
     display: flex;
     text-decoration: none;
     font-size: 18px;
@@ -347,7 +356,7 @@
   .form-row {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 60px;
   }
   .form-group {
     padding: 10px 0 10px 0;
@@ -357,6 +366,9 @@
   }
   .title {
     padding: 15px 0 0 0;
+  }
+  .adoption-button {
+    margin: 10px;
   }
   .back {
     color: #000;

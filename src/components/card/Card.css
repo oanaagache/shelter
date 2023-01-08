@@ -39,12 +39,12 @@
   padding-left: 4px;
 }
 
-.button-adopt {
+.card-button-adopt {
   align-items: flex-end;
   padding-bottom: 40px;
 }
 
-.adopt {
+.card-adopt {
   color: aliceblue;
   background-color: rgb(126, 63, 102);
   width: 80px;

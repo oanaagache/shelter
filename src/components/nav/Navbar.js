@@ -21,6 +21,7 @@ const Navbar = (props) => {
           <img
             style={({ padding: 5 }, { height: "20px" })}
             src={logo}
+            alt="Not found"
             onClick={() => navigate("/")}
           />
           <h1 className="header-title" onClick={() => navigate("/")}>

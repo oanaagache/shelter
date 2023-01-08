@@ -18,7 +18,7 @@ $black: #000;
   margin: 10px;
 }
 
-.arrow {
+.adoption-arrow {
   display: flex;
   text-decoration: none;
   font-size: 18px;
@@ -34,13 +34,13 @@ $black: #000;
 }
 
 .adoption-form {
-  margin: 80px 10px 80px 10px;
+  margin: 80px 20px 80px 20px;
 }
 
 .form-row {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 20px;
 }
 
 .form-group {
@@ -55,8 +55,8 @@ $black: #000;
   padding: 10px;
 }
 
-.button {
-  margin: 10px;
+.adoption-button {
+  margin: 20px;
 }
 
 .back {
@@ -93,7 +93,7 @@ $black: #000;
     margin: 10px;
   }
 
-  .arrow {
+  .adoption-arrow {
     display: flex;
     text-decoration: none;
     font-size: 18px;
@@ -110,13 +110,13 @@ $black: #000;
   }
 
   .adoption-form {
-    margin: 80px;
+    margin: 80px 20px 80px 20px;
   }
 
   .form-row {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 20px;
   }
 
   .form-group {
@@ -131,8 +131,8 @@ $black: #000;
     padding: 10px;
   }
 
-  .button {
-    margin: 10px;
+  .adoption-button {
+    margin: 20px;
   }
 
   .back {
@@ -170,7 +170,7 @@ $black: #000;
     margin: 10px 20px 10px 20px;
   }
 
-  .arrow {
+  .adoption-arrow {
     display: flex;
     text-decoration: none;
     font-size: 18px;
@@ -193,7 +193,7 @@ $black: #000;
   .form-row {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 30px;
   }
 
   .form-group {
@@ -206,6 +206,10 @@ $black: #000;
 
   .title {
     padding: 15px 0 0 0;
+  }
+
+  .adoption-button {
+    margin: 10px;
   }
 
   .back {
@@ -243,7 +247,7 @@ $black: #000;
     margin: 10px 40px 10px 40px;
   }
 
-  .arrow {
+  .adoption-arrow {
     display: flex;
     text-decoration: none;
     font-size: 18px;
@@ -266,7 +270,7 @@ $black: #000;
   .form-row {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 40px;
   }
 
   .form-group {
@@ -279,6 +283,10 @@ $black: #000;
 
   .title {
     padding: 15px 0 0 0;
+  }
+
+  .adoption-button {
+    margin: 10px;
   }
 
   .back {
@@ -316,7 +324,7 @@ $black: #000;
     margin: 10px 80px 10px 80px;
   }
 
-  .arrow {
+  .adoption-arrow {
     display: flex;
     text-decoration: none;
     font-size: 18px;
@@ -339,7 +347,7 @@ $black: #000;
   .form-row {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 50px;
   }
 
   .form-group {
@@ -352,6 +360,10 @@ $black: #000;
 
   .title {
     padding: 15px 0 0 0;
+  }
+
+  .adoption-button {
+    margin: 10px;
   }
 
   .back {
@@ -389,7 +401,7 @@ $black: #000;
     margin: 10px 80px 10px 80px;
   }
 
-  .arrow {
+  .adoption-arrow {
     display: flex;
     text-decoration: none;
     font-size: 18px;
@@ -412,7 +424,7 @@ $black: #000;
   .form-row {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 60px;
   }
 
   .form-group {
@@ -425,6 +437,10 @@ $black: #000;
 
   .title {
     padding: 15px 0 0 0;
+  }
+
+  .adoption-button {
+    margin: 10px;
   }
 
   .back {

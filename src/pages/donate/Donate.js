@@ -13,7 +13,7 @@ const Donate = () => {
             src={logo}
             alt="Not found"
           />
-          <Link className="arrow" to="/">
+          <Link className="donate-arrow" to="/">
             Back{" "}
           </Link>
         </div>

@@ -59,6 +59,7 @@ const Card = (props) => {
               }}
               onClick={() => navigate(`/card/${item.id}`)}
               src={item.img ? item.img["full"] : [logo2]}
+              alt="Not found"
             />
 
             <div className="card-inner">
@@ -199,9 +200,9 @@ const Card = (props) => {
             </div>
           </div>
           {id && (
-            <div className="button-adopt">
+            <div className="card-button-adopt">
               <button
-                className="adopt"
+                className="card-adopt"
                 onClick={() => {
                   isLoggedIn
                     ? navigate(`/adoptionform/${item.name}`)
