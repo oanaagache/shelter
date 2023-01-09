@@ -4,32 +4,28 @@ import { Link } from "react-router-dom";
 import "../../../../src/index.scss";
 import CatCard1 from "./CatCard1";
 import { CatData as data } from "./CatData";
+import "./ArticlesCat.css";
 
 const ArticlesCat = () => {
   return (
-    <div className="adopt-container">
-      <div className="adopt-header">
-        <div className="adopt-content">
-          <div className="adopt-inner">
-            <img
-              style={({ height: 1 }, { padding: 10 })}
-              src={logo}
-              alt="Not found"
-            />
-            <h2>
-              <Link to="/other" style={{ textDecoration: "none" }}>
-                Back
-              </Link>
-            </h2>
-          </div>
+    <div className="articlesCat-cont">
+      <div className="articlesCat-inner">
+        <img
+          style={({ height: "10px" }, { width: "10px" })}
+          src={logo}
+          alt="Not found"
+        />
+        <Link className="articlesCat-arrow" to="/">
+          Back{" "}
+        </Link>
+      </div>
 
-          <h4 className="adopt-title">Cat Adoption</h4>
-        </div>
-        <div className="flex flex-row flex-wrap">
-          {data.map((item) => {
-            return <CatCard1 key={item.id} item={item} />;
-          })}
-        </div>
+      <div className="articlesCat-title">Cat Adoption</div>
+
+      <div className="flex flex-row flex-wrap">
+        {data.map((item) => {
+          return <CatCard1 key={item.id} item={item} />;
+        })}
       </div>
     </div>
   );

@@ -5,7 +5,7 @@
 .donate-inner {
   display: flex;
   align-items: center;
-  margin: 10px;
+  margin: 20px;
 }
 
 .donate-arrow {
@@ -24,14 +24,14 @@
 }
 
 .donate {
-  margin: 80px 10px 80px 10px;
+  margin: 80px 20px 80px 20px;
 }
 
 .donate-subtitle {
   margin: auto;
   justify-content: left;
   display: flex;
-  font-size: 26px;
+  font-size: 20px;
   margin: 40px 0 30px 0;
 }
 
@@ -39,12 +39,12 @@
   margin: auto;
   justify-content: left;
   display: flex;
-  font-size: 22px;
+  font-size: 18px;
   margin: 40px 0 30px 0;
 }
 
 .donate-li {
-  font-size: 22px;
+  font-size: 18px;
 }
 
 @media screen and (min-width: 640px) {
@@ -54,7 +54,7 @@
   .donate-inner {
     display: flex;
     align-items: center;
-    margin: 10px;
+    margin: 20px;
   }
   .donate-arrow {
     display: flex;
@@ -71,24 +71,24 @@
     color: red;
   }
   .donate {
-    margin: 80px 10px 80px 10px;
+    margin: 80px 20px 80px 20px;
   }
   .donate-subtitle {
     margin: auto;
     justify-content: left;
     display: flex;
-    font-size: 26x;
+    font-size: 20x;
     margin: 40px 0 30px 0;
   }
   .donate-subtitle1 {
     margin: auto;
     justify-content: left;
     display: flex;
-    font-size: 22px;
+    font-size: 18px;
     margin: 40px 0 30px 0;
   }
   .donate-li {
-    font-size: 22px;
+    font-size: 18px;
   }
 }
 @media screen and (min-width: 768px) {
@@ -118,21 +118,21 @@
     margin: auto;
     justify-content: left;
     display: flex;
-    font-size: 26px;
+    font-size: 22px;
     margin: 40px 0 30px 0;
   }
   .donate-subtitle1 {
     margin: auto;
     justify-content: left;
     display: flex;
-    font-size: 22px;
+    font-size: 20px;
     margin: 40px 0 30px 0;
   }
   .donate {
     margin: 80px 20px 80px 20px;
   }
   .donate-li {
-    font-size: 22px;
+    font-size: 20px;
   }
 }
 @media screen and (min-width: 1024px) {
@@ -162,21 +162,21 @@
     margin: auto;
     justify-content: left;
     display: flex;
-    font-size: 26px;
+    font-size: 22px;
     margin: 40px 0 30px 0;
   }
   .donate-subtitle1 {
     margin: auto;
     justify-content: left;
     display: flex;
-    font-size: 22px;
+    font-size: 20px;
     margin: 40px 0 30px 0;
   }
   .donate {
     margin: 80px 40px 80px 40px;
   }
   .donate-li {
-    font-size: 22px;
+    font-size: 20px;
   }
 }
 @media screen and (min-width: 1280px) {
@@ -206,21 +206,21 @@
     margin: auto;
     justify-content: left;
     display: flex;
-    font-size: 26px;
+    font-size: 22px;
     margin: 40px 0 30px 0;
   }
   .donate-subtitle1 {
     margin: auto;
     justify-content: left;
     display: flex;
-    font-size: 22px;
+    font-size: 20px;
     margin: 40px 0 30px 0;
   }
   .donate {
     margin: 80px;
   }
   .donate-li {
-    font-size: 22px;
+    font-size: 20px;
   }
 }
 @media screen and (min-width: 1536px) {
@@ -250,20 +250,20 @@
     margin: auto;
     justify-content: left;
     display: flex;
-    font-size: 26px;
+    font-size: 22px;
     margin: 40px 0 30px 0;
   }
   .donate-subtitle1 {
     margin: auto;
     justify-content: left;
     display: flex;
-    font-size: 22px;
+    font-size: 20px;
     margin: 40px 0 30px 0;
   }
   .donate {
     margin: 80px;
   }
   .donate-li {
-    font-size: 22px;
+    font-size: 20px;
   }
 }/*# sourceMappingURL=Donate.css.map */

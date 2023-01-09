@@ -1,0 +1,232 @@
+.articlesCat-cont {
+  max-width: 100%;
+}
+
+.articlesCat-inner {
+  display: flex;
+  align-items: center;
+  margin: 10px;
+}
+
+.articlesCat-arrow {
+  display: flex;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 5px;
+}
+
+.articlesCat-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  font-size: 30px;
+}
+
+.articlesCat {
+  margin: 80px 10px 80px 10px;
+}
+
+.articlesCat-button-adopt {
+  justify-content: left;
+  margin: 10px;
+}
+
+.articlesCat-button {
+  color: aliceblue;
+  background-color: rgb(126, 63, 102);
+  width: 80px;
+  height: 40px;
+  font-size: 12px;
+}
+
+@media screen and (min-width: 640px) {
+  .articlesCat-cont {
+    max-width: 100%;
+  }
+  .articlesCat-inner {
+    display: flex;
+    align-items: center;
+    margin: 10px;
+  }
+  .articlesCat-arrow {
+    display: flex;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 5px;
+  }
+  .articlesCat-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    font-size: 30px;
+    color: red;
+  }
+  .articlesCat {
+    margin: 80px 10px 80px 10px;
+  }
+  .articlesCat-button-adopt {
+    justify-content: left;
+    margin: 10px;
+  }
+  .articlesCat-button {
+    color: aliceblue;
+    background-color: rgb(126, 63, 102);
+    width: 80px;
+    height: 40px;
+    font-size: 12px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .articlesCat-cont {
+    max-width: 100%;
+  }
+  .articlesCat-inner {
+    display: flex;
+    align-items: center;
+    margin: 10px 20px 10px 20px;
+  }
+  .articlesCat-arrow {
+    display: flex;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 5px;
+  }
+  .articlesCat-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    font-size: 32px;
+    color: blue;
+  }
+  .articlesCat {
+    margin: 80px 20px 80px 20px;
+  }
+  .articlesCat-button-adopt {
+    justify-content: left;
+    margin: 20px;
+  }
+  .articlesCat-button {
+    color: aliceblue;
+    background-color: rgb(126, 63, 102);
+    width: 80px;
+    height: 40px;
+    font-size: 12px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .articlesCat-cont {
+    max-width: 100%;
+  }
+  .articlesCat-inner {
+    display: flex;
+    align-items: center;
+    margin: 10px 40px 10px 40px;
+  }
+  .articlesCat-arrow {
+    display: flex;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 5px;
+  }
+  .articlesCat-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    font-size: 36px;
+    color: green;
+  }
+  .articlesCat {
+    margin: 80px 40px 80px 40px;
+  }
+  .articlesCat-button-adopt {
+    justify-content: left;
+    margin: 40px;
+  }
+  .articlesCat-button {
+    color: aliceblue;
+    background-color: rgb(126, 63, 102);
+    width: 80px;
+    height: 40px;
+    font-size: 12px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .articlesCat-cont {
+    max-width: 100%;
+  }
+  .articlesCat-inner {
+    display: flex;
+    align-items: center;
+    margin: 10px 80px 10px 80px;
+  }
+  .articlesCat-arrow {
+    display: flex;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 5px;
+  }
+  .articlesCat-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    font-size: 36px;
+    color: rosybrown;
+  }
+  .articlesCat {
+    margin: 80px;
+  }
+  .articlesCat-button-adopt {
+    justify-content: left;
+    margin: 80px;
+  }
+  .articlesCat-button {
+    color: aliceblue;
+    background-color: rgb(126, 63, 102);
+    width: 80px;
+    height: 40px;
+    font-size: 12px;
+  }
+}
+@media screen and (min-width: 1536px) {
+  .articlesCat-cont {
+    max-width: 100%;
+  }
+  .articlesCat-inner {
+    display: flex;
+    align-items: center;
+    margin: 10px 80px 10px 80px;
+  }
+  .articlesCat-arrow {
+    display: flex;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 5px;
+  }
+  .articlesCatCat-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    font-size: 40px;
+    color: purple;
+  }
+  .articlesCat {
+    margin: 80px;
+  }
+  .articlesCat-button-adopt {
+    justify-content: left;
+    margin: 80px;
+  }
+  .articlesCat-button {
+    color: aliceblue;
+    background-color: rgb(126, 63, 102);
+    width: 80px;
+    height: 40px;
+    font-size: 12px;
+  }
+}/*# sourceMappingURL=ArticlesCat.css.map */

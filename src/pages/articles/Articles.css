@@ -1,0 +1,226 @@
+.articles-cont {
+  max-width: 100%;
+}
+
+.articles-inner {
+  display: flex;
+  align-items: center;
+  margin: 10px;
+}
+
+.articles-arrow {
+  display: flex;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 5px;
+}
+
+.articles-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  font-size: 30px;
+}
+
+.articles {
+  margin: 80px 10px 80px 10px;
+}
+
+.button-articles {
+  justify-content: left;
+}
+
+.button-articles-read {
+  color: aliceblue;
+  background-color: rgb(126, 63, 102);
+  width: 80px;
+  height: 40px;
+  font-size: 12px;
+}
+
+@media screen and (min-width: 640px) {
+  .articles-cont {
+    max-width: 100%;
+  }
+  .articles-inner {
+    display: flex;
+    align-items: center;
+    margin: 10px;
+  }
+  .articles-arrow {
+    display: flex;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 5px;
+  }
+  .articles-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    font-size: 30px;
+    color: red;
+  }
+  .articles {
+    margin: 80px 10px 80px 10px;
+  }
+  .button-articles {
+    justify-content: left;
+  }
+  .button-articles-read {
+    color: aliceblue;
+    background-color: rgb(126, 63, 102);
+    width: 80px;
+    height: 40px;
+    font-size: 12px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .articles-cont {
+    max-width: 100%;
+  }
+  .articles-inner {
+    display: flex;
+    align-items: center;
+    margin: 10px 20px 10px 20px;
+  }
+  .articles-arrow {
+    display: flex;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 5px;
+  }
+  .articles-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    font-size: 32px;
+    color: blue;
+  }
+  .articles {
+    margin: 80px 20px 80px 20px;
+  }
+  .button-articles {
+    justify-content: left;
+  }
+  .button-articles-read {
+    color: aliceblue;
+    background-color: rgb(126, 63, 102);
+    width: 80px;
+    height: 40px;
+    font-size: 12px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .articles-cont {
+    max-width: 100%;
+  }
+  .articles-inner {
+    display: flex;
+    align-items: center;
+    margin: 10px 40px 10px 40px;
+  }
+  .articles-arrow {
+    display: flex;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 5px;
+  }
+  .articles-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    font-size: 36px;
+    color: green;
+  }
+  .articles {
+    margin: 80px 40px 80px 40px;
+  }
+  .button-articles {
+    justify-content: left;
+  }
+  .button-articles-read {
+    color: aliceblue;
+    background-color: rgb(126, 63, 102);
+    width: 80px;
+    height: 40px;
+    font-size: 12px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .articles-cont {
+    max-width: 100%;
+  }
+  .articles-inner {
+    display: flex;
+    align-items: center;
+    margin: 10px 80px 10px 80px;
+  }
+  .articles-arrow {
+    display: flex;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 5px;
+  }
+  .articles-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    font-size: 36px;
+    color: rosybrown;
+  }
+  .articles {
+    margin: 80px;
+  }
+  .button-articles {
+    justify-content: left;
+  }
+  .button-articles-read {
+    color: aliceblue;
+    background-color: rgb(126, 63, 102);
+    width: 80px;
+    height: 40px;
+    font-size: 12px;
+  }
+}
+@media screen and (min-width: 1536px) {
+  .articles-cont {
+    max-width: 100%;
+  }
+  .articles-inner {
+    display: flex;
+    align-items: center;
+    margin: 10px 80px 10px 80px;
+  }
+  .articles-arrow {
+    display: flex;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 5px;
+  }
+  .articles-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    font-size: 40px;
+    color: purple;
+  }
+  .articles {
+    margin: 80px;
+  }
+  .button-articles {
+    justify-content: left;
+  }
+  .button-articles-read {
+    color: aliceblue;
+    background-color: rgb(126, 63, 102);
+    width: 80px;
+    height: 40px;
+    font-size: 12px;
+  }
+}/*# sourceMappingURL=Articles.css.map */

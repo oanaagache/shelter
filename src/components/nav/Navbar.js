@@ -80,7 +80,7 @@ const Navbar = (props) => {
           </li>
           <li>
             <NavLink
-              to="/other"
+              to="/articles"
               style={({ isActive }) => ({
                 color: isActive ? " purple" : "black",
               })}

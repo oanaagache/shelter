@@ -10,6 +10,7 @@ import Main from "./components/main/Main";
 import Card from "./components/card/Card";
 import Success from "./components/success/Success";
 import CountrySelector from "./components/countryselector/CountrySelector";
+import Articles from "./pages/articles/Articles";
 import ArticlesDog from "./pages/articles/dog/ArticlesDog";
 import ArticlesCat from "./pages/articles/cat/ArticlesCat";
 import AdoptionForm from "./components/form/AdoptionForm";
@@ -37,6 +38,7 @@ const App = () => {
           path="/adoptionform/:name"
           element={<AdoptionForm isLoggedIn={isLoggedIn} />}
         />
+         <Route path="/articles" element={<Articles />} />
         <Route path="/articlesdog" element={<ArticlesDog />} />
         <Route path="/articlescat" element={<ArticlesCat />} />
         <Route path="/card/" element={<Card />} />

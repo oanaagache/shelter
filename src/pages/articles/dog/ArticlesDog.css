@@ -1,0 +1,232 @@
+.articlesDog-cont {
+  max-width: 100%;
+}
+
+.articlesDog-inner {
+  display: flex;
+  align-items: center;
+  margin: 10px;
+}
+
+.articlesDog-arrow {
+  display: flex;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 5px;
+}
+
+.articlesDog-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  font-size: 30px;
+}
+
+.articlesDog {
+  margin: 80px 10px 80px 10px;
+}
+
+.articlesDog-button-adopt {
+  justify-content: left;
+  margin: 10px;
+}
+
+.articlesDog-button {
+  color: aliceblue;
+  background-color: rgb(126, 63, 102);
+  width: 80px;
+  height: 40px;
+  font-size: 12px;
+}
+
+@media screen and (min-width: 640px) {
+  .articlesDog-cont {
+    max-width: 100%;
+  }
+  .articlesDog-inner {
+    display: flex;
+    align-items: center;
+    margin: 10px;
+  }
+  .articlesDog-arrow {
+    display: flex;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 5px;
+  }
+  .articlesDog-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    font-size: 30px;
+    color: red;
+  }
+  .articlesDog {
+    margin: 80px 10px 80px 10px;
+  }
+  .articlesDog-button-adopt {
+    justify-content: left;
+    margin: 10px;
+  }
+  .articlesDog-button {
+    color: aliceblue;
+    background-color: rgb(126, 63, 102);
+    width: 80px;
+    height: 40px;
+    font-size: 12px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .articlesDog-cont {
+    max-width: 100%;
+  }
+  .articlesDog-inner {
+    display: flex;
+    align-items: center;
+    margin: 10px 20px 10px 20px;
+  }
+  .articlesDog-arrow {
+    display: flex;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 5px;
+  }
+  .articlesDog-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    font-size: 32px;
+    color: blue;
+  }
+  .articlesDog {
+    margin: 80px 20px 80px 20px;
+  }
+  .articlesDog-button-adopt {
+    justify-content: left;
+    margin: 20px;
+  }
+  .articlesDog-button {
+    color: aliceblue;
+    background-color: rgb(126, 63, 102);
+    width: 80px;
+    height: 40px;
+    font-size: 12px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .articlesDog-cont {
+    max-width: 100%;
+  }
+  .articlesDog-inner {
+    display: flex;
+    align-items: center;
+    margin: 10px 40px 10px 40px;
+  }
+  .articlesDog-arrow {
+    display: flex;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 5px;
+  }
+  .articlesDog-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    font-size: 36px;
+    color: green;
+  }
+  .articlesDog {
+    margin: 80px 40px 80px 40px;
+  }
+  .articlesDog-button-adopt {
+    justify-content: left;
+    margin: 40px;
+  }
+  .articlesDog-button {
+    color: aliceblue;
+    background-color: rgb(126, 63, 102);
+    width: 80px;
+    height: 40px;
+    font-size: 12px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .articlesDog-cont {
+    max-width: 100%;
+  }
+  .articlesDog-inner {
+    display: flex;
+    align-items: center;
+    margin: 10px 80px 10px 80px;
+  }
+  .articlesDog-arrow {
+    display: flex;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 5px;
+  }
+  .articlesDog-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    font-size: 36px;
+    color: rosybrown;
+  }
+  .articlesDog {
+    margin: 80px;
+  }
+  .articlesDog-button-adopt {
+    justify-content: left;
+    margin: 80px;
+  }
+  .articlesDog-button {
+    color: aliceblue;
+    background-color: rgb(126, 63, 102);
+    width: 80px;
+    height: 40px;
+    font-size: 12px;
+  }
+}
+@media screen and (min-width: 1536px) {
+  .articlesDog-cont {
+    max-width: 100%;
+  }
+  .articlesDog-inner {
+    display: flex;
+    align-items: center;
+    margin: 10px 80px 10px 80px;
+  }
+  .articlesDog-arrow {
+    display: flex;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 5px;
+  }
+  .articlesDog-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    font-size: 40px;
+    color: purple;
+  }
+  .articlesDog {
+    margin: 80px;
+  }
+  .articlesDog-button-adopt {
+    justify-content: left;
+    margin: 80px;
+  }
+  .articlesDog-button {
+    color: aliceblue;
+    background-color: rgb(126, 63, 102);
+    width: 80px;
+    height: 40px;
+    font-size: 12px;
+  }
+}/*# sourceMappingURL=ArticlesDog.css.map */

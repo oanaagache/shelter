@@ -6,7 +6,7 @@ function DogCard1() {
   const [modalOpen, setModalOpen] = useState(false);
 
   return (
-    <div className="adopt-container">
+    <div className="adopt-cont">
       <div className="adopt-header">
         <div className="adopt-content">
           <div className="adopt-inner">
