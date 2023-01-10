@@ -25,17 +25,17 @@ const Articles = () => {
 
       <div className="articles-title">Articles</div>
 
-      <div className="cards">
-        <div className="card-container">
+      <div className="articles-cards">
+        <div className="articles-card-container">
           <img
             style={{
-              width: 400,
-              height: 400,
+              width: 350,
+              height: 350,
             }}
             src={pic1}
           />
-          <div className="card-inner">
-            <div className="card-details">
+          <div className="articles-card-inner">
+            <div className="articles-card-details">
               <h5>Dog Adoption Articles</h5>
               <h6>Learn more articles caring for your new dog.</h6>
 
@@ -53,16 +53,16 @@ const Articles = () => {
           </div>
         </div>
 
-        <div className="card-container">
+        <div className="articles-card-container">
           <img
             style={{
-              width: 400,
-              height: 400,
+              width: 350,
+              height: 350,
             }}
             src={pic2}
           />
-          <div className="card-inner">
-            <div className="card-details">
+          <div className="articles-card-inner">
+            <div className="articles-card-details">
               <h5>Cat Adoption Articles</h5>
               <h6>Helpful insights on what to expect.</h6>
               <div className="button-articles">

@@ -305,7 +305,7 @@ const Adopt = () => {
         </button>
       </div>
 
-      <div className="cards">
+      <div className="adopt-cards">
         {click
           ? name.map((item) => {
               return <Card key={item.id} item={item} />;
