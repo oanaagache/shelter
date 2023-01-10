@@ -128,7 +128,7 @@ export const DogData = {
   id: 3,
   title3: "What Should You Ask A Dog Breeder?",
   subtitle25:
-    "Like any responsible future pet parent, you still have some questions before you take the plunge and choose your new dog, which may be why you’re here!",
+    "Like any pet parent, do you still have some questions before you choose a dog breeder?",
   img7: pic7,
   img3: pic3,
   subtitle26:
@@ -190,11 +190,11 @@ export const DogData = {
   id: 4,
   title4: "How to Rehome Your Pet?",
   subtitle49:
-    "There are various problems that can potentially cause pet parents to consider giving away their dog, comparatively there are also solutions.",
+    "There are various problems that can cause pet parents to consider giving away their pet...",
   img4: pic4,
   img8: pic8,
   subtitle50:
-    "Rehoming a dog, in the first place, is not abandonment; as a    matter of fact, it’s humane, mature, and responsible.    Secondly, while there are various problems that can    potentially cause pet parents to consider giving away their    dog, comparatively there are also solutions.",
+    "Rehoming a dog, in the first place, is not abandonment; as a matter of fact, it’s humane, mature, and responsible.    Secondly, while there are various problems that can    potentially cause pet parents to consider giving away their dog, comparatively there are also solutions.",
   subtitle51: "Dog Rehoming Issue and Solution Board",
   td1: "I got a new job and there’s no time for my dog!",
   td2: "+ Have you specifically considered a doggy day-care or    a dog walker?",

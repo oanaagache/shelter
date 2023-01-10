@@ -25,7 +25,6 @@ $black: #000;
   align-items: center;
   height: 60px;
   font-size: 30px;
-  margin-bottom: 30px;
 }
 
 .articles {
@@ -44,11 +43,12 @@ $black: #000;
   font-size: 12px;
 }
 
-.articles-adopt-cards {
+.articles-cards {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  margin-top: 16px;
+  margin-top: 60px;
+  margin-bottom: 60px;
 }
 
 .articles-card-container {
@@ -105,7 +105,6 @@ $black: #000;
     height: 60px;
     font-size: 30px;
     color: red;
-    margin-bottom: 30px;
   }
 
   .articles {
@@ -124,11 +123,12 @@ $black: #000;
     font-size: 12px;
   }
 
-  .articles-adopt-cards {
+  .articles-cards {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    margin-top: 16px;
+    margin-top: 60px;
+    margin-bottom: 60px;
   }
 
   .articles-card-container {
@@ -186,7 +186,6 @@ $black: #000;
     height: 60px;
     font-size: 32px;
     color: blue;
-    margin-bottom: 30px;
   }
 
   .articles {
@@ -205,11 +204,12 @@ $black: #000;
     font-size: 12px;
   }
 
-  .articles-adopt-cards {
+  .articles-cards {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    margin-top: 16px;
+    margin-top: 60px;
+    margin-bottom: 60px;
   }
 
   .articles-card-container {
@@ -267,7 +267,6 @@ $black: #000;
     height: 60px;
     font-size: 36px;
     color: green;
-    margin-bottom: 30px;
   }
 
   .articles {
@@ -286,11 +285,12 @@ $black: #000;
     font-size: 12px;
   }
 
-  .articles-adopt-cards {
+  .articles-cards {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    margin-top: 16px;
+    margin-top: 60px;
+    margin-bottom: 60px;
   }
 
   .articles-card-container {
@@ -348,7 +348,6 @@ $black: #000;
     height: 60px;
     font-size: 36px;
     color: rosybrown;
-    margin-bottom: 30px;
   }
 
   .articles {
@@ -367,11 +366,12 @@ $black: #000;
     font-size: 12px;
   }
 
-  .articles-adopt-cards {
+  .articles-cards {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    margin-top: 16px;
+    margin-top: 60px;
+    margin-bottom: 60px;
   }
 
   .articles-card-container {
@@ -429,7 +429,6 @@ $black: #000;
     height: 60px;
     font-size: 40px;
     color: purple;
-    margin-bottom: 30px;
   }
 
   .articles {
@@ -448,11 +447,12 @@ $black: #000;
     font-size: 12px;
   }
 
-  .articles-adopt-cards {
+  .articles-cards {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    margin-top: 16px;
+    margin-top: 60px;
+    margin-bottom: 60px;
   }
 
   .articles-card-container {

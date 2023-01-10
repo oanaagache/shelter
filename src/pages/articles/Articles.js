@@ -25,7 +25,7 @@ const Articles = () => {
 
       <div className="articles-title">Articles</div>
 
-      <div className="articles-adopt-cards">
+      <div className="articles-cards">
         <div className="articles-card-container">
           <div className="articles-card-content">
             <img

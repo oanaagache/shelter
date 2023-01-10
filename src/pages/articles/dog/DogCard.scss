@@ -2,42 +2,40 @@ $color: aliceblue;
 $background-color: rgb(126, 63, 102);
 $black: #000;
 
-.articlesDog-cont {
+.dogCard-cont {
   max-width: 100%;
 }
 
-.articlesDog-inner {
+.dogCard-inner {
   display: flex;
   align-items: center;
-  margin: 10px;
+  margin: 20px;
 }
 
-.articlesDog-arrow {
+.dogCard-arrow {
   display: flex;
   text-decoration: none;
   font-size: 18px;
   padding: 5px;
 }
 
-.articlesDog-title {
+.dogCard-title {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 60px;
   font-size: 30px;
-  margin-bottom: 60px;
 }
 
-.articlesDog {
+.dogCard {
   margin: 80px 10px 80px 10px;
 }
 
-.articlesDog-button-adopt {
+.button-dogCard {
   justify-content: left;
-  margin: 10px;
 }
 
-.articlesDog-button {
+.button-dogCard-read {
   color: $color;
   background-color: $background-color;
   width: 80px;
@@ -45,7 +43,15 @@ $black: #000;
   font-size: 12px;
 }
 
-.articlesDog-container {
+.dogCard-cards {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+
+.dogCard-card-container {
   max-width: 100%;
   display: flex;
   flex-direction: column;
@@ -55,45 +61,61 @@ $black: #000;
   align-items: center;
 }
 
+.dogCard-card-content {
+  border-radius: 4px;
+  overflow: hidden;
+  background-color: var(--background-el);
+  box-shadow: 0 2px 4px rgba($black, 0.06), 0 2px 3px rgba($black, 0.12);
+  width: 350px;
+  cursor: pointer;
+  margin: 20px;
+}
+
+.dogCard-card-details {
+  padding: 16px 0 16px 0;
+}
+
+.dogCard-card-inner {
+  margin: 20px;
+}
+
 //sm: { min: "640px", max: "767px" },
 @media screen and (min-width: 640px) {
-  .articlesDog-cont {
+  .dogCard-cont {
     max-width: 100%;
   }
 
-  .articlesDog-inner {
+  .dogCard-inner {
     display: flex;
     align-items: center;
-    margin: 10px;
+    margin: 20px;
   }
 
-  .articlesDog-arrow {
+  .dogCard-arrow {
     display: flex;
     text-decoration: none;
     font-size: 18px;
     padding: 5px;
   }
 
-  .articlesDog-title {
+  .dogCard-title {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 60px;
     font-size: 30px;
     color: red;
-    margin-bottom: 60px;
   }
 
-  .articlesDog {
+  .dogCard {
     margin: 80px 10px 80px 10px;
   }
 
-  .articlesDog-button-adopt {
+  .button-dogCard {
     justify-content: left;
-    margin: 10px;
   }
 
-  .articlesDog-button {
+  .button-dogCard-read {
     color: $color;
     background-color: $background-color;
     width: 80px;
@@ -101,7 +123,15 @@ $black: #000;
     font-size: 12px;
   }
 
-  .articlesDog-container {
+  .dogCard-cards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 60px;
+    margin-bottom: 60px;
+  }
+
+  .dogCard-card-container {
     max-width: 100%;
     display: flex;
     flex-direction: column;
@@ -110,54 +140,79 @@ $black: #000;
     width: fit-content;
     align-items: center;
   }
+
+  .dogCard-card-content {
+    border-radius: 4px;
+    overflow: hidden;
+    background-color: var(--background-el);
+    box-shadow: 0 2px 4px rgba($black, 0.06), 0 2px 3px rgba($black, 0.12);
+    width: 350px;
+    cursor: pointer;
+    margin: 20px;
+  }
+
+  .dogCard-card-details {
+    padding: 16px 0 16px 0;
+  }
+
+  .dogCard-card-inner {
+    margin: 20px;
+  }
 }
 
 // md: { min: "768px", max: "1023px" },
 @media screen and (min-width: 768px) {
-  .articlesDog-cont {
+  .dogCard-cont {
     max-width: 100%;
   }
 
-  .articlesDog-inner {
+  .dogCard-inner {
     display: flex;
     align-items: center;
     margin: 10px 20px 10px 20px;
   }
 
-  .articlesDog-arrow {
+  .dogCard-arrow {
     display: flex;
     text-decoration: none;
     font-size: 18px;
     padding: 5px;
   }
 
-  .articlesDog-title {
+  .dogCard-title {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 60px;
     font-size: 32px;
     color: blue;
-    margin-bottom: 60px;
   }
 
-  .articlesDog {
+  .dogCard {
     margin: 80px 20px 80px 20px;
   }
 
-  .articlesDog-button-adopt {
+  .button-dogCard {
     justify-content: left;
-    margin: 20px;
   }
 
-  .articlesDog-button {
+  .button-dogCard-read {
     color: $color;
     background-color: $background-color;
     width: 80px;
     height: 40px;
     font-size: 12px;
   }
-  .articlesDog-container {
+
+  .dogCard-cards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 60px;
+    margin-bottom: 60px;
+  }
+
+  .dogCard-card-container {
     max-width: 100%;
     display: flex;
     flex-direction: column;
@@ -166,47 +221,63 @@ $black: #000;
     width: fit-content;
     align-items: center;
   }
+
+  .dogCard-card-content {
+    border-radius: 4px;
+    overflow: hidden;
+    background-color: var(--background-el);
+    box-shadow: 0 2px 4px rgba($black, 0.06), 0 2px 3px rgba($black, 0.12);
+    width: 350px;
+    cursor: pointer;
+    margin: 20px;
+  }
+
+  .dogCard-card-details {
+    padding: 16px 0 16px 0;
+  }
+
+  .dogCard-card-inner {
+    margin: 20px;
+  }
 }
 
 //lg: { min: "1024px", max: "1279px" },
 @media screen and (min-width: 1024px) {
-  .articlesDog-cont {
+  .dogCard-cont {
     max-width: 100%;
   }
 
-  .articlesDog-inner {
+  .dogCard-inner {
     display: flex;
     align-items: center;
     margin: 10px 40px 10px 40px;
   }
 
-  .articlesDog-arrow {
+  .dogCard-arrow {
     display: flex;
     text-decoration: none;
     font-size: 18px;
     padding: 5px;
   }
 
-  .articlesDog-title {
+  .dogCard-title {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 60px;
     font-size: 36px;
     color: green;
-    margin-bottom: 60px;
   }
 
-  .articlesDog {
+  .dogCard {
     margin: 80px 40px 80px 40px;
   }
 
-  .articlesDog-button-adopt {
+  .button-dogCard {
     justify-content: left;
-    margin: 40px;
   }
 
-  .articlesDog-button {
+  .button-dogCard-read {
     color: $color;
     background-color: $background-color;
     width: 80px;
@@ -214,7 +285,15 @@ $black: #000;
     font-size: 12px;
   }
 
-  .articlesDog-container {
+  .dogCard-cards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 60px;
+    margin-bottom: 60px;
+  }
+
+  .dogCard-card-container {
     max-width: 100%;
     display: flex;
     flex-direction: column;
@@ -223,47 +302,63 @@ $black: #000;
     width: fit-content;
     align-items: center;
   }
+
+  .dogCard-card-content {
+    border-radius: 4px;
+    overflow: hidden;
+    background-color: var(--background-el);
+    box-shadow: 0 2px 4px rgba($black, 0.06), 0 2px 3px rgba($black, 0.12);
+    width: 350px;
+    cursor: pointer;
+    margin: 20px;
+  }
+
+  .dogCard-card-details {
+    padding: 16px 0 16px 0;
+  }
+
+  .dogCard-card-inner {
+    margin: 20px 40px 20px 40px;
+  }
 }
 
 // xl: { min: "1280px", max: "1535px" },
 @media screen and (min-width: 1280px) {
-  .articlesDog-cont {
+  .dogCard-cont {
     max-width: 100%;
   }
 
-  .articlesDog-inner {
+  .dogCard-inner {
     display: flex;
     align-items: center;
     margin: 10px 80px 10px 80px;
   }
 
-  .articlesDog-arrow {
+  .dogCard-arrow {
     display: flex;
     text-decoration: none;
     font-size: 18px;
     padding: 5px;
   }
 
-  .articlesDog-title {
+  .dogCard-title {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 60px;
     font-size: 36px;
     color: rosybrown;
-    margin-bottom: 60px;
   }
 
-  .articlesDog {
+  .dogCard {
     margin: 80px;
   }
 
-  .articlesDog-button-adopt {
+  .button-dogCard {
     justify-content: left;
-    margin: 80px;
   }
 
-  .articlesDog-button {
+  .button-dogCard-read {
     color: $color;
     background-color: $background-color;
     width: 80px;
@@ -271,7 +366,15 @@ $black: #000;
     font-size: 12px;
   }
 
-  .articlesDog-container {
+  .dogCard-cards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 60px;
+    margin-bottom: 60px;
+  }
+
+  .dogCard-card-container {
     max-width: 100%;
     display: flex;
     flex-direction: column;
@@ -280,47 +383,63 @@ $black: #000;
     width: fit-content;
     align-items: center;
   }
+
+  .dogCard-card-content {
+    border-radius: 4px;
+    overflow: hidden;
+    background-color: var(--background-el);
+    box-shadow: 0 2px 4px rgba($black, 0.06), 0 2px 3px rgba($black, 0.12);
+    width: 350px;
+    cursor: pointer;
+    margin: 20px;
+  }
+
+  .dogCard-card-details {
+    padding: 16px 0 16px 0;
+  }
+
+  .dogCard-card-inner {
+    margin: 20px 80px 20px 80px;
+  }
 }
 
 // xxl: { min: "1536px" },
 @media screen and (min-width: 1536px) {
-  .articlesDog-cont {
+  .dogCard-cont {
     max-width: 100%;
   }
 
-  .articlesDog-inner {
+  .dogCard-inner {
     display: flex;
     align-items: center;
     margin: 10px 80px 10px 80px;
   }
 
-  .articlesDog-arrow {
+  .dogCard-arrow {
     display: flex;
     text-decoration: none;
     font-size: 18px;
     padding: 5px;
   }
 
-  .articlesDog-title {
+  .dogCard-title {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 60px;
     font-size: 40px;
     color: purple;
-    margin-bottom: 60px;
   }
 
-  .articlesDog {
+  .dogCard {
     margin: 80px;
   }
 
-  .articlesDog-button-adopt {
+  .button-dogCard {
     justify-content: left;
-    margin: 80px;
   }
 
-  .articlesDog-button {
+  .button-dogCard-read {
     color: $color;
     background-color: $background-color;
     width: 80px;
@@ -328,7 +447,15 @@ $black: #000;
     font-size: 12px;
   }
 
-  .articlesDog-container {
+  .dogCard-cards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 60px;
+    margin-bottom: 60px;
+  }
+
+  .dogCard-card-container {
     max-width: 100%;
     display: flex;
     flex-direction: column;
@@ -336,5 +463,23 @@ $black: #000;
     margin: 0 auto;
     width: fit-content;
     align-items: center;
+  }
+
+  .dogCard-card-content {
+    border-radius: 4px;
+    overflow: hidden;
+    background-color: var(--background-el);
+    box-shadow: 0 2px 4px rgba($black, 0.06), 0 2px 3px rgba($black, 0.12);
+    width: 350px;
+    cursor: pointer;
+    margin: 20px;
+  }
+
+  .dogCard-card-details {
+    padding: 16px 0 16px 0;
+  }
+
+  .dogCard-card-inner {
+    margin: 20px 80px 20px 80px;
   }
 }

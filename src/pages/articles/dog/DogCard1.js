@@ -1,28 +1,25 @@
 import React, { useState } from "react";
 import Modal from "react-modal";
 import { DogData as item } from "./DogData";
+import "./DogCard.css";
 
 function DogCard1() {
   const [modalOpen, setModalOpen] = useState(false);
 
   return (
-    <div className="adopt-cont">
-      <div className="adopt-header">
-        <div className="adopt-content">
-          <div className="adopt-inner">
-            <img
-              style={{
-                width: 350,
-                height: 350,
-              }}
-              src={item.img1}
-            />
-          </div>
-        </div>
+    <div className="dogCard-cont">
+      <div className="dogCard-inner">
+        <img
+          style={{
+            width: 350,
+            height: 350,
+          }}
+          src={item.img1}
+        />
       </div>
 
-      <div className="card-inner">
-        <div className="card-details">
+      <div className="dogCard-card-inner">
+        <div className="dogCard-card-details">
           <h3>{item.title1}</h3>
           <h6>{item.subtitle1}</h6>
 

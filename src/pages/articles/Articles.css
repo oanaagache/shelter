@@ -21,7 +21,6 @@
   align-items: center;
   height: 60px;
   font-size: 30px;
-  margin-bottom: 30px;
 }
 
 .articles {
@@ -40,11 +39,12 @@
   font-size: 12px;
 }
 
-.articles-adopt-cards {
+.articles-cards {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  margin-top: 16px;
+  margin-top: 60px;
+  margin-bottom: 60px;
 }
 
 .articles-card-container {
@@ -99,7 +99,6 @@
     height: 60px;
     font-size: 30px;
     color: red;
-    margin-bottom: 30px;
   }
   .articles {
     margin: 80px 10px 80px 10px;
@@ -114,11 +113,12 @@
     height: 40px;
     font-size: 12px;
   }
-  .articles-adopt-cards {
+  .articles-cards {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    margin-top: 16px;
+    margin-top: 60px;
+    margin-bottom: 60px;
   }
   .articles-card-container {
     max-width: 100%;
@@ -169,7 +169,6 @@
     height: 60px;
     font-size: 32px;
     color: blue;
-    margin-bottom: 30px;
   }
   .articles {
     margin: 80px 20px 80px 20px;
@@ -184,11 +183,12 @@
     height: 40px;
     font-size: 12px;
   }
-  .articles-adopt-cards {
+  .articles-cards {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    margin-top: 16px;
+    margin-top: 60px;
+    margin-bottom: 60px;
   }
   .articles-card-container {
     max-width: 100%;
@@ -239,7 +239,6 @@
     height: 60px;
     font-size: 36px;
     color: green;
-    margin-bottom: 30px;
   }
   .articles {
     margin: 80px 40px 80px 40px;
@@ -254,11 +253,12 @@
     height: 40px;
     font-size: 12px;
   }
-  .articles-adopt-cards {
+  .articles-cards {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    margin-top: 16px;
+    margin-top: 60px;
+    margin-bottom: 60px;
   }
   .articles-card-container {
     max-width: 100%;
@@ -309,7 +309,6 @@
     height: 60px;
     font-size: 36px;
     color: rosybrown;
-    margin-bottom: 30px;
   }
   .articles {
     margin: 80px;
@@ -324,11 +323,12 @@
     height: 40px;
     font-size: 12px;
   }
-  .articles-adopt-cards {
+  .articles-cards {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    margin-top: 16px;
+    margin-top: 60px;
+    margin-bottom: 60px;
   }
   .articles-card-container {
     max-width: 100%;
@@ -379,7 +379,6 @@
     height: 60px;
     font-size: 40px;
     color: purple;
-    margin-bottom: 30px;
   }
   .articles {
     margin: 80px;
@@ -394,11 +393,12 @@
     height: 40px;
     font-size: 12px;
   }
-  .articles-adopt-cards {
+  .articles-cards {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    margin-top: 16px;
+    margin-top: 60px;
+    margin-bottom: 60px;
   }
   .articles-card-container {
     max-width: 100%;

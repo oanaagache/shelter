@@ -22,9 +22,9 @@ const ArticlesDog = () => {
         </Link>
       </div>
 
-      <h4 className="articlesDog-title">More About Dog Adoption</h4>
+      <div className="articlesDog-title">More About Dog Adoption</div>
 
-      <div className="flex flex-row flex-wrap">
+      <div className="articlesDog-container">
         <DogCard1 />
         <DogCard2 />
         <DogCard3 />
