@@ -17,7 +17,7 @@ import AdoptionForm from "./components/form/AdoptionForm";
 import Register from "./components/register/Register";
 import Login from "./components/login/Login";
 import Edit from "./components/form/Edit";
-import List from "./components/form/List";
+import Record from "./components/form/Record";
 
 const App = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -38,7 +38,7 @@ const App = () => {
           path="/adoptionform/:name"
           element={<AdoptionForm isLoggedIn={isLoggedIn} />}
         />
-         <Route path="/articles" element={<Articles />} />
+        <Route path="/articles" element={<Articles />} />
         <Route path="/articlesdog" element={<ArticlesDog />} />
         <Route path="/articlescat" element={<ArticlesCat />} />
         <Route path="/card/" element={<Card />} />
@@ -57,7 +57,7 @@ const App = () => {
         <Route path="/register" element={<Register />} />
         <Route path="/success/:name" element={<Success />} />
         <Route path="/edit/:id" element={<Edit />} />
-        <Route path="/list" element={<List />} />
+        <Route path="/record" element={<Record />} />
       </Routes>
       <Footer />
     </Router>

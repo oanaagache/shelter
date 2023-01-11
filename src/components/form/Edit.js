@@ -111,7 +111,7 @@ const Edit = () => {
                   type="text"
                   className="form-control"
                   id="inputFirstName"
-                  value={form.firstName}
+                  value={form.firstName || ""}
                   onChange={(e) => updateForm({ firstName: e.target.value })}
                 />
               </div>
@@ -122,7 +122,7 @@ const Edit = () => {
                   type="text"
                   className="form-control"
                   id="inputSurname"
-                  value={form.surname}
+                  value={form.surname || ""}
                   onChange={(e) => updateForm({ surname: e.target.value })}
                 />
               </div>
@@ -133,7 +133,7 @@ const Edit = () => {
                   type="text"
                   className="form-control"
                   id="inputEmailAddress"
-                  value={form.email}
+                  value={form.email || ""}
                   onChange={(e) => updateForm({ email: e.target.value })}
                 />
               </div>
@@ -146,7 +146,7 @@ const Edit = () => {
                   className="form-control"
                   id="inputAddress"
                   placeholder="Street name and number"
-                  value={form.address}
+                  value={form.address || ""}
                   onChange={(e) => updateForm({ address1: e.target.value })}
                 />
               </div>
@@ -157,7 +157,7 @@ const Edit = () => {
                   className="form-control"
                   id="inputCity"
                   placeholder="City"
-                  value={form.city}
+                  value={form.city || ""}
                   onChange={(e) => updateForm({ city: e.target.value })}
                 />
               </div>
@@ -174,8 +174,8 @@ const Edit = () => {
                   className="form-control"
                   id="inputZip"
                   placeholder="Zip code"
-                  value={form.code}
-                  onChange={(e) => updateForm({ city: e.target.value })}
+                  value={form.code || ""}
+                  onChange={(e) => updateForm({ code: e.target.value })}
                 />
               </div>
             </div>
@@ -192,7 +192,7 @@ const Edit = () => {
                   className="form-control"
                   id="text"
                   rows="5"
-                  value={form.status}
+                  value={form.status || ""}
                   onChange={(e) => updateForm({ status: e.target.value })}
                 ></textarea>
               </div>
@@ -208,7 +208,7 @@ const Edit = () => {
                   className="form-control"
                   id="text"
                   rows="5"
-                  value={form.routine}
+                  value={form.routine || ""}
                   onChange={(e) => updateForm({ routine: e.target.value })}
                 ></textarea>
               </div>{" "}

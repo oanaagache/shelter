@@ -1,4 +1,6 @@
 $background-color: rgb(126, 63, 102);
+$color-edit: blue;
+$color-delete: red;
 
 * {
   box-sizing: border-box;
@@ -11,7 +13,9 @@ $background-color: rgb(126, 63, 102);
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 30px 0 30px 0;
+  margin: 40px 0 40px 0;
+  // overflow-x: auto;
+  // cursor: pointer;
 }
 
 table {
@@ -27,6 +31,10 @@ td {
   padding: 5px;
   text-align: left;
   width: 50%;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
 }
 
 th:last-child,
@@ -57,6 +65,15 @@ td:last-child {
   align-items: center;
   height: 60px;
   font-size: 30px;
+}
+
+.btn-link-edit {
+  font-size: 10px;
+  color: $color-edit;
+}
+.btn-link-delete {
+  font-size: 10px;
+  color: $color-delete;
 }
 
 //sm: { min: "640px", max: "767px" },
@@ -92,7 +109,7 @@ td:last-child {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 30px 0 30px 0;
+    margin: 40px 0 40px 0;
   }
 
   table {
@@ -117,8 +134,13 @@ td:last-child {
     border-right: none;
   }
 
-  .btn-link {
+  .btn-link-edit {
     font-size: 10px;
+    color: $color-edit;
+  }
+  .btn-link-delete {
+    font-size: 10px;
+    color: $color-delete;
   }
 }
 
@@ -155,7 +177,7 @@ td:last-child {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 30px 0 30px 0;
+    margin: 40px 0 40px 0;
     font-size: 13px;
   }
 
@@ -181,8 +203,13 @@ td:last-child {
     border-right: none;
   }
 
-  .btn-link {
+  .btn-link-edit {
     font-size: 13px;
+    color: $color-edit;
+  }
+  .btn-link-delete {
+    font-size: 13px;
+    color: $color-delete;
   }
 }
 
@@ -219,7 +246,7 @@ td:last-child {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 30px 0 30px 0;
+    margin: 40px 0 40px 0;
     font-size: 15px;
   }
 
@@ -245,8 +272,13 @@ td:last-child {
     border-right: none;
   }
 
-  .btn-link {
+  .btn-link-edit {
     font-size: 15px;
+    color: $color-edit;
+  }
+  .btn-link-delete {
+    font-size: 15px;
+    color: $color-delete;
   }
 }
 
@@ -283,7 +315,7 @@ td:last-child {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 30px 0 30px 0;
+    margin: 40px 0 40px 0;
     font-size: 18px;
   }
 
@@ -309,8 +341,13 @@ td:last-child {
     border-right: none;
   }
 
-  .btn-link {
+  .btn-link-edit {
     font-size: 18px;
+    color: $color-edit;
+  }
+  .btn-link-delete {
+    font-size: 18px;
+    color: $color-delete;
   }
 }
 
@@ -347,7 +384,7 @@ td:last-child {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 30px 0 30px 0;
+    margin: 40px 0 40px 0;
     font-size: 20px;
   }
 
@@ -373,7 +410,12 @@ td:last-child {
     border-right: none;
   }
 
-  .btn-link {
+  .btn-link-edit {
     font-size: 20px;
+    color: $color-edit;
+  }
+  .btn-link-delete {
+    font-size: 20px;
+    color: $color-delete;
   }
 }

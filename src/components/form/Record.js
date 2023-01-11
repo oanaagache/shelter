@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import "../form/List.css";
+import "../form/Record.css";
 import logo from "../../images/image4.svg";
 
 const Record = (props) => (
@@ -8,21 +8,22 @@ const Record = (props) => (
     <td>{props.record.firstName}</td>
     <td>{props.record.surname}</td>
     <td>{props.record.email}</td>
+    {/* <td>{props.record.address}</td> */}
     <td>{props.record.city}</td>
     <td>{props.record.country}</td>
+    {/* <td>{props.record.code}</td> */}
     <td>{props.record.status}</td>
     <td>{props.record.routine}</td>
     <td>
       <Link
-        className="btn-link"
+        className="btn-link-edit"
         to={`/edit/${props.record._id}`}
         style={{ textDecoration: "none" }}
       >
         Edit
       </Link>{" "}
-      |
       <div
-        className="btn-link"
+        className="btn-link-delete"
         style={{ textDecoration: "none" }}
         onClick={() => {
           props.deleteRecord(props.record._id);
@@ -82,20 +83,14 @@ export default function List() {
     <>
       <div className="list-cont">
         <div className="list-inner">
-          <img
-            style={({ height: "10px" }, { width: "10px" })}
-            src={logo}
-            alt="Not found"
-          />
-          <h2>
-            <Link
-              className="arrow"
-              to="/adopt"
-              style={{ textDecoration: "none" }}
-            >
-              Back
-            </Link>
-          </h2>
+        <img
+          style={({ height: "10px" }, { width: "10px" })}
+          src={logo}
+          alt="Not found"
+        />
+        <Link className="about-arrow" to="/">
+          Back{" "}
+        </Link>
         </div>
 
         <div className="list-title">Record List</div>
@@ -104,11 +99,13 @@ export default function List() {
           <table>
             <thead>
               <tr>
-                <th>First Name</th>
+                <th>Name</th>
                 <th>Surname</th>
                 <th>Email</th>
+                {/* <th>Address</th> */}
                 <th>City</th>
                 <th>Country</th>
+                {/* <th>Code</th> */}
                 <th>Have Children</th>
                 <th>Have Pets</th>
                 <th>Action</th>
