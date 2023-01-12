@@ -14,6 +14,7 @@ export default function Record(props) {
       {/* <td>{props.record.code}</td> */}
       <td>{props.record.status}</td>
       <td>{props.record.routine}</td>
+      <td>{props.record.name}</td>
       <td>
         <Link
           className="btn-link-edit"

@@ -62,6 +62,7 @@ export default function List() {
                 {/* <th>Code</th> */}
                 <th>Have Children</th>
                 <th>Have Pets</th>
+                <th>Pet Name</th>
                 <th>Action</th>
               </tr>
             </thead>

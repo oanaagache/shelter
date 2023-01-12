@@ -50,6 +50,7 @@ const AdoptionForm = (props) => {
       code: code,
       status: status,
       routine: routine,
+      name: name,
     };
 
     fetch("http://localhost:3001/record/add", {
@@ -89,7 +90,7 @@ const AdoptionForm = (props) => {
           </Link>
         </div>
 
-        <div className="adoption-title">Adoption Form</div>
+        <div className="adoption-title">Adoption Form for {name}</div>
 
         <Form onSubmit={handleSubmit}>
           <div className="adoption-form">
