@@ -57,8 +57,16 @@ const Card = (props) => {
                 height: 300,
                 margin: "25px",
               }}
+              //   "photos": [
+              //     {
+              //         "small": "https://photos.petfinder.com/photos/pets/124/1/?bust=1546042081&width=100",
+              //         "medium": "https://photos.petfinder.com/photos/pets/124/1/?bust=1546042081&width=300",
+              //         "large": "https://photos.petfinder.com/photos/pets/124/1/?bust=1546042081&width=600",
+              //         "full": "https://photos.petfinder.com/photos/pets/124/1/?bust=1546042081"
+              //     }
+              // ]
               onClick={() => navigate(`/card/${item.id}`)}
-              src={item.img ? item.img["full"] : [logo2]}
+              src={item.img ? item.img["large"] : [logo2]}
               alt="Not found"
             />
 

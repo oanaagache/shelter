@@ -14,7 +14,7 @@ const AdoptionForm = (props) => {
   let navigate = useNavigate();
 
   const [user, setUser] = useState({});
-  console.log(user);
+  //console.log(user);
 
   const [firstName, setFirstName] = useState("");
   const [surname, setSurname] = useState("");

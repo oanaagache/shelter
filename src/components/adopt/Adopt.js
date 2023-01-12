@@ -30,21 +30,6 @@ const Adopt = () => {
   const [check, setCheck] = useState("");
   const [checks, setChecks] = useState([]);
 
-  // //useEffect for type
-  // useEffect(() => {
-  //   var typesArray = [
-  //     "Dog",
-  //     "Cat",
-  //     "Rabbit",
-  //     "Small & Furry",
-  //     "Horse",
-  //     "Bird",
-  //     "Scales, Fins & Other",
-  //     "Barnyard",
-  //   ];
-  //   setTypes(typesArray);
-  // }, []);
-
   useEffect(() => {
     client.animalData.types().then((response) => {
       var typesArray = [];
@@ -70,37 +55,37 @@ const Adopt = () => {
     setTypes(typesArray);
   }, []);
 
-  //useEffect for breed dog
-  useEffect(() => {
-    client.animalData.breeds("Dog").then((response) => {
-      //console.log(response.data.breeds);
-      var breedsArray1 = [];
-      var length = response.data.breeds.length;
-      for (var i = 0; i < length; i++) {
-        //console.log(response.data.breeds[i].name);
-        breedsArray1.push(response.data.breeds[i].name);
-      }
-      //console.log("Dog breedsArray:");
-      //console.log(breedsArray1);
-      setBreeds(breedsArray1);
-    });
-  }, []);
+  // //useEffect for breed dog
+  // useEffect(() => {
+  //   client.animalData.breeds("Dog").then((response) => {
+  //     //console.log(response.data.breeds);
+  //     var breedsArray1 = [];
+  //     var length = response.data.breeds.length;
+  //     for (var i = 0; i < length; i++) {
+  //       //console.log(response.data.breeds[i].name);
+  //       breedsArray1.push(response.data.breeds[i].name);
+  //     }
+  //     console.log("Dog breedsArray:");
+  //     console.log(breedsArray1);
+  //     setBreeds(breedsArray1);
+  //   });
+  // }, []);
 
-  //useEffect for breed cat
-  useEffect(() => {
-    client.animalData.breeds("Cat").then((response) => {
-      //console.log(response.data.breeds);
-      var breedsArray2 = [];
-      var length = response.data.breeds.length;
-      for (var i = 0; i < length; i++) {
-        //console.log(response.data.breeds[i].name);
-        breedsArray2.push(response.data.breeds[i].name);
-      }
-      //console.log(" Cat breedsArray:");
-      //console.log(breedsArray);
-      setBreeds(breedsArray2);
-    });
-  }, []);
+  // //useEffect for breed cat
+  // useEffect(() => {
+  //   client.animalData.breeds("Cat").then((response) => {
+  //     //console.log(response.data.breeds);
+  //     var breedsArray2 = [];
+  //     var length = response.data.breeds.length;
+  //     for (var i = 0; i < length; i++) {
+  //       //console.log(response.data.breeds[i].name);
+  //       breedsArray2.push(response.data.breeds[i].name);
+  //     }
+  //     console.log(" Cat breedsArray:");
+  //     console.log(breedsArray2);
+  //     setBreeds(breedsArray2);
+  //   });
+  // }, []);
 
   // //useEffect for breed Rabbit
   // useEffect(() => {
