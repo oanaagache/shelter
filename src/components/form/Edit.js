@@ -6,7 +6,6 @@ import { Link } from "react-router-dom";
 import logo from "../../images/image4.svg";
 import { useNavigate } from "react-router-dom";
 import { useParams } from "react-router-dom";
-import CountrySelector from "../countryselector/CountrySelector";
 
 const Edit = () => {
   const params = useParams();

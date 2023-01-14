@@ -11,7 +11,6 @@ export default function List() {
   useEffect(() => {
     async function getRecords() {
       const response = await fetch(`http://localhost:3001/record/`);
-
       if (!response.ok) {
         const message = `An error occurred: ${response.statusText}`;
         window.alert(message);
@@ -19,6 +18,7 @@ export default function List() {
       }
       const records = await response.json();
       setRecords(records);
+      console.log(records);
     }
     getRecords();
     return;
