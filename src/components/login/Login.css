@@ -77,7 +77,6 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    right: 50px;
     transform: translate(-50%, -50%);
   }
   .login-form-group {
@@ -115,11 +114,9 @@
     margin-top: 200px;
   }
   .login-form form {
-    margin: 0 auto;
     position: absolute;
     top: 50%;
     left: 50%;
-    right: 50px;
     transform: translate(-50%, -50%);
   }
   .login-form-group {
@@ -160,7 +157,6 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    right: 50px;
     transform: translate(-50%, -50%);
   }
   .login-form-group {
@@ -201,7 +197,6 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    right: 50px;
     transform: translate(-50%, -50%);
   }
   .login-form-group {
@@ -242,7 +237,6 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    right: 50px;
     transform: translate(-50%, -50%);
   }
   .login-form-group {

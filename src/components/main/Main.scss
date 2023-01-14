@@ -21,14 +21,14 @@ $font: "Oswald", sans-serif;
 .main-text {
   position: absolute;
   top: 50%;
-  left: 70%;
+  left: 90%;
   transform: translate(-50%, -50%);
   font-family: $font;
 }
 
 .main-title {
   padding: 0 80px 5px 0px;
-  font-size: 20px;
+  font-size: 26px;
 }
 
 //sm: { min: "640px", max: "767px" },
@@ -46,14 +46,14 @@ $font: "Oswald", sans-serif;
   .main-text {
     position: absolute;
     top: 50%;
-    left: 70%;
-    transform: translate(-30%, -50%);
+    left: 90%;
+    transform: translate(-50%, -50%);
     font-family: $font;
   }
 
   .main-title {
     padding: 0 80px 5px 0px;
-    font-size: 20px;
+    font-size: 26px;
   }
 }
 
@@ -72,14 +72,14 @@ $font: "Oswald", sans-serif;
   .main-text {
     position: absolute;
     top: 50%;
-    left: 70%;
-    transform: translate(-30%, -50%);
+    left: 90%;
+    transform: translate(-50%, -50%);
     font-family: $font;
   }
 
   .main-title {
     padding: 0 80px 5px 0px;
-    font-size: 20px;
+    font-size: 26px;
   }
 }
 
@@ -98,14 +98,14 @@ $font: "Oswald", sans-serif;
   .main-text {
     position: absolute;
     top: 50%;
-    left: 70%;
-    transform: translate(-30%, -50%);
+    left: 80%;
+    transform: translate(-50%, -50%);
     font-family: $font;
   }
 
   .main-title {
     padding: 0 80px 5px 0px;
-    font-size: 20px;
+    font-size: 28px;
   }
 }
 
@@ -124,14 +124,14 @@ $font: "Oswald", sans-serif;
   .main-text {
     position: absolute;
     top: 50%;
-    left: 70%;
+    left: 90%;
     transform: translate(-30%, -50%);
     font-family: $font;
   }
 
   .main-title {
     padding: 0 80px 5px 0px;
-    font-size: 20px;
+    font-size: 30px;
   }
 }
 
@@ -150,13 +150,13 @@ $font: "Oswald", sans-serif;
   .main-text {
     position: absolute;
     top: 50%;
-    left: 70%;
+    left: 90%;
     transform: translate(-30%, -50%);
     font-family: $font;
   }
 
   .main-title {
     padding: 0 80px 5px 0px;
-    font-size: 30px;
+    font-size: 32px;
   }
 }

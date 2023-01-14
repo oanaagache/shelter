@@ -17,14 +17,14 @@
 .main-text {
   position: absolute;
   top: 50%;
-  left: 70%;
+  left: 90%;
   transform: translate(-50%, -50%);
   font-family: "Oswald", sans-serif;
 }
 
 .main-title {
   padding: 0 80px 5px 0px;
-  font-size: 20px;
+  font-size: 26px;
 }
 
 @media screen and (min-width: 640px) {
@@ -39,13 +39,13 @@
   .main-text {
     position: absolute;
     top: 50%;
-    left: 70%;
-    transform: translate(-30%, -50%);
+    left: 90%;
+    transform: translate(-50%, -50%);
     font-family: "Oswald", sans-serif;
   }
   .main-title {
     padding: 0 80px 5px 0px;
-    font-size: 20px;
+    font-size: 26px;
   }
 }
 @media screen and (min-width: 768px) {
@@ -60,13 +60,13 @@
   .main-text {
     position: absolute;
     top: 50%;
-    left: 70%;
-    transform: translate(-30%, -50%);
+    left: 90%;
+    transform: translate(-50%, -50%);
     font-family: "Oswald", sans-serif;
   }
   .main-title {
     padding: 0 80px 5px 0px;
-    font-size: 20px;
+    font-size: 26px;
   }
 }
 @media screen and (min-width: 1024px) {
@@ -81,13 +81,13 @@
   .main-text {
     position: absolute;
     top: 50%;
-    left: 70%;
-    transform: translate(-30%, -50%);
+    left: 80%;
+    transform: translate(-50%, -50%);
     font-family: "Oswald", sans-serif;
   }
   .main-title {
     padding: 0 80px 5px 0px;
-    font-size: 20px;
+    font-size: 28px;
   }
 }
 @media screen and (min-width: 1280px) {
@@ -102,13 +102,13 @@
   .main-text {
     position: absolute;
     top: 50%;
-    left: 70%;
+    left: 90%;
     transform: translate(-30%, -50%);
     font-family: "Oswald", sans-serif;
   }
   .main-title {
     padding: 0 80px 5px 0px;
-    font-size: 20px;
+    font-size: 30px;
   }
 }
 @media screen and (min-width: 1536px) {
@@ -123,12 +123,12 @@
   .main-text {
     position: absolute;
     top: 50%;
-    left: 70%;
+    left: 90%;
     transform: translate(-30%, -50%);
     font-family: "Oswald", sans-serif;
   }
   .main-title {
     padding: 0 80px 5px 0px;
-    font-size: 30px;
+    font-size: 32px;
   }
 }/*# sourceMappingURL=Main.css.map */

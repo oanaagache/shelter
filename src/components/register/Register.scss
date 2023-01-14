@@ -2,12 +2,6 @@ $color: aliceblue;
 $background-color: rgb(126, 63, 102);
 $black: #000;
 
-// * {
-//   box-sizing: border-box;
-//   padding: 0;
-//   margin: 0;
-// }
-
 .register-cont {
   max-width: 100%;
 }
@@ -40,7 +34,6 @@ $black: #000;
 }
 
 .register-form form {
-  //margin: 0 auto;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -92,11 +85,9 @@ $black: #000;
   }
 
   .register-form form {
-    //margin: 0 auto;
     position: absolute;
     top: 50%;
     left: 50%;
-    right: 50px;
     transform: translate(-50%, -50%);
   }
 
@@ -144,11 +135,9 @@ $black: #000;
   }
 
   .register-form form {
-    //margin: 0 auto;
     position: absolute;
     top: 50%;
     left: 50%;
-    right: 50px;
     transform: translate(-50%, -50%);
   }
 
@@ -196,11 +185,9 @@ $black: #000;
   }
 
   .register-form form {
-    //margin: 0 auto;
     position: absolute;
     top: 50%;
     left: 50%;
-    right: 50px;
     transform: translate(-50%, -50%);
   }
 
@@ -248,11 +235,9 @@ $black: #000;
   }
 
   .register-form form {
-    //margin: 0 auto;
     position: absolute;
     top: 50%;
     left: 50%;
-    right: 50px;
     transform: translate(-50%, -50%);
   }
 
@@ -300,11 +285,9 @@ $black: #000;
   }
 
   .register-form form {
-    //margin: 0 auto;
     position: absolute;
     top: 50%;
     left: 50%;
-    right: 50px;
     transform: translate(-50%, -50%);
   }
 
