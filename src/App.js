@@ -21,6 +21,7 @@ import List from "./components/form/List";
 
 const App = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
+  // const [isAdmin, setAdmin] = useState(false);
 
   useEffect(() => {
     setIsLoggedIn(JSON.parse(localStorage.getItem("loggedIn")));

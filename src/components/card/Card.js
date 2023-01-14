@@ -51,24 +51,13 @@ const Card = (props) => {
       {item && (
         <div className="card-container">
           <div className="card-content">
-            <img
-              style={{
-                width: 300,
-                height: 300,
-                margin: "25px",
-              }}
-              //   "photos": [
-              //     {
-              //         "small": "https://photos.petfinder.com/photos/pets/124/1/?bust=1546042081&width=100",
-              //         "medium": "https://photos.petfinder.com/photos/pets/124/1/?bust=1546042081&width=300",
-              //         "large": "https://photos.petfinder.com/photos/pets/124/1/?bust=1546042081&width=600",
-              //         "full": "https://photos.petfinder.com/photos/pets/124/1/?bust=1546042081"
-              //     }
-              // ]
-              onClick={() => navigate(`/card/${item.id}`)}
-              src={item.img ? item.img["large"] : [logo2]}
-              alt="Not found"
-            />
+            <div className="card-content-image">
+              <img
+                onClick={() => navigate(`/card/${item.id}`)}
+                src={item.img ? item.img["medium"] : [logo2]}
+                alt="Not found"
+              />
+            </div>
 
             <div className="card-inner">
               <div className="card-details">

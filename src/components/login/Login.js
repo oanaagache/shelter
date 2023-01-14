@@ -25,6 +25,7 @@ const Login = (props) => {
     ) {
       localStorage.setItem("loggedIn", true);
       setIsLoggedIn(true);
+      //setAdmin(false);
       navigate("/");
     } else {
       alert("Please register");
@@ -33,6 +34,7 @@ const Login = (props) => {
     if (loginUser.email === "oana.luciana.agache@gmail.com") {
       localStorage.setItem("loggedIn", true);
       setIsLoggedIn(true);
+      //setAdmin(true);
       navigate("/list");
     } else {
       navigate("/");

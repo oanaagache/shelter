@@ -55,98 +55,6 @@ const Adopt = () => {
     setTypes(typesArray);
   }, []);
 
-  // //useEffect for breed dog
-  // useEffect(() => {
-  //   client.animalData.breeds("Dog").then((response) => {
-  //     //console.log(response.data.breeds);
-  //     var breedsArray1 = [];
-  //     var length = response.data.breeds.length;
-  //     for (var i = 0; i < length; i++) {
-  //       //console.log(response.data.breeds[i].name);
-  //       breedsArray1.push(response.data.breeds[i].name);
-  //     }
-  //     console.log("Dog breedsArray:");
-  //     console.log(breedsArray1);
-  //     setBreeds(breedsArray1);
-  //   });
-  // }, []);
-
-  // //useEffect for breed cat
-  // useEffect(() => {
-  //   client.animalData.breeds("Cat").then((response) => {
-  //     //console.log(response.data.breeds);
-  //     var breedsArray2 = [];
-  //     var length = response.data.breeds.length;
-  //     for (var i = 0; i < length; i++) {
-  //       //console.log(response.data.breeds[i].name);
-  //       breedsArray2.push(response.data.breeds[i].name);
-  //     }
-  //     console.log(" Cat breedsArray:");
-  //     console.log(breedsArray2);
-  //     setBreeds(breedsArray2);
-  //   });
-  // }, []);
-
-  // //useEffect for breed Rabbit
-  // useEffect(() => {
-  //   client.animalData.breeds("Rabbit").then((response) => {
-  //     var breedsArray3 = [];
-  //     var length = response.data.breeds.length;
-  //     for (var i = 0; i < length; i++) {
-  //       breedsArray3.push(response.data.breeds[i].name);
-  //     }
-  //     setBreeds(breedsArray3);
-  //   });
-  // }, []);
-
-  // //useEffect for breed Small & Furry
-  // useEffect(() => {
-  //   client.animalData.breeds("Small & Furry").then((response) => {
-  //     var breedsArray4 = [];
-  //     var length = response.data.breeds.length;
-  //     for (var i = 0; i < length; i++) {
-  //       breedsArray4.push(response.data.breeds[i].name);
-  //     }
-  //     setBreeds(breedsArray4);
-  //   });
-  // }, []);
-
-  // //useEffect for breed "Horse"
-  // useEffect(() => {
-  //   client.animalData.breeds("Horse").then((response) => {
-  //     var breedsArray5 = [];
-  //     var length = response.data.breeds.length;
-  //     for (var i = 0; i < length; i++) {
-  //       breedsArray5.push(response.data.breeds[i].name);
-  //     }
-  //     setBreeds(breedsArray5);
-  //   });
-  // }, []);
-
-  // //useEffect for breed Scales, Fins & Other
-  // useEffect(() => {
-  //   client.animalData.breeds("Scales, Fins & Other").then((response) => {
-  //     var breedsArray6 = [];
-  //     var length = response.data.breeds.length;
-  //     for (var i = 0; i < length; i++) {
-  //       breedsArray6.push(response.data.breeds[i].name);
-  //     }
-  //     setBreeds(breedsArray6);
-  //   });
-  // }, []);
-
-  // //useEffect for breed Barnyard
-  // useEffect(() => {
-  //   client.animalData.breeds("Barnyard").then((response) => {
-  //     var breedsArray7 = [];
-  //     var length = response.data.breeds.length;
-  //     for (var i = 0; i < length; i++) {
-  //       breedsArray7.push(response.data.breeds[i].name);
-  //     }
-  //     setBreeds(breedsArray7);
-  //   });
-  // }, []);
-
   //useEffect for gender
   useEffect(() => {
     var gendersArray = ["Female", "Male"];
@@ -191,7 +99,12 @@ const Adopt = () => {
             img: response.data.animals[i].photos[0],
             id: response.data.animals[i].id,
             name: response.data.animals[i].name,
-            breed: response.data.animals[i].breeds["primary"],
+            breed:
+              response.data.animals[i].breeds.mixed === true
+                ? response.data.animals[i].breeds["primary"] +
+                  "," +
+                  response.data.animals[i].breeds["secondary"]
+                : response.data.animals[i].breeds["primary"],
             gender: response.data.animals[i].gender,
             size: response.data.animals[i].size,
             age: response.data.animals[i].age,
@@ -202,7 +115,9 @@ const Adopt = () => {
             tags: response.data.animals[i].tags,
           };
           animalsArray.push(animal);
+          //console.log(response.data.animals[i]);
         }
+
         setName(animalsArray);
       });
     } else {
@@ -218,6 +133,23 @@ const Adopt = () => {
     }
     setClick(!click);
   };
+
+  useEffect(() => {
+    if (type !== "") {
+      client.animalData.breeds(type).then((response) => {
+        //console.log(response.data.breeds);
+        var breedsArray1 = [];
+        var length = response.data.breeds.length;
+        for (var i = 0; i < length; i++) {
+          //console.log(response.data.breeds[i].name);
+          breedsArray1.push(response.data.breeds[i].name);
+        }
+        //console.log("Dog breedsArray:");
+        //console.log(breedsArray1);
+        setBreeds(breedsArray1);
+      });
+    }
+  }, [type]);
 
   const [name, setName] = useState([]);
 

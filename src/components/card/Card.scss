@@ -22,10 +22,17 @@ $black: #000;
   margin: 20px;
 }
 
-.img {
-  height: 350px;
+.card-content-image {
+  width: 300px;
+  height: 300px;
+  margin: 25px;
+}
+
+.card-content-image img {
+  height: 100%;
   width: 100%;
   object-fit: cover;
+  display: block;
 }
 
 .card-inner {
