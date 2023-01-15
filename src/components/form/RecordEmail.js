@@ -4,14 +4,14 @@ import "../form/Record.css";
 export default function RecordEmail(props) {
   return (
     <tr>
-      <td>{props.record.firstName}</td>
-      <td>{props.record.surname}</td>
-      <td>{props.record.email}</td>
-      <td>{props.record.city}</td>
-      <td>{props.record.country}</td>
-      <td>{props.record.status}</td>
-      <td>{props.record.routine}</td>
-      <td>{props.record.name}</td>
+      <td>{props.recordsEmail.firstName}</td>
+      <td>{props.recordsEmail.surname}</td>
+      <td>{props.recordsEmail.email}</td>
+      <td>{props.recordsEmail.city}</td>
+      <td>{props.recordsEmail.country}</td>
+      <td>{props.recordsEmail.status}</td>
+      <td>{props.recordsEmail.routine}</td>
+      <td>{props.recordsEmail.name}</td>
     </tr>
   );
 }

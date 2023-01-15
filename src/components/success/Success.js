@@ -9,9 +9,10 @@ export default function Success() {
   const { name } = useParams();
 
   let navigate = useNavigate();
-  //const params = useParams();
+  const params = useParams();
 
   const [records, setRecords] = useState([]);
+  const [recordsEmail, setRecordsEmail] = useState([]);
 
   //  fetches the records from the database
   useEffect(() => {
@@ -24,34 +25,57 @@ export default function Success() {
       }
       const records = await response.json();
       setRecords(records);
-      console.log(records);
+      //console.log(records);
     }
     getRecords();
     return;
   }, [records.length]);
 
-  //fetches the records from the database
-
+  // // fetches the records from the database
   // useEffect(() => {
   //   async function getRecord() {
-  //     const response = await fetch(`http://localhost:3001/record/${id}`);
+  //     const email = params.email;
+  //     const response = await fetch(`http://localhost:3001/${params.email}`);
   //     if (!response.ok) {
   //       const message = `An error occurred: ${response.statusText}`;
   //       window.alert(message);
   //       return;
   //     }
-  //     const records = await response.json();
-  //     if (!records) {
-  //       window.alert(`Record with id ${id} not found`);
+  //     const recordsEmail = await response.json();
+  //     if (!recordsEmail) {
+  //       window.alert(`Record with email ${email} not found`);
   //       navigate("/");
   //       return;
   //     }
-  //     setRecords(records);
-  //     console.log(records);
+  //     setRecordsEmail(recordsEmail);
+  //     console.log(recordsEmail);
   //   }
   //   getRecord();
   //   return;
-  // }, [id, navigate]);
+  // }, [params.email, navigate]);
+
+  // // fetches the records from the database
+  // useEffect(() => {
+  //   async function getRecord() {
+  //     const id = params.id;
+  //     const response = await fetch(`http://localhost:3001/record/${params.id}`);
+  //     if (!response.ok) {
+  //       const message = `An error occurred: ${response.statusText}`;
+  //       window.alert(message);
+  //       return;
+  //     }
+  //     const recordsEmail = await response.json();
+  //     if (!recordsEmail) {
+  //       window.alert(`Record with email ${id} not found`);
+  //       navigate("/");
+  //       return;
+  //     }
+  //     setRecordsEmail(recordsEmail);
+  //     console.log(recordsEmail);
+  //   }
+  //   getRecord();
+  //   return;
+  // }, [params.id, navigate]);
 
   return (
     <div className="response">
@@ -87,13 +111,7 @@ export default function Success() {
             </tr>
           </thead>
           <tbody>
-            {records.map((record) => {
-              return (
-                <>
-                  <RecordEmail key={record._id} record={record} />
-                </>
-              );
-            })}
+            <RecordEmail recordsEmail={recordsEmail} />
           </tbody>
         </table>
       </div>

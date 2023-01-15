@@ -57,7 +57,7 @@ const App = () => {
         <Route path="/Navbar:isLoggedIn" element={<Navbar />} />
         <Route path="/register" element={<Register />} />
         <Route path="/success/:name" element={<Success />} />
-        <Route path="/success/:id" element={<Success />} />
+        <Route path="/success/:email" element={<Success />} />
         <Route path="/edit/:id" element={<Edit />} />
         <Route path="/list" element={<List />} />
       </Routes>
