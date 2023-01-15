@@ -3,54 +3,55 @@ import "./Success.css";
 import logo2 from "../../images/image.png";
 import { useNavigate } from "react-router-dom";
 import { useParams } from "react-router-dom";
+import RecordEmail from "../form/RecordEmail";
 
-const Success = () => {
+export default function Success() {
   const { name } = useParams();
-  const { id } = useParams();
+
   let navigate = useNavigate();
   //const params = useParams();
 
   const [records, setRecords] = useState([]);
 
-  // //  fetches the records from the database
-  // useEffect(() => {
-  //   async function getRecords() {
-  //     const response = await fetch(`http://localhost:3001/record/`);
-  //     if (!response.ok) {
-  //       const message = `An error occurred: ${response.statusText}`;
-  //       window.alert(message);
-  //       return;
-  //     }
-  //     const records = await response.json();
-  //     setRecords(records);
-  //     console.log(records);
-  //   }
-  //   getRecords();
-  //   return;
-  // }, [records.length]);
-
   //  fetches the records from the database
-
   useEffect(() => {
-    async function getRecord() {
-      const response = await fetch(`http://localhost:3001/record/${id}`);
+    async function getRecords() {
+      const response = await fetch(`http://localhost:3001/record/`);
       if (!response.ok) {
         const message = `An error occurred: ${response.statusText}`;
         window.alert(message);
         return;
       }
       const records = await response.json();
-      if (!records) {
-        window.alert(`Record with id ${id} not found`);
-        navigate("/");
-        return;
-      }
       setRecords(records);
       console.log(records);
     }
-    getRecord();
+    getRecords();
     return;
-  }, [id, navigate]);
+  }, [records.length]);
+
+  //fetches the records from the database
+
+  // useEffect(() => {
+  //   async function getRecord() {
+  //     const response = await fetch(`http://localhost:3001/record/${id}`);
+  //     if (!response.ok) {
+  //       const message = `An error occurred: ${response.statusText}`;
+  //       window.alert(message);
+  //       return;
+  //     }
+  //     const records = await response.json();
+  //     if (!records) {
+  //       window.alert(`Record with id ${id} not found`);
+  //       navigate("/");
+  //       return;
+  //     }
+  //     setRecords(records);
+  //     console.log(records);
+  //   }
+  //   getRecord();
+  //   return;
+  // }, [id, navigate]);
 
   return (
     <div className="response">
@@ -85,7 +86,15 @@ const Success = () => {
               <th>Pet Name</th>
             </tr>
           </thead>
-          <tbody>{records}</tbody>
+          <tbody>
+            {records.map((record) => {
+              return (
+                <>
+                  <RecordEmail key={record._id} record={record} />
+                </>
+              );
+            })}
+          </tbody>
         </table>
       </div>
 
@@ -101,6 +110,4 @@ const Success = () => {
       </div>
     </div>
   );
-};
-
-export default Success;
+}

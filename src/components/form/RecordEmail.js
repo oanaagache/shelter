@@ -1,5 +1,4 @@
 import React from "react";
-
 import "../form/Record.css";
 
 export default function RecordEmail(props) {
