@@ -48,11 +48,9 @@ export const DogData = {
 
   li21: "The majority of the surrendered dogs (47.7%) and cats (40.3%) were between 5 months and 3 years of age.",
   li22: "The majority of dogs (37.1%) and cats (30.2) had been owned from 7 months to 1 year.",
-  li23: "The majority of dogs (37.1%) and cats (30.2) had been owned from 7 months to 1 year.",
-  li24: "Approximately half of the pets (42.8% of dogs; 50.8% of cats) surrendered were not neutered. Many of the pets relinquished (33% of dogs; 46.9% of cats) had not been to a veterinarian.",
-  li25: "Approximately half of the pets (42.8% of dogs; 50.8% of cats) surrendered were not neutered. Many of the pets relinquished (33% of dogs; 46.9% of cats) had not been to  a veterinarian.",
-  li26: "Close to equal numbers of male and female dogs and cats were surrendered.",
-  li27: "Most dogs (96%) had not received any obedience training.",
+  li23: "Approximately half of the pets (42.8% of dogs; 50.8% of cats) surrendered were not neutered. Many of the pets relinquished (33% of dogs; 46.9% of cats) had not been to a veterinarian.",
+  li24: "Close to equal numbers of male and female dogs and cats were surrendered.",
+  li25: "Most dogs (96%) had not received any obedience training.",
 
   subtitle8: "Characteristics of Pet Owners Surrendering Pets",
   subtitle9:
@@ -81,47 +79,47 @@ export const DogData = {
 
   subtitle19: "Before You Bring Your Dog Home:",
 
-  li28: "Determine where your dog will be spending most of his    time. Because he will be under a lot of stress with the change of environment (from a shelter or foster home to your house), he may forget any housebreaking (if any) he’s learned. Often a kitchen will work best for easy clean-up.",
-  li29: "If you plan on crate training your dog, be sure to have a crate set up and ready to go for when you bring your new dog home. Find out more about crate training your dog.",
-  li30: "Training your dog will start the first moment you have    him. Take time to create a vocabulary list everyone will    use when giving your dog directions. This will help    prevent confusion and help your dog learn his commands    more quickly. Not sure which commands to use? Check out: ",
-  li31: "Bring an ID tag with your phone number on it with you when    you pick up your dog so that he has an extra measure of    safety for the ride home and the first few uneasy days. If    he is microchipped, be sure to register your contact    information with the chip’s company, if the rescue or    shelter did not already do so.",
+  li26: "Determine where your dog will be spending most of his    time. Because he will be under a lot of stress with the change of environment (from a shelter or foster home to your house), he may forget any housebreaking (if any) he’s learned. Often a kitchen will work best for easy clean-up.",
+  li27: "If you plan on crate training your dog, be sure to have a crate set up and ready to go for when you bring your new dog home. Find out more about crate training your dog.",
+  li28: "Training your dog will start the first moment you have    him. Take time to create a vocabulary list everyone will    use when giving your dog directions. This will help    prevent confusion and help your dog learn his commands    more quickly. Not sure which commands to use? Check out: ",
+  li29: "Bring an ID tag with your phone number on it with you when    you pick up your dog so that he has an extra measure of    safety for the ride home and the first few uneasy days. If    he is microchipped, be sure to register your contact    information with the chip’s company, if the rescue or    shelter did not already do so.",
 
   subtitle20: "First Day:",
 
-  li32: "If he came from another home, objects like leashes, hands,    rolled-up newspapers and magazines, feet, chairs, and sticks    are just some of the pieces of “training equipment” that may    have been used on this dog. Words like “come here” and “lie    down” may bring forth a reaction other than the one you    expect. Or maybe he led a sheltered life and was never    socialized to children or sidewalk activity. This dog may be    the product of a never-ending series of scrambled    communications and unreal expectations that will require    patience on your part.",
-  li33: "Remove poisonous houseplants, such as amaryllis, mistletoe,    holly, or poinsettia, or keep them in hanging baskets up    high, where your puppy cannot reach them.",
+  li30: "If he came from another home, objects like leashes, hands,    rolled-up newspapers and magazines, feet, chairs, and sticks    are just some of the pieces of “training equipment” that may    have been used on this dog. Words like “come here” and “lie    down” may bring forth a reaction other than the one you    expect. Or maybe he led a sheltered life and was never    socialized to children or sidewalk activity. This dog may be    the product of a never-ending series of scrambled    communications and unreal expectations that will require    patience on your part.",
+  li31: "Remove poisonous houseplants, such as amaryllis, mistletoe,    holly, or poinsettia, or keep them in hanging baskets up    high, where your puppy cannot reach them.",
 
   subtitle21: "Following Weeks:",
 
-  li34: "People often say they don’t see their dog’s true personality    until several weeks after adoption. Your dog may be a bit    uneasy at first as he gets to know you. Be patient and    understanding while also keeping to the schedule you intend    to maintain for feeding, walks, etc. This schedule will show    your dog what is expected of him as well as what he can    expect from you.",
+  li32: "People often say they don’t see their dog’s true personality    until several weeks after adoption. Your dog may be a bit    uneasy at first as he gets to know you. Be patient and    understanding while also keeping to the schedule you intend    to maintain for feeding, walks, etc. This schedule will show    your dog what is expected of him as well as what he can    expect from you.",
 
-  li35: "To have a long and happy life together with your dog, stick    to the original schedule you created, ensuring your dog    always has the ood, potty time, and attention he needs.    You’ll be bonded in no time! For more information on    creating a feeding schedule for your dog visit How Often    Should You Feed Your Dog?",
-  li36: "If you encounter behavior issues you are unfamiliar with,    ask your veterinarian for a trainer recommendation. Select a    trainer who uses positive reinforcement techniques to help    you and your dog overcome these behavior obstacles. Visit    Dog Training for more information on reward-based training.",
-  li37: "Bring your puppy to the veterinarian for regular checkups.    Talk to your veterinarian about any signs of illness that    you should watch out for during your puppy’s first few    months.",
+  li33: "To have a long and happy life together with your dog, stick    to the original schedule you created, ensuring your dog    always has the ood, potty time, and attention he needs.    You’ll be bonded in no time! For more information on    creating a feeding schedule for your dog visit How Often    Should You Feed Your Dog?",
+  li34: "If you encounter behavior issues you are unfamiliar with,    ask your veterinarian for a trainer recommendation. Select a    trainer who uses positive reinforcement techniques to help    you and your dog overcome these behavior obstacles. Visit    Dog Training for more information on reward-based training.",
+  li35: "Bring your puppy to the veterinarian for regular checkups.    Talk to your veterinarian about any signs of illness that    you should watch out for during your puppy’s first few    months.",
 
   img5: pic5,
   subtitle22: "Responsibilities for the Parents of the Newly Adopted Dog:",
   subtitle23:
     "Courtesy of Rondout Valley Kennels, Inc. (Sue Sternberg    suesternberg.com)",
-  li38: "Never, ever leave a child alone with your new dog. Not even  for a second to turn your head and answer the phone. The  type of relationship we see on TV between children and dogs  is a fantasy, and not a reflection of what real dogs can be  like with children.",
+  li36: "Never, ever leave a child alone with your new dog. Not even  for a second to turn your head and answer the phone. The  type of relationship we see on TV between children and dogs  is a fantasy, and not a reflection of what real dogs can be  like with children.",
 
-  li39: "No one in the family should be encouraging rough play,  wrestling, or the dog to play with his mouth on human body  parts or clothes. This is especially relevant when an adult  member of the household plays with the dog in this manner,  because when the child next excites the dog, the dog may be  stimulated to play in the same rough manner, thereby putting  the child at risk for injury.",
-  li40: "Bring your puppy to the veterinarian for regular checkups.    Talk to your veterinarian about any signs of illness that    you should watch out for during your puppy’s first few    months.",
-  li41: "Your dog should be fed his meals in an area completely  protected from and away from children, as much for a bit of  peace and privacy as it is to prevent guarding behaviors.  The dog should also be fed portions that are quickly  finished, so there is nothing left in the bowl for the dog  to linger over and guard. Empty bowls should be taken up and  put away, so the dog won’t consider guarding the feeding  area.",
-  li42: "Most children are not bitten by their own dog, but by a  friend or neighbor’s dog. This means two things: watch your  own dog closely when your child has a friend (or friends)  over. Many dogs will tolerate a lot from their own family’s  child, but not tolerate a visiting child. Visiting children  often do not behave as well as, or may behave differently  from your own children, and could bother or provoke your  dog. Consequently, if your child’s friends have dogs, you  need to, (as a responsible parent) go over and meet the  friend’s dog BEFORE you allow your child to visit their  house. It is a good idea to see the size and general nature  of your child’s friend’s dog, and check to see if the owner  of this dog will allow unsupervised interaction between the  children and the dog, to ask where and when the dog is fed,  and to check if there are any chewable toys or bones lying  around, and then to either request that they be picked up  and put away while your child visits, or ensure that their  dog has no possessiveness problems.",
+  li37: "No one in the family should be encouraging rough play,  wrestling, or the dog to play with his mouth on human body  parts or clothes. This is especially relevant when an adult  member of the household plays with the dog in this manner,  because when the child next excites the dog, the dog may be  stimulated to play in the same rough manner, thereby putting  the child at risk for injury.",
+  li38: "Bring your puppy to the veterinarian for regular checkups.    Talk to your veterinarian about any signs of illness that    you should watch out for during your puppy’s first few    months.",
+  li39: "Your dog should be fed his meals in an area completely  protected from and away from children, as much for a bit of  peace and privacy as it is to prevent guarding behaviors.  The dog should also be fed portions that are quickly  finished, so there is nothing left in the bowl for the dog  to linger over and guard. Empty bowls should be taken up and  put away, so the dog won’t consider guarding the feeding  area.",
+  li40: "Most children are not bitten by their own dog, but by a  friend or neighbor’s dog. This means two things: watch your  own dog closely when your child has a friend (or friends)  over. Many dogs will tolerate a lot from their own family’s  child, but not tolerate a visiting child. Visiting children  often do not behave as well as, or may behave differently  from your own children, and could bother or provoke your  dog. Consequently, if your child’s friends have dogs, you  need to, (as a responsible parent) go over and meet the  friend’s dog BEFORE you allow your child to visit their  house. It is a good idea to see the size and general nature  of your child’s friend’s dog, and check to see if the owner  of this dog will allow unsupervised interaction between the  children and the dog, to ask where and when the dog is fed,  and to check if there are any chewable toys or bones lying  around, and then to either request that they be picked up  and put away while your child visits, or ensure that their  dog has no possessiveness problems.",
 
   img6: pic6,
   subtitle24: "When to Phone the Shelter for Advice:",
-  li43: "Any signs of physical rough play from the dog towards the  child",
-  li44: "Any signs of displays of rough, physical strength from the  dog towards the child",
-  li45: "Any growling (even during play)",
-  li46: "Any snapping or nipping",
-  li47: "Any humping or mounting of the child OR adults",
-  li48: "Any avoidance or resentment of physical contact (dog backs off or leaves the room when child hugs or pets or gets close to your dog.)",
-  li49: "Any signs the dog is afraid of the child (your dog backs away or tries to escape when the child appears or gets close.)",
-  li50: "Your dog seems “jealous” of intimacy or physical affection  between parents or especially between child and parent (the  dog barks or cuts in between people during intimacy.)",
-  li51: "Any signs the dog is guarding his food bowl, his bones, his  toys, or “stolen” items (the dog may tense up, freeze,  stiffen, growl, snap, show his teeth, snarl, or just give a  ‘hairy eyeball’ to anyone approaching or coming to near his  item.",
-  li52: "Your dog seems out of control or disobedient and “wild” with  children who are playing or running around.",
+  li41: "Any signs of physical rough play from the dog towards the  child",
+  li42: "Your dog seems out of control or disobedient and “wild” with  children who are playing or running around.",
+  li43: "Any growling (even during play)",
+  li44: "Any snapping or nipping",
+  li45: "Any humping or mounting of the child OR adults",
+  li46: "Any avoidance or resentment of physical contact (dog backs off or leaves the room when child hugs or pets or gets close to your dog.)",
+  li47: "Any signs the dog is afraid of the child (your dog backs away or tries to escape when the child appears or gets close.)",
+  li48: "Your dog seems “jealous” of intimacy or physical affection  between parents or especially between child and parent (the  dog barks or cuts in between people during intimacy.)",
+  li49: "Any signs the dog is guarding his food bowl, his bones, his  toys, or “stolen” items (the dog may tense up, freeze,  stiffen, growl, snap, show his teeth, snarl, or just give a  ‘hairy eyeball’ to anyone approaching or coming to near his  item.",
+  li50: "Your dog seems out of control or disobedient and “wild” with  children who are playing or running around.",
   subtitle25:
     "Remember that with proper puppy care, your new pet will grow  into a happy, healthy dog — and provide you with love and  companionship for years to come.",
 
