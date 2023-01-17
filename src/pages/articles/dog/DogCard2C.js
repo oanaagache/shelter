@@ -1,11 +1,18 @@
 import React, { useState } from "react";
 import Modal from "react-modal";
-import { Link } from "react-router-dom";
 import { DogData as item } from "./DogData";
 import "./DogCard.css";
 
 export default function DogCard2C(props) {
-  const [modalOpen, setModalOpen] = useState(false);
+  const [modalIsOpen, setIsOpen] = useState(false);
+
+  function openModal() {
+    setIsOpen(true);
+  }
+
+  function closeModal() {
+    setIsOpen(false);
+  }
 
   return (
     <div className="dogCard-cont">
@@ -24,8 +31,8 @@ export default function DogCard2C(props) {
           <h3>{props.article.title2}</h3>
           <h6>{props.article.subtitle13}</h6>
 
-          <button onClick={() => setModalOpen(true)}>Read more</button>
-          <Modal isOpen={modalOpen} ariaHideApp={false}>
+          <button onClick={openModal}>Read more</button>
+          <Modal isOpen={modalIsOpen} ariaHideApp={false}>
             <h3>{props.article.subtitle14}</h3>
             <br />
             <img
@@ -103,7 +110,7 @@ export default function DogCard2C(props) {
             </ul>
             <p>{props.article.subtitle25}</p> */}
             <p>©Petfinder.com</p>
-            <button onClick={() => setModalOpen(false)}>Close</button>
+            <button onClick={closeModal}>Close</button>
           </Modal>
         </div>
       </div>

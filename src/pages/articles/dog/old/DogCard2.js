@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import Modal from "react-modal";
 import { Link } from "react-router-dom";
-import { DogData as item } from "./DogData";
-import "./DogCard.css";
+import { DogData as item } from "../DogData";
+import "../DogCard.css";
 
 function DogCard2() {
   const [modalOpen, setModalOpen] = useState(false);
@@ -98,8 +98,6 @@ function DogCard2() {
               <li>{item.li48}</li>
               <li>{item.li49}</li>
               <li>{item.li50}</li>
-              <li>{item.li51}</li>
-              <li>{item.li52}</li>
             </ul>
             <p>{item.subtitle25}</p>
             <p>©Petfinder.com</p>

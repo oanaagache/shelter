@@ -1,10 +1,18 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Modal from "react-modal";
 import { DogData as item } from "./DogData";
 import "./DogCard.css";
 
-export default function DogCard1C({ articles }) {
-  const [modalOpen, setModalOpen] = useState(false);
+export default function DogCard1C(props) {
+  const [modalIsOpen, setIsOpen] = useState(false);
+
+  function openModal() {
+    setIsOpen(true);
+  }
+
+  function closeModal() {
+    setIsOpen(false);
+  }
 
   return (
     <div className="dogCard-cont">
@@ -20,12 +28,12 @@ export default function DogCard1C({ articles }) {
 
       <div className="dogCard-card-inner">
         <div className="dogCard-card-details">
-          <h3>{articles.title1}</h3>
-          <h6>{articles.subtitle1}</h6>
+          <h3>{props.article.title1}</h3>
+          <h6>{props.article.subtitle1}</h6>
 
-          <button onClick={() => setModalOpen(true)}>Read more</button>
-          <Modal isOpen={modalOpen} ariaHideApp={false}>
-            <h3>{articles.title1}</h3>
+          <button onClick={openModal}>Read more</button>
+          <Modal isOpen={modalIsOpen} ariaHideApp={false}>
+            <h3>{props.article.title1}</h3>
             <img
               style={{
                 width: 350,
@@ -50,8 +58,8 @@ export default function DogCard1C({ articles }) {
               <li>{props.article.li9}</li>
               <li>{props.article.li10}</li>
             </ol>
-            <p>{props.article.subtitle5}</p>
-            <ol>
+            <p>{props.article.subtitle5}</p> */}
+            {/* <ol>
               <li>{props.article.li11}</li>
               <li>{props.article.li12}</li>
               <li>{props.article.li13}</li>
@@ -78,7 +86,7 @@ export default function DogCard1C({ articles }) {
             <p>{props.article.subtitle11}</p>
             <p>{props.article.subtitle12}</p> */}
             <p>©Petfinder.com</p>
-            <button onClick={() => setModalOpen(false)}>Close</button>
+            <button onClick={closeModal}>Close</button>
           </Modal>
         </div>
       </div>

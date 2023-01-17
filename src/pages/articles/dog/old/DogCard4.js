@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import Modal from "react-modal";
-import { DogData as item } from "./DogData";
+import { DogData as item } from "../DogData";
 import Table from "react-bootstrap/Table";
-import "./DogCard.css";
+import "../DogCard.css";
 
 function DogCard4() {
   const [modalOpen, setModalOpen] = useState(false);
