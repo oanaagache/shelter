@@ -3,7 +3,7 @@ import Modal from "react-modal";
 import { DogData as item } from "./DogData";
 import "./DogCard.css";
 
-export default function DogCard1C(props) {
+export default function DogCard1C({ articles }) {
   const [modalOpen, setModalOpen] = useState(false);
 
   return (
@@ -20,12 +20,12 @@ export default function DogCard1C(props) {
 
       <div className="dogCard-card-inner">
         <div className="dogCard-card-details">
-          <h3>{props.article.title1}</h3>
-          <h6>{props.article.subtitle1}</h6>
+          <h3>{articles.title1}</h3>
+          <h6>{articles.subtitle1}</h6>
 
           <button onClick={() => setModalOpen(true)}>Read more</button>
-          <Modal isOpen={modalOpen}>
-            <h3>{props.article.title1}</h3>
+          <Modal isOpen={modalOpen} ariaHideApp={false}>
+            <h3>{articles.title1}</h3>
             <img
               style={{
                 width: 350,
@@ -35,7 +35,7 @@ export default function DogCard1C(props) {
               alt="Not found"
             />
             <br />
-            <p>{props.article.subtitle2}</p>
+            {/* <p>{props.article.subtitle2}</p>
             <h5>{props.article.subtitle3}</h5>
             <h6>{props.article.subtitle4}</h6>
             <ol>
@@ -76,7 +76,7 @@ export default function DogCard1C(props) {
             <p>{props.article.subtitle9}</p>
             <p>{props.article.subtitle10}</p>
             <p>{props.article.subtitle11}</p>
-            <p>{props.article.subtitle12}</p>
+            <p>{props.article.subtitle12}</p> */}
             <p>©Petfinder.com</p>
             <button onClick={() => setModalOpen(false)}>Close</button>
           </Modal>

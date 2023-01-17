@@ -44,13 +44,14 @@ const ArticlesDog = () => {
       <div className="articlesDog-title">More About Dog Adoption</div>
 
       <div className="articlesDog-container">
-        {articles.map((article) => {
+        <DogCard1C articles={articles} />
+        {/* <DogCard2C articles={articles} />;  */}
+        {/* {articles.map((article) => {
           return <DogCard1C key={article._id} article={article} />;
         })}
-        {/* {articles.map((article) => {
+        {articles.map((article) => {
           return (
             <>
-              
               <DogCard2C key={article._id} article={article} />
             </>
           );

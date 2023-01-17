@@ -25,7 +25,7 @@ export default function DogCard2C(props) {
           <h6>{props.article.subtitle13}</h6>
 
           <button onClick={() => setModalOpen(true)}>Read more</button>
-          <Modal isOpen={modalOpen}>
+          <Modal isOpen={modalOpen} ariaHideApp={false}>
             <h3>{props.article.subtitle14}</h3>
             <br />
             <img
@@ -36,7 +36,7 @@ export default function DogCard2C(props) {
               src={item.img2}
             />
             <br />
-            <p>{props.article.subtitle15}</p>
+            {/* <p>{props.article.subtitle15}</p>
             <p>{props.article.subtitle16}</p>
             <p>{props.article.subtitle17}</p>
             <p>{props.article.subtitle18}</p>
@@ -101,7 +101,7 @@ export default function DogCard2C(props) {
               <li>{props.article.li49}</li>
               <li>{props.article.li50}</li>
             </ul>
-            <p>{props.article.subtitle25}</p>
+            <p>{props.article.subtitle25}</p> */}
             <p>©Petfinder.com</p>
             <button onClick={() => setModalOpen(false)}>Close</button>
           </Modal>
