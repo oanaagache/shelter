@@ -5,7 +5,7 @@ import "./Footer.css";
 const Footer = () => {
   return (
     <div className="footer">
-      <div className="footer-content">
+      <div className="footer-cont">
         <div className="footer-inner">
           <div className="footer-title">
             © 2022 Paws Animal Shelter. All Rights Reserved

@@ -116,7 +116,7 @@ const Register = () => {
                 </h6>
               </span>
             </div>
-            <div className="register-button" style={{ paddingRight: 700 }}>
+            <div className="register-button">
               {" "}
               <button type="submit" className="filter-btn">
                 Register

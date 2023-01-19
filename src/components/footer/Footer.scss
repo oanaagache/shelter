@@ -7,6 +7,7 @@ $font-title: "Segoe UI", sans-serif;
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  overflow-x: hidden;
 }
 
 .footer {
@@ -15,7 +16,7 @@ $font-title: "Segoe UI", sans-serif;
   background-color: $black;
 }
 
-.footer-content {
+.footer-cont {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -62,7 +63,7 @@ $font-title: "Segoe UI", sans-serif;
     background-color: $black;
   }
 
-  .footer-content {
+  .footer-cont {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -126,7 +127,7 @@ $font-title: "Segoe UI", sans-serif;
     background-color: $black;
   }
 
-  .footer-content {
+  .footer-cont {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -174,7 +175,7 @@ $font-title: "Segoe UI", sans-serif;
     background-color: $black;
   }
 
-  .footer-content {
+  .footer-cont {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -222,7 +223,7 @@ $font-title: "Segoe UI", sans-serif;
     background-color: $black;
   }
 
-  .footer-content {
+  .footer-cont {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -270,7 +271,7 @@ $font-title: "Segoe UI", sans-serif;
     background-color: $black;
   }
 
-  .footer-content {
+  .footer-cont {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -318,7 +319,7 @@ $font-title: "Segoe UI", sans-serif;
     background-color: $black;
   }
 
-  .footer-content {
+  .footer-cont {
     display: flex;
     align-items: center;
     justify-content: center;

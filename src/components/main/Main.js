@@ -1,6 +1,6 @@
 import React from "react";
 import logo3 from "../../images/image3.png";
-import "../main/Main.css";
+import "./Main.css";
 
 const Main = () => {
   return (
@@ -17,10 +17,10 @@ const Main = () => {
       ></div>
 
       <div className="main-text">
-        <h3 className="main-title">
+        <div className="main-title">
           {" "}
           We aim to find best companions for homeless pets in need
-        </h3>
+        </div>
       </div>
     </div>
   );
