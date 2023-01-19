@@ -4,10 +4,8 @@ import { Link } from "react-router-dom";
 import "../../../../src/index.scss";
 import DogCard1 from "./old/DogCard1";
 import DogCard2 from "./old/DogCard2";
-import DogCard1C from "./DogCard1C";
-import DogCard2C from "./DogCard2C";
-import DogCard3 from "./old/DogCard3";
-import DogCard4 from "./old/DogCard4";
+import DogCard from "./DogCard";
+
 import "./ArticlesDog.css";
 
 const ArticlesDog = () => {
@@ -46,10 +44,8 @@ const ArticlesDog = () => {
 
       <div className="articlesDog-container">
         {articles.map((article) => {
-          return <DogCard1C key={article._id} article={article} />;
+          return <DogCard key={article._id} article={article} />;
         })}
-        {/* <DogCard1C /> */}
-        {/* <DogCard2C /> */}
       </div>
     </div>
   );
