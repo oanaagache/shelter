@@ -1,9 +1,14 @@
 import { useEffect, useState } from "react";
 import FileBase64 from "react-file-base64";
+import { useNavigate } from "react-router-dom";
 
 export default function AddItems() {
-  const [item, setItem] = useState({ title: "", image: "" });
+  const [item, setItem] = useState({ title1: "", title2: "", image: "" });
   const [items, setItems] = useState([]);
+
+  let navigate = useNavigate();
+
+  const [refresh, setRefresh] = useState(false);
 
   const onSubmitHandler = async (e) => {
     e.preventDefault();
@@ -18,8 +23,6 @@ export default function AddItems() {
       window.alert(error);
       return;
     });
-
-    //setItems([...items, item]);
   };
 
   //  fetches the articles from the database.
@@ -39,27 +42,46 @@ export default function AddItems() {
     return;
   }, [items.length]);
 
+  const Refresh = () => {
+    setRefresh((refresh) => !refresh);
+  };
+
   return (
     <div className="container">
       <pre>{JSON.stringify(item, null, "\t")}</pre>
       <form action="" onSubmit={onSubmitHandler}>
-        {/* <label htmlFor="inputFirstName">Add title:</label> */}
+        <label htmlFor="inputFirstName">Add title1:</label>
         <input
-          // type="text"
-          // className="form-control"
-          // id="inputFirstName"
-          // value={item.title || ""}
           type="text"
-          className="input-field"
-          onChange={(e) => setItem({ ...item, title: e.target.value })}
+          className="form-control"
+          id="inputFirstName"
+          value={item.title1 || ""}
+          // type="text"
+          // className="input-field"
+          onChange={(e) => setItem({ ...item, title1: e.target.value })}
         />
+
+        <label htmlFor="inputFirstName">Add title2:</label>
+        <input
+          type="text"
+          className="form-control"
+          id="inputFirstName"
+          value={item.title2 || ""}
+          // type="text"
+          // className="input-field"
+          onChange={(e) => setItem({ ...item, title2: e.target.value })}
+        />
+
         <FileBase64
           type="file"
           multiple={false}
           onDone={({ base64 }) => setItem({ ...item, image: base64 })}
         />
         <div className="right-align">
-          <button className="btn">Submit</button>
+          <h6>Please submit only after the photo is uploaded</h6>
+          <button className="btn" onClick={Refresh}>
+            Submit
+          </button>
         </div>
       </form>
 
@@ -68,13 +90,18 @@ export default function AddItems() {
           <div className="card-image waves-effect waves-block waves-light">
             <img
               className="activator"
-              style={{ width: "100%", height: 300 }}
+              style={{ width: "30%", height: "30%" }}
               src={item.image}
             />
           </div>
           <div className="card-content">
             <span className="card-title activator grey-text text-darken-4">
-              {item.title}
+              {item.title1}
+            </span>
+          </div>
+          <div className="card-content">
+            <span className="card-title activator grey-text text-darken-4">
+              {item.title2}
             </span>
           </div>
         </div>
