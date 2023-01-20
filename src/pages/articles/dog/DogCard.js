@@ -22,7 +22,8 @@ export default function DogCard(props) {
             width: 350,
             height: 350,
           }}
-          src={item.img1}
+          //src={item.img1}
+          src={props.article.image}
         />
       </div>
 
@@ -39,7 +40,8 @@ export default function DogCard(props) {
                 width: 350,
                 height: 350,
               }}
-              src={item.img1}
+              //src={item.img1}
+              src={props.article.image}
               alt="Not found"
             />
             <br />

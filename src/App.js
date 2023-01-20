@@ -18,6 +18,7 @@ import Register from "./components/register/Register";
 import Login from "./components/login/Login";
 import Edit from "./components/form/Edit";
 import List from "./components/form/List";
+import AddArticles from "./components/form/AddArticles";
 
 const App = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -60,6 +61,7 @@ const App = () => {
         <Route path="/success/:email" element={<Success />} />
         <Route path="/edit/:id" element={<Edit />} />
         <Route path="/list" element={<List />} />
+        <Route path="/addarticles" element={<AddArticles />} />
       </Routes>
       <Footer />
     </Router>
