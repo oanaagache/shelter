@@ -1,50 +1,25 @@
-import React, { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
-import { useParams } from "react-router-dom";
+import React, { useState } from "react";
 import { Form } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Link } from "react-router-dom";
 import logo from "../../images/image4.svg";
 import "../login/Login.css";
+import { useNavigate } from "react-router-dom";
 
 const LoginMongo = () => {
   const [loginUser, setLoginUser] = useState({
     email: "",
     password: "",
   });
-  const params = useParams();
 
   const navigate = useNavigate();
-  const [records, setRecords] = useState([]);
-
-  const [userRecord, setUserRecord] = useState([]);
-
-  // //  fetches the records from the database.
-  // useEffect(() => {
-  //   async function getRecords() {
-  //     const response = await fetch(
-  //       // `http://localhost:3001/user/${params.email}`
-  //       `http://localhost:3001/user/${loginUser.email}`
-  //     );
-  //     if (!response.ok) {
-  //       const message = `An error occurred: ${response.statusText}`;
-  //       window.alert(message);
-  //       return;
-  //     }
-  //     const records = await response.json();
-  //     setRecords(records);
-  //     // console.log(records);
-  //   }
-  //   getRecords();
-  //   return;
-  // }, [params.email, navigate]);
 
   //store values in localStorage
   const handleLogin = (evt) => {
     evt.preventDefault();
 
-    console.log(records);
-    console.log(loginUser);
+    // console.log(records);
+    // console.log(loginUser);
 
     async function getUser() {
       const response = await fetch(
@@ -53,7 +28,11 @@ const LoginMongo = () => {
           method: "GET",
         }
       );
+
       const userRecord = await response.json();
+      if (userRecord.length === 0) {
+        alert(`User ${loginUser.email} not found in the DB!`);
+      }
       const user = userRecord[0];
 
       // console.log(user);
@@ -64,7 +43,8 @@ const LoginMongo = () => {
         loginUser.email === user.email &&
         loginUser.password === user.password
       ) {
-        alert("You are logged in");
+        //alert("You are logged in");
+        navigate("/list");
       } else {
         alert("Please register");
       }
@@ -86,10 +66,7 @@ const LoginMongo = () => {
           </Link>
         </div>
 
-        <div className="login-title">
-          Login {records.email}
-          {records.password}
-        </div>
+        <div className="login-title">Login</div>
 
         <div className="login-form">
           <Form onSubmit={handleLogin}>
