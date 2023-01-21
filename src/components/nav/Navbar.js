@@ -104,7 +104,7 @@ const Navbar = (props) => {
             <button
               className="btn-log"
               onClick={() => {
-                navigate("/login");
+                navigate("/loginmongo");
               }}
             >
               Login

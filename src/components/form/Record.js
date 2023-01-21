@@ -8,6 +8,7 @@ export default function Record(props) {
       <td>{props.record.firstName}</td>
       <td>{props.record.surname}</td>
       <td>{props.record.email}</td>
+      <td>{props.record.password}</td>
       {/* <td>{props.record.address}</td> */}
       <td>{props.record.city}</td>
       <td>{props.record.country}</td>

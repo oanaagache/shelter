@@ -18,7 +18,9 @@ import Register from "./components/register/Register";
 import Login from "./components/login/Login";
 import Edit from "./components/form/Edit";
 import List from "./components/form/List";
-import AddArticles from "./components/form/AddArticles";
+//import AddArticles from "./components/form/AddArticles";
+import RegisterMongo from "./components/register/RegisterMongo";
+import LoginMongo from "./components/login/LoginMongo";
 
 const App = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -49,19 +51,26 @@ const App = () => {
         <Route path="/countryselector" element={<CountrySelector />} />
         <Route path="/donate" element={<Donate />} />
         <Route path="/foster" element={<Foster />} />
+        <Route path="/Navbar:isLoggedIn" element={<Navbar />} />
         <Route
           path="/login"
           element={
             <Login isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />
           }
         />
-        <Route path="/Navbar:isLoggedIn" element={<Navbar />} />
         <Route path="/register" element={<Register />} />
+        <Route
+          path="/loginmongo"
+          element={
+            <LoginMongo isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />
+          }
+        />
+        <Route path="/registermongo" element={<RegisterMongo />} />
         <Route path="/success/:name" element={<Success />} />
         <Route path="/success/:email" element={<Success />} />
         <Route path="/edit/:id" element={<Edit />} />
         <Route path="/list" element={<List />} />
-        <Route path="/addarticles" element={<AddArticles />} />
+        {/* <Route path="/addarticles" element={<AddArticles />} /> */}
       </Routes>
       <Footer />
     </Router>

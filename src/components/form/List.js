@@ -56,6 +56,7 @@ export default function List() {
                 <th>Name</th>
                 <th>Surname</th>
                 <th>Email</th>
+                <th>Password</th>
                 {/* <th>Address</th> */}
                 <th>City</th>
                 <th>Country</th>
