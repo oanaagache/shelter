@@ -46,56 +46,34 @@ const LoginMongo = () => {
     console.log(records);
     console.log(loginUser);
 
-    async function getUser(user) {
-      const response = await fetch(`http://localhost:3001/user/${user}`, {
+    async function getUser(email) {
+      const response = await fetch(`http://localhost:3001/user/${email}`, {
         method: "GET",
       });
       const userRecord = await response.json();
-      // console.log(userRecord[0]);
-      // console.log(userRecord[0].email);
-      // console.log(userRecord[0].password);
-      //return userRecord;
-      setUserRecord(userRecord);
+
+      const user = userRecord[0];
+
+      console.log(user);
+      console.log(user.email);
+      console.log(user.password);
+
+      if (
+        loginUser.email === user.email &&
+        loginUser.password === user.password
+      ) {
+        alert("You are logged in");
+        //console.log("You are logged in");
+      } else {
+        alert("Please register");
+        //console.log("Please register");
+      }
+
+      // return userRecord;
+      // setUserRecord(userRecord);
     }
 
-    const user = userRecord[0];
     getUser(loginUser.email);
-    console.log(user);
-    console.log(user.email);
-    console.log(user.password);
-
-    // let length = records.length;
-    // for (let i = 0; i < length; i++) {
-    //   console.log(records[i]);
-    // }
-
-    if (
-      loginUser.email === user.email &&
-      loginUser.password === user.password
-    ) {
-      alert("You are logged in");
-      //console.log("You are logged in");
-    } else {
-      alert("Please register");
-      //console.log("Please register");
-    }
-
-    // var emailsArray = [];
-    // var length = records.length;
-    // for (var i = 0; i < length; i++) {
-    //   console.log(records[i].email);
-    //   emailsArray.push(records[i].email);
-    //   if (
-    //     loginUser.email === records[i].email &&
-    //     loginUser.password === records[i].password
-    //   ) {
-    //     alert("You are logged in");
-    //   } else {
-    //     alert("Please register");
-    //   }
-    // }
-
-    //console.log(records.email);
   };
 
   return (
