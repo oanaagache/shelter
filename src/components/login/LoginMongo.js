@@ -17,6 +17,8 @@ const LoginMongo = () => {
   const navigate = useNavigate();
   const [records, setRecords] = useState([]);
 
+  const [userRecord, setUserRecord] = useState([]);
+
   // //  fetches the records from the database.
   // useEffect(() => {
   //   async function getRecords() {
@@ -41,6 +43,7 @@ const LoginMongo = () => {
   const handleLogin = (evt) => {
     evt.preventDefault();
 
+    console.log(records);
     console.log(loginUser);
 
     async function getUser(user) {
@@ -48,14 +51,18 @@ const LoginMongo = () => {
         method: "GET",
       });
       const userRecord = await response.json();
-      // console.log(userRecord);
-      return userRecord[0];
+      // console.log(userRecord[0]);
+      // console.log(userRecord[0].email);
+      // console.log(userRecord[0].password);
+      //return userRecord;
+      setUserRecord(userRecord);
     }
 
-    const user = getUser(loginUser.email);
+    const user = userRecord[0];
+    getUser(loginUser.email);
     console.log(user);
-    // console.log("user.email:", user.email);
-    // console.log("user.password:", user.password);
+    console.log(user.email);
+    console.log(user.password);
 
     // let length = records.length;
     // for (let i = 0; i < length; i++) {
@@ -63,13 +70,14 @@ const LoginMongo = () => {
     // }
 
     if (
-      loginUser.email === records.email &&
-      loginUser.password === records.password
+      loginUser.email === user.email &&
+      loginUser.password === user.password
     ) {
-      console.log("You are logged in");
+      alert("You are logged in");
+      //console.log("You are logged in");
     } else {
-      // alert("Please register");
-      console.log("Please register");
+      alert("Please register");
+      //console.log("Please register");
     }
 
     // var emailsArray = [];
