@@ -24,7 +24,7 @@ import LoginMongo from "./components/login/LoginMongo";
 
 const App = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
-  // const [isAdmin, setAdmin] = useState(false);
+  const [isAdmin, setAdmin] = useState(false);
 
   useEffect(() => {
     setIsLoggedIn(JSON.parse(localStorage.getItem("loggedIn")));
@@ -51,6 +51,7 @@ const App = () => {
         <Route path="/countryselector" element={<CountrySelector />} />
         <Route path="/donate" element={<Donate />} />
         <Route path="/foster" element={<Foster />} />
+        <Route path="/Navbar:isAdmin" element={<Navbar />} />
         <Route path="/Navbar:isLoggedIn" element={<Navbar />} />
         <Route
           path="/login"
@@ -62,7 +63,12 @@ const App = () => {
         <Route
           path="/loginmongo"
           element={
-            <LoginMongo isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />
+            <LoginMongo
+              isLoggedIn={isLoggedIn}
+              setIsLoggedIn={setIsLoggedIn}
+              isAdmin={isAdmin}
+              setAdmin={setAdmin}
+            />
           }
         />
         <Route path="/registermongo" element={<RegisterMongo />} />

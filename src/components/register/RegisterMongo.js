@@ -29,6 +29,14 @@ const RegisterMongo = () => {
     });
   };
 
+  // //store values in localStorage
+  // const handleSubmit = (evt) => {
+  //   evt.preventDefault();
+  //   //store user in json format in "user"
+  //   localStorage.setItem("user", JSON.stringify(registeredUser));
+  //   navigate("/login");
+  // };
+
   return (
     <>
       <div className="register-cont">

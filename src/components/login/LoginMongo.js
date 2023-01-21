@@ -6,7 +6,9 @@ import logo from "../../images/image4.svg";
 import "../login/Login.css";
 import { useNavigate } from "react-router-dom";
 
-const LoginMongo = () => {
+const LoginMongo = (props) => {
+  const { setIsLoggedIn, setAdmin } = props;
+
   const [loginUser, setLoginUser] = useState({
     email: "",
     password: "",
@@ -43,10 +45,25 @@ const LoginMongo = () => {
         loginUser.email === user.email &&
         loginUser.password === user.password
       ) {
-        //alert("You are logged in");
+        localStorage.setItem("loggedIn", true);
+        setIsLoggedIn(true);
+
+        //store values in localStorage
+        localStorage.setItem("user", JSON.stringify(loginUser));
+        navigate("/");
+      } else {
+        navigate("/registermongo");
+      }
+
+      if (
+        loginUser.email === "oana.luciana.agache@gmail.com" &&
+        loginUser.password === "123456"
+      ) {
+        localStorage.setItem("Admin is loggedIn", true);
+        setAdmin(true);
         navigate("/list");
       } else {
-        alert("Please register");
+        navigate("/");
       }
     }
     getUser();

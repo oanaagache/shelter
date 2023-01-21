@@ -7,7 +7,7 @@ import { useNavigate } from "react-router-dom";
 const Navbar = (props) => {
   let navigate = useNavigate();
 
-  const { isLoggedIn } = props;
+  const { isLoggedIn, isAdmin } = props;
 
   const handleClick = () => {
     localStorage.removeItem("loggedIn");
