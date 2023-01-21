@@ -46,34 +46,30 @@ const LoginMongo = () => {
     console.log(records);
     console.log(loginUser);
 
-    async function getUser(email) {
-      const response = await fetch(`http://localhost:3001/user/${email}`, {
-        method: "GET",
-      });
+    async function getUser() {
+      const response = await fetch(
+        `http://localhost:3001/user/${loginUser.email}`,
+        {
+          method: "GET",
+        }
+      );
       const userRecord = await response.json();
-
       const user = userRecord[0];
 
-      console.log(user);
-      console.log(user.email);
-      console.log(user.password);
+      // console.log(user);
+      // console.log(user.email);
+      // console.log(user.password);
 
       if (
         loginUser.email === user.email &&
         loginUser.password === user.password
       ) {
         alert("You are logged in");
-        //console.log("You are logged in");
       } else {
         alert("Please register");
-        //console.log("Please register");
       }
-
-      // return userRecord;
-      // setUserRecord(userRecord);
     }
-
-    getUser(loginUser.email);
+    getUser();
   };
 
   return (
