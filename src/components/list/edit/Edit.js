@@ -76,7 +76,7 @@ const Edit = () => {
         "Content-Type": "application/json",
       },
     });
-    navigate("/");
+    navigate("/list");
   };
 
   return (

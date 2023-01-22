@@ -9,7 +9,7 @@ $background-color: rgb(126, 63, 102);
 }
 
 .response-title {
-  margin: 20px 0 20px 0;
+  margin: 10px 10px 0 0;
 }
 
 .success-button {
@@ -23,6 +23,10 @@ $background-color: rgb(126, 63, 102);
   background-color: $background-color;
   margin: 80px 20px 80px 20px;
   font-size: 24px;
+}
+
+.list {
+  margin: 20px 0 0 0;
 }
 
 //sm: { min: "640px", max: "767px" },

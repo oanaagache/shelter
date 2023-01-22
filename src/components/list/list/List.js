@@ -47,7 +47,7 @@ const List = () => {
           </Link>
         </div>
 
-        <div className="list-title">Record List</div>
+        <div className="list-title">Users List</div>
 
         <div className="list">
           <table>
@@ -57,10 +57,10 @@ const List = () => {
                 <th>Surname</th>
                 <th>Email</th>
                 <th>Password</th>
-                {/* <th>Address</th> */}
+                <th>Address</th>
                 <th>City</th>
                 <th>Country</th>
-                {/* <th>Code</th> */}
+                <th>Code</th>
                 <th>Have Children</th>
                 <th>Have Pets</th>
                 <th>Pet Name</th>

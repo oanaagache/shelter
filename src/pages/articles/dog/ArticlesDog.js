@@ -2,8 +2,6 @@ import React, { useEffect, useState } from "react";
 import logo from "../../../images/image4.svg";
 import { Link } from "react-router-dom";
 import "../../../../src/index.scss";
-import DogCard1 from "./old/DogCard1";
-import DogCard2 from "./old/DogCard2";
 import DogCard from "./DogCard";
 
 import "./ArticlesDog.css";

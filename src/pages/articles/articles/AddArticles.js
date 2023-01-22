@@ -53,8 +53,6 @@ const AddItems = () => {
           className="form-control"
           id="inputFirstName"
           value={item.title1 || ""}
-          // type="text"
-          // className="input-field"
           onChange={(e) => setItem({ ...item, title1: e.target.value })}
         />
 
@@ -64,8 +62,6 @@ const AddItems = () => {
           className="form-control"
           id="inputFirstName"
           value={item.title2 || ""}
-          // type="text"
-          // className="input-field"
           onChange={(e) => setItem({ ...item, title2: e.target.value })}
         />
 
@@ -74,17 +70,30 @@ const AddItems = () => {
           multiple={false}
           onDone={({ base64 }) => setItem({ ...item, image: base64 })}
         />
-        <div className="right-align">
-          <h6>Please submit only after the photo is uploaded</h6>
-          <button className="btn" onClick={Refresh}>
+        <div>
+          <h6 style={{ marginTop: "20px" }}>
+            Please submit only after the photo is uploaded
+          </h6>
+          <button
+            className="card-adopt"
+            style={{ marginTop: "20px" }}
+            onClick={Refresh}
+          >
             Submit
           </button>
         </div>
       </form>
 
       {items?.map((item) => (
-        <div className="card" key={item._id}>
-          <div className="card-image waves-effect waves-block waves-light">
+        <div
+          className="card"
+          key={item._id}
+          style={({ marginTop: "20px" }, { marginBottom: "40px" })}
+        >
+          <div
+            className="card-image waves-effect waves-block waves-light"
+            style={{ margin: "10px" }}
+          >
             <img
               className="activator"
               style={{ width: "30%", height: "30%" }}

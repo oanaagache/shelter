@@ -71,6 +71,7 @@ const AdoptionForm = (props) => {
       window.alert(error);
       return;
     });
+    localStorage.setItem("AdoptionForm", JSON.stringify(newUser));
   };
 
   return (

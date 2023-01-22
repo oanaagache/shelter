@@ -5,17 +5,17 @@ import "./Record.css";
 const Record = (props) => {
   return (
     <tr>
-      <td>{props.record.firstName}</td>
-      <td>{props.record.surname}</td>
-      <td>{props.record.email}</td>
-      <td>{props.record.password}</td>
-      {/* <td>{props.record.address}</td> */}
-      <td>{props.record.city}</td>
-      <td>{props.record.country}</td>
-      {/* <td>{props.record.code}</td> */}
-      <td>{props.record.status}</td>
-      <td>{props.record.routine}</td>
-      <td>{props.record.name}</td>
+      <td>{props.record.firstName || " - "}</td>
+      <td>{props.record.surname || " - "}</td>
+      <td>{props.record.email || " - "}</td>
+      <td>{props.record.password || " - "}</td>
+      <td>{props.record.address || " - "}</td>
+      <td>{props.record.city || " - "}</td>
+      <td>{props.record.country || " - "}</td>
+      <td>{props.record.code || " - "}</td>
+      <td>{props.record.status || " - "}</td>
+      <td>{props.record.routine || " - "}</td>
+      <td>{props.record.name || " - "}</td>
       <td>
         <Link
           className="btn-link-edit"

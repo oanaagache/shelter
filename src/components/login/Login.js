@@ -19,8 +19,6 @@ const Login = (props) => {
   //store values in localStorage
   const handleLogin = (evt) => {
     evt.preventDefault();
-    // console.log(records);
-    // console.log(loginUser);
 
     async function getUserEmail() {
       const response = await fetch(
@@ -35,9 +33,9 @@ const Login = (props) => {
         return;
       }
       const user = userRecord[0];
-      console.log(user);
-      console.log(user.email);
-      console.log(user.password);
+      // console.log(user);
+      // console.log(user.email);
+      // console.log(user.password);
 
       if (
         loginUser.email === user.email &&
@@ -119,7 +117,7 @@ const Login = (props) => {
               Don't have an account?
               <span>
                 <h6>
-                  <Link to="/registermongo">Register here</Link>
+                  <Link to="/register">Register here</Link>
                 </h6>
               </span>
             </div>

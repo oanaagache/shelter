@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Register from "./components/register/Register";
+import Login from "./components/login/Login";
 import About from "./pages/about/About";
 import Donate from "./pages/donate/Donate";
 import Foster from "./pages/foster/Foster";
@@ -10,15 +12,13 @@ import Main from "./components/main/Main";
 import Card from "./components/card/Card";
 import Success from "./components/success/Success";
 import CountrySelector from "./components/countryselector/CountrySelector";
-import Articles from "./pages/articles/Articles";
-import ArticlesDog from "./pages/articles/dog/ArticlesDog";
-import ArticlesCat from "./pages/articles/cat/ArticlesCat";
 import AdoptionForm from "./components/adoptionform/AdoptionForm";
 import Edit from "./components/list/edit/Edit";
 import List from "./components/list/list/List";
-//import AddArticles from "./components/form/AddArticles";
-import Register from "./components/register/Register";
-import Login from "./components/login/Login";
+import Articles from "./pages/articles/articles/Articles";
+import ArticlesDog from "./pages/articles/dog/ArticlesDog";
+import ArticlesCat from "./pages/articles/cat/ArticlesCat";
+import AddArticles from "./pages/articles/articles/AddArticles";
 
 const App = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -70,7 +70,7 @@ const App = () => {
         <Route path="/success/:email" element={<Success />} />
         <Route path="/edit/:id" element={<Edit />} />
         <Route path="/list" element={<List />} />
-        {/* <Route path="/addarticles" element={<AddArticles />} /> */}
+        <Route path="/addarticles" element={<AddArticles />} />
       </Routes>
       <Footer />
     </Router>

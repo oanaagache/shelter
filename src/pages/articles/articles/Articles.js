@@ -1,10 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
-import logo from "../../images/image4.svg";
-import pic1 from "../../images/dog.png";
-import pic2 from "../../images/cat.png";
-import "../../../src/index.css";
+import logo from "../../../images/image4.svg";
+import pic1 from "../../../images/dog.png";
+import pic2 from "../../../images/cat.png";
+import "../../../../src/index.css";
 import "./Articles.css";
 
 const Articles = () => {

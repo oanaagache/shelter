@@ -13,6 +13,7 @@ const Navbar = (props) => {
     localStorage.removeItem("Admin is loggedIn");
     localStorage.removeItem("user");
     localStorage.removeItem("registeredUser");
+    localStorage.removeItem("AdoptionForm");
     navigate("/login");
   };
 
@@ -113,22 +114,18 @@ const Navbar = (props) => {
             </button>
           )}
 
-          {/* {isAdmin ? (
-            <li>
-              <NavLink
-                to="/list"
-                style={({ isActive }) => ({
-                  color: isActive ? " purple" : "black",
-                })}
-                end
-                className="about-nav"
-              >
-                Articles
-              </NavLink>
-            </li>
-          ) : (
-            <div>Not Admin</div>
-          )} */}
+          <li>
+            <NavLink
+              to="/addarticles"
+              style={({ isActive }) => ({
+                color: isActive ? " purple" : "black",
+              })}
+              end
+              className="about-nav"
+            >
+              Add Articles
+            </NavLink>
+          </li>
         </ul>
       </div>
     </div>
