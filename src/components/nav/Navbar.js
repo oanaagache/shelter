@@ -11,7 +11,9 @@ const Navbar = (props) => {
 
   const handleClick = () => {
     localStorage.removeItem("loggedIn");
-    navigate("/login");
+    localStorage.removeItem("Admin is loggedIn");
+    localStorage.removeItem("user");
+    navigate("/loginmongo");
   };
 
   return (
@@ -98,7 +100,7 @@ const Navbar = (props) => {
                 handleClick();
               }}
             >
-              LogOut
+              LogOutmongo
             </button>
           ) : (
             <button
@@ -107,9 +109,26 @@ const Navbar = (props) => {
                 navigate("/loginmongo");
               }}
             >
-              Login
+              Loginmongo
             </button>
           )}
+
+          {/* {isAdmin ? (
+            <li>
+              <NavLink
+                to="/list"
+                style={({ isActive }) => ({
+                  color: isActive ? " purple" : "black",
+                })}
+                end
+                className="about-nav"
+              >
+                Articles
+              </NavLink>
+            </li>
+          ) : (
+            <div>Not Admin</div>
+          )} */}
         </ul>
       </div>
     </div>

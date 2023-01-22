@@ -19,24 +19,27 @@ const LoginMongo = (props) => {
   //store values in localStorage
   const handleLogin = (evt) => {
     evt.preventDefault();
-
     // console.log(records);
     // console.log(loginUser);
 
     async function getUser() {
       const response = await fetch(
         `http://localhost:3001/user/${loginUser.email}`,
-        {
-          method: "GET",
-        }
+        { method: "GET" }
       );
 
       const userRecord = await response.json();
-      if (userRecord.length === 0) {
-        alert(`User ${loginUser.email} not found in the DB!`);
-      }
-      const user = userRecord[0];
 
+      // if (userRecord.length === 0) {
+      //   alert(`User ${loginUser.email} not found, pleaser register!`);
+      // }
+
+      if (userRecord.length === 0) {
+        alert(`User ${loginUser.email} not found, pleaser register!`);
+        return;
+      }
+
+      const user = userRecord[0];
       // console.log(user);
       // console.log(user.email);
       // console.log(user.password);
@@ -45,15 +48,11 @@ const LoginMongo = (props) => {
         loginUser.email === user.email &&
         loginUser.password === user.password
       ) {
-        localStorage.setItem("loggedIn", true);
+        //localStorage.setItem("loggedIn", true);
         setIsLoggedIn(true);
-
-        //store values in localStorage
         localStorage.setItem("user", JSON.stringify(loginUser));
         navigate("/");
-      } else {
-        navigate("/registermongo");
-      }
+      } else alert(`User ${loginUser.email} not found, pleaser register!`);
 
       if (
         loginUser.email === "oana.luciana.agache@gmail.com" &&
@@ -63,7 +62,7 @@ const LoginMongo = (props) => {
         setAdmin(true);
         navigate("/list");
       } else {
-        navigate("/");
+        localStorage.setItem("loggedIn", true);
       }
     }
     getUser();
@@ -131,7 +130,7 @@ const LoginMongo = (props) => {
             <div className="login-button">
               {" "}
               <button type="submit" className="filter-btn">
-                Login
+                Loginmongo
               </button>
             </div>
           </Form>

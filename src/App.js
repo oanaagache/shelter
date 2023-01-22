@@ -53,13 +53,13 @@ const App = () => {
         <Route path="/foster" element={<Foster />} />
         <Route path="/Navbar:isAdmin" element={<Navbar />} />
         <Route path="/Navbar:isLoggedIn" element={<Navbar />} />
-        <Route
+        {/* <Route
           path="/login"
           element={
             <Login isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />
           }
         />
-        <Route path="/register" element={<Register />} />
+        <Route path="/register" element={<Register />} /> */}
         <Route
           path="/loginmongo"
           element={
