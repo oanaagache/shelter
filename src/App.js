@@ -13,14 +13,12 @@ import CountrySelector from "./components/countryselector/CountrySelector";
 import Articles from "./pages/articles/Articles";
 import ArticlesDog from "./pages/articles/dog/ArticlesDog";
 import ArticlesCat from "./pages/articles/cat/ArticlesCat";
-import AdoptionForm from "./components/form/AdoptionForm";
+import AdoptionForm from "./components/adoptionform/AdoptionForm";
+import Edit from "./components/list/edit/Edit";
+import List from "./components/list/list/List";
+//import AddArticles from "./components/form/AddArticles";
 import Register from "./components/register/Register";
 import Login from "./components/login/Login";
-import Edit from "./components/form/Edit";
-import List from "./components/form/List";
-//import AddArticles from "./components/form/AddArticles";
-import RegisterMongo from "./components/register/RegisterMongo";
-import LoginMongo from "./components/login/LoginMongo";
 
 const App = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -51,19 +49,15 @@ const App = () => {
         <Route path="/countryselector" element={<CountrySelector />} />
         <Route path="/donate" element={<Donate />} />
         <Route path="/foster" element={<Foster />} />
-        <Route path="/Navbar:isAdmin" element={<Navbar />} />
-        <Route path="/Navbar:isLoggedIn" element={<Navbar />} />
-        {/* <Route
+
+        <Route
+          path="/Navbar"
+          element={<Navbar isLoggedIn={isLoggedIn} isAdmin={isAdmin} />}
+        />
+        <Route
           path="/login"
           element={
-            <Login isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />
-          }
-        />
-        <Route path="/register" element={<Register />} /> */}
-        <Route
-          path="/loginmongo"
-          element={
-            <LoginMongo
+            <Login
               isLoggedIn={isLoggedIn}
               setIsLoggedIn={setIsLoggedIn}
               isAdmin={isAdmin}
@@ -71,7 +65,7 @@ const App = () => {
             />
           }
         />
-        <Route path="/registermongo" element={<RegisterMongo />} />
+        <Route path="/register" element={<Register />} />
         <Route path="/success/:name" element={<Success />} />
         <Route path="/success/:email" element={<Success />} />
         <Route path="/edit/:id" element={<Edit />} />

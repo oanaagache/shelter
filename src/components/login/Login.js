@@ -1,49 +1,68 @@
-import React, { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import React, { useState } from "react";
 import { Form } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Link } from "react-router-dom";
 import logo from "../../images/image4.svg";
 import "../login/Login.css";
+import { useNavigate } from "react-router-dom";
 
 const Login = (props) => {
-  const { setIsLoggedIn } = props;
+  const { setIsLoggedIn, setAdmin } = props;
 
-  let navigate = useNavigate();
   const [loginUser, setLoginUser] = useState({
     email: "",
     password: "",
   });
 
+  const navigate = useNavigate();
+
   //store values in localStorage
   const handleLogin = (evt) => {
     evt.preventDefault();
-    const loggedUser = JSON.parse(localStorage.getItem("user"));
-    if (
-      loginUser.email === loggedUser.email &&
-      loginUser.password === loggedUser.password
-    ) {
-      localStorage.setItem("loggedIn", true);
-      setIsLoggedIn(true);
-      //setAdmin(false);
-      navigate("/");
-    } else {
-      alert("Please register");
-    }
+    // console.log(records);
+    // console.log(loginUser);
 
-    if (loginUser.email === "oana.luciana.agache@gmail.com") {
-      localStorage.setItem("loggedIn", true);
-      setIsLoggedIn(true);
-      //setAdmin(true);
-      navigate("/list");
-    } else {
-      navigate("/");
+    async function getUserEmail() {
+      const response = await fetch(
+        `http://localhost:3001/user/${loginUser.email}`,
+        { method: "GET" }
+      );
+
+      const userRecord = await response.json();
+
+      if (userRecord.length === 0) {
+        alert(`User ${loginUser.email} not found, pleaser register!`);
+        return;
+      }
+      const user = userRecord[0];
+      console.log(user);
+      console.log(user.email);
+      console.log(user.password);
+
+      if (
+        loginUser.email === user.email &&
+        loginUser.password === user.password
+      ) {
+        localStorage.setItem("loggedIn", true);
+        setIsLoggedIn(true);
+        localStorage.setItem("loggedInUser", JSON.stringify(loginUser));
+        localStorage.setItem("registeredUser", JSON.stringify(user));
+        navigate("/");
+      } else alert(`User ${loginUser.email} not found, pleaser register!`);
+
+      if (
+        loginUser.email === "oana.luciana.agache@gmail.com" &&
+        loginUser.password === "123456"
+      ) {
+        localStorage.setItem("Admin is loggedIn", true);
+        setAdmin(true);
+        navigate("/list");
+      } else {
+        localStorage.setItem("loggedIn", true);
+      }
     }
+    getUserEmail();
   };
-
-  useEffect(() => {
-    setIsLoggedIn(JSON.parse(localStorage.getItem("loggedIn")));
-  }, []);
 
   return (
     <>
@@ -100,7 +119,7 @@ const Login = (props) => {
               Don't have an account?
               <span>
                 <h6>
-                  <Link to="/register">Register here</Link>
+                  <Link to="/registermongo">Register here</Link>
                 </h6>
               </span>
             </div>

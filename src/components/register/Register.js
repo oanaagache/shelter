@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
 import { Form } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Link } from "react-router-dom";
@@ -7,8 +6,6 @@ import logo from "../../images/image4.svg";
 import "./Register.css";
 
 const Register = () => {
-  let navigate = useNavigate();
-
   const [registeredUser, setRegisteredUser] = useState({
     firstName: "",
     surname: "",
@@ -16,12 +13,19 @@ const Register = () => {
     password: "",
   });
 
-  //store values in localStorage
-  const handleSubmit = (evt) => {
-    evt.preventDefault();
-    //store user in json format in "user"
-    localStorage.setItem("user", JSON.stringify(registeredUser));
-    navigate("/login");
+  //store values in mongodb
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    fetch("http://localhost:3001/record/addNewUser", {
+      method: "post",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(registeredUser),
+    }).catch((error) => {
+      window.alert(error);
+      return;
+    });
   };
 
   return (
@@ -49,7 +53,7 @@ const Register = () => {
                 className="form-control"
                 id="inputFirstName"
                 placeholder="First Name"
-                value={registeredUser.firstName}
+                value={registeredUser.firstName || ""}
                 onChange={(e) =>
                   setRegisteredUser({
                     ...registeredUser,
@@ -65,7 +69,7 @@ const Register = () => {
                 className="form-control"
                 id="inputSurname"
                 placeholder="Surname"
-                value={registeredUser.surname}
+                value={registeredUser.surname || ""}
                 onChange={(e) =>
                   setRegisteredUser({
                     ...registeredUser,
@@ -82,7 +86,7 @@ const Register = () => {
                 className="form-control"
                 id="inputEmail"
                 placeholder="Email"
-                value={registeredUser.email}
+                value={registeredUser.email || ""}
                 onChange={(e) =>
                   setRegisteredUser({
                     ...registeredUser,
@@ -99,7 +103,7 @@ const Register = () => {
                 className="form-control"
                 id="inputPassword"
                 placeholder="Password"
-                value={registeredUser.password}
+                value={registeredUser.password || ""}
                 onChange={(e) =>
                   setRegisteredUser({
                     ...registeredUser,

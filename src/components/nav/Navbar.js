@@ -6,14 +6,14 @@ import { useNavigate } from "react-router-dom";
 
 const Navbar = (props) => {
   let navigate = useNavigate();
-
   const { isLoggedIn, isAdmin } = props;
 
   const handleClick = () => {
-    localStorage.removeItem("loggedIn");
+    localStorage.removeItem("loggedInUser");
     localStorage.removeItem("Admin is loggedIn");
     localStorage.removeItem("user");
-    navigate("/loginmongo");
+    localStorage.removeItem("registeredUser");
+    navigate("/login");
   };
 
   return (
@@ -100,16 +100,16 @@ const Navbar = (props) => {
                 handleClick();
               }}
             >
-              LogOutmongo
+              Logout
             </button>
           ) : (
             <button
               className="btn-log"
               onClick={() => {
-                navigate("/loginmongo");
+                navigate("/login");
               }}
             >
-              Loginmongo
+              Login
             </button>
           )}
 

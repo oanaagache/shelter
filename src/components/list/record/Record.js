@@ -1,8 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "../form/Record.css";
+import "./Record.css";
 
-export default function Record(props) {
+const Record = (props) => {
   return (
     <tr>
       <td>{props.record.firstName}</td>
@@ -36,4 +36,5 @@ export default function Record(props) {
       </td>
     </tr>
   );
-}
+};
+export default Record;

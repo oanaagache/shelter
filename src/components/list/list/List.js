@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import "../form/Record.css";
-import logo from "../../images/image4.svg";
-import Record from "./Record.js";
+import "./List.css";
+import logo from "../../../images/image4.svg";
+import Record from "../record/Record.js";
 
-export default function List() {
+const List = () => {
   const [records, setRecords] = useState([]);
 
   //  fetches the records from the database.
@@ -85,4 +85,5 @@ export default function List() {
       </div>
     </>
   );
-}
+};
+export default List;

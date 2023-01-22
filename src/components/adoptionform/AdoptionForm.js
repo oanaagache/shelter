@@ -13,8 +13,8 @@ const AdoptionForm = (props) => {
   const { name } = useParams();
   let navigate = useNavigate();
 
-  const [user, setUser] = useState({});
-  //console.log(user);
+  const [loggedUser, setLoggedUser] = useState({});
+  const [registeredUser, setRegisteredUser] = useState("");
 
   const [firstName, setFirstName] = useState("");
   const [surname, setSurname] = useState("");
@@ -25,6 +25,14 @@ const AdoptionForm = (props) => {
   const [code, setCode] = useState("");
   const [status, setStatus] = useState("");
   const [routine, setRoutine] = useState("");
+
+  useEffect(() => {
+    setLoggedUser(JSON.parse(localStorage.getItem("loggedInUser")));
+  }, []);
+
+  useEffect(() => {
+    setRegisteredUser(JSON.parse(localStorage.getItem("registeredUser")));
+  }, []);
 
   //send newUser to DB
   const handleSubmit = (evt) => {
@@ -41,9 +49,9 @@ const AdoptionForm = (props) => {
     navigate(`/success/${name}`);
 
     const newUser = {
-      firstName: user.firstName,
-      surname: user.surname,
-      email: user.email,
+      firstName: registeredUser.firstName,
+      surname: registeredUser.surname,
+      email: loggedUser.email,
       address: address,
       city: city,
       country: country,
@@ -64,12 +72,6 @@ const AdoptionForm = (props) => {
       return;
     });
   };
-
-  useEffect(() => {
-    setUser(JSON.parse(localStorage.getItem("user")));
-    //console.log(JSON.parse(localStorage.getItem("user")));
-    //console.log("isLoggedIn Form: " + isLoggedIn);
-  }, []);
 
   return (
     <>
@@ -102,7 +104,7 @@ const AdoptionForm = (props) => {
                     type="text"
                     className="form-control"
                     id="inputFirstName"
-                    value={user.firstName || ""}
+                    value={registeredUser.firstName || ""}
                     onChange={(e) => setFirstName(e.target.value)}
                   />
                 </div>
@@ -127,7 +129,7 @@ const AdoptionForm = (props) => {
                     type="text"
                     className="form-control"
                     id="inputSurname"
-                    value={user.surname || ""}
+                    value={registeredUser.surname || ""}
                     onChange={(e) => setSurname(e.target.value)}
                   />
                 </div>
@@ -152,7 +154,7 @@ const AdoptionForm = (props) => {
                     type="text"
                     className="form-control"
                     id="inputEmailAddress"
-                    value={user.email || ""}
+                    value={loggedUser.email || ""}
                     onChange={(e) => setEmail(e.target.value)}
                   />
                 </div>

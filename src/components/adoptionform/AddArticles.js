@@ -1,12 +1,9 @@
 import { useEffect, useState } from "react";
 import FileBase64 from "react-file-base64";
-import { useNavigate } from "react-router-dom";
 
-export default function AddItems() {
+const AddItems = () => {
   const [item, setItem] = useState({ title1: "", title2: "", image: "" });
   const [items, setItems] = useState([]);
-
-  let navigate = useNavigate();
 
   const [refresh, setRefresh] = useState(false);
 
@@ -108,4 +105,5 @@ export default function AddItems() {
       ))}
     </div>
   );
-}
+};
+export default AddItems;

@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { Form } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
-import "./AdoptionForm.css";
+import "./Edit.css";
 import { Link } from "react-router-dom";
-import logo from "../../images/image4.svg";
+import logo from "../../../images/image4.svg";
 import { useNavigate } from "react-router-dom";
 import { useParams } from "react-router-dom";
 

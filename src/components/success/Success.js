@@ -3,79 +3,17 @@ import "./Success.css";
 import logo2 from "../../images/image.png";
 import { useNavigate } from "react-router-dom";
 import { useParams } from "react-router-dom";
-import RecordEmail from "../form/RecordEmail";
+import SuccessRecord from "../success/SuccessRecord";
 
 export default function Success() {
   const { name } = useParams();
-
   let navigate = useNavigate();
-  const params = useParams();
 
-  const [records, setRecords] = useState([]);
-  const [recordsEmail, setRecordsEmail] = useState([]);
+  const [record, setRecord] = useState([]);
 
-  //  fetches the records from the database
   useEffect(() => {
-    async function getRecords() {
-      const response = await fetch(`http://localhost:3001/record/`);
-      if (!response.ok) {
-        const message = `An error occurred: ${response.statusText}`;
-        window.alert(message);
-        return;
-      }
-      const records = await response.json();
-      setRecords(records);
-      //console.log(records);
-    }
-    getRecords();
-    return;
-  }, [records.length]);
-
-  // // fetches the records from the database
-  // useEffect(() => {
-  //   async function getRecord() {
-  //     const email = params.email;
-  //     const response = await fetch(`http://localhost:3001/${params.email}`);
-  //     if (!response.ok) {
-  //       const message = `An error occurred: ${response.statusText}`;
-  //       window.alert(message);
-  //       return;
-  //     }
-  //     const recordsEmail = await response.json();
-  //     if (!recordsEmail) {
-  //       window.alert(`Record with email ${email} not found`);
-  //       navigate("/");
-  //       return;
-  //     }
-  //     setRecordsEmail(recordsEmail);
-  //     console.log(recordsEmail);
-  //   }
-  //   getRecord();
-  //   return;
-  // }, [params.email, navigate]);
-
-  // // fetches the records from the database
-  // useEffect(() => {
-  //   async function getRecord() {
-  //     const id = params.id;
-  //     const response = await fetch(`http://localhost:3001/record/${params.id}`);
-  //     if (!response.ok) {
-  //       const message = `An error occurred: ${response.statusText}`;
-  //       window.alert(message);
-  //       return;
-  //     }
-  //     const recordsEmail = await response.json();
-  //     if (!recordsEmail) {
-  //       window.alert(`Record with email ${id} not found`);
-  //       navigate("/");
-  //       return;
-  //     }
-  //     setRecordsEmail(recordsEmail);
-  //     console.log(recordsEmail);
-  //   }
-  //   getRecord();
-  //   return;
-  // }, [params.id, navigate]);
+    setRecord(JSON.parse(localStorage.getItem("registeredUser")));
+  }, []);
 
   return (
     <div className="response">
@@ -111,7 +49,7 @@ export default function Success() {
             </tr>
           </thead>
           <tbody>
-            <RecordEmail recordsEmail={recordsEmail} />
+            <SuccessRecord record={record} />
           </tbody>
         </table>
       </div>
