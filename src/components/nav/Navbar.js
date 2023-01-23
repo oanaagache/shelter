@@ -1,19 +1,41 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./Navbar.scss";
 import { NavLink } from "react-router-dom";
 import logo from "../../images/image.png";
 import { useNavigate } from "react-router-dom";
 
-const Navbar = (props) => {
+const Navbar = () => {
   let navigate = useNavigate();
-  const { isLoggedIn, isAdmin } = props;
+
+  const [isLoggedIn, setIsLoggedIn] = useState();
+  const [isAdmin, setAdmin] = useState();
+
+  useEffect(() => {
+    console.log(JSON.parse(localStorage.getItem("loggedIn")));
+    setIsLoggedIn(JSON.parse(localStorage.getItem("loggedIn")));
+  }, []);
+
+  // let userIsLoggedIn = false;
+
+  // if (isLoggedIn) {
+  //   userIsLoggedIn = JSON.parse(isLoggedIn);
+  // }
+  // console.log(userIsLoggedIn);
+  //console.log(isLoggedIn);
+  //console.log(JSON.parse(isLoggedIn));
+  //console.log(typeof isLoggedIn);
+
+  useEffect(() => {
+    setAdmin(JSON.parse(localStorage.getItem("Admin is loggedIn")));
+  }, []);
 
   const handleClick = () => {
+    localStorage.removeItem("loggedIn");
     localStorage.removeItem("loggedInUser");
-    localStorage.removeItem("Admin is loggedIn");
-    localStorage.removeItem("user");
     localStorage.removeItem("registeredUser");
     localStorage.removeItem("AdoptionForm");
+    localStorage.removeItem("Admin is loggedIn");
+
     navigate("/login");
   };
 
@@ -114,18 +136,20 @@ const Navbar = (props) => {
             </button>
           )}
 
-          <li>
-            <NavLink
-              to="/addarticles"
-              style={({ isActive }) => ({
-                color: isActive ? " purple" : "black",
-              })}
-              end
-              className="about-nav"
-            >
-              Add Articles
-            </NavLink>
-          </li>
+          {/* {isAdmin && (
+            <li>
+              <NavLink
+                to="/addarticles"
+                style={({ isActive }) => ({
+                  color: isActive ? " purple" : "black",
+                })}
+                end
+                className="about-nav"
+              >
+                Add Articles
+              </NavLink>
+            </li>
+          )} */}
         </ul>
       </div>
     </div>

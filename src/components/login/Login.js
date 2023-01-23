@@ -29,7 +29,9 @@ const Login = (props) => {
       const userRecord = await response.json();
 
       if (userRecord.length === 0) {
-        alert(`User ${loginUser.email} not found, pleaser register!`);
+        alert(
+          `User ${loginUser.email} not found in our database, please register!`
+        );
         return;
       }
       const user = userRecord[0];
@@ -42,11 +44,12 @@ const Login = (props) => {
         loginUser.password === user.password
       ) {
         localStorage.setItem("loggedIn", true);
+
         setIsLoggedIn(true);
         localStorage.setItem("loggedInUser", JSON.stringify(loginUser));
         localStorage.setItem("registeredUser", JSON.stringify(user));
         navigate("/");
-      } else alert(`User ${loginUser.email} not found, pleaser register!`);
+      } else alert(`Login failed!`);
 
       if (
         loginUser.email === "oana.luciana.agache@gmail.com" &&
@@ -54,6 +57,7 @@ const Login = (props) => {
       ) {
         localStorage.setItem("Admin is loggedIn", true);
         setAdmin(true);
+        setIsLoggedIn(true);
         navigate("/list");
       } else {
         localStorage.setItem("loggedIn", true);

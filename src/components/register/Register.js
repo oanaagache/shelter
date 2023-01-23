@@ -4,6 +4,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { Link } from "react-router-dom";
 import logo from "../../images/image4.svg";
 import "./Register.css";
+import { useNavigate } from "react-router-dom";
 
 const Register = () => {
   const [registeredUser, setRegisteredUser] = useState({
@@ -13,9 +14,12 @@ const Register = () => {
     password: "",
   });
 
+  const navigate = useNavigate();
+
   //store values in mongodb
   const handleSubmit = (e) => {
     e.preventDefault();
+    // TODO: check if user already exists
     fetch("http://localhost:3001/record/addNewUser", {
       method: "post",
       headers: {
@@ -26,6 +30,7 @@ const Register = () => {
       window.alert(error);
       return;
     });
+    navigate("/login");
   };
 
   return (

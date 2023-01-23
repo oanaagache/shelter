@@ -49,7 +49,6 @@ const App = () => {
         <Route path="/countryselector" element={<CountrySelector />} />
         <Route path="/donate" element={<Donate />} />
         <Route path="/foster" element={<Foster />} />
-
         <Route
           path="/Navbar"
           element={<Navbar isLoggedIn={isLoggedIn} isAdmin={isAdmin} />}
