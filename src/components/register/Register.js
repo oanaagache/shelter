@@ -19,7 +19,31 @@ const Register = () => {
   //store values in mongodb
   const handleSubmit = (e) => {
     e.preventDefault();
-    // TODO: check if user already exists
+
+    //check if user already exists
+    async function getUserEmail() {
+      const response = await fetch(
+        `http://localhost:3001/user/${registeredUser.email}`,
+        { method: "GET" }
+      );
+
+      const userRecord = await response.json();
+
+      if (userRecord.length === 0) {
+        alert(
+          `User ${registeredUser.email} not found in our database, please register!`
+        );
+        return;
+      }
+      const user = userRecord[0];
+
+      if (registeredUser.email === user.email) {
+        alert(`Already registered in`);
+        navigate("/login");
+      } else alert(`Login failed!`);
+    }
+    getUserEmail();
+
     fetch("http://localhost:3001/record/addNewUser", {
       method: "post",
       headers: {
