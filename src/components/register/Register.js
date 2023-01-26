@@ -16,7 +16,7 @@ const Register = () => {
 
   const navigate = useNavigate();
 
-  //store values in mongodb
+  //store new user in mongodb
   const handleSubmit = (e) => {
     e.preventDefault();
 
