@@ -45,6 +45,15 @@
   margin-top: 20px;
 }
 
+.register-btn {
+  color: aliceblue;
+  background-color: rgb(126, 63, 102);
+  border-radius: 5px;
+  width: 80px;
+  height: 40px;
+  font-size: 12px;
+}
+
 @media screen and (min-width: 640px) {
   .register-cont {
     max-width: 100%;
@@ -85,6 +94,14 @@
   }
   .register-button {
     margin-top: 20px;
+  }
+  .register-btn {
+    color: aliceblue;
+    background-color: rgb(126, 63, 102);
+    border-radius: 5px;
+    width: 80px;
+    height: 40px;
+    font-size: 12px;
   }
 }
 @media screen and (min-width: 768px) {
@@ -127,6 +144,14 @@
   .register-button {
     margin-top: 20px;
   }
+  .register-btn {
+    color: aliceblue;
+    background-color: rgb(126, 63, 102);
+    border-radius: 5px;
+    width: 80px;
+    height: 40px;
+    font-size: 12px;
+  }
 }
 @media screen and (min-width: 1024px) {
   .register-cont {
@@ -167,6 +192,14 @@
   }
   .register-button {
     margin-top: 20px;
+  }
+  .register-btn {
+    color: aliceblue;
+    background-color: rgb(126, 63, 102);
+    border-radius: 5px;
+    width: 80px;
+    height: 40px;
+    font-size: 12px;
   }
 }
 @media screen and (min-width: 1280px) {
@@ -209,6 +242,14 @@
   .register-button {
     margin-top: 20px;
   }
+  .register-btn {
+    color: aliceblue;
+    background-color: rgb(126, 63, 102);
+    border-radius: 5px;
+    width: 80px;
+    height: 40px;
+    font-size: 12px;
+  }
 }
 @media screen and (min-width: 1536px) {
   .register-cont {
@@ -247,7 +288,15 @@
   .register-form-group {
     padding: 10px 0 10px 0;
   }
-  .register-register-button {
+  .register-button {
     margin-top: 20px;
+  }
+  .register-btn {
+    color: aliceblue;
+    background-color: rgb(126, 63, 102);
+    border-radius: 5px;
+    width: 80px;
+    height: 40px;
+    font-size: 12px;
   }
 }/*# sourceMappingURL=Register.css.map */

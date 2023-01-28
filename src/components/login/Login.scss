@@ -49,6 +49,15 @@ $black: #000;
   margin-top: 20px;
 }
 
+.login-btn {
+  color: $color;
+  background-color: $background-color;
+  border-radius: 5px;
+  width: 60px;
+  height: 40px;
+  font-size: 12px;
+}
+
 //sm: { min: "640px", max: "767px" },
 @media screen and (min-width: 640px) {
   .login-cont {
@@ -96,6 +105,15 @@ $black: #000;
 
   .login-button {
     margin-top: 20px;
+  }
+
+  .login-btn {
+    color: $color;
+    background-color: $background-color;
+    border-radius: 5px;
+    width: 60px;
+    height: 40px;
+    font-size: 12px;
   }
 }
 
@@ -146,6 +164,15 @@ $black: #000;
   .login-button {
     margin-top: 20px;
   }
+
+  .login-btn {
+    color: $color;
+    background-color: $background-color;
+    border-radius: 5px;
+    width: 60px;
+    height: 40px;
+    font-size: 12px;
+  }
 }
 
 //lg: { min: "1024px", max: "1279px" },
@@ -194,6 +221,15 @@ $black: #000;
 
   .login-button {
     margin-top: 20px;
+  }
+
+  .login-btn {
+    color: $color;
+    background-color: $background-color;
+    border-radius: 5px;
+    width: 60px;
+    height: 40px;
+    font-size: 12px;
   }
 }
 
@@ -244,6 +280,15 @@ $black: #000;
   .login-button {
     margin-top: 20px;
   }
+
+  .login-btn {
+    color: $color;
+    background-color: $background-color;
+    border-radius: 5px;
+    width: 60px;
+    height: 40px;
+    font-size: 12px;
+  }
 }
 
 // xxl: { min: "1536px" },
@@ -292,5 +337,14 @@ $black: #000;
 
   .login-button {
     margin-top: 20px;
+  }
+
+  .login-btn {
+    color: $color;
+    background-color: $background-color;
+    border-radius: 5px;
+    width: 60px;
+    height: 40px;
+    font-size: 12px;
   }
 }

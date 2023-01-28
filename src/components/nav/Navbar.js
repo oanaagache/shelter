@@ -7,7 +7,7 @@ import { useNavigate } from "react-router-dom";
 const Navbar = () => {
   let navigate = useNavigate();
   const [isLoggedIn, setIsLoggedIn] = useState();
-  //const [isAdmin, setAdmin] = useState("");
+  const [isAdmin, setAdmin] = useState("");
 
   useEffect(() => {
     setIsLoggedIn(JSON.parse(localStorage.getItem("loggedIn")));
@@ -25,10 +25,10 @@ const Navbar = () => {
   // console.log(JSON.parse(isLoggedIn));
   // console.log(typeof isLoggedIn);
 
-  // useEffect(() => {
-  //   setAdmin(JSON.parse(localStorage.getItem("Admin is loggedIn")));
-  //   console.log(JSON.parse(localStorage.getItem("Admin is loggedIn")));
-  // }, []);
+  useEffect(() => {
+    setAdmin(JSON.parse(localStorage.getItem("Admin is loggedIn")));
+    console.log(JSON.parse(localStorage.getItem("Admin is loggedIn")));
+  }, []);
 
   const handleClick = () => {
     localStorage.removeItem("loggedIn");
@@ -117,26 +117,50 @@ const Navbar = () => {
           </li>
 
           {isLoggedIn ? (
-            <button
-              className="btn-log"
+            <div
+              className="about-nav"
               onClick={() => {
                 handleClick();
               }}
             >
               Logout
-            </button>
+            </div>
           ) : (
-            <button
-              className="btn-log"
+            <div
+              className="about-login"
               onClick={() => {
                 navigate("/login");
               }}
             >
               Login
-            </button>
+            </div>
           )}
 
-          {/* {isAdmin && (
+          {/* {isLoggedIn ? (
+            <div className="nav-btn-log">
+              <button
+                className="btn-log"
+                onClick={() => {
+                  handleClick();
+                }}
+              >
+                Logout
+              </button>
+            </div>
+          ) : (
+            <div className="nav-btn-log">
+              <button
+                className="btn-log"
+                onClick={() => {
+                  navigate("/login");
+                }}
+              >
+                Login
+              </button>
+            </div>
+          )} */}
+
+          {isAdmin && (
             <li>
               <NavLink
                 to="/addarticles"
@@ -149,7 +173,7 @@ const Navbar = () => {
                 Add Articles
               </NavLink>
             </li>
-          )} */}
+          )}
         </ul>
       </div>
     </div>

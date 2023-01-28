@@ -35,8 +35,9 @@
 .about-button {
   color: aliceblue;
   background-color: rgb(126, 63, 102);
-  width: 80px;
-  height: 40px;
+  border-radius: 5px;
+  width: 60px;
+  height: 30px;
   font-size: 12px;
 }
 
@@ -73,8 +74,9 @@
   .about-button {
     color: aliceblue;
     background-color: rgb(126, 63, 102);
-    width: 80px;
-    height: 40px;
+    border-radius: 5px;
+    width: 60px;
+    height: 30px;
     font-size: 12px;
   }
 }
@@ -111,8 +113,9 @@
   .about-button {
     color: aliceblue;
     background-color: rgb(126, 63, 102);
-    width: 80px;
-    height: 40px;
+    border-radius: 5px;
+    width: 60px;
+    height: 30px;
     font-size: 12px;
   }
 }
@@ -149,8 +152,9 @@
   .about-button {
     color: aliceblue;
     background-color: rgb(126, 63, 102);
-    width: 80px;
-    height: 40px;
+    border-radius: 5px;
+    width: 60px;
+    height: 30px;
     font-size: 12px;
   }
 }
@@ -187,8 +191,9 @@
   .about-button {
     color: aliceblue;
     background-color: rgb(126, 63, 102);
-    width: 80px;
-    height: 40px;
+    border-radius: 5px;
+    width: 60px;
+    height: 30px;
     font-size: 12px;
   }
 }
@@ -225,8 +230,9 @@
   .about-button {
     color: aliceblue;
     background-color: rgb(126, 63, 102);
-    width: 80px;
-    height: 40px;
+    border-radius: 5px;
+    width: 60px;
+    height: 30px;
     font-size: 12px;
   }
 }/*# sourceMappingURL=About.css.map */

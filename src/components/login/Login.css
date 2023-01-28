@@ -45,6 +45,15 @@
   margin-top: 20px;
 }
 
+.login-btn {
+  color: aliceblue;
+  background-color: rgb(126, 63, 102);
+  border-radius: 5px;
+  width: 60px;
+  height: 40px;
+  font-size: 12px;
+}
+
 @media screen and (min-width: 640px) {
   .login-cont {
     max-width: 100%;
@@ -84,6 +93,14 @@
   }
   .login-button {
     margin-top: 20px;
+  }
+  .login-btn {
+    color: aliceblue;
+    background-color: rgb(126, 63, 102);
+    border-radius: 5px;
+    width: 60px;
+    height: 40px;
+    font-size: 12px;
   }
 }
 @media screen and (min-width: 768px) {
@@ -125,6 +142,14 @@
   .login-button {
     margin-top: 20px;
   }
+  .login-btn {
+    color: aliceblue;
+    background-color: rgb(126, 63, 102);
+    border-radius: 5px;
+    width: 60px;
+    height: 40px;
+    font-size: 12px;
+  }
 }
 @media screen and (min-width: 1024px) {
   .login-cont {
@@ -164,6 +189,14 @@
   }
   .login-button {
     margin-top: 20px;
+  }
+  .login-btn {
+    color: aliceblue;
+    background-color: rgb(126, 63, 102);
+    border-radius: 5px;
+    width: 60px;
+    height: 40px;
+    font-size: 12px;
   }
 }
 @media screen and (min-width: 1280px) {
@@ -205,6 +238,14 @@
   .login-button {
     margin-top: 20px;
   }
+  .login-btn {
+    color: aliceblue;
+    background-color: rgb(126, 63, 102);
+    border-radius: 5px;
+    width: 60px;
+    height: 40px;
+    font-size: 12px;
+  }
 }
 @media screen and (min-width: 1536px) {
   .login-cont {
@@ -244,5 +285,13 @@
   }
   .login-button {
     margin-top: 20px;
+  }
+  .login-btn {
+    color: aliceblue;
+    background-color: rgb(126, 63, 102);
+    border-radius: 5px;
+    width: 60px;
+    height: 40px;
+    font-size: 12px;
   }
 }/*# sourceMappingURL=Login.css.map */

@@ -1,6 +1,7 @@
 $color: aliceblue;
 $background-color: rgb(126, 63, 102);
 $black: #000;
+$font: "Courier New", sans-serif;
 
 .adopt-cont {
   max-width: 100%;
@@ -81,6 +82,7 @@ $black: #000;
 .filter-btn {
   color: $color;
   background-color: $background-color;
+  border-radius: 5px;
   width: 100px;
   height: 40px;
   font-size: 12px;
@@ -178,6 +180,7 @@ $black: #000;
   .filter-btn {
     color: $color;
     background-color: $background-color;
+    border-radius: 5px;
     width: 100px;
     height: 40px;
     font-size: 12px;
@@ -267,6 +270,7 @@ $black: #000;
   .filter-btn {
     color: $color;
     background-color: $background-color;
+    border-radius: 5px;
     width: 100px;
     height: 36px;
     font-size: 12px;
@@ -356,6 +360,7 @@ $black: #000;
   .filter-btn {
     color: $color;
     background-color: $background-color;
+    border-radius: 5px;
     width: 100px;
     height: 40px;
     font-size: 12px;
@@ -445,6 +450,7 @@ $black: #000;
   .filter-btn {
     color: $color;
     background-color: $background-color;
+    border-radius: 5px;
     width: 100px;
     height: 40px;
     font-size: 12px;
@@ -534,8 +540,9 @@ $black: #000;
   .filter-btn {
     color: $color;
     background-color: $background-color;
+    border-radius: 5px;
     width: 100px;
-    height: 38px;
+    height: 40px;
     font-size: 12px;
   }
 }

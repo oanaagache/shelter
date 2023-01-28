@@ -54,10 +54,9 @@
 .card-adopt {
   color: aliceblue;
   background-color: rgb(126, 63, 102);
-  width: 80px;
+  border-radius: 5px;
+  width: 70px;
   height: 40px;
   margin: 10px;
   font-size: 12px;
-  line-height: 16px;
-  padding: 8px;
 }/*# sourceMappingURL=Card.css.map */

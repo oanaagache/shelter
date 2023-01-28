@@ -2,6 +2,7 @@ $color: aliceblue;
 $border-color: darkgreen;
 //$font: "Oswald", sans-serif;
 $font: "Courier New", sans-serif;
+$background-color: rgb(216, 186, 204);
 
 * {
   box-sizing: border-box;
@@ -55,7 +56,22 @@ $font: "Courier New", sans-serif;
   font-size: 16px;
 }
 
+.nav-btn-log {
+  justify-content: left;
+  margin: 10px;
+}
+
 .btn-log {
+  margin-right: 20px;
+  font-size: 16px;
+  color: $color;
+  background-color: $background-color;
+  border-radius: 5px;
+  width: 60px;
+  height: 30px;
+}
+
+.about-login {
   margin-right: 20px;
   font-size: 16px;
 }
@@ -110,9 +126,24 @@ $font: "Courier New", sans-serif;
     font-size: 16px;
   }
 
+  .about-login {
+    margin-right: 20px;
+    font-size: 16px;
+  }
+
+  .nav-btn-log {
+    justify-content: left;
+    margin: 10px;
+  }
+
   .btn-log {
     margin-right: 20px;
     font-size: 16px;
+    color: $color;
+    background-color: $background-color;
+    border-radius: 5px;
+    width: 60px;
+    height: 30px;
   }
 }
 
@@ -164,9 +195,24 @@ $font: "Courier New", sans-serif;
     font-size: 18px;
   }
 
-  .btn-log {
-    margin-right: 10px;
+  .about-login {
+    margin-right: 20px;
     font-size: 18px;
+  }
+
+  .nav-btn-log {
+    justify-content: left;
+    margin: 10px;
+  }
+
+  .btn-log {
+    margin-right: 20px;
+    font-size: 16px;
+    color: $color;
+    background-color: $background-color;
+    border-radius: 5px;
+    width: 60px;
+    height: 30px;
   }
 }
 
@@ -218,9 +264,24 @@ $font: "Courier New", sans-serif;
     font-size: 18px;
   }
 
-  .btn-log {
-    margin-right: 10px;
+  .about-login {
+    margin-right: 20px;
     font-size: 18px;
+  }
+
+  .nav-btn-log {
+    justify-content: left;
+    margin: 10px;
+  }
+
+  .btn-log {
+    margin-right: 20px;
+    font-size: 16px;
+    color: $color;
+    background-color: $background-color;
+    border-radius: 5px;
+    width: 60px;
+    height: 30px;
   }
 }
 
@@ -272,9 +333,24 @@ $font: "Courier New", sans-serif;
     font-size: 18px;
   }
 
-  .btn-log {
-    margin-right: 10px;
+  .about-login {
+    margin-right: 20px;
     font-size: 18px;
+  }
+
+  .nav-btn-log {
+    justify-content: left;
+    margin: 10px;
+  }
+
+  .btn-log {
+    margin-right: 20px;
+    font-size: 16px;
+    color: $color;
+    background-color: $background-color;
+    border-radius: 5px;
+    width: 60px;
+    height: 30px;
   }
 }
 
@@ -326,8 +402,23 @@ $font: "Courier New", sans-serif;
     font-size: 18px;
   }
 
-  .btn-log {
-    margin-right: 10px;
+  .about-login {
+    margin-right: 20px;
     font-size: 18px;
+  }
+
+  .nav-btn-log {
+    justify-content: left;
+    margin: 10px;
+  }
+
+  .btn-log {
+    margin-right: 20px;
+    font-size: 16px;
+    color: $color;
+    background-color: $background-color;
+    border-radius: 5px;
+    width: 60px;
+    height: 30px;
   }
 }

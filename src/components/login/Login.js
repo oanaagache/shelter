@@ -127,7 +127,7 @@ const Login = (props) => {
             </div>
             <div className="login-button">
               {" "}
-              <button type="submit" className="filter-btn">
+              <button type="submit" className="login-btn">
                 Login
               </button>
             </div>

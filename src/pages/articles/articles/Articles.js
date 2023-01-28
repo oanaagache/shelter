@@ -67,7 +67,7 @@ const Articles = () => {
             <div className="articles-card-inner">
               <div className="articles-card-details">
                 <h5>Cat Adoption Articles</h5>
-                <h6>Helpful insights on what to expect.</h6>
+                <h6>Helpful insights on what to expect when you have a pet.</h6>
                 <div className="button-articles">
                   <button
                     className="button-articles-read"

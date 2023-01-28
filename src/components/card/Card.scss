@@ -55,12 +55,11 @@ $black: #000;
 .card-adopt {
   color: $color;
   background-color: $background-color;
-  width: 80px;
+  border-radius: 5px;
+  width: 70px;
   height: 40px;
   margin: 10px;
   font-size: 12px;
-  line-height: 16px;
-  padding: 8px;
 }
 
 //sm: { min: "640px", max: "767px" },
