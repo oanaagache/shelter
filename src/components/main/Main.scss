@@ -34,6 +34,60 @@ $fontStyle: italic;
   font-size: 18px;
 }
 
+//xxs: { min: "375px", max: "424px" }
+@media screen and (min-width: 375px) {
+  .main {
+    position: relative;
+    color: $color;
+  }
+
+  .main-image {
+    //width: 100%;
+    max-height: 100%;
+    max-width: 100%;
+  }
+
+  .main-text {
+    position: absolute;
+    top: 15%;
+    left: 20%;
+    transform: translate(-20%, -50%);
+    font-family: $font;
+    font-style: $fontStyle;
+  }
+
+  .main-title {
+    font-size: 18px;
+  }
+}
+
+//xs: { min: "425px", max: "639px" },
+@media screen and (min-width: 425px) {
+  .main {
+    position: relative;
+    color: $color;
+  }
+
+  .main-image {
+    //width: 100%;
+    max-height: 100%;
+    max-width: 100%;
+  }
+
+  .main-text {
+    position: absolute;
+    top: 15%;
+    left: 20%;
+    transform: translate(-20%, -50%);
+    font-family: $font;
+    font-style: $fontStyle;
+  }
+
+  .main-title {
+    font-size: 18px;
+  }
+}
+
 //sm: { min: "640px", max: "767px" },
 @media screen and (min-width: 640px) {
   .main {
