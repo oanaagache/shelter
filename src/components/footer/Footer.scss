@@ -1,7 +1,11 @@
 $color: aliceblue;
 $black: #000;
-$font-menu: "Oswald", sans-serif;
-$font-title: "Segoe UI", sans-serif;
+
+//$font-menu: "Oswald", sans-serif;
+$font-menu: "Courier New", sans-serif;
+
+//$font-title: "Segoe UI", sans-serif;
+$font-title: "Courier New", sans-serif;
 
 * {
   box-sizing: border-box;
@@ -34,91 +38,27 @@ $font-title: "Segoe UI", sans-serif;
 .footer-title {
   font-family: $font-title;
   display: flex;
-  font-size: 18px;
+  font-size: 16px;
 }
 
 .footer-menu {
   display: flex;
   list-style: none;
   justify-content: center;
-  margin-top: 18px;
+  margin-top: 16px;
 }
 
 .footer-menu {
   li {
     display: inline-flex;
     flex-direction: row-reverse;
-    font-size: 15px;
+    font-size: 14px;
     list-style: none;
     padding: 5px;
     position: relative;
   }
 }
 
-//xs: { min: "360px", max: "639px" },
-@media screen and (min-width: 360px) {
-  .footer {
-    height: 120px;
-    width: 100%;
-    background-color: $black;
-  }
-
-  .footer-cont {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    text-align: center;
-    color: $color;
-    height: 100%;
-  }
-
-  .footer-inner {
-    display: flex;
-    align-items: center;
-  }
-
-  .footer-title {
-    font-family: $font-title;
-    display: flex;
-    font-size: 12px;
-  }
-
-  .footer-menu {
-    display: flex;
-    list-style: none;
-    justify-content: center;
-    margin-top: 12px;
-  }
-
-  .footer-menu {
-    li {
-      display: inline-flex;
-      flex-direction: row-reverse;
-      font-size: 10px;
-      list-style: none;
-      padding: 5px;
-      position: relative;
-    }
-  }
-}
-
-//sm: { min: "640px", max: "767px" },
-@media screen and (min-width: 640px) {
-}
-
-// md: { min: "768px", max: "1023px" },
-@media screen and (min-width: 768px) {
-}
-
-//lg: { min: "1024px", max: "1279px" },
-@media screen and (min-width: 1024px) {
-}
-
-// xl: { min: "1280px", max: "1535px" },
-@media screen and (min-width: 1280px) {
-}
-
 //sm: { min: "640px", max: "767px" },
 @media screen and (min-width: 640px) {
   .footer {
@@ -145,21 +85,21 @@ $font-title: "Segoe UI", sans-serif;
   .footer-title {
     font-family: $font-title;
     display: flex;
-    font-size: 18px;
+    font-size: 16px;
   }
 
   .footer-menu {
     display: flex;
     list-style: none;
     justify-content: center;
-    margin-top: 18px;
+    margin-top: 16px;
   }
 
   .footer-menu {
     li {
       display: inline-flex;
       flex-direction: row-reverse;
-      font-size: 18px;
+      font-size: 14px;
       list-style: none;
       padding: 5px;
       position: relative;
@@ -200,14 +140,14 @@ $font-title: "Segoe UI", sans-serif;
     display: flex;
     list-style: none;
     justify-content: center;
-    margin-top: 18px;
+    margin-top: 16px;
   }
 
   .footer-menu {
     li {
       display: inline-flex;
       flex-direction: row-reverse;
-      font-size: 18px;
+      font-size: 16px;
       list-style: none;
       padding: 5px;
       position: relative;
@@ -248,14 +188,14 @@ $font-title: "Segoe UI", sans-serif;
     display: flex;
     list-style: none;
     justify-content: center;
-    margin-top: 18px;
+    margin-top: 16px;
   }
 
   .footer-menu {
     li {
       display: inline-flex;
       flex-direction: row-reverse;
-      font-size: 18px;
+      font-size: 16px;
       list-style: none;
       padding: 5px;
       position: relative;
@@ -296,14 +236,14 @@ $font-title: "Segoe UI", sans-serif;
     display: flex;
     list-style: none;
     justify-content: center;
-    margin-top: 18px;
+    margin-top: 16px;
   }
 
   .footer-menu {
     li {
       display: inline-flex;
       flex-direction: row-reverse;
-      font-size: 18px;
+      font-size: 16px;
       list-style: none;
       padding: 5px;
       position: relative;
@@ -351,7 +291,7 @@ $font-title: "Segoe UI", sans-serif;
     li {
       display: inline-flex;
       flex-direction: row-reverse;
-      font-size: 18px;
+      font-size: 16px;
       list-style: none;
       padding: 5px;
       position: relative;

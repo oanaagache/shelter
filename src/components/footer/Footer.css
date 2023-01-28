@@ -26,66 +26,27 @@
 }
 
 .footer-title {
-  font-family: "Segoe UI", sans-serif;
+  font-family: "Courier New", sans-serif;
   display: flex;
-  font-size: 18px;
+  font-size: 16px;
 }
 
 .footer-menu {
   display: flex;
   list-style: none;
   justify-content: center;
-  margin-top: 18px;
+  margin-top: 16px;
 }
 
 .footer-menu li {
   display: inline-flex;
   flex-direction: row-reverse;
-  font-size: 15px;
+  font-size: 14px;
   list-style: none;
   padding: 5px;
   position: relative;
 }
 
-@media screen and (min-width: 360px) {
-  .footer {
-    height: 120px;
-    width: 100%;
-    background-color: #000;
-  }
-  .footer-cont {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    text-align: center;
-    color: aliceblue;
-    height: 100%;
-  }
-  .footer-inner {
-    display: flex;
-    align-items: center;
-  }
-  .footer-title {
-    font-family: "Segoe UI", sans-serif;
-    display: flex;
-    font-size: 12px;
-  }
-  .footer-menu {
-    display: flex;
-    list-style: none;
-    justify-content: center;
-    margin-top: 12px;
-  }
-  .footer-menu li {
-    display: inline-flex;
-    flex-direction: row-reverse;
-    font-size: 10px;
-    list-style: none;
-    padding: 5px;
-    position: relative;
-  }
-}
 @media screen and (min-width: 640px) {
   .footer {
     height: 120px;
@@ -106,20 +67,20 @@
     align-items: center;
   }
   .footer-title {
-    font-family: "Segoe UI", sans-serif;
+    font-family: "Courier New", sans-serif;
     display: flex;
-    font-size: 18px;
+    font-size: 16px;
   }
   .footer-menu {
     display: flex;
     list-style: none;
     justify-content: center;
-    margin-top: 18px;
+    margin-top: 16px;
   }
   .footer-menu li {
     display: inline-flex;
     flex-direction: row-reverse;
-    font-size: 18px;
+    font-size: 14px;
     list-style: none;
     padding: 5px;
     position: relative;
@@ -145,7 +106,7 @@
     align-items: center;
   }
   .footer-title {
-    font-family: "Segoe UI", sans-serif;
+    font-family: "Courier New", sans-serif;
     display: flex;
     font-size: 18px;
   }
@@ -153,12 +114,12 @@
     display: flex;
     list-style: none;
     justify-content: center;
-    margin-top: 18px;
+    margin-top: 16px;
   }
   .footer-menu li {
     display: inline-flex;
     flex-direction: row-reverse;
-    font-size: 18px;
+    font-size: 16px;
     list-style: none;
     padding: 5px;
     position: relative;
@@ -184,7 +145,7 @@
     align-items: center;
   }
   .footer-title {
-    font-family: "Segoe UI", sans-serif;
+    font-family: "Courier New", sans-serif;
     display: flex;
     font-size: 18px;
   }
@@ -192,12 +153,12 @@
     display: flex;
     list-style: none;
     justify-content: center;
-    margin-top: 18px;
+    margin-top: 16px;
   }
   .footer-menu li {
     display: inline-flex;
     flex-direction: row-reverse;
-    font-size: 18px;
+    font-size: 16px;
     list-style: none;
     padding: 5px;
     position: relative;
@@ -223,7 +184,7 @@
     align-items: center;
   }
   .footer-title {
-    font-family: "Segoe UI", sans-serif;
+    font-family: "Courier New", sans-serif;
     display: flex;
     font-size: 18px;
   }
@@ -231,12 +192,12 @@
     display: flex;
     list-style: none;
     justify-content: center;
-    margin-top: 18px;
+    margin-top: 16px;
   }
   .footer-menu li {
     display: inline-flex;
     flex-direction: row-reverse;
-    font-size: 18px;
+    font-size: 16px;
     list-style: none;
     padding: 5px;
     position: relative;
@@ -262,7 +223,7 @@
     align-items: center;
   }
   .footer-title {
-    font-family: "Segoe UI", sans-serif;
+    font-family: "Courier New", sans-serif;
     display: flex;
     font-size: 18px;
   }
@@ -275,7 +236,7 @@
   .footer-menu li {
     display: inline-flex;
     flex-direction: row-reverse;
-    font-size: 18px;
+    font-size: 16px;
     list-style: none;
     padding: 5px;
     position: relative;

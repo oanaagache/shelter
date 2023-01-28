@@ -6,28 +6,29 @@ import { useNavigate } from "react-router-dom";
 
 const Navbar = () => {
   let navigate = useNavigate();
-
   const [isLoggedIn, setIsLoggedIn] = useState();
-  const [isAdmin, setAdmin] = useState();
+  //const [isAdmin, setAdmin] = useState("");
 
   useEffect(() => {
-    console.log(JSON.parse(localStorage.getItem("loggedIn")));
     setIsLoggedIn(JSON.parse(localStorage.getItem("loggedIn")));
+    //console.log(JSON.parse(localStorage.getItem("loggedIn")));
   }, []);
 
-  // let userIsLoggedIn = false;
+  console.log(isLoggedIn);
 
+  // let userIsLoggedIn = false;
   // if (isLoggedIn) {
   //   userIsLoggedIn = JSON.parse(isLoggedIn);
   // }
   // console.log(userIsLoggedIn);
-  //console.log(isLoggedIn);
-  //console.log(JSON.parse(isLoggedIn));
-  //console.log(typeof isLoggedIn);
+  // console.log(isLoggedIn);
+  // console.log(JSON.parse(isLoggedIn));
+  // console.log(typeof isLoggedIn);
 
-  useEffect(() => {
-    setAdmin(JSON.parse(localStorage.getItem("Admin is loggedIn")));
-  }, []);
+  // useEffect(() => {
+  //   setAdmin(JSON.parse(localStorage.getItem("Admin is loggedIn")));
+  //   console.log(JSON.parse(localStorage.getItem("Admin is loggedIn")));
+  // }, []);
 
   const handleClick = () => {
     localStorage.removeItem("loggedIn");
@@ -35,7 +36,6 @@ const Navbar = () => {
     localStorage.removeItem("registeredUser");
     localStorage.removeItem("AdoptionForm");
     localStorage.removeItem("Admin is loggedIn");
-
     navigate("/login");
   };
 

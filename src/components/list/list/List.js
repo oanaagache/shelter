@@ -18,7 +18,7 @@ const List = () => {
       }
       const records = await response.json();
       setRecords(records);
-      console.log(records);
+      //console.log(records);
     }
     getRecords();
     return;
