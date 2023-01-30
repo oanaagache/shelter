@@ -80,7 +80,6 @@ $font-title: "Courier New", sans-serif;
   .footer-inner {
     display: flex;
     align-items: center;
-  }
 
   .footer-title {
     font-family: $font-title;
@@ -111,43 +110,43 @@ $font-title: "Courier New", sans-serif;
 @media screen and (min-width: 425px) {
   .footer {
     height: 120px;
-    width: 100%;
+    //width: 100%;
+    max-width: 100%;
     background-color: $black;
   }
 
   .footer-cont {
     display: flex;
-    align-items: center;
-    justify-content: center;
+    font-family: $font;
     flex-direction: column;
-    text-align: center;
     color: $color;
     height: 100%;
   }
 
   .footer-inner {
     display: flex;
-    align-items: center;
+    font-family: $font;
+    flex-direction: column;
   }
 
   .footer-title {
     font-family: $font-title;
     display: flex;
-    font-size: 12px;
+    font-size: 14px;
   }
 
   .footer-menu {
     display: flex;
     list-style: none;
     justify-content: center;
-    margin-top: 16px;
+    margin-top: 14px;
   }
 
   .footer-menu {
     li {
       display: inline-flex;
       flex-direction: row-reverse;
-      font-size: 12px;
+      font-size: 14px;
       list-style: none;
       padding: 5px;
       position: relative;

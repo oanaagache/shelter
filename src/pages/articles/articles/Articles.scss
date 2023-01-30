@@ -80,6 +80,92 @@ $black: #000;
   padding-top: 16px;
 }
 
+//xxs: { min: "375px", max: "424px" }
+@media screen and (min-width: 375px) {
+}
+
+//xs: { min: "425px", max: "639px" },
+@media screen and (min-width: 425px) {
+  .articles-cont {
+    max-width: 100%;
+  }
+
+  .articles-inner {
+    display: flex;
+    align-items: center;
+    margin: 40px 20px 20px 20px;
+  }
+
+  .articles-arrow {
+    display: flex;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 5px;
+  }
+
+  .articles-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    font-size: 22px;
+    color: pink;
+  }
+
+  .articles {
+    margin: 80px 20px 80px 20px;
+  }
+
+  .button-articles {
+    justify-content: left;
+  }
+
+  .button-articles-read {
+    color: $color;
+    background-color: $background-color;
+    border-radius: 5px;
+    width: 80px;
+    height: 30px;
+    font-size: 12px;
+  }
+
+  .articles-cards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 60px;
+    margin-bottom: 60px;
+  }
+
+  .articles-card-container {
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    width: fit-content;
+    align-items: center;
+  }
+
+  .articles-card-content {
+    border-radius: 4px;
+    overflow: hidden;
+    background-color: var(--background-el);
+    box-shadow: 0 2px 4px rgba($black, 0.06), 0 2px 3px rgba($black, 0.12);
+    width: 350px;
+    cursor: pointer;
+    margin: 20px;
+  }
+
+  .articles-card-details {
+    padding: 16px;
+  }
+
+  .articles-card-inner {
+    padding-top: 16px;
+  }
+}
+
 //sm: { min: "640px", max: "767px" },
 @media screen and (min-width: 640px) {
   .articles-cont {

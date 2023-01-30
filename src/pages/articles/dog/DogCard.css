@@ -78,6 +78,77 @@
   margin: 20px;
 }
 
+@media screen and (min-width: 425px) {
+  .dogCard-cont {
+    max-width: 100%;
+  }
+  .dogCard-inner {
+    display: flex;
+    align-items: center;
+    margin: 40px 20px 20px 20px;
+  }
+  .dogCard-arrow {
+    display: flex;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 5px;
+  }
+  .dogCard-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    font-size: 22px;
+    color: pink;
+  }
+  .dogCard {
+    margin: 80px 20px 80px 20px;
+  }
+  .button-dogCard {
+    justify-content: left;
+  }
+  .button-dogCard-read {
+    color: aliceblue;
+    background-color: rgb(126, 63, 102);
+    border-radius: 5px;
+    width: 80px;
+    height: 40px;
+    font-size: 12px;
+  }
+  .dogCard-cards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 60px;
+    margin-bottom: 60px;
+  }
+  .dogCard-card-container {
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    align-items: center;
+  }
+  .dogCard-card-content {
+    border-radius: 4px;
+    overflow: hidden;
+    background-color: var(--background-el);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.06), 0 2px 3px rgba(0, 0, 0, 0.12);
+    width: 350px;
+    cursor: pointer;
+    margin: 20px;
+  }
+  .dogCard-card-details {
+    padding: 16px 0 16px 0;
+  }
+  .dogCard-card-inner {
+    margin: 20px;
+  }
+}
 @media screen and (min-width: 640px) {
   .dogCard-cont {
     max-width: 100%;

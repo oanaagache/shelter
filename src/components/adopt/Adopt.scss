@@ -95,6 +95,103 @@ $font: "Courier New", sans-serif;
   margin-top: 16px;
 }
 
+//xxs: { min: "375px", max: "424px" }
+@media screen and (min-width: 375px) {
+}
+
+//xs: { min: "425px", max: "639px" },
+@media screen and (min-width: 425px) {
+  .adopt-cont {
+    max-width: 100%;
+  }
+
+  .adopt-inner {
+    display: flex;
+    align-items: center;
+    margin: 40px 20px 20px 20px;
+  }
+
+  .adopt-arrow {
+    display: flex;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 5px;
+  }
+
+  .adopt-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    font-size: 22px;
+    color: pink;
+    padding: 20px;
+  }
+
+  .adopt-drop {
+    margin: 80px 20px 80px 20px;
+  }
+
+  .adopt-drop-title {
+    margin: auto;
+    justify-content: left;
+    display: flex;
+    font-size: 20px;
+    margin: 40px 0 30px 0;
+  }
+
+  .drop {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  // flex: [flex-grow] [flex-shrink] [flex-basis];
+  //flex: [max] [min] [ideal size];
+
+  .drop1 {
+    flex: 4 1 auto;
+    padding: 8px 0 8px 0;
+    font-size: 15px;
+    justify-content: space-between;
+  }
+
+  .drop2 {
+    flex: 4 1 auto;
+    padding: 8px 0 8px 0;
+    font-size: 15px;
+    justify-content: space-between;
+  }
+
+  .drop3,
+  .drop4,
+  .drop5,
+  .drop6 {
+    flex: 1 1 auto;
+    padding: 8px 0 8px 0;
+    font-size: 15px;
+    justify-content: space-between;
+  }
+
+  .drop-title {
+    font-size: 13px;
+  }
+
+  .adopt-button {
+    justify-content: left;
+    margin: 20px;
+  }
+
+  .filter-btn {
+    color: $color;
+    background-color: $background-color;
+    border-radius: 5px;
+    width: 100px;
+    height: 40px;
+    font-size: 12px;
+  }
+}
+
 //sm: { min: "640px", max: "767px" },
 @media screen and (min-width: 640px) {
   .adopt-cont {
