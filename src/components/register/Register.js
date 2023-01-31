@@ -28,21 +28,18 @@ const Register = () => {
       );
 
       const userRecord = await response.json();
+      console.log(userRecord);
 
-      if (userRecord.length === 0) {
-        alert(
-          `User ${registeredUser.email} not found in our database, please register!`
-        );
-        return;
-      }
+      // if (userRecord.length === 0) {
+      //   alert(
+      //     `User ${registeredUser.email} not found in our database, please register!`
+      //   );
+      //   return;
+      // }
+
       const user = userRecord[0];
 
-      if (registeredUser.email === user.email) {
-        alert(
-          `User already registered with ${registeredUser.email}, please login`
-        );
-        navigate("/login");
-      } else {
+      if (!user) {
         fetch("http://localhost:3001/record/addNewUser", {
           method: "post",
           headers: {
@@ -54,10 +51,36 @@ const Register = () => {
           return;
         });
         navigate("/login");
+      } else {
+        if (registeredUser.email === user.email) {
+          alert(
+            `User already registered with ${registeredUser.email}, please login`
+          );
+          navigate("/login");
+        }
       }
     }
+
     getUserEmail();
   };
+  // if (registeredUser.email === user.email) {
+  //   alert(
+  //     `User already registered with ${registeredUser.email}, please login`
+  //   );
+  //   navigate("/login");
+  // } else {
+  //   fetch("http://localhost:3001/record/addNewUser", {
+  //     method: "post",
+  //     headers: {
+  //       "Content-Type": "application/json",
+  //     },
+  //     body: JSON.stringify(registeredUser),
+  //   }).catch((error) => {
+  //     window.alert(error);
+  //     return;
+  //   });
+  //   navigate("/login");
+  // }
 
   return (
     <>

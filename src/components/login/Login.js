@@ -32,6 +32,7 @@ const Login = (props) => {
         alert(
           `User ${loginUser.email} not found in our database, please register!`
         );
+        navigate("/register");
         return;
       }
       const user = userRecord[0];

@@ -4,18 +4,19 @@ import { NavLink } from "react-router-dom";
 import logo from "../../images/image.png";
 import { useNavigate } from "react-router-dom";
 
-const Navbar = () => {
+const Navbar = (props) => {
   let navigate = useNavigate();
-  const [isLoggedIn, setIsLoggedIn] = useState();
-  const [isAdmin, setAdmin] = useState("");
+  //const { isLoggedIn, isAdmin } = props;
+
+  const [isLoggedIn, setIsLoggedIn] = useState(props.isLoggedIn);
+  const [isAdmin, setAdmin] = useState(props.isAdmin);
 
   useEffect(() => {
     setIsLoggedIn(JSON.parse(localStorage.getItem("loggedIn")));
-    //console.log(JSON.parse(localStorage.getItem("loggedIn")));
-  }, []);
+    console.log(JSON.parse(localStorage.getItem("loggedIn")));
+  }, [isLoggedIn]);
 
-  console.log(isLoggedIn);
-
+  // console.log(isLoggedIn);
   // let userIsLoggedIn = false;
   // if (isLoggedIn) {
   //   userIsLoggedIn = JSON.parse(isLoggedIn);
@@ -28,7 +29,7 @@ const Navbar = () => {
   useEffect(() => {
     setAdmin(JSON.parse(localStorage.getItem("Admin is loggedIn")));
     console.log(JSON.parse(localStorage.getItem("Admin is loggedIn")));
-  }, []);
+  }, [isAdmin]);
 
   const handleClick = () => {
     localStorage.removeItem("loggedIn");
@@ -135,30 +136,6 @@ const Navbar = () => {
               Login
             </div>
           )}
-
-          {/* {isLoggedIn ? (
-            <div className="nav-btn-log">
-              <button
-                className="btn-log"
-                onClick={() => {
-                  handleClick();
-                }}
-              >
-                Logout
-              </button>
-            </div>
-          ) : (
-            <div className="nav-btn-log">
-              <button
-                className="btn-log"
-                onClick={() => {
-                  navigate("/login");
-                }}
-              >
-                Login
-              </button>
-            </div>
-          )} */}
 
           {isAdmin && (
             <li>
