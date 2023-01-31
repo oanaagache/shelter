@@ -10,13 +10,13 @@ $fontStyle: italic;
   margin: 0;
 }
 
+// xl: max: "1280px"
 .main {
   position: relative;
   color: $color;
 }
 
 .main-image {
-  //width: 100%;
   max-height: 100%;
   max-width: 100%;
 }
@@ -31,126 +31,17 @@ $fontStyle: italic;
 }
 
 .main-title {
-  font-size: 18px;
+  font-size: 26px;
 }
 
-//xxs: { min: "375px", max: "424px" }
-@media screen and (min-width: 375px) {
+//lg:  max: "1024px"
+@media screen and (max-width: 1024px) {
   .main {
     position: relative;
     color: $color;
   }
 
   .main-image {
-    //width: 100%;
-    max-height: 100%;
-    max-width: 100%;
-  }
-
-  .main-text {
-    position: absolute;
-    top: 15%;
-    left: 20%;
-    transform: translate(-20%, -50%);
-    font-family: $font;
-    font-style: $fontStyle;
-  }
-
-  .main-title {
-    font-size: 18px;
-  }
-}
-
-//xs: { min: "425px", max: "639px" },
-@media screen and (min-width: 425px) {
-  .main {
-    position: relative;
-    color: $color;
-  }
-
-  .main-image {
-    //width: 100%;
-    max-height: 100%;
-    max-width: 100%;
-  }
-
-  .main-text {
-    position: absolute;
-    top: 15%;
-    left: 20%;
-    transform: translate(-20%, -50%);
-    font-family: $font;
-    font-style: $fontStyle;
-  }
-
-  .main-title {
-    font-size: 18px;
-  }
-}
-
-//sm: { min: "640px", max: "767px" },
-@media screen and (min-width: 640px) {
-  .main {
-    position: relative;
-    color: $color;
-  }
-
-  .main-image {
-    //width: 100%;
-    max-height: 100%;
-    max-width: 100%;
-  }
-
-  .main-text {
-    position: absolute;
-    top: 15%;
-    left: 20%;
-    transform: translate(-20%, -50%);
-    font-family: $font;
-    font-style: $fontStyle;
-  }
-
-  .main-title {
-    font-size: 18px;
-  }
-}
-
-// md: { min: "768px", max: "1023px" },
-@media screen and (min-width: 768px) {
-  .main {
-    position: relative;
-    color: $color;
-  }
-
-  .main-image {
-    //width: 100%;
-    max-height: 100%;
-    max-width: 100%;
-  }
-
-  .main-text {
-    position: absolute;
-    top: 15%;
-    left: 20%;
-    transform: translate(-20%, -50%);
-    font-family: $font;
-    font-style: $fontStyle;
-  }
-
-  .main-title {
-    font-size: 18px;
-  }
-}
-
-//lg: { min: "1024px", max: "1279px" },
-@media screen and (min-width: 1024px) {
-  .main {
-    position: relative;
-    color: $color;
-  }
-
-  .main-image {
-    //width: 100%;
     max-height: 100%;
     max-width: 100%;
   }
@@ -169,8 +60,34 @@ $fontStyle: italic;
   }
 }
 
-// xl: { min: "1280px", max: "1535px" },
-@media screen and (min-width: 1280px) {
+// md:  max: "768px"
+@media screen and (max-width: 768px) {
+  .main {
+    position: relative;
+    color: $color;
+  }
+
+  .main-image {
+    max-height: 100%;
+    max-width: 100%;
+  }
+
+  .main-text {
+    position: absolute;
+    top: 15%;
+    left: 20%;
+    transform: translate(-20%, -50%);
+    font-family: $font;
+    font-style: $fontStyle;
+  }
+
+  .main-title {
+    font-size: 18px;
+  }
+}
+
+//sm:  max: "640px"
+@media screen and (max-width: 640px) {
   .main {
     position: relative;
     color: $color;
@@ -185,19 +102,19 @@ $fontStyle: italic;
   .main-text {
     position: absolute;
     top: 15%;
-    left: 30%;
-    transform: translate(-30%, -50%);
+    left: 20%;
+    transform: translate(-20%, -50%);
     font-family: $font;
     font-style: $fontStyle;
   }
 
   .main-title {
-    font-size: 26px;
+    font-size: 18px;
   }
 }
 
-// xxl: { min: "1536px" }
-@media screen and (min-width: 1536px) {
+//xs: max "425px
+@media screen and (max-width: 425px) {
   .main {
     position: relative;
     color: $color;
@@ -212,13 +129,264 @@ $fontStyle: italic;
   .main-text {
     position: absolute;
     top: 15%;
-    left: 40%;
-    transform: translate(-40%, -50%);
+    left: 20%;
+    transform: translate(-20%, -50%);
     font-family: $font;
     font-style: $fontStyle;
   }
 
   .main-title {
-    font-size: 26px;
+    font-size: 18px;
   }
 }
+
+// //xxs: max: "375px"
+// @media screen and (max-width: 375px) {
+//   .main {
+//     position: relative;
+//     color: $color;
+//   }
+
+//   .main-image {
+//     max-height: 100%;
+//     max-width: 100%;
+//   }
+
+//   .main-text {
+//     position: absolute;
+//     top: 15%;
+//     left: 20%;
+//     transform: translate(-20%, -50%);
+//     font-family: $font;
+//     font-style: $fontStyle;
+//   }
+
+//   .main-title {
+//     font-size: 18px;
+//   }
+// }
+
+// $color: aliceblue;
+// $background-color: rgb(126, 63, 102);
+// //$font: "Oswald", sans-serif;
+// $font: "Courier New", sans-serif;
+// $fontStyle: italic;
+
+// * {
+//   box-sizing: border-box;
+//   padding: 0;
+//   margin: 0;
+// }
+
+// .main {
+//   position: relative;
+//   color: $color;
+// }
+
+// .main-image {
+//   //width: 100%;
+//   max-height: 100%;
+//   max-width: 100%;
+// }
+
+// .main-text {
+//   position: absolute;
+//   top: 15%;
+//   left: 30%;
+//   transform: translate(-30%, -50%);
+//   font-family: $font;
+//   font-style: $fontStyle;
+// }
+
+// .main-title {
+//   font-size: 18px;
+// }
+
+// //xxs: { min: "375px", max: "424px" }
+// @media screen and (min-width: 375px) {
+//   .main {
+//     position: relative;
+//     color: $color;
+//   }
+
+//   .main-image {
+//     //width: 100%;
+//     max-height: 100%;
+//     max-width: 100%;
+//   }
+
+//   .main-text {
+//     position: absolute;
+//     top: 15%;
+//     left: 20%;
+//     transform: translate(-20%, -50%);
+//     font-family: $font;
+//     font-style: $fontStyle;
+//   }
+
+//   .main-title {
+//     font-size: 18px;
+//   }
+// }
+
+// //xs: { min: "425px", max: "639px" },
+// @media screen and (min-width: 425px) {
+//   .main {
+//     position: relative;
+//     color: $color;
+//   }
+
+//   .main-image {
+//     //width: 100%;
+//     max-height: 100%;
+//     max-width: 100%;
+//   }
+
+//   .main-text {
+//     position: absolute;
+//     top: 15%;
+//     left: 20%;
+//     transform: translate(-20%, -50%);
+//     font-family: $font;
+//     font-style: $fontStyle;
+//   }
+
+//   .main-title {
+//     font-size: 18px;
+//   }
+// }
+
+// //sm: { min: "640px", max: "767px" },
+// @media screen and (min-width: 640px) {
+//   .main {
+//     position: relative;
+//     color: $color;
+//   }
+
+//   .main-image {
+//     //width: 100%;
+//     max-height: 100%;
+//     max-width: 100%;
+//   }
+
+//   .main-text {
+//     position: absolute;
+//     top: 15%;
+//     left: 20%;
+//     transform: translate(-20%, -50%);
+//     font-family: $font;
+//     font-style: $fontStyle;
+//   }
+
+//   .main-title {
+//     font-size: 18px;
+//   }
+// }
+
+// // md: { min: "768px", max: "1023px" },
+// @media screen and (min-width: 768px) {
+//   .main {
+//     position: relative;
+//     color: $color;
+//   }
+
+//   .main-image {
+//     //width: 100%;
+//     max-height: 100%;
+//     max-width: 100%;
+//   }
+
+//   .main-text {
+//     position: absolute;
+//     top: 15%;
+//     left: 20%;
+//     transform: translate(-20%, -50%);
+//     font-family: $font;
+//     font-style: $fontStyle;
+//   }
+
+//   .main-title {
+//     font-size: 18px;
+//   }
+// }
+
+// //lg: { min: "1024px", max: "1279px" },
+// @media screen and (min-width: 1024px) {
+//   .main {
+//     position: relative;
+//     color: $color;
+//   }
+
+//   .main-image {
+//     //width: 100%;
+//     max-height: 100%;
+//     max-width: 100%;
+//   }
+
+//   .main-text {
+//     position: absolute;
+//     top: 15%;
+//     left: 25%;
+//     transform: translate(-25%, -50%);
+//     font-family: $font;
+//     font-style: $fontStyle;
+//   }
+
+//   .main-title {
+//     font-size: 22px;
+//   }
+// }
+
+// // xl: { min: "1280px", max: "1535px" },
+// @media screen and (min-width: 1280px) {
+//   .main {
+//     position: relative;
+//     color: $color;
+//   }
+
+//   .main-image {
+//     //width: 100%;
+//     max-height: 100%;
+//     max-width: 100%;
+//   }
+
+//   .main-text {
+//     position: absolute;
+//     top: 15%;
+//     left: 30%;
+//     transform: translate(-30%, -50%);
+//     font-family: $font;
+//     font-style: $fontStyle;
+//   }
+
+//   .main-title {
+//     font-size: 26px;
+//   }
+// }
+
+// // xxl: { min: "1536px" }
+// @media screen and (min-width: 1536px) {
+//   .main {
+//     position: relative;
+//     color: $color;
+//   }
+
+//   .main-image {
+//     //width: 100%;
+//     max-height: 100%;
+//     max-width: 100%;
+//   }
+
+//   .main-text {
+//     position: absolute;
+//     top: 15%;
+//     left: 40%;
+//     transform: translate(-40%, -50%);
+//     font-family: $font;
+//     font-style: $fontStyle;
+//   }
+
+//   .main-title {
+//     font-size: 26px;
+//   }
+// }

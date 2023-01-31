@@ -58,14 +58,7 @@ const App = () => {
 
         <Route
           path="/login"
-          element={
-            <Login
-              isLoggedIn={isLoggedIn}
-              setIsLoggedIn={setIsLoggedIn}
-              isAdmin={isAdmin}
-              setAdmin={setAdmin}
-            />
-          }
+          element={<Login setIsLoggedIn={setIsLoggedIn} setAdmin={setAdmin} />}
         />
         <Route path="/register" element={<Register />} />
         <Route path="/success/:name" element={<Success />} />

@@ -59,7 +59,8 @@ const Login = (props) => {
         localStorage.setItem("Admin is loggedIn", true);
         setAdmin(true);
         setIsLoggedIn(true);
-        navigate("/list");
+        //navigate("/list");
+        navigate("/");
       } else {
         localStorage.setItem("loggedIn", true);
       }
