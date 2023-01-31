@@ -63,24 +63,6 @@ const Register = () => {
 
     getUserEmail();
   };
-  // if (registeredUser.email === user.email) {
-  //   alert(
-  //     `User already registered with ${registeredUser.email}, please login`
-  //   );
-  //   navigate("/login");
-  // } else {
-  //   fetch("http://localhost:3001/record/addNewUser", {
-  //     method: "post",
-  //     headers: {
-  //       "Content-Type": "application/json",
-  //     },
-  //     body: JSON.stringify(registeredUser),
-  //   }).catch((error) => {
-  //     window.alert(error);
-  //     return;
-  //   });
-  //   navigate("/login");
-  // }
 
   return (
     <>

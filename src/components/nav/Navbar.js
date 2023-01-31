@@ -6,7 +6,6 @@ import { useNavigate } from "react-router-dom";
 
 const Navbar = (props) => {
   let navigate = useNavigate();
-  //const { isLoggedIn, isAdmin } = props;
 
   const [isLoggedIn, setIsLoggedIn] = useState(props.isLoggedIn);
   const [isAdmin, setAdmin] = useState(props.isAdmin);
@@ -15,16 +14,6 @@ const Navbar = (props) => {
     setIsLoggedIn(JSON.parse(localStorage.getItem("loggedIn")));
     console.log(JSON.parse(localStorage.getItem("loggedIn")));
   }, [isLoggedIn]);
-
-  // console.log(isLoggedIn);
-  // let userIsLoggedIn = false;
-  // if (isLoggedIn) {
-  //   userIsLoggedIn = JSON.parse(isLoggedIn);
-  // }
-  // console.log(userIsLoggedIn);
-  // console.log(isLoggedIn);
-  // console.log(JSON.parse(isLoggedIn));
-  // console.log(typeof isLoggedIn);
 
   useEffect(() => {
     setAdmin(JSON.parse(localStorage.getItem("Admin is loggedIn")));
