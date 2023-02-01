@@ -5,7 +5,7 @@
 .about-inner {
   display: flex;
   align-items: center;
-  margin: 10px;
+  margin: 10px 80px 10px 80px;
 }
 
 .about-arrow {
@@ -20,16 +20,17 @@
   justify-content: center;
   align-items: center;
   height: 60px;
-  font-size: 30px;
+  font-size: 36px;
+  color: rosybrown;
 }
 
 .about {
-  margin: 80px 10px 80px 10px;
+  margin: 80px;
 }
 
 .about-button-adopt {
   justify-content: left;
-  margin: 10px;
+  margin: 80px;
 }
 
 .about-button {
@@ -41,124 +42,7 @@
   font-size: 12px;
 }
 
-@media screen and (min-width: 425px) {
-  .about-cont {
-    max-width: 100%;
-  }
-  .about-inner {
-    display: flex;
-    align-items: center;
-    margin: 40px 20px 20px 20px;
-  }
-  .about-arrow {
-    display: flex;
-    text-decoration: none;
-    font-size: 18px;
-    padding: 5px;
-  }
-  .about-title {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 60px;
-    font-size: 26px;
-    color: pink;
-  }
-  .about {
-    margin: 80px 20px 80px 20px;
-  }
-  .about-button-adopt {
-    justify-content: left;
-    margin: 10px;
-  }
-  .about-button {
-    color: aliceblue;
-    background-color: rgb(126, 63, 102);
-    border-radius: 5px;
-    width: 60px;
-    height: 30px;
-    font-size: 12px;
-  }
-}
-@media screen and (min-width: 640px) {
-  .about-cont {
-    max-width: 100%;
-  }
-  .about-inner {
-    display: flex;
-    align-items: center;
-    margin: 10px;
-  }
-  .about-arrow {
-    display: flex;
-    text-decoration: none;
-    font-size: 18px;
-    padding: 5px;
-  }
-  .about-title {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 60px;
-    font-size: 30px;
-    color: red;
-  }
-  .about {
-    margin: 80px 10px 80px 10px;
-  }
-  .about-button-adopt {
-    justify-content: left;
-    margin: 10px;
-  }
-  .about-button {
-    color: aliceblue;
-    background-color: rgb(126, 63, 102);
-    border-radius: 5px;
-    width: 60px;
-    height: 30px;
-    font-size: 12px;
-  }
-}
-@media screen and (min-width: 768px) {
-  .about-cont {
-    max-width: 100%;
-  }
-  .about-inner {
-    display: flex;
-    align-items: center;
-    margin: 10px 20px 10px 20px;
-  }
-  .about-arrow {
-    display: flex;
-    text-decoration: none;
-    font-size: 18px;
-    padding: 5px;
-  }
-  .about-title {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 60px;
-    font-size: 32px;
-    color: blue;
-  }
-  .about {
-    margin: 80px 20px 80px 20px;
-  }
-  .about-button-adopt {
-    justify-content: left;
-    margin: 20px;
-  }
-  .about-button {
-    color: aliceblue;
-    background-color: rgb(126, 63, 102);
-    border-radius: 5px;
-    width: 60px;
-    height: 30px;
-    font-size: 12px;
-  }
-}
-@media screen and (min-width: 1024px) {
+@media screen and (max-width: 1024px) {
   .about-cont {
     max-width: 100%;
   }
@@ -197,14 +81,14 @@
     font-size: 12px;
   }
 }
-@media screen and (min-width: 1280px) {
+@media screen and (max-width: 768px) {
   .about-cont {
     max-width: 100%;
   }
   .about-inner {
     display: flex;
     align-items: center;
-    margin: 10px 80px 10px 80px;
+    margin: 10px 20px 10px 20px;
   }
   .about-arrow {
     display: flex;
@@ -217,15 +101,15 @@
     justify-content: center;
     align-items: center;
     height: 60px;
-    font-size: 36px;
-    color: rosybrown;
+    font-size: 32px;
+    color: blue;
   }
   .about {
-    margin: 80px;
+    margin: 80px 20px 80px 20px;
   }
   .about-button-adopt {
     justify-content: left;
-    margin: 80px;
+    margin: 20px;
   }
   .about-button {
     color: aliceblue;
@@ -236,14 +120,14 @@
     font-size: 12px;
   }
 }
-@media screen and (min-width: 1536px) {
+@media screen and (max-width: 640px) {
   .about-cont {
     max-width: 100%;
   }
   .about-inner {
     display: flex;
     align-items: center;
-    margin: 10px 80px 10px 80px;
+    margin: 10px;
   }
   .about-arrow {
     display: flex;
@@ -256,15 +140,93 @@
     justify-content: center;
     align-items: center;
     height: 60px;
-    font-size: 40px;
-    color: purple;
+    font-size: 30px;
+    color: red;
   }
   .about {
-    margin: 80px;
+    margin: 80px 10px 80px 10px;
   }
   .about-button-adopt {
     justify-content: left;
-    margin: 80px;
+    margin: 10px;
+  }
+  .about-button {
+    color: aliceblue;
+    background-color: rgb(126, 63, 102);
+    border-radius: 5px;
+    width: 60px;
+    height: 30px;
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 425px) {
+  .about-cont {
+    max-width: 100%;
+  }
+  .about-inner {
+    display: flex;
+    align-items: center;
+    margin: 40px 20px 20px 20px;
+  }
+  .about-arrow {
+    display: flex;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 5px;
+  }
+  .about-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    font-size: 26px;
+    color: pink;
+  }
+  .about {
+    margin: 80px 20px 80px 20px;
+  }
+  .about-button-adopt {
+    justify-content: left;
+    margin: 10px;
+  }
+  .about-button {
+    color: aliceblue;
+    background-color: rgb(126, 63, 102);
+    border-radius: 5px;
+    width: 60px;
+    height: 30px;
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 375px) {
+  .about-cont {
+    max-width: 100%;
+  }
+  .about-inner {
+    display: flex;
+    align-items: center;
+    margin: 40px 20px 20px 20px;
+  }
+  .about-arrow {
+    display: flex;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 5px;
+  }
+  .about-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    font-size: 26px;
+    color: pink;
+  }
+  .about {
+    margin: 80px 20px 80px 20px;
+  }
+  .about-button-adopt {
+    justify-content: left;
+    margin: 10px;
   }
   .about-button {
     color: aliceblue;

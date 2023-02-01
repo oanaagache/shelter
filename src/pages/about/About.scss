@@ -2,6 +2,8 @@ $color: aliceblue;
 $background-color: rgb(126, 63, 102);
 $black: #000;
 
+// xl: max 1280px
+
 .about-cont {
   max-width: 100%;
 }
@@ -9,7 +11,7 @@ $black: #000;
 .about-inner {
   display: flex;
   align-items: center;
-  margin: 10px;
+  margin: 10px 80px 10px 80px;
 }
 
 .about-arrow {
@@ -24,16 +26,17 @@ $black: #000;
   justify-content: center;
   align-items: center;
   height: 60px;
-  font-size: 30px;
+  font-size: 36px;
+  color: rosybrown;
 }
 
 .about {
-  margin: 80px 10px 80px 10px;
+  margin: 80px;
 }
 
 .about-button-adopt {
   justify-content: left;
-  margin: 10px;
+  margin: 80px;
 }
 
 .about-button {
@@ -45,153 +48,8 @@ $black: #000;
   font-size: 12px;
 }
 
-//xxs: { min: "375px", max: "424px" }
-@media screen and (min-width: 375px) {
-}
-
-//xs: { min: "425px", max: "639px" },
-@media screen and (min-width: 425px) {
-  .about-cont {
-    max-width: 100%;
-  }
-
-  .about-inner {
-    display: flex;
-    align-items: center;
-    margin: 40px 20px 20px 20px;
-  }
-
-  .about-arrow {
-    display: flex;
-    text-decoration: none;
-    font-size: 18px;
-    padding: 5px;
-  }
-
-  .about-title {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 60px;
-    font-size: 26px;
-    color: pink;
-  }
-
-  .about {
-    margin: 80px 20px 80px 20px;
-  }
-
-  .about-button-adopt {
-    justify-content: left;
-    margin: 10px;
-  }
-
-  .about-button {
-    color: $color;
-    background-color: $background-color;
-    border-radius: 5px;
-    width: 60px;
-    height: 30px;
-    font-size: 12px;
-  }
-}
-
-//sm: { min: "640px", max: "767px" },
-@media screen and (min-width: 640px) {
-  .about-cont {
-    max-width: 100%;
-  }
-
-  .about-inner {
-    display: flex;
-    align-items: center;
-    margin: 10px;
-  }
-
-  .about-arrow {
-    display: flex;
-    text-decoration: none;
-    font-size: 18px;
-    padding: 5px;
-  }
-
-  .about-title {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 60px;
-    font-size: 30px;
-    color: red;
-  }
-
-  .about {
-    margin: 80px 10px 80px 10px;
-  }
-
-  .about-button-adopt {
-    justify-content: left;
-    margin: 10px;
-  }
-
-  .about-button {
-    color: $color;
-    background-color: $background-color;
-    border-radius: 5px;
-    width: 60px;
-    height: 30px;
-    font-size: 12px;
-  }
-}
-
-// md: { min: "768px", max: "1023px" },
-@media screen and (min-width: 768px) {
-  .about-cont {
-    max-width: 100%;
-  }
-
-  .about-inner {
-    display: flex;
-    align-items: center;
-    margin: 10px 20px 10px 20px;
-  }
-
-  .about-arrow {
-    display: flex;
-    text-decoration: none;
-    font-size: 18px;
-    padding: 5px;
-  }
-
-  .about-title {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 60px;
-    font-size: 32px;
-    color: blue;
-  }
-
-  .about {
-    margin: 80px 20px 80px 20px;
-  }
-
-  .about-button-adopt {
-    justify-content: left;
-    margin: 20px;
-  }
-
-  .about-button {
-    color: $color;
-    background-color: $background-color;
-    border-radius: 5px;
-    width: 60px;
-    height: 30px;
-    font-size: 12px;
-  }
-}
-
-//lg: { min: "1024px", max: "1279px" },
-@media screen and (min-width: 1024px) {
+//lg: max 1024px
+@media screen and (max-width: 1024px) {
   .about-cont {
     max-width: 100%;
   }
@@ -237,8 +95,8 @@ $black: #000;
   }
 }
 
-// xl: { min: "1280px", max: "1535px" },
-@media screen and (min-width: 1280px) {
+// md: max 768px
+@media screen and (max-width: 768px) {
   .about-cont {
     max-width: 100%;
   }
@@ -246,7 +104,7 @@ $black: #000;
   .about-inner {
     display: flex;
     align-items: center;
-    margin: 10px 80px 10px 80px;
+    margin: 10px 20px 10px 20px;
   }
 
   .about-arrow {
@@ -261,17 +119,17 @@ $black: #000;
     justify-content: center;
     align-items: center;
     height: 60px;
-    font-size: 36px;
-    color: rosybrown;
+    font-size: 32px;
+    color: blue;
   }
 
   .about {
-    margin: 80px;
+    margin: 80px 20px 80px 20px;
   }
 
   .about-button-adopt {
     justify-content: left;
-    margin: 80px;
+    margin: 20px;
   }
 
   .about-button {
@@ -284,8 +142,8 @@ $black: #000;
   }
 }
 
-// xxl: { min: "1536px" },
-@media screen and (min-width: 1536px) {
+//sm: min 640px
+@media screen and (max-width: 640px) {
   .about-cont {
     max-width: 100%;
   }
@@ -293,7 +151,7 @@ $black: #000;
   .about-inner {
     display: flex;
     align-items: center;
-    margin: 10px 80px 10px 80px;
+    margin: 10px;
   }
 
   .about-arrow {
@@ -308,17 +166,17 @@ $black: #000;
     justify-content: center;
     align-items: center;
     height: 60px;
-    font-size: 40px;
-    color: purple;
+    font-size: 30px;
+    color: red;
   }
 
   .about {
-    margin: 80px;
+    margin: 80px 10px 80px 10px;
   }
 
   .about-button-adopt {
     justify-content: left;
-    margin: 80px;
+    margin: 10px;
   }
 
   .about-button {
@@ -330,3 +188,430 @@ $black: #000;
     font-size: 12px;
   }
 }
+
+//xs:  max 425px
+@media screen and (max-width: 425px) {
+  .about-cont {
+    max-width: 100%;
+  }
+
+  .about-inner {
+    display: flex;
+    align-items: center;
+    margin: 40px 20px 20px 20px;
+  }
+
+  .about-arrow {
+    display: flex;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 5px;
+  }
+
+  .about-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    font-size: 26px;
+    color: pink;
+  }
+
+  .about {
+    margin: 80px 20px 80px 20px;
+  }
+
+  .about-button-adopt {
+    justify-content: left;
+    margin: 10px;
+  }
+
+  .about-button {
+    color: $color;
+    background-color: $background-color;
+    border-radius: 5px;
+    width: 60px;
+    height: 30px;
+    font-size: 12px;
+  }
+}
+
+//xxs:  max 375px
+@media screen and (max-width: 375px) {
+  .about-cont {
+    max-width: 100%;
+  }
+
+  .about-inner {
+    display: flex;
+    align-items: center;
+    margin: 40px 20px 20px 20px;
+  }
+
+  .about-arrow {
+    display: flex;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 5px;
+  }
+
+  .about-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    font-size: 26px;
+    color: pink;
+  }
+
+  .about {
+    margin: 80px 20px 80px 20px;
+  }
+
+  .about-button-adopt {
+    justify-content: left;
+    margin: 10px;
+  }
+
+  .about-button {
+    color: $color;
+    background-color: $background-color;
+    border-radius: 5px;
+    width: 60px;
+    height: 30px;
+    font-size: 12px;
+  }
+}
+
+// $color: aliceblue;
+// $background-color: rgb(126, 63, 102);
+// $black: #000;
+
+// .about-cont {
+//   max-width: 100%;
+// }
+
+// .about-inner {
+//   display: flex;
+//   align-items: center;
+//   margin: 10px;
+// }
+
+// .about-arrow {
+//   display: flex;
+//   text-decoration: none;
+//   font-size: 18px;
+//   padding: 5px;
+// }
+
+// .about-title {
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   height: 60px;
+//   font-size: 30px;
+// }
+
+// .about {
+//   margin: 80px 10px 80px 10px;
+// }
+
+// .about-button-adopt {
+//   justify-content: left;
+//   margin: 10px;
+// }
+
+// .about-button {
+//   color: $color;
+//   background-color: $background-color;
+//   border-radius: 5px;
+//   width: 60px;
+//   height: 30px;
+//   font-size: 12px;
+// }
+
+// //xxs: { min: "375px", max: "424px" }
+// @media screen and (min-width: 375px) {
+// }
+
+// //xs: { min: "425px", max: "639px" },
+// @media screen and (min-width: 425px) {
+//   .about-cont {
+//     max-width: 100%;
+//   }
+
+//   .about-inner {
+//     display: flex;
+//     align-items: center;
+//     margin: 40px 20px 20px 20px;
+//   }
+
+//   .about-arrow {
+//     display: flex;
+//     text-decoration: none;
+//     font-size: 18px;
+//     padding: 5px;
+//   }
+
+//   .about-title {
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     height: 60px;
+//     font-size: 26px;
+//     color: pink;
+//   }
+
+//   .about {
+//     margin: 80px 20px 80px 20px;
+//   }
+
+//   .about-button-adopt {
+//     justify-content: left;
+//     margin: 10px;
+//   }
+
+//   .about-button {
+//     color: $color;
+//     background-color: $background-color;
+//     border-radius: 5px;
+//     width: 60px;
+//     height: 30px;
+//     font-size: 12px;
+//   }
+// }
+
+// //sm: { min: "640px", max: "767px" },
+// @media screen and (min-width: 640px) {
+//   .about-cont {
+//     max-width: 100%;
+//   }
+
+//   .about-inner {
+//     display: flex;
+//     align-items: center;
+//     margin: 10px;
+//   }
+
+//   .about-arrow {
+//     display: flex;
+//     text-decoration: none;
+//     font-size: 18px;
+//     padding: 5px;
+//   }
+
+//   .about-title {
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     height: 60px;
+//     font-size: 30px;
+//     color: red;
+//   }
+
+//   .about {
+//     margin: 80px 10px 80px 10px;
+//   }
+
+//   .about-button-adopt {
+//     justify-content: left;
+//     margin: 10px;
+//   }
+
+//   .about-button {
+//     color: $color;
+//     background-color: $background-color;
+//     border-radius: 5px;
+//     width: 60px;
+//     height: 30px;
+//     font-size: 12px;
+//   }
+// }
+
+// // md: { min: "768px", max: "1023px" },
+// @media screen and (min-width: 768px) {
+//   .about-cont {
+//     max-width: 100%;
+//   }
+
+//   .about-inner {
+//     display: flex;
+//     align-items: center;
+//     margin: 10px 20px 10px 20px;
+//   }
+
+//   .about-arrow {
+//     display: flex;
+//     text-decoration: none;
+//     font-size: 18px;
+//     padding: 5px;
+//   }
+
+//   .about-title {
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     height: 60px;
+//     font-size: 32px;
+//     color: blue;
+//   }
+
+//   .about {
+//     margin: 80px 20px 80px 20px;
+//   }
+
+//   .about-button-adopt {
+//     justify-content: left;
+//     margin: 20px;
+//   }
+
+//   .about-button {
+//     color: $color;
+//     background-color: $background-color;
+//     border-radius: 5px;
+//     width: 60px;
+//     height: 30px;
+//     font-size: 12px;
+//   }
+// }
+
+// //lg: { min: "1024px", max: "1279px" },
+// @media screen and (min-width: 1024px) {
+//   .about-cont {
+//     max-width: 100%;
+//   }
+
+//   .about-inner {
+//     display: flex;
+//     align-items: center;
+//     margin: 10px 40px 10px 40px;
+//   }
+
+//   .about-arrow {
+//     display: flex;
+//     text-decoration: none;
+//     font-size: 18px;
+//     padding: 5px;
+//   }
+
+//   .about-title {
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     height: 60px;
+//     font-size: 36px;
+//     color: green;
+//   }
+
+//   .about {
+//     margin: 80px 40px 80px 40px;
+//   }
+
+//   .about-button-adopt {
+//     justify-content: left;
+//     margin: 40px;
+//   }
+
+//   .about-button {
+//     color: $color;
+//     background-color: $background-color;
+//     border-radius: 5px;
+//     width: 60px;
+//     height: 30px;
+//     font-size: 12px;
+//   }
+// }
+
+// // xl: { min: "1280px", max: "1535px" },
+// @media screen and (min-width: 1280px) {
+//   .about-cont {
+//     max-width: 100%;
+//   }
+
+//   .about-inner {
+//     display: flex;
+//     align-items: center;
+//     margin: 10px 80px 10px 80px;
+//   }
+
+//   .about-arrow {
+//     display: flex;
+//     text-decoration: none;
+//     font-size: 18px;
+//     padding: 5px;
+//   }
+
+//   .about-title {
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     height: 60px;
+//     font-size: 36px;
+//     color: rosybrown;
+//   }
+
+//   .about {
+//     margin: 80px;
+//   }
+
+//   .about-button-adopt {
+//     justify-content: left;
+//     margin: 80px;
+//   }
+
+//   .about-button {
+//     color: $color;
+//     background-color: $background-color;
+//     border-radius: 5px;
+//     width: 60px;
+//     height: 30px;
+//     font-size: 12px;
+//   }
+// }
+
+// // xxl: { min: "1536px" },
+// @media screen and (min-width: 1536px) {
+//   .about-cont {
+//     max-width: 100%;
+//   }
+
+//   .about-inner {
+//     display: flex;
+//     align-items: center;
+//     margin: 10px 80px 10px 80px;
+//   }
+
+//   .about-arrow {
+//     display: flex;
+//     text-decoration: none;
+//     font-size: 18px;
+//     padding: 5px;
+//   }
+
+//   .about-title {
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     height: 60px;
+//     font-size: 40px;
+//     color: purple;
+//   }
+
+//   .about {
+//     margin: 80px;
+//   }
+
+//   .about-button-adopt {
+//     justify-content: left;
+//     margin: 80px;
+//   }
+
+//   .about-button {
+//     color: $color;
+//     background-color: $background-color;
+//     border-radius: 5px;
+//     width: 60px;
+//     height: 30px;
+//     font-size: 12px;
+//   }
+// }
