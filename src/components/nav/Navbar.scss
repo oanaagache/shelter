@@ -532,3 +532,538 @@ $background-color: rgb(216, 186, 204);
     }
   }
 }
+
+// $color: aliceblue;
+// $border-color: darkgreen;
+// //$font: "Oswald", sans-serif;
+// $font: "Courier New", sans-serif;
+// $background-color: rgb(216, 186, 204);
+
+// * {
+//   box-sizing: border-box;
+//   padding: 0;
+//   margin: 0;
+// }
+
+// .header {
+//   max-width: 100%;
+// }
+
+// .header-content {
+//   display: flex;
+//   font-family: $font;
+//   flex-direction: row;
+//   height: 100px;
+// }
+
+// .header-inner {
+//   display: flex;
+//   align-items: center;
+// }
+
+// .header-title {
+//   display: flex;
+//   cursor: pointer;
+//   font-family: $font;
+//   font-size: 16px;
+//   padding-top: 10px;
+// }
+
+// .header-menu {
+//   display: flex;
+//   list-style: none;
+//   margin: 0;
+//   flex: 1;
+//   flex-direction: row;
+//   justify-content: space-between;
+//   align-items: center;
+// }
+
+// .li {
+//   position: relative;
+//   font-family: $font;
+//   cursor: pointer;
+// }
+
+// .about-nav {
+//   text-decoration: none;
+//   margin: 0 4px 0 4px;
+//   font-size: 16px;
+// }
+
+// .nav-btn-log {
+//   justify-content: left;
+//   margin: 10px;
+// }
+
+// .btn-log {
+//   margin-right: 20px;
+//   font-size: 16px;
+//   color: $color;
+//   background-color: $background-color;
+//   border-radius: 5px;
+//   width: 60px;
+//   height: 30px;
+// }
+
+// .about-login {
+//   margin-right: 20px;
+//   font-size: 16px;
+// }
+
+// //xxs: { min: "375px", max: "424px" }
+// @media screen and (min-width: 375px) {
+//   .header {
+//     max-width: 100%;
+//   }
+
+//   .header-content {
+//     display: flex;
+//     font-family: $font;
+//     flex-direction: column;
+//     height: 100px;
+//   }
+
+//   .header-inner {
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//     padding: 10px;
+//   }
+
+//   .header-title {
+//     display: flex;
+//     cursor: pointer;
+//     font-family: $font;
+//     font-size: 16px;
+//     padding-top: 10px;
+//   }
+
+//   .header-menu {
+//     display: flex;
+//     list-style: none;
+//     margin: 0;
+//     flex: 1;
+//     flex-direction: row;
+//     justify-content: space-between;
+//     align-items: center;
+//   }
+
+//   //xs: { min: "425px", max: "639px" },
+//   @media screen and (min-width: 425px) {
+//     .header {
+//       max-width: 100%;
+//     }
+
+//     .header-content {
+//       display: flex;
+//       font-family: $font;
+//       flex-direction: column;
+//       height: 100px;
+//     }
+
+//     .header-inner {
+//       display: flex;
+//       align-items: center;
+//       justify-content: center;
+//       padding: 10px;
+//     }
+
+//     .header-title {
+//       display: flex;
+//       cursor: pointer;
+//       font-family: $font;
+//       font-size: 16px;
+//       padding-top: 10px;
+//     }
+
+//     .header-menu {
+//       display: flex;
+//       list-style: none;
+//       margin: 0;
+//       flex: 1;
+//       flex-direction: row;
+//       justify-content: space-between;
+//       align-items: center;
+//     }
+
+//     .li {
+//       position: relative;
+//       font-family: $font;
+//       cursor: pointer;
+//     }
+
+//     .about-nav {
+//       text-decoration: none;
+//       margin: 0 4px 0 4px;
+//       font-size: 16px;
+//     }
+
+//     .about-login {
+//       margin-right: 20px;
+//       font-size: 16px;
+//     }
+
+//     .nav-btn-log {
+//       justify-content: left;
+//       margin: 10px;
+//     }
+
+//     .btn-log {
+//       margin-right: 20px;
+//       font-size: 16px;
+//       color: $color;
+//       background-color: $background-color;
+//       border-radius: 5px;
+//       width: 60px;
+//       height: 30px;
+//     }
+//   }
+
+//   //sm: { min: "640px", max: "767px" },
+//   @media screen and (min-width: 640px) {
+//     .header {
+//       max-width: 100%;
+//     }
+
+//     .header-content {
+//       display: flex;
+//       font-family: $font;
+//       flex-direction: column;
+//       height: 100px;
+//     }
+
+//     .header-inner {
+//       display: flex;
+//       align-items: center;
+//       justify-content: center;
+//       padding: 10px;
+//     }
+
+//     .header-title {
+//       display: flex;
+//       cursor: pointer;
+//       font-family: $font;
+//       font-size: 16px;
+//       padding-top: 10px;
+//     }
+
+//     .header-menu {
+//       display: flex;
+//       list-style: none;
+//       margin: 0;
+//       flex: 1;
+//       flex-direction: row;
+//       justify-content: space-between;
+//       align-items: center;
+//     }
+
+//     .li {
+//       position: relative;
+//       font-family: $font;
+//       cursor: pointer;
+//     }
+
+//     .about-nav {
+//       text-decoration: none;
+//       margin: 0 4px 0 4px;
+//       font-size: 16px;
+//     }
+
+//     .about-login {
+//       margin-right: 20px;
+//       font-size: 16px;
+//     }
+
+//     .nav-btn-log {
+//       justify-content: left;
+//       margin: 10px;
+//     }
+
+//     .btn-log {
+//       margin-right: 20px;
+//       font-size: 16px;
+//       color: $color;
+//       background-color: $background-color;
+//       border-radius: 5px;
+//       width: 60px;
+//       height: 30px;
+//     }
+//   }
+
+//   // md: { min: "768px", max: "1023px" },
+//   @media screen and (min-width: 768px) {
+//     .header {
+//       max-width: 100%;
+//     }
+
+//     .header-content {
+//       display: flex;
+//       font-family: $font;
+//       flex-direction: row;
+//       height: 100px;
+//     }
+
+//     .header-inner {
+//       display: flex;
+//       align-items: center;
+//     }
+
+//     .header-title {
+//       display: flex;
+//       cursor: pointer;
+//       font-family: $font;
+//       font-size: 18px;
+//       padding-top: 10px;
+//     }
+
+//     .header-menu {
+//       display: flex;
+//       list-style: none;
+//       margin: 0;
+//       flex: 1;
+//       flex-direction: row;
+//       justify-content: space-between;
+//       align-items: center;
+//     }
+
+//     .li {
+//       position: relative;
+//       font-family: $font;
+//       cursor: pointer;
+//     }
+
+//     .about-nav {
+//       text-decoration: none;
+//       margin: 0 4px 0 4px;
+//       font-size: 18px;
+//     }
+
+//     .about-login {
+//       margin-right: 30px;
+//       font-size: 18px;
+//     }
+
+//     .nav-btn-log {
+//       justify-content: left;
+//       margin: 10px;
+//     }
+
+//     .btn-log {
+//       margin-right: 20px;
+//       font-size: 16px;
+//       color: $color;
+//       background-color: $background-color;
+//       border-radius: 5px;
+//       width: 60px;
+//       height: 30px;
+//     }
+//   }
+
+//   //lg: { min: "1024px", max: "1279px" },
+//   @media screen and (min-width: 1024px) {
+//     .header {
+//       max-width: 100%;
+//     }
+
+//     .header-content {
+//       display: flex;
+//       font-family: $font;
+//       flex-direction: row;
+//       height: 100px;
+//     }
+
+//     .header-inner {
+//       display: flex;
+//       align-items: center;
+//     }
+
+//     .header-title {
+//       display: flex;
+//       cursor: pointer;
+//       font-family: $font;
+//       font-size: 18px;
+//       padding-top: 10px;
+//     }
+
+//     .header-menu {
+//       display: flex;
+//       list-style: none;
+//       margin: 0;
+//       flex: 1;
+//       flex-direction: row;
+//       justify-content: space-between;
+//       align-items: center;
+//     }
+
+//     .li {
+//       position: relative;
+//       font-family: $font;
+//       cursor: pointer;
+//     }
+
+//     .about-nav {
+//       text-decoration: none;
+//       margin: 0 4px 0 4px;
+//       font-size: 18px;
+//     }
+
+//     .about-login {
+//       margin-right: 30px;
+//       font-size: 18px;
+//     }
+
+//     .nav-btn-log {
+//       justify-content: left;
+//       margin: 10px;
+//     }
+
+//     .btn-log {
+//       margin-right: 20px;
+//       font-size: 16px;
+//       color: $color;
+//       background-color: $background-color;
+//       border-radius: 5px;
+//       width: 60px;
+//       height: 30px;
+//     }
+//   }
+
+//   // xl: { min: "1280px", max: "1535px" },
+//   @media screen and (min-width: 1280px) {
+//     .header {
+//       max-width: 100%;
+//     }
+
+//     .header-content {
+//       display: flex;
+//       font-family: $font;
+//       flex-direction: row;
+//       height: 100px;
+//     }
+
+//     .header-inner {
+//       display: flex;
+//       align-items: center;
+//     }
+
+//     .header-title {
+//       display: flex;
+//       cursor: pointer;
+//       font-family: $font;
+//       font-size: 18px;
+//       padding-top: 10px;
+//     }
+
+//     .header-menu {
+//       display: flex;
+//       list-style: none;
+//       margin: 0;
+//       flex: 1;
+//       flex-direction: row;
+//       justify-content: space-between;
+//       align-items: center;
+//     }
+
+//     .li {
+//       position: relative;
+//       font-family: $font;
+//       cursor: pointer;
+//     }
+
+//     .about-nav {
+//       text-decoration: none;
+//       margin: 0 4px 0 4px;
+//       font-size: 18px;
+//     }
+
+//     .about-login {
+//       margin-right: 30px;
+//       font-size: 18px;
+//     }
+
+//     .nav-btn-log {
+//       justify-content: left;
+//       margin: 10px;
+//     }
+
+//     .btn-log {
+//       margin-right: 20px;
+//       font-size: 16px;
+//       color: $color;
+//       background-color: $background-color;
+//       border-radius: 5px;
+//       width: 60px;
+//       height: 30px;
+//     }
+//   }
+
+//   // xxl: { min: "1536px" },
+//   @media screen and (min-width: 1536px) {
+//     .header {
+//       max-width: 100%;
+//     }
+
+//     .header-content {
+//       display: flex;
+//       font-family: $font;
+//       flex-direction: row;
+//       height: 144px;
+//     }
+
+//     .header-inner {
+//       display: flex;
+//       align-items: center;
+//     }
+
+//     .header-title {
+//       display: flex;
+//       cursor: pointer;
+//       font-family: $font;
+//       font-size: 18px;
+//       padding-top: 10px;
+//     }
+
+//     .header-menu {
+//       display: flex;
+//       list-style: none;
+//       margin: 0;
+//       flex: 1;
+//       flex-direction: row;
+//       justify-content: space-between;
+//       align-items: center;
+//     }
+
+//     .li {
+//       position: relative;
+//       font-family: $font;
+//       cursor: pointer;
+//     }
+
+//     .about-nav {
+//       text-decoration: none;
+//       margin: 0 4px 0 4px;
+//       font-size: 18px;
+//     }
+
+//     .about-login {
+//       margin-right: 30px;
+//       font-size: 18px;
+//     }
+
+//     .nav-btn-log {
+//       justify-content: left;
+//       margin: 10px;
+//     }
+
+//     .btn-log {
+//       margin-right: 20px;
+//       font-size: 16px;
+//       color: $color;
+//       background-color: $background-color;
+//       border-radius: 5px;
+//       width: 60px;
+//       height: 30px;
+//     }
+//   }
+// }
