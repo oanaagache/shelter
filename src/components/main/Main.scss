@@ -10,7 +10,7 @@ $fontStyle: italic;
   margin: 0;
 }
 
-// xl: max: "1280px"
+// xl: max 1280px
 .main {
   position: relative;
   color: $color;
@@ -35,7 +35,7 @@ $fontStyle: italic;
   color: red;
 }
 
-//lg:  max: "1024px"
+//lg:  max 1024px
 @media screen and (max-width: 1024px) {
   .main {
     position: relative;
@@ -62,7 +62,7 @@ $fontStyle: italic;
   }
 }
 
-// md:  max: "768px"
+// md:  max 768px
 @media screen and (max-width: 768px) {
   .main {
     position: relative;
@@ -89,7 +89,7 @@ $fontStyle: italic;
   }
 }
 
-//sm:  max: "640px"
+//sm:  max 640px
 @media screen and (max-width: 640px) {
   .main {
     position: relative;
@@ -116,7 +116,7 @@ $fontStyle: italic;
   }
 }
 
-//xs: max "425px
+//xs: max 425px
 @media screen and (max-width: 425px) {
   .main {
     position: relative;
@@ -143,7 +143,7 @@ $fontStyle: italic;
   }
 }
 
-//xxs: max: "375px"
+//xxs: max 375px
 @media screen and (max-width: 375px) {
   .main {
     position: relative;

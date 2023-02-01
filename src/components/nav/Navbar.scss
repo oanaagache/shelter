@@ -1,6 +1,5 @@
 $color: aliceblue;
 $border-color: darkgreen;
-//$font: "Oswald", sans-serif;
 $font: "Courier New", sans-serif;
 $background-color: rgb(216, 186, 204);
 
@@ -10,7 +9,7 @@ $background-color: rgb(216, 186, 204);
   margin: 0;
 }
 
-// xl: max: "1280px"
+// xl: max 1280px
 .header {
   max-width: 100%;
 }
@@ -58,7 +57,7 @@ $background-color: rgb(216, 186, 204);
   font-size: 20px;
 }
 
-//lg:  max: "1024px"
+//lg:  max 1024px
 @media screen and (max-width: 1024px) {
   .header {
     max-width: 100%;
@@ -109,7 +108,7 @@ $background-color: rgb(216, 186, 204);
   }
 }
 
-// md:  max: "768px"
+// md:  max 768px
 @media screen and (max-width: 768px) {
   .header {
     max-width: 100%;
@@ -161,7 +160,7 @@ $background-color: rgb(216, 186, 204);
   }
 }
 
-//sm:  max: "640px"
+//sm:  max 640px
 @media screen and (max-width: 640px) {
   .header {
     max-width: 100%;
@@ -212,7 +211,7 @@ $background-color: rgb(216, 186, 204);
   }
 }
 
-//xs: max "425px
+//xs: max 425px
 @media screen and (max-width: 425px) {
   .header {
     max-width: 100%;
@@ -263,7 +262,7 @@ $background-color: rgb(216, 186, 204);
   }
 }
 
-//xxs: max: "375px"
+//xxs: max 375px
 @media screen and (max-width: 375px) {
   .header {
     max-width: 100%;
