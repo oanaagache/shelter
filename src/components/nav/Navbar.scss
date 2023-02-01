@@ -10,6 +10,7 @@ $background-color: rgb(216, 186, 204);
   margin: 0;
 }
 
+// xl: max: "1280px"
 .header {
   max-width: 100%;
 }
@@ -19,6 +20,7 @@ $background-color: rgb(216, 186, 204);
   font-family: $font;
   flex-direction: row;
   height: 100px;
+  padding: 20px;
 }
 
 .header-inner {
@@ -30,7 +32,7 @@ $background-color: rgb(216, 186, 204);
   display: flex;
   cursor: pointer;
   font-family: $font;
-  font-size: 16px;
+  font-size: 20px;
   padding-top: 10px;
 }
 
@@ -53,31 +55,62 @@ $background-color: rgb(216, 186, 204);
 .about-nav {
   text-decoration: none;
   margin: 0 4px 0 4px;
-  font-size: 16px;
+  font-size: 20px;
 }
 
-.nav-btn-log {
-  justify-content: left;
-  margin: 10px;
+//lg:  max: "1024px"
+@media screen and (max-width: 1024px) {
+  .header {
+    max-width: 100%;
+  }
+
+  .header-content {
+    display: flex;
+    font-family: $font;
+    flex-direction: row;
+    height: 100px;
+    padding: 20px;
+  }
+
+  .header-inner {
+    display: flex;
+    align-items: center;
+  }
+
+  .header-title {
+    display: flex;
+    cursor: pointer;
+    font-family: $font;
+    font-size: 18px;
+    padding-top: 10px;
+  }
+
+  .header-menu {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    flex: 1;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+  }
+
+  .li {
+    position: relative;
+    font-family: $font;
+    cursor: pointer;
+  }
+
+  .about-nav {
+    text-decoration: none;
+    margin: 0 4px 0 4px;
+    font-size: 18px;
+  }
 }
 
-.btn-log {
-  margin-right: 20px;
-  font-size: 16px;
-  color: $color;
-  background-color: $background-color;
-  border-radius: 5px;
-  width: 60px;
-  height: 30px;
-}
-
-.about-login {
-  margin-right: 20px;
-  font-size: 16px;
-}
-
-//xxs: { min: "375px", max: "424px" }
-@media screen and (min-width: 375px) {
+// md:  max: "768px"
+@media screen and (max-width: 768px) {
   .header {
     max-width: 100%;
   }
@@ -87,6 +120,7 @@ $background-color: rgb(216, 186, 204);
     font-family: $font;
     flex-direction: column;
     height: 100px;
+    padding: 0 20px 0 20px;
   }
 
   .header-inner {
@@ -114,422 +148,169 @@ $background-color: rgb(216, 186, 204);
     align-items: center;
   }
 
-  //xs: { min: "425px", max: "639px" },
-  @media screen and (min-width: 425px) {
-    .header {
-      max-width: 100%;
-    }
-
-    .header-content {
-      display: flex;
-      font-family: $font;
-      flex-direction: column;
-      height: 100px;
-    }
-
-    .header-inner {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 10px;
-    }
-
-    .header-title {
-      display: flex;
-      cursor: pointer;
-      font-family: $font;
-      font-size: 16px;
-      padding-top: 10px;
-    }
-
-    .header-menu {
-      display: flex;
-      list-style: none;
-      margin: 0;
-      flex: 1;
-      flex-direction: row;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .li {
-      position: relative;
-      font-family: $font;
-      cursor: pointer;
-    }
-
-    .about-nav {
-      text-decoration: none;
-      margin: 0 4px 0 4px;
-      font-size: 16px;
-    }
-
-    .about-login {
-      margin-right: 20px;
-      font-size: 16px;
-    }
-
-    .nav-btn-log {
-      justify-content: left;
-      margin: 10px;
-    }
-
-    .btn-log {
-      margin-right: 20px;
-      font-size: 16px;
-      color: $color;
-      background-color: $background-color;
-      border-radius: 5px;
-      width: 60px;
-      height: 30px;
-    }
+  .li {
+    position: relative;
+    font-family: $font;
+    cursor: pointer;
   }
 
-  //sm: { min: "640px", max: "767px" },
-  @media screen and (min-width: 640px) {
-    .header {
-      max-width: 100%;
-    }
+  .about-nav {
+    text-decoration: none;
+    margin: 0 4px 0 4px;
+    font-size: 16px;
+  }
+}
 
-    .header-content {
-      display: flex;
-      font-family: $font;
-      flex-direction: column;
-      height: 100px;
-    }
-
-    .header-inner {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 10px;
-    }
-
-    .header-title {
-      display: flex;
-      cursor: pointer;
-      font-family: $font;
-      font-size: 16px;
-      padding-top: 10px;
-    }
-
-    .header-menu {
-      display: flex;
-      list-style: none;
-      margin: 0;
-      flex: 1;
-      flex-direction: row;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .li {
-      position: relative;
-      font-family: $font;
-      cursor: pointer;
-    }
-
-    .about-nav {
-      text-decoration: none;
-      margin: 0 4px 0 4px;
-      font-size: 16px;
-    }
-
-    .about-login {
-      margin-right: 20px;
-      font-size: 16px;
-    }
-
-    .nav-btn-log {
-      justify-content: left;
-      margin: 10px;
-    }
-
-    .btn-log {
-      margin-right: 20px;
-      font-size: 16px;
-      color: $color;
-      background-color: $background-color;
-      border-radius: 5px;
-      width: 60px;
-      height: 30px;
-    }
+//sm:  max: "640px"
+@media screen and (max-width: 640px) {
+  .header {
+    max-width: 100%;
   }
 
-  // md: { min: "768px", max: "1023px" },
-  @media screen and (min-width: 768px) {
-    .header {
-      max-width: 100%;
-    }
-
-    .header-content {
-      display: flex;
-      font-family: $font;
-      flex-direction: row;
-      height: 100px;
-    }
-
-    .header-inner {
-      display: flex;
-      align-items: center;
-    }
-
-    .header-title {
-      display: flex;
-      cursor: pointer;
-      font-family: $font;
-      font-size: 18px;
-      padding-top: 10px;
-    }
-
-    .header-menu {
-      display: flex;
-      list-style: none;
-      margin: 0;
-      flex: 1;
-      flex-direction: row;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .li {
-      position: relative;
-      font-family: $font;
-      cursor: pointer;
-    }
-
-    .about-nav {
-      text-decoration: none;
-      margin: 0 4px 0 4px;
-      font-size: 18px;
-    }
-
-    .about-login {
-      margin-right: 30px;
-      font-size: 18px;
-    }
-
-    .nav-btn-log {
-      justify-content: left;
-      margin: 10px;
-    }
-
-    .btn-log {
-      margin-right: 20px;
-      font-size: 16px;
-      color: $color;
-      background-color: $background-color;
-      border-radius: 5px;
-      width: 60px;
-      height: 30px;
-    }
+  .header-content {
+    display: flex;
+    font-family: $font;
+    flex-direction: column;
+    height: 100px;
+    padding: 0 5px 0 5px;
   }
 
-  //lg: { min: "1024px", max: "1279px" },
-  @media screen and (min-width: 1024px) {
-    .header {
-      max-width: 100%;
-    }
-
-    .header-content {
-      display: flex;
-      font-family: $font;
-      flex-direction: row;
-      height: 100px;
-    }
-
-    .header-inner {
-      display: flex;
-      align-items: center;
-    }
-
-    .header-title {
-      display: flex;
-      cursor: pointer;
-      font-family: $font;
-      font-size: 18px;
-      padding-top: 10px;
-    }
-
-    .header-menu {
-      display: flex;
-      list-style: none;
-      margin: 0;
-      flex: 1;
-      flex-direction: row;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .li {
-      position: relative;
-      font-family: $font;
-      cursor: pointer;
-    }
-
-    .about-nav {
-      text-decoration: none;
-      margin: 0 4px 0 4px;
-      font-size: 18px;
-    }
-
-    .about-login {
-      margin-right: 30px;
-      font-size: 18px;
-    }
-
-    .nav-btn-log {
-      justify-content: left;
-      margin: 10px;
-    }
-
-    .btn-log {
-      margin-right: 20px;
-      font-size: 16px;
-      color: $color;
-      background-color: $background-color;
-      border-radius: 5px;
-      width: 60px;
-      height: 30px;
-    }
+  .header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
-  // xl: { min: "1280px", max: "1535px" },
-  @media screen and (min-width: 1280px) {
-    .header {
-      max-width: 100%;
-    }
-
-    .header-content {
-      display: flex;
-      font-family: $font;
-      flex-direction: row;
-      height: 100px;
-    }
-
-    .header-inner {
-      display: flex;
-      align-items: center;
-    }
-
-    .header-title {
-      display: flex;
-      cursor: pointer;
-      font-family: $font;
-      font-size: 18px;
-      padding-top: 10px;
-    }
-
-    .header-menu {
-      display: flex;
-      list-style: none;
-      margin: 0;
-      flex: 1;
-      flex-direction: row;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .li {
-      position: relative;
-      font-family: $font;
-      cursor: pointer;
-    }
-
-    .about-nav {
-      text-decoration: none;
-      margin: 0 4px 0 4px;
-      font-size: 18px;
-    }
-
-    .about-login {
-      margin-right: 30px;
-      font-size: 18px;
-    }
-
-    .nav-btn-log {
-      justify-content: left;
-      margin: 10px;
-    }
-
-    .btn-log {
-      margin-right: 20px;
-      font-size: 16px;
-      color: $color;
-      background-color: $background-color;
-      border-radius: 5px;
-      width: 60px;
-      height: 30px;
-    }
+  .header-title {
+    display: flex;
+    cursor: pointer;
+    font-family: $font;
+    font-size: 13px;
+    padding-top: 10px;
   }
 
-  // xxl: { min: "1536px" },
-  @media screen and (min-width: 1536px) {
-    .header {
-      max-width: 100%;
-    }
+  .header-menu {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    flex: 1;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
 
-    .header-content {
-      display: flex;
-      font-family: $font;
-      flex-direction: row;
-      height: 144px;
-    }
+  .li {
+    position: relative;
+    font-family: $font;
+    cursor: pointer;
+  }
 
-    .header-inner {
-      display: flex;
-      align-items: center;
-    }
+  .about-nav {
+    text-decoration: none;
+    margin: 0 2px 0 2px;
+    font-size: 13px;
+  }
+}
 
-    .header-title {
-      display: flex;
-      cursor: pointer;
-      font-family: $font;
-      font-size: 18px;
-      padding-top: 10px;
-    }
+//xs: max "425px
+@media screen and (max-width: 425px) {
+  .header {
+    max-width: 100%;
+  }
 
-    .header-menu {
-      display: flex;
-      list-style: none;
-      margin: 0;
-      flex: 1;
-      flex-direction: row;
-      justify-content: space-between;
-      align-items: center;
-    }
+  .header-content {
+    display: flex;
+    font-family: $font;
+    flex-direction: column;
+    height: 250px;
+  }
 
-    .li {
-      position: relative;
-      font-family: $font;
-      cursor: pointer;
-    }
+  .header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+  }
 
-    .about-nav {
-      text-decoration: none;
-      margin: 0 4px 0 4px;
-      font-size: 18px;
-    }
+  .header-title {
+    display: flex;
+    cursor: pointer;
+    font-family: $font;
+    font-size: 13px;
+    padding-top: 10px;
+  }
 
-    .about-login {
-      margin-right: 30px;
-      font-size: 18px;
-    }
+  .header-menu {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
 
-    .nav-btn-log {
-      justify-content: left;
-      margin: 10px;
-    }
+  .li {
+    position: relative;
+    font-family: $font;
+    cursor: pointer;
+  }
 
-    .btn-log {
-      margin-right: 20px;
-      font-size: 16px;
-      color: $color;
-      background-color: $background-color;
-      border-radius: 5px;
-      width: 60px;
-      height: 30px;
-    }
+  .about-nav {
+    text-decoration: none;
+    margin: 0 2px 0 2px;
+    font-size: 13px;
+  }
+}
+
+//xxs: max: "375px"
+@media screen and (max-width: 375px) {
+  .header {
+    max-width: 100%;
+  }
+
+  .header-content {
+    display: flex;
+    font-family: $font;
+    flex-direction: column;
+    height: 250px;
+  }
+
+  .header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+  }
+
+  .header-title {
+    display: flex;
+    cursor: pointer;
+    font-family: $font;
+    font-size: 13px;
+    padding-top: 10px;
+  }
+
+  .header-menu {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .li {
+    position: relative;
+    font-family: $font;
+    cursor: pointer;
+  }
+
+  .about-nav {
+    text-decoration: none;
+    margin: 0 2px 0 2px;
+    font-size: 13px;
   }
 }
 

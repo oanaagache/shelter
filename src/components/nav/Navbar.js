@@ -44,7 +44,7 @@ const Navbar = (props) => {
           </h1>
         </div>
 
-        <ul className="header-menu">
+        <div className="header-menu">
           <li>
             <NavLink
               to="/about"
@@ -105,26 +105,27 @@ const Navbar = (props) => {
               Articles
             </NavLink>
           </li>
-
-          {isLoggedIn ? (
-            <div
-              className="about-nav"
-              onClick={() => {
-                handleClick();
-              }}
-            >
-              Logout
-            </div>
-          ) : (
-            <div
-              className="about-login"
-              onClick={() => {
-                navigate("/login");
-              }}
-            >
-              Login
-            </div>
-          )}
+          <li>
+            {isLoggedIn ? (
+              <div
+                className="about-nav"
+                onClick={() => {
+                  handleClick();
+                }}
+              >
+                Logout
+              </div>
+            ) : (
+              <div
+                className="about-nav"
+                onClick={() => {
+                  navigate("/login");
+                }}
+              >
+                Login
+              </div>
+            )}
+          </li>
 
           {isAdmin && (
             <>
@@ -137,7 +138,7 @@ const Navbar = (props) => {
                   end
                   className="about-nav"
                 >
-                  Add Articles
+                  +Add
                 </NavLink>
               </li>
               <li>
@@ -154,7 +155,7 @@ const Navbar = (props) => {
               </li>{" "}
             </>
           )}
-        </ul>
+        </div>
       </div>
     </div>
   );
