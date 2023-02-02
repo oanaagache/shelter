@@ -6,43 +6,9 @@ $color-delete: red;
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  // overflow-x: hidden;
 }
 
-.list {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 40px 0 40px 0;
-  // overflow-x: auto;
-  // cursor: pointer;
-}
-
-table {
-  border: 2px solid $background-color;
-  padding: 5px;
-}
-
-th,
-td {
-  border-right: 1px solid #eeeeef;
-  border-left: solid 1px #eeeeef;
-  border-bottom: 1px solid #eeeeef;
-  padding: 5px;
-  text-align: left;
-  width: 50%;
-}
-
-tr:nth-child(even) {
-  background-color: #f2f2f2;
-}
-
-th:last-child,
-td:last-child {
-  border-right: none;
-}
-
+// xl: max 1280px
 .list-cont {
   max-width: 100%;
 }
@@ -50,7 +16,7 @@ td:last-child {
 .list-inner {
   display: flex;
   align-items: center;
-  margin: 10px;
+  margin: 10px 80px 10px 80px;
 }
 
 .arrow {
@@ -65,157 +31,52 @@ td:last-child {
   justify-content: center;
   align-items: center;
   height: 60px;
-  font-size: 30px;
+  font-size: 36px;
+  color: pink;
+}
+
+.list {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 40px 0 40px 0;
+  font-size: 18px;
+}
+
+table {
+  border: 2px solid $background-color;
+  padding: 5px;
+  font-size: 18px;
+}
+
+th,
+td {
+  border-right: 1px solid #eeeeef;
+  border-left: solid 1px #eeeeef;
+  border-bottom: 1px solid #eeeeef;
+  padding: 5px;
+  text-align: left;
+  width: 50%;
+  font-size: 18px;
+}
+
+th:last-child,
+td:last-child {
+  border-right: none;
 }
 
 .btn-link-edit {
-  font-size: 10px;
+  font-size: 18px;
   color: $color-edit;
 }
 .btn-link-delete {
-  font-size: 10px;
+  font-size: 18px;
   color: $color-delete;
 }
 
-//sm: { min: "640px", max: "767px" },
-@media screen and (min-width: 640px) {
-  .list-cont {
-    max-width: 100%;
-  }
-
-  .list-inner {
-    display: flex;
-    align-items: center;
-    margin: 10px;
-  }
-
-  .arrow {
-    display: flex;
-    text-decoration: none;
-    font-size: 18px;
-    padding: 5px;
-  }
-
-  .list-title {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 60px;
-    font-size: 32px;
-    color: red;
-  }
-
-  .list {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 40px 0 40px 0;
-  }
-
-  table {
-    border: 2px solid $background-color;
-    padding: 5px;
-    font-size: 10px;
-  }
-
-  th,
-  td {
-    border-right: 1px solid #eeeeef;
-    border-left: solid 1px #eeeeef;
-    border-bottom: 1px solid #eeeeef;
-    padding: 5px;
-    text-align: left;
-    width: 50%;
-    font-size: 10px;
-  }
-
-  th:last-child,
-  td:last-child {
-    border-right: none;
-  }
-
-  .btn-link-edit {
-    font-size: 10px;
-    color: $color-edit;
-  }
-  .btn-link-delete {
-    font-size: 10px;
-    color: $color-delete;
-  }
-}
-
-// md: { min: "768px", max: "1023px" },
-@media screen and (min-width: 768px) {
-  .list-cont {
-    max-width: 100%;
-  }
-
-  .list-inner {
-    display: flex;
-    align-items: center;
-    margin: 10px 20px 10px 20px;
-  }
-
-  .arrow {
-    display: flex;
-    text-decoration: none;
-    font-size: 18px;
-    padding: 5px;
-  }
-
-  .list-title {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 60px;
-    font-size: 32px;
-    color: blue;
-  }
-
-  .list {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 40px 0 40px 0;
-    font-size: 13px;
-  }
-
-  table {
-    border: 2px solid $background-color;
-    padding: 5px;
-    font-size: 13px;
-  }
-
-  th,
-  td {
-    border-right: 1px solid #eeeeef;
-    border-left: solid 1px #eeeeef;
-    border-bottom: 1px solid #eeeeef;
-    padding: 5px;
-    text-align: left;
-    width: 50%;
-    font-size: 13px;
-  }
-
-  th:last-child,
-  td:last-child {
-    border-right: none;
-  }
-
-  .btn-link-edit {
-    font-size: 13px;
-    color: $color-edit;
-  }
-  .btn-link-delete {
-    font-size: 13px;
-    color: $color-delete;
-  }
-}
-
-//lg: { min: "1024px", max: "1279px" },
-@media screen and (min-width: 1024px) {
+//lg:  max 1024px
+@media screen and (max-width: 1024px) {
   .list-cont {
     max-width: 100%;
   }
@@ -283,8 +144,8 @@ td:last-child {
   }
 }
 
-// xl: { min: "1280px", max: "1535px" },
-@media screen and (min-width: 1280px) {
+// md: max 768px
+@media screen and (max-width: 768px) {
   .list-cont {
     max-width: 100%;
   }
@@ -292,7 +153,7 @@ td:last-child {
   .list-inner {
     display: flex;
     align-items: center;
-    margin: 10px 80px 10px 80px;
+    margin: 10px 20px 10px 20px;
   }
 
   .arrow {
@@ -307,8 +168,8 @@ td:last-child {
     justify-content: center;
     align-items: center;
     height: 60px;
-    font-size: 36px;
-    color: pink;
+    font-size: 32px;
+    color: blue;
   }
 
   .list {
@@ -317,13 +178,13 @@ td:last-child {
     justify-content: center;
     align-items: center;
     margin: 40px 0 40px 0;
-    font-size: 18px;
+    font-size: 13px;
   }
 
   table {
     border: 2px solid $background-color;
     padding: 5px;
-    font-size: 18px;
+    font-size: 13px;
   }
 
   th,
@@ -334,7 +195,7 @@ td:last-child {
     padding: 5px;
     text-align: left;
     width: 50%;
-    font-size: 18px;
+    font-size: 13px;
   }
 
   th:last-child,
@@ -343,17 +204,17 @@ td:last-child {
   }
 
   .btn-link-edit {
-    font-size: 18px;
+    font-size: 13px;
     color: $color-edit;
   }
   .btn-link-delete {
-    font-size: 18px;
+    font-size: 13px;
     color: $color-delete;
   }
 }
 
-// xxl: { min: "1536px" },
-@media screen and (min-width: 1536px) {
+//sm: max 640px
+@media screen and (max-width: 640px) {
   .list-cont {
     max-width: 100%;
   }
@@ -361,7 +222,7 @@ td:last-child {
   .list-inner {
     display: flex;
     align-items: center;
-    margin: 10px 80px 10px 80px;
+    margin: 10px;
   }
 
   .arrow {
@@ -376,8 +237,8 @@ td:last-child {
     justify-content: center;
     align-items: center;
     height: 60px;
-    font-size: 40px;
-    color: purple;
+    font-size: 32px;
+    color: red;
   }
 
   .list {
@@ -386,13 +247,12 @@ td:last-child {
     justify-content: center;
     align-items: center;
     margin: 40px 0 40px 0;
-    font-size: 20px;
   }
 
   table {
     border: 2px solid $background-color;
     padding: 5px;
-    font-size: 20px;
+    font-size: 10px;
   }
 
   th,
@@ -403,7 +263,7 @@ td:last-child {
     padding: 5px;
     text-align: left;
     width: 50%;
-    font-size: 20px;
+    font-size: 10px;
   }
 
   th:last-child,
@@ -412,11 +272,147 @@ td:last-child {
   }
 
   .btn-link-edit {
-    font-size: 20px;
+    font-size: 10px;
     color: $color-edit;
   }
   .btn-link-delete {
-    font-size: 20px;
+    font-size: 10px;
+    color: $color-delete;
+  }
+}
+
+//xs: max 425px
+@media screen and (max-width: 425px) {
+  .list-cont {
+    max-width: 100%;
+  }
+
+  .list-inner {
+    display: flex;
+    align-items: center;
+    margin: 10px;
+  }
+
+  .arrow {
+    display: flex;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 5px;
+  }
+
+  .list-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    font-size: 32px;
+    color: red;
+  }
+
+  .list {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 40px 0 40px 0;
+  }
+
+  table {
+    border: 2px solid $background-color;
+    padding: 5px;
+    font-size: 10px;
+  }
+
+  th,
+  td {
+    border-right: 1px solid #eeeeef;
+    border-left: solid 1px #eeeeef;
+    border-bottom: 1px solid #eeeeef;
+    padding: 5px;
+    text-align: left;
+    width: 50%;
+    font-size: 10px;
+  }
+
+  th:last-child,
+  td:last-child {
+    border-right: none;
+  }
+
+  .btn-link-edit {
+    font-size: 10px;
+    color: $color-edit;
+  }
+  .btn-link-delete {
+    font-size: 10px;
+    color: $color-delete;
+  }
+}
+
+//xxs: max 375px
+@media screen and (max-width: 375px) {
+  .list-cont {
+    max-width: 100%;
+  }
+
+  .list-inner {
+    display: flex;
+    align-items: center;
+    margin: 10px;
+  }
+
+  .arrow {
+    display: flex;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 5px;
+  }
+
+  .list-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    font-size: 32px;
+    color: red;
+  }
+
+  .list {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 40px 0 40px 0;
+  }
+
+  table {
+    border: 2px solid $background-color;
+    padding: 5px;
+    font-size: 10px;
+  }
+
+  th,
+  td {
+    border-right: 1px solid #eeeeef;
+    border-left: solid 1px #eeeeef;
+    border-bottom: 1px solid #eeeeef;
+    padding: 5px;
+    text-align: left;
+    width: 50%;
+    font-size: 10px;
+  }
+
+  th:last-child,
+  td:last-child {
+    border-right: none;
+  }
+
+  .btn-link-edit {
+    font-size: 10px;
+    color: $color-edit;
+  }
+  .btn-link-delete {
+    font-size: 10px;
     color: $color-delete;
   }
 }

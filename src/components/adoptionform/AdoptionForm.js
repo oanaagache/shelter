@@ -203,12 +203,12 @@ const AdoptionForm = (props) => {
               </div>
 
               <div className="form-group col-md-1">
-                <label htmlFor="inputZip">Zip code:</label>
+                <label htmlFor="inputZip">Code:</label>
                 <input
                   type="text"
                   className="form-control"
                   id="inputZip"
-                  placeholder="Zip code"
+                  placeholder="Code"
                 />
               </div>
             </div>

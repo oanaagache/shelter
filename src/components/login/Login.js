@@ -36,9 +36,6 @@ const Login = (props) => {
         return;
       }
       const user = userRecord[0];
-      // console.log(user);
-      // console.log(user.email);
-      // console.log(user.password);
 
       if (
         loginUser.email === user.email &&
@@ -59,7 +56,6 @@ const Login = (props) => {
         localStorage.setItem("Admin is loggedIn", true);
         setAdmin(true);
         setIsLoggedIn(true);
-        //navigate("/list");
         navigate("/");
       } else {
         localStorage.setItem("loggedIn", true);

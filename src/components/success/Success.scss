@@ -29,22 +29,24 @@ $background-color: rgb(126, 63, 102);
   margin: 20px 0 0 0;
 }
 
-//sm: { min: "640px", max: "767px" },
-@media screen and (min-width: 640px) {
+// xl: max 1280px
+
+//lg:  max 1024px
+@media screen and (max-width: 1024px) {
 }
 
-// md: { min: "768px", max: "1023px" },
-@media screen and (min-width: 768px) {
+// md: max 768px
+@media screen and (max-width: 768px) {
 }
 
-//lg: { min: "1024px", max: "1279px" },
-@media screen and (min-width: 1024px) {
+//sm: max 640p
+@media screen and (max-width: 640px) {
 }
 
-// xl: { min: "1280px", max: "1535px" },
-@media screen and (min-width: 1280px) {
+//xs: max 424px
+@media screen and (max-width: 425px) {
 }
 
-// xxl: { min: "1536px" },
-@media screen and (min-width: 1536px) {
+//xxs: max 375px
+@media screen and (max-width: 375px) {
 }

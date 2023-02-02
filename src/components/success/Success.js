@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import "./Success.css";
-import logo2 from "../../images/image.png";
 import { useNavigate } from "react-router-dom";
 import { useParams } from "react-router-dom";
 
@@ -23,15 +22,7 @@ export default function Success() {
     <div className="response">
       <h2 className="response-title">Thank you!</h2>
       <h2 className="response-title">You're on your way to meet {name} </h2>
-      {/* <img
-        style={{
-          height: 300,
-          width: 300,
-          border: "1px solid black",
-        }}
-        src={logo2}
-        alt="Not found"
-      /> */}
+
       <h4 className="title">Our volunteers will contact you in order </h4>
       <h4 className="title">
         to schedule a visit to the animal shelter and finalize the adoption
