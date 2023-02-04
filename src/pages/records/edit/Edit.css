@@ -21,6 +21,7 @@
   align-items: center;
   height: 60px;
   font-size: 36px;
+  color: pink;
 }
 
 .edit-adoption-form {
@@ -92,6 +93,7 @@
     align-items: center;
     height: 60px;
     font-size: 36px;
+    color: green;
   }
   .edit-adoption-form {
     margin: 80px 40px 80px 40px;
@@ -155,6 +157,7 @@
     align-items: center;
     height: 60px;
     font-size: 32px;
+    color: blue;
   }
   .edit-adoption-form {
     margin: 80px 20px 80px 20px;
@@ -218,6 +221,7 @@
     align-items: center;
     height: 60px;
     font-size: 32px;
+    color: red;
   }
   .edit-adoption-form {
     margin: 80px 20px 80px 20px;
@@ -281,6 +285,7 @@
     align-items: center;
     height: 60px;
     font-size: 32px;
+    color: red;
   }
   .edit-adoption-form {
     margin: 80px 20px 80px 20px;
@@ -344,6 +349,7 @@
     align-items: center;
     height: 60px;
     font-size: 32px;
+    color: red;
   }
   .edit-adoption-form {
     margin: 80px 20px 80px 20px;
@@ -385,4 +391,4 @@
     font-size: 12px;
     line-height: 16px;
   }
-} /*# sourceMappingURL=Edit.css.map *//*# sourceMappingURL=Edit.css.map */
+}/*# sourceMappingURL=Edit.css.map */
