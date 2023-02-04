@@ -14,7 +14,7 @@ import Articles from "./pages/articles/articles/Articles";
 import ArticlesDog from "./pages/articles/dog/ArticlesDog";
 import ArticlesCat from "./pages/articles/cat/ArticlesCat";
 import AddArticles from "./pages/articles/articles/AddArticles";
-import Edit from "./pages/records/edit/Edit";
+import Edit from "./pages/edit/Edit";
 import List from "./pages/records/list/List";
 import Register from "./pages/register/Register";
 import Login from "./pages/login/Login";
