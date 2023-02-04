@@ -28,26 +28,65 @@
 .footer-title {
   font-family: "Courier New", sans-serif;
   display: flex;
-  font-size: 16px;
+  font-size: 20px;
 }
 
 .footer-menu {
   display: flex;
   list-style: none;
   justify-content: center;
-  margin-top: 16px;
+  margin-top: 20px;
 }
 
 .footer-menu li {
   display: inline-flex;
   flex-direction: row-reverse;
-  font-size: 14px;
+  font-size: 20px;
   list-style: none;
   padding: 5px;
   position: relative;
 }
 
-@media screen and (min-width: 375px) {
+@media screen and (max-width: 1024px) {
+  .footer {
+    height: 120px;
+    width: 100%;
+    background-color: #000;
+  }
+  .footer-cont {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    color: aliceblue;
+    height: 100%;
+  }
+  .footer-inner {
+    display: flex;
+    align-items: center;
+  }
+  .footer-title {
+    font-family: "Courier New", sans-serif;
+    display: flex;
+    font-size: 18px;
+  }
+  .footer-menu {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  .footer-menu li {
+    display: inline-flex;
+    flex-direction: row-reverse;
+    font-size: 18px;
+    list-style: none;
+    padding: 5px;
+    position: relative;
+  }
+}
+@media screen and (max-width: 768px) {
   .footer {
     height: 120px;
     width: 100%;
@@ -75,18 +114,18 @@
     display: flex;
     list-style: none;
     justify-content: center;
-    margin-top: 16px;
+    margin-top: 20px;
   }
   .footer-menu li {
     display: inline-flex;
     flex-direction: row-reverse;
-    font-size: 14px;
+    font-size: 16px;
     list-style: none;
     padding: 5px;
     position: relative;
   }
 }
-@media screen and (min-width: 425px) {
+@media screen and (max-width: 640px) {
   .footer {
     height: 120px;
     width: 100%;
@@ -108,13 +147,13 @@
   .footer-title {
     font-family: "Courier New", sans-serif;
     display: flex;
-    font-size: 11px;
+    font-size: 13px;
   }
   .footer-menu {
     display: flex;
     list-style: none;
     justify-content: center;
-    margin-top: 10px;
+    margin-top: 13px;
   }
   .footer-menu li {
     display: inline-flex;
@@ -125,35 +164,34 @@
     position: relative;
   }
 }
-@media screen and (min-width: 640px) {
+@media screen and (max-width: 425px) {
   .footer {
     height: 120px;
-    width: 100%;
+    max-width: 100%;
     background-color: #000;
   }
   .footer-cont {
     display: flex;
-    align-items: center;
-    justify-content: center;
+    font-family: "Courier New", sans-serif;
     flex-direction: column;
-    text-align: center;
     color: aliceblue;
     height: 100%;
   }
   .footer-inner {
     display: flex;
-    align-items: center;
+    font-family: "Courier New", sans-serif;
+    flex-direction: column;
+    margin-top: 24px;
   }
   .footer-title {
     font-family: "Courier New", sans-serif;
     display: flex;
-    font-size: 16px;
+    font-size: 14px;
   }
   .footer-menu {
     display: flex;
     list-style: none;
     justify-content: center;
-    margin-top: 16px;
   }
   .footer-menu li {
     display: inline-flex;
@@ -164,157 +202,39 @@
     position: relative;
   }
 }
-@media screen and (min-width: 768px) {
+@media screen and (max-width: 375px) {
   .footer {
     height: 120px;
-    width: 100%;
+    max-width: 100%;
     background-color: #000;
   }
   .footer-cont {
     display: flex;
-    align-items: center;
-    justify-content: center;
+    font-family: "Courier New", sans-serif;
     flex-direction: column;
-    text-align: center;
     color: aliceblue;
     height: 100%;
   }
   .footer-inner {
     display: flex;
-    align-items: center;
-  }
-  .footer-title {
     font-family: "Courier New", sans-serif;
-    display: flex;
-    font-size: 18px;
-  }
-  .footer-menu {
-    display: flex;
-    list-style: none;
-    justify-content: center;
-    margin-top: 16px;
-  }
-  .footer-menu li {
-    display: inline-flex;
-    flex-direction: row-reverse;
-    font-size: 16px;
-    list-style: none;
-    padding: 5px;
-    position: relative;
-  }
-}
-@media screen and (min-width: 1024px) {
-  .footer {
-    height: 120px;
-    width: 100%;
-    background-color: #000;
-  }
-  .footer-cont {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     flex-direction: column;
-    text-align: center;
-    color: aliceblue;
-    height: 100%;
-  }
-  .footer-inner {
-    display: flex;
-    align-items: center;
+    margin-top: 24px;
   }
   .footer-title {
     font-family: "Courier New", sans-serif;
     display: flex;
-    font-size: 18px;
+    font-size: 14px;
   }
   .footer-menu {
     display: flex;
     list-style: none;
     justify-content: center;
-    margin-top: 16px;
   }
   .footer-menu li {
     display: inline-flex;
     flex-direction: row-reverse;
-    font-size: 16px;
-    list-style: none;
-    padding: 5px;
-    position: relative;
-  }
-}
-@media screen and (min-width: 1280px) {
-  .footer {
-    height: 120px;
-    width: 100%;
-    background-color: #000;
-  }
-  .footer-cont {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    text-align: center;
-    color: aliceblue;
-    height: 100%;
-  }
-  .footer-inner {
-    display: flex;
-    align-items: center;
-  }
-  .footer-title {
-    font-family: "Courier New", sans-serif;
-    display: flex;
-    font-size: 18px;
-  }
-  .footer-menu {
-    display: flex;
-    list-style: none;
-    justify-content: center;
-    margin-top: 16px;
-  }
-  .footer-menu li {
-    display: inline-flex;
-    flex-direction: row-reverse;
-    font-size: 16px;
-    list-style: none;
-    padding: 5px;
-    position: relative;
-  }
-}
-@media screen and (min-width: 1536px) {
-  .footer {
-    height: 120px;
-    width: 100%;
-    background-color: #000;
-  }
-  .footer-cont {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    text-align: center;
-    color: aliceblue;
-    height: 100%;
-  }
-  .footer-inner {
-    display: flex;
-    align-items: center;
-  }
-  .footer-title {
-    font-family: "Courier New", sans-serif;
-    display: flex;
-    font-size: 18px;
-  }
-  .footer-menu {
-    display: flex;
-    list-style: none;
-    justify-content: center;
-    margin-top: 18px;
-  }
-  .footer-menu li {
-    display: inline-flex;
-    flex-direction: row-reverse;
-    font-size: 16px;
+    font-size: 14px;
     list-style: none;
     padding: 5px;
     position: relative;

@@ -8,9 +8,8 @@ const Footer = () => {
       <div className="footer-cont">
         <div className="footer-inner">
           <div className="footer-title">
-            © 2022 Paws Animal Shelter. All Rights Reserved
+            © 2023&nbsp;Animal Shelter. All Rights Reserved
           </div>
-
           <div className="footer-menu">
             <ul>
               <li>

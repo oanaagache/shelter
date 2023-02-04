@@ -19,7 +19,7 @@ const Main = () => {
       <div className="main-text">
         <div className="main-title">
           {" "}
-          We aim to find best companions for homeless pets in need
+          We aim to find best companions for homeless pets in need.
         </div>
       </div>
     </div>

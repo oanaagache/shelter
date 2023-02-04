@@ -33,14 +33,9 @@ const Navbar = (props) => {
     <div className="header">
       <div className="header-content">
         <div className="header-inner">
-          <img
-            style={({ padding: 5 }, { height: "20px" })}
-            src={logo}
-            alt="Not found"
-            onClick={() => navigate("/")}
-          />
+          <img src={logo} alt="Not found" onClick={() => navigate("/")} />
           <h1 className="header-title" onClick={() => navigate("/")}>
-            Paws Animal Shelter
+            Animal Shelter
           </h1>
         </div>
 
@@ -105,6 +100,7 @@ const Navbar = (props) => {
               Articles
             </NavLink>
           </li>
+
           <li>
             {isLoggedIn ? (
               <div
