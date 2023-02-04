@@ -52,14 +52,14 @@ $font: "Courier New", sans-serif;
 .drop1 {
   flex: 4 1 auto;
   padding: 8px 0 8px 0;
-  font-size: 15px;
+  font-size: 13px;
   justify-content: space-between;
 }
 
 .drop2 {
   flex: 4 1 auto;
   padding: 8px 0 8px 0;
-  font-size: 15px;
+  font-size: 13px;
   justify-content: space-between;
 }
 
@@ -69,7 +69,7 @@ $font: "Courier New", sans-serif;
 .drop6 {
   flex: 1 1 auto;
   padding: 8px 0 8px 0;
-  font-size: 15px;
+  font-size: 13px;
   justify-content: space-between;
 }
 
@@ -100,7 +100,7 @@ $font: "Courier New", sans-serif;
   .adopt-inner {
     display: flex;
     align-items: center;
-    margin: 10px 40px 10px 40px;
+    margin: 10px 10px 10px 10px;
   }
 
   .adopt-arrow {
@@ -121,7 +121,7 @@ $font: "Courier New", sans-serif;
   }
 
   .adopt-drop {
-    margin: 80px 40px 80px 40px;
+    margin: 10px;
   }
 
   .adopt-drop-title {
@@ -136,20 +136,20 @@ $font: "Courier New", sans-serif;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    gap: 40px;
+    gap: 10px;
   }
 
   .drop1 {
     flex: 4 1 auto;
     padding: 8px 0 8px 0;
-    font-size: 15px;
+    font-size: 13px;
     justify-content: space-between;
   }
 
   .drop2 {
     flex: 4 1 auto;
     padding: 8px 0 8px 0;
-    font-size: 15px;
+    font-size: 13px;
     justify-content: space-between;
   }
 
@@ -159,7 +159,7 @@ $font: "Courier New", sans-serif;
   .drop6 {
     flex: 1 1 auto;
     padding: 8px 0 8px 0;
-    font-size: 15px;
+    font-size: 13px;
     justify-content: space-between;
   }
 
@@ -191,7 +191,7 @@ $font: "Courier New", sans-serif;
   .adopt-inner {
     display: flex;
     align-items: center;
-    margin: 40px 20px 40px 20px;
+    margin: 40px 10px 40px 10px;
   }
 
   .adopt-arrow {
@@ -212,7 +212,7 @@ $font: "Courier New", sans-serif;
   }
 
   .adopt-drop {
-    margin: 80px 20px 80px 20px;
+    margin: 80px 10px 80px 10px;
   }
 
   .adopt-drop-title {
@@ -226,21 +226,22 @@ $font: "Courier New", sans-serif;
   .drop {
     display: flex;
     flex-wrap: wrap;
+    //flex-direction: column;
     justify-content: space-evenly;
-    gap: 20px;
+    gap: 10px;
   }
 
   .drop1 {
     flex: 4 1 auto;
     padding: 8px 0 8px 0;
-    font-size: 15px;
+    font-size: 13px;
     justify-content: space-between;
   }
 
   .drop2 {
     flex: 4 1 auto;
     padding: 8px 0 8px 0;
-    font-size: 15px;
+    font-size: 13px;
     justify-content: space-between;
   }
 
@@ -250,12 +251,12 @@ $font: "Courier New", sans-serif;
   .drop6 {
     flex: 1 1 auto;
     padding: 8px 0 8px 0;
-    font-size: 15px;
+    font-size: 13px;
     justify-content: space-between;
   }
 
   .drop-title {
-    font-size: 13px;
+    font-size: 15px;
   }
 
   .adopt-button {
@@ -282,7 +283,7 @@ $font: "Courier New", sans-serif;
   .adopt-inner {
     display: flex;
     align-items: center;
-    margin: 40px 20px 40px 20px;
+    margin: 40px 10px 40px 10px;
   }
 
   .adopt-arrow {
@@ -303,7 +304,7 @@ $font: "Courier New", sans-serif;
   }
 
   .adopt-drop {
-    margin: 80px 20px 80px 20px;
+    margin: 80px 10px 80px 10px;
   }
 
   .adopt-drop-title {
@@ -323,14 +324,14 @@ $font: "Courier New", sans-serif;
   .drop1 {
     flex: 4 1 auto;
     padding: 8px 0 8px 0;
-    font-size: 15px;
+    font-size: 13px;
     justify-content: space-between;
   }
 
   .drop2 {
     flex: 4 1 auto;
     padding: 8px 0 8px 0;
-    font-size: 15px;
+    font-size: 13px;
     justify-content: space-between;
   }
 
@@ -340,7 +341,7 @@ $font: "Courier New", sans-serif;
   .drop6 {
     flex: 1 1 auto;
     padding: 8px 0 8px 0;
-    font-size: 15px;
+    font-size: 13px;
     justify-content: space-between;
   }
 

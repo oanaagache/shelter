@@ -46,10 +46,10 @@ const Adopt = () => {
       "Dog",
       "Cat",
       "Rabbit",
-      "Small & Furry",
+      "Small&Furry",
       "Horse",
       "Bird",
-      "Scales, Fins & Other",
+      "Scales,Fins&Other",
       "Barnyard",
     ];
     setTypes(typesArray);
