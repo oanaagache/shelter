@@ -1,1 +1,239 @@
-/*# sourceMappingURL=Donate.css.map */
+.about-cont {
+  max-width: 100%;
+}
+
+.donate-inner {
+  display: flex;
+  align-items: center;
+  margin: 10px 80px 10px 80px;
+}
+
+.donate-arrow {
+  display: flex;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 5px;
+}
+
+.donate-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  font-size: 36px;
+  color: #000;
+}
+
+.donate {
+  margin: 80px;
+}
+
+.donate-button-adopt {
+  justify-content: left;
+  margin: 80px;
+}
+
+.donate-button {
+  color: aliceblue;
+  background-color: rgb(126, 63, 102);
+  border-radius: 5px;
+  width: 60px;
+  height: 30px;
+  font-size: 12px;
+}
+
+@media screen and (max-width: 1024px) {
+  .donate-cont {
+    max-width: 100%;
+  }
+  .donate-inner {
+    display: flex;
+    align-items: center;
+    margin: 10px 40px 10px 40px;
+  }
+  .donate-arrow {
+    display: flex;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 5px;
+  }
+  .donate-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    font-size: 36px;
+    color: #000;
+  }
+  .donate {
+    margin: 80px 40px 80px 40px;
+  }
+  .donate-button-adopt {
+    justify-content: left;
+    margin: 40px;
+  }
+  .donate-button {
+    color: aliceblue;
+    background-color: rgb(126, 63, 102);
+    border-radius: 5px;
+    width: 60px;
+    height: 30px;
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .donate-cont {
+    max-width: 100%;
+  }
+  .donate-inner {
+    display: flex;
+    align-items: center;
+    margin: 40px 20px 20px 20px;
+  }
+  .donate-arrow {
+    display: flex;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 5px;
+  }
+  .donate-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    font-size: 34px;
+    color: #000;
+  }
+  .donate {
+    margin: 80px 20px 80px 20px;
+  }
+  .donate-button-adopt {
+    justify-content: left;
+    margin: 20px;
+  }
+  .donate-button {
+    color: aliceblue;
+    background-color: rgb(126, 63, 102);
+    border-radius: 5px;
+    width: 60px;
+    height: 30px;
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 640px) {
+  .donate-cont {
+    max-width: 100%;
+  }
+  .donate-inner {
+    display: flex;
+    align-items: center;
+    margin: 40px 20px 20px 20px;
+  }
+  .donate-arrow {
+    display: flex;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 5px;
+  }
+  .donate-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    font-size: 32px;
+    color: #000;
+  }
+  .donate {
+    margin: 80px 20px 80px 20px;
+  }
+  .donate-button-adopt {
+    justify-content: left;
+    margin: 20px;
+  }
+  .donate-button {
+    color: aliceblue;
+    background-color: rgb(126, 63, 102);
+    border-radius: 5px;
+    width: 60px;
+    height: 30px;
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 425px) {
+  .donate-cont {
+    max-width: 100%;
+  }
+  .donate-inner {
+    display: flex;
+    align-items: center;
+    margin: 40px 20px 20px 20px;
+  }
+  .donate-arrow {
+    display: flex;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 5px;
+  }
+  .donate-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    font-size: 26px;
+    color: #000;
+  }
+  .donate {
+    margin: 80px 20px 80px 20px;
+  }
+  .donate-button-adopt {
+    justify-content: left;
+    margin: 10px;
+  }
+  .donate-button {
+    color: aliceblue;
+    background-color: rgb(126, 63, 102);
+    border-radius: 5px;
+    width: 60px;
+    height: 30px;
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 375px) {
+  .donate-cont {
+    max-width: 100%;
+  }
+  .donate-inner {
+    display: flex;
+    align-items: center;
+    margin: 40px 20px 20px 20px;
+  }
+  .donate-arrow {
+    display: flex;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 5px;
+  }
+  .donate-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    font-size: 26px;
+    color: #000;
+  }
+  .donate {
+    margin: 80px 20px 80px 20px;
+  }
+  .donate-button-adopt {
+    justify-content: left;
+    margin: 10px;
+  }
+  .donate-button {
+    color: aliceblue;
+    background-color: rgb(126, 63, 102);
+    border-radius: 5px;
+    width: 60px;
+    height: 30px;
+    font-size: 12px;
+  }
+}/*# sourceMappingURL=Donate.css.map */

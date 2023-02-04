@@ -3,7 +3,7 @@ import { Form } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Link } from "react-router-dom";
 import logo from "../../images/image4.svg";
-import "../login/Login.css";
+import "./Login.css";
 import { useNavigate } from "react-router-dom";
 
 const Login = (props) => {

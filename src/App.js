@@ -1,24 +1,24 @@
 import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Register from "./components/register/Register";
-import Login from "./components/login/Login";
+import Navbar from "./layouts/nav/Navbar";
+import Main from "./pages/main/Main";
 import About from "./pages/about/About";
+import Adopt from "./pages/adopt/Adopt";
+import CountrySelector from "./components/countryselector/CountrySelector";
+import Card from "./components/card/Card";
+import AdoptionForm from "./pages/adoptionform/AdoptionForm";
+import Success from "./pages/success/Success";
 import Donate from "./pages/donate/Donate";
 import Foster from "./pages/foster/Foster";
-import Adopt from "./components/adopt/Adopt";
-import Navbar from "./layouts/nav/Navbar";
-import Footer from "./layouts/footer/Footer";
-import Main from "./pages/main/Main";
-import Card from "./components/card/Card";
-import Success from "./components/success/Success";
-import CountrySelector from "./components/countryselector/CountrySelector";
-import AdoptionForm from "./components/adoptionform/AdoptionForm";
-import Edit from "./components/list/edit/Edit";
-import List from "./components/list/list/List";
 import Articles from "./pages/articles/articles/Articles";
 import ArticlesDog from "./pages/articles/dog/ArticlesDog";
 import ArticlesCat from "./pages/articles/cat/ArticlesCat";
 import AddArticles from "./pages/articles/articles/AddArticles";
+import Edit from "./pages/records/edit/Edit";
+import List from "./pages/records/list/List";
+import Register from "./pages/register/Register";
+import Login from "./pages/login/Login";
+import Footer from "./layouts/footer/Footer";
 
 const App = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);

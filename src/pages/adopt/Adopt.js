@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
 import "./Adopt.css";
-import Dropdown from "../dropdown/Dropdown";
+import Dropdown from "../../components/dropdown/Dropdown";
 import logo from "../../images/image4.svg";
 import { Link } from "react-router-dom";
 import { Client } from "@petfinder/petfinder-js";
-import Card from "../card/Card";
+import Card from "../../components/card/Card";
 
 const Adopt = () => {
   const client = new Client({
