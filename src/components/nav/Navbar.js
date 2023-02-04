@@ -3,6 +3,9 @@ import "./Navbar.scss";
 import { NavLink } from "react-router-dom";
 import logo from "../../images/image.png";
 import { useNavigate } from "react-router-dom";
+import { FiLogIn, FiLogOut } from "react-icons/fi";
+import { AiFillFileAdd } from "react-icons/ai";
+import { CiViewList } from "react-icons/ci";
 
 const Navbar = (props) => {
   let navigate = useNavigate();
@@ -109,7 +112,7 @@ const Navbar = (props) => {
                   handleClick();
                 }}
               >
-                Logout
+                <FiLogOut />
               </div>
             ) : (
               <div
@@ -118,7 +121,7 @@ const Navbar = (props) => {
                   navigate("/login");
                 }}
               >
-                Login
+                <FiLogIn />
               </div>
             )}
           </li>
@@ -134,7 +137,7 @@ const Navbar = (props) => {
                   end
                   className="about-nav"
                 >
-                  +Add
+                  <AiFillFileAdd />
                 </NavLink>
               </li>
               <li>
@@ -146,7 +149,7 @@ const Navbar = (props) => {
                   end
                   className="about-nav"
                 >
-                  List
+                  <CiViewList />
                 </NavLink>
               </li>{" "}
             </>
