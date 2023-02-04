@@ -22,6 +22,7 @@ const Donate = () => {
 
         <div className="donate">
           <div className="donate-subtitle">What Is An Animal Shelter?</div>
+
           <div className="donate-subtitle1">
             An animal shelter is a staffed facility where homeless animals—and
             animals seized by authorities in cruelty cases—find safety and
@@ -31,7 +32,7 @@ const Donate = () => {
             can be hit by cars, can be attacked by other animals
             donate-drop-titleor cruel humans, or face other potential dangers.
           </div>
-
+          <br />
           <div className="donate-subtitle">What Do Animal Shelters Do? </div>
 
           <div className="donate-subtitle1">
@@ -42,7 +43,7 @@ const Donate = () => {
             unfortunately, mistreated more often than most of us would like to
             think.
           </div>
-
+          <br />
           <div className="donate-subtitle">Why You Should Donate?</div>
 
           <div className="donate-subtitle1">
@@ -53,9 +54,9 @@ const Donate = () => {
             could have been adopted into new homes. Senior dogs and bully breeds
             are also high on the list of dogs that are at-risk for euthanasia.
           </div>
-
+          <br />
           <div className="donate-subtitle">How You Can Help:</div>
-          <ol className="donate-li">
+          <ol>
             <li>Make a donation</li>
             <br />
             <div>
@@ -87,7 +88,7 @@ const Donate = () => {
               volunteers to provide the needed care required for the animals.
               Our shelter have many of the following:
             </div>
-            <ul className="donate-li">
+            <ul>
               <li>
                 A compassionate trained staff (plus volunteers) to care for
                 animals
@@ -136,7 +137,7 @@ const Donate = () => {
               to find out what types of supplies they need. Common requests for
               donations include:
             </div>
-            <ul className="donate-li">
+            <ul>
               <li>Toys</li>
               <li>Bedding</li>
               <li>Crates</li>

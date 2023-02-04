@@ -1,6 +1,6 @@
 $color: aliceblue;
 $background-color: rgb(126, 63, 102);
-$black: #000;
+$title-color: #000;
 
 // xl: max 1280px
 .login-cont {
@@ -26,12 +26,11 @@ $black: #000;
   align-items: center;
   height: 60px;
   font-size: 36px;
-  color: pink;
+  color: $title-color;
 }
 
 .login-form {
-  margin-bottom: 400px;
-  margin-top: 200px;
+  margin-bottom: 500px;
 }
 
 .login-form form {
@@ -83,12 +82,11 @@ $black: #000;
     align-items: center;
     height: 60px;
     font-size: 36px;
-    color: green;
+    color: $title-color;
   }
 
   .login-form {
-    margin-bottom: 400px;
-    margin-top: 200px;
+    margin-bottom: 500px;
   }
 
   .login-form form {
@@ -125,7 +123,7 @@ $black: #000;
   .login-inner {
     display: flex;
     align-items: center;
-    margin: 10px 20px 10px 20px;
+    margin: 40px 20px 20px 20px;
   }
 
   .login-arrow {
@@ -140,13 +138,12 @@ $black: #000;
     justify-content: center;
     align-items: center;
     height: 60px;
-    font-size: 32px;
-    color: blue;
+    font-size: 34px;
+    color: $title-color;
   }
 
   .login-form {
-    margin-bottom: 400px;
-    margin-top: 200px;
+    margin-bottom: 500px;
   }
 
   .login-form form {
@@ -183,7 +180,7 @@ $black: #000;
   .login-inner {
     display: flex;
     align-items: center;
-    margin: 10px;
+    margin: 40px 20px 20px 20px;
   }
 
   .login-arrow {
@@ -198,14 +195,13 @@ $black: #000;
     justify-content: center;
     align-items: center;
     height: 60px;
-    font-size: 30px;
-    color: red;
+    font-size: 32px;
+    color: $title-color;
     margin-bottom: 50px;
   }
 
   .login-form {
-    margin-bottom: 400px;
-    margin-top: 200px;
+    margin-bottom: 500px;
   }
 
   .login-form form {
@@ -236,13 +232,13 @@ $black: #000;
 //xs: max 425px
 @media screen and (max-width: 425px) {
   .login-cont {
-    max-width: 100%;
+    max-width: 80%;
   }
 
   .login-inner {
     display: flex;
     align-items: center;
-    margin: 40px 10px 10px 10px;
+    margin: 40px 20px 20px 20px;
   }
 
   .login-arrow {
@@ -257,19 +253,17 @@ $black: #000;
     justify-content: center;
     align-items: center;
     height: 60px;
-    font-size: 28px;
-    color: pink;
-    margin-bottom: 50px;
+    font-size: 30px;
+    color: $title-color;
   }
 
   .login-form {
-    margin-bottom: 400px;
-    margin-top: 200px;
+    margin-bottom: 500px;
   }
 
   .login-form form {
     position: absolute;
-    top: 50%;
+    top: 70%;
     left: 50%;
     transform: translate(-50%, -50%);
   }
@@ -301,7 +295,7 @@ $black: #000;
   .login-inner {
     display: flex;
     align-items: center;
-    margin: 40px 10px 10px 10px;
+    margin: 40px 20px 20px 20px;
   }
 
   .login-arrow {
@@ -316,19 +310,18 @@ $black: #000;
     justify-content: center;
     align-items: center;
     height: 60px;
-    font-size: 28px;
-    color: pink;
+    font-size: 30 px;
+    color: $title-color;
     margin-bottom: 50px;
   }
 
   .login-form {
-    margin-bottom: 400px;
-    margin-top: 200px;
+    margin-bottom: 500px;
   }
 
   .login-form form {
     position: absolute;
-    top: 50%;
+    top: 70%;
     left: 50%;
     transform: translate(-50%, -50%);
   }

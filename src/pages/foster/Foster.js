@@ -29,6 +29,7 @@ const Foster = () => {
           predetermined period of time or until the dog/cat is adopted.
         </div>
 
+        <br />
         <div className="foster-subtitle">
           Why do adoption groups need foster homes?
         </div>
@@ -36,8 +37,8 @@ const Foster = () => {
           There are many reasons a dog/cat might need foster care. Some of the
           most common include:
         </div>
-
-        <ul className="foster-li">
+        <br />
+        <ul>
           <li>
             A rescue group doesn’t have a physical shelter and depends on foster
             homes to care for dogs/cats until suitable homes are found.
@@ -71,7 +72,7 @@ const Foster = () => {
           temporarily into your home you’re:
         </div>
 
-        <ul className="foster-li">
+        <ul>
           <li>
             freeing up a spot so the shelter or rescue can take in another
             dog/cat.

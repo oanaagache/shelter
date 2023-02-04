@@ -21,12 +21,11 @@
   align-items: center;
   height: 60px;
   font-size: 36px;
-  color: pink;
+  color: #000;
 }
 
 .login-form {
-  margin-bottom: 400px;
-  margin-top: 200px;
+  margin-bottom: 500px;
 }
 
 .login-form form {
@@ -74,11 +73,10 @@
     align-items: center;
     height: 60px;
     font-size: 36px;
-    color: green;
+    color: #000;
   }
   .login-form {
-    margin-bottom: 400px;
-    margin-top: 200px;
+    margin-bottom: 500px;
   }
   .login-form form {
     position: absolute;
@@ -108,7 +106,7 @@
   .login-inner {
     display: flex;
     align-items: center;
-    margin: 10px 20px 10px 20px;
+    margin: 40px 20px 20px 20px;
   }
   .login-arrow {
     display: flex;
@@ -121,12 +119,11 @@
     justify-content: center;
     align-items: center;
     height: 60px;
-    font-size: 32px;
-    color: blue;
+    font-size: 34px;
+    color: #000;
   }
   .login-form {
-    margin-bottom: 400px;
-    margin-top: 200px;
+    margin-bottom: 500px;
   }
   .login-form form {
     position: absolute;
@@ -156,7 +153,7 @@
   .login-inner {
     display: flex;
     align-items: center;
-    margin: 10px;
+    margin: 40px 20px 20px 20px;
   }
   .login-arrow {
     display: flex;
@@ -169,13 +166,12 @@
     justify-content: center;
     align-items: center;
     height: 60px;
-    font-size: 30px;
-    color: red;
+    font-size: 32px;
+    color: #000;
     margin-bottom: 50px;
   }
   .login-form {
-    margin-bottom: 400px;
-    margin-top: 200px;
+    margin-bottom: 500px;
   }
   .login-form form {
     position: absolute;
@@ -200,12 +196,12 @@
 }
 @media screen and (max-width: 425px) {
   .login-cont {
-    max-width: 100%;
+    max-width: 80%;
   }
   .login-inner {
     display: flex;
     align-items: center;
-    margin: 40px 10px 10px 10px;
+    margin: 40px 20px 20px 20px;
   }
   .login-arrow {
     display: flex;
@@ -218,17 +214,15 @@
     justify-content: center;
     align-items: center;
     height: 60px;
-    font-size: 28px;
-    color: pink;
-    margin-bottom: 50px;
+    font-size: 30px;
+    color: #000;
   }
   .login-form {
-    margin-bottom: 400px;
-    margin-top: 200px;
+    margin-bottom: 500px;
   }
   .login-form form {
     position: absolute;
-    top: 50%;
+    top: 70%;
     left: 50%;
     transform: translate(-50%, -50%);
   }
@@ -254,7 +248,7 @@
   .login-inner {
     display: flex;
     align-items: center;
-    margin: 40px 10px 10px 10px;
+    margin: 40px 20px 20px 20px;
   }
   .login-arrow {
     display: flex;
@@ -267,17 +261,16 @@
     justify-content: center;
     align-items: center;
     height: 60px;
-    font-size: 28px;
-    color: pink;
+    font-size: 30 px;
+    color: #000;
     margin-bottom: 50px;
   }
   .login-form {
-    margin-bottom: 400px;
-    margin-top: 200px;
+    margin-bottom: 500px;
   }
   .login-form form {
     position: absolute;
-    top: 50%;
+    top: 70%;
     left: 50%;
     transform: translate(-50%, -50%);
   }

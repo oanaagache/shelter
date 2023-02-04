@@ -1,10 +1,10 @@
 $color: aliceblue;
 $background-color: rgb(126, 63, 102);
 $title-color: #000;
+$font-weight: bold;
 
 // xl: max 1280px
-
-.about-cont {
+.donate-cont {
   max-width: 100%;
 }
 
@@ -28,6 +28,10 @@ $title-color: #000;
   height: 60px;
   font-size: 36px;
   color: $title-color;
+}
+
+.donate-subtitle {
+  font-weight: $font-weight;
 }
 
 .donate {
@@ -74,6 +78,14 @@ $title-color: #000;
     height: 60px;
     font-size: 36px;
     color: $title-color;
+  }
+
+  .donate-subtitle {
+    font-weight: $font-weight;
+  }
+
+  .donate-subtitle {
+    font-weight: $font-weight;
   }
 
   .donate {
@@ -123,6 +135,10 @@ $title-color: #000;
     color: $title-color;
   }
 
+  .donate-subtitle {
+    font-weight: $font-weight;
+  }
+
   .donate {
     margin: 80px 20px 80px 20px;
   }
@@ -166,8 +182,12 @@ $title-color: #000;
     justify-content: center;
     align-items: center;
     height: 60px;
-    font-size: 32px;
+    font-size: 26px;
     color: $title-color;
+  }
+
+  .donate-subtitle {
+    font-weight: $font-weight;
   }
 
   .donate {
@@ -213,8 +233,12 @@ $title-color: #000;
     justify-content: center;
     align-items: center;
     height: 60px;
-    font-size: 26px;
+    font-size: 22px;
     color: $title-color;
+  }
+
+  .donate-subtitle {
+    font-weight: $font-weight;
   }
 
   .donate {
@@ -260,8 +284,12 @@ $title-color: #000;
     justify-content: center;
     align-items: center;
     height: 60px;
-    font-size: 26px;
+    font-size: 22px;
     color: $title-color;
+  }
+
+  .donate-subtitle {
+    font-weight: $font-weight;
   }
 
   .donate {
