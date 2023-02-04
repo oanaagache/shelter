@@ -46,7 +46,7 @@ $font: "Courier New", sans-serif;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  gap: 20px;
+  gap: 40px;
 }
 
 .drop1 {
@@ -74,12 +74,12 @@ $font: "Courier New", sans-serif;
 }
 
 .drop-title {
-  font-size: 18px;
+  font-size: 15px;
 }
 
 .adopt-button {
   justify-content: left;
-  margin: 80px;
+  margin: 80px 40px 80px 40px;
 }
 
 .filter-btn {
@@ -91,6 +91,12 @@ $font: "Courier New", sans-serif;
   font-size: 12px;
 }
 
+.adopt-cards {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
 //lg:  max: 1024px
 @media screen and (max-width: 1024px) {
   .adopt-cont {
@@ -100,7 +106,7 @@ $font: "Courier New", sans-serif;
   .adopt-inner {
     display: flex;
     align-items: center;
-    margin: 10px 10px 10px 10px;
+    margin: 10px;
   }
 
   .adopt-arrow {
@@ -164,12 +170,12 @@ $font: "Courier New", sans-serif;
   }
 
   .drop-title {
-    font-size: 18px;
+    font-size: 15px;
   }
 
   .adopt-button {
     justify-content: left;
-    margin: 40px;
+    margin: 40px 10px 40px 10px;
   }
 
   .filter-btn {
@@ -179,6 +185,12 @@ $font: "Courier New", sans-serif;
     width: 100px;
     height: 40px;
     font-size: 12px;
+  }
+
+  .adopt-cards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
   }
 }
 
@@ -261,7 +273,7 @@ $font: "Courier New", sans-serif;
 
   .adopt-button {
     justify-content: left;
-    margin: 20px;
+    margin: 20px 10px 20px 10px;
   }
 
   .filter-btn {
@@ -271,6 +283,12 @@ $font: "Courier New", sans-serif;
     width: 100px;
     height: 36px;
     font-size: 12px;
+  }
+
+  .adopt-cards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
   }
 }
 
@@ -346,7 +364,7 @@ $font: "Courier New", sans-serif;
   }
 
   .drop-title {
-    font-size: 13px;
+    font-size: 15px;
   }
 
   .adopt-button {
@@ -361,6 +379,12 @@ $font: "Courier New", sans-serif;
     width: 100px;
     height: 40px;
     font-size: 12px;
+  }
+
+  .adopt-cards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
   }
 }
 
@@ -436,7 +460,7 @@ $font: "Courier New", sans-serif;
   }
 
   .drop-title {
-    font-size: 13px;
+    font-size: 15px;
   }
 
   .adopt-button {
@@ -451,6 +475,12 @@ $font: "Courier New", sans-serif;
     width: 100px;
     height: 40px;
     font-size: 12px;
+  }
+
+  .adopt-cards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
   }
 }
 
@@ -526,7 +556,7 @@ $font: "Courier New", sans-serif;
   }
 
   .drop-title {
-    font-size: 13px;
+    font-size: 15px;
   }
 
   .adopt-button {
@@ -541,5 +571,11 @@ $font: "Courier New", sans-serif;
     width: 100px;
     height: 40px;
     font-size: 12px;
+  }
+
+  .adopt-cards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
   }
 }

@@ -40,7 +40,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  gap: 20px;
+  gap: 40px;
 }
 
 .drop1 {
@@ -68,12 +68,12 @@
 }
 
 .drop-title {
-  font-size: 18px;
+  font-size: 15px;
 }
 
 .adopt-button {
   justify-content: left;
-  margin: 80px;
+  margin: 80px 40px 80px 40px;
 }
 
 .filter-btn {
@@ -85,6 +85,12 @@
   font-size: 12px;
 }
 
+.adopt-cards {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
 @media screen and (max-width: 1024px) {
   .adopt-cont {
     max-width: 100%;
@@ -92,7 +98,7 @@
   .adopt-inner {
     display: flex;
     align-items: center;
-    margin: 10px 10px 10px 10px;
+    margin: 10px;
   }
   .adopt-arrow {
     display: flex;
@@ -147,11 +153,11 @@
     justify-content: space-between;
   }
   .drop-title {
-    font-size: 18px;
+    font-size: 15px;
   }
   .adopt-button {
     justify-content: left;
-    margin: 40px;
+    margin: 40px 10px 40px 10px;
   }
   .filter-btn {
     color: aliceblue;
@@ -160,6 +166,11 @@
     width: 100px;
     height: 40px;
     font-size: 12px;
+  }
+  .adopt-cards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
   }
 }
 @media screen and (max-width: 768px) {
@@ -228,7 +239,7 @@
   }
   .adopt-button {
     justify-content: left;
-    margin: 20px;
+    margin: 20px 10px 20px 10px;
   }
   .filter-btn {
     color: aliceblue;
@@ -237,6 +248,11 @@
     width: 100px;
     height: 36px;
     font-size: 12px;
+  }
+  .adopt-cards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
   }
 }
 @media screen and (max-width: 640px) {
@@ -300,7 +316,7 @@
     justify-content: space-between;
   }
   .drop-title {
-    font-size: 13px;
+    font-size: 15px;
   }
   .adopt-button {
     justify-content: left;
@@ -313,6 +329,11 @@
     width: 100px;
     height: 40px;
     font-size: 12px;
+  }
+  .adopt-cards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
   }
 }
 @media screen and (max-width: 425px) {
@@ -376,7 +397,7 @@
     justify-content: space-between;
   }
   .drop-title {
-    font-size: 13px;
+    font-size: 15px;
   }
   .adopt-button {
     justify-content: left;
@@ -389,6 +410,11 @@
     width: 100px;
     height: 40px;
     font-size: 12px;
+  }
+  .adopt-cards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
   }
 }
 @media screen and (max-width: 375px) {
@@ -452,7 +478,7 @@
     justify-content: space-between;
   }
   .drop-title {
-    font-size: 13px;
+    font-size: 15px;
   }
   .adopt-button {
     justify-content: left;
@@ -465,5 +491,10 @@
     width: 100px;
     height: 40px;
     font-size: 12px;
+  }
+  .adopt-cards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
   }
 }/*# sourceMappingURL=Adopt.css.map */
