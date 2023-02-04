@@ -1,12 +1,7 @@
 $background-color: rgb(126, 63, 102);
 $color-edit: blue;
 $color-delete: red;
-
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-}
+$title-color: #000;
 
 // xl: max 1280px
 .list-cont {
@@ -32,7 +27,7 @@ $color-delete: red;
   align-items: center;
   height: 60px;
   font-size: 36px;
-  color: pink;
+  color: $title-color;
 }
 
 .list {
@@ -40,14 +35,17 @@ $color-delete: red;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 40px 0 40px 0;
-  font-size: 18px;
+  font-size: 15px;
 }
 
 table {
   border: 2px solid $background-color;
   padding: 5px;
-  font-size: 18px;
+  font-size: 15px;
+}
+
+.list-table {
+  margin: 80px 5px 80px 5px;
 }
 
 th,
@@ -58,7 +56,11 @@ td {
   padding: 5px;
   text-align: left;
   width: 50%;
-  font-size: 18px;
+  font-size: 15px;
+}
+
+.table-tr {
+  font-size: 15px;
 }
 
 th:last-child,
@@ -67,11 +69,12 @@ td:last-child {
 }
 
 .btn-link-edit {
-  font-size: 18px;
+  font-size: 15px;
   color: $color-edit;
 }
+
 .btn-link-delete {
-  font-size: 18px;
+  font-size: 15px;
   color: $color-delete;
 }
 
@@ -90,7 +93,7 @@ td:last-child {
   .arrow {
     display: flex;
     text-decoration: none;
-    font-size: 18px;
+    font-size: 15px;
     padding: 5px;
   }
 
@@ -100,7 +103,7 @@ td:last-child {
     align-items: center;
     height: 60px;
     font-size: 36px;
-    color: green;
+    color: $title-color;
   }
 
   .list {
@@ -108,8 +111,11 @@ td:last-child {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 40px 0 40px 0;
     font-size: 15px;
+  }
+
+  .list-table {
+    margin: 80px 5px 80px 5px;
   }
 
   table {
@@ -125,7 +131,7 @@ td:last-child {
     border-bottom: 1px solid #eeeeef;
     padding: 5px;
     text-align: left;
-    width: 50%;
+    width: 100%;
     font-size: 15px;
   }
 
@@ -138,6 +144,7 @@ td:last-child {
     font-size: 15px;
     color: $color-edit;
   }
+
   .btn-link-delete {
     font-size: 15px;
     color: $color-delete;
@@ -153,7 +160,7 @@ td:last-child {
   .list-inner {
     display: flex;
     align-items: center;
-    margin: 10px 20px 10px 20px;
+    margin: 40px 20px 40px 20px;
   }
 
   .arrow {
@@ -168,8 +175,8 @@ td:last-child {
     justify-content: center;
     align-items: center;
     height: 60px;
-    font-size: 32px;
-    color: blue;
+    font-size: 34px;
+    color: $title-color;
   }
 
   .list {
@@ -177,14 +184,18 @@ td:last-child {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 40px 0 40px 0;
-    font-size: 13px;
+    font-size: 15px;
   }
 
   table {
     border: 2px solid $background-color;
     padding: 5px;
-    font-size: 13px;
+    font-size: 15px;
+    margin: 80px;
+  }
+
+  .list-table {
+    margin: 80px 5px 80px 5px;
   }
 
   th,
@@ -194,8 +205,8 @@ td:last-child {
     border-bottom: 1px solid #eeeeef;
     padding: 5px;
     text-align: left;
-    width: 50%;
-    font-size: 13px;
+    width: 80%;
+    font-size: 15px;
   }
 
   th:last-child,
@@ -204,11 +215,11 @@ td:last-child {
   }
 
   .btn-link-edit {
-    font-size: 13px;
+    font-size: 15px;
     color: $color-edit;
   }
   .btn-link-delete {
-    font-size: 13px;
+    font-size: 15px;
     color: $color-delete;
   }
 }
@@ -222,7 +233,7 @@ td:last-child {
   .list-inner {
     display: flex;
     align-items: center;
-    margin: 10px;
+    margin: 40px 20px 20px 20px;
   }
 
   .arrow {
@@ -237,8 +248,8 @@ td:last-child {
     justify-content: center;
     align-items: center;
     height: 60px;
-    font-size: 32px;
-    color: red;
+    font-size: 26px;
+    color: $title-color;
   }
 
   .list {
@@ -246,13 +257,16 @@ td:last-child {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 40px 0 40px 0;
+  }
+
+  .list-table {
+    margin: 80px 5px 80px 5px;
   }
 
   table {
     border: 2px solid $background-color;
     padding: 5px;
-    font-size: 10px;
+    font-size: 15px;
   }
 
   th,
@@ -263,7 +277,7 @@ td:last-child {
     padding: 5px;
     text-align: left;
     width: 50%;
-    font-size: 10px;
+    font-size: 15px;
   }
 
   th:last-child,
@@ -272,11 +286,11 @@ td:last-child {
   }
 
   .btn-link-edit {
-    font-size: 10px;
+    font-size: 15px;
     color: $color-edit;
   }
   .btn-link-delete {
-    font-size: 10px;
+    font-size: 15px;
     color: $color-delete;
   }
 }
@@ -290,7 +304,7 @@ td:last-child {
   .list-inner {
     display: flex;
     align-items: center;
-    margin: 10px;
+    margin: 40px 20px 20px 20px;
   }
 
   .arrow {
@@ -305,8 +319,8 @@ td:last-child {
     justify-content: center;
     align-items: center;
     height: 60px;
-    font-size: 32px;
-    color: red;
+    font-size: 22px;
+    color: $title-color;
   }
 
   .list {
@@ -314,13 +328,16 @@ td:last-child {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 40px 0 40px 0;
+  }
+
+  .list-table {
+    margin: 80px 5px 80px 5px;
   }
 
   table {
     border: 2px solid $background-color;
     padding: 5px;
-    font-size: 10px;
+    font-size: 15px;
   }
 
   th,
@@ -331,7 +348,7 @@ td:last-child {
     padding: 5px;
     text-align: left;
     width: 50%;
-    font-size: 10px;
+    font-size: 15px;
   }
 
   th:last-child,
@@ -340,11 +357,11 @@ td:last-child {
   }
 
   .btn-link-edit {
-    font-size: 10px;
+    font-size: 15px;
     color: $color-edit;
   }
   .btn-link-delete {
-    font-size: 10px;
+    font-size: 15px;
     color: $color-delete;
   }
 }
@@ -358,7 +375,7 @@ td:last-child {
   .list-inner {
     display: flex;
     align-items: center;
-    margin: 10px;
+    margin: 40px 20px 20px 20px;
   }
 
   .arrow {
@@ -373,8 +390,8 @@ td:last-child {
     justify-content: center;
     align-items: center;
     height: 60px;
-    font-size: 32px;
-    color: red;
+    font-size: 22px;
+    color: $title-color;
   }
 
   .list {
@@ -382,13 +399,16 @@ td:last-child {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 40px 0 40px 0;
   }
 
   table {
     border: 2px solid $background-color;
     padding: 5px;
-    font-size: 10px;
+    font-size: 15px;
+  }
+
+  .list-table {
+    margin: 80px 5px 80px 5px;
   }
 
   th,
@@ -399,7 +419,7 @@ td:last-child {
     padding: 5px;
     text-align: left;
     width: 50%;
-    font-size: 10px;
+    font-size: 15px;
   }
 
   th:last-child,
@@ -408,11 +428,11 @@ td:last-child {
   }
 
   .btn-link-edit {
-    font-size: 10px;
+    font-size: 15px;
     color: $color-edit;
   }
   .btn-link-delete {
-    font-size: 10px;
+    font-size: 15px;
     color: $color-delete;
   }
 }

@@ -1,418 +1,73 @@
-$background-color: rgb(126, 63, 102);
-$color-edit: blue;
-$color-delete: red;
+// $background-color: rgb(126, 63, 102);
+// $color-edit: blue;
+// $color-delete: red;
 
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-}
+// // xl: max 1280px
+// .btn-link-edit {
+//   font-size: 18px;
+//   color: $color-edit;
+// }
+// .btn-link-delete {
+//   font-size: 18px;
+//   color: $color-delete;
+// }
 
-// xl: max 1280px
-.list-cont {
-  max-width: 100%;
-}
+// //lg:  max 1024px
+// @media screen and (max-width: 1024px) {
+//   .btn-link-edit {
+//     font-size: 15px;
+//     color: $color-edit;
+//   }
+//   .btn-link-delete {
+//     font-size: 15px;
+//     color: $color-delete;
+//   }
+// }
 
-.list-inner {
-  display: flex;
-  align-items: center;
-  margin: 10px 80px 10px 80px;
-}
+// // md: max 768px
+// @media screen and (max-width: 768px) {
+//   .btn-link-edit {
+//     font-size: 13px;
+//     color: $color-edit;
+//   }
+//   .btn-link-delete {
+//     font-size: 13px;
+//     color: $color-delete;
+//   }
+// }
 
-.arrow {
-  display: flex;
-  text-decoration: none;
-  font-size: 18px;
-  padding: 5px;
-}
+// //sm: max 640px
+// @media screen and (max-width: 640px) {
+//   .btn-link-edit {
+//     font-size: 10px;
+//     color: $color-edit;
+//   }
+//   .btn-link-delete {
+//     font-size: 10px;
+//     color: $color-delete;
+//   }
+// }
 
-.list-title {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 60px;
-  font-size: 36px;
-  color: pink;
-}
+// //xs: max 425px
+// @media screen and (max-width: 425px) {
+//   .btn-link-edit {
+//     font-size: 10px;
+//     color: $color-edit;
+//   }
+//   .btn-link-delete {
+//     font-size: 10px;
+//     color: $color-delete;
+//   }
+// }
 
-.list {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 40px 0 40px 0;
-  font-size: 18px;
-}
-
-table {
-  border: 2px solid $background-color;
-  padding: 5px;
-  font-size: 18px;
-}
-
-th,
-td {
-  border-right: 1px solid #eeeeef;
-  border-left: solid 1px #eeeeef;
-  border-bottom: 1px solid #eeeeef;
-  padding: 5px;
-  text-align: left;
-  width: 50%;
-  font-size: 18px;
-}
-
-th:last-child,
-td:last-child {
-  border-right: none;
-}
-
-.btn-link-edit {
-  font-size: 18px;
-  color: $color-edit;
-}
-.btn-link-delete {
-  font-size: 18px;
-  color: $color-delete;
-}
-
-//lg:  max 1024px
-@media screen and (max-width: 1024px) {
-  .list-cont {
-    max-width: 100%;
-  }
-
-  .list-inner {
-    display: flex;
-    align-items: center;
-    margin: 10px 40px 10px 40px;
-  }
-
-  .arrow {
-    display: flex;
-    text-decoration: none;
-    font-size: 18px;
-    padding: 5px;
-  }
-
-  .list-title {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 60px;
-    font-size: 36px;
-    color: green;
-  }
-
-  .list {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 40px 0 40px 0;
-    font-size: 15px;
-  }
-
-  table {
-    border: 2px solid $background-color;
-    padding: 5px;
-    font-size: 15px;
-  }
-
-  th,
-  td {
-    border-right: 1px solid #eeeeef;
-    border-left: solid 1px #eeeeef;
-    border-bottom: 1px solid #eeeeef;
-    padding: 5px;
-    text-align: left;
-    width: 50%;
-    font-size: 15px;
-  }
-
-  th:last-child,
-  td:last-child {
-    border-right: none;
-  }
-
-  .btn-link-edit {
-    font-size: 15px;
-    color: $color-edit;
-  }
-  .btn-link-delete {
-    font-size: 15px;
-    color: $color-delete;
-  }
-}
-
-// md: max 768px
-@media screen and (max-width: 768px) {
-  .list-cont {
-    max-width: 100%;
-  }
-
-  .list-inner {
-    display: flex;
-    align-items: center;
-    margin: 10px 20px 10px 20px;
-  }
-
-  .arrow {
-    display: flex;
-    text-decoration: none;
-    font-size: 18px;
-    padding: 5px;
-  }
-
-  .list-title {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 60px;
-    font-size: 32px;
-    color: blue;
-  }
-
-  .list {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 40px 0 40px 0;
-    font-size: 13px;
-  }
-
-  table {
-    border: 2px solid $background-color;
-    padding: 5px;
-    font-size: 13px;
-  }
-
-  th,
-  td {
-    border-right: 1px solid #eeeeef;
-    border-left: solid 1px #eeeeef;
-    border-bottom: 1px solid #eeeeef;
-    padding: 5px;
-    text-align: left;
-    width: 50%;
-    font-size: 13px;
-  }
-
-  th:last-child,
-  td:last-child {
-    border-right: none;
-  }
-
-  .btn-link-edit {
-    font-size: 13px;
-    color: $color-edit;
-  }
-  .btn-link-delete {
-    font-size: 13px;
-    color: $color-delete;
-  }
-}
-
-//sm: max 640px
-@media screen and (max-width: 640px) {
-  .list-cont {
-    max-width: 100%;
-  }
-
-  .list-inner {
-    display: flex;
-    align-items: center;
-    margin: 10px;
-  }
-
-  .arrow {
-    display: flex;
-    text-decoration: none;
-    font-size: 18px;
-    padding: 5px;
-  }
-
-  .list-title {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 60px;
-    font-size: 32px;
-    color: red;
-  }
-
-  .list {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 40px 0 40px 0;
-  }
-
-  table {
-    border: 2px solid $background-color;
-    padding: 5px;
-    font-size: 10px;
-  }
-
-  th,
-  td {
-    border-right: 1px solid #eeeeef;
-    border-left: solid 1px #eeeeef;
-    border-bottom: 1px solid #eeeeef;
-    padding: 5px;
-    text-align: left;
-    width: 50%;
-    font-size: 10px;
-  }
-
-  th:last-child,
-  td:last-child {
-    border-right: none;
-  }
-
-  .btn-link-edit {
-    font-size: 10px;
-    color: $color-edit;
-  }
-  .btn-link-delete {
-    font-size: 10px;
-    color: $color-delete;
-  }
-}
-
-//xs: max 425px
-@media screen and (max-width: 425px) {
-  .list-cont {
-    max-width: 100%;
-  }
-
-  .list-inner {
-    display: flex;
-    align-items: center;
-    margin: 10px;
-  }
-
-  .arrow {
-    display: flex;
-    text-decoration: none;
-    font-size: 18px;
-    padding: 5px;
-  }
-
-  .list-title {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 60px;
-    font-size: 32px;
-    color: red;
-  }
-
-  .list {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 40px 0 40px 0;
-  }
-
-  table {
-    border: 2px solid $background-color;
-    padding: 5px;
-    font-size: 10px;
-  }
-
-  th,
-  td {
-    border-right: 1px solid #eeeeef;
-    border-left: solid 1px #eeeeef;
-    border-bottom: 1px solid #eeeeef;
-    padding: 5px;
-    text-align: left;
-    width: 50%;
-    font-size: 10px;
-  }
-
-  th:last-child,
-  td:last-child {
-    border-right: none;
-  }
-
-  .btn-link-edit {
-    font-size: 10px;
-    color: $color-edit;
-  }
-  .btn-link-delete {
-    font-size: 10px;
-    color: $color-delete;
-  }
-}
-
-//xxs: max 375px
-@media screen and (max-width: 375px) {
-  .list-cont {
-    max-width: 100%;
-  }
-
-  .list-inner {
-    display: flex;
-    align-items: center;
-    margin: 10px;
-  }
-
-  .arrow {
-    display: flex;
-    text-decoration: none;
-    font-size: 18px;
-    padding: 5px;
-  }
-
-  .list-title {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 60px;
-    font-size: 32px;
-    color: red;
-  }
-
-  .list {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 40px 0 40px 0;
-  }
-
-  table {
-    border: 2px solid $background-color;
-    padding: 5px;
-    font-size: 10px;
-  }
-
-  th,
-  td {
-    border-right: 1px solid #eeeeef;
-    border-left: solid 1px #eeeeef;
-    border-bottom: 1px solid #eeeeef;
-    padding: 5px;
-    text-align: left;
-    width: 50%;
-    font-size: 10px;
-  }
-
-  th:last-child,
-  td:last-child {
-    border-right: none;
-  }
-
-  .btn-link-edit {
-    font-size: 10px;
-    color: $color-edit;
-  }
-  .btn-link-delete {
-    font-size: 10px;
-    color: $color-delete;
-  }
-}
+// //xxs: max 375px
+// @media screen and (max-width: 375px) {
+//   .btn-link-edit {
+//     font-size: 10px;
+//     color: $color-edit;
+//   }
+//   .btn-link-delete {
+//     font-size: 10px;
+//     color: $color-delete;
+//   }
+// }

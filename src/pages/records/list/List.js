@@ -50,37 +50,39 @@ const List = () => {
         <div className="list-title">Users List</div>
 
         <div className="list">
-          <table>
-            <thead>
-              <tr>
-                <th>Name</th>
-                <th>Surname</th>
-                <th>Email</th>
-                <th>Password</th>
-                <th>Address</th>
-                <th>City</th>
-                <th>Country</th>
-                <th>Code</th>
-                <th>Have Children</th>
-                <th>Have Pets</th>
-                <th>Pet Name</th>
-                <th>Action</th>
-              </tr>
-            </thead>
-            <tbody>
-              {records.map((record) => {
-                return (
-                  <>
-                    <Record
-                      key={record._id}
-                      record={record}
-                      deleteRecord={() => deleteRecord(record._id)}
-                    />
-                  </>
-                );
-              })}
-            </tbody>
-          </table>
+          <div className="list-table">
+            <table>
+              <thead>
+                <tr className="table-tr">
+                  <th>Name</th>
+                  <th>Surname</th>
+                  <th>Email</th>
+                  {/* <th>Password</th> */}
+                  {/* <th>Address</th> */}
+                  <th>City</th>
+                  <th>Country</th>
+                  {/* <th>Code</th> */}
+                  <th>Have Children</th>
+                  <th>Have Pets</th>
+                  <th>Pet Name</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                {records.map((record) => {
+                  return (
+                    <>
+                      <Record
+                        key={record._id}
+                        record={record}
+                        deleteRecord={() => deleteRecord(record._id)}
+                      />
+                    </>
+                  );
+                })}
+              </tbody>
+            </table>
+          </div>
         </div>
       </div>
     </>

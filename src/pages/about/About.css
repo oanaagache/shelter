@@ -62,7 +62,7 @@
     justify-content: center;
     align-items: center;
     height: 60px;
-    font-size: 36px;
+    font-size: 34px;
     color: #000;
   }
   .about {
@@ -88,46 +88,7 @@
   .about-inner {
     display: flex;
     align-items: center;
-    margin: 40px 20px 20px 20px;
-  }
-  .about-arrow {
-    display: flex;
-    text-decoration: none;
-    font-size: 18px;
-    padding: 5px;
-  }
-  .about-title {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 60px;
-    font-size: 34px;
-    color: #000;
-  }
-  .about {
-    margin: 80px 20px 80px 20px;
-  }
-  .about-button-adopt {
-    justify-content: left;
-    margin: 20px;
-  }
-  .about-button {
-    color: aliceblue;
-    background-color: rgb(126, 63, 102);
-    border-radius: 5px;
-    width: 60px;
-    height: 30px;
-    font-size: 12px;
-  }
-}
-@media screen and (max-width: 640px) {
-  .about-cont {
-    max-width: 100%;
-  }
-  .about-inner {
-    display: flex;
-    align-items: center;
-    margin: 40px 20px 20px 20px;
+    margin: 40px 20px 40px 20px;
   }
   .about-arrow {
     display: flex;
@@ -159,6 +120,45 @@
     font-size: 12px;
   }
 }
+@media screen and (max-width: 640px) {
+  .about-cont {
+    max-width: 100%;
+  }
+  .about-inner {
+    display: flex;
+    align-items: center;
+    margin: 40px 20px 40px 20px;
+  }
+  .about-arrow {
+    display: flex;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 5px;
+  }
+  .about-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    font-size: 28px;
+    color: #000;
+  }
+  .about {
+    margin: 80px 20px 80px 20px;
+  }
+  .about-button-adopt {
+    justify-content: left;
+    margin: 20px;
+  }
+  .about-button {
+    color: aliceblue;
+    background-color: rgb(126, 63, 102);
+    border-radius: 5px;
+    width: 60px;
+    height: 30px;
+    font-size: 12px;
+  }
+}
 @media screen and (max-width: 425px) {
   .about-cont {
     max-width: 100%;
@@ -166,7 +166,7 @@
   .about-inner {
     display: flex;
     align-items: center;
-    margin: 40px 20px 20px 20px;
+    margin: 40px 20px 40px 20px;
   }
   .about-arrow {
     display: flex;
@@ -205,7 +205,7 @@
   .about-inner {
     display: flex;
     align-items: center;
-    margin: 40px 20px 20px 20px;
+    margin: 40px 20px 40px 20px;
   }
   .about-arrow {
     display: flex;
@@ -218,8 +218,9 @@
     justify-content: center;
     align-items: center;
     height: 60px;
-    font-size: 26px;
+    font-size: 24px;
     color: #000;
+    margin: 20px;
   }
   .about {
     margin: 80px 20px 80px 20px;
