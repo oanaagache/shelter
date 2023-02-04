@@ -1,0 +1,463 @@
+$color: aliceblue;
+$background-color: rgb(126, 63, 102);
+$black: #000;
+
+// xl: max 1280px
+.edit-adoption-cont {
+  max-width: 100%;
+}
+
+.edit-adoption-inner {
+  display: flex;
+  align-items: center;
+  margin: 10px 80px 10px 80px;
+}
+
+.edit-adoption-arrow {
+  display: flex;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 5px;
+}
+
+.edit-adoption-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  font-size: 36px;
+  color: pink;
+}
+
+.edit-adoption-form {
+  margin: 80px;
+}
+
+.form-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+}
+
+.form-group {
+  padding: 10px 0 10px 0;
+}
+
+.status-form {
+  padding: 40px 0 0 0;
+}
+
+.title {
+  padding: 15px 0 0 0;
+}
+
+.edit-adoption-button {
+  margin: 10px;
+}
+
+.back {
+  color: $black;
+  width: 80px;
+  height: 40px;
+  padding: 8px;
+  margin: 80px 0 80px 0;
+  background-color: $color;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.submit {
+  color: $color;
+  width: 80px;
+  height: 40px;
+  padding: 8px;
+  margin: 80px 16px 80px 16px;
+  background-color: $background-color;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+//lg:  max 1024px
+@media screen and (max-width: 1024px) {
+  .edit-adoption-cont {
+    max-width: 100%;
+  }
+
+  .edit-adoption-inner {
+    display: flex;
+    align-items: center;
+    margin: 10px 40px 10px 40px;
+  }
+
+  .edit-adoption-arrow {
+    display: flex;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 5px;
+  }
+
+  .edit-adoption-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    font-size: 36px;
+    color: green;
+  }
+
+  .edit-adoption-form {
+    margin: 80px 40px 80px 40px;
+  }
+
+  .form-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+  }
+
+  .form-group {
+    padding: 10px 0 10px 0;
+  }
+
+  .status-form {
+    padding: 40px 0 0 0;
+  }
+
+  .title {
+    padding: 15px 0 0 0;
+  }
+
+  .edit-adoption-button {
+    margin: 10px;
+  }
+
+  .back {
+    color: $black;
+    width: 80px;
+    height: 40px;
+    padding: 8px;
+    margin: 80px 0 80px 0;
+    background-color: $color;
+    font-size: 12px;
+    line-height: 16px;
+  }
+
+  .submit {
+    color: $color;
+    width: 80px;
+    height: 40px;
+    padding: 8px;
+    margin: 80px 16px 80px 16px;
+    background-color: $background-color;
+    font-size: 12px;
+    line-height: 16px;
+  }
+}
+
+// md: max 768px
+@media screen and (max-width: 768px) {
+  .edit-adoption-cont {
+    max-width: 100%;
+  }
+
+  .edit-adoption-inner {
+    display: flex;
+    align-items: center;
+    margin: 10px 20px 10px 20px;
+  }
+
+  .edit-adoption-arrow {
+    display: flex;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 5px;
+  }
+
+  .edit-adoption-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    font-size: 32px;
+    color: blue;
+  }
+
+  .edit-adoption-form {
+    margin: 80px 20px 80px 20px;
+  }
+
+  .form-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+
+  .form-group {
+    padding: 10px 0 10px 0;
+  }
+
+  .status-form {
+    padding: 40px 0 0 0;
+  }
+
+  .title {
+    padding: 15px 0 0 0;
+  }
+
+  .edit-adoption-button {
+    margin: 10px;
+  }
+
+  .back {
+    color: $black;
+    width: 80px;
+    height: 40px;
+    padding: 8px;
+    margin: 80px 0 80px 0;
+    background-color: $color;
+    font-size: 12px;
+    line-height: 16px;
+  }
+
+  .submit {
+    color: $color;
+    width: 80px;
+    height: 40px;
+    padding: 8px;
+    margin: 80px 16px 80px 16px;
+    background-color: $background-color;
+    font-size: 12px;
+    line-height: 16px;
+  }
+}
+
+//sm: max 640px
+@media screen and (max-width: 640px) {
+  .edit-adoption-cont {
+    max-width: 100%;
+  }
+
+  .edit-adoption-inner {
+    display: flex;
+    align-items: center;
+    margin: 10px;
+  }
+
+  .edit-adoption-arrow {
+    display: flex;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 5px;
+  }
+
+  .edit-adoption-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    font-size: 32px;
+    color: red;
+  }
+
+  .edit-adoption-form {
+    margin: 80px 20px 80px 20px;
+  }
+
+  .form-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .form-group {
+    padding: 10px 0 10px 0;
+  }
+
+  .status-form {
+    padding: 30px 0 0 0;
+  }
+
+  .title {
+    padding: 10px;
+  }
+
+  .edit-adoption-button {
+    margin: 20px;
+  }
+
+  .back {
+    color: $black;
+    width: 80px;
+    height: 40px;
+    padding: 8px;
+    margin: 80px 0 80px 0;
+    background-color: $color;
+    font-size: 12px;
+    line-height: 16px;
+  }
+
+  .submit {
+    color: $color;
+    width: 80px;
+    height: 40px;
+    padding: 8px;
+    margin: 80px 16px 80px 16px;
+    background-color: $background-color;
+    font-size: 12px;
+    line-height: 16px;
+  }
+}
+
+//xs: max 425px
+@media screen and (max-width: 425px) {
+  .edit-adoption-cont {
+    max-width: 100%;
+  }
+
+  .edit-adoption-inner {
+    display: flex;
+    align-items: center;
+    margin: 10px;
+  }
+
+  .edit-adoption-arrow {
+    display: flex;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 5px;
+  }
+
+  .edit-adoption-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    font-size: 32px;
+    color: red;
+  }
+
+  .edit-adoption-form {
+    margin: 80px 20px 80px 20px;
+  }
+
+  .form-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .form-group {
+    padding: 10px 0 10px 0;
+  }
+
+  .status-form {
+    padding: 30px 0 0 0;
+  }
+
+  .title {
+    padding: 10px;
+  }
+
+  .edit-adoption-button {
+    margin: 20px;
+  }
+
+  .back {
+    color: $black;
+    width: 80px;
+    height: 40px;
+    padding: 8px;
+    margin: 80px 0 80px 0;
+    background-color: $color;
+    font-size: 12px;
+    line-height: 16px;
+  }
+
+  .submit {
+    color: $color;
+    width: 80px;
+    height: 40px;
+    padding: 8px;
+    margin: 80px 16px 80px 16px;
+    background-color: $background-color;
+    font-size: 12px;
+    line-height: 16px;
+  }
+}
+
+//xxs: max 375px
+@media screen and (max-width: 375px) {
+  .edit-adoption-cont {
+    max-width: 100%;
+  }
+
+  .edit-adoption-inner {
+    display: flex;
+    align-items: center;
+    margin: 10px;
+  }
+
+  .edit-adoption-arrow {
+    display: flex;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 5px;
+  }
+
+  .edit-adoption-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    font-size: 32px;
+    color: red;
+  }
+
+  .edit-adoption-form {
+    margin: 80px 20px 80px 20px;
+  }
+
+  .form-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .form-group {
+    padding: 10px 0 10px 0;
+  }
+
+  .status-form {
+    padding: 30px 0 0 0;
+  }
+
+  .title {
+    padding: 10px;
+  }
+
+  .edit-adoption-button {
+    margin: 20px;
+  }
+
+  .back {
+    color: $black;
+    width: 80px;
+    height: 40px;
+    padding: 8px;
+    margin: 80px 0 80px 0;
+    background-color: $color;
+    font-size: 12px;
+    line-height: 16px;
+  }
+
+  .submit {
+    color: $color;
+    width: 80px;
+    height: 40px;
+    padding: 8px;
+    margin: 80px 16px 80px 16px;
+    background-color: $background-color;
+    font-size: 12px;
+    line-height: 16px;
+  }
+}

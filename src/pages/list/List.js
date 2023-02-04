@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import "./List.css";
-import logo from "../../../images/image4.svg";
+import logo from "../../images/image4.svg";
 import Record from "../record/Record.js";
 
 const List = () => {
