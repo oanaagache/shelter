@@ -11,7 +11,7 @@ $font: "Courier New", sans-serif;
 .adopt-inner {
   display: flex;
   align-items: center;
-  margin: 10px 80px 10px 80px;
+  margin: 10px 40px 10px 40px;
 }
 
 .adopt-arrow {
@@ -31,14 +31,14 @@ $font: "Courier New", sans-serif;
 }
 
 .adopt-drop {
-  margin: 80px;
+  margin: 40px;
 }
 
 .adopt-drop-title {
   margin: auto;
   justify-content: left;
   display: flex;
-  font-size: 20px;
+  font-size: 18px;
   margin: 40px 0 30px 0;
 }
 
@@ -46,7 +46,7 @@ $font: "Courier New", sans-serif;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  gap: 80px;
+  gap: 20px;
 }
 
 .drop1 {

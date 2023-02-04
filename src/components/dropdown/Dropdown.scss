@@ -2,13 +2,6 @@ $color: aliceblue;
 $background-color: rgb(126, 63, 102);
 $black: #000;
 
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-  // overflow-x: hidden;
-}
-
 // xl: max 1280px
 .dropdown {
   width: 100%;
@@ -24,7 +17,7 @@ $black: #000;
   box-shadow: 3px 3px 6px 6px rgba($black, 0.06);
   font-weight: bold;
   color: $black;
-  font-size: 15px;
+  font-size: 14px;
 }
 
 .dropdown-content {
@@ -42,7 +35,7 @@ $black: #000;
 .dropdown-item {
   cursor: pointer;
   transition: all 2s;
-  font-size: 15px;
+  font-size: 14px;
 }
 
 .dropdown-item:hover {
@@ -65,7 +58,7 @@ $black: #000;
     box-shadow: 3px 3px 6px 6px rgba($black, 0.06);
     font-weight: bold;
     color: $black;
-    font-size: 15px;
+    font-size: 14px;
   }
 
   .dropdown-content {
@@ -83,7 +76,7 @@ $black: #000;
   .dropdown-item {
     cursor: pointer;
     transition: all 2s;
-    font-size: 15px;
+    font-size: 14px;
   }
 
   .dropdown-item:hover {
