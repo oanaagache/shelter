@@ -10,7 +10,6 @@ import AdoptionForm from "./pages/adoptionform/AdoptionForm";
 import Success from "./pages/success/Success";
 import Donate from "./pages/donate/Donate";
 import Foster from "./pages/foster/Foster";
-
 import Articles from "./pages/art/articles/Articles";
 import DogArticles from "./pages/art/dog/dogarticles/DogArticles";
 
@@ -51,7 +50,7 @@ const App = () => {
           element={<AdoptionForm isLoggedIn={isLoggedIn} />}
         />
         <Route path="/articles" element={<Articles />} />
-        <Route path="/dogarticles" element={<DogArticles />} />
+        <Route path="/dogArticles" element={<DogArticles />} />
         <Route path="/articlescat" element={<ArticlesCat />} />
         <Route path="/card/" element={<Card />} />
         <Route path="/card/:id" element={<Card isLoggedIn={isLoggedIn} />} />

@@ -3,7 +3,6 @@ import logo from "../../../../images/image4.svg";
 import { Link } from "react-router-dom";
 import "../../../../../src/index.scss";
 import DogCard from "../dogcard/DogCard";
-
 import "./DogArticles.css";
 
 const DogArticles = () => {

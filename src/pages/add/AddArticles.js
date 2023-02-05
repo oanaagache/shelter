@@ -80,9 +80,9 @@ const AddArticles = () => {
     return;
   }, [items.length]);
 
-  const Refresh = () => {
-    setRefresh((refresh) => !refresh);
-  };
+  // const Refresh = () => {
+  //   setRefresh((refresh) => !refresh);
+  // };
 
   return (
     <div className="container">
@@ -126,6 +126,14 @@ const AddArticles = () => {
           className="form-control"
           id="inputFirstName"
           value={item.title5 || ""}
+          onChange={(e) => setItem({ ...item, title5: e.target.value })}
+        />
+        <label htmlFor="inputFirstName">Add title6:</label>
+        <input
+          type="text"
+          className="form-control"
+          id="inputFirstName"
+          value={item.title6 || ""}
           onChange={(e) => setItem({ ...item, title6: e.target.value })}
         />
         <label htmlFor="inputFirstName">Add title7:</label>
@@ -214,7 +222,7 @@ const AddArticles = () => {
           className="form-control"
           id="inputFirstName"
           value={item.title17 || ""}
-          onChange={(e) => setItem({ ...item, title2: e.target.value })}
+          onChange={(e) => setItem({ ...item, title17: e.target.value })}
         />
         <label htmlFor="inputFirstName">Add title18:</label>
         <input
@@ -222,6 +230,14 @@ const AddArticles = () => {
           className="form-control"
           id="inputFirstName"
           value={item.title18 || ""}
+          onChange={(e) => setItem({ ...item, title18: e.target.value })}
+        />
+        <label htmlFor="inputFirstName">Add title19:</label>
+        <input
+          type="text"
+          className="form-control"
+          id="inputFirstName"
+          value={item.title19 || ""}
           onChange={(e) => setItem({ ...item, title19: e.target.value })}
         />
         <label htmlFor="inputFirstName">Add title20:</label>
@@ -278,6 +294,14 @@ const AddArticles = () => {
           className="form-control"
           id="inputFirstName"
           value={item.title26 || ""}
+          onChange={(e) => setItem({ ...item, title26: e.target.value })}
+        />
+        <label htmlFor="inputFirstName">Add title27:</label>
+        <input
+          type="text"
+          className="form-control"
+          id="inputFirstName"
+          value={item.title27 || ""}
           onChange={(e) => setItem({ ...item, title27: e.target.value })}
         />
         <label htmlFor="inputFirstName">Add title28:</label>
@@ -380,7 +404,7 @@ const AddArticles = () => {
           <button
             className="card-adopt"
             style={{ marginTop: "20px" }}
-            onClick={Refresh}
+            // onClick={Refresh}
           >
             Submit
           </button>

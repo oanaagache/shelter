@@ -44,7 +44,7 @@ const Articles = () => {
                   <button
                     className="button-articles-read"
                     onClick={() => {
-                      navigate("/articlesdog");
+                      navigate("/dogarticles");
                     }}
                   >
                     Read more
@@ -72,7 +72,7 @@ const Articles = () => {
                   <button
                     className="button-articles-read"
                     onClick={() => {
-                      navigate("/articlesdog");
+                      navigate("/dogarticles");
                     }}
                   >
                     Read more
