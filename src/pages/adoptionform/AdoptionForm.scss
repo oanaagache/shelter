@@ -1,6 +1,6 @@
 $color: aliceblue;
 $background-color: rgb(126, 63, 102);
-$title-color: #000;
+$black: #000;
 
 // xl:  max 1280px
 .adoption-cont {
@@ -26,7 +26,6 @@ $title-color: #000;
   align-items: center;
   height: 60px;
   font-size: 36px;
-  color: $title-color;
 }
 
 .adoption-form {
@@ -102,7 +101,6 @@ $title-color: #000;
     align-items: center;
     height: 60px;
     font-size: 34px;
-    color: $title-color;
   }
 
   .adoption-form {
@@ -132,7 +130,6 @@ $title-color: #000;
   }
 
   .back {
-    color: $black;
     width: 80px;
     height: 40px;
     padding: 8px;
@@ -140,6 +137,7 @@ $title-color: #000;
     background-color: $color;
     font-size: 12px;
     line-height: 16px;
+    color: $black;
   }
 
   .submit {
@@ -179,7 +177,7 @@ $title-color: #000;
     align-items: center;
     height: 60px;
     font-size: 32px;
-    color: $title-color;
+    color: $black;
   }
 
   .adoption-form {
@@ -256,7 +254,6 @@ $title-color: #000;
     align-items: center;
     height: 60px;
     font-size: 26px;
-    color: $title-color;
   }
 
   .adoption-form {
@@ -333,7 +330,6 @@ $title-color: #000;
     align-items: center;
     height: 60px;
     font-size: 22px;
-    color: $title-color;
   }
 
   .adoption-form {
@@ -410,7 +406,6 @@ $title-color: #000;
     align-items: center;
     height: 60px;
     font-size: 20px;
-    color: $title-color;
   }
 
   .adoption-form {

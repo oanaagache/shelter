@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
-import "./Success.css";
-import { useNavigate } from "react-router-dom";
+import "./Success.scss";
 import { useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
+import logo from "../../images/image4.svg";
 
 export default function Success() {
   const { name } = useParams();
-  let navigate = useNavigate();
 
   const [user, setUser] = useState([]);
   const [adoptionForm, setAdoptionForm] = useState([]);
@@ -19,60 +19,62 @@ export default function Success() {
   }, []);
 
   return (
-    <div className="response">
-      <h2 className="response-title">Thank you!</h2>
-      <h2 className="response-title">You're on your way to meet {name} </h2>
-
-      <h4 className="title">Our volunteers will contact you in order </h4>
-      <h4 className="title">
-        to schedule a visit to the animal shelter and finalize the adoption
-        procedure.
-      </h4>
-
-      <div className="list">
-        <table>
-          <thead>
-            <tr>
-              <th>Name</th>
-              <th>Surname</th>
-              <th>Email</th>
-              <th>Password</th>
-              <th>Address</th>
-              <th>City</th>
-              <th>Country</th>
-              <th>Code</th>
-              <th>Have Children</th>
-              <th>Have Pets</th>
-              <th>Pet Name</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>{user.firstName || " - "}</td>
-              <td>{user.surname || " - "}</td>
-              <td>{user.email || " - "}</td>
-              <td>{user.password || " - "}</td>
-              <td>{adoptionForm.address || " - "}</td>
-              <td>{adoptionForm.city || " - "}</td>
-              <td>{adoptionForm.country || " - "}</td>
-              <td>{adoptionForm.code || " - "}</td>
-              <td>{adoptionForm.status || " - "}</td>
-              <td>{adoptionForm.routine || " - "}</td>
-              <td>{adoptionForm.name || " - "}</td>
-            </tr>
-          </tbody>
-        </table>
+    <div className="response-cont">
+      <div className="response-inner">
+        <img
+          style={({ height: "10px" }, { width: "10px" })}
+          src={logo}
+          alt="Not found"
+        />
+        <Link className="response-arrow" to="/">
+          Back{" "}
+        </Link>
       </div>
 
-      <div className="success-button">
-        <button
-          className="backHome"
-          onClick={() => {
-            navigate("/adopt");
-          }}
-        >
-          Back to Adopt Page
-        </button>
+      <div className="response-title">
+        {" "}
+        Thank you!You're on your way to meet {name}.
+      </div>
+      <div className="response-subtitle">
+        Our volunteers will contact you in order to schedule a visit to the
+        animal shelter and finalize the adoption procedure.
+      </div>
+
+      <div className="response">
+        <div className="response-table">
+          <table>
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Surname</th>
+                <th>Email</th>
+                <th>Password</th>
+                <th>Address</th>
+                <th>City</th>
+                <th>Country</th>
+                <th>Code</th>
+                <th>Have Children</th>
+                <th>Have Pets</th>
+                <th>Pet Name</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>{user.firstName || " - "}</td>
+                <td>{user.surname || " - "}</td>
+                <td>{user.email || " - "}</td>
+                <td>{user.password || " - "}</td>
+                <td>{adoptionForm.address || " - "}</td>
+                <td>{adoptionForm.city || " - "}</td>
+                <td>{adoptionForm.country || " - "}</td>
+                <td>{adoptionForm.code || " - "}</td>
+                <td>{adoptionForm.status || " - "}</td>
+                <td>{adoptionForm.routine || " - "}</td>
+                <td>{adoptionForm.name || " - "}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>{" "}
       </div>
     </div>
   );

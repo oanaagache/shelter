@@ -4,7 +4,7 @@ import "./Record.css";
 
 const Record = (props) => {
   return (
-    <tr className="table-tr">
+    <tr>
       <td>{props.record.firstName || " - "}</td>
       <td>{props.record.surname || " - "}</td>
       <td>{props.record.email || " - "}</td>

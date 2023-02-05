@@ -1,52 +1,245 @@
 $color: aliceblue;
 $background-color: rgb(126, 63, 102);
 
-.response {
+// xl: max 1280px
+.response-cont {
+  max-width: 100%;
+}
+
+.response-inner {
   display: flex;
-  flex-direction: column;
-  object-fit: contain;
   align-items: center;
+  margin: 10px 80px 10px 80px;
+}
+
+.response-arrow {
+  display: flex;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 5px;
 }
 
 .response-title {
-  margin: 10px 10px 0 0;
-}
-
-.success-button {
   display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  font-size: 32px;
 }
 
-.backHome {
-  color: $color;
-  width: 250px;
-  height: 50px;
-  background-color: $background-color;
-  margin: 80px 20px 80px 20px;
-  font-size: 24px;
+.response-subtitle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 26px;
+  margin: 10px 80px 40px 80px;
 }
 
-.list {
-  margin: 20px 0 0 0;
+.response {
+  margin: 80px;
 }
-
-// xl: max 1280px
 
 //lg:  max 1024px
 @media screen and (max-width: 1024px) {
+  .response-cont {
+    max-width: 100%;
+  }
+
+  .response-inner {
+    display: flex;
+    align-items: center;
+    margin: 10px 40px 10px 40px;
+  }
+
+  .response-arrow {
+    display: flex;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 5px;
+  }
+
+  .response-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    font-size: 30px;
+  }
+
+  .response-subtitle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    margin: 10px 40px 10px 40px;
+  }
+
+  .response {
+    margin: 80px 10px 80px 10px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+  }
 }
 
 // md: max 768px
 @media screen and (max-width: 768px) {
+  .response-cont {
+    max-width: 100%;
+  }
+
+  .response-inner {
+    display: flex;
+    align-items: center;
+    margin: 10px 80px 10px 80px;
+  }
+
+  .response-arrow {
+    display: flex;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 5px;
+  }
+
+  .response-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    font-size: 32px;
+  }
+
+  .response-subtitle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 26px;
+    margin: 10px 80px 40px 80px;
+  }
+
+  .response {
+    margin: 80px;
+  }
 }
 
 //sm: max 640p
 @media screen and (max-width: 640px) {
+  .response-cont {
+    max-width: 100%;
+  }
+
+  .response-inner {
+    display: flex;
+    align-items: center;
+    margin: 10px 80px 10px 80px;
+  }
+
+  .response-arrow {
+    display: flex;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 5px;
+  }
+
+  .response-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    font-size: 32px;
+  }
+
+  .response-subtitle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 26px;
+    margin: 10px 80px 40px 80px;
+  }
+
+  .response {
+    margin: 80px;
+  }
 }
 
 //xs: max 424px
 @media screen and (max-width: 425px) {
+  .response-cont {
+    max-width: 100%;
+  }
+
+  .response-inner {
+    display: flex;
+    align-items: center;
+    margin: 10px 80px 10px 80px;
+  }
+
+  .response-arrow {
+    display: flex;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 5px;
+  }
+
+  .response-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    font-size: 32px;
+  }
+
+  .response-subtitle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 26px;
+    margin: 10px 80px 40px 80px;
+  }
+
+  .response {
+    margin: 80px;
+  }
 }
 
 //xxs: max 375px
 @media screen and (max-width: 375px) {
+  .response-cont {
+    max-width: 100%;
+  }
+
+  .response-inner {
+    display: flex;
+    align-items: center;
+    margin: 10px 80px 10px 80px;
+  }
+
+  .response-arrow {
+    display: flex;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 5px;
+  }
+
+  .response-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    font-size: 32px;
+  }
+
+  .response-subtitle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 26px;
+    margin: 10px 80px 40px 80px;
+  }
+
+  .response {
+    margin: 80px;
+  }
 }

@@ -26,12 +26,12 @@ const App = () => {
 
   useEffect(() => {
     setIsLoggedIn(JSON.parse(localStorage.getItem("loggedIn")));
-    console.log(isLoggedIn);
+    //console.log(isLoggedIn);
   }, [isLoggedIn]);
 
   useEffect(() => {
     setAdmin(JSON.parse(localStorage.getItem("Admin is loggedIn")));
-    console.log(isAdmin);
+    //console.log(isAdmin);
   }, [isAdmin]);
 
   return (
@@ -64,7 +64,7 @@ const App = () => {
         <Route path="/success/:email" element={<Success />} />
         <Route path="/edit/:id" element={<Edit />} />
         <Route path="/list" element={<List />} />
-        <Route path="/addarticles" element={<AddArticles />} />
+        <Route path="/addArticles" element={<AddArticles />} />
       </Routes>
       <Footer />
     </Router>

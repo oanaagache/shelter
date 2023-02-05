@@ -1,6 +1,6 @@
 $color: aliceblue;
 $background-color: rgb(126, 63, 102);
-$title-color: #000;
+
 $font-weight: bold;
 
 // xl: max 1280px
@@ -27,7 +27,6 @@ $font-weight: bold;
   align-items: center;
   height: 60px;
   font-size: 36px;
-  color: $title-color;
 }
 
 .foster-subtitle {
@@ -77,7 +76,6 @@ $font-weight: bold;
     align-items: center;
     height: 60px;
     font-size: 34px;
-    color: $title-color;
   }
 
   .foster-subtitle {
@@ -132,7 +130,6 @@ $font-weight: bold;
     align-items: center;
     height: 60px;
     font-size: 32px;
-    color: $title-color;
   }
 
   .foster-subtitle {
@@ -183,7 +180,7 @@ $font-weight: bold;
     align-items: center;
     height: 60px;
     font-size: 28px;
-    color: $title-color;
+
     margin: 20px;
   }
 
@@ -235,7 +232,7 @@ $font-weight: bold;
     align-items: center;
     height: 60px;
     font-size: 26px;
-    color: $title-color;
+
     margin: 20px;
   }
 
@@ -287,7 +284,7 @@ $font-weight: bold;
     align-items: center;
     height: 60px;
     font-size: 24px;
-    color: $title-color;
+
     margin: 20px;
   }
 
