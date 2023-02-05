@@ -2,6 +2,7 @@ $background-color: rgb(126, 63, 102);
 $color-edit: blue;
 $color-delete: red;
 $title-color: #000;
+$border-color: 1px solid #eeeeef;
 
 // xl: max 1280px
 .list-cont {
@@ -30,7 +31,7 @@ $title-color: #000;
 }
 
 .list {
-  margin: 10px;
+  margin: 80px 10px;
 }
 
 table {
@@ -41,9 +42,9 @@ table {
 
 th,
 td {
-  border-right: 1px solid #eeeeef;
-  border-left: solid 1px #eeeeef;
-  border-bottom: 1px solid #eeeeef;
+  border-right: $border-color;
+  border-left: $border-color;
+  border-bottom: $border-color;
   padding: 5px;
   text-align: left;
   width: 100%;
@@ -74,7 +75,7 @@ td:last-child {
   .list-inner {
     display: flex;
     align-items: center;
-    margin: 10px 80px 10px 80px;
+    margin: 10px 40px 10px 40px;
   }
 
   .arrow {
@@ -89,11 +90,11 @@ td:last-child {
     justify-content: center;
     align-items: center;
     height: 60px;
-    font-size: 36px;
+    font-size: 34px;
   }
 
   .list {
-    margin: 10px;
+    margin: 80px 10px;
   }
 
   table {
@@ -104,9 +105,9 @@ td:last-child {
 
   th,
   td {
-    border-right: 1px solid #eeeeef;
-    border-left: solid 1px #eeeeef;
-    border-bottom: 1px solid #eeeeef;
+    border-right: $border-color;
+    border-left: $border-color;
+    border-bottom: $border-color;
     padding: 5px;
     text-align: left;
     width: 100%;
@@ -153,37 +154,28 @@ td:last-child {
     justify-content: center;
     align-items: center;
     height: 60px;
-    font-size: 34px;
-    color: $title-color;
+    font-size: 32px;
   }
 
   .list {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 15px;
+    margin: 80px 10px;
   }
 
   table {
     border: 2px solid $background-color;
     padding: 5px;
-    font-size: 15px;
-    margin: 10px;
-  }
-
-  .list-table {
-    margin: 80px 5px 80px 5px;
+    font-size: 13px;
   }
 
   th,
   td {
-    border-right: 1px solid #eeeeef;
-    border-left: solid 1px #eeeeef;
-    border-bottom: 1px solid #eeeeef;
+    border-right: $border-color;
+    border-left: $border-color;
+    border-bottom: $border-color;
     padding: 5px;
     text-align: left;
     width: 100%;
-    font-size: 15px;
+    font-size: 13px;
   }
 
   th:last-child,
@@ -192,11 +184,12 @@ td:last-child {
   }
 
   .btn-link-edit {
-    font-size: 15px;
+    font-size: 13px;
     color: $color-edit;
   }
+
   .btn-link-delete {
-    font-size: 15px;
+    font-size: 13px;
     color: $color-delete;
   }
 }
@@ -210,7 +203,71 @@ td:last-child {
   .list-inner {
     display: flex;
     align-items: center;
-    margin: 40px 20px 20px 20px;
+    margin: 40px 20px 40px 20px;
+  }
+
+  .arrow {
+    display: flex;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 5px;
+  }
+
+  .list-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    font-size: 28px;
+  }
+
+  .list {
+    margin: 80px 5px;
+  }
+
+  table {
+    border: 2px solid $background-color;
+    padding: 5px;
+    font-size: 9px;
+  }
+
+  th,
+  td {
+    border-right: $border-color;
+    border-left: $border-color;
+    border-bottom: $border-color;
+    padding: 5px;
+    text-align: left;
+    width: 100%;
+    font-size: 9px;
+  }
+
+  th:last-child,
+  td:last-child {
+    border-right: none;
+  }
+
+  .btn-link-edit {
+    font-size: 9px;
+    color: $color-edit;
+  }
+
+  .btn-link-delete {
+    font-size: 9px;
+    color: $color-delete;
+  }
+}
+
+//xs: max 425px
+@media screen and (max-width: 425px) {
+  .list-cont {
+    max-width: 100%;
+  }
+
+  .list-inner {
+    display: flex;
+    align-items: center;
+    margin: 40px 20px 40px 20px;
   }
 
   .arrow {
@@ -226,119 +283,45 @@ td:last-child {
     align-items: center;
     height: 60px;
     font-size: 26px;
-    color: $title-color;
   }
 
   .list {
-    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-
-  .list-table {
-    margin: 80px 5px 80px 5px;
   }
 
   table {
     border: 2px solid $background-color;
     padding: 5px;
-    font-size: 15px;
+    font-size: 16px;
   }
 
   th,
   td {
-    border-right: 1px solid #eeeeef;
-    border-left: solid 1px #eeeeef;
-    border-bottom: 1px solid #eeeeef;
+    border-right: $border-color;
+    border-left: $border-color;
+    border-bottom: $border-color;
     padding: 5px;
     text-align: left;
     width: 100%;
-    font-size: 15px;
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
   }
 
   th:last-child,
   td:last-child {
-    border-right: none;
+    border-bottom: solid 2px $background-color;
   }
 
   .btn-link-edit {
-    font-size: 15px;
+    font-size: 16px;
     color: $color-edit;
   }
+
   .btn-link-delete {
-    font-size: 15px;
-    color: $color-delete;
-  }
-}
-
-//xs: max 425px
-@media screen and (max-width: 425px) {
-  .list-cont {
-    max-width: 100%;
-  }
-
-  .list-inner {
-    display: flex;
-    align-items: center;
-    margin: 40px 20px 20px 20px;
-  }
-
-  .arrow {
-    display: flex;
-    text-decoration: none;
-    font-size: 18px;
-    padding: 5px;
-  }
-
-  .list-title {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 60px;
-    font-size: 22px;
-    color: $title-color;
-  }
-
-  .list {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .list-table {
-    margin: 80px 5px 80px 5px;
-  }
-
-  table {
-    border: 2px solid $background-color;
-    padding: 5px;
-    font-size: 15px;
-  }
-
-  th,
-  td {
-    border-right: 1px solid #eeeeef;
-    border-left: solid 1px #eeeeef;
-    border-bottom: 1px solid #eeeeef;
-    padding: 5px;
-    text-align: left;
-    width: 100%;
-    font-size: 15px;
-  }
-
-  th:last-child,
-  td:last-child {
-    border-right: none;
-  }
-
-  .btn-link-edit {
-    font-size: 15px;
-    color: $color-edit;
-  }
-  .btn-link-delete {
-    font-size: 15px;
+    font-size: 16px;
     color: $color-delete;
   }
 }
@@ -352,7 +335,7 @@ td:last-child {
   .list-inner {
     display: flex;
     align-items: center;
-    margin: 40px 20px 20px 20px;
+    margin: 40px 20px 40px 20px;
   }
 
   .arrow {
@@ -367,12 +350,10 @@ td:last-child {
     justify-content: center;
     align-items: center;
     height: 60px;
-    font-size: 22px;
-    color: $title-color;
+    font-size: 26px;
   }
 
   .list {
-    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -381,35 +362,34 @@ td:last-child {
   table {
     border: 2px solid $background-color;
     padding: 5px;
-    font-size: 15px;
-  }
-
-  .list-table {
-    margin: 80px 5px 80px 5px;
+    font-size: 16px;
   }
 
   th,
   td {
-    border-right: 1px solid #eeeeef;
-    border-left: solid 1px #eeeeef;
-    border-bottom: 1px solid #eeeeef;
+    border-right: $border-color;
+    border-left: $border-color;
+    border-bottom: $border-color;
     padding: 5px;
     text-align: left;
     width: 100%;
-    font-size: 15px;
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
   }
 
   th:last-child,
   td:last-child {
-    border-right: none;
+    border-bottom: solid 2px $background-color;
   }
 
   .btn-link-edit {
-    font-size: 15px;
+    font-size: 16px;
     color: $color-edit;
   }
+
   .btn-link-delete {
-    font-size: 15px;
+    font-size: 16px;
     color: $color-delete;
   }
 }

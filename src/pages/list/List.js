@@ -57,7 +57,7 @@ const List = () => {
               <th>Email</th>
               {/* <th>Password</th> */}
               {/* <th>Address</th> */}
-              <th>City</th>
+              {/* <th>City</th> */}
               <th>Country</th>
               {/* <th>Code</th> */}
               <th>Have Children</th>
