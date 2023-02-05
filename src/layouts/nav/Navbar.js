@@ -128,29 +128,19 @@ const Navbar = (props) => {
 
           {isAdmin && (
             <>
-              <li>
-                <NavLink
-                  to="/addarticles"
-                  style={({ isActive }) => ({
-                    color: isActive ? " purple" : "black",
-                  })}
-                  end
-                  className="about-nav"
-                >
-                  <AiFillFileAdd />
-                </NavLink>
+              <li
+                onClick={() => {
+                  navigate("/addArticles");
+                }}
+              >
+                <AiFillFileAdd />
               </li>
-              <li>
-                <NavLink
-                  to="/list"
-                  style={({ isActive }) => ({
-                    color: isActive ? " purple" : "black",
-                  })}
-                  end
-                  className="about-nav"
-                >
-                  <CiViewList />
-                </NavLink>
+              <li
+                onClick={() => {
+                  navigate("/list");
+                }}
+              >
+                <CiViewList />
               </li>{" "}
             </>
           )}
