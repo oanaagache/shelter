@@ -2,8 +2,8 @@ import React from "react";
 import logo from "../../../images/image4.svg";
 import { Link } from "react-router-dom";
 import "../../../../src/index.scss";
-import CatCard1 from "./CatCard1";
-import { CatData as data } from "./CatData";
+import CatCard1 from "./cat/CatCard1";
+import { CatData as data } from "./cat/CatData";
 import "./ArticlesCat.css";
 
 const ArticlesCat = () => {

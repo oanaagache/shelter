@@ -10,10 +10,13 @@ import AdoptionForm from "./pages/adoptionform/AdoptionForm";
 import Success from "./pages/success/Success";
 import Donate from "./pages/donate/Donate";
 import Foster from "./pages/foster/Foster";
-import Articles from "./pages/articles/articles/Articles";
-import ArticlesDog from "./pages/articles/dog/ArticlesDog";
-import ArticlesCat from "./pages/articles/cat/ArticlesCat";
-import AddArticles from "./pages/articles/articles/AddArticles";
+
+import Articles from "./pages/art/Articles";
+import ArticlesDog from "./pages/art/dog/ArticlesDog";
+import ArticlesCat from "./pages/art/cat/ArticlesCat";
+
+import AddArticles from "./pages/add/AddArticles";
+
 import Edit from "./pages/edit/Edit";
 import List from "./pages/list/List";
 import Register from "./pages/register/Register";
