@@ -12,11 +12,8 @@ import Donate from "./pages/donate/Donate";
 import Foster from "./pages/foster/Foster";
 import Articles from "./pages/art/articles/Articles";
 import DogArticles from "./pages/art/dog/dogarticles/DogArticles";
-
-import ArticlesCat from "./pages/art/cat/ArticlesCat";
-
+import CatArticles from "./pages/art/cat/CatArticles";
 import AddArticles from "./pages/add/AddArticles";
-
 import Edit from "./pages/edit/Edit";
 import List from "./pages/list/List";
 import Register from "./pages/register/Register";
@@ -51,7 +48,7 @@ const App = () => {
         />
         <Route path="/articles" element={<Articles />} />
         <Route path="/dogArticles" element={<DogArticles />} />
-        <Route path="/articlescat" element={<ArticlesCat />} />
+        <Route path="/catArticles" element={<CatArticles />} />
         <Route path="/card/" element={<Card />} />
         <Route path="/card/:id" element={<Card isLoggedIn={isLoggedIn} />} />
         <Route path="/card/:name" element={<Card />} />

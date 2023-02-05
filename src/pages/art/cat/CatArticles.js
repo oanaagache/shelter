@@ -4,9 +4,9 @@ import { Link } from "react-router-dom";
 import "../../../../src/index.scss";
 import CatCard1 from "./CatCard1";
 import { CatData as data } from "./CatData";
-import "./ArticlesCat.css";
+import "./CatArticles.css";
 
-const ArticlesCat = () => {
+const CatArticles = () => {
   return (
     <div className="articlesCat-cont">
       <div className="articlesCat-inner">
@@ -31,4 +31,4 @@ const ArticlesCat = () => {
   );
 };
 
-export default ArticlesCat;
+export default CatArticles;

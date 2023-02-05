@@ -86,7 +86,12 @@ const AddArticles = () => {
 
   return (
     <div className="container">
-      <pre>{JSON.stringify(item, null, "\t")}</pre>
+      <div className="articles-title">Add Articles</div>
+
+      <pre style={{ marginTop: "80px" }}>
+        {JSON.stringify(item, null, "\t")}
+      </pre>
+
       <form action="" onSubmit={onSubmitHandler}>
         <label htmlFor="inputFirstName">Add title1:</label>
         <input

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Modal from "react-modal";
-import { DogData as item } from "./DogData";
+//import { DogData as item } from "./DogData";
 import "./DogCard.css";
 
 export default function DogCard(props) {

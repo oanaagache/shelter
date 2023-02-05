@@ -57,7 +57,7 @@ function CatCard1({ item }) {
                   <li>{item.li9}</li>
                   <li>
                     {item.li10}{" "}
-                    <Link to="/articlescat">Living with Cats and Dogs.</Link>{" "}
+                    <Link to="/catArticles">Living with Cats and Dogs.</Link>{" "}
                   </li>
                 </ol>
                 <h5>{item.subtitle5}</h5>
@@ -72,12 +72,12 @@ function CatCard1({ item }) {
                 <ol>
                   <li>
                     {item.li13}{" "}
-                    <Link to="/articlescat">finding the right vet </Link>
+                    <Link to="/catArticles">finding the right vet </Link>
                     for you and your cat.
                   </li>
                   <li>
                     {item.li14}
-                    <Link to="/articlescat">
+                    <Link to="/catArticles">
                       {" "}
                       Keeping Your Cat from Getting Bored.{" "}
                     </Link>

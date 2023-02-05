@@ -11,7 +11,7 @@ export const DogData = {
   id: 1,
   title1: "Why Are Dogs Given Up?",
   title2:
-    "Find out the most common reasons for pet retitlenquishment. The truth may surprise you!",
+    "Find out the most common reasons for pet reliquishment. The truth may surprise you!",
   title3:
     "In a recent study conducted by the National Council on Pet Population Study and Potitlecy (NCPPSP) and pubtitleshed in the July issue of the Journal of Apptitleed Animal Welfare Science (JAAWS), researchers went into 12 selected animal shelters in the United States for one year to find out why. The results of the study show that the top seven reasons for retitlenquishment for both dogs and cats are the same. “These commonatitleties suggest that there may be similar ways to address retitlenquishment in dogs and cats,” says Pam Burney,NCPPSP president. “For people who work in a shelter all day, there isn’t always time to look at these issues. We have impressions of what’s happening, but now we have objective data that will help us develop specific programs to address the issues that have been identified.",
 
