@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { Form } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
-import "../adoptionform/AdoptionForm.css";
+import "./Edit.css";
 import logo from "../../images/image4.svg";
 import { useNavigate } from "react-router-dom";
 import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
+import CountrySelector from "../../components/countryselector/CountrySelector";
 
 const Edit = () => {
   const params = useParams();
@@ -99,7 +100,7 @@ const Edit = () => {
           </h2>
         </div>
 
-        <div className="adoption-title">Edit edit-edit-adoption Form</div>
+        <div className="adoption-title">Edit Form</div>
 
         <Form onSubmit={handleSubmit}>
           <div className="adoption-form">
@@ -146,7 +147,7 @@ const Edit = () => {
                   id="inputAddress"
                   placeholder="Street name and number"
                   value={form.address || ""}
-                  onChange={(e) => updateForm({ address1: e.target.value })}
+                  onChange={(e) => updateForm({ address: e.target.value })}
                 />
               </div>
               <div className="form-group col-md-2">
@@ -161,18 +162,18 @@ const Edit = () => {
                 />
               </div>
 
-              {/* <div className="form-group col-md-2">
+              {/* <div className="edit-form-group col-md-2">
                 <label htmlFor="inputCountry">Country</label>
                 <CountrySelector updateForm={setCountry} />
               </div> */}
 
               <div className="form-group col-md-1">
-                <label htmlFor="inputZip">Zip code:</label>
+                <label htmlFor="inputZip">Code:</label>
                 <input
                   type="text"
                   className="form-control"
                   id="inputZip"
-                  placeholder="Zip code"
+                  placeholder="Code"
                   value={form.code || ""}
                   onChange={(e) => updateForm({ code: e.target.value })}
                 />
@@ -197,7 +198,7 @@ const Edit = () => {
               </div>
             </div>
             <div className="status-form">
-              <h4 className="title">Do you have pets at home?</h4>
+              <h4 className="edittitle">Do you have pets at home?</h4>
               <div className="form-group">
                 <label htmlFor="text">
                   If your answer is "Yes", please tell us a little bit about

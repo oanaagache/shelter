@@ -1,21 +1,26 @@
-.edit-adoption-cont {
+$color: aliceblue;
+$background-color: rgb(126, 63, 102);
+$black: #000;
+
+// xl:  max 1280px
+.adoption-cont {
   max-width: 100%;
 }
 
-.edit-adoption-inner {
+.adoption-inner {
   display: flex;
   align-items: center;
   margin: 10px 80px 10px 80px;
 }
 
-.edit-adoption-arrow {
+.adoption-arrow {
   display: flex;
   text-decoration: none;
   font-size: 18px;
   padding: 5px;
 }
 
-.edit-adoption-title {
+.adoption-title {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -23,7 +28,7 @@
   font-size: 36px;
 }
 
-.edit-adoption-form {
+.adoption-form {
   margin: 80px;
 }
 
@@ -45,344 +50,409 @@
   padding: 15px 0 0 0;
 }
 
-.edit-adoption-button {
+.adoption-button {
   margin: 10px;
 }
 
 .back {
-  color: #000;
+  color: $black;
   width: 80px;
   height: 40px;
   padding: 8px;
   margin: 80px 0 80px 0;
-  background-color: aliceblue;
+  background-color: $color;
   font-size: 12px;
   line-height: 16px;
 }
 
 .submit {
-  color: aliceblue;
+  color: $color;
   width: 80px;
   height: 40px;
   padding: 8px;
   margin: 80px 16px 80px 16px;
-  background-color: rgb(126, 63, 102);
+  background-color: $background-color;
   font-size: 12px;
   line-height: 16px;
 }
 
+//lg:  max 1024px
 @media screen and (max-width: 1024px) {
-  .edit-adoption-cont {
+  .adoption-cont {
     max-width: 100%;
   }
-  .edit-adoption-inner {
+
+  .adoption-inner {
     display: flex;
     align-items: center;
     margin: 10px 40px 10px 40px;
   }
-  .edit-adoption-arrow {
+
+  .adoption-arrow {
     display: flex;
     text-decoration: none;
     font-size: 18px;
     padding: 5px;
   }
-  .edit-adoption-title {
+
+  .adoption-title {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 60px;
-    font-size: 36px;
+    font-size: 34px;
   }
-  .edit-adoption-form {
+
+  .adoption-form {
     margin: 80px 40px 80px 40px;
   }
+
   .form-row {
     display: flex;
     flex-wrap: wrap;
     gap: 40px;
   }
+
   .form-group {
     padding: 10px 0 10px 0;
   }
+
   .status-form {
     padding: 40px 0 0 0;
   }
+
   .title {
     padding: 15px 0 0 0;
   }
-  .edit-adoption-button {
+
+  .adoption-button {
     margin: 10px;
   }
+
   .back {
-    color: #000;
     width: 80px;
     height: 40px;
     padding: 8px;
     margin: 80px 0 80px 0;
-    background-color: aliceblue;
+    background-color: $color;
     font-size: 12px;
     line-height: 16px;
+    color: $black;
   }
+
   .submit {
-    color: aliceblue;
+    color: $color;
     width: 80px;
     height: 40px;
     padding: 8px;
     margin: 80px 16px 80px 16px;
-    background-color: rgb(126, 63, 102);
+    background-color: $background-color;
     font-size: 12px;
     line-height: 16px;
   }
 }
+
+// md: max 768px
 @media screen and (max-width: 768px) {
-  .edit-adoption-cont {
+  .adoption-cont {
     max-width: 100%;
   }
-  .edit-adoption-inner {
+
+  .adoption-inner {
     display: flex;
     align-items: center;
-    margin: 10px 20px 10px 20px;
+    margin: 10px 40px 10px 40px;
   }
-  .edit-adoption-arrow {
+
+  .adoption-arrow {
     display: flex;
     text-decoration: none;
     font-size: 18px;
     padding: 5px;
   }
-  .edit-adoption-title {
+
+  .adoption-title {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 60px;
     font-size: 32px;
+    color: $black;
   }
-  .edit-adoption-form {
-    margin: 80px 20px 80px 20px;
+
+  .adoption-form {
+    margin: 80px 40px 80px 40px;
   }
+
   .form-row {
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
   }
+
   .form-group {
     padding: 10px 0 10px 0;
   }
+
   .status-form {
     padding: 40px 0 0 0;
   }
+
   .title {
     padding: 15px 0 0 0;
   }
-  .edit-adoption-button {
+
+  .adoption-button {
     margin: 10px;
   }
+
   .back {
-    color: #000;
+    color: $black;
     width: 80px;
     height: 40px;
     padding: 8px;
     margin: 80px 0 80px 0;
-    background-color: aliceblue;
+    background-color: $color;
     font-size: 12px;
     line-height: 16px;
   }
+
   .submit {
-    color: aliceblue;
+    color: $color;
     width: 80px;
     height: 40px;
     padding: 8px;
     margin: 80px 16px 80px 16px;
-    background-color: rgb(126, 63, 102);
+    background-color: $background-color;
     font-size: 12px;
     line-height: 16px;
   }
 }
+
+//sm: max 640px
 @media screen and (max-width: 640px) {
-  .edit-adoption-cont {
+  .adoption-cont {
     max-width: 100%;
   }
-  .edit-adoption-inner {
+
+  .adoption-inner {
     display: flex;
     align-items: center;
-    margin: 10px;
+    margin: 10px 20px 10px 20px;
   }
-  .edit-adoption-arrow {
+
+  .adoption-arrow {
     display: flex;
     text-decoration: none;
     font-size: 18px;
     padding: 5px;
   }
-  .edit-adoption-title {
+
+  .adoption-title {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 60px;
-    font-size: 32px;
+    font-size: 26px;
   }
-  .edit-adoption-form {
+
+  .adoption-form {
     margin: 80px 20px 80px 20px;
   }
+
   .form-row {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
   }
+
   .form-group {
     padding: 10px 0 10px 0;
   }
+
   .status-form {
     padding: 30px 0 0 0;
   }
+
   .title {
     padding: 10px;
   }
-  .edit-adoption-button {
+
+  .adoption-button {
     margin: 20px;
   }
+
   .back {
-    color: #000;
+    color: $black;
     width: 80px;
     height: 40px;
     padding: 8px;
     margin: 80px 0 80px 0;
-    background-color: aliceblue;
+    background-color: $color;
     font-size: 12px;
     line-height: 16px;
   }
+
   .submit {
-    color: aliceblue;
+    color: $color;
     width: 80px;
     height: 40px;
     padding: 8px;
     margin: 80px 16px 80px 16px;
-    background-color: rgb(126, 63, 102);
+    background-color: $background-color;
     font-size: 12px;
     line-height: 16px;
   }
 }
+
+//sm: max 425px
 @media screen and (max-width: 425px) {
-  .edit-adoption-cont {
+  .adoption-cont {
     max-width: 100%;
   }
-  .edit-adoption-inner {
+
+  .adoption-inner {
     display: flex;
     align-items: center;
-    margin: 10px;
+    margin: 40px 20px 20px 20px;
   }
-  .edit-adoption-arrow {
+
+  .adoption-arrow {
     display: flex;
     text-decoration: none;
     font-size: 18px;
     padding: 5px;
   }
-  .edit-adoption-title {
+
+  .adoption-title {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 60px;
-    font-size: 32px;
+    font-size: 22px;
   }
-  .edit-adoption-form {
-    margin: 80px 20px 80px 20px;
+
+  .adoption-form {
+    margin: 60px 20px 80px 20px;
   }
+
   .form-row {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
   }
+
   .form-group {
     padding: 10px 0 10px 0;
   }
+
   .status-form {
     padding: 30px 0 0 0;
   }
+
   .title {
     padding: 10px;
   }
-  .edit-adoption-button {
+
+  .adoption-button {
     margin: 20px;
   }
+
   .back {
-    color: #000;
+    color: $black;
     width: 80px;
     height: 40px;
     padding: 8px;
     margin: 80px 0 80px 0;
-    background-color: aliceblue;
+    background-color: $color;
     font-size: 12px;
     line-height: 16px;
   }
+
   .submit {
-    color: aliceblue;
+    color: $color;
     width: 80px;
     height: 40px;
     padding: 8px;
     margin: 80px 16px 80px 16px;
-    background-color: rgb(126, 63, 102);
+    background-color: $background-color;
     font-size: 12px;
     line-height: 16px;
   }
 }
+
+//sm: max 375px
 @media screen and (max-width: 375px) {
-  .edit-adoption-cont {
+  .adoption-cont {
     max-width: 100%;
   }
-  .edit-adoption-inner {
+
+  .adoption-inner {
     display: flex;
     align-items: center;
-    margin: 10px;
+    margin: 40px 20px 20px 20px;
   }
-  .edit-adoption-arrow {
+
+  .adoption-arrow {
     display: flex;
     text-decoration: none;
     font-size: 18px;
     padding: 5px;
   }
-  .edit-adoption-title {
+
+  .adoption-title {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 60px;
-    font-size: 32px;
+    font-size: 20px;
   }
-  .edit-adoption-form {
-    margin: 80px 20px 80px 20px;
+
+  .adoption-form {
+    margin: 60px 20px 80px 20px;
   }
+
   .form-row {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
   }
+
   .form-group {
     padding: 10px 0 10px 0;
   }
+
   .status-form {
     padding: 30px 0 0 0;
   }
+
   .title {
     padding: 10px;
   }
-  .edit-adoption-button {
+
+  .adoption-button {
     margin: 20px;
   }
+
   .back {
-    color: #000;
+    color: $black;
     width: 80px;
     height: 40px;
     padding: 8px;
     margin: 80px 0 80px 0;
-    background-color: aliceblue;
+    background-color: $color;
     font-size: 12px;
     line-height: 16px;
   }
+
   .submit {
-    color: aliceblue;
+    color: $color;
     width: 80px;
     height: 40px;
     padding: 8px;
     margin: 80px 16px 80px 16px;
-    background-color: rgb(126, 63, 102);
+    background-color: $background-color;
     font-size: 12px;
     line-height: 16px;
   }
-} /*# sourceMappingURL=Edit.css.map *//*# sourceMappingURL=Edit.css.map */
+}
