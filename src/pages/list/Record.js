@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "./Record.css";
+import "./List.css";
 
 const Record = (props) => {
   return (

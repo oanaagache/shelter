@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from "react";
-import logo from "../../../images/image4.svg";
+import logo from "../../../../images/image4.svg";
 import { Link } from "react-router-dom";
-import "../../../../src/index.scss";
-import DogCard from "./DogCard";
+import "../../../../../src/index.scss";
+import DogCard from "../dogcard/DogCard";
 
-import "./ArticlesDog.css";
+import "./DogArticles.css";
 
-const ArticlesDog = () => {
+const DogArticles = () => {
   const [articles, setArticles] = useState([]);
 
   //  fetches the records from the database.
@@ -20,7 +20,7 @@ const ArticlesDog = () => {
       }
       const articles = await response.json();
       setArticles(articles);
-      console.log(articles);
+      //console.log(articles);
     }
     getRecords();
     return;
@@ -49,4 +49,4 @@ const ArticlesDog = () => {
   );
 };
 
-export default ArticlesDog;
+export default DogArticles;

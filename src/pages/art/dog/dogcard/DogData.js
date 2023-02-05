@@ -1,11 +1,11 @@
-import pic1 from "../../../images/image6.jpg";
-import pic2 from "../../../images/image7.jpg";
-import pic3 from "../../../images/image8.jpg";
-import pic4 from "../../../images/image9.jpg";
-import pic5 from "../../../images/image14.jpg";
-import pic6 from "../../../images/image15.jpg";
-import pic7 from "../../../images/image16.jpg";
-import pic8 from "../../../images/image17.png";
+import pic1 from "../../../../images/image6.jpg";
+import pic2 from "../../../../images/image7.jpg";
+import pic3 from "../../../../images/image8.jpg";
+import pic4 from "../../../../images/image9.jpg";
+import pic5 from "../../../../images/image14.jpg";
+import pic6 from "../../../../images/image15.jpg";
+import pic7 from "../../../../images/image16.jpg";
+import pic8 from "../../../../images/image17.png";
 
 export const DogData = {
   id: 1,
