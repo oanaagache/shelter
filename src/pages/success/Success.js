@@ -30,7 +30,6 @@ export default function Success() {
           Back{" "}
         </Link>
       </div>
-
       <div className="response-title">
         {" "}
         Thank you!You're on your way to meet {name}.
@@ -39,43 +38,40 @@ export default function Success() {
         Our volunteers will contact you in order to schedule a visit to the
         animal shelter and finalize the adoption procedure.
       </div>
-
       <div className="response">
-        <div className="response-table">
-          <table>
-            <thead>
-              <tr>
-                <th>Name</th>
-                <th>Surname</th>
-                <th>Email</th>
-                <th>Password</th>
-                <th>Address</th>
-                <th>City</th>
-                <th>Country</th>
-                <th>Code</th>
-                <th>Have Children</th>
-                <th>Have Pets</th>
-                <th>Pet Name</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>{user.firstName || " - "}</td>
-                <td>{user.surname || " - "}</td>
-                <td>{user.email || " - "}</td>
-                <td>{user.password || " - "}</td>
-                <td>{adoptionForm.address || " - "}</td>
-                <td>{adoptionForm.city || " - "}</td>
-                <td>{adoptionForm.country || " - "}</td>
-                <td>{adoptionForm.code || " - "}</td>
-                <td>{adoptionForm.status || " - "}</td>
-                <td>{adoptionForm.routine || " - "}</td>
-                <td>{adoptionForm.name || " - "}</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>{" "}
-      </div>
+        <table>
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Surname</th>
+              <th>Email</th>
+              <th>Password</th>
+              {/* <th>Address</th>
+              <th>City</th>
+              <th>Country</th>
+              <th>Code</th>
+              <th>Have Children</th>
+              <th>Have Pets</th> */}
+              {/* <th>Pet Name</th> */}
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>{user.firstName || " - "}</td>
+              <td>{user.surname || " - "}</td>
+              <td>{user.email || " - "}</td>
+              <td>{user.password || " - "}</td>
+              {/* <td>{adoptionForm.address || " - "}</td>
+              <td>{adoptionForm.city || " - "}</td>
+              <td>{adoptionForm.country || " - "}</td>
+              <td>{adoptionForm.code || " - "}</td>
+              <td>{adoptionForm.status || " - "}</td>
+              <td>{adoptionForm.routine || " - "}</td> */}
+              {/* <td>{adoptionForm.name || " - "}</td> */}
+            </tr>
+          </tbody>
+        </table>
+      </div>{" "}
     </div>
   );
 }
