@@ -23,7 +23,7 @@
 }
 
 .register-form {
-  margin-bottom: 650px;
+  margin-bottom: 80px;
 }
 
 .register-form form {
@@ -68,11 +68,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 60px;
     font-size: 36px;
   }
   .register-form {
-    margin-bottom: 650px;
+    margin-bottom: 80px;
   }
   .register-form form {
     display: block;
@@ -113,11 +112,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 60px;
     font-size: 34px;
   }
   .register-form {
-    margin-bottom: 650px;
+    margin-bottom: 80px;
   }
   .register-form form {
     display: block;
@@ -163,7 +161,7 @@
     margin-bottom: 50px;
   }
   .register-form {
-    margin-bottom: 650px;
+    margin-bottom: 80px;
   }
   .register-form form {
     display: block;
@@ -204,12 +202,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 60px;
     font-size: 30px;
     margin-bottom: 50px;
   }
   .register-form {
-    margin-bottom: 650px;
+    margin-bottom: 80px;
   }
   .register-form form {
     display: block;
@@ -250,12 +247,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 60px;
     font-size: 30px;
     margin-bottom: 50px;
   }
   .register-form {
-    margin-bottom: 650px;
+    margin-bottom: 80px;
   }
   .register-form form {
     display: block;
