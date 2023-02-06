@@ -155,7 +155,7 @@
   }
   .adopt-button {
     justify-content: left;
-    margin: 40px 10px 40px 10px;
+    margin: 80px 10px 80px 10px;
   }
   .filter-btn {
     color: aliceblue;
@@ -236,14 +236,14 @@
   }
   .adopt-button {
     justify-content: left;
-    margin: 20px 10px 20px 10px;
+    margin: 80px 10px 80px 10px;
   }
   .filter-btn {
     color: aliceblue;
     background-color: rgb(126, 63, 102);
     border-radius: 5px;
     width: 100px;
-    height: 36px;
+    height: 40px;
     font-size: 12px;
   }
   .adopt-cards {
@@ -316,7 +316,7 @@
   }
   .adopt-button {
     justify-content: left;
-    margin: 10px;
+    margin: 80px 10px 80px 10px;
   }
   .filter-btn {
     color: aliceblue;

@@ -34,7 +34,7 @@ $background-color: rgb(126, 63, 102);
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -30%);
 }
 
 .login-form-group {
@@ -89,7 +89,7 @@ $background-color: rgb(126, 63, 102);
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -30%);
   }
 
   .login-form-group {
@@ -145,7 +145,7 @@ $background-color: rgb(126, 63, 102);
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -30%);
   }
 
   .login-form-group {
@@ -191,7 +191,6 @@ $background-color: rgb(126, 63, 102);
     align-items: center;
     height: 60px;
     font-size: 32px;
-
     margin-bottom: 50px;
   }
 
@@ -201,9 +200,9 @@ $background-color: rgb(126, 63, 102);
 
   .login-form form {
     position: absolute;
-    top: 50%;
+    top: 80%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -30%);
   }
 
   .login-form-group {
@@ -257,7 +256,7 @@ $background-color: rgb(126, 63, 102);
 
   .login-form form {
     position: absolute;
-    top: 70%;
+    top: 80%;
     left: 50%;
     transform: translate(-50%, -50%);
   }
@@ -314,7 +313,7 @@ $background-color: rgb(126, 63, 102);
 
   .login-form form {
     position: absolute;
-    top: 70%;
+    top: 80%;
     left: 50%;
     transform: translate(-50%, -50%);
   }

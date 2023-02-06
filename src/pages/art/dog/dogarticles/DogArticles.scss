@@ -9,7 +9,7 @@ $black: #000;
 .articlesDog-inner {
   display: flex;
   align-items: center;
-  margin: 10px;
+  margin: 10px 80px 10px 80px;
 }
 
 .articlesDog-arrow {
@@ -29,7 +29,7 @@ $black: #000;
 }
 
 .articlesDog {
-  margin: 80px 10px 80px 10px;
+  margin: 80px;
 }
 
 .articlesDog-button-adopt {
@@ -56,182 +56,8 @@ $black: #000;
   align-items: center;
 }
 
-//xxs: { min: "375px", max: "424px" }
-@media screen and (min-width: 375px) {
-}
-
-//xs: { min: "425px", max: "639px" },
-@media screen and (min-width: 425px) {
-  .articlesDog-cont {
-    max-width: 100%;
-  }
-
-  .articlesDog-inner {
-    display: flex;
-    align-items: center;
-    margin: 40px 20px 20px 20px;
-  }
-
-  .articlesDog-arrow {
-    display: flex;
-    text-decoration: none;
-    font-size: 18px;
-    padding: 5px;
-  }
-
-  .articlesDog-title {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 60px;
-    font-size: 22px;
-    margin-bottom: 60px;
-  }
-
-  .articlesDog {
-    margin: 80px 20px 80px 20px;
-  }
-
-  .articlesDog-button-adopt {
-    justify-content: left;
-    margin: 10px;
-  }
-
-  .articlesDog-button {
-    color: $color;
-    background-color: $background-color;
-    border-radius: 5px;
-    width: 80px;
-    height: 40px;
-    font-size: 12px;
-  }
-
-  .articlesDog-container {
-    max-width: 100%;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    margin: 0 auto;
-    width: fit-content;
-    align-items: center;
-  }
-}
-
-//sm: { min: "640px", max: "767px" },
-@media screen and (min-width: 640px) {
-  .articlesDog-cont {
-    max-width: 100%;
-  }
-
-  .articlesDog-inner {
-    display: flex;
-    align-items: center;
-    margin: 10px;
-  }
-
-  .articlesDog-arrow {
-    display: flex;
-    text-decoration: none;
-    font-size: 18px;
-    padding: 5px;
-  }
-
-  .articlesDog-title {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 60px;
-    font-size: 30px;
-    margin-bottom: 60px;
-  }
-
-  .articlesDog {
-    margin: 80px 10px 80px 10px;
-  }
-
-  .articlesDog-button-adopt {
-    justify-content: left;
-    margin: 10px;
-  }
-
-  .articlesDog-button {
-    color: $color;
-    background-color: $background-color;
-    border-radius: 5px;
-    width: 80px;
-    height: 40px;
-    font-size: 12px;
-  }
-
-  .articlesDog-container {
-    max-width: 100%;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    margin: 0 auto;
-    width: fit-content;
-    align-items: center;
-  }
-}
-
-// md: { min: "768px", max: "1023px" },
-@media screen and (min-width: 768px) {
-  .articlesDog-cont {
-    max-width: 100%;
-  }
-
-  .articlesDog-inner {
-    display: flex;
-    align-items: center;
-    margin: 10px 20px 10px 20px;
-  }
-
-  .articlesDog-arrow {
-    display: flex;
-    text-decoration: none;
-    font-size: 18px;
-    padding: 5px;
-  }
-
-  .articlesDog-title {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 60px;
-    font-size: 32px;
-    margin-bottom: 60px;
-  }
-
-  .articlesDog {
-    margin: 80px 20px 80px 20px;
-  }
-
-  .articlesDog-button-adopt {
-    justify-content: left;
-    margin: 20px;
-  }
-
-  .articlesDog-button {
-    color: $color;
-    background-color: $background-color;
-    border-radius: 5px;
-    width: 80px;
-    height: 40px;
-    font-size: 12px;
-  }
-  .articlesDog-container {
-    max-width: 100%;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    margin: 0 auto;
-    width: fit-content;
-    align-items: center;
-  }
-}
-
-//lg: { min: "1024px", max: "1279px" },
-@media screen and (min-width: 1024px) {
+//lg:  max 1024px
+@media screen and (max-width: 1024px) {
   .articlesDog-cont {
     max-width: 100%;
   }
@@ -287,8 +113,8 @@ $black: #000;
   }
 }
 
-// xl: { min: "1280px", max: "1535px" },
-@media screen and (min-width: 1280px) {
+// md: max 768px
+@media screen and (max-width: 768px) {
   .articlesDog-cont {
     max-width: 100%;
   }
@@ -296,7 +122,7 @@ $black: #000;
   .articlesDog-inner {
     display: flex;
     align-items: center;
-    margin: 10px 80px 10px 80px;
+    margin: 40px 20px 40px 20px;
   }
 
   .articlesDog-arrow {
@@ -311,18 +137,73 @@ $black: #000;
     justify-content: center;
     align-items: center;
     height: 60px;
-    font-size: 36px;
-
+    font-size: 32px;
     margin-bottom: 60px;
   }
 
   .articlesDog {
-    margin: 80px;
+    margin: 80px 20px 80px 20px;
   }
 
   .articlesDog-button-adopt {
     justify-content: left;
-    margin: 80px;
+    margin: 20px;
+  }
+
+  .articlesDog-button {
+    color: $color;
+    background-color: $background-color;
+    border-radius: 5px;
+    width: 80px;
+    height: 40px;
+    font-size: 12px;
+  }
+  .articlesDog-container {
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    width: fit-content;
+    align-items: center;
+  }
+}
+
+//sm: max 640px
+@media screen and (max-width: 640px) {
+  .articlesDog-cont {
+    max-width: 100%;
+  }
+
+  .articlesDog-inner {
+    display: flex;
+    align-items: center;
+    margin: 40px 20px 40px 20px;
+  }
+
+  .articlesDog-arrow {
+    display: flex;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 5px;
+  }
+
+  .articlesDog-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    font-size: 30px;
+    margin-bottom: 60px;
+  }
+
+  .articlesDog {
+    margin: 80px 20px 80px 20px;
+  }
+
+  .articlesDog-button-adopt {
+    justify-content: left;
+    margin: 10px;
   }
 
   .articlesDog-button {
@@ -345,8 +226,8 @@ $black: #000;
   }
 }
 
-// xxl: { min: "1536px" },
-@media screen and (min-width: 1536px) {
+//xs:  max 425px
+@media screen and (max-width: 425px) {
   .articlesDog-cont {
     max-width: 100%;
   }
@@ -354,7 +235,7 @@ $black: #000;
   .articlesDog-inner {
     display: flex;
     align-items: center;
-    margin: 10px 80px 10px 80px;
+    margin: 40px 20px 20px 20px;
   }
 
   .articlesDog-arrow {
@@ -369,18 +250,74 @@ $black: #000;
     justify-content: center;
     align-items: center;
     height: 60px;
-    font-size: 40px;
-
+    font-size: 22px;
     margin-bottom: 60px;
   }
 
   .articlesDog {
-    margin: 80px;
+    margin: 80px 10px 80px 10px;
   }
 
   .articlesDog-button-adopt {
     justify-content: left;
-    margin: 80px;
+    margin: 10px;
+  }
+
+  .articlesDog-button {
+    color: $color;
+    background-color: $background-color;
+    border-radius: 5px;
+    width: 80px;
+    height: 40px;
+    font-size: 12px;
+  }
+
+  .articlesDog-container {
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    width: fit-content;
+    align-items: center;
+  }
+}
+
+//xxs:  max 375px
+@media screen and (max-width: 375px) {
+  .articlesDog-cont {
+    max-width: 100%;
+  }
+
+  .articlesDog-inner {
+    display: flex;
+    align-items: center;
+    margin: 40px 20px 20px 20px;
+  }
+
+  .articlesDog-arrow {
+    display: flex;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 5px;
+  }
+
+  .articlesDog-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    font-size: 22px;
+    margin-bottom: 60px;
+  }
+
+  .articlesDog {
+    margin: 80px 10px 80px 10px;
+  }
+
+  .articlesDog-button-adopt {
+    justify-content: left;
+    margin: 10px;
   }
 
   .articlesDog-button {

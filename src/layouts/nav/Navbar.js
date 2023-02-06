@@ -10,13 +10,13 @@ import { CiViewList } from "react-icons/ci";
 const Navbar = (props) => {
   let navigate = useNavigate();
 
-  const [isLogged, setIsLogged] = useState(props.isLoggedIn);
+  const [isLoggedIn, setIsLoggedIn] = useState(props.isLoggedIn);
   const [isAdmin, setAdmin] = useState(props.isAdmin);
 
   useEffect(() => {
-    setIsLogged(JSON.parse(localStorage.getItem("loggedIn")));
+    setIsLoggedIn(JSON.parse(localStorage.getItem("loggedIn")));
     //console.log(JSON.parse(localStorage.getItem("loggedIn")));
-  }, [isLogged]);
+  }, [isLoggedIn]);
 
   useEffect(() => {
     setAdmin(JSON.parse(localStorage.getItem("Admin is loggedIn")));
@@ -105,7 +105,7 @@ const Navbar = (props) => {
           </li>
 
           <li>
-            {isLogged ? (
+            {isLoggedIn ? (
               <div
                 className="about-nav"
                 onClick={() => {
