@@ -9,19 +9,19 @@ import { CiViewList } from "react-icons/ci";
 
 const Navbar = (props) => {
   let navigate = useNavigate();
-
+ 
   const [isLoggedIn, setIsLoggedIn] = useState(props.isLoggedIn);
   const [isAdmin, setAdmin] = useState(props.isAdmin);
 
   useEffect(() => {
     setIsLoggedIn(JSON.parse(localStorage.getItem("loggedIn")));
     //console.log(JSON.parse(localStorage.getItem("loggedIn")));
-  }, [isLoggedIn]);
+  }, [isLoggedIn, props.isLoggedIn]);
 
   useEffect(() => {
     setAdmin(JSON.parse(localStorage.getItem("Admin is loggedIn")));
     //console.log(JSON.parse(localStorage.getItem("Admin is loggedIn")));
-  }, [isAdmin]);
+  }, [isAdmin, props.isAdmin]);
 
   const handleClick = () => {
     localStorage.removeItem("loggedIn");
@@ -30,6 +30,8 @@ const Navbar = (props) => {
     localStorage.removeItem("AdoptionForm");
     localStorage.removeItem("Admin is loggedIn");
     navigate("/login");
+    props.setIsLoggedInApp(false)
+    props.setAdminApp(false)
   };
 
   return (

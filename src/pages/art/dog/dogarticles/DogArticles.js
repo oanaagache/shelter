@@ -19,7 +19,6 @@ const DogArticles = () => {
       }
       const articles = await response.json();
       setArticles(articles);
-      //console.log(articles);
     }
     getRecords();
     return;

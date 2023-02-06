@@ -92,7 +92,7 @@ const Edit = () => {
           <h2>
             <Link
               className="arrow"
-              to="/adopt"
+              to="/list"
               style={{ textDecoration: "none" }}
             >
               Back

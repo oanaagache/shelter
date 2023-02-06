@@ -11,22 +11,22 @@ export const DogData = {
   id: 1,
   title1: "Why Are Dogs Given Up?",
   title2:
-    "Find out the most common reasons for pet reliquishment. The truth may surprise you!",
+    "Find out the most common reasons for pet relinquishment. The truth may surprise you!",
   title3:
     "In a recent study conducted by the National Council on Pet Population Study and Potitlecy (NCPPSP) and pubtitleshed in the July issue of the Journal of Apptitleed Animal Welfare Science (JAAWS), researchers went into 12 selected animal shelters in the United States for one year to find out why. The results of the study show that the top seven reasons for retitlenquishment for both dogs and cats are the same. “These commonatitleties suggest that there may be similar ways to address retitlenquishment in dogs and cats,” says Pam Burney,NCPPSP president. “For people who work in a shelter all day, there isn’t always time to look at these issues. We have impressions of what’s happening, but now we have objective data that will help us develop specific programs to address the issues that have been identified.",
 
   img1: pic1,
-  title4: "Top 10 Reasons for Retitlenquishment:",
+  title4: "Top 10 Reasons for Relinquishment:",
   title5: "Dogs:",
   title6: "Moving (7%) ",
   title7: "Landlord not allowing pet (6%)",
   title8: "Too many animals in household (4%)",
   title9: "Cost of pet maintenance (5%)",
   title10: "Owner having personal problems (4%)",
-  title11: "Inadequate facititleties (4%)",
-  title12: "No homes available for titletter mates (3%)",
+  title11: "Inadequate facilities (4%)",
+  title12: "No homes available for litter mates (3%)",
   title13: "Having no time for pet (4%)",
-  title14: "Having no time for pet (4%) ",
+  title14: "Others ",
   title15: "Biting (3%)",
 
   title16: "Cats:",
@@ -35,10 +35,10 @@ export const DogData = {
   title19: "Too many animals in household (11%)",
   title20: "Cost of pet maintenance (6%) ",
   title21: "Owner having personal problems (4%) ",
-  title22: "Inadequate facileties (2%)",
+  title22: "Inadequate facilities (2%)",
   title23: "No homes available for titletter mates (6%)",
   title24: "Allergies in family (8%)",
-  title25: "House soing (5%)  ",
+  title25: "House soling (5%)  ",
   title26: "Incompatibility with other pets (2%)",
 
   title27:

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import Modal from "react-modal";
 //import { DogData as item } from "./DogData";
 import "./DogCard.css";
@@ -22,7 +22,6 @@ export default function DogCard(props) {
             width: 350,
             height: 350,
           }}
-          //src={item.img1}
           src={props.article.image}
         />
       </div>
@@ -39,8 +38,8 @@ export default function DogCard(props) {
               style={{
                 width: 350,
                 height: 350,
+                paddingBottom: 20,
               }}
-              //src={item.img1}
               src={props.article.image}
               alt="Not found"
             />
@@ -75,13 +74,12 @@ export default function DogCard(props) {
             </ol>
             <li>{props.article.title27}</li>
             <li>{props.article.title28}</li>
-            <ul>
-              <li>{props.article.title29}</li>
-              <li>{props.article.title30}</li>
-              <li>{props.article.title31}</li>
-              <li>{props.article.title32}</li>
-              <li>{props.article.title33}</li>
-            </ul>
+            <li>{props.article.title29}</li>
+            <li>{props.article.title30}</li>
+            <li>{props.article.title31}</li>
+            <li>{props.article.title32}</li>
+            <li>{props.article.title33}</li>
+            <br />
             <h5>{props.article.title34}</h5>
             <li>{props.article.title35}</li>
             <li>{props.article.title36}</li>

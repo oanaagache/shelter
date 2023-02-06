@@ -25,18 +25,29 @@ const App = () => {
   const [isAdmin, setAdmin] = useState(false);
 
   useEffect(() => {
-    setIsLoggedIn(JSON.parse(localStorage.getItem("loggedIn")));
-    //console.log(isLoggedIn);
+    const loggIn = JSON.parse(localStorage.getItem("loggedIn"));
+    if (loggIn !== null) {
+      setIsLoggedIn(loggIn);
+    }
+    console.log(isLoggedIn);
   }, [isLoggedIn]);
 
   useEffect(() => {
-    setAdmin(JSON.parse(localStorage.getItem("Admin is loggedIn")));
-    //console.log(isAdmin);
+    const admin = JSON.parse(localStorage.getItem("Admin is loggedIn"));
+    if (admin !== null) {
+      setAdmin(admin);
+    }
+    console.log(isAdmin);
   }, [isAdmin]);
 
   return (
     <Router>
-      <Navbar isLoggedIn={isLoggedIn} isAdmin={isAdmin} />
+      <Navbar
+        isLoggedIn={isLoggedIn}
+        isAdmin={isAdmin}
+        setIsLoggedInApp={setIsLoggedIn}
+        setAdminApp={setAdmin}
+      />
       <Routes>
         <Route path="/" element={<Main />} />
         <Route path="/about" element={<About />} />
