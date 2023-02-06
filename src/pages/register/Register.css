@@ -19,7 +19,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 60px;
   font-size: 36px;
 }
 
@@ -28,10 +27,9 @@
 }
 
 .register-form form {
-  position: absolute;
-  top: 60%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  display: block;
+  max-width: 250px;
+  margin: 60px auto;
 }
 
 .register-form-group {
@@ -39,7 +37,7 @@
 }
 
 .register-button {
-  margin-top: 20px;
+  margin-top: 40px;
 }
 
 .register-btn {
@@ -77,16 +75,15 @@
     margin-bottom: 650px;
   }
   .register-form form {
-    position: absolute;
-    top: 60%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    display: block;
+    max-width: 250px;
+    margin: 60px auto;
   }
   .register-form-group {
     padding: 10px 0 10px 0;
   }
   .register-button {
-    margin-top: 20px;
+    margin-top: 40px;
   }
   .register-btn {
     color: aliceblue;
@@ -123,10 +120,9 @@
     margin-bottom: 650px;
   }
   .register-form form {
-    position: absolute;
-    top: 60%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    display: block;
+    max-width: 250px;
+    margin: 60px auto;
   }
   .register-form-group {
     padding: 10px 0 10px 0;
@@ -170,16 +166,15 @@
     margin-bottom: 650px;
   }
   .register-form form {
-    position: absolute;
-    top: 60%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    display: block;
+    max-width: 250px;
+    margin: 60px auto;
   }
   .register-form-group {
     padding: 10px 0 10px 0;
   }
   .register-button {
-    margin-top: 20px;
+    margin-top: 40px;
   }
   .register-btn {
     color: aliceblue;
@@ -217,10 +212,9 @@
     margin-bottom: 650px;
   }
   .register-form form {
-    position: absolute;
-    top: 80%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    display: block;
+    max-width: 250px;
+    margin: 60px auto;
   }
   .register-form-group {
     padding: 10px 0 10px 0;
@@ -264,16 +258,15 @@
     margin-bottom: 650px;
   }
   .register-form form {
-    position: absolute;
-    top: 80%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    display: block;
+    max-width: 250px;
+    margin: 60px auto;
   }
   .register-form-group {
     padding: 10px 0 10px 0;
   }
   .register-button {
-    margin-top: 20px;
+    margin-top: 40px;
   }
   .register-btn {
     color: aliceblue;

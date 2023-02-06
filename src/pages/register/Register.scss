@@ -22,7 +22,6 @@ $background-color: rgb(126, 63, 102);
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 60px;
   font-size: 36px;
 }
 
@@ -31,10 +30,9 @@ $background-color: rgb(126, 63, 102);
 }
 
 .register-form form {
-  position: absolute;
-  top: 60%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  display: block;
+  max-width: 250px;
+  margin: 60px auto;
 }
 
 .register-form-group {
@@ -42,7 +40,7 @@ $background-color: rgb(126, 63, 102);
 }
 
 .register-button {
-  margin-top: 20px;
+  margin-top: 40px;
 }
 
 .register-btn {
@@ -86,18 +84,16 @@ $background-color: rgb(126, 63, 102);
   }
 
   .register-form form {
-    position: absolute;
-    top: 60%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    display: block;
+    max-width: 250px;
+    margin: 60px auto;
   }
-
   .register-form-group {
     padding: 10px 0 10px 0;
   }
 
   .register-button {
-    margin-top: 20px;
+    margin-top: 40px;
   }
 
   .register-btn {
@@ -142,10 +138,9 @@ $background-color: rgb(126, 63, 102);
   }
 
   .register-form form {
-    position: absolute;
-    top: 60%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    display: block;
+    max-width: 250px;
+    margin: 60px auto;
   }
 
   .register-form-group {
@@ -199,10 +194,9 @@ $background-color: rgb(126, 63, 102);
   }
 
   .register-form form {
-    position: absolute;
-    top: 60%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    display: block;
+    max-width: 250px;
+    margin: 60px auto;
   }
 
   .register-form-group {
@@ -210,7 +204,7 @@ $background-color: rgb(126, 63, 102);
   }
 
   .register-button {
-    margin-top: 20px;
+    margin-top: 40px;
   }
 
   .register-btn {
@@ -256,10 +250,9 @@ $background-color: rgb(126, 63, 102);
   }
 
   .register-form form {
-    position: absolute;
-    top: 80%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    display: block;
+    max-width: 250px;
+    margin: 60px auto;
   }
 
   .register-form-group {
@@ -313,10 +306,9 @@ $background-color: rgb(126, 63, 102);
   }
 
   .register-form form {
-    position: absolute;
-    top: 80%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    display: block;
+    max-width: 250px;
+    margin: 60px auto;
   }
 
   .register-form-group {
@@ -324,7 +316,7 @@ $background-color: rgb(126, 63, 102);
   }
 
   .register-button {
-    margin-top: 20px;
+    margin-top: 40px;
   }
 
   .register-btn {

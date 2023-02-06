@@ -22,19 +22,17 @@ $background-color: rgb(126, 63, 102);
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 60px;
-  font-size: 36px;
+  font-size: 32px;
 }
 
 .login-form {
-  margin-bottom: 500px;
+  margin-bottom: 200px;
 }
 
 .login-form form {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  display: block;
+  max-width: 250px;
+  margin: 60px auto;
 }
 
 .login-form-group {
@@ -42,7 +40,7 @@ $background-color: rgb(126, 63, 102);
 }
 
 .login-button {
-  margin-top: 20px;
+  margin-top: 40px;
 }
 
 .login-btn {
@@ -73,12 +71,10 @@ $background-color: rgb(126, 63, 102);
     padding: 5px;
   }
 
-  .login-title {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 60px;
-    font-size: 36px;
+  .login-form form {
+    display: block;
+    max-width: 250px;
+    margin: 60px auto;
   }
 
   .login-form {
@@ -86,10 +82,9 @@ $background-color: rgb(126, 63, 102);
   }
 
   .login-form form {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    display: block;
+    max-width: 250px;
+    margin: 60px auto;
   }
 
   .login-form-group {
@@ -97,7 +92,7 @@ $background-color: rgb(126, 63, 102);
   }
 
   .login-button {
-    margin-top: 20px;
+    margin-top: 40px;
   }
 
   .login-btn {
@@ -133,7 +128,6 @@ $background-color: rgb(126, 63, 102);
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 60px;
     font-size: 34px;
   }
 
@@ -142,10 +136,9 @@ $background-color: rgb(126, 63, 102);
   }
 
   .login-form form {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    display: block;
+    max-width: 250px;
+    margin: 60px auto;
   }
 
   .login-form-group {
@@ -153,7 +146,7 @@ $background-color: rgb(126, 63, 102);
   }
 
   .login-button {
-    margin-top: 20px;
+    margin-top: 40px;
   }
 
   .login-btn {
@@ -189,7 +182,6 @@ $background-color: rgb(126, 63, 102);
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 60px;
     font-size: 32px;
     margin-bottom: 50px;
   }
@@ -199,10 +191,9 @@ $background-color: rgb(126, 63, 102);
   }
 
   .login-form form {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    display: block;
+    max-width: 250px;
+    margin: 60px auto;
   }
 
   .login-form-group {
@@ -210,7 +201,7 @@ $background-color: rgb(126, 63, 102);
   }
 
   .login-button {
-    margin-top: 20px;
+    margin-top: 40px;
   }
 
   .login-btn {
@@ -246,7 +237,6 @@ $background-color: rgb(126, 63, 102);
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 60px;
     font-size: 30px;
   }
 
@@ -255,10 +245,9 @@ $background-color: rgb(126, 63, 102);
   }
 
   .login-form form {
-    position: absolute;
-    top: 80%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    display: block;
+    max-width: 250px;
+    margin: 60px auto;
   }
 
   .login-form-group {
@@ -266,7 +255,7 @@ $background-color: rgb(126, 63, 102);
   }
 
   .login-button {
-    margin-top: 20px;
+    margin-top: 40px;
   }
 
   .login-btn {
@@ -302,7 +291,6 @@ $background-color: rgb(126, 63, 102);
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 60px;
     font-size: 30px;
     margin-bottom: 50px;
   }
@@ -312,10 +300,9 @@ $background-color: rgb(126, 63, 102);
   }
 
   .login-form form {
-    position: absolute;
-    top: 80%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    display: block;
+    max-width: 250px;
+    margin: 60px auto;
   }
 
   .login-form-group {
@@ -323,7 +310,7 @@ $background-color: rgb(126, 63, 102);
   }
 
   .login-button {
-    margin-top: 20px;
+    margin-top: 40px;
   }
 
   .login-btn {
