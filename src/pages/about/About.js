@@ -23,9 +23,9 @@ const About = () => {
 
       <div className="about">
         <div>
-          SHELTER is dedicated to helping pets find homes, and we know you are
-          too. Our site provides ready access to data for hundreds of thousands
-          of adoptable pets and the organizations that care for them.
+          ANIMAL SHELTER is dedicated to helping pets find homes, and we know
+          you are too. Our site provides ready access to data for hundreds of
+          thousands of adoptable pets and the organizations that care for them.
         </div>
         <br />
         <div>

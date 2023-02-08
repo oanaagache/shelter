@@ -17,7 +17,7 @@ const Donate = () => {
         </Link>
       </div>
 
-      <div className="donate-title">More Details About Shelters</div>
+      <div className="donate-title">More Details About Animal Shelter</div>
 
       <div className="donate">
         <div className="donate-subtitle">What Is An Animal Shelter?</div>
@@ -32,7 +32,7 @@ const Donate = () => {
           cruel humans, or face other potential dangers.
         </div>
         <br />
-        <div className="donate-subtitle">What Do Animal Shelters Do? </div>
+        <div className="donate-subtitle">What Do Animal Shelter Do? </div>
 
         <div className="donate-subtitle1">
           Approximately 7.6 million companion pets are surrendered to a shelter
